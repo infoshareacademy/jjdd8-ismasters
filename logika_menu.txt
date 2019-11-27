@@ -1,0 +1,47 @@
+1. start aplikacji 
+	załadowanie konfiguracji
+		konfiguracja defaultowa
+	pokazanie najbliższego wydarzenia z ulubionych
+		sprawdzenie czy daty się zgadzają
+	wyświetlenie menu
+
+2.menu
+	1.pokaż wszystkie wydarzenia
+	2. wybierz filtr
+		1. sortuj wg daty
+			wyszukaj
+				dodaj do ulubionych
+				...
+			wróć
+		2. sortuj wg organizatora
+			wyszukaj
+				dodaj do ulubionych
+				...
+			wróć
+		3. sortuj wg daty i organizatora (? czy potrzebne)
+			wyszukaj
+				dodaj do ulubionych
+				...
+			wróć
+		...
+		wróć
+	3. wyszukaj wydarzenie (wg jakich kryteriów?)
+		...
+		wyszukaj
+		wróć
+	4. pokaż ulubione
+		pokaż szczegóły wybranego ulubionego (?)
+		usuń pojedyncze wydarzenie z ulubionych
+		usuń wszystkie ulubione
+		wróć
+	5. konfiguracja
+		pokaż konfigurację przy załadowaniu opcji
+		zmień
+			data asc/desc
+			nazwa organizatora asc/desc
+			nazwa wydarzenia asc/desc
+		format daty - enum
+
+
+
+ile itemów może być w ulubionych?
