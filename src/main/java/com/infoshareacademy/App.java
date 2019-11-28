@@ -7,7 +7,7 @@ public class App {
 
     private static final Logger stdout = LoggerFactory.getLogger("CONSOLE_OUT");
 
-    public static void main( String[] args ) {
-        stdout.info( "Hello World!" );
+    public static void main(String[] args) {
+        stdout.info("Hello World!");
     }
 }
