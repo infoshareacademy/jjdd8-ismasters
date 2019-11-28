@@ -1,13 +1,13 @@
 package com.infoshareacademy;
 
-/**
- * Hello world!
- *
- */
-public class App 
-{
-    public static void main( String[] args )
-    {
-        System.out.println( "Hello World!" );
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+public class App {
+
+private static final Logger stdout = LoggerFactory.getLogger("CONSOLE_OUT");
+
+    public static void main(String[] args) {
+        stdout.info("Hello World!");
     }
 }
