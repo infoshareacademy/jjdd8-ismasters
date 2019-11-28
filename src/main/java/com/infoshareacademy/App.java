@@ -1,8 +1,13 @@
 package com.infoshareacademy;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 public class App {
-    public static void main( String[] args )
-    {
-        System.out.println( "Hello World!" );
+
+    private static final Logger stdout = LoggerFactory.getLogger("CONSOLE_OUT");
+
+    public static void main( String[] args ) {
+        stdout.info( "Hello World!" );
     }
 }

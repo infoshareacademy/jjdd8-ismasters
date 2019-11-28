@@ -17,10 +17,19 @@
   </properties>
 
   <dependencies>
-    //space for dependencies
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-api</artifactId>
+      <version>1.7.29</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.logging.log4j</groupId>
+      <artifactId>log4j-slf4j-impl</artifactId>
+      <version>2.12.1</version>
+    </dependency>
   </dependencies>
 
   <build>
-    //space for plugin
+    <!--space for plugin-->
   </build>
 </project>
