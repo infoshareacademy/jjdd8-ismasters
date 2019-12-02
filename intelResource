@@ -4,7 +4,7 @@ https://docs.oracle.com/javase/tutorial/deployment/jar/manifestindex.html
 https://maven.apache.org/plugins/maven-jar-plugin/examples/manifest-customization.html
 https://stackoverflow.com/questions/29920434/maven-adding-mainclass-in-pom-xml-with-the-right-folder-path
 
-$ java -jar is-masters-1.0-SNAPSHOT.jar
+komenda uruchomieniowa w terminalu $ java -jar is-masters-1.0-SNAPSHOT.jar
 
 Manifest-Version: 1.0
 Archiver-Version: Plexus Archiver
