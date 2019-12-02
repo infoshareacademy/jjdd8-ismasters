@@ -1,0 +1,28 @@
+[
+  {
+    "id": 69714,
+    "place": {
+      "id": 1415,
+      "subname": "Biblioteka Kokoszki (ul. Azaliowa 18)",
+      "name": "Wojew\u00f3dzka i Miejska Biblioteka Publiczna w Gda\u0144sku"
+    },
+    "endDate": "2019-11-28T00:00:00+0100",
+    "name": "Plansz\u00f3wkowe czwartki",
+    "urls": {
+      "www": "http:\/\/wbpg.org.pl\/aktualnosc\/plansz%C3%B3wkowe-czwartki"
+    },
+    "attachments": [],
+    "descLong": "Serdecznie zapraszamy wszystkich wielbicieli plansz\u00f3wek, jak i tych kt\u00f3rzy nie po\u0142kn\u0119li jeszcze bakcyla, na wsp\u00f3lne granie<br\/><br\/>\n\n\n\n\nPrzyprowad\u017acie rodzic\u00f3w, rodze\u0144stwo, koleg\u00f3w, znajomych i sp\u0119d\u017acie mi\u0142e chwile przy pe\u0142nych emocji rozgrywkach.\n\nDo wyboru mamy wiele interesuj\u0105cych pozycji:\n\n\n\tAngry birds Kimble\n\tDixit\n\tDobble\n\tDuuuszki\n\tDzieci z Caracassone\n\tEksploduj\u0105ce Kotki\n\tEurobiznes\n\tHexx\n\t\u0141ap psiaka\n\tMistrz Bajek\n\tMistakos\n\tNiebezpieczna Wyprawa\n\tP\u0119dz\u0105ce \u017b\u00f3\u0142wie\n\t5 Sekund\n\tSpadaj\u0105ce ma\u0142pki\n\tSuper Farmer\n\t\u015api\u0105ce Kr\u00f3lewny\n\tTabu\n\tTajemnicze Podziemia\n\n\nZapraszamy!\n\n\n\n\n\n\n\n\n\n\u00a0\n\n\n\n\n\n\n\n\n\n\n\n\u00a0",
+    "categoryId": 61,
+    "startDate": "2019-11-28T00:00:00+0100",
+    "organizer": {
+      "id": 50,
+      "designation": "Wojew\u00f3dzka i Miejska Biblioteka Publiczna w Gda\u0144sku"
+    },
+    "active": 1,
+    "descShort": "Serdecznie zapraszamy wszystkich wielbicieli plansz\u00f3wek, jak i tych kt\u00f3rzy nie po\u0142kn\u0119li jeszcze bakcyla, na wsp\u00f3lne granie\n\n\n\n\nPrzyprowad\u017acie rodzic\u00f3w, rodze\u0144stwo, koleg\u00f3w, znajomych i sp\u0119d\u017acie mi\u0142e chwile przy pe\u0142nych emocji rozgrywkach...",
+    "tickets": {
+      "type": "unknown"
+    }
+  }
+]
