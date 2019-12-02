@@ -14,9 +14,11 @@ public class Parser {
 
         ObjectMapper objectMapper = new ObjectMapper();
         Event[] event = null;
-        //ArrayList<> events = new ArrayList<>[]();
+        ArrayList<Event[]> events = new ArrayList<>();
+
         try {
-            event = objectMapper.readValue(new File("/home/robert/Pulpit/Projekt/jjdd8-ismasters/JSON_example"), Event[].class);
+            event = objectMapper.readValue(new File("JSON_example"), Event[].class);
+
         } catch (IOException e) {
             e.printStackTrace();
         }

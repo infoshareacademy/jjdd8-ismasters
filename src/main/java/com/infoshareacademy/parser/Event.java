@@ -1,6 +1,8 @@
 package com.infoshareacademy.parser;
 
-public class Event {
+import java.util.ArrayList;
+
+public class Event  {
 
     private int id;
     private Place place;
