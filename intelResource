@@ -2,6 +2,7 @@ https://devtomek.pl/post/5baa779de38b6d3ad8be498e/maven---podstawowa-konfiguracj
 https://docs.oracle.com/javase/tutorial/deployment/jar/appman.html
 https://docs.oracle.com/javase/tutorial/deployment/jar/manifestindex.html
 
+$ java -jar is-masters-1.0-SNAPSHOT.jar
 
 Manifest-Version: 1.0
 Archiver-Version: Plexus Archiver
