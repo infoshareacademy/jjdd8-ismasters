@@ -5,7 +5,7 @@ public class MyTree {
         //główna gałąź
         Node<String> root = new Node<>(null, "Menu główne");
 
-        //pierwsze submeny
+        //pierwsze submenu
         Node<String> ch1 = root.addChild("1");
         Node<String> ch2 = root.addChild("2");
         Node<String> ch3 = root.addChild("3");
