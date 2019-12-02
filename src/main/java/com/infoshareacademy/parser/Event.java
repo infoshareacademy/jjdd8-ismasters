@@ -1,7 +1,5 @@
 package com.infoshareacademy.parser;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-
 public class Event {
 
     private int id;
@@ -9,7 +7,7 @@ public class Event {
     private String endDate;
     private String name;
     private Urls urls;
-    private int[] attachments;
+    private Attachments[] attachments;
     private String descLong;
     private int categoryId;
     private String startDate;
@@ -17,6 +15,14 @@ public class Event {
     private int active;
     private String descShort;
     private Ticket tickets;
+
+    public Attachments[] getAttachments() {
+        return attachments;
+    }
+
+    public void setAttachments(Attachments[] attachments) {
+        this.attachments = attachments;
+    }
 
     public int getid() {
         return id;
@@ -56,14 +62,6 @@ public class Event {
 
     public void setUrl(Urls urls) {
         this.urls = urls;
-    }
-
-    public int[] getAttachments() {
-        return attachments;
-    }
-
-    public void setAttachments(int[] attachments) {
-        this.attachments = attachments;
     }
 
     public String getDescLong() {
@@ -122,22 +120,24 @@ public class Event {
         this.tickets = tickets;
     }
 
+
+
     public String toString(){
         StringBuilder string = new StringBuilder();
         string.append("Event information");
-        string.append("ID " + getid()+ "/n");
-        string.append("Place " + getPlace()+ "/n");
-        string.append("endDate " + getEndDate()+ "/n");
-        string.append("Name " + getName()+ "/n");
-        string.append("URL " + getUrls()+ "/n");
-        string.append("Attachments " + getAttachments()+ "/n");
-        string.append("DescLong " + getDescLong()+ "/n");
-        string.append("Category ID " + getCategoryId()+ "/n");
-        string.append("start Date " + getStartDate()+ "/n");
-        string.append("Organizer " + getOrganizer()+ "/n");
-        string.append("Active " + getActive()+ "/n");
-        string.append("Desc Short " + getDescShort()+ "/n");
-        string.append("Tickets" + getTickets()+ "/n");
+        string.append("ID " + getid());
+        string.append("Place " + getPlace());
+        string.append("endDate " + getEndDate());
+        string.append("Name " + getName());
+        string.append("URL " + getUrls());
+        string.append("Attachments " + getAttachments());
+        string.append("DescLong " + getDescLong());
+        string.append("Category ID " + getCategoryId());
+        string.append("start Date " + getStartDate());
+        string.append("Organizer " + getOrganizer());
+        string.append("Active " + getActive());
+        string.append("Desc Short " + getDescShort());
+        string.append("Tickets" + getTickets());
         return string.toString();
     }
 

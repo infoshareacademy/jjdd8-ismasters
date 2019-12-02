@@ -2,6 +2,16 @@ package com.infoshareacademy.parser;
 
 public class Urls {
     private String www;
+    private String fb;
+    private String tickets;
+
+    public String getTickets() {
+        return tickets;
+    }
+
+    public void setTickets(String tickets) {
+        this.tickets = tickets;
+    }
 
     public String getWww() {
         return www;
@@ -11,10 +21,20 @@ public class Urls {
         this.www = www;
     }
 
+    public String getFb() {
+        return fb;
+    }
+
+    public void setFb(String fb) {
+        this.fb = fb;
+    }
+
     @Override
     public String toString() {
-        return "URL{" +
+        return "Urls{" +
                 "www='" + www + '\'' +
+                ", fb='" + fb + '\'' +
+                ", tickets='" + tickets + '\'' +
                 '}';
     }
 }
