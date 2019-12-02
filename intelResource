@@ -1,0 +1,11 @@
+https://devtomek.pl/post/5baa779de38b6d3ad8be498e/maven---podstawowa-konfiguracja-i-generowanie-pliku-jar
+https://docs.oracle.com/javase/tutorial/deployment/jar/appman.html
+https://docs.oracle.com/javase/tutorial/deployment/jar/manifestindex.html
+
+
+Manifest-Version: 1.0
+Archiver-Version: Plexus Archiver
+Created-By: Apache Maven 3.6.1
+Built-By: chris
+Build-Jdk: 13.0.1
+Main-Class: App
