@@ -1,8 +1,8 @@
-package com.TreePackage;
+package com.infoshareacademy.MenuTree;
 
 import java.util.Stack;
 
-class Tree<T> {
+public class Tree<T> {
 
     Stack<Node<T>> menuStack = new Stack<>();
 
