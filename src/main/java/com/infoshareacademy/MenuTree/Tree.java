@@ -1,10 +1,14 @@
-package com.TreePackage;
+package com.infoshareacademy.MenuTree;
 
 import java.util.Stack;
 
-class Tree<T> {
+public class Tree<T> {
 
     Stack<Node<T>> menuStack = new Stack<>();
+
+    public Stack<Node<T>> getMenuStack() {
+        return menuStack;
+    }
 
     private Node<T> root;
     StringBuilder output = new StringBuilder();
@@ -37,6 +41,7 @@ class Tree<T> {
         }
     }
 
+/*
     void makeSubmenu(Node<T> n) {
         for (int i = 0; i < getLevel(n); i++) {
             output.append("\t");
@@ -48,6 +53,7 @@ class Tree<T> {
             temp = temp.getRightSibling();
         }
     }
+*/
 
     public String toString() {
         output = new StringBuilder();
@@ -60,7 +66,7 @@ class Tree<T> {
 
     public String printCurrentLevel(Node<T> n) {
         output = new StringBuilder();
-        System.out.println(n + " | Level: " + this.getLevel(n));
+        System.out.println(n + " | Level: " + this.getLevel(n)+"\n");
         Node<T> temp = n.getLeftMostChild();
         while (temp != null) {
             System.out.println(temp + " | Level: " + getLevel(temp));
@@ -69,14 +75,18 @@ class Tree<T> {
         return output.toString();
     }
 
-    public void goDown(Node<T> n) {
+    public void goDeeper(Node<T> n) {
         menuStack.push(n);
     }
 
-    public Node<T> goUp() {
+    public Node<T> goBack() {
         menuStack.pop();
         return menuStack.peek();
     }
 
+    public void goToRoot() {
+        menuStack.empty();
+        menuStack.push(root);
+    }
 
 }

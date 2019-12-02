@@ -1,8 +1,8 @@
-package com.TreePackage;
+package com.infoshareacademy.MenuTree;
 
 import java.util.LinkedList;
 
-class Node<T> {
+public class Node<T> {
     private T data;
     private Node<T> parent;
     private LinkedList<Node<T>> children;
