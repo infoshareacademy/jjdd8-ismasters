@@ -14,7 +14,7 @@ public class Parser {
     public void parsingDataFromJson() {
         ObjectMapper objectMapper = new ObjectMapper();
         ArrayList<Event> event = null;
-        ArrayList<EventMain> eventMain = null;
+        EventMain eventMain = null;
 
         try {
              event = objectMapper.readValue(new File("JSON_example"), new TypeReference<ArrayList<Event>>() {});
@@ -23,9 +23,17 @@ public class Parser {
             e.printStackTrace();
         }
 
+        //eventMain = new ArrayList<EventMain>(e.getPlace(), e.getEndDate(), e.getName(), e.getStartDate(), e.getOrganizer());
         for (Event e : event) {
 
+            eventMain = new eventMain(e.getPlace(), e.getEndDate(), e.getName(), e.getStartDate(), e.getOrganizer());
         }
+
+    }
+
+    public static void main(String[] args) {
+        Parser p1 = new Parser();
+        p1.parsingDataFromJson();
     }
 
 }

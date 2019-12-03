@@ -1,6 +1,5 @@
 package com.infoshareacademy.Repository;
 
-import com.infoshareacademy.parser.*;
 
 public class EventMain {
     private Place place;
@@ -16,4 +15,5 @@ public class EventMain {
         this.startDate = startDate;
         this.organizer = organizer;
     }
+
 }
