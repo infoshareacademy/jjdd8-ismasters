@@ -1,31 +1,31 @@
 package com.infoshareacademy.parser;
 
+import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.infoshareacademy.Repository.EventMain;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
 
 public class Parser {
 
 
     public void parsingDataFromJson() {
         ObjectMapper objectMapper = new ObjectMapper();
-        Event[] event = null;
-        EventMain[] eventMain =null;
+        ArrayList<Event> event = null;
+        ArrayList<EventMain> eventMain = null;
 
         try {
-            event = objectMapper.readValue(new File("JSON_example"), Event[].class);
+             event = objectMapper.readValue(new File("JSON_example"), new TypeReference<ArrayList<Event>>() {});
 
         } catch (IOException e) {
             e.printStackTrace();
         }
-        for (int i = 0; i < event.length ; i++) {
-            ;
+
+        for (Event e : event) {
+
         }
-        /*for (Event e : event) {
-            System.out.println(e);
-        }*/
     }
 
 }
