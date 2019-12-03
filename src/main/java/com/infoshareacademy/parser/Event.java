@@ -1,8 +1,6 @@
 package com.infoshareacademy.parser;
 
-import java.util.ArrayList;
-
-public class Event  {
+public class Event {
 
     private int id;
     private Place place;
@@ -123,8 +121,7 @@ public class Event  {
     }
 
 
-
-    public String toString(){
+    public String toString() {
         StringBuilder string = new StringBuilder();
         string.append("Event information");
         string.append("ID " + getid());
