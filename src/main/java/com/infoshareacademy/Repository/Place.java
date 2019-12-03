@@ -1,6 +1,7 @@
 package com.infoshareacademy.Repository;
 
 public class Place {
+    private int id;
     private String subname;
     private String name;
 
@@ -18,5 +19,12 @@ public class Place {
 
     public void setName(String name) {
         this.name = name;
+    }
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 }

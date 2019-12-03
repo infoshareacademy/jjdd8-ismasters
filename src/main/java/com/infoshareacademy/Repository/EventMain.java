@@ -16,4 +16,6 @@ public class EventMain {
         this.organizer = organizer;
     }
 
+    public EventMain(com.infoshareacademy.parser.Place place, String endDate, String name, String startDate, com.infoshareacademy.parser.Organizer organizer) {
+    }
 }
