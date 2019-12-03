@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class EventRepositoryParser {
     private static EventRepositoryParser eventRepositoryParser;
-    private ArrayList<> events = new ArrayList<>();
+    private ArrayList<EventMain> events = new ArrayList<>();
 
     private EventRepositoryParser() {
 
