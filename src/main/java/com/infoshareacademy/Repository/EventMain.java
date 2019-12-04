@@ -18,4 +18,55 @@ public class EventMain {
 
     public EventMain(com.infoshareacademy.parser.Place place, String endDate, String name, String startDate, com.infoshareacademy.parser.Organizer organizer) {
     }
+
+    public Place getPlace() {
+        return place;
+    }
+
+    public void setPlace(Place place) {
+        this.place = place;
+    }
+
+    public String getEndDate() {
+        return endDate;
+    }
+
+    public void setEndDate(String endDate) {
+        this.endDate = endDate;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getStartDate() {
+        return startDate;
+    }
+
+    public void setStartDate(String startDate) {
+        this.startDate = startDate;
+    }
+
+    public Organizer getOrganizer() {
+        return organizer;
+    }
+
+    public void setOrganizer(Organizer organizer) {
+        this.organizer = organizer;
+    }
+
+    @Override
+    public String toString() {
+        return "EventMain{" +
+                "place=" + place +
+                ", endDate='" + endDate + '\'' +
+                ", name='" + name + '\'' +
+                ", startDate='" + startDate + '\'' +
+                ", organizer=" + organizer +
+                '}';
+    }
 }
