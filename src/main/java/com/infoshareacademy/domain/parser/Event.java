@@ -1,4 +1,7 @@
-package com.infoshareacademy.parser;
+package com.infoshareacademy.domain.parser;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class Event {
 
@@ -7,7 +10,7 @@ public class Event {
     private String endDate;
     private String name;
     private Urls urls;
-    private Attachments[] attachments;
+    private List<Attachments> attachments = new ArrayList<>();
     private String descLong;
     private int categoryId;
     private String startDate;
@@ -16,13 +19,6 @@ public class Event {
     private String descShort;
     private Ticket tickets;
 
-    public Attachments[] getAttachments() {
-        return attachments;
-    }
-
-    public void setAttachments(Attachments[] attachments) {
-        this.attachments = attachments;
-    }
 
     public int getid() {
         return id;
@@ -120,6 +116,13 @@ public class Event {
         this.tickets = tickets;
     }
 
+    public List<Attachments> getAttachments() {
+        return attachments;
+    }
+
+    public void setAttachments(List<Attachments> attachments) {
+        this.attachments = attachments;
+    }
 
     public String toString() {
         StringBuilder string = new StringBuilder();

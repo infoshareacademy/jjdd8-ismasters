@@ -1,4 +1,4 @@
-package com.infoshareacademy.parser;
+package com.infoshareacademy.domain.parser;
 
 public class Ticket {
 

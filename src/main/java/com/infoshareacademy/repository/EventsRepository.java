@@ -1,12 +1,12 @@
 package com.infoshareacademy.repository;
 
-import com.infoshareacademy.parser.Event;
+import com.infoshareacademy.domain.parser.Event;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class EventsRepository {
-    public static List<Event> events = new ArrayList<>();
+    private static List<Event> events = new ArrayList<>();
     private static EventsRepository eventsRepository;
 
     private EventsRepository() {
@@ -23,7 +23,6 @@ public class EventsRepository {
     public static List<Event> getEvents() {
         return events;
     }
-
 
 
 }
