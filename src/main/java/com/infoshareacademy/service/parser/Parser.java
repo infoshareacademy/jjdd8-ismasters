@@ -24,11 +24,11 @@ public class Parser {
             e.printStackTrace();
         }
         for (Event e : events) {
-           /* System.out.println(e);*/
+
         }
 
         EventsRepository.getEvents().addAll(events);
-        /*System.out.println(EventsRepository.getEvents());*/
+
     }
 
     public static void main(String[] args) {

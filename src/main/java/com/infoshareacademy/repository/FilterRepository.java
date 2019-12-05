@@ -27,20 +27,21 @@ public class FilterRepository {
         return outPutList;
     }
 
-    public List<Event> filterAllOrganisers(String date) {
+    public List<Event> filterAllOrganisers(String organizer) {
         parser.parseData();
         for (Event event : EventsRepository.getEvents()) {
-            if (event.getEndDate().equals(date)) {
+            if (event.getOrganizer().equals(organizer)) {
                 outPutList.add(event);
             }
         }
         return outPutList;
     }
 
+
     public static void main(String[] args) {
         FilterRepository f1 = new FilterRepository();
 
-        System.out.println(f1.filterAllDatesEvents("2019-12-07T23:59:59+0100"));
+
     }
 }
 
