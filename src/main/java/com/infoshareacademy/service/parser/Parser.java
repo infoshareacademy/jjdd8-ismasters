@@ -26,14 +26,9 @@ public class Parser {
         for (Event e : events) {
 
         }
-
         EventsRepository.getEvents().addAll(events);
 
     }
 
-    public static void main(String[] args) {
-        Parser p1 = new Parser();
-        p1.parseData();
-    }
 
 }
