@@ -28,7 +28,15 @@ public class Submenu2{
                     break;
                 default:
                     //TODO metoda 1
-                    stdout.info("Submenu 2 - default\n");
+                    stdout.info("\n");
+                    stdout.info("┌──────────────────────────────────────────┐\n");
+                    stdout.info("│                                          │\n");
+                    stdout.info("│        \u001b[31mPOD TYM NUMEREM NIC NIE MA! \u001b[0m      │\n");
+                    stdout.info("│                                          │\n");
+                    stdout.info("│               JESZCZE RAZ!               │\n");
+                    stdout.info("│                                          │\n");
+                    stdout.info("└──────────────────────────────────────────┘\n");
+                    stdout.info("\n");
             }
         }
 

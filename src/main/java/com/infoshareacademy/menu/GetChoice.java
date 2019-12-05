@@ -21,8 +21,6 @@ public class GetChoice {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        stdout.info("\nPodaj liczbę");
-        stdout.info("\nPodaj 9, aby wyjść\n");
 
         try {
             String in = scanner.next();
@@ -33,7 +31,15 @@ public class GetChoice {
                     e.printStackTrace();
                 }
             } else {
-                System.out.println("Zła liczba, podaj nową");
+                stdout.info("\n");
+                stdout.info("┌──────────────────────────────────────────┐\n");
+                stdout.info("│                                          │\n");
+                stdout.info("│       PODANO NIEPRAWIDŁOWĄ WARTOŚĆ!      │\n");
+                stdout.info("│                                          │\n");
+                stdout.info("│               JESZCZE RAZ!               │\n");
+                stdout.info("│                                          │\n");
+                stdout.info("└──────────────────────────────────────────┘\n");
+                stdout.info("\n");
             }
         } catch (Exception e) {
             e.printStackTrace();

@@ -9,32 +9,38 @@ import java.util.Scanner;
 public class Menu {
 
     public static final Scanner scanner = new Scanner(System.in);
-
-
     private static final Logger stdout = LoggerFactory.getLogger("CONSOLE_OUT");
 
 
-    public static void main(String[] args) {
-        mainMenu();
-    }
-
     public static void mainMenu() {
-        stdout.info("Witaj w kalendarzu wydarzeń kulturalnych\n");
-        stdout.info("Najbliższe nadchodzące wydarzenia:\n");
-        stdout.info("?????????????????????????????????:\n");
-        //TODO: POkaz najbliższe wydarzenia
-
         int mainExitCode = 0;
+
+        stdout.info("┌──────────────────────────────────────────┐\n");
+        stdout.info("│                                          │\n");
+        stdout.info("│ \u001b[32mWitaj w kalendarzu wydarzeń kulturalnych \u001b[0m│\n");
+        stdout.info("│                                          │\n");
+        stdout.info("│           (c) ISMasters 2019             │\n");
+        stdout.info("│                                          │\n");
+        stdout.info("└──────────────────────────────────────────┘\n");
+        stdout.info("\n");
+        stdout.info("\n");
 
         while (mainExitCode != 9) {
 
-            stdout.info("----------------------------------\n");
-            stdout.info("Wybierz menu:\n");
-            stdout.info("1. Pokaż najbliższe wydarzenia\n");
-            stdout.info("2. Pokaż wydarzenia wg organizatora\n");
-            stdout.info("3. Znajdź wydarzenie wg daty\n");
+            stdout.info("┌──────────────────────────────────────────┐\n");
+            stdout.info("│                                          │\n");
+            stdout.info("│  \u001b[33m Wybierz pozycję z menu używając cyfr  \u001b[0m │\n");
+            stdout.info("│           \u001b[33m  na klawiaturze    \u001b[0m           │\n");
+            stdout.info("│                                          │\n");
+            stdout.info("│   1. Pokaż najbliższe wydarzenia         │\n");
+            stdout.info("│   2. Pokaż wydarzenia wg organizatora    │\n");
+            stdout.info("│   3. Znajdź wydarzenie wg daty           │\n");
+            stdout.info("│                                          │\n");
+            stdout.info("│  \u001b[36m 9. Zakończ                    \u001b[0m         │\n");
+            stdout.info("│                                          │\n");
+            stdout.info("└──────────────────────────────────────────┘\n");
             stdout.info("\n");
-            stdout.info("Wpisz liczbę\n");
+            stdout.info("Wpisz liczbę: \n");
 
 
             switch (GetChoice.getChoice()) {
@@ -53,12 +59,26 @@ public class Menu {
                     break;
                 case 9:
                     //TODO metoda 3
-                    stdout.info("DO WIDZENIA!!!\n");
+                    stdout.info("\n");
+                    stdout.info("┌──────────────────────────────────────────┐\n");
+                    stdout.info("│                                          │\n");
+                    stdout.info("│       \u001b[35m       DO ZOBACZENIA!      \u001b[0m        │\n");
+                    stdout.info("│                                          │\n");
+                    stdout.info("└──────────────────────────────────────────┘\n");
+                    stdout.info("\n");
                     mainExitCode = 9;
                     break;
                 default:
                     //TODO metoda 1
-                    stdout.info("ZŁY WYBÓR\n");
+                    stdout.info("\n");
+                    stdout.info("┌──────────────────────────────────────────┐\n");
+                    stdout.info("│                                          │\n");
+                    stdout.info("│        \u001b[31mPOD TYM NUMEREM NIC NIE MA! \u001b[0m      │\n");
+                    stdout.info("│                                          │\n");
+                    stdout.info("│               JESZCZE RAZ!               │\n");
+                    stdout.info("│                                          │\n");
+                    stdout.info("└──────────────────────────────────────────┘\n");
+                    stdout.info("\n");
             }
         }
     }
