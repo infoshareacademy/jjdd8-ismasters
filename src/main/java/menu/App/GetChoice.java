@@ -2,21 +2,26 @@ package menu.App;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.apache.commons.lang3.StringUtils;
 
 import java.util.Scanner;
 
 public class GetChoice {
 
     private static final Logger stdout = LoggerFactory.getLogger("CONSOLE_OUT");
-    //TODO walidacja stringów - jakie biblioteki
+
     public static int getChoice() {
-        int choice = 0;
+        String choice = "";
         Scanner scanner = new Scanner(System.in);
         try {
-            choice = scanner.nextInt();
+            choice = scanner.next();
+            if (!StringUtils.containsOnly(choice, "0123456789")) {
+                stdout.info("Nieprawidłowa liczba, jeszcze raz!");
+                getChoice();
+            }
         } catch (Exception e) {
             e.printStackTrace();
         }
-        return choice;
+        return Integer.parseInt(choice);
     }
 }

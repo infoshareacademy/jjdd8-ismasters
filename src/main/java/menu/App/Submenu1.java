@@ -5,7 +5,7 @@ import org.slf4j.LoggerFactory;
 
 import static menu.App.GetChoice.getChoice;
 
-public class Submenu1 {
+public class Submenu1{
 
     private static final Logger stdout = LoggerFactory.getLogger("CONSOLE_OUT");
 

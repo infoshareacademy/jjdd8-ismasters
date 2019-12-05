@@ -8,6 +8,7 @@ public class Menu {
 
     private static final Logger stdout = LoggerFactory.getLogger("CONSOLE_OUT");
 
+
     public static void main(String[] args) {
         mainMenu();
     }
@@ -25,7 +26,7 @@ public class Menu {
         stdout.info("Wpisz liczbę\n");
 
         int choice = getChoice();
-        stdout.info(String.valueOf(choice));
+//        stdout.info(String.valueOf(choice));
 
         switch (choice) {
             case 1:
@@ -46,6 +47,8 @@ public class Menu {
                 stdout.info("default\n");
 
         }
+
+
     }
 
 
