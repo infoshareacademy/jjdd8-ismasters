@@ -7,7 +7,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class FilterRepository {
-    Parser parser = new Parser();
     List<Event> outPutList = new ArrayList<>();
 
     public void allEvents() {

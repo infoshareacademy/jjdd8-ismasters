@@ -15,5 +15,6 @@ public class App {
         parser.parseData();
         System.out.println(EventsRepository.getEvents());
 
+
     }
 }
