@@ -1,47 +1,49 @@
 package menu.App;
 
-import java.util.Scanner;
 import static menu.App.GetChoice.getChoice;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class Menu {
 
+    private static final Logger stdout = LoggerFactory.getLogger("CONSOLE_OUT");
+
     public static void main(String[] args) {
         mainMenu();
-
-
     }
 
     public static void mainMenu() {
-        System.out.println("Witaj w kalendarzu wydarzeń kulturalnych");
-        System.out.println("Najbliższe nadchodzące wydarzenia:");
+        stdout.info("Witaj w kalendarzu wydarzeń kulturalnych\n");
+        stdout.info("Najbliższe nadchodzące wydarzenia:\n");
         //TODO: POkaz najbliższe wydarzenia
 
-        System.out.println("Wybierz menu:");
-        System.out.println("1. Pokaż wszystkie wydarzenia");
-        System.out.println("2. Pokaż wydarzenia wg organizatora");
-        System.out.println("3. Znajdź wydarzenie wg daty");
-        System.out.println("");
-        System.out.println("Wpisz liczbę");
+        stdout.info("Wybierz menu:\n");
+        stdout.info("1. Pokaż najbliższe wydarzenia\n");
+        stdout.info("2. Pokaż wydarzenia wg organizatora\n");
+        stdout.info("3. Znajdź wydarzenie wg daty\n");
+        stdout.info("\n");
+        stdout.info("Wpisz liczbę\n");
 
         int choice = getChoice();
-        System.out.println(choice);
+        stdout.info(String.valueOf(choice));
 
         switch (choice) {
             case 1:
-                System.out.println("Wybór menu 1");
+                stdout.info("Wybór menu 1\n");
                 new Submenu1().doSomething();
                 break;
             case 2:
                 //TODO metoda2
-                System.out.println("Wybór menu 2");
+                stdout.info("Wybór menu 2\n");
+                new Submenu2().doSomething();
                 break;
             case 3:
                 //TODO metoda 3
-                System.out.println("Wybór menu 3");
+                stdout.info("Wybór menu 3\n");
                 break;
             default:
                 //TODO metoda 1
-                System.out.println("default");
+                stdout.info("default\n");
 
         }
     }
