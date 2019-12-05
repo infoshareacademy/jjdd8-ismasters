@@ -1,5 +1,6 @@
 package com.infoshareacademy.service.parser;
 
+
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.infoshareacademy.domain.parser.Event;
@@ -23,10 +24,11 @@ public class Parser {
             e.printStackTrace();
         }
         for (Event e : events) {
-            System.out.println(e);
+           /* System.out.println(e);*/
         }
 
         EventsRepository.getEvents().addAll(events);
+        /*System.out.println(EventsRepository.getEvents());*/
     }
 
     public static void main(String[] args) {

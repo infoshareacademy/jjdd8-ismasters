@@ -1,6 +1,8 @@
 package com.infoshareacademy.repository;
 
+
 import com.infoshareacademy.domain.parser.Event;
+import com.infoshareacademy.service.parser.Parser;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -8,6 +10,7 @@ import java.util.List;
 public class EventsRepository {
     private static List<Event> events = new ArrayList<>();
     private static EventsRepository eventsRepository;
+
 
     private EventsRepository() {
 
@@ -23,6 +26,5 @@ public class EventsRepository {
     public static List<Event> getEvents() {
         return events;
     }
-
 
 }

@@ -1,6 +1,7 @@
 package com.infoshareacademy;
 
 import com.infoshareacademy.repository.EventsRepository;
+import com.infoshareacademy.service.parser.Parser;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
