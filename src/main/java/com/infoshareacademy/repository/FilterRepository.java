@@ -3,30 +3,44 @@ package com.infoshareacademy.repository;
 import com.infoshareacademy.domain.parser.Event;
 import com.infoshareacademy.service.parser.Parser;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class FilterRepository {
     Parser parser = new Parser();
+    List<Event> outPutList = new ArrayList<>();
 
     public void allEvents() {
-            parser.parseData();
-        for (Event e:EventsRepository.getEvents()) {
-            System.out.println(EventsRepository.getEvents().);
+        parser.parseData();
+        for (int i = 0; i < 10; i++) {
+            System.out.println(EventsRepository.getEvents().get(i));
         }
-
     }
 
-  /*  public String filterAllDatesEvents(String date){
-
+    public List<Event> filterAllDatesEvents(String date) {
+        parser.parseData();
+        for (Event event : EventsRepository.getEvents()) {
+            if (event.getEndDate().equals(date)) {
+                outPutList.add(event);
+            }
+        }
+        return outPutList;
     }
-    public String filterAllOrganisers (String organiser){
 
+    public List<Event> filterAllOrganisers(String date) {
+        parser.parseData();
+        for (Event event : EventsRepository.getEvents()) {
+            if (event.getEndDate().equals(date)) {
+                outPutList.add(event);
+            }
+        }
+        return outPutList;
     }
-    public String filterAllUpcommingEvents(){
-
-    }*/
 
     public static void main(String[] args) {
         FilterRepository f1 = new FilterRepository();
-        f1.allEvents();
-    }
 
+        System.out.println(f1.filterAllDatesEvents("2019-12-07T23:59:59+0100"));
+    }
 }
+
