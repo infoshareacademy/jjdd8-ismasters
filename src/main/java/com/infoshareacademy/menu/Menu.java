@@ -1,4 +1,4 @@
-package menu.App;
+package com.infoshareacademy.menu;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -9,7 +9,7 @@ import java.util.Scanner;
 public class Menu {
 
     public static final Scanner scanner = new Scanner(System.in);
-    public static int mainExitCode = 0;
+
 
     private static final Logger stdout = LoggerFactory.getLogger("CONSOLE_OUT");
 
@@ -24,7 +24,7 @@ public class Menu {
         stdout.info("?????????????????????????????????:\n");
         //TODO: POkaz najbliższe wydarzenia
 
-
+        int mainExitCode = 0;
 
         while (mainExitCode != 9) {
 

@@ -1,5 +1,6 @@
-package menu.App;
+package com.infoshareacademy.menu;
 
+import com.infoshareacademy.menu.GetChoice;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

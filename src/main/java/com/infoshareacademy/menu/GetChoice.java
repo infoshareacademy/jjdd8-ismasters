@@ -1,4 +1,4 @@
-package menu.App;
+package com.infoshareacademy.menu;
 
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
@@ -6,8 +6,8 @@ import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
 
-import static menu.App.Menu.clearScreen;
-import static menu.App.Menu.scanner;
+import static com.infoshareacademy.menu.Menu.clearScreen;
+import static com.infoshareacademy.menu.Menu.scanner;
 
 public class GetChoice {
 
