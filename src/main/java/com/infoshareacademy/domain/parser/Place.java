@@ -31,10 +31,7 @@ public class Place {
 
     @Override
     public String toString() {
-        return "Place{" +
-                "ID='" + id + '\'' +
-                ", subname='" + subname + '\'' +
-                ", name='" + name + '\'' +
-                '}';
+        return  name + '\n'+
+                "Dokładna lokalizacja " + subname ;
     }
 }
