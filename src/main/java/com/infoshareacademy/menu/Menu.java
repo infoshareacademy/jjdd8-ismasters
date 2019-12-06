@@ -1,5 +1,6 @@
 package com.infoshareacademy.menu;
 
+import com.infoshareacademy.domain.parser.Event;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import com.infoshareacademy.repository.FilterRepository;
@@ -33,7 +34,7 @@ public class Menu {
             stdout.info("│           \u001b[33m  na klawiaturze    \u001b[0m           │\n");
             stdout.info("│                                          │\n");
             stdout.info("│   1. Pokaż wszystkie wydarzenia          │\n");
-            stdout.info("│   2. Pokaż najbliższe wydarzenia (3 dni) │\n");
+            stdout.info("│   2. Pokaż najbliższe wydarzenia         │\n");
             stdout.info("│   3. Pokaż wydarzenie wg organizatora    │\n");
             stdout.info("│                                          │\n");
             stdout.info("│  \u001b[36m 9. Zakończ                    \u001b[0m         │\n");
@@ -45,7 +46,11 @@ public class Menu {
             switch (GetChoice.getChoice()) {
                 case 1:
                     stdout.info("        WYBRANO OPCJĘ 1       \n");
-                    System.out.println(filterRepository.allEvents());
+                    for (Event event : filterRepository.allEvents()) {
+                        stdout.info(event.toString());
+                        stdout.info("\n");
+                    }
+                    stdout.info("\n");
                     break;
                 case 2:
                     stdout.info("        WYBRANO OPCJĘ 2       \n");
