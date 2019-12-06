@@ -2,6 +2,7 @@ package com.infoshareacademy.menu;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import com.infoshareacademy.repository.FilterRepository;
 
 import java.util.Scanner;
 
@@ -11,6 +12,7 @@ public class Menu {
     private static final Logger stdout = LoggerFactory.getLogger("CONSOLE_OUT");
 
     public static void mainMenu() {
+        FilterRepository filterRepository = new FilterRepository();
         int mainExitCode = 0;
 
         stdout.info("┌──────────────────────────────────────────┐\n");
@@ -43,7 +45,7 @@ public class Menu {
             switch (GetChoice.getChoice()) {
                 case 1:
                     stdout.info("        WYBRANO OPCJĘ 1       \n");
-                    //TODO PRINT ALL EVENTS
+                    filterRepository.allEvents();
                     break;
                 case 2:
                     stdout.info("        WYBRANO OPCJĘ 2       \n");

@@ -1,5 +1,6 @@
 package com.infoshareacademy.menu;
 
+import com.infoshareacademy.repository.FilterRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -8,6 +9,7 @@ public class ShowNearestEvents {
     private static final Logger stdout = LoggerFactory.getLogger("CONSOLE_OUT");
 
     void showNearestEvents() {
+        FilterRepository filterRepository = new FilterRepository();
         int submenu2ExitCode = 0;
 
         while (submenu2ExitCode != 9) {
@@ -29,15 +31,19 @@ public class ShowNearestEvents {
 
             switch (GetChoice.getChoice()) {
                 case 1:
-                    stdout.info("\nOpcja submenu 2 - 1\n");
+                    stdout.info("        WYBRANO OPCJĘ 1       \n");
+                    filterRepository.filterAllDatesEvents("2019"); //TODO deklaracja metody
                     break;
                 case 2:
-                    //TODO metoda2
-                    stdout.info("\nOpcja submenu 2 - 2\n");
+                    stdout.info("        WYBRANO OPCJĘ 2       \n");
+                    filterRepository.filterAllDatesEvents("2019"); //TODO deklaracja metody
+                    break;
+                case 3:
+                    stdout.info("        WYBRANO OPCJĘ 3       \n");
+                    filterRepository.filterAllDatesEvents("2019"); //TODO deklaracja metody
                     break;
                 case 9:
-                    //TODO metoda 3
-                    stdout.info("        POWRÓT DO WYŻSZEGO POZIOMU       \n\n");
+                    stdout.info("        POWRÓT DO POPRZEDNIEGO MENU       \n");
                     submenu2ExitCode = 9;
                     break;
                 case 0:
