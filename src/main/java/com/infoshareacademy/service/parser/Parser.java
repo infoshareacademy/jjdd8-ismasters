@@ -15,6 +15,11 @@ public class Parser {
     ObjectMapper objectMapper = new ObjectMapper();
     List<Event> events = new ArrayList<>();
 
+    public  void initialization() {
+        Parser parser = new Parser();
+        parser.parseData();
+    }
+
     public void parseData() {
         try {
             events = objectMapper.readValue(new File("JSON_example"), new TypeReference<ArrayList<Event>>() {
@@ -22,9 +27,6 @@ public class Parser {
 
         } catch (IOException e) {
             e.printStackTrace();
-        }
-        for (Event e : events) {
-
         }
         EventsRepository.getEvents().addAll(events);
     }

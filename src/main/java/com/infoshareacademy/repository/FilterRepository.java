@@ -9,11 +9,6 @@ import java.util.List;
 public class FilterRepository {
     List<Event> outPutList = new ArrayList<>();
 
-
-    public  void initialization(){
-        Parser parser = new Parser();
-        parser.parseData();
-    }
     public List<Event> allEvents() {
         for (Event event: EventsRepository.getEvents()) {
             outPutList.add(event);
