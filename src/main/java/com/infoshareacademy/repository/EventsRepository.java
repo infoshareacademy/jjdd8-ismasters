@@ -26,9 +26,4 @@ public class EventsRepository {
         return events;
     }
 
-    public static void main(String[] args) {
-        EventsRepository e1 = new EventsRepository();
-
-    }
-
 }

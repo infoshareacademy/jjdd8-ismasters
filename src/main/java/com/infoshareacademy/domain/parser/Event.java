@@ -125,22 +125,22 @@ public class Event {
     }
 
     public String toString() {
-        StringBuilder string = new StringBuilder();
-        string.append("Event information");
-        string.append("ID " + getid());
-        string.append("Place " + getPlace());
-        string.append("endDate " + getEndDate());
-        string.append("Name " + getName());
-        string.append("URL " + getUrls());
-        string.append("Attachments " + getAttachments());
-        string.append("DescLong " + getDescLong());
-        string.append("Category ID " + getCategoryId());
-        string.append("start Date " + getStartDate());
-        string.append("Organizer " + getOrganizer());
-        string.append("Active " + getActive());
-        string.append("Desc Short " + getDescShort());
-        string.append("Tickets" + getTickets());
-        return string.toString();
+        StringBuilder eventString = new StringBuilder();
+        eventString.append("Event information");
+        //eventString.append("ID " + getid());
+        eventString.append("Place " + getPlace() +"\n");
+        eventString.append("endDate " + getEndDate()+"\n");
+        eventString.append("Name " + getName()+"\n");
+        eventString.append("URL " + getUrls()+"\n");
+        //eventString.append("Attachments " + getAttachments());
+        eventString.append("DescLong " + getDescLong()+"\n");
+        //eventString.append("Category ID " + getCategoryId());
+        eventString.append("start Date " + getStartDate()+"\n");
+        eventString.append("Organizer " + getOrganizer()+"\n");
+        //eventString.append("Active " + getActive());
+        //eventString.append("Desc Short " + getDescShort());
+        //eventString.append("Tickets" + getTickets());
+        return eventString.toString();
     }
 
 
