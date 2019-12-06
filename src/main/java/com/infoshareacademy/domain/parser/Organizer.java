@@ -22,9 +22,6 @@ public class Organizer {
 
     @Override
     public String toString() {
-        return "Organizer{" +
-                "ID='" + id + '\'' +
-                ", designation='" + designation + '\'' +
-                '}';
+        return "Organizer" + designation ;
     }
 }

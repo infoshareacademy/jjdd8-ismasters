@@ -14,6 +14,8 @@ private static final Logger stdout = LoggerFactory.getLogger("CONSOLE_OUT");
     public static void main(String[] args) {
         Parser parser = new Parser();
         parser.initialization();
-
+        for (Event e: EventsRepository.getEvents()) {
+            System.out.println(e.toString());
+        }
     }
 }
