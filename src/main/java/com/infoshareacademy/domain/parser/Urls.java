@@ -31,10 +31,6 @@ public class Urls {
 
     @Override
     public String toString() {
-        return "Urls{" +
-                "www='" + www + '\'' +
-                ", fb='" + fb + '\'' +
-                ", tickets='" + tickets + '\'' +
-                '}';
+        return "www='" + www + '\'';
     }
 }

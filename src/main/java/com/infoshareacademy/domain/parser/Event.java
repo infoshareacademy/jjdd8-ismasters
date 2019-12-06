@@ -125,22 +125,13 @@ public class Event {
     }
 
     public String toString() {
-        StringBuilder string = new StringBuilder();
-        string.append("Event information");
-        string.append("ID " + getid());
-        string.append("Place " + getPlace());
-        string.append("endDate " + getEndDate());
-        string.append("Name " + getName());
-        string.append("URL " + getUrls());
-        string.append("Attachments " + getAttachments());
-        string.append("DescLong " + getDescLong());
-        string.append("Category ID " + getCategoryId());
-        string.append("start Date " + getStartDate());
-        string.append("Organizer " + getOrganizer());
-        string.append("Active " + getActive());
-        string.append("Desc Short " + getDescShort());
-        string.append("Tickets" + getTickets());
-        return string.toString();
+        StringBuilder eventString = new StringBuilder();
+        eventString.append("Informacje o wydarzeniach"+"\n");
+        eventString.append("Miejsce wydarzenia: " + getPlace() +", "+ getName()+"\n");
+        eventString.append("Rozpoczęcie " + getStartDate()+"\n");
+        eventString.append( getOrganizer()+"\n");
+        eventString.append("URL " + getUrls()+"\n");
+        return eventString.toString();
     }
 
 

@@ -1,5 +1,6 @@
 package com.infoshareacademy.service.parser;
 
+
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.infoshareacademy.domain.parser.Event;
@@ -10,9 +11,16 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+import static com.fasterxml.jackson.databind.deser.std.UntypedObjectDeserializer.Vanilla.std;
+
 public class Parser {
     ObjectMapper objectMapper = new ObjectMapper();
     List<Event> events = new ArrayList<>();
+
+    public  void initialization() {
+        Parser parser = new Parser();
+        parser.parseData();
+    }
 
     public void parseData() {
         try {
@@ -22,16 +30,6 @@ public class Parser {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        for (Event e : events) {
-            System.out.println(e);
-        }
-
         EventsRepository.getEvents().addAll(events);
     }
-
-    public static void main(String[] args) {
-        Parser p1 = new Parser();
-        p1.parseData();
-    }
-
 }
