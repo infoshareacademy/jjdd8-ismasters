@@ -45,7 +45,7 @@ public class Menu {
             switch (GetChoice.getChoice()) {
                 case 1:
                     stdout.info("        WYBRANO OPCJĘ 1       \n");
-                    filterRepository.allEvents();
+                    System.out.println(filterRepository.allEvents());
                     break;
                 case 2:
                     stdout.info("        WYBRANO OPCJĘ 2       \n");
