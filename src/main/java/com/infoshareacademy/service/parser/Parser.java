@@ -27,8 +27,5 @@ public class Parser {
 
         }
         EventsRepository.getEvents().addAll(events);
-
     }
-
-
 }

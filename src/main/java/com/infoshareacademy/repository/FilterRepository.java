@@ -9,11 +9,16 @@ import java.util.List;
 public class FilterRepository {
     List<Event> outPutList = new ArrayList<>();
 
-    public void allEvents() {
 
-        for (int i = 0; i < 10; i++) {
-            System.out.println(EventsRepository.getEvents().get(i));
+    public  void initialization(){
+        Parser parser = new Parser();
+        parser.parseData();
+    }
+    public List<Event> allEvents() {
+        for (Event event: EventsRepository.getEvents()) {
+            outPutList.add(event);
         }
+        return outPutList;
     }
 
     public List<Event> filterAllDatesEvents(String date) {

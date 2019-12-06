@@ -1,6 +1,7 @@
 package com.infoshareacademy;
 
 import com.infoshareacademy.repository.EventsRepository;
+import com.infoshareacademy.repository.FilterRepository;
 import com.infoshareacademy.service.parser.Parser;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -11,10 +12,8 @@ public class App {
 
     public static void main(String[] args) {
         stdout.info("Hello World!");
-        Parser parser = new Parser();
-        parser.parseData();
+        FilterRepository filterRepository = new FilterRepository();
+        filterRepository.initialization();
         System.out.println(EventsRepository.getEvents());
-
-
     }
 }
