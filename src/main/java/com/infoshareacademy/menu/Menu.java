@@ -30,9 +30,9 @@ public class Menu {
             stdout.info("│  \u001b[33m Wybierz pozycję z menu używając cyfr  \u001b[0m │\n");
             stdout.info("│           \u001b[33m  na klawiaturze    \u001b[0m           │\n");
             stdout.info("│                                          │\n");
-            stdout.info("│   1. Pokaż najbliższe wydarzenia         │\n");
-            stdout.info("│   2. Pokaż wydarzenia wg organizatora    │\n");
-            stdout.info("│   3. Znajdź wydarzenie wg daty           │\n");
+            stdout.info("│   1. Pokaż wszystkie wydarzenia          │\n");
+            stdout.info("│   2. Pokaż najbliższe wydarzenia (3 dni) │\n");
+            stdout.info("│   3. Pokaż wydarzenie wg organizatora    │\n");
             stdout.info("│                                          │\n");
             stdout.info("│  \u001b[36m 9. Zakończ                    \u001b[0m         │\n");
             stdout.info("│                                          │\n");
@@ -42,17 +42,17 @@ public class Menu {
 
             switch (GetChoice.getChoice()) {
                 case 1:
-                    stdout.info("Wybór menu 1\n");
-                    new Submenu1().doSomething();
+                    stdout.info("        WYBRANO OPCJĘ 1       \n");
+                    //TODO PRINT ALL EVENTS
                     break;
                 case 2:
-                    //TODO metoda2
-                    stdout.info("Wybór menu 2\n");
-                    new Submenu2().doSomething();
+                    stdout.info("        WYBRANO OPCJĘ 2       \n");
+                    new ShowNearestEvents().showNearestEvents();
                     break;
                 case 3:
                     //TODO metoda 3
-                    stdout.info("Wybór menu 3\n");
+                    stdout.info("        WYBRANO OPCJĘ 3       \n");
+                    new ShowByOrganizer().showByOrganizer();
                     break;
                 case 9:
                     //TODO metoda 3
@@ -64,6 +64,8 @@ public class Menu {
                     stdout.info("└──────────────────────────────────────────┘\n");
                     stdout.info("\n");
                     mainExitCode = 9;
+                    break;
+                case 0:
                     break;
                 default:
                     //TODO metoda 1
