@@ -3,14 +3,12 @@ package com.infoshareacademy.menu;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.io.IOException;
 import java.util.Scanner;
 
 public class Menu {
 
     public static final Scanner scanner = new Scanner(System.in);
     private static final Logger stdout = LoggerFactory.getLogger("CONSOLE_OUT");
-
 
     public static void mainMenu() {
         int mainExitCode = 0;
@@ -41,7 +39,6 @@ public class Menu {
             stdout.info("└──────────────────────────────────────────┘\n");
             stdout.info("\n");
             stdout.info("Wpisz liczbę: \n");
-
 
             switch (GetChoice.getChoice()) {
                 case 1:
@@ -81,22 +78,5 @@ public class Menu {
                     stdout.info("\n");
             }
         }
-    }
-
-    public static void clearScreen() throws IOException {
-
-
-        final String operatingSystem = System.getProperty("os.name");
-
-        if (operatingSystem .contains("Windows")) {
-            Runtime.getRuntime().exec("cls");
-        }
-        else {
-            Runtime.getRuntime().exec("clear");
-        }
-
-//
-//        System.out.print("\033[H\033[2J");
-//        System.out.flush();
     }
 }

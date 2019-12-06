@@ -4,9 +4,6 @@ import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.io.IOException;
-
-import static com.infoshareacademy.menu.Menu.clearScreen;
 import static com.infoshareacademy.menu.Menu.scanner;
 
 public class GetChoice {
@@ -15,12 +12,6 @@ public class GetChoice {
 
     public static int getChoice() {
         int result = 500;
-
-        try {
-            clearScreen();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
 
         try {
             String in = scanner.next();

@@ -1,6 +1,5 @@
 package com.infoshareacademy.menu;
 
-import com.infoshareacademy.menu.GetChoice;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -54,6 +53,5 @@ public class Submenu1{
                     stdout.info("\n");
             }
         }
-
     }
 }
