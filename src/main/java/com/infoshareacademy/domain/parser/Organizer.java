@@ -22,6 +22,6 @@ public class Organizer {
 
     @Override
     public String toString() {
-        return "Organizer" + designation ;
+        return "Organizator" + designation ;
     }
 }

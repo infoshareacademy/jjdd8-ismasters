@@ -32,6 +32,6 @@ public class Place {
     @Override
     public String toString() {
         return  name + '\n'+
-                "Exact localization:'" + subname ;
+                "Dokładna lokalizacja " + subname ;
     }
 }

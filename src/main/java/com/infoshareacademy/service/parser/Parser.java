@@ -11,6 +11,8 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+import static com.fasterxml.jackson.databind.deser.std.UntypedObjectDeserializer.Vanilla.std;
+
 public class Parser {
     ObjectMapper objectMapper = new ObjectMapper();
     List<Event> events = new ArrayList<>();
