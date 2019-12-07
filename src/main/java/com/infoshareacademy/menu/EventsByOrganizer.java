@@ -1,15 +1,12 @@
 package com.infoshareacademy.menu;
 
-import com.infoshareacademy.domain.parser.Event;
 import com.infoshareacademy.repository.FilterRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.time.LocalDate;
+import static com.infoshareacademy.menu.PrinterEvents.printEvents;
 
-import static com.infoshareacademy.menu.PrintEvents.printEvents;
-
-public class ShowByOrganizer {
+public class EventsByOrganizer {
 
     private static final Logger stdout = LoggerFactory.getLogger("CONSOLE_OUT");
 
@@ -19,7 +16,7 @@ public class ShowByOrganizer {
 
         while (submenu2ExitCode != 9) {
             stdout.info("\n");
-            new PrintHeader().printBiggerHeader();
+            new PrinterHeader().printBiggerHeader();
             stdout.info("│   1. Pokaż Gdański Archipelag Kultury                            │\n");
             stdout.info("│   2. Pokaż Wojewódzka i Miejska Biblioteka Publiczna w Gdańsku   │\n");
             stdout.info("│   3. Pokaż Miejski Teatr MINIATURA                               │\n");
@@ -51,7 +48,7 @@ public class ShowByOrganizer {
                 case 0:
                     break;
                 default:
-                    new PrintNothingHere().printNothingHere();
+                    new PrinterNothingHere().printNothingHere();
             }
         }
     }
