@@ -7,7 +7,7 @@ import java.util.regex.Pattern;
 
 import static com.infoshareacademy.menu.Menu.scanner;
 
-public class GetChoice {
+public class  GetChoice {
 
     private static final Logger stdout = LoggerFactory.getLogger("CONSOLE_OUT");
 
