@@ -18,7 +18,7 @@ public class FilterRepository {
     public List<Event> filterAllDatesEvents(String date) {
 
         for (Event event : EventsRepository.getEvents()) {
-            if (event.getEndDate().equals(date)) {
+            if (event.getEndDate().contains(date)) {
                 filteredOutPutList.add(event);
             }
         }
@@ -34,6 +34,5 @@ public class FilterRepository {
         }
         return filteredOutPutList;
     }
-
 }
 
