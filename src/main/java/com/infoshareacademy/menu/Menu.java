@@ -1,12 +1,12 @@
 package com.infoshareacademy.menu;
 
-import com.infoshareacademy.domain.parser.Event;
 import com.infoshareacademy.repository.FilterRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.util.List;
 import java.util.Scanner;
+
+import static com.infoshareacademy.menu.PrintEvents.printEvents;
 
 public class Menu {
 
@@ -15,20 +15,12 @@ public class Menu {
 
     public static void mainMenu() {
         FilterRepository filterRepository = new FilterRepository();
+
         int mainExitCode = 0;
 
-        stdout.info("┌────────────────────────────────────────────────────┐\n");
-        stdout.info("│                                                    │\n");
-        stdout.info("│      \u001b[32mWitaj w kalendarzu wydarzeń kulturalnych      \u001b[0m│\n");
-        stdout.info("│                                                    │\n");
-        stdout.info("│                (c) ISMasters 2019                  │\n");
-        stdout.info("│                                                    │\n");
-        stdout.info("└────────────────────────────────────────────────────┘\n");
-        stdout.info("\n");
-        stdout.info("\n");
+        new PrintGreeting().printGreeting();
 
         while (mainExitCode != 9) {
-
             new PrintHeader().printHeader();
             stdout.info("│   1. Pokaż wszystkie wydarzenia                    │\n");
             stdout.info("│   2. Pokaż najbliższe wydarzenia                   │\n");
@@ -69,11 +61,5 @@ public class Menu {
         }
     }
 
-    //TODO przenieść do oddzielnej klasy
-    public static void printEvents(List<Event> eventList) {
-        for (Event event : eventList) {
-            stdout.info(event.toString());
-            stdout.info("\n");
-        }
-    }
+
 }
