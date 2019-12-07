@@ -28,7 +28,7 @@ public class FilterRepository {
     public List<Event> filterAllOrganisers(String organizer) {
 
         for (Event event : EventsRepository.getEvents()) {
-            if (event.getOrganizer().equals(organizer)) {
+            if (event.getOrganizer().toString().toLowerCase().contains(organizer.toLowerCase())) {
                 filteredOutPutList.add(event);
             }
         }
