@@ -6,7 +6,7 @@ import org.slf4j.LoggerFactory;
 
 import java.util.Scanner;
 
-import static com.infoshareacademy.menu.PrintEvents.printEvents;
+import static com.infoshareacademy.menu.PrinterEvents.printEvents;
 
 public class Menu {
 
@@ -18,10 +18,10 @@ public class Menu {
 
         int mainExitCode = 0;
 
-        new PrintGreeting().printGreeting();
+        new PrinterGreeting().printGreeting();
 
         while (mainExitCode != 9) {
-            new PrintHeader().printHeader();
+            new PrinterHeader().printHeader();
             stdout.info("│   1. Pokaż wszystkie wydarzenia                    │\n");
             stdout.info("│   2. Pokaż najbliższe wydarzenia                   │\n");
             stdout.info("│   3. Pokaż wydarzenie promowanych organizatorów    │\n");
@@ -38,10 +38,10 @@ public class Menu {
                     stdout.info("\n");
                     break;
                 case 2:
-                    new ShowNearestEvents().showNearestEvents();
+                    new NearestEvents().showNearestEvents();
                     break;
                 case 3:
-                    new ShowByOrganizer().showByOrganizer();
+                    new EventsByOrganizer().showByOrganizer();
                     break;
                 case 9:
                     stdout.info("\n");
@@ -56,7 +56,7 @@ public class Menu {
                 case 0:
                     break;
                 default:
-                    new PrintNothingHere().printNothingHere();
+                    new PrinterNothingHere().printNothingHere();
             }
         }
     }

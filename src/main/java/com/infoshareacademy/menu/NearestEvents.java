@@ -1,15 +1,14 @@
 package com.infoshareacademy.menu;
 
-import com.infoshareacademy.domain.parser.Event;
 import com.infoshareacademy.repository.FilterRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.time.LocalDate;
 
-import static com.infoshareacademy.menu.PrintEvents.printEvents;
+import static com.infoshareacademy.menu.PrinterEvents.printEvents;
 
-public class ShowNearestEvents {
+public class NearestEvents {
 
     private static final Logger stdout = LoggerFactory.getLogger("CONSOLE_OUT");
 
@@ -20,7 +19,7 @@ public class ShowNearestEvents {
 
         while (submenu2ExitCode != 9) {
             stdout.info("\n");
-            new PrintHeader().printHeader();
+            new PrinterHeader().printHeader();
             stdout.info("│                                                    │\n");
             stdout.info("│   1. Pokaż dzisiejsze wydarzenia                   │\n");
             stdout.info("│   2. Pokaż jutrzejsze wydarzenia                   │\n");
@@ -55,7 +54,7 @@ public class ShowNearestEvents {
                 case 0:
                     break;
                 default:
-                    new PrintNothingHere().printNothingHere();
+                    new PrinterNothingHere().printNothingHere();
             }
         }
     }

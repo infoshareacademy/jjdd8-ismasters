@@ -31,7 +31,10 @@ public class Place {
 
     @Override
     public String toString() {
-        return  name + '\n'+
-                "Dokładna lokalizacja " + subname ;
+        if (subname != null) {
+            return  "\u001b[37;1m" + name + "\u001b[0m\n"+ "Dokładna lokalizacja: " + subname ;
+        } else {
+            return "\u001b[37;1m" + name + "\u001b[0m";
+        }
     }
 }

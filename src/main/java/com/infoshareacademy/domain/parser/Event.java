@@ -125,13 +125,11 @@ public class Event {
     }
 
     public String toString() {
-        StringBuilder eventString = new StringBuilder();
-        eventString.append("Nazwa wydarzenia: " + getName()+"\n");
-        eventString.append("Miejsce wydarzenia: " + getPlace()+"\n");
-        eventString.append("Rozpoczęcie: " + getStartDate().substring(0,10)+", godz: "+ getStartDate().substring(11,16) + "\n");
-        eventString.append( getOrganizer()+"\n");
-        eventString.append("Adres WWW: " + getUrls()+"\n");
-        return eventString.toString();
+        return "Nazwa wydarzenia: \u001b[36;1m" + getName() + "\u001b[0m\n" +
+                "Miejsce wydarzenia: " + getPlace() + "\n" +
+                "Rozpoczęcie: " + getStartDate().substring(0, 10) + ", godz: " + getStartDate().substring(11, 16) + "\n" +
+                getOrganizer() + "\n" +
+                "Adres WWW: " + getUrls() + "\n";
     }
 
 
