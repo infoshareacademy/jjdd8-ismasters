@@ -34,26 +34,17 @@ public class ShowNearestEvents {
 
             switch (GetChoice.getChoice()) {
                 case 1:
-                    /*for (Event event : filterRepository.filterAllDatesEvents(LocalDate.now().toString())) {
-                        stdout.info(event.toString());
-                        stdout.info("\n");
-                    }*/
+
                     printEvents(filterRepository.filterAllDatesEvents(LocalDate.now().toString()));
                     stdout.info("\n");
                     break;
                 case 2:
-                    /*for (Event event : filterRepository.filterAllDatesEvents(LocalDate.now().plusDays(1).toString())) {
-                        stdout.info(event.toString());
-                        stdout.info("\n");
-                    }*/
+
                     printEvents(filterRepository.filterAllDatesEvents(LocalDate.now().plusDays(1).toString()));
                     stdout.info("\n");
                     break;
                 case 3:
-                    /*for (Event event : filterRepository.filterAllDatesEvents(LocalDate.now().plusDays(2).toString())) {
-                        stdout.info(event.toString());
-                        stdout.info("\n");
-                    }*/
+
                     printEvents(filterRepository.filterAllDatesEvents(LocalDate.now().plusDays(2).toString()));
                     stdout.info("\n");
                     break;

@@ -32,29 +32,15 @@ public class ShowByOrganizer {
 
             switch (GetChoice.getChoice()) {
                 case 1:
-                    /*stdout.info(filterRepository.filterAllOrganisers("Archipelag").toString());*/
-                   /* for (Event event : filterRepository.filterAllOrganisers("Gdański Archipelag Kultury")) {
-                        stdout.info(event.toString());
-                        stdout.info("\n");
-                    }*/
                     printEvents(filterRepository.filterAllOrganisers("Gdański Archipelag Kultury"));
                     stdout.info("\n");
                     break;
                 case 2:
-                    /*stdout.info(filterRepository.filterAllOrganisers("biblioteka").toString());*/
-                   /* for (Event event : filterRepository.filterAllOrganisers("Wojewódzka i Miejska Biblioteka Publiczna w Gdańsku")) {
-                        stdout.info(event.toString());
-                        stdout.info("\n");
-                    }*/
                     printEvents(filterRepository.filterAllOrganisers("Wojewódzka i Miejska Biblioteka Publiczna w Gdańsku"));
                     stdout.info("\n");
                     break;
                 case 3:
-                    /*stdout.info(filterRepository.filterAllOrganisers("miniatura").toString());*/
-                   /* for (Event event : filterRepository.filterAllOrganisers("Miejski Teatr MINIATURA")) {
-                        stdout.info(event.toString());
-                        stdout.info("\n");
-                    }*/
+
                     printEvents(filterRepository.filterAllOrganisers("Miejski Teatr MINIATURA"));
                     stdout.info("\n");
                     break;
