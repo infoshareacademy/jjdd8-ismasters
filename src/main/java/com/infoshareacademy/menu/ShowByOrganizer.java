@@ -7,6 +7,8 @@ import org.slf4j.LoggerFactory;
 
 import java.time.LocalDate;
 
+import static com.infoshareacademy.menu.PrintEvents.printEvents;
+
 public class ShowByOrganizer {
 
     private static final Logger stdout = LoggerFactory.getLogger("CONSOLE_OUT");
@@ -17,12 +19,12 @@ public class ShowByOrganizer {
 
         while (submenu2ExitCode != 9) {
             stdout.info("\n");
-            new PrintHeader().printHeader();
+            new PrintHeader().printBiggerHeader();
             stdout.info("│   1. Pokaż Gdański Archipelag Kultury                            │\n");
             stdout.info("│   2. Pokaż Wojewódzka i Miejska Biblioteka Publiczna w Gdańsku   │\n");
             stdout.info("│   2. Pokaż Miejski Teatr MINIATURA                               │\n");
             stdout.info("│                                                                  │\n");
-            stdout.info("│  \u001b[36m 9. Wróć                                        \u001b[0m    │\n");
+            stdout.info("│  \u001b[36m 9. Wróć                                                    \u001b[0m    │\n");
             stdout.info("│                                                                  │\n");
             stdout.info("└──────────────────────────────────────────────────────────────────┘\n");
             stdout.info("\n");
@@ -31,24 +33,30 @@ public class ShowByOrganizer {
             switch (GetChoice.getChoice()) {
                 case 1:
                     /*stdout.info(filterRepository.filterAllOrganisers("Archipelag").toString());*/
-                    for (Event event : filterRepository.filterAllOrganisers("Gdański Archipelag Kultury")) {
+                   /* for (Event event : filterRepository.filterAllOrganisers("Gdański Archipelag Kultury")) {
                         stdout.info(event.toString());
                         stdout.info("\n");
-                    }
+                    }*/
+                    printEvents(filterRepository.filterAllOrganisers("Gdański Archipelag Kultury"));
+                    stdout.info("\n");
                     break;
                 case 2:
                     /*stdout.info(filterRepository.filterAllOrganisers("biblioteka").toString());*/
-                    for (Event event : filterRepository.filterAllOrganisers("Wojewódzka i Miejska Biblioteka Publiczna w Gdańsku")) {
+                   /* for (Event event : filterRepository.filterAllOrganisers("Wojewódzka i Miejska Biblioteka Publiczna w Gdańsku")) {
                         stdout.info(event.toString());
                         stdout.info("\n");
-                    }
+                    }*/
+                    printEvents(filterRepository.filterAllOrganisers("Wojewódzka i Miejska Biblioteka Publiczna w Gdańsku"));
+                    stdout.info("\n");
                     break;
                 case 3:
                     /*stdout.info(filterRepository.filterAllOrganisers("miniatura").toString());*/
-                    for (Event event : filterRepository.filterAllOrganisers("Miejski Teatr MINIATURA")) {
+                   /* for (Event event : filterRepository.filterAllOrganisers("Miejski Teatr MINIATURA")) {
                         stdout.info(event.toString());
                         stdout.info("\n");
-                    }
+                    }*/
+                    printEvents(filterRepository.filterAllOrganisers("Miejski Teatr MINIATURA"));
+                    stdout.info("\n");
                     break;
                 case 9:
                     stdout.info("        POWRÓT DO WYŻSZEGO POZIOMU       \n\n");
