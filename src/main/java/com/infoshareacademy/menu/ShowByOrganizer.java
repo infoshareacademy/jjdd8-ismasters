@@ -32,17 +32,17 @@ public class ShowByOrganizer {
             switch (GetChoice.getChoice()) {
                 case 1:
                     stdout.info("        WYBRANO OPCJĘ 1       \n");
-                    filterRepository.filterAllOrganisers("Archipelag");
+                    stdout.info(filterRepository.filterAllOrganisers("Archipelag").toString());
                     break;
                 case 2:
                     //TODO metoda2
                     stdout.info("        WYBRANO OPCJĘ 2       \n");
-                    filterRepository.filterAllOrganisers("Archipelag");
+                    stdout.info(filterRepository.filterAllOrganisers("biblioteka").toString());
                     break;
                 case 3:
                     //TODO metoda2
                     stdout.info("        WYBRANO OPCJĘ 3       \n");
-                    filterRepository.filterAllOrganisers("Archipelag");
+                    stdout.info(filterRepository.filterAllOrganisers("miniatura").toString());
                     break;
                 case 9:
                     stdout.info("        POWRÓT DO WYŻSZEGO POZIOMU       \n\n");

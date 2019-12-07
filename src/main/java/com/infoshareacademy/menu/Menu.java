@@ -28,18 +28,18 @@ public class Menu {
 
         while (mainExitCode != 9) {
 
-            stdout.info("┌──────────────────────────────────────────┐\n");
-            stdout.info("│                                          │\n");
-            stdout.info("│  \u001b[33m Wybierz pozycję z menu używając cyfr  \u001b[0m │\n");
-            stdout.info("│           \u001b[33m  na klawiaturze    \u001b[0m           │\n");
-            stdout.info("│                                          │\n");
-            stdout.info("│   1. Pokaż wszystkie wydarzenia          │\n");
-            stdout.info("│   2. Pokaż najbliższe wydarzenia         │\n");
-            stdout.info("│   3. Pokaż wydarzenie wg organizatora    │\n");
-            stdout.info("│                                          │\n");
-            stdout.info("│  \u001b[36m 9. Zakończ                    \u001b[0m         │\n");
-            stdout.info("│                                          │\n");
-            stdout.info("└──────────────────────────────────────────┘\n");
+            stdout.info("┌────────────────────────────────────────────────────┐\n");
+            stdout.info("│                                                    │\n");
+            stdout.info("│  \u001b[33m Wybierz pozycję z menu używając cyfr            \u001b[0m │\n");
+            stdout.info("│           \u001b[33m  na klawiaturze    \u001b[0m                     │\n");
+            stdout.info("│                                                    │\n");
+            stdout.info("│   1. Pokaż wszystkie wydarzenia                    │\n");
+            stdout.info("│   2. Pokaż najbliższe wydarzenia                   │\n");
+            stdout.info("│   3. Pokaż wydarzenie promowanych organizatorów    │\n");
+            stdout.info("│                                                    │\n");
+            stdout.info("│  \u001b[36m 9. Zakończ                    \u001b[0m                   │\n");
+            stdout.info("│                                                    │\n");
+            stdout.info("└────────────────────────────────────────────────────┘\n");
             stdout.info("\n");
             stdout.info("Wpisz liczbę: \n");
 

@@ -13,6 +13,7 @@ public class ShowNearestEvents {
 
     void showNearestEvents() {
         FilterRepository filterRepository = new FilterRepository();
+
         int submenu2ExitCode = 0;
 
         while (submenu2ExitCode != 9) {
@@ -23,7 +24,7 @@ public class ShowNearestEvents {
             stdout.info("│           \u001b[33m  na klawiaturze    \u001b[0m           │\n");
             stdout.info("│                                          │\n");
             stdout.info("│   1. Pokaż dzisiejsze wydarzenia         │\n");
-            stdout.info("│   2. Pokaż jutrzejsze                    │\n");
+            stdout.info("│   2. Pokaż jutrzejsze wydarzenia         │\n");
             stdout.info("│   2. Pokaż wydarzenia za 3 dni           │\n");
             stdout.info("│                                          │\n");
             stdout.info("│  \u001b[36m 9. Wróć                       \u001b[0m         │\n");
