@@ -14,11 +14,18 @@ public class Place {
     }
 
     public String getSubname() {
-        return subname;
+        if (this.subname != null){
+            return this.subname;
+        }
+        else {
+            return this.subname ="Brak";
+        }
+
     }
 
     public void setSubname(String subname) {
         this.subname = subname;
+
     }
 
     public String getName() {
@@ -32,6 +39,6 @@ public class Place {
     @Override
     public String toString() {
         return  name + '\n'+
-                "Dokładna lokalizacja " + subname ;
+                "Dokładna lokalizacja " + getSubname() ;
     }
 }

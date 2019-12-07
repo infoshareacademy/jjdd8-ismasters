@@ -22,7 +22,7 @@ public class ShowByOrganizer {
             new PrintHeader().printBiggerHeader();
             stdout.info("│   1. Pokaż Gdański Archipelag Kultury                            │\n");
             stdout.info("│   2. Pokaż Wojewódzka i Miejska Biblioteka Publiczna w Gdańsku   │\n");
-            stdout.info("│   2. Pokaż Miejski Teatr MINIATURA                               │\n");
+            stdout.info("│   3. Pokaż Miejski Teatr MINIATURA                               │\n");
             stdout.info("│                                                                  │\n");
             stdout.info("│  \u001b[36m 9. Wróć                                                    \u001b[0m    │\n");
             stdout.info("│                                                                  │\n");
