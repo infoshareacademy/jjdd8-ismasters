@@ -12,11 +12,11 @@ public class EventsByOrganizer {
 
     void showByOrganizer() {
         FilterRepository filterRepository = new FilterRepository();
-        int submenu2ExitCode = 0;
+        int returnCheckInt = 0;
 
-        while (submenu2ExitCode != 9) {
+        while (returnCheckInt != 9) {
             stdout.info("\n");
-            new PrinterHeader().printBiggerHeader();
+            new HeaderPrinter().printBiggerHeader();
             stdout.info("│   1. Pokaż Gdański Archipelag Kultury                            │\n");
             stdout.info("│   2. Pokaż Wojewódzka i Miejska Biblioteka Publiczna w Gdańsku   │\n");
             stdout.info("│   2. Pokaż Miejski Teatr MINIATURA                               │\n");
@@ -43,7 +43,7 @@ public class EventsByOrganizer {
                     break;
                 case 9:
                     stdout.info("        POWRÓT DO WYŻSZEGO POZIOMU       \n\n");
-                    submenu2ExitCode = 9;
+                    returnCheckInt = 9;
                     break;
                 case 0:
                     break;

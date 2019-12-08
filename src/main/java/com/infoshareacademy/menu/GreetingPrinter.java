@@ -3,7 +3,7 @@ package com.infoshareacademy.menu;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class PrinterGreeting {
+public class GreetingPrinter {
     private static final Logger stdout = LoggerFactory.getLogger("CONSOLE_OUT");
 
     void printGreeting() {

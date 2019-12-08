@@ -3,7 +3,7 @@ package com.infoshareacademy.menu;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class PrinterHeader {
+public class HeaderPrinter {
 
     private static final Logger stdout = LoggerFactory.getLogger("CONSOLE_OUT");
 
