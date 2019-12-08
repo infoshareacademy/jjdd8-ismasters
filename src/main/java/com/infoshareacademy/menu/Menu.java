@@ -7,7 +7,7 @@ import org.slf4j.LoggerFactory;
 
 import java.util.Scanner;
 
-import static com.infoshareacademy.menu.PrinterEvents.printEvents;
+import static com.infoshareacademy.menu.EventsPrinter.printEvents;
 
 public class Menu {
 

@@ -5,7 +5,7 @@ import com.infoshareacademy.repository.FilterRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import static com.infoshareacademy.menu.PrinterEvents.printEvents;
+import static com.infoshareacademy.menu.EventsPrinter.printEvents;
 
 public class EventsByOrganizer {
 
