@@ -10,7 +10,6 @@ public class HeaderPrinter {
     private static final Logger stdout = LoggerFactory.getLogger("CONSOLE_OUT");
 
     void printHeader() {
-        ScreenCleaner.cleanConsole();
         stdout.info("┌────────────────────────────────────────────────────┐\n");
         stdout.info("│                                                    │\n");
         stdout.info("│       " + ColorHandler.YELLOW + "Wybierz pozycję z menu używając cyfr       " + ColorHandler.DEFAULT + "  │\n");
@@ -19,7 +18,6 @@ public class HeaderPrinter {
     }
 
     void printBiggerHeader() {
-        ScreenCleaner.cleanConsole();
         stdout.info("┌──────────────────────────────────────────────────────────────────┐\n");
         stdout.info("│                                                                  │\n");
         stdout.info("│       " + ColorHandler.YELLOW + "       Wybierz pozycję z menu używając cyfr               " + ColorHandler.DEFAULT + " │\n");
