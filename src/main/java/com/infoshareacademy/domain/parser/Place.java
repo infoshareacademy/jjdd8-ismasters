@@ -43,7 +43,7 @@ public class Place {
 
 
         if (subname != null) {
-            return  ColorHandler.white + name + ColorHandler.reset  + "\n" + " Dokładna lokalizacja: " + subname ;
+            return  ColorHandler.white + name + ColorHandler.reset  + "\n" + "Dokładna lokalizacja: " + subname ;
         } else {
             return ColorHandler.white + name + ColorHandler.reset;
         }
