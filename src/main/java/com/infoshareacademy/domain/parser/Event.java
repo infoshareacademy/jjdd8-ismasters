@@ -126,10 +126,18 @@ public class Event {
         this.attachments = attachments;
     }
 
+    public String extractDateOnly(String date) {
+        return date.substring(0, 10); //extract only date form mixed data&time string
+    }
+
+    public String extractTimeOnly(String date) {
+        return date.substring(11, 16); //extract only date form mixed data&time string
+    }
+
     public String toString() {
         return "Nazwa wydarzenia:" + ColorHandler.CYAN +   getName() + ColorHandler.DEFAULT + "\n" +
                 "Miejsce wydarzenia: " + getPlace() + "\n" +
-                "Rozpoczęcie: " + getStartDate().substring(0, 10) + ", godz: " + getStartDate().substring(11, 16) + "\n" +
+                "Rozpoczęcie: " + extractDateOnly(getStartDate()) + ", godz: " + extractTimeOnly(getStartDate()) + "\n" +
                 getOrganizer() + "\n" +
                 "Adres WWW: " + getUrls() + "\n";
     }
