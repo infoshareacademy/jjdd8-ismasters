@@ -55,7 +55,7 @@ public class NearestEvents {
                 case 0:
                     break;
                 default:
-                    new PrinterNothingHere().printNothingHere();
+                    new NothingHerePrinter().printNothingHere();
             }
         }
     }

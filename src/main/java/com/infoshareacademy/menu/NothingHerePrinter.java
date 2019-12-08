@@ -4,7 +4,7 @@ import com.infoshareacademy.menu.additionStyleClasses.ColorHandler;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class PrinterNothingHere {
+public class NothingHerePrinter {
     private static final Logger stdout = LoggerFactory.getLogger("CONSOLE_OUT");
 
     void printNothingHere() {

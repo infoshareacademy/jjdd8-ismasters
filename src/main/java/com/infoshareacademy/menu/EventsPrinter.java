@@ -15,16 +15,17 @@ public class EventsPrinter {
         for (Event event : eventList) {
             stdout.info(event.toString());
             stdout.info("\n");
-//            eventCounter++;
-//            if (eventCounter == 5) {
-//                stdout.info("\n--------Dalej: wciśnij ENTER-------\n");
-//                try {
-//                    System.in.read();
-//                } catch (IOException e) {
-//                    e.printStackTrace();
-//                }
-//                eventCounter = 0;
+            eventCounter++;
+            if (eventCounter == 5) {
+                stdout.info("\n--------Dalej: wciśnij ENTER-------\n");
+                try {
+                    System.in.read();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+                eventCounter = 0;
             }
         }
+        eventList.clear();
     }
 }
