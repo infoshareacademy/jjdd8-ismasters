@@ -19,7 +19,7 @@ public class NearestEvents {
 
         while (submenu2ExitCode != 9) {
             stdout.info("\n");
-            new PrinterHeader().printHeader();
+            new HeaderPrinter().printHeader();
             stdout.info("│                                                    │\n");
             stdout.info("│   1. Pokaż dzisiejsze wydarzenia                   │\n");
             stdout.info("│   2. Pokaż jutrzejsze wydarzenia                   │\n");

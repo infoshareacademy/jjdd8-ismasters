@@ -18,10 +18,10 @@ public class Menu {
 
         int mainExitCode = 0;
 
-        new PrinterGreeting().printGreeting();
+        new GreetingPrinter().printGreeting();
 
         while (mainExitCode != 9) {
-            new PrinterHeader().printHeader();
+            new HeaderPrinter().printHeader();
             stdout.info("│   1. Pokaż wszystkie wydarzenia                    │\n");
             stdout.info("│   2. Pokaż najbliższe wydarzenia                   │\n");
             stdout.info("│   3. Pokaż wydarzenie promowanych organizatorów    │\n");
