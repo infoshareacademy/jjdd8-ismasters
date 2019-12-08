@@ -9,16 +9,14 @@ public class FilterRepository {
     List<Event> filteredOutPutList = new ArrayList<>();
 
     public List<Event> allEvents() {
-        for (Event event: EventsRepository.getEvents()) {
-            filteredOutPutList.add(event);
-        }
+        filteredOutPutList.addAll(EventsRepository.getEvents());
         return filteredOutPutList;
     }
 
-    public List<Event> filterAllDatesEvents(String date) {
+    public List<Event> filterAllDatesEvents(String inputDate) {
 
         for (Event event : EventsRepository.getEvents()) {
-            if (event.getEndDate().equals(date)) {
+            if (event.getStartDate().contains(inputDate)) {
                 filteredOutPutList.add(event);
             }
         }
@@ -28,12 +26,11 @@ public class FilterRepository {
     public List<Event> filterAllOrganisers(String organizer) {
 
         for (Event event : EventsRepository.getEvents()) {
-            if (event.getOrganizer().equals(organizer)) {
+            if (event.getOrganizer().toString().toLowerCase().contains(organizer.toLowerCase())) {
                 filteredOutPutList.add(event);
             }
         }
         return filteredOutPutList;
     }
-
 }
 

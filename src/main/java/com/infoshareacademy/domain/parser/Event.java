@@ -1,5 +1,7 @@
 package com.infoshareacademy.domain.parser;
 
+import com.infoshareacademy.menu.additionStyleClasses.ColorHandler;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -124,14 +126,20 @@ public class Event {
         this.attachments = attachments;
     }
 
+    public String extractDateOnly(String date) {
+        return date.substring(0, 10); //extract only date form mixed data&time string
+    }
+
+    public String extractTimeOnly(String date) {
+        return date.substring(11, 16); //extract only date form mixed data&time string
+    }
+
     public String toString() {
-        StringBuilder eventString = new StringBuilder();
-        eventString.append("Informacje o wydarzeniach"+"\n");
-        eventString.append("Miejsce wydarzenia: " + getPlace() +", "+ getName()+"\n");
-        eventString.append("Rozpoczęcie " + getStartDate()+"\n");
-        eventString.append( getOrganizer()+"\n");
-        eventString.append("URL " + getUrls()+"\n");
-        return eventString.toString();
+        return "Nazwa wydarzenia:" + ColorHandler.CYAN +   getName() + ColorHandler.DEFAULT + "\n" +
+                "Miejsce wydarzenia: " + getPlace() + "\n" +
+                "Rozpoczęcie: " + extractDateOnly(getStartDate()) + ", godz: " + extractTimeOnly(getStartDate()) + "\n" +
+                getOrganizer() + "\n" +
+                "Adres WWW: " + getUrls() + "\n";
     }
 
 

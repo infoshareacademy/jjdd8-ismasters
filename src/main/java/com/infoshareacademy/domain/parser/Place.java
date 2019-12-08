@@ -1,10 +1,8 @@
 package com.infoshareacademy.domain.parser;
 
-public class Place {
-    private int id;
-    private String subname;
-    private String name;
+import com.infoshareacademy.menu.additionStyleClasses.ColorHandler;
 
+public class Place {
     public int getId() {
         return id;
     }
@@ -29,9 +27,18 @@ public class Place {
         this.name = name;
     }
 
+    private int id;
+    private String subname;
+    private String name;
+
     @Override
     public String toString() {
-        return  name + '\n'+
-                "Dokładna lokalizacja " + subname ;
+
+
+        if (subname != null) {
+            return  ColorHandler.CYAN + name + ColorHandler.DEFAULT + "\n" + "Dokładna lokalizacja: " + subname ;
+        } else {
+            return ColorHandler.CYAN + name + ColorHandler.DEFAULT;
+        }
     }
 }

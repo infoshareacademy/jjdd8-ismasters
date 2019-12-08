@@ -31,6 +31,6 @@ public class Urls {
 
     @Override
     public String toString() {
-        return "www='" + www + '\'';
+        return www;
     }
 }

@@ -1,9 +1,13 @@
 package com.infoshareacademy.menu;
 
+import com.infoshareacademy.menu.additionStyleClasses.ColorHandler;
+import com.infoshareacademy.repository.FilterRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.util.Scanner;
+
+import static com.infoshareacademy.menu.EventsPrinter.printEvents;
 
 public class Menu {
 
@@ -11,73 +15,49 @@ public class Menu {
     private static final Logger stdout = LoggerFactory.getLogger("CONSOLE_OUT");
 
     public static void mainMenu() {
+        FilterRepository filterRepository = new FilterRepository();
+
         int mainExitCode = 0;
 
-        stdout.info("┌──────────────────────────────────────────┐\n");
-        stdout.info("│                                          │\n");
-        stdout.info("│ \u001b[32mWitaj w kalendarzu wydarzeń kulturalnych \u001b[0m│\n");
-        stdout.info("│                                          │\n");
-        stdout.info("│           (c) ISMasters 2019             │\n");
-        stdout.info("│                                          │\n");
-        stdout.info("└──────────────────────────────────────────┘\n");
-        stdout.info("\n");
-        stdout.info("\n");
+        new GreetingPrinter().printGreeting();
 
         while (mainExitCode != 9) {
-
-            stdout.info("┌──────────────────────────────────────────┐\n");
-            stdout.info("│                                          │\n");
-            stdout.info("│  \u001b[33m Wybierz pozycję z menu używając cyfr  \u001b[0m │\n");
-            stdout.info("│           \u001b[33m  na klawiaturze    \u001b[0m           │\n");
-            stdout.info("│                                          │\n");
-            stdout.info("│   1. Pokaż wszystkie wydarzenia          │\n");
-            stdout.info("│   2. Pokaż najbliższe wydarzenia (3 dni) │\n");
-            stdout.info("│   3. Pokaż wydarzenie wg organizatora    │\n");
-            stdout.info("│                                          │\n");
-            stdout.info("│  \u001b[36m 9. Zakończ                    \u001b[0m         │\n");
-            stdout.info("│                                          │\n");
-            stdout.info("└──────────────────────────────────────────┘\n");
+            new HeaderPrinter().printHeader();
+            stdout.info("│   1. Pokaż wszystkie wydarzenia                    │\n");
+            stdout.info("│   2. Pokaż najbliższe wydarzenia                   │\n");
+            stdout.info("│   3. Pokaż wydarzenie promowanych organizatorów    │\n");
+            stdout.info("│                                                    │\n");
+            stdout.info("│  " + ColorHandler.CYAN + " 9. Zakończ                    " + ColorHandler.DEFAULT + "                   │\n");
+            stdout.info("│                                                    │\n");
+            stdout.info("└────────────────────────────────────────────────────┘\n");
             stdout.info("\n");
             stdout.info("Wpisz liczbę: \n");
 
-            switch (GetChoice.getChoice()) {
+            switch (ChoiceGetter.getChoice()) {
                 case 1:
-                    stdout.info("        WYBRANO OPCJĘ 1       \n");
-                    //TODO PRINT ALL EVENTS
+                    printEvents(filterRepository.allEvents());
+                    stdout.info("\n");
                     break;
                 case 2:
-                    stdout.info("        WYBRANO OPCJĘ 2       \n");
-                    new ShowNearestEvents().showNearestEvents();
+                    new NearestEvents().showNearestEvents();
                     break;
                 case 3:
-                    //TODO metoda 3
-                    stdout.info("        WYBRANO OPCJĘ 3       \n");
-                    new ShowByOrganizer().showByOrganizer();
+                    new EventsByOrganizer().showByOrganizer();
                     break;
                 case 9:
-                    //TODO metoda 3
                     stdout.info("\n");
-                    stdout.info("┌──────────────────────────────────────────┐\n");
-                    stdout.info("│                                          │\n");
-                    stdout.info("│       \u001b[35m       DO ZOBACZENIA!      \u001b[0m        │\n");
-                    stdout.info("│                                          │\n");
-                    stdout.info("└──────────────────────────────────────────┘\n");
+                    stdout.info("┌────────────────────────────────────────────────────┐\n");
+                    stdout.info("│                                                    │\n");
+                    stdout.info("│       " + ColorHandler.PURPLE + "            DO ZOBACZENIA!           " + ColorHandler.DEFAULT + "        │\n");
+                    stdout.info("│                                                    │\n");
+                    stdout.info("└────────────────────────────────────────────────────┘\n");
                     stdout.info("\n");
                     mainExitCode = 9;
                     break;
                 case 0:
                     break;
                 default:
-                    //TODO metoda 1
-                    stdout.info("\n");
-                    stdout.info("┌──────────────────────────────────────────┐\n");
-                    stdout.info("│                                          │\n");
-                    stdout.info("│        \u001b[31mPOD TYM NUMEREM NIC NIE MA! \u001b[0m      │\n");
-                    stdout.info("│                                          │\n");
-                    stdout.info("│               JESZCZE RAZ!               │\n");
-                    stdout.info("│                                          │\n");
-                    stdout.info("└──────────────────────────────────────────┘\n");
-                    stdout.info("\n");
+                    new NothingHerePrinter().printNothingHere();
             }
         }
     }
