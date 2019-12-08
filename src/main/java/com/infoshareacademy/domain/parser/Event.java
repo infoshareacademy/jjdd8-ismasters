@@ -1,6 +1,6 @@
 package com.infoshareacademy.domain.parser;
 
-import com.infoshareacademy.menu.styleSettings.ColorHandler;
+import com.infoshareacademy.menu.additionStyleClasses.ColorHandler;
 
 import java.util.ArrayList;
 import java.util.List;

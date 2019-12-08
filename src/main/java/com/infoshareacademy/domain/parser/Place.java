@@ -1,6 +1,6 @@
 package com.infoshareacademy.domain.parser;
 
-import com.infoshareacademy.menu.styleSettings.ColorHandler;
+import com.infoshareacademy.menu.additionStyleClasses.ColorHandler;
 
 public class Place {
     private int id;

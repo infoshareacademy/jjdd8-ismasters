@@ -1,4 +1,4 @@
-package com.infoshareacademy.menu.styleSettings;
+package com.infoshareacademy.menu.additionStyleClasses;
 
 public class ColorHandler {
     public static final String red = "\u001b[31m";
@@ -8,5 +8,4 @@ public class ColorHandler {
     public static final String cyan = "\u001b[36m";
     public static final String white = "\u001b[37m";
     public static final String reset = "\u001b[0m";
-
 }
