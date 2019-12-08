@@ -11,7 +11,7 @@ public class NothingHerePrinter {
         stdout.info("\n");
         stdout.info("┌──────────────────────────────────────────┐\n");
         stdout.info("│                                          │\n");
-        stdout.info("│        " + ColorHandler.red + "POD TYM NUMEREM NIC NIE MA! " + ColorHandler.reset + "      │\n");
+        stdout.info("│        " + ColorHandler.RED + "POD TYM NUMEREM NIC NIE MA! " + ColorHandler.DEFAULT + "      │\n");
         stdout.info("│                                          │\n");
         stdout.info("│               JESZCZE RAZ!               │\n");
         stdout.info("│                                          │\n");

@@ -13,8 +13,8 @@ public class HeaderPrinter {
         ScreenCleaner.cleanConsole();
         stdout.info("┌────────────────────────────────────────────────────┐\n");
         stdout.info("│                                                    │\n");
-        stdout.info("│       " + ColorHandler.yellow + "Wybierz pozycję z menu używając cyfr       " + ColorHandler.reset + "  │\n");
-        stdout.info("│                " + ColorHandler.yellow + "  na klawiaturze    " + ColorHandler.reset + "                │\n");
+        stdout.info("│       " + ColorHandler.YELLOW + "Wybierz pozycję z menu używając cyfr       " + ColorHandler.DEFAULT + "  │\n");
+        stdout.info("│                " + ColorHandler.YELLOW + "  na klawiaturze    " + ColorHandler.DEFAULT + "                │\n");
         stdout.info("│                                                    │\n");
     }
 
@@ -22,8 +22,8 @@ public class HeaderPrinter {
         ScreenCleaner.cleanConsole();
         stdout.info("┌──────────────────────────────────────────────────────────────────┐\n");
         stdout.info("│                                                                  │\n");
-        stdout.info("│       " + ColorHandler.yellow + "       Wybierz pozycję z menu używając cyfr               " + ColorHandler.reset + " │\n");
-        stdout.info("│                " + ColorHandler.yellow + "        na klawiaturze    " + ColorHandler.reset + "                        │\n");
+        stdout.info("│       " + ColorHandler.YELLOW + "       Wybierz pozycję z menu używając cyfr               " + ColorHandler.DEFAULT + " │\n");
+        stdout.info("│                " + ColorHandler.YELLOW + "        na klawiaturze    " + ColorHandler.DEFAULT + "                        │\n");
         stdout.info("│                                                                  │\n");
         stdout.info("│                                                                  │\n");
     }

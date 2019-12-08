@@ -22,13 +22,13 @@ public class EventsByOrganizer {
             stdout.info("│   2. Pokaż Wojewódzka i Miejska Biblioteka Publiczna w Gdańsku   │\n");
             stdout.info("│   3. Pokaż Miejski Teatr MINIATURA                               │\n");
             stdout.info("│                                                                  │\n");
-            stdout.info("│  " + ColorHandler.cyan + " 9. Wróć                                                    " + ColorHandler.reset + "    │\n");
+            stdout.info("│  " + ColorHandler.CYAN + " 9. Wróć                                                    " + ColorHandler.DEFAULT + "    │\n");
             stdout.info("│                                                                  │\n");
             stdout.info("└──────────────────────────────────────────────────────────────────┘\n");
             stdout.info("\n");
             stdout.info("Wpisz liczbę: \n");
 
-            switch (GetChoice.getChoice()) {
+            switch (ChoiceGetter.getChoice()) {
                 case 1:
                     printEvents(filterRepository.filterAllOrganisers("Gdański Archipelag Kultury"));
                     stdout.info("\n");

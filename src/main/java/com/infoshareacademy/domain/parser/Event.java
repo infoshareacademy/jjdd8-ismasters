@@ -127,7 +127,7 @@ public class Event {
     }
 
     public String toString() {
-        return "Nazwa wydarzenia:" + ColorHandler.cyan +   getName() + ColorHandler.reset + "\n" +
+        return "Nazwa wydarzenia:" + ColorHandler.CYAN +   getName() + ColorHandler.DEFAULT + "\n" +
                 "Miejsce wydarzenia: " + getPlace() + "\n" +
                 "Rozpoczęcie: " + getStartDate().substring(0, 10) + ", godz: " + getStartDate().substring(11, 16) + "\n" +
                 getOrganizer() + "\n" +

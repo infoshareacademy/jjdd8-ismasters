@@ -10,7 +10,7 @@ public class GreetingPrinter {
     void printGreeting() {
         stdout.info("┌────────────────────────────────────────────────────┐\n");
         stdout.info("│                                                    │\n");
-        stdout.info("│      " + ColorHandler.yellow + "Witaj w kalendarzu wydarzeń kulturalnych      " + ColorHandler.reset + "│\n");
+        stdout.info("│      " + ColorHandler.YELLOW + "Witaj w kalendarzu wydarzeń kulturalnych      " + ColorHandler.DEFAULT + "│\n");
         stdout.info("│                                                    │\n");
         stdout.info("│                (c) ISMasters 2019                  │\n");
         stdout.info("│                                                    │\n");

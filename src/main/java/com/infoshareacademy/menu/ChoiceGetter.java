@@ -8,7 +8,7 @@ import java.util.regex.Pattern;
 
 import static com.infoshareacademy.menu.Menu.scanner;
 
-public class GetChoice {
+public class ChoiceGetter {
 
     private static final Logger stdout = LoggerFactory.getLogger("CONSOLE_OUT");
 
@@ -28,7 +28,7 @@ public class GetChoice {
                 stdout.info("\n");
                 stdout.info("┌──────────────────────────────────────────┐\n");
                 stdout.info("│                                          │\n");
-                stdout.info("│       " + ColorHandler.red + "PODANO NIEPRAWIDŁOWĄ WARTOŚĆ! " + ColorHandler.reset + "     │\n");
+                stdout.info("│       " + ColorHandler.RED + "PODANO NIEPRAWIDŁOWĄ WARTOŚĆ! " + ColorHandler.DEFAULT + "     │\n");
                 stdout.info("│                                          │\n");
                 stdout.info("│               JESZCZE RAZ!               │\n");
                 stdout.info("│                                          │\n");

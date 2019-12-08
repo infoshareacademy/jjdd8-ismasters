@@ -1,6 +1,7 @@
 package com.infoshareacademy.menu;
 
 import com.infoshareacademy.domain.parser.Event;
+import com.infoshareacademy.menu.additionStyleClasses.ScreenCleaner;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -11,6 +12,7 @@ public class EventsPrinter {
     private static final Logger stdout = LoggerFactory.getLogger("CONSOLE_OUT");
 
     public static void printEvents(List<Event> eventList) {
+        ScreenCleaner.cleanConsole();
         int eventCounter = 0;
         for (Event event : eventList) {
             stdout.info(event.toString());
@@ -26,6 +28,13 @@ public class EventsPrinter {
                 eventCounter = 0;
             }
         }
+        stdout.info("\nKoniec listy. Wciśnij ENTER, aby kontynuować\n");
+        try {
+            System.in.read();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         eventList.clear();
+        ScreenCleaner.cleanConsole();
     }
 }

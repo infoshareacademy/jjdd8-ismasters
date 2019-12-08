@@ -27,13 +27,13 @@ public class Menu {
             stdout.info("│   2. Pokaż najbliższe wydarzenia                   │\n");
             stdout.info("│   3. Pokaż wydarzenie promowanych organizatorów    │\n");
             stdout.info("│                                                    │\n");
-            stdout.info("│  " + ColorHandler.cyan + " 9. Zakończ                    " + ColorHandler.reset + "                   │\n");
+            stdout.info("│  " + ColorHandler.CYAN + " 9. Zakończ                    " + ColorHandler.DEFAULT + "                   │\n");
             stdout.info("│                                                    │\n");
             stdout.info("└────────────────────────────────────────────────────┘\n");
             stdout.info("\n");
             stdout.info("Wpisz liczbę: \n");
 
-            switch (GetChoice.getChoice()) {
+            switch (ChoiceGetter.getChoice()) {
                 case 1:
                     printEvents(filterRepository.allEvents());
                     stdout.info("\n");
@@ -48,7 +48,7 @@ public class Menu {
                     stdout.info("\n");
                     stdout.info("┌────────────────────────────────────────────────────┐\n");
                     stdout.info("│                                                    │\n");
-                    stdout.info("│       " + ColorHandler.purple + "            DO ZOBACZENIA!           " + ColorHandler.reset + "        │\n");
+                    stdout.info("│       " + ColorHandler.PURPLE + "            DO ZOBACZENIA!           " + ColorHandler.DEFAULT + "        │\n");
                     stdout.info("│                                                    │\n");
                     stdout.info("└────────────────────────────────────────────────────┘\n");
                     stdout.info("\n");
