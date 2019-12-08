@@ -1,5 +1,7 @@
 package com.infoshareacademy.domain.parser;
 
+import com.infoshareacademy.menu.styleSettings.ColorHandler;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -125,7 +127,7 @@ public class Event {
     }
 
     public String toString() {
-        return "Nazwa wydarzenia: \u001b[36;1m" + getName() + "\u001b[0m\n" +
+        return "Nazwa wydarzenia:" + ColorHandler.cyan +   getName() + ColorHandler.reset + "\n" +
                 "Miejsce wydarzenia: " + getPlace() + "\n" +
                 "Rozpoczęcie: " + getStartDate().substring(0, 10) + ", godz: " + getStartDate().substring(11, 16) + "\n" +
                 getOrganizer() + "\n" +

@@ -1,5 +1,6 @@
 package com.infoshareacademy.menu;
 
+import com.infoshareacademy.menu.styleSettings.ColorHandler;
 import com.infoshareacademy.repository.FilterRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -26,7 +27,7 @@ public class Menu {
             stdout.info("│   2. Pokaż najbliższe wydarzenia                   │\n");
             stdout.info("│   3. Pokaż wydarzenie promowanych organizatorów    │\n");
             stdout.info("│                                                    │\n");
-            stdout.info("│  \u001b[36m 9. Zakończ                    \u001b[0m                   │\n");
+            stdout.info("│  " + ColorHandler.cyan + " 9. Zakończ                    " + ColorHandler.reset + "                   │\n");
             stdout.info("│                                                    │\n");
             stdout.info("└────────────────────────────────────────────────────┘\n");
             stdout.info("\n");
@@ -47,7 +48,7 @@ public class Menu {
                     stdout.info("\n");
                     stdout.info("┌────────────────────────────────────────────────────┐\n");
                     stdout.info("│                                                    │\n");
-                    stdout.info("│       \u001b[35m            DO ZOBACZENIA!           \u001b[0m        │\n");
+                    stdout.info("│       " + ColorHandler.purple + "            DO ZOBACZENIA!           " + ColorHandler.reset + "        │\n");
                     stdout.info("│                                                    │\n");
                     stdout.info("└────────────────────────────────────────────────────┘\n");
                     stdout.info("\n");

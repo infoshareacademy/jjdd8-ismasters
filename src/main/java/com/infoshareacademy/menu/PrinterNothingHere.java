@@ -1,5 +1,6 @@
 package com.infoshareacademy.menu;
 
+import com.infoshareacademy.menu.styleSettings.ColorHandler;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -10,7 +11,7 @@ public class PrinterNothingHere {
         stdout.info("\n");
         stdout.info("┌──────────────────────────────────────────┐\n");
         stdout.info("│                                          │\n");
-        stdout.info("│        \u001b[31mPOD TYM NUMEREM NIC NIE MA! \u001b[0m      │\n");
+        stdout.info("│        " + ColorHandler.red + "POD TYM NUMEREM NIC NIE MA! " + ColorHandler.reset + "      │\n");
         stdout.info("│                                          │\n");
         stdout.info("│               JESZCZE RAZ!               │\n");
         stdout.info("│                                          │\n");

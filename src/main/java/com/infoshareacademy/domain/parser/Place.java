@@ -1,5 +1,7 @@
 package com.infoshareacademy.domain.parser;
 
+import com.infoshareacademy.menu.styleSettings.ColorHandler;
+
 public class Place {
     private int id;
     private String subname;
@@ -41,9 +43,9 @@ public class Place {
 
 
         if (subname != null) {
-            return  "\u001b[37;1m" + name + "\u001b[0m\n"+ "Dokładna lokalizacja: " + subname ;
+            return  ColorHandler.white + name + ColorHandler.reset  + "\n" + " Dokładna lokalizacja: " + subname ;
         } else {
-            return "\u001b[37;1m" + name + "\u001b[0m";
+            return ColorHandler.white + name + ColorHandler.reset;
         }
     }
 }

@@ -1,5 +1,6 @@
 package com.infoshareacademy.menu;
 
+import com.infoshareacademy.menu.styleSettings.ColorHandler;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -27,7 +28,7 @@ public class GetChoice {
                 stdout.info("\n");
                 stdout.info("┌──────────────────────────────────────────┐\n");
                 stdout.info("│                                          │\n");
-                stdout.info("│       \u001b[31mPODANO NIEPRAWIDŁOWĄ WARTOŚĆ! \u001b[0m     │\n");
+                stdout.info("│       " + ColorHandler.red + "PODANO NIEPRAWIDŁOWĄ WARTOŚĆ! " + ColorHandler.reset + "     │\n");
                 stdout.info("│                                          │\n");
                 stdout.info("│               JESZCZE RAZ!               │\n");
                 stdout.info("│                                          │\n");
