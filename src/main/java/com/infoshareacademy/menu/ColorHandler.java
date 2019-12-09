@@ -1,4 +1,4 @@
-package com.infoshareacademy.menu.additionClasses;
+package com.infoshareacademy.menu;
 
 public class ColorHandler {
     public static final String RED = "\u001b[31m";
