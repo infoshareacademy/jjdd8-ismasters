@@ -7,6 +7,7 @@ public class NothingHerePrinter {
     private static final Logger stdout = LoggerFactory.getLogger("CONSOLE_OUT");
 
     void printNothingHere() {
+        ScreenCleaner.cleanConsole();
         stdout.info("\n");
         stdout.info("┌──────────────────────────────────────────┐\n");
         stdout.info("│                                          │\n");

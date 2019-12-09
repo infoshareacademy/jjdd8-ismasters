@@ -17,7 +17,7 @@ public class Menu {
         FilterRepository filterRepository = new FilterRepository();
 
         int mainExitCode = 0;
-
+        ScreenCleaner.cleanConsole();
         new GreetingPrinter().printGreeting();
 
         while (mainExitCode != 9) {
@@ -38,9 +38,11 @@ public class Menu {
                     stdout.info("\n");
                     break;
                 case 2:
+                    ScreenCleaner.cleanConsole();
                     new NearestEvents().showNearestEvents();
                     break;
                 case 3:
+                    ScreenCleaner.cleanConsole();
                     new EventsByOrganizer().showByOrganizer();
                     break;
                 case 9:

@@ -42,6 +42,7 @@ public class EventsByOrganizer {
                     stdout.info("\n");
                     break;
                 case 9:
+                    ScreenCleaner.cleanConsole();
                     stdout.info("        POWRÓT DO WYŻSZEGO POZIOMU       \n\n");
                     returnCheckInt = 9;
                     break;

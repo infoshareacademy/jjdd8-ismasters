@@ -48,6 +48,7 @@ public class NearestEvents {
                     stdout.info("\n");
                     break;
                 case 9:
+                    ScreenCleaner.cleanConsole();
                     stdout.info("        POWRÓT DO POPRZEDNIEGO MENU       \n");
                     returnCheckInt = 9;
                     break;
