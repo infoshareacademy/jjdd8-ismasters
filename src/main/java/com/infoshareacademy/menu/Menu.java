@@ -12,8 +12,8 @@ public class Menu {
 
     public static final Scanner scanner = new Scanner(System.in);
     private static final Logger stdout = LoggerFactory.getLogger("CONSOLE_OUT");
-    private static final String ramka = "│                                                    │\n";
-    private static final String ramka2 = "│                                                    │\n";
+    private static final String BORDER = "│                                                    │\n";
+    private static final String BORDER2 = "│                                                    │\n";
 
     public static void mainMenu() {
         FilterRepository filterRepository = new FilterRepository();
@@ -27,9 +27,9 @@ public class Menu {
             stdout.info("│   1. Pokaż wszystkie wydarzenia                    │\n");
             stdout.info("│   2. Pokaż najbliższe wydarzenia                   │\n");
             stdout.info("│   3. Pokaż wydarzenie promowanych organizatorów    │\n");
-            stdout.info(ramka);
+            stdout.info(BORDER);
             stdout.info("│  " + ColorHandler.CYAN + " 9. Zakończ                    " + ColorHandler.DEFAULT + "                   │\n");
-            stdout.info(ramka);
+            stdout.info(BORDER);
             stdout.info("└────────────────────────────────────────────────────┘\n");
             stdout.info("\n");
             stdout.info("Wpisz liczbę: \n");
@@ -50,9 +50,9 @@ public class Menu {
                 case 9:
                     stdout.info("\n");
                     stdout.info("┌────────────────────────────────────────────────────┐\n");
-                    stdout.info(ramka2);
+                    stdout.info(BORDER2);
                     stdout.info("│       " + ColorHandler.PURPLE + "            DO ZOBACZENIA!           " + ColorHandler.DEFAULT + "        │\n");
-                    stdout.info(ramka2);
+                    stdout.info(BORDER2);
                     stdout.info("└────────────────────────────────────────────────────┘\n");
                     stdout.info("\n");
                     mainExitCode = 9;

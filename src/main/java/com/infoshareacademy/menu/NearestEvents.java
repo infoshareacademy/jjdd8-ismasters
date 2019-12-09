@@ -11,6 +11,7 @@ import static com.infoshareacademy.menu.EventsPrinter.printEvents;
 public class NearestEvents {
 
     private static final Logger stdout = LoggerFactory.getLogger("CONSOLE_OUT");
+    private static final String BORDER = "│                                                    │\n";
 
     void showNearestEvents() {
         FilterRepository filterRepository = new FilterRepository();
@@ -20,13 +21,13 @@ public class NearestEvents {
         while (returnCheckInt != 9) {
             stdout.info("\n");
             new HeaderPrinter().printHeader();
-            stdout.info("│                                                    │\n");
+            stdout.info(BORDER);
             stdout.info("│   1. Pokaż dzisiejsze wydarzenia                   │\n");
             stdout.info("│   2. Pokaż jutrzejsze wydarzenia                   │\n");
             stdout.info("│   3. Pokaż wydarzenia za 3 dni                     │\n");
-            stdout.info("│                                                    │\n");
+            stdout.info(BORDER);
             stdout.info("│  " + ColorHandler.CYAN + " 9. Wróć                       " + ColorHandler.DEFAULT + "                   │\n");
-            stdout.info("│                                                    │\n");
+            stdout.info(BORDER);
             stdout.info("└────────────────────────────────────────────────────┘\n");
             stdout.info("\n");
             stdout.info("Wpisz liczbę: \n");
