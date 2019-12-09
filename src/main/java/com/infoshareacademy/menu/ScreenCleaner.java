@@ -13,12 +13,11 @@ public class ScreenCleaner{
 
         try {
             if (CHECKER.contains("win")) {
-                new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
+                new ProcessBuilder("cmd", "/c", "cls").inheritIO().start();
             } else {
                 stdout.info("\033[H\033[2J");
-                System.out.flush();
             }
-        } catch (IOException | InterruptedException e) {
+        } catch (IOException e) {
             e.printStackTrace();
         }
     }
