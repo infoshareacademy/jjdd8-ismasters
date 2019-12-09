@@ -1,9 +1,12 @@
-package com.infoshareacademy.menu.additionStyleClasses;
+package com.infoshareacademy.menu;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import java.io.IOException;
 
-public class ScreenCleaner {
+public class ScreenCleaner{
 
+    private static final Logger stdout = LoggerFactory.getLogger("CONSOLE_OUT");
     private static final String checker = System.getProperty("os.name").toLowerCase();
 
     public static void cleanConsole() {
@@ -12,7 +15,7 @@ public class ScreenCleaner {
             if (checker.contains("win")) {
                 new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
             } else {
-                System.out.println("\033[H\033[2J");
+                stdout.info("\033[H\033[2J");
                 System.out.flush();
             }
         } catch (IOException | InterruptedException e) {

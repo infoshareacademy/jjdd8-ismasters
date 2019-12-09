@@ -1,6 +1,5 @@
 package com.infoshareacademy.menu;
 
-import com.infoshareacademy.menu.additionStyleClasses.ColorHandler;
 import com.infoshareacademy.repository.FilterRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

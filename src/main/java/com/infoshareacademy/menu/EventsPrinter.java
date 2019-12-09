@@ -1,7 +1,6 @@
 package com.infoshareacademy.menu;
 
 import com.infoshareacademy.domain.parser.Event;
-import com.infoshareacademy.menu.additionStyleClasses.ScreenCleaner;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
