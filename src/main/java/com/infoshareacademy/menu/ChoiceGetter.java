@@ -10,6 +10,7 @@ import static com.infoshareacademy.menu.Menu.scanner;
 public class ChoiceGetter {
 
     private static final Logger stdout = LoggerFactory.getLogger("CONSOLE_OUT");
+    private static final String ramka = "(\"│                                          │\\n\");";
 
     public static int getChoice() {
         int result = 0;
@@ -26,11 +27,11 @@ public class ChoiceGetter {
             } else {
                 stdout.info("\n");
                 stdout.info("┌──────────────────────────────────────────┐\n");
-                stdout.info("│                                          │\n");
+                stdout.info(ramka);
                 stdout.info("│       " + ColorHandler.RED + "PODANO NIEPRAWIDŁOWĄ WARTOŚĆ! " + ColorHandler.DEFAULT + "     │\n");
-                stdout.info("│                                          │\n");
+                stdout.info(ramka);
                 stdout.info("│               JESZCZE RAZ!               │\n");
-                stdout.info("│                                          │\n");
+                stdout.info(ramka);
                 stdout.info("└──────────────────────────────────────────┘\n");
                 stdout.info("\n");
             }
