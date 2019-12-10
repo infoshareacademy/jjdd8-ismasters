@@ -7,12 +7,12 @@ import java.io.IOException;
 public class ScreenCleaner{
 
     private static final Logger stdout = LoggerFactory.getLogger("CONSOLE_OUT");
-    private static final String CHECKER = System.getProperty("os.name").toLowerCase();
+    private static final String USER_OS = System.getProperty("os.name").toLowerCase();
 
     public static void cleanConsole() {
 
         try {
-            if (CHECKER.contains("win")) {
+            if (USER_OS.contains("win")) {
                 new ProcessBuilder("cmd", "/c", "cls").inheritIO().start();
             } else {
                 stdout.info("\033[H\033[2J");
