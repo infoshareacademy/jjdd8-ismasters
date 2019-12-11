@@ -18,7 +18,7 @@ public class ScreenCleaner{
                 stdout.info("\033[H\033[2J");
             }
         } catch (IOException e) {
-            e.printStackTrace();
+            stdout.info("OS nie rozpoznany \n" + e);
         }
     }
 }

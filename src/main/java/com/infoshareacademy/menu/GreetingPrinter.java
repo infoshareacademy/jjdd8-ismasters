@@ -5,16 +5,15 @@ import org.slf4j.LoggerFactory;
 
 public class GreetingPrinter {
     private static final Logger stdout = LoggerFactory.getLogger("CONSOLE_OUT");
-    private static final String BORDER = "│                                                    │\n";
 
     void printGreeting() {
-        stdout.info("┌────────────────────────────────────────────────────┐\n");
-        stdout.info(BORDER);
+        stdout.info(MenuBuilder.MENU_TOP_FRAME);
+        stdout.info(MenuBuilder.MENU_FRAME);
         stdout.info("│      " + ColorHandler.YELLOW + "Witaj w kalendarzu wydarzeń kulturalnych      " + ColorHandler.DEFAULT + "│\n");
-        stdout.info(BORDER);
+        stdout.info(MenuBuilder.MENU_FRAME);
         stdout.info("│                (c) ISMasters 2019                  │\n");
-        stdout.info(BORDER);
-        stdout.info("└────────────────────────────────────────────────────┘\n");
+        stdout.info(MenuBuilder.MENU_FRAME);
+        stdout.info(MenuBuilder.MENU_BOTTOM_FRAME);
         stdout.info("\n");
         stdout.info("\n");
     }

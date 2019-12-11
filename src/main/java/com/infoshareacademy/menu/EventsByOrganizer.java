@@ -9,7 +9,6 @@ import static com.infoshareacademy.menu.EventsPrinter.printEvents;
 public class EventsByOrganizer {
 
     private static final Logger stdout = LoggerFactory.getLogger("CONSOLE_OUT");
-    private static final String BORDER = "│                                                                  │\n";
 
     void showByOrganizer() {
         FilterRepository filterRepository = new FilterRepository();
@@ -21,10 +20,10 @@ public class EventsByOrganizer {
             stdout.info("│   1. Pokaż Gdański Archipelag Kultury                            │\n");
             stdout.info("│   2. Pokaż Wojewódzka i Miejska Biblioteka Publiczna w Gdańsku   │\n");
             stdout.info("│   3. Pokaż Miejski Teatr MINIATURA                               │\n");
-            stdout.info(BORDER);
+            stdout.info(MenuBuilder.MENU_WIDER_FRAME);
             stdout.info("│  " + ColorHandler.CYAN + " 9. Wróć                                                    " + ColorHandler.DEFAULT + "    │\n");
-            stdout.info(BORDER);
-            stdout.info("└──────────────────────────────────────────────────────────────────┘\n");
+            stdout.info(MenuBuilder.MENU_WIDER_FRAME);
+            stdout.info(MenuBuilder.MENU_BOTTOM_WIDER_FRAME);
             stdout.info("\n");
             stdout.info("Wpisz liczbę: \n");
 

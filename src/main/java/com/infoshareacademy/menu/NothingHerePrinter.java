@@ -10,13 +10,13 @@ public class NothingHerePrinter {
     void printNothingHere() {
         ScreenCleaner.cleanConsole();
         stdout.info("\n");
-        stdout.info("┌──────────────────────────────────────────┐\n");
-        stdout.info(BORDER);
+        stdout.info(MenuBuilder.WRONG_INPUT_TOP);
+        stdout.info(MenuBuilder.WRONG_INPUT_FRAME);
         stdout.info("│        " + ColorHandler.RED + "POD TYM NUMEREM NIC NIE MA! " + ColorHandler.DEFAULT + "      │\n");
-        stdout.info(BORDER);
+        stdout.info(MenuBuilder.WRONG_INPUT_FRAME);
         stdout.info("│               JESZCZE RAZ!               │\n");
-        stdout.info(BORDER);
-        stdout.info("└──────────────────────────────────────────┘\n");
+        stdout.info(MenuBuilder.WRONG_INPUT_FRAME);
+        stdout.info(MenuBuilder.WRONG_INPUT_BOTTOM);
         stdout.info("\n");
     }
 }

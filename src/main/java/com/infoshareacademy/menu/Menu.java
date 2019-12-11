@@ -27,10 +27,10 @@ public class Menu {
             stdout.info("│   1. Pokaż wszystkie wydarzenia                    │\n");
             stdout.info("│   2. Pokaż najbliższe wydarzenia                   │\n");
             stdout.info("│   3. Pokaż wydarzenie promowanych organizatorów    │\n");
-            stdout.info(BORDER);
+            stdout.info(MenuBuilder.MENU_FRAME);
             stdout.info("│  " + ColorHandler.CYAN + " 9. Zakończ                    " + ColorHandler.DEFAULT + "                   │\n");
-            stdout.info(BORDER);
-            stdout.info("└────────────────────────────────────────────────────┘\n");
+            stdout.info(MenuBuilder.MENU_FRAME);
+            stdout.info(MenuBuilder.MENU_BOTTOM_FRAME);
             stdout.info("\n");
             stdout.info("Wpisz liczbę: \n");
 
@@ -49,11 +49,11 @@ public class Menu {
                     break;
                 case 9:
                     stdout.info("\n");
-                    stdout.info("┌────────────────────────────────────────────────────┐\n");
-                    stdout.info(BORDER2);
+                    stdout.info(MenuBuilder.MENU_TOP_FRAME);
+                    stdout.info(MenuBuilder.MENU_FRAME);
                     stdout.info("│       " + ColorHandler.PURPLE + "            DO ZOBACZENIA!           " + ColorHandler.DEFAULT + "        │\n");
-                    stdout.info(BORDER2);
-                    stdout.info("└────────────────────────────────────────────────────┘\n");
+                    stdout.info(MenuBuilder.MENU_FRAME);
+                    stdout.info(MenuBuilder.MENU_BOTTOM_FRAME);
                     stdout.info("\n");
                     mainExitCode = 9;
                     break;

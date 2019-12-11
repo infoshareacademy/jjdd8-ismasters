@@ -6,24 +6,22 @@ import org.slf4j.LoggerFactory;
 public class HeaderPrinter {
 
     private static final Logger stdout = LoggerFactory.getLogger("CONSOLE_OUT");
-    private static final String BORDER = "│                                                    │\n";
-    private static final String BORDER2 = "│                                                                  │\n";
 
     void printHeader() {
-        stdout.info("┌────────────────────────────────────────────────────┐\n");
-        stdout.info(BORDER);
+        stdout.info(MenuBuilder.MENU_TOP_FRAME);
+        stdout.info(MenuBuilder.MENU_FRAME);
         stdout.info("│       " + ColorHandler.YELLOW + "Wybierz pozycję z menu używając cyfr       " + ColorHandler.DEFAULT + "  │\n");
         stdout.info("│                " + ColorHandler.YELLOW + "  na klawiaturze    " + ColorHandler.DEFAULT + "                │\n");
-        stdout.info(BORDER);
+        stdout.info(MenuBuilder.MENU_FRAME);
     }
 
     void printBiggerHeader() {
-        stdout.info("┌──────────────────────────────────────────────────────────────────┐\n");
-        stdout.info(BORDER2);
+        stdout.info(MenuBuilder.MENU_TOP_WIDER_FRAME);
+        stdout.info(MenuBuilder.MENU_WIDER_FRAME);
         stdout.info("│       " + ColorHandler.YELLOW + "       Wybierz pozycję z menu używając cyfr               " + ColorHandler.DEFAULT + " │\n");
         stdout.info("│                " + ColorHandler.YELLOW + "        na klawiaturze    " + ColorHandler.DEFAULT + "                        │\n");
-        stdout.info(BORDER2);
-        stdout.info(BORDER2);
+        stdout.info(MenuBuilder.MENU_WIDER_FRAME);
+        stdout.info(MenuBuilder.MENU_WIDER_FRAME);
     }
 
 }

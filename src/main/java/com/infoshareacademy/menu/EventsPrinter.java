@@ -17,15 +17,7 @@ public class EventsPrinter {
             stdout.info(event.toString());
             stdout.info("\n");
             eventCounter++;
-            if (eventCounter == 5) {
-                stdout.info("\n--------Dalej: wciśnij ENTER-------\n");
-                try {
-                    System.in.read();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-                eventCounter = 0;
-            }
+            eventCounter = eventCounter(eventCounter);
         }
         stdout.info("\nKoniec listy. Wciśnij ENTER, aby kontynuować\n");
         try {
@@ -35,5 +27,18 @@ public class EventsPrinter {
         }
         eventList.clear();
         ScreenCleaner.cleanConsole();
+    }
+
+    private static int eventCounter(int eventCounter) {
+        if (eventCounter == 5) {
+            stdout.info("\n--------Dalej: wciśnij ENTER-------\n");
+            try {
+                System.in.read();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            eventCounter = 0;
+        }
+        return eventCounter;
     }
 }

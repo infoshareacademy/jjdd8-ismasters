@@ -10,7 +10,6 @@ import static com.infoshareacademy.menu.Menu.scanner;
 public class ChoiceGetter {
 
     private static final Logger stdout = LoggerFactory.getLogger("CONSOLE_OUT");
-    private static final String BORDER = "(\"│                                          │\\n\");";
 
     public static int getChoice() {
         int result = 0;
@@ -18,24 +17,34 @@ public class ChoiceGetter {
         try {
             String in = scanner.next();
 
-            if ((Pattern.matches("[0-9]", in))) {
-                try {
-                    result = Integer.parseInt(in);
-                } catch (NumberFormatException e) {
-                    e.printStackTrace();
-                }
-            } else {
-                stdout.info("\n");
-                stdout.info("┌──────────────────────────────────────────┐\n");
-                stdout.info(BORDER);
-                stdout.info("│       " + ColorHandler.RED + "PODANO NIEPRAWIDŁOWĄ WARTOŚĆ! " + ColorHandler.DEFAULT + "     │\n");
-                stdout.info(BORDER);
-                stdout.info("│               JESZCZE RAZ!               │\n");
-                stdout.info(BORDER);
-                stdout.info("└──────────────────────────────────────────┘\n");
-                stdout.info("\n");
-            }
+            result = regexInputCheck(result, in);
         } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return result;
+    }
+
+    private static int regexInputCheck(int result, String in) {
+        if ((Pattern.matches("[0-9]", in))) {
+            result = regexTry(result, in);
+        } else {
+            stdout.info("\n");
+            stdout.info(MenuBuilder.WRONG_INPUT_TOP);
+            stdout.info(MenuBuilder.WRONG_INPUT_FRAME);
+            stdout.info("│       " + ColorHandler.RED + "PODANO NIEPRAWIDŁOWĄ WARTOŚĆ! " + ColorHandler.DEFAULT + "     │\n");
+            stdout.info(MenuBuilder.WRONG_INPUT_FRAME);
+            stdout.info("│               JESZCZE RAZ!               │\n");
+            stdout.info(MenuBuilder.WRONG_INPUT_FRAME);
+            stdout.info(MenuBuilder.WRONG_INPUT_BOTTOM);
+            stdout.info("\n");
+        }
+        return result;
+    }
+
+    private static int regexTry(int result, String in) {
+        try {
+            result = Integer.parseInt(in);
+        } catch (NumberFormatException e) {
             e.printStackTrace();
         }
         return result;
