@@ -5,7 +5,6 @@ import org.slf4j.LoggerFactory;
 
 public class NothingHerePrinter {
     private static final Logger stdout = LoggerFactory.getLogger("CONSOLE_OUT");
-    private static final String BORDER = "│                                          │\n";
 
     void printNothingHere() {
         ScreenCleaner.cleanConsole();

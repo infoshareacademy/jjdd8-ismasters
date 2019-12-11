@@ -12,8 +12,6 @@ public class Menu {
 
     public static final Scanner scanner = new Scanner(System.in);
     private static final Logger stdout = LoggerFactory.getLogger("CONSOLE_OUT");
-    private static final String BORDER = "│                                                    │\n";
-    private static final String BORDER2 = "│                                                    │\n";
 
     public static void mainMenu() {
         FilterRepository filterRepository = new FilterRepository();
