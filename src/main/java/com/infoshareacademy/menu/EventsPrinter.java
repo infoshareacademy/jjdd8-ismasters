@@ -17,19 +17,19 @@ public class EventsPrinter {
             stdout.info(event.toString());
             stdout.info("\n");
             eventCounter++;
-            eventCounter = eventCounter(eventCounter);
+            eventCounter = eventCount(eventCounter);
         }
         stdout.info("\nKoniec listy. Wciśnij ENTER, aby kontynuować\n");
         try {
             System.in.read();
         } catch (IOException e) {
-            e.printStackTrace();
+            stdout.info("Wystąpił błąd \n" + e);
         }
         eventList.clear();
         ScreenCleaner.cleanConsole();
     }
 
-    private static int eventCounter(int eventCounter) {
+    private static int eventCount(int eventCounter) {
         if (eventCounter == 5) {
             stdout.info("\n--------Dalej: wciśnij ENTER-------\n");
             try {
