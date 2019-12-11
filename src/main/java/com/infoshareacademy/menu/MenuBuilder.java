@@ -20,8 +20,8 @@ public class MenuBuilder {
                 "│                                                                  │\n" +
                 "│                                                                  │\n" +
                 "|   " + Menu.FIXED_MAIN_MENU_OPTION1 + "  |\n" +
-                "|   " + Menu.MAIN_MENU_OPTION2 + "  |\n" +
-                "|   " + Menu.MAIN_MENU_OPTION3 + "  |\n" +
+                "|   " + Menu.FIXED_MAIN_MENU_OPTION2 + "  |\n" +
+                "|   " + Menu.FIXED_MAIN_MENU_OPTION3 + "  |\n" +
                 "│                                                                  │\n" +
                 "│                                                                  │\n" +
                 "└──────────────────────────────────────────────────────────────────┘");

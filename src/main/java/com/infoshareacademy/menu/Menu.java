@@ -13,11 +13,13 @@ public class Menu {
     public static final Scanner scanner = new Scanner(System.in);
     private static final Logger stdout = LoggerFactory.getLogger("CONSOLE_OUT");
 
+    static int length = 61;
     final static String MAIN_MENU_OPTION1 = "1. Pokaż wszystkie wydarzenia";
-    static int length = 10;
-    final static String FIXED_MAIN_MENU_OPTION1 = String.format("%1$"+length+"s", MAIN_MENU_OPTION1);
     final static String MAIN_MENU_OPTION2 = "2. Pokaż najbliższe wydarzenia";
     final static String MAIN_MENU_OPTION3 = "3. Pokaż wydarzenie promowanych organizatorów";
+    final static String FIXED_MAIN_MENU_OPTION1 = String.format("%1$"+length+"s", MAIN_MENU_OPTION1);
+    final static String FIXED_MAIN_MENU_OPTION2 = String.format("%1$"+length+"s", MAIN_MENU_OPTION2);
+    final static String FIXED_MAIN_MENU_OPTION3 = String.format("%1$"+length+"s", MAIN_MENU_OPTION3);
 
     public static void mainMenu() {
         FilterRepository filterRepository = new FilterRepository();
