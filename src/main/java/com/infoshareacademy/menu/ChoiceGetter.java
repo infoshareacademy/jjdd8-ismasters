@@ -45,7 +45,7 @@ public class ChoiceGetter {
         try {
             result = Integer.parseInt(in);
         } catch (NumberFormatException e) {
-            e.printStackTrace();
+            stdout.info("Zły format!" + e.getMessage());
         }
         return result;
     }
