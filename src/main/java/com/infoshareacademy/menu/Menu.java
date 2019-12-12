@@ -14,10 +14,10 @@ public class Menu extends MenuBuilder{
     private static final Logger stdout = LoggerFactory.getLogger("CONSOLE_OUT");
 
     static int length = 61;
-    private final static String MAIN_MENU_OPTION1 = "1. Pokaż wszystkie wydarzenia";
-    private final static String MAIN_MENU_OPTION2 = "2. Pokaż najbliższe wydarzenia";
-    private final static String MAIN_MENU_OPTION3 = "3. Pokaż wydarzenie promowanych organizatorów";
-    protected final static String FIXED_MENU_OPTION1 = String.format("%1$"+ length+"s", MAIN_MENU_OPTION1);
+    final static String MAIN_MENU_OPTION1 = "1. Pokaż wszystkie wydarzenia";
+    final static String MAIN_MENU_OPTION2 = "2. Pokaż najbliższe wydarzenia";
+    final static String MAIN_MENU_OPTION3 = "3. Pokaż wydarzenie promowanych organizatorów";
+    protected final static String FIXED_MENU_OPTION1 = String.format("%1$"+ (length-MAIN_MENU_OPTION1.length())/2+"s", MAIN_MENU_OPTION1);
     protected final static String FIXED_MENU_OPTION2 = String.format("%1$"+length+"s", MAIN_MENU_OPTION2);
     protected final static String FIXED_MENU_OPTION3 = String.format("%1$"+length+"s", MAIN_MENU_OPTION3);
 

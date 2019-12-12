@@ -1,12 +1,10 @@
 package com.infoshareacademy.menu;
 
-import com.infoshareacademy.menu.ColorHandler;
-import com.infoshareacademy.menu.Menu;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class MenuBuilder {
-    static int length = 61;
+    static int length = 68;
     private static final Logger stdout = LoggerFactory.getLogger("CONSOLE_OUT");
     final static String MENU_WIDER_FRAME = "│                                                                  │\n";
     final static String MENU_BOTTOM_WIDER_FRAME = "└──────────────────────────────────────────────────────────────────┘\n";
@@ -24,9 +22,9 @@ public class MenuBuilder {
         stdout.info("┌──────────────────────────────────────────────────────────────────┐\n" +
                 "│                                                                  │\n" +
                 "│                                                                  │\n" +
-                "|   " + Menu.FIXED_MENU_OPTION1 + "  |\n" +
-                "|   " + Menu.FIXED_MENU_OPTION2 + "  |\n" +
-                "|   " + Menu.FIXED_MENU_OPTION3 + "  |\n" +
+                 DynamicLinePrinter.printDynamicMenu(Menu.MAIN_MENU_OPTION1) + "\n" +
+                 DynamicLinePrinter.printDynamicMenu(Menu.MAIN_MENU_OPTION2) + "\n" +
+                 DynamicLinePrinter.printDynamicMenu(Menu.MAIN_MENU_OPTION3) + "\n" +
                 "│                                                                  │\n" +
                 "│                                                                  │\n" +
                 "│                          Wpisane 9 powoduje wyjscie z programu   │\n" +
