@@ -16,7 +16,7 @@ public class DynamicLinePrinter {
         if (input.length() % 2 != 0) {
             stringBuilder.append(" ");
         }
-        stringBuilder.append("│");
+        stringBuilder.append("│\n");
         return stringBuilder.toString();
     }
 }

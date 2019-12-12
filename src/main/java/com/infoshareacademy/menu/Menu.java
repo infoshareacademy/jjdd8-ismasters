@@ -13,32 +13,23 @@ public class Menu extends MenuBuilder{
     public static final Scanner scanner = new Scanner(System.in);
     private static final Logger stdout = LoggerFactory.getLogger("CONSOLE_OUT");
 
-    static int length = 61;
     final static String MAIN_MENU_OPTION1 = "1. Pokaż wszystkie wydarzenia";
     final static String MAIN_MENU_OPTION2 = "2. Pokaż najbliższe wydarzenia";
     final static String MAIN_MENU_OPTION3 = "3. Pokaż wydarzenie promowanych organizatorów";
-    protected final static String FIXED_MENU_OPTION1 = String.format("%1$"+ (length-MAIN_MENU_OPTION1.length())/2+"s", MAIN_MENU_OPTION1);
-    protected final static String FIXED_MENU_OPTION2 = String.format("%1$"+length+"s", MAIN_MENU_OPTION2);
-    protected final static String FIXED_MENU_OPTION3 = String.format("%1$"+length+"s", MAIN_MENU_OPTION3);
+    final static String MAIN_MENU_EXIT = "Wpisane 9 powoduje wyjscie z programu";
 
     public static void mainMenu() {
+        MenuBuilder.Option1 = MAIN_MENU_OPTION1;
+        MenuBuilder.Option2 = MAIN_MENU_OPTION2;
+        MenuBuilder.Option3 = MAIN_MENU_OPTION3;
+        MenuBuilder.GoBack = MAIN_MENU_EXIT;
         FilterRepository filterRepository = new FilterRepository();
 
         int mainExitCode = 0;
         ScreenCleaner.cleanConsole();
-        new GreetingPrinter().printGreeting();
+        MenuBuilder.greetingPrint();
 
         while (mainExitCode != 9) {
-//            new HeaderPrinter().printHeader();
-//            stdout.info("│   1. Pokaż wszystkie wydarzenia                    │\n");
-//            stdout.info("│   2. Pokaż najbliższe wydarzenia                   │\n");
-//            stdout.info("│   3. Pokaż wydarzenie promowanych organizatorów    │\n");
-//            stdout.info(MenuBuilder.MENU_FRAME);
-//            stdout.info("│  " + ColorHandler.CYAN + " 9. Zakończ                    " + ColorHandler.DEFAULT + "                   │\n");
-//            stdout.info(MenuBuilder.MENU_FRAME);
-//            stdout.info(MenuBuilder.MENU_BOTTOM_FRAME);
-//            stdout.info("\n");
-//            stdout.info("Wpisz liczbę: \n");
             MenuBuilder.menuBuild();
 
             switch (ChoiceGetter.getChoice()) {
@@ -56,13 +47,6 @@ public class Menu extends MenuBuilder{
                     break;
                 case 9:
                     MenuBuilder.goodByeWindow();
-//                    stdout.info("\n");
-//                    stdout.info(MenuBuilder.MENU_TOP_FRAME);
-//                    stdout.info(MenuBuilder.MENU_FRAME);
-//                    stdout.info("│       " + ColorHandler.PURPLE + "            DO ZOBACZENIA!           " + ColorHandler.DEFAULT + "        │\n");
-//                    stdout.info(MenuBuilder.MENU_FRAME);
-//                    stdout.info(MenuBuilder.MENU_BOTTOM_FRAME);
-//                    stdout.info("\n");
                     mainExitCode = 9;
                     break;
                 case 0:

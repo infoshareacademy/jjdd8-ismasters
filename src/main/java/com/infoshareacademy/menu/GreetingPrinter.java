@@ -11,7 +11,7 @@ public class GreetingPrinter {
         stdout.info(MenuBuilder.MENU_FRAME);
         stdout.info("│      " + ColorHandler.YELLOW + "Witaj w kalendarzu wydarzeń kulturalnych      " + ColorHandler.DEFAULT + "│\n");
         stdout.info(MenuBuilder.MENU_FRAME);
-        stdout.info("│                (c) ISMasters 2019                  │\n");
+        stdout.info("│                                  │\n");
         stdout.info(MenuBuilder.MENU_FRAME);
         stdout.info(MenuBuilder.MENU_BOTTOM_FRAME);
         stdout.info("\n");
