@@ -20,8 +20,8 @@ public class MenuBuilder {
 
     static void menuBuild(){
         stdout.info("┌──────────────────────────────────────────────────────────────────┐\n" +
-                "│                                                                  │\n" +
-                "│                                                                  │\n" +
+                new EmptyLineWithPipesPrinter().printEmptyLineWithPipe() +
+                new EmptyLineWithPipesPrinter().printEmptyLineWithPipe() +
                  DynamicLinePrinter.printDynamicMenu(Menu.MAIN_MENU_OPTION1) + "\n" +
                  DynamicLinePrinter.printDynamicMenu(Menu.MAIN_MENU_OPTION2) + "\n" +
                  DynamicLinePrinter.printDynamicMenu(Menu.MAIN_MENU_OPTION3) + "\n" +
