@@ -8,18 +8,18 @@ import java.util.Scanner;
 
 import static com.infoshareacademy.menu.EventsPrinter.printEvents;
 
-public class Menu {
+public class Menu extends MenuBuilder{
 
     public static final Scanner scanner = new Scanner(System.in);
     private static final Logger stdout = LoggerFactory.getLogger("CONSOLE_OUT");
 
     static int length = 61;
-    final static String MAIN_MENU_OPTION1 = "1. Pokaż wszystkie wydarzenia";
-    final static String MAIN_MENU_OPTION2 = "2. Pokaż najbliższe wydarzenia";
-    final static String MAIN_MENU_OPTION3 = "3. Pokaż wydarzenie promowanych organizatorów";
-    final static String FIXED_MAIN_MENU_OPTION1 = String.format("%1$"+length+"s", MAIN_MENU_OPTION1);
-    final static String FIXED_MAIN_MENU_OPTION2 = String.format("%1$"+length+"s", MAIN_MENU_OPTION2);
-    final static String FIXED_MAIN_MENU_OPTION3 = String.format("%1$"+length+"s", MAIN_MENU_OPTION3);
+    private final static String MAIN_MENU_OPTION1 = "1. Pokaż wszystkie wydarzenia";
+    private final static String MAIN_MENU_OPTION2 = "2. Pokaż najbliższe wydarzenia";
+    private final static String MAIN_MENU_OPTION3 = "3. Pokaż wydarzenie promowanych organizatorów";
+    protected final static String FIXED_MENU_OPTION1 = String.format("%1$"+ length+"s", MAIN_MENU_OPTION1);
+    protected final static String FIXED_MENU_OPTION2 = String.format("%1$"+length+"s", MAIN_MENU_OPTION2);
+    protected final static String FIXED_MENU_OPTION3 = String.format("%1$"+length+"s", MAIN_MENU_OPTION3);
 
     public static void mainMenu() {
         FilterRepository filterRepository = new FilterRepository();
@@ -55,13 +55,14 @@ public class Menu {
                     new EventsByOrganizer().showByOrganizer();
                     break;
                 case 9:
-                    stdout.info("\n");
+                    MenuBuilder.goodByeWindow();
+//                    stdout.info("\n");
 //                    stdout.info(MenuBuilder.MENU_TOP_FRAME);
 //                    stdout.info(MenuBuilder.MENU_FRAME);
-                    stdout.info("│       " + ColorHandler.PURPLE + "            DO ZOBACZENIA!           " + ColorHandler.DEFAULT + "        │\n");
+//                    stdout.info("│       " + ColorHandler.PURPLE + "            DO ZOBACZENIA!           " + ColorHandler.DEFAULT + "        │\n");
 //                    stdout.info(MenuBuilder.MENU_FRAME);
 //                    stdout.info(MenuBuilder.MENU_BOTTOM_FRAME);
-                    stdout.info("\n");
+//                    stdout.info("\n");
                     mainExitCode = 9;
                     break;
                 case 0:
