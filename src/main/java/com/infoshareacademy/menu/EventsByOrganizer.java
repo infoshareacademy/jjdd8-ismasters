@@ -43,7 +43,7 @@ public class EventsByOrganizer {
                 case 0:
                     break;
                 default:
-                    new NothingHerePrinter().printNothingHere();
+                    MenuBuilder.nothingHereYetPrompt();
             }
         }
     }

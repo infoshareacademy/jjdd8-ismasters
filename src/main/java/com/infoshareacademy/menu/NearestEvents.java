@@ -11,6 +11,9 @@ import static com.infoshareacademy.menu.EventsPrinter.printEvents;
 public class NearestEvents {
 
     private static final Logger stdout = LoggerFactory.getLogger("CONSOLE_OUT");
+    static String today = "1. Pokaż dzisiejsze wydarzenia";
+    static String tommorow = "2. Pokaż jutrzejsze wydarzenia";
+    static String next3Days = "3. Pokaż wydarzenia za 3 dni";
 
     void showNearestEvents() {
         FilterRepository filterRepository = new FilterRepository();
@@ -18,34 +21,21 @@ public class NearestEvents {
         int returnCheckInt = 0;
 
         while (returnCheckInt != 9) {
-            stdout.info("\n");
-            new HeaderPrinter().printHeader();
-            stdout.info(MenuBuilder.MENU_FRAME);
-            stdout.info("│   1. Pokaż dzisiejsze wydarzenia                   │\n");
-            stdout.info("│   2. Pokaż jutrzejsze wydarzenia                   │\n");
-            stdout.info("│   3. Pokaż wydarzenia za 3 dni                     │\n");
-            stdout.info(MenuBuilder.MENU_FRAME);
-            stdout.info("│  " + ColorHandler.CYAN + " 9. Wróć                       " + ColorHandler.DEFAULT + "                   │\n");
-            stdout.info(MenuBuilder.MENU_FRAME);
-            stdout.info(MenuBuilder.MENU_BOTTOM_FRAME);
-            stdout.info("\n");
-            stdout.info("Wpisz liczbę: \n");
+
+            MenuBuilder.nearEvent();
 
             switch (ChoiceGetter.getChoice()) {
                 case 1:
 
                     printEvents(filterRepository.filterAllDatesEvents(LocalDate.now().toString()));
-                    stdout.info("\n");
                     break;
                 case 2:
 
                     printEvents(filterRepository.filterAllDatesEvents(LocalDate.now().plusDays(1).toString()));
-                    stdout.info("\n");
                     break;
                 case 3:
 
                     printEvents(filterRepository.filterAllDatesEvents(LocalDate.now().plusDays(2).toString()));
-                    stdout.info("\n");
                     break;
                 case 9:
                     ScreenCleaner.cleanConsole();
@@ -55,7 +45,7 @@ public class NearestEvents {
                 case 0:
                     break;
                 default:
-                    new NothingHerePrinter().printNothingHere();
+                    MenuBuilder.nothingHereYetPrompt();
             }
         }
     }

@@ -52,7 +52,7 @@ public class Menu extends MenuBuilder{
                 case 0:
                     break;
                 default:
-                    new NothingHerePrinter().printNothingHere();
+                    MenuBuilder.nothingHereYetPrompt();
             }
         }
     }

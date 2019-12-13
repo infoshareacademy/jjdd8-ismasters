@@ -28,15 +28,7 @@ public class ChoiceGetter {
         if ((Pattern.matches("[0-9]", in))) {
             result = regexTry(result, in);
         } else {
-            stdout.info("\n");
-            stdout.info(MenuBuilder.WRONG_INPUT_TOP);
-            stdout.info(MenuBuilder.WRONG_INPUT_FRAME);
-            stdout.info("│       " + ColorHandler.RED + "PODANO NIEPRAWIDŁOWĄ WARTOŚĆ! " + ColorHandler.DEFAULT + "     │\n");
-            stdout.info(MenuBuilder.WRONG_INPUT_FRAME);
-            stdout.info("│               JESZCZE RAZ!               │\n");
-            stdout.info(MenuBuilder.WRONG_INPUT_FRAME);
-            stdout.info(MenuBuilder.WRONG_INPUT_BOTTOM);
-            stdout.info("\n");
+            MenuBuilder.wrongInputPrompt();
         }
         return result;
     }
