@@ -21,17 +21,18 @@ public class MenuBuilder {
     static String Option3;
     static String GoBack;
 
+
     static void menuBuild(){
         stdout.info(MENU_TOP_WIDER_FRAME +
                 new EmptyLineWithPipesPrinter().printEmptyLineWithPipe() +
                 new EmptyLineWithPipesPrinter().printEmptyLineWithPipe() +
-                 DynamicLinePrinter.printDynamicMenu(Option1) +
-                 DynamicLinePrinter.printDynamicMenu(Option2) +
-                 DynamicLinePrinter.printDynamicMenu(Option3) +
+                 DynamicLinePrinter.printDynamic(Option1) +
+                 DynamicLinePrinter.printDynamic(Option2) +
+                 DynamicLinePrinter.printDynamic(Option3) +
                 new EmptyLineWithPipesPrinter().printEmptyLineWithPipe() +
                 new EmptyLineWithPipesPrinter().printEmptyLineWithPipe() +
-                ColorHandler.PURPLE + DynamicLinePrinter.printDynamicMenu(GoBack) + ColorHandler.DEFAULT +
-                DynamicLinePrinter.printDynamicMenu("Podaj nr pozycji z menu którą wybierasz:") +
+                DynamicLinePrinter.printDynamicPurple(GoBack) +
+                DynamicLinePrinter.printDynamic("Podaj nr pozycji z menu którą wybierasz:") +
                 MENU_BOTTOM_WIDER_FRAME +
                 "\n");
     }
@@ -39,7 +40,7 @@ public class MenuBuilder {
     static void goodByeWindow(){
         stdout.info(MENU_TOP_WIDER_FRAME +
                 new EmptyLineWithPipesPrinter().printEmptyLineWithPipe() +
-                ColorHandler.PURPLE + DynamicLinePrinter.printDynamicMenu(GOOD_BYE) + ColorHandler.DEFAULT +
+                DynamicLinePrinter.printDynamicPurple(GOOD_BYE) +
                 new EmptyLineWithPipesPrinter().printEmptyLineWithPipe() +
                 MENU_BOTTOM_WIDER_FRAME);
     }
@@ -47,9 +48,22 @@ public class MenuBuilder {
     static void greetingPrint(){
         stdout.info(MENU_TOP_WIDER_FRAME +
                 new EmptyLineWithPipesPrinter().printEmptyLineWithPipe() +
-                ColorHandler.YELLOW + DynamicLinePrinter.printDynamicMenu("Witaj w kalendarzu wydarzeń kulturalnych") + ColorHandler.DEFAULT +
+                DynamicLinePrinter.printDynamicYellow("Witaj w kalendarzu wydarzeń kulturalnych") +
                 new EmptyLineWithPipesPrinter().printEmptyLineWithPipe() +
-                ColorHandler.CYAN + DynamicLinePrinter.printDynamicMenu("(c) ISMasters 2019") + ColorHandler.DEFAULT +
+                DynamicLinePrinter.printDynamicCyan("(c) ISMasters 2019") +
+                new EmptyLineWithPipesPrinter().printEmptyLineWithPipe() +
+                MENU_BOTTOM_WIDER_FRAME);
+    }
+
+    static void promotedOrganizers(){
+        stdout.info(MENU_TOP_WIDER_FRAME +
+                new EmptyLineWithPipesPrinter().printEmptyLineWithPipe() +
+                new EmptyLineWithPipesPrinter().printEmptyLineWithPipe() +
+                DynamicLinePrinter.printDynamic(EventsByOrganizer.promotedOrganizer1Builder) +
+                DynamicLinePrinter.printDynamic(EventsByOrganizer.promotedOrganizer2Builder) +
+                DynamicLinePrinter.printDynamic(EventsByOrganizer.promotedOrganizer3Builder) +
+                new EmptyLineWithPipesPrinter().printEmptyLineWithPipe() +
+                DynamicLinePrinter.printDynamic("Powrót") +
                 new EmptyLineWithPipesPrinter().printEmptyLineWithPipe() +
                 MENU_BOTTOM_WIDER_FRAME);
     }

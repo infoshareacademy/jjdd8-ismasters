@@ -9,23 +9,17 @@ import static com.infoshareacademy.menu.EventsPrinter.printEvents;
 public class EventsByOrganizer {
 
     private static final Logger stdout = LoggerFactory.getLogger("CONSOLE_OUT");
+    // zmienne z kolekcji do dodania jako wartosci tych wyciaganych do buildera
+    static String promotedOrganizer1Builder = "organizator1";
+    static String promotedOrganizer2Builder = "organizator2";
+    static String promotedOrganizer3Builder = "organizator3";
 
-    void showByOrganizer() {
+    static void showByOrganizer() {
         FilterRepository filterRepository = new FilterRepository();
         int returnCheckInt = 0;
 
         while (returnCheckInt != 9) {
-            stdout.info("\n");
-            new HeaderPrinter().printBiggerHeader();
-            stdout.info("│   1. Pokaż Gdański Archipelag Kultury                            │\n");
-            stdout.info("│   2. Pokaż Wojewódzka i Miejska Biblioteka Publiczna w Gdańsku   │\n");
-            stdout.info("│   3. Pokaż Miejski Teatr MINIATURA                               │\n");
-            stdout.info(MenuBuilder.MENU_WIDER_FRAME);
-            stdout.info("│  " + ColorHandler.CYAN + " 9. Wróć                                                    " + ColorHandler.DEFAULT + "    │\n");
-            stdout.info(MenuBuilder.MENU_WIDER_FRAME);
-            stdout.info(MenuBuilder.MENU_BOTTOM_WIDER_FRAME);
-            stdout.info("\n");
-            stdout.info("Wpisz liczbę: \n");
+            MenuBuilder.promotedOrganizers();
 
             switch (ChoiceGetter.getChoice()) {
                 case 1:
