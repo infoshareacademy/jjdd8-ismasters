@@ -19,7 +19,7 @@ public class ChoiceGetter {
 
             result = regexInputCheck(result, in);
         } catch (Exception e) {
-            e.printStackTrace();
+            stdout.info("Wystąpił błąd :(" + e.getMessage());
         }
         return result;
     }

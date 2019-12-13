@@ -9,10 +9,10 @@ import static com.infoshareacademy.menu.EventsPrinter.printEvents;
 public class EventsByOrganizer {
 
     private static final Logger stdout = LoggerFactory.getLogger("CONSOLE_OUT");
-    // zmienne z kolekcji do dodania jako wartosci tych wyciaganych do buildera
-    static String promotedOrganizer1Builder = "organizator1";
-    static String promotedOrganizer2Builder = "organizator2";
-    static String promotedOrganizer3Builder = "organizator3";
+    // zmienne z kolekcji do dodania jako wartosci tych wyciaganych do buildera poki co dalej sztywno
+    static String promotedOrganizer1Builder = "Gdański Archipelag Kultury";
+    static String promotedOrganizer2Builder = "Wojewódzka i Miejska Biblioteka Publiczna w Gdańsku";
+    static String promotedOrganizer3Builder = "Miejski Teatr MINIATURA";
 
     static void showByOrganizer() {
         FilterRepository filterRepository = new FilterRepository();
