@@ -4,6 +4,8 @@ import com.infoshareacademy.domain.parser.Event;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Predicate;
+import java.util.stream.Collectors;
 
 public class FilterRepository {
     List<Event> filteredOutPutList = new ArrayList<>();
@@ -31,6 +33,16 @@ public class FilterRepository {
             }
         }
         return filteredOutPutList;
+    }
+
+    public List<Event> genericFilter(Predicate<Event> lambda) {
+
+        List<Event> events = EventsRepository.getEvents();
+        return events.stream()
+                .filter(lambda)
+                .collect(Collectors.toList());
+
+
     }
 }
 

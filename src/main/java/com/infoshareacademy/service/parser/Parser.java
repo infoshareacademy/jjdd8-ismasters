@@ -22,7 +22,7 @@ public class Parser {
 
     public void parseData() {
         try {
-            events = objectMapper.readValue(new File("JSON_example"), new TypeReference<ArrayList<Event>>() {
+            events = objectMapper.readValue(new File("JSON_example.json"), new TypeReference<ArrayList<Event>>() {
             });
 
         } catch (IOException e) {
