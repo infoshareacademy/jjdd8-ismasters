@@ -4,8 +4,10 @@ import com.infoshareacademy.domain.parser.Event;
 import com.infoshareacademy.repository.FilterRepository;
 import com.infoshareacademy.service.parser.Parser;
 
+import java.time.LocalDate;
 import java.util.Scanner;
 import java.util.function.Predicate;
+import java.util.regex.Pattern;
 
 public class EventSearchTest {
 
@@ -34,8 +36,14 @@ public class EventSearchTest {
 
             switch (ChoiceGetter.getChoice()) {
                 case 1:
-                    System.out.println("Podaj miejsce do wyszukania i wciśnij ENTER");
-                    searchString = scanner.nextLine();
+                    do {
+                        System.out.println("Podaj miejsce do wyszukania i wciśnij ENTER");
+                        searchString = scanner.nextLine();
+                        if (searchString.length() < 3) {
+                            System.out.println("Wpisz co najmniej 3 znaki");
+                        }
+                    } while (searchString.length() < 3);
+
                     System.out.println("Szukam: " + searchString);
                     String finalSearchString = searchString;
                     Predicate<Event> searchCondition = event -> event.getPlace().getName().toLowerCase().contains(finalSearchString.toLowerCase());
@@ -43,8 +51,14 @@ public class EventSearchTest {
                     break;
 
                 case 2:
-                    System.out.println("Podaj nazwę organizatora do wyszukania i wciśnij ENTER");
-                    searchString = scanner.nextLine();
+                    do {
+                        System.out.println("Podaj nazwę organizatora do wyszukania i wciśnij ENTER");
+                        searchString = scanner.nextLine();
+                        if (searchString.length() < 3) {
+                            System.out.println("Wpisz co najmniej 3 znaki");
+                        }
+                    } while (searchString.length() < 3);
+
                     System.out.println("Szukam: " + searchString);
                     String finalSearchString1 = searchString;
                     searchCondition = event -> event.getOrganizer().getDesignation().toLowerCase().contains(finalSearchString1.toLowerCase());
@@ -54,6 +68,14 @@ public class EventSearchTest {
                 case 3:
                     System.out.println("Podaj datę w formacie YYYY-MM-DD do wyszukania i wciśnij ENTER");
                     searchString = scanner.nextLine();
+                    if (!Pattern.matches("^\\d{4}\\-(0?[1-9]|1[012])\\-(0?[1-9]|[12][0-9]|3[01])$", searchString)) {
+                        System.out.println("Zły format daty");
+                        break;
+                    }
+                    if (LocalDate.parse(searchString).isBefore(LocalDate.now())) {
+                        System.out.println("Wybierz dzień dzisiejszy lub późniejszą datę!");
+                        break;
+                    }
                     System.out.println("Szukam: " + searchString);
                     String finalSearchString2 = searchString;
                     searchCondition = event -> event.getStartDate().contains(finalSearchString2.toLowerCase());
