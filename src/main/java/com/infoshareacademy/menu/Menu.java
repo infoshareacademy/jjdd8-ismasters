@@ -25,6 +25,7 @@ public class Menu {
             stdout.info("│   1. Pokaż wszystkie wydarzenia                    │\n");
             stdout.info("│   2. Pokaż najbliższe wydarzenia                   │\n");
             stdout.info("│   3. Pokaż wydarzenie promowanych organizatorów    │\n");
+            stdout.info("│   4. Wyszukaj wydarzenia                           │\n");
             stdout.info("│                                                    │\n");
             stdout.info("│  " + ColorHandler.CYAN + " 9. Zakończ                    " + ColorHandler.DEFAULT + "                   │\n");
             stdout.info("│                                                    │\n");
@@ -42,6 +43,9 @@ public class Menu {
                     break;
                 case 3:
                     new EventsByOrganizer().showByOrganizer();
+                    break;
+                case 4:
+                    new EventSearch().startSearch();
                     break;
                 case 9:
                     stdout.info("\n");

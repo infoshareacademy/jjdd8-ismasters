@@ -37,12 +37,9 @@ public class FilterRepository {
 
     public List<Event> genericFilter(Predicate<Event> lambda) {
 
-        List<Event> events = EventsRepository.getEvents();
-        return events.stream()
+        return EventsRepository.getEvents().stream()
                 .filter(lambda)
                 .collect(Collectors.toList());
-
-
     }
 }
 
