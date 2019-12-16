@@ -11,8 +11,9 @@ public class EventsByOrganizer {
     private static final Logger stdout = LoggerFactory.getLogger("CONSOLE_OUT");
     // to zniknie
     static String promotedOrganizer1Builder = "1. Gdański Archipelag Kultury";
-    static String promotedOrganizer2Builder = "Wojewódzka i Miejska Biblioteka Publiczna w Gdańsku";
-    static String promotedOrganizer3Builder = "Miejski Teatr MINIATURA";
+    static String promotedOrganizer2Builder = "2. Wojewódzka i Miejska Biblioteka Publiczna w Gdańsku";
+    static String promotedOrganizer3Builder = "3. Miejski Teatr MINIATURA";
+    static String promotedOrganizer9Builder = "9. Wyjście do poprzedniego menu";
 
 
     static void showByOrganizer() {
@@ -20,7 +21,7 @@ public class EventsByOrganizer {
         int returnCheckInt = 0;
 
         while (returnCheckInt != 9) {
-            MenuBuilder.promotedOrganizersPrinting();
+            MenuBuilder.printPromotedOrganizers();
 
             switch (ChoiceGetter.getChoice()) {
                 case 1:
@@ -37,14 +38,14 @@ public class EventsByOrganizer {
                     stdout.info("\n");
                     break;
                 case 9:
-                    ScreenCleaner.cleaningConsoleWindow();
+                    ScreenCleaner.cleanConsoleWindow();
                     stdout.info("        POWRÓT DO WYŻSZEGO POZIOMU       \n\n");
                     returnCheckInt = 9;
                     break;
                 case 0:
                     break;
                 default:
-                    MenuBuilder.nothingHereYetPromptPrinting();
+                    MenuBuilder.printNumberInactiveInfo();
             }
         }
     }

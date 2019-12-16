@@ -24,15 +24,15 @@ public class EventSearch {
 
     public void showSearchResults() {
 
-        int returnCheckInt = 0;
+        int menuExitCode = 0;
         String searchString;
         Predicate<Event> searchCondition;
-        ScreenCleaner.cleaningConsoleWindow();
+        ScreenCleaner.cleanConsoleWindow();
         boolean isDateToEarly = true;
 
-        while (returnCheckInt != 9) {
+        while (menuExitCode != 9) {
 
-            MenuBuilder.generalEventSearchPrinting();
+            MenuBuilder.printGeneralEventSearch();
 
             switch (ChoiceGetter.getChoice()) {
                 case 1:
@@ -45,8 +45,8 @@ public class EventSearch {
                     } while (searchString.length() < 3);
 
                     stdout.info("Szukam: " + searchString + "\n");
-                    String finalSearchString = searchString;
-                    searchCondition = event -> event.getPlace().getName().toLowerCase().contains(finalSearchString.toLowerCase());
+                    String effectiveFinalSearchByPlace = searchString;
+                    searchCondition = event -> event.getPlace().getName().toLowerCase().contains(effectiveFinalSearchByPlace.toLowerCase());
                     searchEvents(new FilterRepository(), searchCondition);
                     break;
 
@@ -60,8 +60,8 @@ public class EventSearch {
                     } while (searchString.length() < 3);
 
                     stdout.info("Szukam: " + searchString + "\n");
-                    String finalSearchByOrganizer = searchString;
-                    searchCondition = event -> event.getOrganizer().getDesignation().toLowerCase().contains(finalSearchByOrganizer.toLowerCase());
+                    String effectiveFinalSearchByOrganizer = searchString;
+                    searchCondition = event -> event.getOrganizer().getDesignation().toLowerCase().contains(effectiveFinalSearchByOrganizer.toLowerCase());
                     searchEvents(new FilterRepository(), searchCondition);
                     break;
 
@@ -76,11 +76,8 @@ public class EventSearch {
                         }
                         while (!isDateValid(searchString));
 
-
                         if (LocalDate.parse(searchString).isBefore(LocalDate.now())) {
-//                            isDateToEarly = true;
                             stdout.info("\nWybierz dzień dzisiejszy lub późniejszą datę!\n\n");
-//                            break;
                         } else {
                             isDateToEarly = false;
                         }
@@ -88,18 +85,18 @@ public class EventSearch {
                     } while (isDateToEarly);
 
                     stdout.info("Szukam: " + searchString + "\n");
-                    String finalSearchByDate = searchString;
-                    searchCondition = event -> event.getStartDate().contains(finalSearchByDate.toLowerCase());
+                    String effectiveFinalSearchByDate = searchString;
+                    searchCondition = event -> event.getStartDate().contains(effectiveFinalSearchByDate.toLowerCase());
                     searchEvents(new FilterRepository(), searchCondition);
                     break;
 
                 case 9:
                     stdout.info("Koniec wyszukiwania\n");
-                    returnCheckInt = 9;
+                    menuExitCode = 9;
                     break;
 
                 default:
-                    MenuBuilder.nothingHereYetPromptPrinting();
+                    MenuBuilder.printNumberInactiveInfo();
             }
         }
     }

@@ -18,105 +18,101 @@ public class MenuBuilder {
     final static String MENU_TOP_PIPE = "└──────────────────────────────────────────────────────────────────┘\n";
     final static String MENU_BOTTOM_PIPE = "┌──────────────────────────────────────────────────────────────────┐\n";
     private final static String GOOD_BYE = "Do Zobaczenia :D";
-    static String displayedOption1;
-    static String displayedOption2;
-    static String displayedOption3;
-    static String displayedOption4;
-    static String GoBack;
 
 
     static void menuBuilderPrinting(){
         stdout.info(MENU_BOTTOM_PIPE +
-                new EmptyLineWithPipesPrinter().printingEmptyLineWithPipe() +
-                new EmptyLineWithPipesPrinter().printingEmptyLineWithPipe() +
-                 DynamicLinePrinter.printingDynamicMenuRows(displayedOption1) +
-                 DynamicLinePrinter.printingDynamicMenuRows(displayedOption2) +
-                 DynamicLinePrinter.printingDynamicMenuRows(displayedOption3) +
-                 DynamicLinePrinter.printingDynamicMenuRows(displayedOption4) +
-                new EmptyLineWithPipesPrinter().printingEmptyLineWithPipe() +
-                new EmptyLineWithPipesPrinter().printingEmptyLineWithPipe() +
-                DynamicLinePrinter.printingDynamicMenuRowsPurple(GoBack) +
-                DynamicLinePrinter.printingDynamicMenuRows("Podaj nr pozycji z menu którą wybierasz:") +
+                new EmptyLineWithPipesPrinter().printEmptyLineWithPipe() +
+                new EmptyLineWithPipesPrinter().printEmptyLineWithPipe() +
+                 DynamicLinePrinter.printDynamicMenuRows(Menu.MAIN_MENU_OPTION1) +
+                 DynamicLinePrinter.printDynamicMenuRows(Menu.MAIN_MENU_OPTION2) +
+                 DynamicLinePrinter.printDynamicMenuRows(Menu.MAIN_MENU_OPTION3) +
+                 DynamicLinePrinter.printDynamicMenuRows(Menu.MAIN_MENU_OPTION4) +
+                new EmptyLineWithPipesPrinter().printEmptyLineWithPipe() +
+                new EmptyLineWithPipesPrinter().printEmptyLineWithPipe() +
+                DynamicLinePrinter.printDynamicMenuRowsPurple(Menu.MAIN_MENU_EXIT) +
+                DynamicLinePrinter.printDynamicMenuRows("Podaj nr pozycji z menu którą wybierasz:") +
                 MENU_TOP_PIPE +
                 "\n");
     }
 
-    static void goodByeWindowPrinting(){
+    static void printGoodByeWindow(){
         stdout.info(MENU_BOTTOM_PIPE +
-                new EmptyLineWithPipesPrinter().printingEmptyLineWithPipe() +
-                DynamicLinePrinter.printingDynamicMenuRowsPurple(GOOD_BYE) +
-                new EmptyLineWithPipesPrinter().printingEmptyLineWithPipe() +
+                new EmptyLineWithPipesPrinter().printEmptyLineWithPipe() +
+                DynamicLinePrinter.printDynamicMenuRowsPurple(GOOD_BYE) +
+                new EmptyLineWithPipesPrinter().printEmptyLineWithPipe() +
                 MENU_TOP_PIPE);
     }
 
-    static void greetPrinting(){
+    static void printGreeting(){
         stdout.info(MENU_BOTTOM_PIPE +
-                new EmptyLineWithPipesPrinter().printingEmptyLineWithPipe() +
-                DynamicLinePrinter.printingDynamicMenuRowsYellow("Witaj w kalendarzu wydarzeń kulturalnych") +
-                new EmptyLineWithPipesPrinter().printingEmptyLineWithPipe() +
-                DynamicLinePrinter.printingDynamicMenuRowsCyan("(c) ISMasters 2019") +
-                new EmptyLineWithPipesPrinter().printingEmptyLineWithPipe() +
+                new EmptyLineWithPipesPrinter().printEmptyLineWithPipe() +
+                DynamicLinePrinter.printDynamicMenuRowsYellow("Witaj w kalendarzu wydarzeń kulturalnych") +
+                new EmptyLineWithPipesPrinter().printEmptyLineWithPipe() +
+                DynamicLinePrinter.printDynamicMenuRowsCyan("(c) ISMasters 2019") +
+                new EmptyLineWithPipesPrinter().printEmptyLineWithPipe() +
                 MENU_TOP_PIPE);
     }
 
-    static void promotedOrganizersPrinting(){
+    static void printPromotedOrganizers(){
         stdout.info(MENU_BOTTOM_PIPE +
-                new EmptyLineWithPipesPrinter().printingEmptyLineWithPipe() +
-                new EmptyLineWithPipesPrinter().printingEmptyLineWithPipe() +
-                DynamicLinePrinter.printingDynamicMenuRows(EventsByOrganizer.promotedOrganizer1Builder) +
-                DynamicLinePrinter.printingDynamicMenuRows(EventsByOrganizer.promotedOrganizer2Builder) +
-                DynamicLinePrinter.printingDynamicMenuRows(EventsByOrganizer.promotedOrganizer3Builder) +
-                new EmptyLineWithPipesPrinter().printingEmptyLineWithPipe() +
-                DynamicLinePrinter.printingDynamicMenuRows("Powrót") +
-                new EmptyLineWithPipesPrinter().printingEmptyLineWithPipe() +
+                new EmptyLineWithPipesPrinter().printEmptyLineWithPipe() +
+                new EmptyLineWithPipesPrinter().printEmptyLineWithPipe() +
+                DynamicLinePrinter.printDynamicMenuRows(EventsByOrganizer.promotedOrganizer1Builder) +
+                DynamicLinePrinter.printDynamicMenuRows(EventsByOrganizer.promotedOrganizer2Builder) +
+                DynamicLinePrinter.printDynamicMenuRows(EventsByOrganizer.promotedOrganizer3Builder) +
+                new EmptyLineWithPipesPrinter().printEmptyLineWithPipe() +
+                DynamicLinePrinter.printDynamicMenuRows(EventsByOrganizer.promotedOrganizer9Builder) +
+                new EmptyLineWithPipesPrinter().printEmptyLineWithPipe() +
                 MENU_TOP_PIPE);
     }
 
-    static void nothingHereYetPromptPrinting(){
-        ScreenCleaner.cleaningConsoleWindow();
+    static void printNumberInactiveInfo(){
+        ScreenCleaner.cleanConsoleWindow();
         stdout.info(MENU_BOTTOM_PIPE +
-                new EmptyLineWithPipesPrinter().printingEmptyLineWithPipe() +
-                new EmptyLineWithPipesPrinter().printingEmptyLineWithPipe() +
-                DynamicLinePrinter.printingDynamicMenuRowsRed("Pod tym numerem jeszcze nic nie ma :(") +
-                new EmptyLineWithPipesPrinter().printingEmptyLineWithPipe() +
-                new EmptyLineWithPipesPrinter().printingEmptyLineWithPipe() +
+                new EmptyLineWithPipesPrinter().printEmptyLineWithPipe() +
+                new EmptyLineWithPipesPrinter().printEmptyLineWithPipe() +
+                DynamicLinePrinter.printDynamicMenuRowsRed("Pod tym numerem jeszcze nic nie ma :(") +
+                new EmptyLineWithPipesPrinter().printEmptyLineWithPipe() +
+                new EmptyLineWithPipesPrinter().printEmptyLineWithPipe() +
                 MENU_TOP_PIPE);
     }
 
-    static void nearEventPrinting(){
+    static void printNearEvent(){
         stdout.info(MENU_BOTTOM_PIPE +
-                new EmptyLineWithPipesPrinter().printingEmptyLineWithPipe() +
-                new EmptyLineWithPipesPrinter().printingEmptyLineWithPipe() +
-                DynamicLinePrinter.printingDynamicMenuRows(NearestEvents.today) +
-                DynamicLinePrinter.printingDynamicMenuRows(NearestEvents.tommorow) +
-                DynamicLinePrinter.printingDynamicMenuRows(NearestEvents.next3Days) +
-                new EmptyLineWithPipesPrinter().printingEmptyLineWithPipe() +
-                new EmptyLineWithPipesPrinter().printingEmptyLineWithPipe() +
+                new EmptyLineWithPipesPrinter().printEmptyLineWithPipe() +
+                new EmptyLineWithPipesPrinter().printEmptyLineWithPipe() +
+                DynamicLinePrinter.printDynamicMenuRows(NearestEvents.today) +
+                DynamicLinePrinter.printDynamicMenuRows(NearestEvents.tommorow) +
+                DynamicLinePrinter.printDynamicMenuRows(NearestEvents.next3Days) +
+                new EmptyLineWithPipesPrinter().printEmptyLineWithPipe() +
+                DynamicLinePrinter.printDynamicMenuRows(NearestEvents.exit) +
+                new EmptyLineWithPipesPrinter().printEmptyLineWithPipe() +
                 MENU_TOP_PIPE);
     }
 
-    static void wrongInputPromptPrinting(){
+    static void printWrongInputPrompt(){
         stdout.info(MENU_BOTTOM_PIPE +
-                new EmptyLineWithPipesPrinter().printingEmptyLineWithPipe() +
-                new EmptyLineWithPipesPrinter().printingEmptyLineWithPipe() +
-                DynamicLinePrinter.printingDynamicMenuRowsRed("PODANO NIEPRAWIDŁOWĄ WARTOŚĆ!") +
-                new EmptyLineWithPipesPrinter().printingEmptyLineWithPipe() +
-                new EmptyLineWithPipesPrinter().printingEmptyLineWithPipe() +
+                new EmptyLineWithPipesPrinter().printEmptyLineWithPipe() +
+                new EmptyLineWithPipesPrinter().printEmptyLineWithPipe() +
+                DynamicLinePrinter.printDynamicMenuRowsRed("PODANO NIEPRAWIDŁOWĄ WARTOŚĆ!") +
+                new EmptyLineWithPipesPrinter().printEmptyLineWithPipe() +
+                new EmptyLineWithPipesPrinter().printEmptyLineWithPipe() +
                 MENU_TOP_PIPE);
 
     }
 
-    static void generalEventSearchPrinting(){
+    static void printGeneralEventSearch(){
         stdout.info(MENU_BOTTOM_PIPE +
-                new EmptyLineWithPipesPrinter().printingEmptyLineWithPipe() +
-                new EmptyLineWithPipesPrinter().printingEmptyLineWithPipe() +
-                DynamicLinePrinter.printingDynamicMenuRows(EventSearch.SEARCH_MENU_OPTION1) +
-                DynamicLinePrinter.printingDynamicMenuRows(EventSearch.SEARCH_MENU_OPTION2) +
-                DynamicLinePrinter.printingDynamicMenuRows(EventSearch.SEARCH_MENU_OPTION3) +
-                new EmptyLineWithPipesPrinter().printingEmptyLineWithPipe() +
-                DynamicLinePrinter.printingDynamicMenuRows(EventSearch.SEARCH_MENU_EXIT) +
-                new EmptyLineWithPipesPrinter().printingEmptyLineWithPipe() +
-                new EmptyLineWithPipesPrinter().printingEmptyLineWithPipe() +
+                new EmptyLineWithPipesPrinter().printEmptyLineWithPipe() +
+                new EmptyLineWithPipesPrinter().printEmptyLineWithPipe() +
+                DynamicLinePrinter.printDynamicMenuRows(EventSearch.SEARCH_MENU_OPTION1) +
+                DynamicLinePrinter.printDynamicMenuRows(EventSearch.SEARCH_MENU_OPTION2) +
+                DynamicLinePrinter.printDynamicMenuRows(EventSearch.SEARCH_MENU_OPTION3) +
+                new EmptyLineWithPipesPrinter().printEmptyLineWithPipe() +
+                DynamicLinePrinter.printDynamicMenuRows(EventSearch.SEARCH_MENU_EXIT) +
+                new EmptyLineWithPipesPrinter().printEmptyLineWithPipe() +
+                new EmptyLineWithPipesPrinter().printEmptyLineWithPipe() +
                 MENU_TOP_PIPE);
     }
 }

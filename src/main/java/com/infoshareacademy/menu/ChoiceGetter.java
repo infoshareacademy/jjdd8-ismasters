@@ -29,7 +29,7 @@ public class ChoiceGetter {
         if ((Pattern.matches("[0-9]", in))) {
             result = regexExceptionCatching(result, in);
         } else {
-            MenuBuilder.wrongInputPromptPrinting();
+            MenuBuilder.printWrongInputPrompt();
         }
         return result;
     }

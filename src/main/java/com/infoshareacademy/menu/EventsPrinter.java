@@ -11,7 +11,7 @@ public class EventsPrinter {
     private static final Logger stdout = LoggerFactory.getLogger("CONSOLE_OUT");
 
     public static void printingEvents(List<Event> eventList) {
-        ScreenCleaner.cleaningConsoleWindow();
+        ScreenCleaner.cleanConsoleWindow();
         int eventCounting = 0;
         for (Event event : eventList) {
             stdout.info(event.toString());
@@ -26,7 +26,7 @@ public class EventsPrinter {
             stdout.info("Wystąpił błąd \n" + e);
         }
         eventList.clear();
-        ScreenCleaner.cleaningConsoleWindow();
+        ScreenCleaner.cleanConsoleWindow();
     }
 
     private static int eventCounting(int eventCounting) {

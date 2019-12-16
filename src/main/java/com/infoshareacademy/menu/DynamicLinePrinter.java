@@ -21,7 +21,7 @@ public class DynamicLinePrinter {
         }
     }
 
-    static String printingDynamicMenuRows(String input) {
+    static String printDynamicMenuRows(String input) {
 
         StringBuilder stringBuilder = new StringBuilder();
         stringBuilder.append("│");
@@ -32,7 +32,7 @@ public class DynamicLinePrinter {
         return dynamicPrintingBottomPart(input, stringBuilder);
     }
 
-    static String printingDynamicMenuRowsYellow(String input) {
+    static String printDynamicMenuRowsYellow(String input) {
 
         StringBuilder stringBuilder = new StringBuilder();
         stringBuilder.append("│");
@@ -45,7 +45,7 @@ public class DynamicLinePrinter {
         return dynamicPrintingBottomPart(input, stringBuilder);
     }
 
-    static String printingDynamicMenuRowsCyan(String input) {
+    static String printDynamicMenuRowsCyan(String input) {
 
         StringBuilder stringBuilder = new StringBuilder();
         stringBuilder.append("│");
@@ -58,7 +58,7 @@ public class DynamicLinePrinter {
         return dynamicPrintingBottomPart(input, stringBuilder);
     }
 
-    static String printingDynamicMenuRowsPurple(String input) {
+    static String printDynamicMenuRowsPurple(String input) {
 
         StringBuilder stringBuilder = new StringBuilder();
         stringBuilder.append("│");
@@ -71,7 +71,7 @@ public class DynamicLinePrinter {
         return dynamicPrintingBottomPart(input, stringBuilder);
     }
 
-    static String printingDynamicMenuRowsRed(String input) {
+    static String printDynamicMenuRowsRed(String input) {
 
         StringBuilder stringBuilder = new StringBuilder();
         stringBuilder.append("│");
