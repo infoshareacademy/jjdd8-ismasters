@@ -6,57 +6,54 @@ import org.slf4j.LoggerFactory;
 
 import java.util.Scanner;
 
-import static com.infoshareacademy.menu.EventsPrinter.printEvents;
+import static com.infoshareacademy.menu.EventsPrinter.printingEvents;
 
-public class Menu {
+public class Menu extends MenuBuilder{
 
     public static final Scanner scanner = new Scanner(System.in);
     private static final Logger stdout = LoggerFactory.getLogger("CONSOLE_OUT");
 
+    final static String MAIN_MENU_OPTION1 = "1. Pokaż wszystkie wydarzenia";
+    final static String MAIN_MENU_OPTION2 = "2. Pokaż najbliższe wydarzenia";
+    final static String MAIN_MENU_OPTION3 = "3. Pokaż wydarzenie promowanych organizatorów";
+    final static String MAIN_MENU_EXIT = "Wpisane 9 powoduje wyjscie z programu";
+
     public static void mainMenu() {
+        //w planach dodanie dynamicznego dodawania ale pierw przepchniecie pull requesta
+        MenuBuilder.displayedOption1 = MAIN_MENU_OPTION1;
+        MenuBuilder.displayedOption2 = MAIN_MENU_OPTION2;
+        MenuBuilder.displayedOption3 = MAIN_MENU_OPTION3;
+        MenuBuilder.GoBack = MAIN_MENU_EXIT;
         FilterRepository filterRepository = new FilterRepository();
 
         int mainExitCode = 0;
-
-        new GreetingPrinter().printGreeting();
+        ScreenCleaner.cleaningConsoleWindow();
+        MenuBuilder.greetPrinting();
 
         while (mainExitCode != 9) {
-            new HeaderPrinter().printHeader();
-            stdout.info("│   1. Pokaż wszystkie wydarzenia                    │\n");
-            stdout.info("│   2. Pokaż najbliższe wydarzenia                   │\n");
-            stdout.info("│   3. Pokaż wydarzenie promowanych organizatorów    │\n");
-            stdout.info("│                                                    │\n");
-            stdout.info("│  " + ColorHandler.CYAN + " 9. Zakończ                    " + ColorHandler.DEFAULT + "                   │\n");
-            stdout.info("│                                                    │\n");
-            stdout.info("└────────────────────────────────────────────────────┘\n");
-            stdout.info("\n");
-            stdout.info("Wpisz liczbę: \n");
+            MenuBuilder.menuBuilderPrinting();
 
             switch (ChoiceGetter.getChoice()) {
                 case 1:
-                    printEvents(filterRepository.allEvents());
+                    printingEvents(filterRepository.allEvents());
                     stdout.info("\n");
                     break;
                 case 2:
+                    ScreenCleaner.cleaningConsoleWindow();
                     new NearestEvents().showNearestEvents();
                     break;
                 case 3:
+                    ScreenCleaner.cleaningConsoleWindow();
                     new EventsByOrganizer().showByOrganizer();
                     break;
                 case 9:
-                    stdout.info("\n");
-                    stdout.info("┌────────────────────────────────────────────────────┐\n");
-                    stdout.info("│                                                    │\n");
-                    stdout.info("│       " + ColorHandler.PURPLE + "            DO ZOBACZENIA!           " + ColorHandler.DEFAULT + "        │\n");
-                    stdout.info("│                                                    │\n");
-                    stdout.info("└────────────────────────────────────────────────────┘\n");
-                    stdout.info("\n");
+                    MenuBuilder.goodByeWindowPrinting();
                     mainExitCode = 9;
                     break;
                 case 0:
                     break;
                 default:
-                    new NothingHerePrinter().printNothingHere();
+                    MenuBuilder.nothingHereYetPromptPrinting();
             }
         }
     }
