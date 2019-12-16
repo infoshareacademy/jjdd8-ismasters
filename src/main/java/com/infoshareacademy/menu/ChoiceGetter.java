@@ -4,6 +4,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.util.regex.Pattern;
+import java.util.regex.PatternSyntaxException;
 
 import static com.infoshareacademy.menu.Menu.scanner;
 
@@ -17,23 +18,23 @@ public class ChoiceGetter {
         try {
             String in = scanner.next();
 
-            result = regexInputCheck(result, in);
-        } catch (Exception e) {
+            result = regexInputChecking(result, in);
+        } catch (PatternSyntaxException e) {
             stdout.info("Wystąpił błąd :(" + e.getMessage());
         }
         return result;
     }
 
-    private static int regexInputCheck(int result, String in) {
+    private static int regexInputChecking(int result, String in) {
         if ((Pattern.matches("[0-9]", in))) {
-            result = regexTry(result, in);
+            result = regexExceptionCatching(result, in);
         } else {
-            MenuBuilder.wrongInputPromptPrinter();
+            MenuBuilder.wrongInputPromptPrinting();
         }
         return result;
     }
 
-    private static int regexTry(int result, String in) {
+    private static int regexExceptionCatching(int result, String in) {
         try {
             result = Integer.parseInt(in);
         } catch (NumberFormatException e) {

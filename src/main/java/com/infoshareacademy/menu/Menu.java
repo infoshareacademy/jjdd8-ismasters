@@ -6,7 +6,7 @@ import org.slf4j.LoggerFactory;
 
 import java.util.Scanner;
 
-import static com.infoshareacademy.menu.EventsPrinter.printEvents;
+import static com.infoshareacademy.menu.EventsPrinter.printingEvents;
 
 public class Menu extends MenuBuilder{
 
@@ -19,7 +19,7 @@ public class Menu extends MenuBuilder{
     final static String MAIN_MENU_EXIT = "Wpisane 9 powoduje wyjscie z programu";
 
     public static void mainMenu() {
-        //w planach dodanie dynamicznego dodawania ale pierw przepchaniecie pull requesta
+        //w planach dodanie dynamicznego dodawania ale pierw przepchniecie pull requesta
         MenuBuilder.displayedOption1 = MAIN_MENU_OPTION1;
         MenuBuilder.displayedOption2 = MAIN_MENU_OPTION2;
         MenuBuilder.displayedOption3 = MAIN_MENU_OPTION3;
@@ -27,33 +27,33 @@ public class Menu extends MenuBuilder{
         FilterRepository filterRepository = new FilterRepository();
 
         int mainExitCode = 0;
-        ScreenCleaner.cleanConsole();
-        MenuBuilder.greetingPrinter();
+        ScreenCleaner.cleaningConsoleWindow();
+        MenuBuilder.greetPrinting();
 
         while (mainExitCode != 9) {
-            MenuBuilder.buildMenuPrinter();
+            MenuBuilder.menuBuilderPrinting();
 
             switch (ChoiceGetter.getChoice()) {
                 case 1:
-                    printEvents(filterRepository.allEvents());
+                    printingEvents(filterRepository.allEvents());
                     stdout.info("\n");
                     break;
                 case 2:
-                    ScreenCleaner.cleanConsole();
+                    ScreenCleaner.cleaningConsoleWindow();
                     new NearestEvents().showNearestEvents();
                     break;
                 case 3:
-                    ScreenCleaner.cleanConsole();
+                    ScreenCleaner.cleaningConsoleWindow();
                     new EventsByOrganizer().showByOrganizer();
                     break;
                 case 9:
-                    MenuBuilder.goodByeWindowPrinter();
+                    MenuBuilder.goodByeWindowPrinting();
                     mainExitCode = 9;
                     break;
                 case 0:
                     break;
                 default:
-                    MenuBuilder.nothingHereYetPromptPrinter();
+                    MenuBuilder.nothingHereYetPromptPrinting();
             }
         }
     }

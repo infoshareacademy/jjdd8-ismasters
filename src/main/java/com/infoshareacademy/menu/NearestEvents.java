@@ -6,7 +6,7 @@ import org.slf4j.LoggerFactory;
 
 import java.time.LocalDate;
 
-import static com.infoshareacademy.menu.EventsPrinter.printEvents;
+import static com.infoshareacademy.menu.EventsPrinter.printingEvents;
 
 public class NearestEvents {
 
@@ -22,30 +22,30 @@ public class NearestEvents {
 
         while (returnCheckInt != 9) {
 
-            MenuBuilder.nearEventPrinter();
+            MenuBuilder.nearEventPrinting();
 
             switch (ChoiceGetter.getChoice()) {
                 case 1:
 
-                    printEvents(filterRepository.filterAllDatesEvents(LocalDate.now().toString()));
+                    printingEvents(filterRepository.filterAllDatesEvents(LocalDate.now().toString()));
                     break;
                 case 2:
 
-                    printEvents(filterRepository.filterAllDatesEvents(LocalDate.now().plusDays(1).toString()));
+                    printingEvents(filterRepository.filterAllDatesEvents(LocalDate.now().plusDays(1).toString()));
                     break;
                 case 3:
 
-                    printEvents(filterRepository.filterAllDatesEvents(LocalDate.now().plusDays(2).toString()));
+                    printingEvents(filterRepository.filterAllDatesEvents(LocalDate.now().plusDays(2).toString()));
                     break;
                 case 9:
-                    ScreenCleaner.cleanConsole();
+                    ScreenCleaner.cleaningConsoleWindow();
                     stdout.info("        POWRÓT DO POPRZEDNIEGO MENU       \n");
                     returnCheckInt = 9;
                     break;
                 case 0:
                     break;
                 default:
-                    MenuBuilder.nothingHereYetPromptPrinter();
+                    MenuBuilder.nothingHereYetPromptPrinting();
             }
         }
     }

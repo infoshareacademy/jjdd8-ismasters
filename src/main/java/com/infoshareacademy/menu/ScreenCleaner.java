@@ -9,7 +9,7 @@ public class ScreenCleaner{
     private static final Logger stdout = LoggerFactory.getLogger("CONSOLE_OUT");
     private static final String USER_OS = System.getProperty("os.name").toLowerCase();
 
-    public static void cleanConsole() {
+    public static void cleaningConsoleWindow() {
 
         try {
             if (USER_OS.contains("win")) {
