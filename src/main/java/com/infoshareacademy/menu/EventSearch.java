@@ -6,7 +6,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.time.LocalDate;
-import java.util.Scanner;
 import java.util.function.Predicate;
 import java.util.regex.Pattern;
 
@@ -29,6 +28,7 @@ public class EventSearch {
         String searchString;
         Predicate<Event> searchCondition;
         ScreenCleaner.cleaningConsoleWindow();
+        boolean isDateToEarly = true;
 
         while (returnCheckInt != 9) {
 
@@ -66,16 +66,27 @@ public class EventSearch {
                     break;
 
                 case 3:
-                    stdout.info("Podaj datę w formacie YYYY-MM-DD do wyszukania i wciśnij ENTER\n");
-                    searchString = Menu.scanner.next();
-                    if (!isDateValid(searchString)) {
-                        stdout.info("Zły format daty\n");
-                        break;
-                    }
-                    if (LocalDate.parse(searchString).isBefore(LocalDate.now())) {
-                        stdout.info("Wybierz dzień dzisiejszy lub późniejszą datę!\n");
-                        break;
-                    }
+                    do {
+                        do {
+                            stdout.info("Podaj datę w formacie YYYY-MM-DD do wyszukania i wciśnij ENTER\n");
+                            searchString = Menu.scanner.next();
+                            if (!isDateValid(searchString)) {
+                                stdout.info("\nZły format daty!\n\n");
+                            }
+                        }
+                        while (!isDateValid(searchString));
+
+
+                        if (LocalDate.parse(searchString).isBefore(LocalDate.now())) {
+//                            isDateToEarly = true;
+                            stdout.info("\nWybierz dzień dzisiejszy lub późniejszą datę!\n\n");
+//                            break;
+                        } else {
+                            isDateToEarly = false;
+                        }
+
+                    } while (isDateToEarly);
+
                     stdout.info("Szukam: " + searchString + "\n");
                     String finalSearchString2 = searchString;
                     searchCondition = event -> event.getStartDate().contains(finalSearchString2.toLowerCase());
