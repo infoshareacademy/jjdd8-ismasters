@@ -19,10 +19,10 @@ public class EventSearch {
     final static String SEARCH_MENU_EXIT = "Wybierz 9, aby wrócić do poprzedniego menu";
 
     public void searchEvents(FilterRepository filterRepository, Predicate<Event> searchCondition) {
-        EventsPrinter.printingEvents(filterRepository.genericFilter(searchCondition));
+        EventsPrinter.printingEvents(filterRepository.filterWithLambdaPassedIn(searchCondition));
     }
 
-    public void startSearch() {
+    public void showSearchResults() {
 
         int returnCheckInt = 0;
         String searchString;
@@ -60,8 +60,8 @@ public class EventSearch {
                     } while (searchString.length() < 3);
 
                     stdout.info("Szukam: " + searchString + "\n");
-                    String finalSearchString1 = searchString;
-                    searchCondition = event -> event.getOrganizer().getDesignation().toLowerCase().contains(finalSearchString1.toLowerCase());
+                    String finalSearchByOrganizer = searchString;
+                    searchCondition = event -> event.getOrganizer().getDesignation().toLowerCase().contains(finalSearchByOrganizer.toLowerCase());
                     searchEvents(new FilterRepository(), searchCondition);
                     break;
 
@@ -88,8 +88,8 @@ public class EventSearch {
                     } while (isDateToEarly);
 
                     stdout.info("Szukam: " + searchString + "\n");
-                    String finalSearchString2 = searchString;
-                    searchCondition = event -> event.getStartDate().contains(finalSearchString2.toLowerCase());
+                    String finalSearchByDate = searchString;
+                    searchCondition = event -> event.getStartDate().contains(finalSearchByDate.toLowerCase());
                     searchEvents(new FilterRepository(), searchCondition);
                     break;
 

@@ -35,7 +35,7 @@ public class FilterRepository {
         return filteredOutPutList;
     }
 
-    public List<Event> genericFilter(Predicate<Event> lambda) {
+    public List<Event> filterWithLambdaPassedIn(Predicate<Event> lambda) {
 
         return EventsRepository.getEvents().stream()
                 .filter(lambda)

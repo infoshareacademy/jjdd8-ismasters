@@ -50,7 +50,7 @@ public class Menu extends MenuBuilder{
                     break;
                 case 4:
                     ScreenCleaner.cleaningConsoleWindow();
-                    new EventSearch().startSearch();
+                    new EventSearch().showSearchResults();
                     break;
                 case 9:
                     MenuBuilder.goodByeWindowPrinting();
