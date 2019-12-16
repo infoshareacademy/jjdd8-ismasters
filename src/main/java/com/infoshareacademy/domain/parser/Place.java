@@ -1,6 +1,6 @@
 package com.infoshareacademy.domain.parser;
 
-import com.infoshareacademy.menu.ColorHandler;
+import com.infoshareacademy.menu.MenuBuilder;
 
 public class Place {
     private int id;
@@ -42,9 +42,9 @@ public class Place {
 
 
         if (subname != null) {
-            return  ColorHandler.CYAN + name + ColorHandler.DEFAULT + "\n" + "Dokładna lokalizacja: " + subname ;
+            return MenuBuilder.CYAN + name + MenuBuilder.DEFAULT + "\n" + "Dokładna lokalizacja: " + subname ;
         } else {
-            return ColorHandler.CYAN + name + ColorHandler.DEFAULT;
+            return MenuBuilder.CYAN + name + MenuBuilder.DEFAULT;
         }
     }
 }

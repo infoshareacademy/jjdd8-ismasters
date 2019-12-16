@@ -41,10 +41,10 @@ public class AddNewEvent {
         stdout.info("\n--------Podaj nazwę strony www-------\n");
         newWWW = scanner.nextLine();
 
-        EventsRepository.getEvents().add(new Event(randomNewId, new Place(newPlaceSubname,newPlaceName), newEventName, new Urls(newWWW), newStartDate + "T" + newStartTime, new Organizer(newOrganizerDesignation)));
+        EventsRepository.getInstance().getEvents().add(new Event(randomNewId, new Place(newPlaceSubname,newPlaceName), newEventName, new Urls(newWWW), newStartDate + "T" + newStartTime, new Organizer(newOrganizerDesignation)));
 
 
-        EventsRepository.getEvents().stream().filter(p->p.getName().contains(newEventName)).peek(s -> stdout.info("Gratuluje nowe wydarzenie umieszczone w spisie")).orElse("");
+        EventsRepository.getInstance().getEvents().stream().filter(p->p.getName().contains(newEventName)).peek(s -> stdout.info("Gratuluje nowe wydarzenie umieszczone w spisie"));
 
 
     }

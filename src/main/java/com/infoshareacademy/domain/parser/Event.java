@@ -1,6 +1,6 @@
 package com.infoshareacademy.domain.parser;
 
-import com.infoshareacademy.menu.ColorHandler;
+import com.infoshareacademy.menu.MenuBuilder;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -143,7 +143,7 @@ public class Event {
     }
 
     public String toString() {
-        return "Nazwa wydarzenia:" + ColorHandler.CYAN +   getName() + ColorHandler.DEFAULT + "\n" +
+        return "Nazwa wydarzenia:" + MenuBuilder.CYAN +   getName() + MenuBuilder.DEFAULT + "\n" +
                 "Miejsce wydarzenia: " + getPlace() + "\n" +
                 "Rozpoczęcie: " + extractDateOnly(getStartDate()) + ", godz: " + extractTimeOnly(getStartDate()) + "\n" +
                 getOrganizer() + "\n" +

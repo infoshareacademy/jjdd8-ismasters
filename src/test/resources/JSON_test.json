@@ -1,0 +1,31 @@
+[
+  {
+    "id": 69403,
+    "place": {
+      "id": 1851,
+      "name": "Miasto Puck"
+    },
+    "endDate": "2019-12-08T23:59:59+0100",
+    "name": "Jarmark \u015awi\u0105teczny",
+    "urls": {
+      "www": "http:\/\/miastopuck.pl\/?p=34035"
+    },
+    "attachments": [
+      {
+        "fileName": "http:\/\/miastopuck.pl\/wp-content\/uploads\/baner-jarmark.png"
+      }
+    ],
+    "descLong": "&nbsp;",
+    "categoryId": 96,
+    "startDate": "2019-12-07T00:00:00+0100",
+    "organizer": {
+      "id": 223,
+      "designation": "Miasto Puck"
+    },
+    "active": 1,
+    "descShort": "&nbsp;",
+    "tickets": {
+      "type": "unknown"
+    }
+  }
+]

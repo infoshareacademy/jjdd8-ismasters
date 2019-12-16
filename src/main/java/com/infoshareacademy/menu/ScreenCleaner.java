@@ -7,19 +7,18 @@ import java.io.IOException;
 public class ScreenCleaner{
 
     private static final Logger stdout = LoggerFactory.getLogger("CONSOLE_OUT");
-    private static final String checker = System.getProperty("os.name").toLowerCase();
+    private static final String USER_OS = System.getProperty("os.name").toLowerCase();
 
-    public static void cleanConsole() {
+    public static void cleaningConsoleWindow() {
 
         try {
-            if (checker.contains("win")) {
-                new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
+            if (USER_OS.contains("win")) {
+                new ProcessBuilder("cmd", "/c", "cls").inheritIO().start();
             } else {
                 stdout.info("\033[H\033[2J");
-                System.out.flush();
             }
-        } catch (IOException | InterruptedException e) {
-            e.printStackTrace();
+        } catch (IOException e) {
+            stdout.info("OS nie rozpoznany \n" + e);
         }
     }
 }

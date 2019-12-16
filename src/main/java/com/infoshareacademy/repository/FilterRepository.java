@@ -9,13 +9,13 @@ public class FilterRepository {
     List<Event> filteredOutPutList = new ArrayList<>();
 
     public List<Event> allEvents() {
-        filteredOutPutList.addAll(EventsRepository.getEvents());
+        filteredOutPutList.addAll(EventsRepository.getInstance().getEvents());
         return filteredOutPutList;
     }
 
     public  List<Event> filterAllDatesEvents(String inputDate) {
 
-        for (Event event : EventsRepository.getEvents()) {
+        for (Event event : EventsRepository.getInstance().getEvents()) {
             if (event.getStartDate().contains(inputDate)) {
                 filteredOutPutList.add(event);
             }
@@ -25,7 +25,7 @@ public class FilterRepository {
 
     public List<Event> filterAllOrganisers(String organizer) {
 
-        for (Event event : EventsRepository.getEvents()) {
+        for (Event event : EventsRepository.getInstance().getEvents()) {
             if (event.getOrganizer().toString().toLowerCase().contains(organizer.toLowerCase())) {
                 filteredOutPutList.add(event);
             }

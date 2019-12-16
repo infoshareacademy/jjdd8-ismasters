@@ -30,7 +30,7 @@ public class Filtering {
     }*/
     public Set<String> getAllOrganizers(){
         Set<String> allOrganizers = new HashSet<>();
-        for (Event event : EventsRepository.getEvents() ) {
+        for (Event event : EventsRepository.getInstance().getEvents() ) {
             allOrganizers.add(event.getOrganizer().getDesignation());
         }
         return allOrganizers;
