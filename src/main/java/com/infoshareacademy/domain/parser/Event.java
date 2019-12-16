@@ -21,6 +21,14 @@ public class Event {
     private String descShort;
     private Ticket tickets;
 
+    public Event(int id, Place place, String name, Urls urls, String startDate, Organizer organizer) {
+        this.id = id;
+        this.place = place;
+        this.name = name;
+        this.urls = urls;
+        this.startDate = startDate;
+        this.organizer = organizer;
+    }
 
     public int getid() {
         return id;

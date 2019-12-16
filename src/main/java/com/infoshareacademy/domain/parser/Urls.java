@@ -5,6 +5,10 @@ public class Urls {
     private String fb;
     private String tickets;
 
+    public Urls(String www) {
+        this.www = www;
+    }
+
     public String getTickets() {
         return tickets;
     }

@@ -36,4 +36,6 @@ public class EventsPrinter {
         eventList.clear();
         ScreenCleaner.cleanConsole();
     }
+
+
 }
