@@ -76,7 +76,7 @@ public class EventSearch {
                 case 3:
                     stdout.info("Podaj datę w formacie YYYY-MM-DD do wyszukania i wciśnij ENTER\n");
                     searchString = scanner.nextLine();
-                    if (!Pattern.matches("^\\d{4}\\-(0?[1-9]|1[012])\\-(0?[1-9]|[12][0-9]|3[01])$", searchString)) {
+                    if (!isDateValid(searchString)) {
                         stdout.info("Zły format daty\n");
                         break;
                     }
@@ -96,5 +96,9 @@ public class EventSearch {
                     break;
             }
         }
+    }
+
+    public boolean isDateValid(String searchString) {
+        return Pattern.matches("^\\d{4}\\-(0?[1-9]|1[012])\\-(0?[1-9]|[12][0-9]|3[01])$", searchString);
     }
 }
