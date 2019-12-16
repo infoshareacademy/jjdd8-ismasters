@@ -6,9 +6,9 @@ import com.infoshareacademy.service.parser.Parser;
 public class App {
 
     public static void main(String[] args) {
-        String json = "JSON_example";
+        final String JSON = "JSON_example";
         Parser parser = new Parser();
-        parser.initialization(json);
+        parser.initialization(JSON);
         Menu.mainMenu();
     }
 }
