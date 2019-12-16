@@ -17,7 +17,7 @@ public class EventsPrinter {
             stdout.info(event.toString());
             stdout.info("\n");
             eventCounter++;
-            eventCounter = eventCount(eventCounter);
+            eventCounter = eventCounting(eventCounter);
         }
         stdout.info("\nKoniec listy. Wciśnij ENTER, aby kontynuować\n");
         try {
@@ -29,7 +29,7 @@ public class EventsPrinter {
         ScreenCleaner.cleanConsole();
     }
 
-    private static int eventCount(int eventCounter) {
+    private static int eventCounting(int eventCounter) {
         if (eventCounter == 5) {
             stdout.info("\n--------Dalej: wciśnij ENTER-------\n");
             try {

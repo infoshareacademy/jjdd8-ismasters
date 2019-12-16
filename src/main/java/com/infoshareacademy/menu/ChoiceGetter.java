@@ -28,7 +28,7 @@ public class ChoiceGetter {
         if ((Pattern.matches("[0-9]", in))) {
             result = regexTry(result, in);
         } else {
-            MenuBuilder.wrongInputPrompt();
+            MenuBuilder.wrongInputPromptPrinter();
         }
         return result;
     }

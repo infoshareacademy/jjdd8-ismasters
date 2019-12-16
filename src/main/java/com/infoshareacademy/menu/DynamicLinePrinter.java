@@ -2,78 +2,85 @@ package com.infoshareacademy.menu;
 
 public class DynamicLinePrinter {
 
+    final static int widthCalculationsAuxiliaryVaraiable = 2;
+    final static int widthCalculationsAuxiliaryVaraiableForOdd = 1;
+
     private static String dynamicPrintBottomPart(String input, StringBuilder stringBuilder) {
 
-        for (int i = 0; i < (MenuBuilder.length - input.length()) / 2 - 1; i++) {
+        for (int i = 0; i < (MenuBuilder.LENGTH - input.length()) / widthCalculationsAuxiliaryVaraiable - widthCalculationsAuxiliaryVaraiableForOdd; i++) {
             stringBuilder.append(" ");
         }
-        if (input.length() % 2 != 0) {
-            stringBuilder.append(" ");
-        }
+        checkingIfOddInput(input, stringBuilder);
         stringBuilder.append("│\n");
         return stringBuilder.toString();
     }
 
-    static String printDynamic(String input) {
+    private static void checkingIfOddInput(String input, StringBuilder stringBuilder) {
+        if (input.length() % 2 != 0) {
+            stringBuilder.append(" ");
+        }
+    }
+
+    static String printDynamicMenuRows(String input) {
 
         StringBuilder stringBuilder = new StringBuilder();
         stringBuilder.append("│");
-        for (int i = 0; i < (MenuBuilder.length - input.length()) / 2 - 1; i++) {
+        for (int i = 0; i < (MenuBuilder.LENGTH - input.length()) / widthCalculationsAuxiliaryVaraiable - widthCalculationsAuxiliaryVaraiableForOdd; i++) {
             stringBuilder.append(" ");
         }
         stringBuilder.append(input);
         return dynamicPrintBottomPart(input, stringBuilder);
     }
 
-    static String printDynamicYellow(String input) {
+    static String printDynamicMenuRowsYellow(String input) {
 
         StringBuilder stringBuilder = new StringBuilder();
         stringBuilder.append("│");
-        for (int i = 0; i < (MenuBuilder.length - input.length()) / 2 - 1; i++) {
+        for (int i = 0; i < (MenuBuilder.LENGTH - input.length()) / widthCalculationsAuxiliaryVaraiable - widthCalculationsAuxiliaryVaraiableForOdd; i++) {
             stringBuilder.append(" ");
         }
-        stringBuilder.append("\u001b[33m");
+        stringBuilder.append(MenuBuilder.YELLOW);
         stringBuilder.append(input);
-        stringBuilder.append("\u001b[0m");
+        stringBuilder.append(MenuBuilder.DEFAULT);
         return dynamicPrintBottomPart(input, stringBuilder);
     }
 
-    static String printDynamicCyan(String input) {
+    static String printDynamicMenuRowsCyan(String input) {
 
         StringBuilder stringBuilder = new StringBuilder();
         stringBuilder.append("│");
-        for (int i = 0; i < (MenuBuilder.length - input.length()) / 2 - 1; i++) {
+        for (int i = 0; i < (MenuBuilder.LENGTH - input.length()) / widthCalculationsAuxiliaryVaraiable - widthCalculationsAuxiliaryVaraiableForOdd; i++) {
             stringBuilder.append(" ");
         }
-        stringBuilder.append("\u001b[36m");
+        stringBuilder.append(MenuBuilder.CYAN);
         stringBuilder.append(input);
-        stringBuilder.append("\u001b[0m");
+        stringBuilder.append(MenuBuilder.DEFAULT);
         return dynamicPrintBottomPart(input, stringBuilder);
     }
 
-    static String printDynamicPurple(String input) {
+    static String printDynamicMenuRowsPurple(String input) {
 
         StringBuilder stringBuilder = new StringBuilder();
         stringBuilder.append("│");
-        for (int i = 0; i < (MenuBuilder.length - input.length()) / 2 - 1; i++) {
+        for (int i = 0; i < (MenuBuilder.LENGTH - input.length()) / widthCalculationsAuxiliaryVaraiable - widthCalculationsAuxiliaryVaraiableForOdd; i++) {
             stringBuilder.append(" ");
         }
-        stringBuilder.append("\u001b[35m");
+        stringBuilder.append(MenuBuilder.PURPLE);
         stringBuilder.append(input);
-        stringBuilder.append("\u001b[0m");
+        stringBuilder.append(MenuBuilder.DEFAULT);
         return dynamicPrintBottomPart(input, stringBuilder);
     }
 
-    static String printDynamicRed(String input) {
+    static String printDynamicMenuRowsRed(String input) {
 
         StringBuilder stringBuilder = new StringBuilder();
         stringBuilder.append("│");
-        for (int i = 0; i < (MenuBuilder.length - input.length()) / 2 - 1; i++) {
+        for (int i = 0; i < (MenuBuilder.LENGTH - input.length()) / widthCalculationsAuxiliaryVaraiable - widthCalculationsAuxiliaryVaraiableForOdd; i++) {
             stringBuilder.append(" ");
         }
-        stringBuilder.append("\u001b[31m");
+        stringBuilder.append(MenuBuilder.RED);
         stringBuilder.append(input);
-        stringBuilder.append("\u001b[0m");
+        stringBuilder.append(MenuBuilder.DEFAULT);
         return dynamicPrintBottomPart(input, stringBuilder);
     }
 }

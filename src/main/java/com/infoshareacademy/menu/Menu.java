@@ -19,18 +19,19 @@ public class Menu extends MenuBuilder{
     final static String MAIN_MENU_EXIT = "Wpisane 9 powoduje wyjscie z programu";
 
     public static void mainMenu() {
-        MenuBuilder.Option1 = MAIN_MENU_OPTION1;
-        MenuBuilder.Option2 = MAIN_MENU_OPTION2;
-        MenuBuilder.Option3 = MAIN_MENU_OPTION3;
+        //w planach dodanie dynamicznego dodawania ale pierw przepchaniecie pull requesta
+        MenuBuilder.displayedOption1 = MAIN_MENU_OPTION1;
+        MenuBuilder.displayedOption2 = MAIN_MENU_OPTION2;
+        MenuBuilder.displayedOption3 = MAIN_MENU_OPTION3;
         MenuBuilder.GoBack = MAIN_MENU_EXIT;
         FilterRepository filterRepository = new FilterRepository();
 
         int mainExitCode = 0;
         ScreenCleaner.cleanConsole();
-        MenuBuilder.greetingPrint();
+        MenuBuilder.greetingPrinter();
 
         while (mainExitCode != 9) {
-            MenuBuilder.menuBuild();
+            MenuBuilder.buildMenuPrinter();
 
             switch (ChoiceGetter.getChoice()) {
                 case 1:
@@ -46,13 +47,13 @@ public class Menu extends MenuBuilder{
                     new EventsByOrganizer().showByOrganizer();
                     break;
                 case 9:
-                    MenuBuilder.goodByeWindow();
+                    MenuBuilder.goodByeWindowPrinter();
                     mainExitCode = 9;
                     break;
                 case 0:
                     break;
                 default:
-                    MenuBuilder.nothingHereYetPrompt();
+                    MenuBuilder.nothingHereYetPromptPrinter();
             }
         }
     }

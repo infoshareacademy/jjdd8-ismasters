@@ -19,7 +19,7 @@ public class EventsByOrganizer {
         int returnCheckInt = 0;
 
         while (returnCheckInt != 9) {
-            MenuBuilder.promotedOrganizers();
+            MenuBuilder.promotedOrganizersPrinter();
 
             switch (ChoiceGetter.getChoice()) {
                 case 1:
@@ -43,7 +43,7 @@ public class EventsByOrganizer {
                 case 0:
                     break;
                 default:
-                    MenuBuilder.nothingHereYetPrompt();
+                    MenuBuilder.nothingHereYetPromptPrinter();
             }
         }
     }

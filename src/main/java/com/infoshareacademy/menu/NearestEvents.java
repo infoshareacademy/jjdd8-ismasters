@@ -22,7 +22,7 @@ public class NearestEvents {
 
         while (returnCheckInt != 9) {
 
-            MenuBuilder.nearEvent();
+            MenuBuilder.nearEventPrinter();
 
             switch (ChoiceGetter.getChoice()) {
                 case 1:
@@ -45,7 +45,7 @@ public class NearestEvents {
                 case 0:
                     break;
                 default:
-                    MenuBuilder.nothingHereYetPrompt();
+                    MenuBuilder.nothingHereYetPromptPrinter();
             }
         }
     }
