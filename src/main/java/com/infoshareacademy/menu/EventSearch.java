@@ -14,11 +14,13 @@ public class EventSearch {
 
     private static final Logger stdout = LoggerFactory.getLogger("CONSOLE_OUT");
 
-
-    Scanner scanner = new Scanner(System.in);
+    final static String SEARCH_MENU_OPTION1 = "1. Wyszukaj wydarzenia wg miejsca";
+    final static String SEARCH_MENU_OPTION2 = "2. Wyszukaj wydarzenia wg organizatora";
+    final static String SEARCH_MENU_OPTION3 = "3. Wyszukaj wydarzenia wg daty";
+    final static String SEARCH_MENU_EXIT = "Wybierz 9, aby wrócić do poprzedniego menu";
 
     public void searchEvents(FilterRepository filterRepository, Predicate<Event> searchCondition) {
-        EventsPrinter.printEvents(filterRepository.genericFilter(searchCondition));
+        EventsPrinter.printingEvents(filterRepository.genericFilter(searchCondition));
     }
 
     public void startSearch() {
@@ -26,27 +28,17 @@ public class EventSearch {
         int returnCheckInt = 0;
         String searchString;
         Predicate<Event> searchCondition;
+        ScreenCleaner.cleaningConsoleWindow();
 
         while (returnCheckInt != 9) {
 
-            stdout.info("\n");
-            new HeaderPrinter().printBiggerHeader();
-            stdout.info("│   1. Wyszukiwanie wg miejsca eventu                              │\n");
-            stdout.info("│   2. Wyszukiwanie wg organizatora                                │\n");
-            stdout.info("│   3. Wyszukiwanie wg daty                                        │\n");
-            stdout.info("│                                                                  │\n");
-            stdout.info("│  " + ColorHandler.CYAN + " 9. Wróć                                                    " + ColorHandler.DEFAULT + "    │\n");
-            stdout.info("│                                                                  │\n");
-            stdout.info("└──────────────────────────────────────────────────────────────────┘\n");
-            stdout.info("\n");
-            stdout.info("Wpisz liczbę: \n");
-
+            MenuBuilder.generalEventSearchPrinting();
 
             switch (ChoiceGetter.getChoice()) {
                 case 1:
                     do {
                         stdout.info("Podaj miejsce do wyszukania i wciśnij ENTER\n");
-                        searchString = scanner.nextLine();
+                        searchString = Menu.scanner.next();
                         if (searchString.length() < 3) {
                             stdout.info("Wpisz co najmniej 3 znaki\n");
                         }
@@ -61,7 +53,7 @@ public class EventSearch {
                 case 2:
                     do {
                         stdout.info("Podaj nazwę organizatora do wyszukania i wciśnij ENTER\n");
-                        searchString = scanner.nextLine();
+                        searchString = Menu.scanner.next();
                         if (searchString.length() < 3) {
                             stdout.info("Wpisz co najmniej 3 znaki\n");
                         }
@@ -75,7 +67,7 @@ public class EventSearch {
 
                 case 3:
                     stdout.info("Podaj datę w formacie YYYY-MM-DD do wyszukania i wciśnij ENTER\n");
-                    searchString = scanner.nextLine();
+                    searchString = Menu.scanner.next();
                     if (!isDateValid(searchString)) {
                         stdout.info("Zły format daty\n");
                         break;
@@ -94,6 +86,9 @@ public class EventSearch {
                     stdout.info("Koniec wyszukiwania\n");
                     returnCheckInt = 9;
                     break;
+
+                default:
+                    MenuBuilder.nothingHereYetPromptPrinting();
             }
         }
     }

@@ -6,11 +6,14 @@ import org.slf4j.LoggerFactory;
 
 import java.time.LocalDate;
 
-import static com.infoshareacademy.menu.EventsPrinter.printEvents;
+import static com.infoshareacademy.menu.EventsPrinter.printingEvents;
 
 public class NearestEvents {
 
     private static final Logger stdout = LoggerFactory.getLogger("CONSOLE_OUT");
+    static String today = "1. Pokaż dzisiejsze wydarzenia";
+    static String tommorow = "2. Pokaż jutrzejsze wydarzenia";
+    static String next3Days = "3. Pokaż wydarzenia za 3 dni";
 
     void showNearestEvents() {
         FilterRepository filterRepository = new FilterRepository();
@@ -18,43 +21,31 @@ public class NearestEvents {
         int returnCheckInt = 0;
 
         while (returnCheckInt != 9) {
-            stdout.info("\n");
-            new HeaderPrinter().printHeader();
-            stdout.info("│                                                    │\n");
-            stdout.info("│   1. Pokaż dzisiejsze wydarzenia                   │\n");
-            stdout.info("│   2. Pokaż jutrzejsze wydarzenia                   │\n");
-            stdout.info("│   3. Pokaż wydarzenia za 3 dni                     │\n");
-            stdout.info("│                                                    │\n");
-            stdout.info("│  " + ColorHandler.CYAN + " 9. Wróć                       " + ColorHandler.DEFAULT + "                   │\n");
-            stdout.info("│                                                    │\n");
-            stdout.info("└────────────────────────────────────────────────────┘\n");
-            stdout.info("\n");
-            stdout.info("Wpisz liczbę: \n");
+
+            MenuBuilder.nearEventPrinting();
 
             switch (ChoiceGetter.getChoice()) {
                 case 1:
 
-                    printEvents(filterRepository.filterAllDatesEvents(LocalDate.now().toString()));
-                    stdout.info("\n");
+                    printingEvents(filterRepository.filterAllDatesEvents(LocalDate.now().toString()));
                     break;
                 case 2:
 
-                    printEvents(filterRepository.filterAllDatesEvents(LocalDate.now().plusDays(1).toString()));
-                    stdout.info("\n");
+                    printingEvents(filterRepository.filterAllDatesEvents(LocalDate.now().plusDays(1).toString()));
                     break;
                 case 3:
 
-                    printEvents(filterRepository.filterAllDatesEvents(LocalDate.now().plusDays(2).toString()));
-                    stdout.info("\n");
+                    printingEvents(filterRepository.filterAllDatesEvents(LocalDate.now().plusDays(2).toString()));
                     break;
                 case 9:
+                    ScreenCleaner.cleaningConsoleWindow();
                     stdout.info("        POWRÓT DO POPRZEDNIEGO MENU       \n");
                     returnCheckInt = 9;
                     break;
                 case 0:
                     break;
                 default:
-                    new NothingHerePrinter().printNothingHere();
+                    MenuBuilder.nothingHereYetPromptPrinting();
             }
         }
     }

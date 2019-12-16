@@ -15,19 +15,19 @@ public class Parser {
     ObjectMapper objectMapper = new ObjectMapper();
     List<Event> events = new ArrayList<>();
 
-    public void initialization() {
+    public void initialization(String filename) {
         Parser parser = new Parser();
-        parser.parseData();
+        parser.parseData(filename);
     }
 
-    public void parseData() {
+    private void parseData(String filename) {
         try {
-            events = objectMapper.readValue(new File("JSON_example.json"), new TypeReference<ArrayList<Event>>() {
+            events = objectMapper.readValue(new File(filename), new TypeReference<ArrayList<Event>>() {
             });
 
         } catch (IOException e) {
             e.printStackTrace();
         }
-        EventsRepository.getEvents().addAll(events);
+        EventsRepository.getInstance().getEvents().addAll(events);
     }
 }

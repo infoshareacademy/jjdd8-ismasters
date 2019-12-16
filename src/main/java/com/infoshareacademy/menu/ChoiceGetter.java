@@ -4,6 +4,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.util.regex.Pattern;
+import java.util.regex.PatternSyntaxException;
 
 import static com.infoshareacademy.menu.Menu.scanner;
 
@@ -17,25 +18,27 @@ public class ChoiceGetter {
         try {
             String in = scanner.next();
 
-            if ((Pattern.matches("[0-9]", in))) {
-                try {
-                    result = Integer.parseInt(in);
-                } catch (NumberFormatException e) {
-                    e.printStackTrace();
-                }
-            } else {
-                stdout.info("\n");
-                stdout.info("┌──────────────────────────────────────────┐\n");
-                stdout.info("│                                          │\n");
-                stdout.info("│       " + ColorHandler.RED + "PODANO NIEPRAWIDŁOWĄ WARTOŚĆ! " + ColorHandler.DEFAULT + "     │\n");
-                stdout.info("│                                          │\n");
-                stdout.info("│               JESZCZE RAZ!               │\n");
-                stdout.info("│                                          │\n");
-                stdout.info("└──────────────────────────────────────────┘\n");
-                stdout.info("\n");
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
+            result = regexInputChecking(result, in);
+        } catch (PatternSyntaxException e) {
+            stdout.info("Wystąpił błąd :(" + e.getMessage());
+        }
+        return result;
+    }
+
+    private static int regexInputChecking(int result, String in) {
+        if ((Pattern.matches("[0-9]", in))) {
+            result = regexExceptionCatching(result, in);
+        } else {
+            MenuBuilder.wrongInputPromptPrinting();
+        }
+        return result;
+    }
+
+    private static int regexExceptionCatching(int result, String in) {
+        try {
+            result = Integer.parseInt(in);
+        } catch (NumberFormatException e) {
+            stdout.info("Zły format!" + e.getMessage());
         }
         return result;
     }
