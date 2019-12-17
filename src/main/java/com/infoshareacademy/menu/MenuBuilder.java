@@ -15,12 +15,12 @@ public class MenuBuilder {
     public static final String DEFAULT = "\u001b[0m";
     //stała do wyliczania szerokosci drukowanych linii w menu
     static final int LENGTH = 68;
-    final static String MENU_TOP_PIPE = "└──────────────────────────────────────────────────────────────────┘\n";
-    final static String MENU_BOTTOM_PIPE = "┌──────────────────────────────────────────────────────────────────┐\n";
-    private final static String GOOD_BYE = "Do Zobaczenia :D";
+    static final String MENU_TOP_PIPE = "└──────────────────────────────────────────────────────────────────┘\n";
+    static final String MENU_BOTTOM_PIPE = "┌──────────────────────────────────────────────────────────────────┐\n";
+    private static final String GOOD_BYE = "Do Zobaczenia :D";
 
 
-    static void menuBuilderPrinting(){
+    static void printMenuBuilder(){
         stdout.info(MENU_BOTTOM_PIPE +
                 new EmptyLineWithPipesPrinter().printEmptyLineWithPipe() +
                 new EmptyLineWithPipesPrinter().printEmptyLineWithPipe() +

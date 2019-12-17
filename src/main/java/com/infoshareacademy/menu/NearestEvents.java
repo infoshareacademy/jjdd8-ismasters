@@ -6,7 +6,7 @@ import org.slf4j.LoggerFactory;
 
 import java.time.LocalDate;
 
-import static com.infoshareacademy.menu.EventsPrinter.printingEvents;
+import static com.infoshareacademy.menu.EventsPrinter.printEvents;
 
 public class NearestEvents {
 
@@ -28,15 +28,15 @@ public class NearestEvents {
             switch (ChoiceGetter.getChoice()) {
                 case 1:
 
-                    printingEvents(filterRepository.filterAllDatesEvents(LocalDate.now().toString()));
+                    printEvents(filterRepository.filterAllDatesEvents(LocalDate.now().toString()));
                     break;
                 case 2:
 
-                    printingEvents(filterRepository.filterAllDatesEvents(LocalDate.now().plusDays(1).toString()));
+                    printEvents(filterRepository.filterAllDatesEvents(LocalDate.now().plusDays(1).toString()));
                     break;
                 case 3:
 
-                    printingEvents(filterRepository.filterAllDatesEvents(LocalDate.now().plusDays(2).toString()));
+                    printEvents(filterRepository.filterAllDatesEvents(LocalDate.now().plusDays(2).toString()));
                     break;
                 case 9:
                     ScreenCleaner.cleanConsoleWindow();

@@ -13,13 +13,13 @@ public class EventSearch {
 
     private static final Logger stdout = LoggerFactory.getLogger("CONSOLE_OUT");
 
-    final static String SEARCH_MENU_OPTION1 = "1. Wyszukaj wydarzenia wg miejsca";
-    final static String SEARCH_MENU_OPTION2 = "2. Wyszukaj wydarzenia wg organizatora";
-    final static String SEARCH_MENU_OPTION3 = "3. Wyszukaj wydarzenia wg daty";
-    final static String SEARCH_MENU_EXIT = "Wybierz 9, aby wrócić do poprzedniego menu";
+    static final String SEARCH_MENU_OPTION1 = "1. Wyszukaj wydarzenia wg miejsca";
+    static final String SEARCH_MENU_OPTION2 = "2. Wyszukaj wydarzenia wg organizatora";
+    static final String SEARCH_MENU_OPTION3 = "3. Wyszukaj wydarzenia wg daty";
+    static final String SEARCH_MENU_EXIT = "Wybierz 9, aby wrócić do poprzedniego menu";
 
     public void searchEvents(FilterRepository filterRepository, Predicate<Event> searchCondition) {
-        EventsPrinter.printingEvents(filterRepository.filterWithLambdaPassedIn(searchCondition));
+        EventsPrinter.printEvents(filterRepository.filterWithLambdaPassedIn(searchCondition));
     }
 
     public void showSearchResults() {
@@ -81,7 +81,6 @@ public class EventSearch {
                         } else {
                             isDateToEarly = false;
                         }
-
                     } while (isDateToEarly);
 
                     stdout.info("Szukam: " + searchString + "\n");

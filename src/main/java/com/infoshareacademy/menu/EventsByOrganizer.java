@@ -4,7 +4,7 @@ import com.infoshareacademy.repository.FilterRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import static com.infoshareacademy.menu.EventsPrinter.printingEvents;
+import static com.infoshareacademy.menu.EventsPrinter.printEvents;
 
 public class EventsByOrganizer {
 
@@ -25,16 +25,16 @@ public class EventsByOrganizer {
 
             switch (ChoiceGetter.getChoice()) {
                 case 1:
-                    printingEvents(filterRepository.filterAllOrganisers("Gdański Archipelag Kultury"));
+                    printEvents(filterRepository.filterAllOrganisers("Gdański Archipelag Kultury"));
                     stdout.info("\n");
                     break;
                 case 2:
-                    printingEvents(filterRepository.filterAllOrganisers("Wojewódzka i Miejska Biblioteka Publiczna w Gdańsku"));
+                    printEvents(filterRepository.filterAllOrganisers("Wojewódzka i Miejska Biblioteka Publiczna w Gdańsku"));
                     stdout.info("\n");
                     break;
                 case 3:
 
-                    printingEvents(filterRepository.filterAllOrganisers("Miejski Teatr MINIATURA"));
+                    printEvents(filterRepository.filterAllOrganisers("Miejski Teatr MINIATURA"));
                     stdout.info("\n");
                     break;
                 case 9:
