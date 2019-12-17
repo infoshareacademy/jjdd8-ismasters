@@ -21,13 +21,20 @@ public class Event {
     private String descShort;
     private Ticket tickets;
 
-    public Event(int id, Place place, String name, Urls urls, String startDate, Organizer organizer) {
+    public Event(int id, Place place, String endDate, String name, Urls urls, List<Attachments> attachments, String descLong, int categoryId, String startDate, Organizer organizer, int active, String descShort, Ticket tickets) {
         this.id = id;
         this.place = place;
+        this.endDate = endDate;
         this.name = name;
         this.urls = urls;
+        this.attachments = attachments;
+        this.descLong = descLong;
+        this.categoryId = categoryId;
         this.startDate = startDate;
         this.organizer = organizer;
+        this.active = active;
+        this.descShort = descShort;
+        this.tickets = tickets;
     }
 
     public int getid() {

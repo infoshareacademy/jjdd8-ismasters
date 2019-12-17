@@ -1,6 +1,7 @@
 package com.infoshareacademy;
 
 import com.infoshareacademy.filter.Filtering;
+import com.infoshareacademy.menu.Menu;
 import com.infoshareacademy.repository.FilterRepository;
 import com.infoshareacademy.service.parser.Parser;
 
@@ -23,7 +24,7 @@ public class App {
 
         Filtering f1 = new Filtering();
         System.out.println(f1.giveFilteredEvents("2019-12-07", "2019-12-10", f1.getAllOrganizers()));
-         /*Menu.mainMenu();
+       /*  Menu.mainMenu();
 
 
         Menu.mainMenu();*/

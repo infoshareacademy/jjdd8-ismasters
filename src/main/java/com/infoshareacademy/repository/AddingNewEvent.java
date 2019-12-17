@@ -3,13 +3,13 @@ package com.infoshareacademy.repository;
 import com.infoshareacademy.domain.parser.Event;
 import com.infoshareacademy.domain.parser.Organizer;
 import com.infoshareacademy.domain.parser.Place;
-import com.infoshareacademy.domain.parser.Urls;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.util.Scanner;
 
-public class AddNewEvent {
+public class AddingNewEvent {
+
 
     String newEventName;
     String newPlaceSubname;
@@ -23,31 +23,41 @@ public class AddNewEvent {
     private static final Logger stdout = LoggerFactory.getLogger("CONSOLE_OUT");
     Scanner scanner = new Scanner(System.in);
 
-    public void addNewEvent(){
-
+    public void addNewEvent() {
+        Event newEvent = new Event();
+        Organizer newOrganizer = new Organizer();
+        Place newPlace = new Place();
+        String inputString;
         stdout.info("\n--------Dodawanie nowego Wydarzenia-------\n");
         stdout.info("\n--------Podaj nazwę nowego Wydarzenia-------\n");
-        newEventName = scanner.nextLine();
+        newEvent.setName(scanner.nextLine());
+
         stdout.info("\n--------Podaj nazwę miejsca Wydarzenia-------\n");
-        newPlaceName = scanner.nextLine();
+        inputString  = scanner.nextLine();
+        newOrganizer.setDesignation(inputString);
+
         stdout.info("\n--------Podaj dokłądne miejsce wydarzenia-------\n");
-        newPlaceSubname = scanner.nextLine();
+        inputString  = scanner.nextLine();
+        newPlace.setSubname(inputString);
+
         stdout.info("\n--------Podaj datę Wydarzenia wskazany format YYYY-MM-DD-------\n");
         newStartDate = scanner.nextLine();
+
         stdout.info("\n--------Podaj godzine Wydarzenia wskazany format HH-MM-------\n");
         newStartTime = scanner.nextLine();
+        newEvent.setStartDate(newStartDate+"T"+newStartTime);
+
         stdout.info("\n--------Podaj nazwę organizatora-------\n");
         newOrganizerDesignation = scanner.nextLine();
+
         stdout.info("\n--------Podaj nazwę strony www-------\n");
         newWWW = scanner.nextLine();
 
-        EventsRepository.getInstance().getEvents().add(new Event(randomNewId, new Place(newPlaceSubname,newPlaceName), newEventName, new Urls(newWWW), newStartDate + "T" + newStartTime, new Organizer(newOrganizerDesignation)));
+
+        //EventsRepository.getInstance().getEvents().add(E)
+        //EventsRepository.getInstance().getEvents().add(Eventnew Event(randomNewId, new Place(newPlaceSubname,newPlaceName), newEventName, new Urls(newWWW), newStartDate + "T" + newStartTime, new Organizer(newOrganizerDesignation)));
 
 
-        EventsRepository.getInstance().getEvents().stream().filter(p->p.getName().contains(newEventName)).peek(s -> stdout.info("Gratuluje nowe wydarzenie umieszczone w spisie"));
-
-
+        // EventsRepository.getInstance().getEvents().stream().filter(p->p.getName().contains(newEventName)).peek(s -> stdout.info("Gratuluje nowe wydarzenie umieszczone w spisie"));
     }
-
-
 }

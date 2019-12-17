@@ -3,6 +3,8 @@ package com.infoshareacademy.menu;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import static com.infoshareacademy.menu.ManagingEvents.*;
+
 public class MenuBuilder {
     private static final Logger stdout = LoggerFactory.getLogger("CONSOLE_OUT");
     //kolory
@@ -21,6 +23,7 @@ public class MenuBuilder {
     static String displayedOption1;
     static String displayedOption2;
     static String displayedOption3;
+    static String displayedOption4;
     static String GoBack;
 
 
@@ -31,6 +34,7 @@ public class MenuBuilder {
                  DynamicLinePrinter.printingDynamicMenuRows(displayedOption1) +
                  DynamicLinePrinter.printingDynamicMenuRows(displayedOption2) +
                  DynamicLinePrinter.printingDynamicMenuRows(displayedOption3) +
+                 DynamicLinePrinter.printingDynamicMenuRows(displayedOption4)+
                 new EmptyLineWithPipesPrinter().printingEmptyLineWithPipe() +
                 new EmptyLineWithPipesPrinter().printingEmptyLineWithPipe() +
                 DynamicLinePrinter.printingDynamicMenuRowsPurple(GoBack) +
@@ -102,5 +106,17 @@ public class MenuBuilder {
                 new EmptyLineWithPipesPrinter().printingEmptyLineWithPipe() +
                 MENU_TOP_PIPE);
 
+    }
+    static void managingEvents(){
+        stdout.info(MENU_BOTTOM_PIPE +
+                new EmptyLineWithPipesPrinter().printingEmptyLineWithPipe() +
+                new EmptyLineWithPipesPrinter().printingEmptyLineWithPipe() +
+                DynamicLinePrinter.printingDynamicMenuRows(addingNewEvent) +
+                DynamicLinePrinter.printingDynamicMenuRows(editingAnEvent) +
+                DynamicLinePrinter.printingDynamicMenuRows(deletingAnEvent) +
+                DynamicLinePrinter.printingDynamicMenuRows(addingToFavorite) +
+                new EmptyLineWithPipesPrinter().printingEmptyLineWithPipe() +
+                new EmptyLineWithPipesPrinter().printingEmptyLineWithPipe() +
+                MENU_TOP_PIPE);
     }
 }
