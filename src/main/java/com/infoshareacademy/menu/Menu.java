@@ -50,7 +50,7 @@ public class Menu extends MenuBuilder {
                     MenuBuilder.printGoodByeWindow();
                     mainExitCode = 9;
                     break;
-                case 0:
+                case -1:
                     break;
                 default:
                     MenuBuilder.printNumberInactiveInfo();
