@@ -91,7 +91,7 @@ public class MenuBuilder {
                 MENU_TOP_PIPE);
     }
 
-    static void printWrongInputPrompt(){
+    public static void printWrongInputPrompt(){
         stdout.info(MENU_BOTTOM_PIPE +
                 new EmptyLineWithPipesPrinter().printEmptyLineWithPipe() +
                 new EmptyLineWithPipesPrinter().printEmptyLineWithPipe() +
