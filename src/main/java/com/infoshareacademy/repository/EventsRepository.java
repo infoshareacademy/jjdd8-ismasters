@@ -22,7 +22,7 @@ public class EventsRepository {
         return eventsRepository;
     }
 
-    public List<Event> getEvents() {
+    public static List<Event> getEvents() {
         return events;
     }
 

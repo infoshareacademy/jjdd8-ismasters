@@ -1,7 +1,7 @@
 package com.infoshareacademy.menu;
 
 public class EmptyLineWithPipesPrinter {
-    public String printingEmptyLineWithPipe() {
+    public String printEmptyLineWithPipe() {
         String returnString = "│";
         for (int i = 1; i < MenuBuilder.LENGTH - 1; i++) {
             returnString += " ";

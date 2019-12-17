@@ -8,7 +8,7 @@ import java.util.regex.PatternSyntaxException;
 
 import static com.infoshareacademy.menu.Menu.scanner;
 
-public class ChoiceGetter {
+class ChoiceGetter {
 
     private static final Logger stdout = LoggerFactory.getLogger("CONSOLE_OUT");
 
@@ -29,7 +29,7 @@ public class ChoiceGetter {
         if ((Pattern.matches("[0-9]", in))) {
             result = regexExceptionCatching(result, in);
         } else {
-            MenuBuilder.wrongInputPromptPrinting();
+            MenuBuilder.printWrongInputPrompt();
         }
         return result;
     }
