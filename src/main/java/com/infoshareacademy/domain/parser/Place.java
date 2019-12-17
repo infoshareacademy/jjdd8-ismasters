@@ -8,10 +8,14 @@ public class Place {
     private String name;
 
 
-   /* public Place(String subname, String name) {
+    public Place() {
+    }
+
+    public Place(int id, String subname, String name) {
+        this.id = id;
         this.subname = subname;
         this.name = name;
-    }*/
+    }
 
     public int getId() {
         return id;

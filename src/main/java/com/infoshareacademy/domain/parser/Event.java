@@ -12,7 +12,7 @@ public class Event {
     private String endDate;
     private String name;
     private Urls urls;
-    private List<Attachments> attachments = new ArrayList<>();
+    private List<Attachments> attachments ;
     private String descLong;
     private int categoryId;
     private String startDate;
@@ -20,6 +20,9 @@ public class Event {
     private int active;
     private String descShort;
     private Ticket tickets;
+
+    public Event() {
+    }
 
     public Event(int id, Place place, String endDate, String name, Urls urls, List<Attachments> attachments, String descLong, int categoryId, String startDate, Organizer organizer, int active, String descShort, Ticket tickets) {
         this.id = id;

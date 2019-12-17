@@ -10,7 +10,7 @@ import org.slf4j.LoggerFactory;
 
 import java.util.Scanner;
 
-import static com.infoshareacademy.menu.EventsPrinter.printingEvents;
+import static com.infoshareacademy.menu.EventsPrinter.*;
 
 public class ManagingEvents {
 
@@ -24,7 +24,7 @@ public class ManagingEvents {
 
     int mainExitCode = 0;
 
-    public void eventManaging(){
+   /* public void eventManaging(){
 
         while (mainExitCode != 9) {
             MenuBuilder.menuBuilderPrinting();
@@ -46,14 +46,14 @@ public class ManagingEvents {
                 default:
                     MenuBuilder.nothingHereYetPromptPrinting();
             }
-        }
+        }*/
     }
 
 
 
 
 
-    }
+
 
 
 

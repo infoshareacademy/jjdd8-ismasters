@@ -10,14 +10,14 @@ import java.util.List;
 public class EventsPrinter {
     private static final Logger stdout = LoggerFactory.getLogger("CONSOLE_OUT");
 
-    public static void printingEvents(List<Event> eventList) {
-        ScreenCleaner.cleaningConsoleWindow();
-        int eventCounting = 0;
+    public static void printEvents(List<Event> eventList) {
+        ScreenCleaner.cleanConsoleWindow();
+        int countEvents = 0;
         for (Event event : eventList) {
             stdout.info(event.toString());
             stdout.info("\n");
-            eventCounting++;
-            eventCounting = eventCounting(eventCounting);
+            countEvents++;
+            countEvents = countEvents(countEvents);
         }
         stdout.info("\nKoniec listy. Wciśnij ENTER, aby kontynuować\n");
         try {
@@ -26,20 +26,20 @@ public class EventsPrinter {
             stdout.info("Wystąpił błąd \n" + e);
         }
         eventList.clear();
-        ScreenCleaner.cleaningConsoleWindow();
+        ScreenCleaner.cleanConsoleWindow();
     }
 
-    private static int eventCounting(int eventCounting) {
-        if (eventCounting == 5) {
+    private static int countEvents(int countEvents) {
+        if (countEvents == 5) {
             stdout.info("\n--------Dalej: wciśnij ENTER-------\n");
             try {
                 System.in.read();
             } catch (IOException e) {
                 e.printStackTrace();
             }
-            eventCounting = 0;
+            countEvents = 0;
         }
-        return eventCounting;
+        return countEvents;
     }
 
 

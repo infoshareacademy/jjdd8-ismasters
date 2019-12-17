@@ -1,6 +1,7 @@
 package com.infoshareacademy;
 
 import com.infoshareacademy.filter.Filtering;
+import com.infoshareacademy.menu.EventsByOrganizer;
 import com.infoshareacademy.menu.Menu;
 import com.infoshareacademy.repository.FilterRepository;
 import com.infoshareacademy.service.parser.Parser;
@@ -20,11 +21,12 @@ public class App {
         l1 = f1.giveDays("2019-12-07", "2019-12-10");
         System.out.println();
         f1.giveFilteredEvents(l1);*/
-
+        /*List<String> lista = List.of("Sopot");
 
         Filtering f1 = new Filtering();
-        System.out.println(f1.giveFilteredEvents("2019-12-07", "2019-12-10", f1.getAllOrganizers()));
-       /*  Menu.mainMenu();
+        System.out.println(f1.giveFilteredEvents("2019-12-10", "2019-12-31", lista));*/
+       new EventsByOrganizer().showAllOrganizers();
+        /* Menu.mainMenu();
 
 
         Menu.mainMenu();*/

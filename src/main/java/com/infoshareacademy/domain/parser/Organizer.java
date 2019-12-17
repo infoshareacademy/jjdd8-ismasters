@@ -5,9 +5,13 @@ public class Organizer {
     private String designation;
 
 
-  /*  //public Organizer(String designation) {
+    public Organizer() {
+    }
+
+    public Organizer(int id, String designation) {
+        this.id = id;
         this.designation = designation;
-    }*/
+    }
 
     public int getId() {
         return id;

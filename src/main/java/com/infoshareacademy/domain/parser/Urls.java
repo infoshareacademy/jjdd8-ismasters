@@ -5,9 +5,14 @@ public class Urls {
     private String fb;
     private String tickets;
 
-   /* public Urls(String www) {
+    public Urls() {
+    }
+
+    public Urls(String www, String fb, String tickets) {
         this.www = www;
-    }*/
+        this.fb = fb;
+        this.tickets = tickets;
+    }
 
     public String getTickets() {
         return tickets;

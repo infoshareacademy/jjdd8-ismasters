@@ -6,6 +6,15 @@ public class Ticket {
     private String startTicket;
     private String endTicket;
 
+    public Ticket() {
+    }
+
+    public Ticket(String type, String startTicket, String endTicket) {
+        this.type = type;
+        this.startTicket = startTicket;
+        this.endTicket = endTicket;
+    }
+
     public String getStartTicket() {
         return startTicket;
     }

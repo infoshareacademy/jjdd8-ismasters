@@ -6,7 +6,7 @@ import org.slf4j.LoggerFactory;
 
 import java.time.LocalDate;
 
-import static com.infoshareacademy.menu.EventsPrinter.printingEvents;
+import static com.infoshareacademy.menu.EventsPrinter.printEvents;
 
 public class NearestEvents {
 
@@ -14,6 +14,7 @@ public class NearestEvents {
     static String today = "1. Pokaż dzisiejsze wydarzenia";
     static String tommorow = "2. Pokaż jutrzejsze wydarzenia";
     static String next3Days = "3. Pokaż wydarzenia za 3 dni";
+    static String exit = "9. Wyjdź go poprzedniego menu";
 
     void showNearestEvents() {
         FilterRepository filterRepository = new FilterRepository();
@@ -22,30 +23,30 @@ public class NearestEvents {
 
         while (returnCheckInt != 9) {
 
-            MenuBuilder.nearEventPrinting();
+            MenuBuilder.printNearEvent();
 
             switch (ChoiceGetter.getChoice()) {
                 case 1:
 
-                    printingEvents(filterRepository.filterAllDatesEvents(LocalDate.now().toString()));
+                    printEvents(filterRepository.filterAllDatesEvents(LocalDate.now().toString()));
                     break;
                 case 2:
 
-                    printingEvents(filterRepository.filterAllDatesEvents(LocalDate.now().plusDays(1).toString()));
+                    printEvents(filterRepository.filterAllDatesEvents(LocalDate.now().plusDays(1).toString()));
                     break;
                 case 3:
 
-                    printingEvents(filterRepository.filterAllDatesEvents(LocalDate.now().plusDays(2).toString()));
+                    printEvents(filterRepository.filterAllDatesEvents(LocalDate.now().plusDays(2).toString()));
                     break;
                 case 9:
-                    ScreenCleaner.cleaningConsoleWindow();
+                    ScreenCleaner.cleanConsoleWindow();
                     stdout.info("        POWRÓT DO POPRZEDNIEGO MENU       \n");
                     returnCheckInt = 9;
                     break;
                 case 0:
                     break;
                 default:
-                    MenuBuilder.nothingHereYetPromptPrinting();
+                    MenuBuilder.printNumberInactiveInfo();
             }
         }
     }

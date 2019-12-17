@@ -1,3 +1,4 @@
+/*
 package com.infoshareacademy.repository;
 
 import com.infoshareacademy.domain.parser.Event;
@@ -20,11 +21,13 @@ public class AddingNewEvent {
     String newWWW;
     int randomNewId;
 
-    private static final Logger stdout = LoggerFactory.getLogger("CONSOLE_OUT");
+ private static final Logger stdout = LoggerFactory.getLogger("CONSOLE_OUT");
     Scanner scanner = new Scanner(System.in);
 
-    public void addNewEvent() {
-        Event newEvent = new Event();
+
+   public void addNewEvent() {
+
+Event newEvent = new Event();
         Organizer newOrganizer = new Organizer();
         Place newPlace = new Place();
         String inputString;
@@ -54,10 +57,11 @@ public class AddingNewEvent {
         newWWW = scanner.nextLine();
 
 
+
         //EventsRepository.getInstance().getEvents().add(E)
         //EventsRepository.getInstance().getEvents().add(Eventnew Event(randomNewId, new Place(newPlaceSubname,newPlaceName), newEventName, new Urls(newWWW), newStartDate + "T" + newStartTime, new Organizer(newOrganizerDesignation)));
 
 
         // EventsRepository.getInstance().getEvents().stream().filter(p->p.getName().contains(newEventName)).peek(s -> stdout.info("Gratuluje nowe wydarzenie umieszczone w spisie"));
-    }
-}
+
+*/
