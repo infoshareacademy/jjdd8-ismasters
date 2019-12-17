@@ -3,7 +3,7 @@ package com.infoshareacademy.menu;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class MenuBuilder {
+class MenuBuilder {
     private static final Logger stdout = LoggerFactory.getLogger("CONSOLE_OUT");
     //kolory
     public static final String RED = "\u001b[31m";

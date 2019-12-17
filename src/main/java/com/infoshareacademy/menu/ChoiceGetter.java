@@ -8,7 +8,7 @@ import java.util.regex.PatternSyntaxException;
 
 import static com.infoshareacademy.menu.Menu.scanner;
 
-public class ChoiceGetter {
+class ChoiceGetter {
 
     private static final Logger stdout = LoggerFactory.getLogger("CONSOLE_OUT");
 
