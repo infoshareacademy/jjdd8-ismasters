@@ -1,6 +1,6 @@
 package com.infoshareacademy.menu;
 
-public class DynamicLinePrinter {
+class DynamicLinePrinter {
 
     static final int WIDTH_CALCULATIONS_AUXILIARY_VARAIABLE = 2;
     static final int WIDTH_CALCULATIONS_AUXILIARY_VARAIABLE_FOR_ODD = 1;

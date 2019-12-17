@@ -6,7 +6,7 @@ import org.slf4j.LoggerFactory;
 
 import static com.infoshareacademy.menu.EventsPrinter.printEvents;
 
-public class EventsByOrganizer {
+class EventsByOrganizer {
 
     private static final Logger stdout = LoggerFactory.getLogger("CONSOLE_OUT");
     // to zniknie
