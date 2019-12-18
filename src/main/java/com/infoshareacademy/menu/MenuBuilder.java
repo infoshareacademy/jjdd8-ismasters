@@ -3,6 +3,8 @@ package com.infoshareacademy.menu;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+
+
 public class MenuBuilder {
     private static final Logger stdout = LoggerFactory.getLogger("CONSOLE_OUT");
     //kolory
@@ -15,13 +17,16 @@ public class MenuBuilder {
     public static final String DEFAULT = "\u001b[0m";
     //stała do wyliczania szerokosci drukowanych linii w menu
     static final int LENGTH = 68;
+
     static final String MENU_TOP_PIPE = "└──────────────────────────────────────────────────────────────────┘\n";
     static final String MENU_BOTTOM_PIPE = "┌──────────────────────────────────────────────────────────────────┐\n";
     private static final String GOOD_BYE = "Do Zobaczenia :D";
 
 
+
     static void printMenuBuilder(){
         stdout.info(MENU_BOTTOM_PIPE +
+
                 new EmptyLineWithPipesPrinter().printEmptyLineWithPipe() +
                 new EmptyLineWithPipesPrinter().printEmptyLineWithPipe() +
                  DynamicLinePrinter.printDynamicMenuRows(Menu.MAIN_MENU_OPTION1) +
@@ -32,6 +37,7 @@ public class MenuBuilder {
                 new EmptyLineWithPipesPrinter().printEmptyLineWithPipe() +
                 DynamicLinePrinter.printDynamicMenuRowsPurple(Menu.MAIN_MENU_EXIT) +
                 DynamicLinePrinter.printDynamicMenuRows("Podaj nr pozycji z menu którą wybierasz:") +
+
                 MENU_TOP_PIPE +
                 "\n");
     }
@@ -50,19 +56,6 @@ public class MenuBuilder {
                 DynamicLinePrinter.printDynamicMenuRowsYellow("Witaj w kalendarzu wydarzeń kulturalnych") +
                 new EmptyLineWithPipesPrinter().printEmptyLineWithPipe() +
                 DynamicLinePrinter.printDynamicMenuRowsCyan("(c) ISMasters 2019") +
-                new EmptyLineWithPipesPrinter().printEmptyLineWithPipe() +
-                MENU_TOP_PIPE);
-    }
-
-    static void printPromotedOrganizers(){
-        stdout.info(MENU_BOTTOM_PIPE +
-                new EmptyLineWithPipesPrinter().printEmptyLineWithPipe() +
-                new EmptyLineWithPipesPrinter().printEmptyLineWithPipe() +
-                DynamicLinePrinter.printDynamicMenuRows(EventsByOrganizer.promotedOrganizer1Builder) +
-                DynamicLinePrinter.printDynamicMenuRows(EventsByOrganizer.promotedOrganizer2Builder) +
-                DynamicLinePrinter.printDynamicMenuRows(EventsByOrganizer.promotedOrganizer3Builder) +
-                new EmptyLineWithPipesPrinter().printEmptyLineWithPipe() +
-                DynamicLinePrinter.printDynamicMenuRows(EventsByOrganizer.promotedOrganizer9Builder) +
                 new EmptyLineWithPipesPrinter().printEmptyLineWithPipe() +
                 MENU_TOP_PIPE);
     }
@@ -102,6 +95,7 @@ public class MenuBuilder {
 
     }
 
+
     static void printGeneralEventSearch(){
         stdout.info(MENU_BOTTOM_PIPE +
                 new EmptyLineWithPipesPrinter().printEmptyLineWithPipe() +
@@ -113,6 +107,7 @@ public class MenuBuilder {
                 DynamicLinePrinter.printDynamicMenuRows(EventSearch.SEARCH_MENU_EXIT) +
                 new EmptyLineWithPipesPrinter().printEmptyLineWithPipe() +
                 new EmptyLineWithPipesPrinter().printEmptyLineWithPipe() +
+
                 MENU_TOP_PIPE);
     }
 }

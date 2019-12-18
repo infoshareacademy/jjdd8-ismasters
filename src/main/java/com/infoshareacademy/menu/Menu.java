@@ -40,7 +40,7 @@ public class Menu extends MenuBuilder {
                     break;
                 case 3:
                     ScreenCleaner.cleanConsoleWindow();
-                    EventsByOrganizer.showByOrganizer();
+                    EventsByOrganizer.showAllOrganizers();
                     break;
                 case 4:
                     ScreenCleaner.cleanConsoleWindow();

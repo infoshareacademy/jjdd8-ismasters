@@ -3,12 +3,21 @@ package com.infoshareacademy;
 import com.infoshareacademy.menu.Menu;
 import com.infoshareacademy.service.parser.Parser;
 
+
+
 public class App {
+    public static final String JSON_REPOSITORY = "JSON_example";
 
     public static void main(String[] args) {
-        final String JSON = "JSON_example";
         Parser parser = new Parser();
-        parser.initialization(JSON);
+        parser.initialization(JSON_REPOSITORY);
+
         Menu.mainMenu();
+        Menu.mainMenu();
+
     }
 }
+
+
+
+
