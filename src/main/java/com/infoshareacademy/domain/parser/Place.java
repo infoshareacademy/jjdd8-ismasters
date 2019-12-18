@@ -7,7 +7,6 @@ public class Place {
     private String subname;
     private String name;
 
-
     public Place() {
     }
 

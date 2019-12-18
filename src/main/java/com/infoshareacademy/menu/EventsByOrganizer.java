@@ -1,6 +1,7 @@
 package com.infoshareacademy.menu;
 
-import com.infoshareacademy.filter.Filtering;
+import com.infoshareacademy.domain.parser.Event;
+import com.infoshareacademy.filter.FilteringOnDatesAndOrganizers;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -17,26 +18,30 @@ public class EventsByOrganizer {
     static String searchString;
 
     public static void showAllOrganizers() {
+        List<Event> listOfFilteredEventsOnOrganizersAndDates = new ArrayList<>();
+
 
         collectingListOfOrganizers();
         collectStartDate();
         collectsEndDate();
 
-        if (new Filtering().giveFilteredEvents(start, end, listOfSelectedOrganizers).isEmpty()) {
+        if (new FilteringOnDatesAndOrganizers().giveFilteredEvents(start, end, listOfSelectedOrganizers).isEmpty()) {
             stdout.info("Lista pusta" + "\n");
         } else {
             stdout.info("\n" + "Lista wszystkich wydarzeń pofiltrowanych dla podanych warunków" + "\n");
-            EventsPrinter.printEvents(new Filtering().giveFilteredEvents(start, end, listOfSelectedOrganizers));
+            listOfFilteredEventsOnOrganizersAndDates.addAll(new FilteringOnDatesAndOrganizers().giveFilteredEvents(start, end, listOfSelectedOrganizers));
+            EventsPrinter.printEvents(listOfFilteredEventsOnOrganizersAndDates);
+            listOfSelectedOrganizers.clear();
         }
     }
 
     public static void printOrganizers() {
-        new Filtering().getAllOrganizers().stream().forEach(s -> stdout.info(" " + s + "\n"));
+        new FilteringOnDatesAndOrganizers().getAllOrganizers().stream().forEach(s -> stdout.info(" " + s + "\n"));
     }
 
     public static List<String> filterAllOrganisers(String organizer) {
 
-        for (String organizers : new Filtering().getAllOrganizers()) {
+        for (String organizers : new FilteringOnDatesAndOrganizers().getAllOrganizers()) {
             if (organizers.toLowerCase().contains(organizer.toLowerCase())) {
                 listOfSelectedOrganizers.add(organizers);
             }

@@ -9,9 +9,10 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 
-public class Filtering {
+public class FilteringOnDatesAndOrganizers {
     List<Event> resultList = new ArrayList<>();
-
+    public final static int START_DATE_SUBSTRING = 0;
+    public final static int END_DATE_SUBSTRING = 0;
     public Set<String> getAllOrganizers() {
         Set<String> allOrganizers = new HashSet<>();
         for (Event event : EventsRepository.getInstance().getEvents()) {
@@ -24,29 +25,36 @@ public class Filtering {
         LocalDate startDate = LocalDate.parse(start);
         LocalDate endDate = LocalDate.parse(end);
         List<Event> eventList = new FilterRepository().allEvents();
-        List<Event> resultList2 = new ArrayList<>();
+        List<Event> resultListAfterOrganizerFilter = new ArrayList<>();
         resultList.addAll(eventList.stream()
-                .filter(event -> LocalDate.parse(event.getStartDate().substring(0, 10)).isAfter(startDate) && LocalDate.parse(event.getStartDate().substring(0, 10)).isBefore(endDate))
+                .filter(event -> filterOnDates(event,startDate,endDate))
                 .collect(Collectors.toList()));
 
         for (String organizer : allOrganizers) {
-            resultList2.addAll(filterAllOrganisersOnResultList(organizer));
+            resultListAfterOrganizerFilter.addAll(filterAllOrganisersOnResultList(organizer));
         }
 
         List<Event> sortedList;
-        sortedList = resultList2.stream().sorted(Comparator.comparing((a) -> a.getOrganizer().getDesignation())).collect(Collectors.toList());
+        sortedList = resultListAfterOrganizerFilter.stream()
+                .sorted(Comparator.comparing((a) -> a.getOrganizer().getDesignation()))
+                .collect(Collectors.toList());
         return sortedList;
 
     }
 
     public List<Event> filterAllOrganisersOnResultList(String organizer) {
-        List<Event> filteredOutPutList = new ArrayList<>();
+        List<Event> filteredOutputList = new ArrayList<>();
 
         for (Event event : resultList) {
-            if (event.getOrganizer().toString().toLowerCase().contains(organizer.toLowerCase())) {
-                filteredOutPutList.add(event);
+            if (event.getOrganizer().getDesignation().toLowerCase().contains(organizer.toLowerCase())) {
+                filteredOutputList.add(event);
             }
         }
-        return filteredOutPutList;
+        return filteredOutputList;
+    }
+    public boolean filterOnDates(Event event,LocalDate startDate, LocalDate endDate){
+        return LocalDate.parse(event.getStartDate().substring(START_DATE_SUBSTRING, END_DATE_SUBSTRING))
+                .isAfter(startDate) && LocalDate.parse(event.getStartDate()
+                .substring(START_DATE_SUBSTRING, END_DATE_SUBSTRING)).isBefore(endDate);
     }
 }
