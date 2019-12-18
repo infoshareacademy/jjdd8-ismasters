@@ -5,6 +5,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.util.Scanner;
+import java.util.Stack;
 
 import static com.infoshareacademy.menu.EventsPrinter.printingEvents;
 
@@ -25,28 +26,34 @@ public class Menu extends MenuBuilder{
         MenuBuilder.displayedOption3 = MAIN_MENU_OPTION3;
         MenuBuilder.GoBack = MAIN_MENU_EXIT;
         FilterRepository filterRepository = new FilterRepository();
+        Stack pathDisplay = new Stack();
 
         int mainExitCode = 0;
         ScreenCleaner.cleaningConsoleWindow();
         MenuBuilder.greetPrinting();
-
         while (mainExitCode != 9) {
+            pathDisplay.push("Main menu");
+            System.out.println( pathDisplay );
             MenuBuilder.menuBuilderPrinting();
-
             switch (ChoiceGetter.getChoice()) {
                 case 1:
                     printingEvents(filterRepository.allEvents());
                     stdout.info("\n");
                     break;
                 case 2:
+                    pathDisplay.push("Main menu1");
+                    System.out.println( pathDisplay );
                     ScreenCleaner.cleaningConsoleWindow();
                     new NearestEvents().showNearestEvents();
                     break;
                 case 3:
+                    pathDisplay.push("Main menu2");
+                    System.out.println( pathDisplay );
                     ScreenCleaner.cleaningConsoleWindow();
                     new EventsByOrganizer().showByOrganizer();
                     break;
                 case 9:
+                    pathDisplay.pop();
                     MenuBuilder.goodByeWindowPrinting();
                     mainExitCode = 9;
                     break;
