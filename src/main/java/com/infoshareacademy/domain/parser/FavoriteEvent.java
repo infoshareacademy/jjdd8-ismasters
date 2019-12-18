@@ -1,6 +1,6 @@
 package com.infoshareacademy.domain.parser;
 
-public class Favorite {
+public class FavoriteEvent {
     public int getId() {
         return id;
     }

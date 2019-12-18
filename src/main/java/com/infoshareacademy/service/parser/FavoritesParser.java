@@ -4,6 +4,7 @@ package com.infoshareacademy.service.parser;
 import com.infoshareacademy.repository.FavoritesRepository;
 import com.opencsv.CSVReader;
 import com.opencsv.CSVWriter;
+import com.opencsv.exceptions.CsvValidationException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -36,9 +37,9 @@ public class FavoritesParser {
                 favorites.add(Integer.parseInt(tempArr[0]));
             }
 
-            FavoritesRepository.setFavoritesList(favorites);
+            FavoritesRepository.getFavoritesList().addAll(favorites);
 
-        } catch (IOException e) {
+        } catch (CsvValidationException | IOException e) {
             stdout.info("Błąd pliku " + e.getMessage());
         }
     }
@@ -54,7 +55,7 @@ public class FavoritesParser {
             for (Integer i : FavoritesRepository.getFavoritesList()) {
                 csvWriter.writeNext(new String[]{i.toString()});
             }
-        } catch (Exception e) {
+        } catch (IOException e) {
             stdout.info("Błąd pliku " + e.getMessage());
         }
     }

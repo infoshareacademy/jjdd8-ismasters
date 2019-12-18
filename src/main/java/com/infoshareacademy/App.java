@@ -9,7 +9,7 @@ public class App {
 
     private static final Logger stdout = LoggerFactory.getLogger("CONSOLE_OUT");
 
-    private static final String SAMPLE_CSV_FILE_PATH = "./favorites.csv";
+    private static final String FAVORITES_CSV_FILE_PATH = "./favorites.csv";
 
 
     public static void main(String[] args) {
