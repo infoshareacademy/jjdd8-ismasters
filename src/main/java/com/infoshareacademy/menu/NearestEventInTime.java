@@ -9,6 +9,7 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Predicate;
 
 public class NearestEventInTime {
 
@@ -19,11 +20,13 @@ public class NearestEventInTime {
         nearestInTime();
     }
 
+    public void searchEvents(FilterRepository filterRepository, Predicate<Event> searchCondition) {
+        EventsPrinter.printEvents(filterRepository.filterWithLambdaPassedIn(searchCondition));
+    }
+
     public static void nearestInTime(){
 
         FilterRepository filterRepository = new FilterRepository();
-        FilterRepository filterRepository1 = new FilterRepository();
-
 
         LocalDateTime currentDateTime = LocalDateTime.now();
 
@@ -38,14 +41,20 @@ public class NearestEventInTime {
         System.out.println("Formatted LocalDate : " + substringDate + "\nFormatted LocalTime : " + substringTime);
 
         List<Event> asd = filterRepository.filterAllDatesEvents(substringDate);
-        System.out.println(asd);
+        for (Event event: asd) {
+            System.out.println(event);
+        }
+        System.out.println(asd.toArray().toString());
 
         List listall = List.copyOf(filterRepository.allEvents());
         String s = filterRepository.allEvents().toString();
         int contains = s.compareTo(substringDate);
-//        System.out.println("filtered " + contains);
+        System.out.println("filtered " + contains);
         listall.contains(substringDate);
         listall.contains(substringTime);
+
+        Object fsa = filterRepository.filterWithLambdaPassedIn(event -> event.getStartDate().contains(substringDate));
+        System.out.println("sdasd" + fsa.toString());
 
 //        List f = new ArrayList();
 //        f.addAll(listall);

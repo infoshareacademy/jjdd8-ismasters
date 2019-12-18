@@ -22,7 +22,7 @@ public class App {
         Parser parser = new Parser();
         parser.initialization(JSON);
 //        Menu.mainMenu();
-        NearestEventInTime.nearestInTime();
+//        NearestEventInTime.nearestInTime();
     }
 
     public static void loadConfig(){
