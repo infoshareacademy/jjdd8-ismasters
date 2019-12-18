@@ -1,6 +1,7 @@
 package com.infoshareacademy;
 
 import com.infoshareacademy.menu.Menu;
+import com.infoshareacademy.menu.NearestEventInTime;
 import com.infoshareacademy.service.parser.Parser;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -20,7 +21,8 @@ public class App {
         final String JSON = "JSON_example";
         Parser parser = new Parser();
         parser.initialization(JSON);
-        Menu.mainMenu();
+//        Menu.mainMenu();
+        NearestEventInTime.nearestInTime();
     }
 
     public static void loadConfig(){

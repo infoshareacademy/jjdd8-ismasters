@@ -2,6 +2,7 @@ package com.infoshareacademy.repository;
 
 import com.infoshareacademy.domain.parser.Event;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Predicate;
