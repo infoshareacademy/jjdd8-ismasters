@@ -1,13 +1,13 @@
 package com.infoshareacademy.menu;
 
 import com.infoshareacademy.domain.parser.Event;
+import com.infoshareacademy.menu.util.DateValidator;
 import com.infoshareacademy.repository.FilterRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.time.LocalDate;
 import java.util.function.Predicate;
-import java.util.regex.Pattern;
 
 public class EventSearch {
 
@@ -28,6 +28,7 @@ public class EventSearch {
         String searchString;
         Predicate<Event> searchCondition;
         ScreenCleaner.cleanConsoleWindow();
+        DateValidator dateValidator = new DateValidator();
         boolean isDateToEarly = true;
 
         while (menuExitCode != 9) {
@@ -38,13 +39,14 @@ public class EventSearch {
                 case 1:
                     do {
                         stdout.info("Podaj miejsce do wyszukania i wciśnij ENTER\n");
-                        searchString = Menu.scanner.next();
+                        Menu.scanner.nextLine();
+                        searchString = Menu.scanner.nextLine().replaceAll("\\s+", "");
                         if (searchString.length() < 3) {
                             stdout.info("Wpisz co najmniej 3 znaki\n");
                         }
                     } while (searchString.length() < 3);
 
-                    stdout.info("Szukam: " + searchString + "\n");
+                    stdout.info("Szukam: " + searchString + "\n\n");
                     String effectiveFinalSearchByPlace = searchString;
                     searchCondition = event -> event.getPlace().getName().toLowerCase().contains(effectiveFinalSearchByPlace.toLowerCase());
                     searchEvents(new FilterRepository(), searchCondition);
@@ -53,15 +55,17 @@ public class EventSearch {
                 case 2:
                     do {
                         stdout.info("Podaj nazwę organizatora do wyszukania i wciśnij ENTER\n");
-                        searchString = Menu.scanner.next();
+                        Menu.scanner.nextLine();
+                        searchString = Menu.scanner.nextLine();
                         if (searchString.length() < 3) {
                             stdout.info("Wpisz co najmniej 3 znaki\n");
                         }
                     } while (searchString.length() < 3);
 
-                    stdout.info("Szukam: " + searchString + "\n");
+                    stdout.info("Szukam: " + searchString + "\n\n");
                     String effectiveFinalSearchByOrganizer = searchString;
-                    searchCondition = event -> event.getOrganizer().getDesignation().toLowerCase().contains(effectiveFinalSearchByOrganizer.toLowerCase());
+                    searchCondition = event -> event.getOrganizer().getDesignation()
+                            .toLowerCase().contains(effectiveFinalSearchByOrganizer.toLowerCase());
                     searchEvents(new FilterRepository(), searchCondition);
                     break;
 
@@ -69,12 +73,13 @@ public class EventSearch {
                     do {
                         do {
                             stdout.info("Podaj datę w formacie YYYY-MM-DD do wyszukania i wciśnij ENTER\n");
+                            Menu.scanner.nextLine();
                             searchString = Menu.scanner.next();
-                            if (!isDateValid(searchString)) {
+                            if (!dateValidator.isDateValid(searchString)) {
                                 stdout.info("\nZły format daty!\n\n");
                             }
                         }
-                        while (!isDateValid(searchString));
+                        while (!dateValidator.isDateValid(searchString));
 
                         if (LocalDate.parse(searchString).isBefore(LocalDate.now())) {
                             stdout.info("\nWybierz dzień dzisiejszy lub późniejszą datę!\n\n");
@@ -83,9 +88,9 @@ public class EventSearch {
                         }
                     } while (isDateToEarly);
 
-                    stdout.info("Szukam: " + searchString + "\n");
+                    stdout.info("Szukam: " + searchString + "\n\n");
                     String effectiveFinalSearchByDate = searchString;
-                    searchCondition = event -> event.getStartDate().contains(effectiveFinalSearchByDate.toLowerCase());
+                    searchCondition = event -> event.getStartDate().contains(effectiveFinalSearchByDate);
                     searchEvents(new FilterRepository(), searchCondition);
                     break;
 
@@ -98,9 +103,5 @@ public class EventSearch {
                     MenuBuilder.printNumberInactiveInfo();
             }
         }
-    }
-
-    public boolean isDateValid(String searchString) {
-        return Pattern.matches("^\\d{4}\\-(0?[1-9]|1[012])\\-(0?[1-9]|[12][0-9]|3[01])$", searchString);
     }
 }
