@@ -14,28 +14,24 @@ public class EventsByOrganizer {
     private static List<String> listOfSelectedOrganizers = new ArrayList<>();
     static String start;
     static String end;
-    int menuExitCode = 0;
     static String searchString;
 
     public static void showAllOrganizers() {
 
         collectingListOfOrganizers();
-        collectingStartDate();
-        collectingEndDate();
+        collectStartDate();
+        collectsEndDate();
 
         if (new Filtering().giveFilteredEvents(start, end, listOfSelectedOrganizers).isEmpty()) {
             stdout.info("Lista pusta" + "\n");
         } else {
-            stdout.info("Lista wszystkich wydarzeń pofiltrowanych dla podanych warunków" + "\n");
+            stdout.info("\n" + "Lista wszystkich wydarzeń pofiltrowanych dla podanych warunków" + "\n");
             EventsPrinter.printEvents(new Filtering().giveFilteredEvents(start, end, listOfSelectedOrganizers));
         }
-
     }
 
     public static void printOrganizers() {
-        for (String organizer : new Filtering().getAllOrganizers()) {
-            stdout.info("-> " + organizer + "\n");
-        }
+        new Filtering().getAllOrganizers().stream().forEach(s -> stdout.info(" " + s + "\n"));
     }
 
     public static List<String> filterAllOrganisers(String organizer) {
@@ -58,25 +54,20 @@ public class EventsByOrganizer {
             stdout.info("Podaj nazwę organizatora lub organizatorów do filtrowania wydarzeń" + "\n");
             stdout.info("Lista Organizatorów" + "\n");
             printOrganizers();
-
-            stdout.info("\n" + "Wybierz Organizatora" + "\n");
-            searchString = Menu.scanner.nextLine();
-            if (searchString.length() < 3) {
-                stdout.info("Wpisz co najmniej 3 znaki\n");
-            }
+            chooseOrganizer();
             filterAllOrganisers(searchString);
             stdout.info("Lista wybranych organizatorów" + "\n");
             listOfSelectedOrganizers.stream().forEach(s -> stdout.info(" " + s + "\n"));
-            stdout.info("\n" + "By zakończyć dodawanie organizatorów wybierz Q lub wprowadz kolejne F" + "\n");
-            out = Menu.scanner.next();
-        } while (Menu.scanner.hasNextLine() && (out.equals("F")));
+            stdout.info("\n" + "By zakończyć dodawanie organizatorów wybierz Q lub wprowadz kolejnych wybierz F" + "\n");
+            out = Menu.scanner.nextLine();
+        } while ((out.equals("F")));
         return listOfSelectedOrganizers;
     }
 
-    public static String collectingStartDate() {
+    public static String collectStartDate() {
         do {
             stdout.info("Podaj  Start datę w formacie YYYY-MM-DD do wyszukania i wciśnij ENTER\n");
-            searchString = Menu.scanner.next();
+            searchString = Menu.scanner.nextLine();
             if (!isDateValid(searchString)) {
                 stdout.info("\nZły format daty!\n\n");
             }
@@ -85,15 +76,25 @@ public class EventsByOrganizer {
         return start;
     }
 
-    public static String collectingEndDate() {
+    public static String collectsEndDate() {
         do {
             stdout.info("Podaj  koniec datę w formacie YYYY-MM-DD do wyszukania i wciśnij ENTER\n");
-            searchString = Menu.scanner.next();
+            searchString = Menu.scanner.nextLine();
             if (!isDateValid(searchString)) {
                 stdout.info("\nZły format daty!\n\n");
             }
             end = searchString;
         } while (!isDateValid(searchString));
         return end;
+    }
+
+    public static String chooseOrganizer() {
+        do {
+            stdout.info("\n" + "Wybierz Organizatora" + "\n");
+            stdout.info("Wpisz co najmniej 3 znaki\n");
+            Menu.scanner.nextLine();
+            searchString = Menu.scanner.nextLine();
+        } while ((searchString.length() < 3));
+        return searchString;
     }
 }

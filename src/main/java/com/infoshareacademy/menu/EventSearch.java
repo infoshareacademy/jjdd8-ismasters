@@ -46,7 +46,7 @@ public class EventSearch {
 
                     stdout.info("Szukam: " + searchString + "\n");
                     String effectiveFinalSearchByPlace = searchString;
-                    searchCondition = event -> event.getPlace().getName().toLowerCase().replaceAll("\\s","").contains(effectiveFinalSearchByPlace.toLowerCase().replaceAll("\\s",""));
+                    searchCondition = event -> event.getPlace().getName().toLowerCase().contains(effectiveFinalSearchByPlace.toLowerCase());
                     searchEvents(new FilterRepository(), searchCondition);
                     break;
 

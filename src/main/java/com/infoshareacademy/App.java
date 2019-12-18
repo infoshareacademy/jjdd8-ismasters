@@ -3,6 +3,7 @@ package com.infoshareacademy;
 import com.infoshareacademy.filter.Filtering;
 import com.infoshareacademy.menu.EventsByOrganizer;
 import com.infoshareacademy.menu.Menu;
+//import com.infoshareacademy.repository.AddingNewEvent;
 import com.infoshareacademy.repository.FilterRepository;
 import com.infoshareacademy.service.parser.Parser;
 
@@ -25,11 +26,13 @@ public class App {
 
         Filtering f1 = new Filtering();
         System.out.println(f1.giveFilteredEvents("2019-12-10", "2019-12-31", lista));*/
-       new EventsByOrganizer().showAllOrganizers();
-        /* Menu.mainMenu();
+       /*new AddingNewEvent().addNewEvent();*/
+       // new EventsByOrganizer().showAllOrganizers();
+       //parser.parseDataToJson(JSON,);
+         Menu.mainMenu();
 
 
-        Menu.mainMenu();*/
+       Menu.mainMenu();
 
     }
 }
