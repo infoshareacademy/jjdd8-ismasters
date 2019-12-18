@@ -54,8 +54,7 @@ public class FilteringOnDatesAndOrganizers {
     }
     public boolean filterOnDates(Event event,LocalDate startDate, LocalDate endDate){
         return LocalDate.parse(event.getStartDate().substring(START_DATE_SUBSTRING, END_DATE_SUBSTRING)).isAfter(startDate)
-               // && LocalDate.parse(event.getStartDate().substring(START_DATE_SUBSTRING, END_DATE_SUBSTRING)).isEqual(startDate)
                 && LocalDate.parse(event.getStartDate().substring(START_DATE_SUBSTRING, END_DATE_SUBSTRING)).isBefore(endDate);
-               // && LocalDate.parse(event.getStartDate().substring(START_DATE_SUBSTRING, END_DATE_SUBSTRING)).isEqual(endDate);
+
     }
 }

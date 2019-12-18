@@ -8,6 +8,7 @@ import org.slf4j.LoggerFactory;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.regex.Pattern;
+import java.util.stream.Collectors;
 
 public class EventsByOrganizer {
 
@@ -21,7 +22,7 @@ public class EventsByOrganizer {
         List<Event> listOfFilteredEventsOnOrganizersAndDates = new ArrayList<>();
 
 
-        collectingListOfOrganizers();
+        collectsListOfOrganizers();
         collectStartDate();
         collectsEndDate();
 
@@ -41,11 +42,10 @@ public class EventsByOrganizer {
 
     public static List<String> filterAllOrganisers(String organizer) {
 
-        for (String organizers : new FilteringOnDatesAndOrganizers().getAllOrganizers()) {
-            if (organizers.toLowerCase().contains(organizer.toLowerCase())) {
-                listOfSelectedOrganizers.add(organizers);
-            }
-        }
+        listOfSelectedOrganizers = new FilteringOnDatesAndOrganizers().getAllOrganizers()
+                .stream().filter(o->o.toLowerCase().contains(organizer.toLowerCase()))
+                .collect(Collectors.toList());
+
         return listOfSelectedOrganizers;
     }
 
@@ -53,7 +53,7 @@ public class EventsByOrganizer {
         return Pattern.matches("^\\d{4}\\-(0?[1-9]|1[012])\\-(0?[1-9]|[12][0-9]|3[01])$", searchString);
     }
 
-    public static List<String> collectingListOfOrganizers() {
+    public static List<String> collectsListOfOrganizers() {
         String out = "F";
         do {
             stdout.info("Podaj nazwę organizatora lub organizatorów do filtrowania wydarzeń" + "\n");
