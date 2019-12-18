@@ -10,4 +10,8 @@ public class FavoritesRepository {
     public static String[] getFavoritesList() {
         return favoritesList;
     }
+
+    public static void setFavoriteEvent(int index, String value) {
+        favoritesList[index] = value;
+    }
 }

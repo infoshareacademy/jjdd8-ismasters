@@ -1,13 +1,11 @@
 package com.infoshareacademy;
 
-import com.infoshareacademy.menu.Menu;
 import com.infoshareacademy.repository.FavoritesRepository;
 import com.infoshareacademy.service.parser.FavoritesParser;
 import com.infoshareacademy.service.parser.Parser;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.io.IOException;
 import java.util.Arrays;
 
 public class App {
@@ -25,15 +23,20 @@ public class App {
 
 
         FavoritesParser favoritesParser = new FavoritesParser();
-        try {
-            favoritesParser.initialization(SAMPLE_CSV_FILE_PATH);
+        favoritesParser.initialization(SAMPLE_CSV_FILE_PATH);
 
-            Arrays.stream(FavoritesRepository.getFavoritesList())
-                    .forEach(System.out::println);
+        Arrays.stream(FavoritesRepository.getFavoritesList())
+                .map(x -> x.equals("") ? "Empty" : "Value: " + x)
+                .forEach(System.out::println);
 
-        } catch (IOException e) {
-            stdout.info("Błąd pliku " + e.getMessage());
-        }
+        FavoritesRepository.setFavoriteEvent(0, "aaa");
 
+        new FavoritesParser().writeCSV(SAMPLE_CSV_FILE_PATH);
+        System.out.println();
+        new FavoritesParser().readCSV(SAMPLE_CSV_FILE_PATH);
+
+        Arrays.stream(FavoritesRepository.getFavoritesList())
+                .map(x -> x.equals("") ? "Empty" : "Value: " + x)
+                .forEach(System.out::println);
     }
 }
