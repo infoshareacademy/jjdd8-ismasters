@@ -12,7 +12,7 @@ import java.util.stream.Collectors;
 public class FilteringOnDatesAndOrganizers {
     List<Event> resultList = new ArrayList<>();
     public final static int START_DATE_SUBSTRING = 0;
-    public final static int END_DATE_SUBSTRING = 0;
+    public final static int END_DATE_SUBSTRING = 10;
     public Set<String> getAllOrganizers() {
         Set<String> allOrganizers = new HashSet<>();
         for (Event event : EventsRepository.getInstance().getEvents()) {
@@ -54,6 +54,8 @@ public class FilteringOnDatesAndOrganizers {
     }
     public boolean filterOnDates(Event event,LocalDate startDate, LocalDate endDate){
         return LocalDate.parse(event.getStartDate().substring(START_DATE_SUBSTRING, END_DATE_SUBSTRING)).isAfter(startDate)
+               // && LocalDate.parse(event.getStartDate().substring(START_DATE_SUBSTRING, END_DATE_SUBSTRING)).isEqual(startDate)
                 && LocalDate.parse(event.getStartDate().substring(START_DATE_SUBSTRING, END_DATE_SUBSTRING)).isBefore(endDate);
+               // && LocalDate.parse(event.getStartDate().substring(START_DATE_SUBSTRING, END_DATE_SUBSTRING)).isEqual(endDate);
     }
 }
