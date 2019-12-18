@@ -1,17 +1,31 @@
 package com.infoshareacademy.repository;
 
-public class FavoritesRepository {
-    private static String[] favoritesList = new String[3];
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
-    public static void setFavoritesList(String[] favoritesList) {
+import java.util.ArrayList;
+import java.util.List;
+
+public class FavoritesRepository {
+
+    private static final Logger stdout = LoggerFactory.getLogger("CONSOLE_OUT");
+
+    private static List<Integer> favoritesList = new ArrayList<>();
+
+    public static void setFavoritesList(List<Integer> favoritesList) {
         FavoritesRepository.favoritesList = favoritesList;
     }
 
-    public static String[] getFavoritesList() {
+    public static List<Integer> getFavoritesList() {
         return favoritesList;
     }
 
-    public static void setFavoriteEvent(int index, String value) {
-        favoritesList[index] = value;
+    public static void add(Integer value) {
+        favoritesList.add(value);
     }
+    public static void remove(Integer value) {
+        favoritesList.remove(value);
+    }
+
+
 }
