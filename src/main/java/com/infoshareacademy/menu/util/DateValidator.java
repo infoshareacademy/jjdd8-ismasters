@@ -4,6 +4,16 @@ import java.time.LocalDate;
 import java.util.regex.Pattern;
 
 public class DateValidator {
+
+
+    /**
+     * Validate input date to yyyy-MM-DD format
+     *
+     *
+     * @param searchString String representation of a date input from user console
+     * @return true if date is in valid format including proper days count for each month and leap years
+     */
+
     public boolean isDateValid(String searchString) {
         try {
             LocalDate.parse(searchString);
