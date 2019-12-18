@@ -3,7 +3,7 @@ package com.infoshareacademy.menu;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import static com.infoshareacademy.menu.ManagingEvents.*;
+
 
 public class MenuBuilder {
     private static final Logger stdout = LoggerFactory.getLogger("CONSOLE_OUT");
@@ -60,19 +60,6 @@ public class MenuBuilder {
                 MENU_TOP_PIPE);
     }
 
-   /* static void printPromotedOrganizers(){
-        stdout.info(MENU_BOTTOM_PIPE +
-                new EmptyLineWithPipesPrinter().printEmptyLineWithPipe() +
-                new EmptyLineWithPipesPrinter().printEmptyLineWithPipe() +
-                DynamicLinePrinter.printDynamicMenuRows(EventsByOrganizer.promotedOrganizer1Builder) +
-                DynamicLinePrinter.printDynamicMenuRows(EventsByOrganizer.promotedOrganizer2Builder) +
-                DynamicLinePrinter.printDynamicMenuRows(EventsByOrganizer.promotedOrganizer3Builder) +
-                new EmptyLineWithPipesPrinter().printEmptyLineWithPipe() +
-                DynamicLinePrinter.printDynamicMenuRows(EventsByOrganizer.promotedOrganizer9Builder) +
-                new EmptyLineWithPipesPrinter().printEmptyLineWithPipe() +
-                MENU_TOP_PIPE);
-    }*/
-
     static void printNumberInactiveInfo(){
         ScreenCleaner.cleanConsoleWindow();
         stdout.info(MENU_BOTTOM_PIPE +
@@ -108,18 +95,6 @@ public class MenuBuilder {
 
     }
 
-    static void managingEvents(){
-        stdout.info(MENU_BOTTOM_PIPE +
-                new EmptyLineWithPipesPrinter().printEmptyLineWithPipe() +
-                new EmptyLineWithPipesPrinter().printEmptyLineWithPipe() +
-                DynamicLinePrinter.printDynamicMenuRows(addingNewEvent) +
-                DynamicLinePrinter.printDynamicMenuRows(editingAnEvent) +
-                DynamicLinePrinter.printDynamicMenuRows(deletingAnEvent) +
-                DynamicLinePrinter.printDynamicMenuRows(addingToFavorite) +
-                new EmptyLineWithPipesPrinter().printEmptyLineWithPipe() +
-                new EmptyLineWithPipesPrinter().printEmptyLineWithPipe() +
-                MENU_TOP_PIPE);
-    }
 
     static void printGeneralEventSearch(){
         stdout.info(MENU_BOTTOM_PIPE +

@@ -1,14 +1,9 @@
 package com.infoshareacademy;
 
-import com.infoshareacademy.filter.Filtering;
-import com.infoshareacademy.menu.EventsByOrganizer;
 import com.infoshareacademy.menu.Menu;
-//import com.infoshareacademy.repository.AddingNewEvent;
-import com.infoshareacademy.repository.FilterRepository;
 import com.infoshareacademy.service.parser.Parser;
 
-import java.util.ArrayList;
-import java.util.List;
+
 
 public class App {
 
