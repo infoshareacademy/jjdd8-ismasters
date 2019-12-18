@@ -26,14 +26,14 @@ public class Menu extends MenuBuilder{
         MenuBuilder.displayedOption3 = MAIN_MENU_OPTION3;
         MenuBuilder.GoBack = MAIN_MENU_EXIT;
         FilterRepository filterRepository = new FilterRepository();
-        Stack pathDisplay = new Stack();
+        PathDisplay.pathDisplay();
 
         int mainExitCode = 0;
         ScreenCleaner.cleaningConsoleWindow();
         MenuBuilder.greetPrinting();
+        pathDisplay.push();
+        System.out.println( pathDisplay );
         while (mainExitCode != 9) {
-            pathDisplay.push("Main menu");
-            System.out.println( pathDisplay );
             MenuBuilder.menuBuilderPrinting();
             switch (ChoiceGetter.getChoice()) {
                 case 1:
@@ -54,6 +54,7 @@ public class Menu extends MenuBuilder{
                     break;
                 case 9:
                     pathDisplay.pop();
+                    System.out.println( pathDisplay );
                     MenuBuilder.goodByeWindowPrinting();
                     mainExitCode = 9;
                     break;
