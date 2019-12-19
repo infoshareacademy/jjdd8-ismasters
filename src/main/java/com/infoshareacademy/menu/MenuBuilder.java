@@ -86,8 +86,7 @@ public class MenuBuilder {
     }
 
     static void printFavoriteEvent(){
-        stdout.info(MENU_BOTTOM_PIPE +
-                new EmptyLineWithPipesPrinter().printEmptyLineWithPipe() +
+        stdout.info("\n" + MENU_BOTTOM_PIPE +
                 new EmptyLineWithPipesPrinter().printEmptyLineWithPipe() +
                 DynamicLinePrinter.printDynamicMenuRows(FavoritesMenu.first) +
                 DynamicLinePrinter.printDynamicMenuRows(FavoritesMenu.second) +
