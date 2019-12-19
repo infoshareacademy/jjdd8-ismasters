@@ -23,6 +23,10 @@ public class NearestEvents {
 
         while (returnCheckInt != 9) {
 
+            if (!Menu.BREADCRUMBSTACK.peek().equals("Najbliższe wydarzenia")) {
+                Menu.BREADCRUMBSTACK.add("Najbliższe wydarzenia");
+            }
+            BreadcrumbsPrinter.printBreadcrumbs();
             MenuBuilder.printNearEvent();
 
             switch (ChoiceGetter.getChoice()) {
@@ -40,7 +44,7 @@ public class NearestEvents {
                     break;
                 case 9:
                     ScreenCleaner.cleanConsoleWindow();
-                    stdout.info("        POWRÓT DO POPRZEDNIEGO MENU       \n");
+                    Menu.BREADCRUMBSTACK.pop();
                     returnCheckInt = 9;
                     break;
                 case 0:

@@ -159,7 +159,8 @@ public class Event {
     }
 
     public String toString() {
-        return "Nazwa wydarzenia:" + MenuBuilder.CYAN +   getName() + MenuBuilder.DEFAULT + "\n" +
+        return "Nazwa wydarzenia: " + MenuBuilder.CYAN +   getName() + MenuBuilder.DEFAULT + "\n" +
+                "Id wydarzenia: " + getid() + "\n"+
                 "Miejsce wydarzenia: " + getPlace() + "\n" +
                 "Rozpoczęcie: " + extractDateOnly(getStartDate()) + ", godz: " + extractTimeOnly(getStartDate()) + "\n" +
                 getOrganizer() + "\n" +

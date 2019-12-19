@@ -1,13 +1,15 @@
 package com.infoshareacademy.menu;
 
 import com.infoshareacademy.domain.parser.Event;
+import com.infoshareacademy.menu.util.DateValidator;
 import com.infoshareacademy.repository.FilterRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.time.format.ResolverStyle;
 import java.util.function.Predicate;
-import java.util.regex.Pattern;
 
 public class EventSearch {
 
@@ -28,23 +30,31 @@ public class EventSearch {
         String searchString;
         Predicate<Event> searchCondition;
         ScreenCleaner.cleanConsoleWindow();
-        boolean isDateToEarly = true;
+        DateValidator dateValidator = new DateValidator();
+
 
         while (menuExitCode != 9) {
 
+            if (!Menu.BREADCRUMBSTACK.peek().equals("Wyszukiwanie wydarzeń")) {
+                Menu.BREADCRUMBSTACK.add("Wyszukiwanie wydarzeń");
+            }
+            BreadcrumbsPrinter.printBreadcrumbs();
+
             MenuBuilder.printGeneralEventSearch();
+            boolean isDateToEarly = true;
 
             switch (ChoiceGetter.getChoice()) {
                 case 1:
                     do {
                         stdout.info("Podaj miejsce do wyszukania i wciśnij ENTER\n");
-                        searchString = Menu.scanner.next();
+                        Menu.scanner.nextLine();
+                        searchString = Menu.scanner.nextLine().replaceAll("\\s+", "");
                         if (searchString.length() < 3) {
                             stdout.info("Wpisz co najmniej 3 znaki\n");
                         }
                     } while (searchString.length() < 3);
 
-                    stdout.info("Szukam: " + searchString + "\n");
+                    stdout.info("Szukam: " + searchString + "\n\n");
                     String effectiveFinalSearchByPlace = searchString;
                     searchCondition = event -> event.getPlace().getName().toLowerCase().contains(effectiveFinalSearchByPlace.toLowerCase());
                     searchEvents(new FilterRepository(), searchCondition);
@@ -53,44 +63,48 @@ public class EventSearch {
                 case 2:
                     do {
                         stdout.info("Podaj nazwę organizatora do wyszukania i wciśnij ENTER\n");
-                        searchString = Menu.scanner.next();
+                        Menu.scanner.nextLine();
+                        searchString = Menu.scanner.nextLine();
                         if (searchString.length() < 3) {
                             stdout.info("Wpisz co najmniej 3 znaki\n");
                         }
                     } while (searchString.length() < 3);
 
-                    stdout.info("Szukam: " + searchString + "\n");
+                    stdout.info("Szukam: " + searchString + "\n\n");
                     String effectiveFinalSearchByOrganizer = searchString;
-                    searchCondition = event -> event.getOrganizer().getDesignation().toLowerCase().contains(effectiveFinalSearchByOrganizer.toLowerCase());
+                    searchCondition = event -> event.getOrganizer().getDesignation()
+                            .toLowerCase().contains(effectiveFinalSearchByOrganizer.toLowerCase());
                     searchEvents(new FilterRepository(), searchCondition);
                     break;
 
                 case 3:
+                    LocalDate searchDate;
                     do {
                         do {
                             stdout.info("Podaj datę w formacie YYYY-MM-DD do wyszukania i wciśnij ENTER\n");
+                            Menu.scanner.nextLine();
                             searchString = Menu.scanner.next();
-                            if (!isDateValid(searchString)) {
+                            if (!dateValidator.isDateValid(searchString)) {
                                 stdout.info("\nZły format daty!\n\n");
                             }
                         }
-                        while (!isDateValid(searchString));
-
-                        if (LocalDate.parse(searchString).isBefore(LocalDate.now())) {
+                        while (!dateValidator.isDateValid(searchString));
+                        searchDate = LocalDate.parse(searchString, DateTimeFormatter.ofPattern("yyyy-MM-dd").withResolverStyle(ResolverStyle.SMART));
+                        if (searchDate.isBefore(LocalDate.now())) {
                             stdout.info("\nWybierz dzień dzisiejszy lub późniejszą datę!\n\n");
                         } else {
                             isDateToEarly = false;
                         }
                     } while (isDateToEarly);
 
-                    stdout.info("Szukam: " + searchString + "\n");
+                    stdout.info("Szukam: " + searchDate.toString() + "\n\n");
                     String effectiveFinalSearchByDate = searchString;
-                    searchCondition = event -> event.getStartDate().contains(effectiveFinalSearchByDate.toLowerCase());
+                    searchCondition = event -> event.getStartDate().contains(effectiveFinalSearchByDate);
                     searchEvents(new FilterRepository(), searchCondition);
                     break;
 
                 case 9:
-                    stdout.info("Koniec wyszukiwania\n");
+                    Menu.BREADCRUMBSTACK.pop();
                     menuExitCode = 9;
                     break;
 
@@ -98,9 +112,5 @@ public class EventSearch {
                     MenuBuilder.printNumberInactiveInfo();
             }
         }
-    }
-
-    public boolean isDateValid(String searchString) {
-        return Pattern.matches("^\\d{4}\\-(0?[1-9]|1[012])\\-(0?[1-9]|[12][0-9]|3[01])$", searchString);
     }
 }
