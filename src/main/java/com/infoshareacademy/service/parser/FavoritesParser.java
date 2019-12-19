@@ -1,6 +1,7 @@
 package com.infoshareacademy.service.parser;
 
 
+import com.infoshareacademy.FavoritesLogic;
 import com.infoshareacademy.repository.FavoritesRepository;
 import com.opencsv.CSVReader;
 import com.opencsv.CSVWriter;
@@ -12,17 +13,24 @@ import java.io.IOException;
 import java.io.Reader;
 import java.io.Writer;
 import java.nio.file.Files;
+import java.nio.file.OpenOption;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 
+import static java.nio.file.StandardOpenOption.CREATE_NEW;
+import static java.nio.file.StandardOpenOption.TRUNCATE_EXISTING;
+
 public class FavoritesParser {
+
+    private static final String FAVORITES_CSV_FILE_PATH = "./favorites.csv";
+
 
     private static final Logger stdout = LoggerFactory.getLogger("CONSOLE_OUT");
 
-    public static void initializeCsvParser(String filename) {
-        readCSV(filename);
-    }
+//    public static void initializeCsvParser(String filename) {
+//        readCSV(filename);
+//    }
 
     public static void readCSV(String filename) {
 
@@ -34,18 +42,20 @@ public class FavoritesParser {
             List<Integer> favorites = new ArrayList<>();
 
             while ((tempArr = csvReader.readNext()) != null) {
-                favorites.add(Integer.parseInt(tempArr[0]));
+                if (!tempArr[0].equals("")) {
+                    favorites.add(Integer.parseInt(tempArr[0]));
+                }
             }
 
             FavoritesRepository.getFavoritesList().addAll(favorites);
 
         } catch (CsvValidationException | IOException e) {
-            stdout.info("Błąd pliku " + e.getMessage());
+            stdout.info("Błąd odczytu pliku " + e.getMessage());
         }
     }
 
     public static void writeCSV(String filename) {
-        try (Writer writer = Files.newBufferedWriter(Paths.get(filename));
+        try (Writer writer = Files.newBufferedWriter(Paths.get(filename), TRUNCATE_EXISTING);
              CSVWriter csvWriter = new CSVWriter(writer,
                      CSVWriter.DEFAULT_SEPARATOR,
                      CSVWriter.NO_QUOTE_CHARACTER,
@@ -56,10 +66,14 @@ public class FavoritesParser {
                 csvWriter.writeNext(new String[]{i.toString()});
             }
         } catch (IOException e) {
-            stdout.info("Błąd pliku " + e.getMessage());
+            stdout.info("Błąd zapisu do pliku " + e.getMessage());
         }
     }
 
+    /**
+     * This method checks if the event list file has 3 or less events stored.
+     * @param value Event id to be added to CSV file
+     */
     public static void addFavoriteEvent(Integer value) {
         if (value != null && FavoritesRepository.getFavoritesList().size() >= 3) {
             stdout.info("\nLista ulubionych ma już maksymalną możliwą wielkość\n");
@@ -77,6 +91,10 @@ public class FavoritesParser {
         } else {
             stdout.info("\nNa liście ulubionych nie ma pozycji " + value + "\n");
         }
+    }
+
+    public static void showStoredEvents() {
+        FavoritesRepository.getFavoritesList().forEach(x -> System.out.println("Event: " + x));
     }
 }
 
