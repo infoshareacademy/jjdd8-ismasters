@@ -2,6 +2,7 @@ package com.infoshareacademy.menu;
 
 import com.infoshareacademy.domain.parser.Event;
 import com.infoshareacademy.filter.FilteringOnDatesAndOrganizers;
+import com.infoshareacademy.menu.util.DateValidator;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -18,9 +19,10 @@ public class EventsByOrganizer {
     static String end;
     static String searchString;
 
-    public static void showAllOrganizers() {
-        List<Event> listOfFilteredEventsOnOrganizersAndDates = new ArrayList<>();
+    DateValidator dateValidator = new DateValidator();
 
+    public  void showAllOrganizers() {
+        List<Event> listOfFilteredEventsOnOrganizersAndDates = new ArrayList<>();
 
         collectsListOfOrganizers();
         collectStartDate();
@@ -36,11 +38,11 @@ public class EventsByOrganizer {
         }
     }
 
-    public static void printOrganizers() {
+    public  void printOrganizers() {
         new FilteringOnDatesAndOrganizers().getAllOrganizers().stream().forEach(s -> stdout.info(" " + s + "\n"));
     }
 
-    public static List<String> filterAllOrganisers(String organizer) {
+    public  List<String> filterAllOrganisers(String organizer) {
 
         listOfSelectedOrganizers = new FilteringOnDatesAndOrganizers().getAllOrganizers()
                 .stream().filter(o->o.toLowerCase().contains(organizer.toLowerCase()))
@@ -49,11 +51,8 @@ public class EventsByOrganizer {
         return listOfSelectedOrganizers;
     }
 
-    public static boolean isDateValid(String searchString) {
-        return Pattern.matches("^\\d{4}\\-(0?[1-9]|1[012])\\-(0?[1-9]|[12][0-9]|3[01])$", searchString);
-    }
 
-    public static List<String> collectsListOfOrganizers() {
+    public  List<String> collectsListOfOrganizers() {
         String out = "F";
         do {
             stdout.info("Podaj nazwę organizatora lub organizatorów do filtrowania wydarzeń" + "\n");
@@ -69,31 +68,31 @@ public class EventsByOrganizer {
         return listOfSelectedOrganizers;
     }
 
-    public static String collectStartDate() {
+    public  String collectStartDate() {
         do {
-            stdout.info("Podaj  Start datę w formacie YYYY-MM-DD do wyszukania i wciśnij ENTER\n");
+            stdout.info("Podaj datę początku wyszukania w formacie YYYY-MM-DD do wyszukania i wciśnij ENTER\n");
             searchString = Menu.scanner.nextLine();
-            if (!isDateValid(searchString)) {
+            if (!dateValidator.isDateValid(searchString)) {
                 stdout.info("\nZły format daty!\n\n");
             }
             start = searchString;
-        } while (!isDateValid(searchString));
+        } while (!dateValidator.isDateValid(searchString));
         return start;
     }
 
-    public static String collectsEndDate() {
+    public  String collectsEndDate() {
         do {
-            stdout.info("Podaj  koniec datę w formacie YYYY-MM-DD do wyszukania i wciśnij ENTER\n");
+            stdout.info("Podaj  datę końca szukania w formacie YYYY-MM-DD do wyszukania i wciśnij ENTER\n");
             searchString = Menu.scanner.nextLine();
-            if (!isDateValid(searchString)) {
+            if (!dateValidator.isDateValid(searchString)) {
                 stdout.info("\nZły format daty!\n\n");
             }
             end = searchString;
-        } while (!isDateValid(searchString));
+        } while (!dateValidator.isDateValid(searchString));
         return end;
     }
 
-    public static String chooseOrganizer() {
+    public  String chooseOrganizer() {
         do {
             stdout.info("\n" + "Wybierz Organizatora" + "\n");
             stdout.info("Wpisz co najmniej 3 znaki\n");

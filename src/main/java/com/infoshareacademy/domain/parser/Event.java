@@ -13,6 +13,7 @@ public class Event {
     private String endDate;
     private String name;
     private Urls urls;
+    @JsonIgnoreProperties(ignoreUnknown = true)
     private List<Attachments> attachments ;
     @JsonIgnoreProperties(ignoreUnknown = true)
     private String descLong;

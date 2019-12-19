@@ -20,7 +20,9 @@ public class Menu extends MenuBuilder {
     static final String MAIN_MENU_OPTION2 = "2. Pokaż najbliższe wydarzenia";
     static final String MAIN_MENU_OPTION3 = "3. Pokaż wydarzenie wyszukanych organizatorów oraz dat";
     static final String MAIN_MENU_OPTION4 = "4. Wyszukaj wydarzenie";
+    static final String MAIN_MENU_OPTION6 = "6. Dodaj nowe wydarzenie";
     static final String MAIN_MENU_OPTION5 = "5. Zarządzaj ulubionymi wydarzeniami";
+
     static final String MAIN_MENU_EXIT = "Wpisane 9 powoduje wyjscie z programu";
 
     static final Stack<String> BREADCRUMBSTACK = new Stack<>();
@@ -56,7 +58,7 @@ public class Menu extends MenuBuilder {
                     break;
                 case 3:
                     ScreenCleaner.cleanConsoleWindow();
-                    EventsByOrganizer.showAllOrganizers();
+                    new EventsByOrganizer().showAllOrganizers();
                     break;
                 case 4:
                     ScreenCleaner.cleanConsoleWindow();
@@ -65,6 +67,10 @@ public class Menu extends MenuBuilder {
                 case 5:
                     ScreenCleaner.cleanConsoleWindow();
                     new FavoritesMenu().showFavoritesOnLoad();
+                    break;
+                case 6:
+                    ScreenCleaner.cleanConsoleWindow();
+                    new AddNewEvents().addNewEvent();
                     break;
                 case 9:
                     MenuBuilder.printGoodByeWindow();
