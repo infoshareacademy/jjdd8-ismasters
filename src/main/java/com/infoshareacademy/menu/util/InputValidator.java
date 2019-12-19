@@ -13,4 +13,8 @@ public class InputValidator {
     public static boolean checkSingleDigitRangeInput(String in) {
         return (Pattern.matches("[0-9]", in));
     }
+
+    public static boolean checkFiveDigitRangeInput(String favId) {
+        return (Pattern.matches("\\b\\d{5}\\b", favId));
+    }
 }
