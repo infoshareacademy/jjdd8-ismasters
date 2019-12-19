@@ -10,7 +10,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 class ChoiceGetterTest {
 
     @Test
-    void checkGetChoiceWhenInputInRange() { //mock not mockable class :)
+    void checkGetChoiceWhenInputInRange() { //mock non-mockable class :)
         String input = "1";
         InputStream in = new ByteArrayInputStream(input.getBytes());
         System.setIn(in);
