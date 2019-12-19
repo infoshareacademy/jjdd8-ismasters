@@ -1,9 +1,12 @@
 package com.infoshareacademy.domain.parser;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.infoshareacademy.menu.MenuBuilder;
 
 public class Place {
+    @JsonIgnoreProperties(ignoreUnknown = true)
     private int id;
+
     private String subname;
     private String name;
 

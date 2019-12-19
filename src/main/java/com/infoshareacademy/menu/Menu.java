@@ -15,7 +15,7 @@ public class Menu extends MenuBuilder {
 
     static final String MAIN_MENU_OPTION1 = "1. Pokaż wszystkie wydarzenia";
     static final String MAIN_MENU_OPTION2 = "2. Pokaż najbliższe wydarzenia";
-    static final String MAIN_MENU_OPTION3 = "3. Pokaż wydarzenie promowanych organizatorów";
+    static final String MAIN_MENU_OPTION3 = "3. Pokaż wydarzenie wyszukanych organizatorów oraz dat";
     static final String MAIN_MENU_OPTION4 = "4. Wyszukaj wydarzenie";
     static final String MAIN_MENU_EXIT = "Wpisane 9 powoduje wyjscie z programu";
 

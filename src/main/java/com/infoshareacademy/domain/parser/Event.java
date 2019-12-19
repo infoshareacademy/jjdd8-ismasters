@@ -1,5 +1,6 @@
 package com.infoshareacademy.domain.parser;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.infoshareacademy.menu.MenuBuilder;
 
 import java.util.ArrayList;
@@ -13,12 +14,16 @@ public class Event {
     private String name;
     private Urls urls;
     private List<Attachments> attachments ;
+    @JsonIgnoreProperties(ignoreUnknown = true)
     private String descLong;
     private int categoryId;
     private String startDate;
     private Organizer organizer;
+    @JsonIgnoreProperties(ignoreUnknown = true)
     private int active;
+    @JsonIgnoreProperties(ignoreUnknown = true)
     private String descShort;
+    @JsonIgnoreProperties(ignoreUnknown = true)
     private Ticket tickets;
 
     public Event() {
