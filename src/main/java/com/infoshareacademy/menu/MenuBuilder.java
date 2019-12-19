@@ -23,9 +23,14 @@ public class MenuBuilder {
     private static final String GOOD_BYE = "Do Zobaczenia :D";
 
 
+    static void printBreadCrumbs() {
+
+    }
+
+
 
     static void printMenuBuilder(){
-        stdout.info(MENU_BOTTOM_PIPE +
+        stdout.info("\n" + MENU_BOTTOM_PIPE +
 
                 new EmptyLineWithPipesPrinter().printEmptyLineWithPipe() +
                 new EmptyLineWithPipesPrinter().printEmptyLineWithPipe() +
@@ -52,7 +57,7 @@ public class MenuBuilder {
     }
 
     static void printGreeting(){
-        stdout.info(MENU_BOTTOM_PIPE +
+        stdout.info("\n" + MENU_BOTTOM_PIPE +
                 new EmptyLineWithPipesPrinter().printEmptyLineWithPipe() +
                 DynamicLinePrinter.printDynamicMenuRowsYellow("Witaj w kalendarzu wydarzeń kulturalnych") +
                 new EmptyLineWithPipesPrinter().printEmptyLineWithPipe() +
@@ -73,7 +78,7 @@ public class MenuBuilder {
     }
 
     static void printNearEvent(){
-        stdout.info(MENU_BOTTOM_PIPE +
+        stdout.info("\n" + MENU_BOTTOM_PIPE +
                 new EmptyLineWithPipesPrinter().printEmptyLineWithPipe() +
                 new EmptyLineWithPipesPrinter().printEmptyLineWithPipe() +
                 DynamicLinePrinter.printDynamicMenuRows(NearestEvents.today) +
@@ -110,7 +115,7 @@ public class MenuBuilder {
 
 
     static void printGeneralEventSearch(){
-        stdout.info(MENU_BOTTOM_PIPE +
+        stdout.info("\n" + MENU_BOTTOM_PIPE +
                 new EmptyLineWithPipesPrinter().printEmptyLineWithPipe() +
                 new EmptyLineWithPipesPrinter().printEmptyLineWithPipe() +
                 DynamicLinePrinter.printDynamicMenuRows(EventSearch.SEARCH_MENU_OPTION1) +

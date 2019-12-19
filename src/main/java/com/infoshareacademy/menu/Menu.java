@@ -5,10 +5,12 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.util.Scanner;
+import java.util.Stack;
 
 import static com.infoshareacademy.menu.EventsPrinter.printEvents;
 
 public class Menu extends MenuBuilder {
+
 
     public static final Scanner scanner = new Scanner(System.in);
     public static final String FAVORITES_CSV_FILE_PATH = "./favorites.csv";
@@ -21,14 +23,26 @@ public class Menu extends MenuBuilder {
     static final String MAIN_MENU_OPTION5 = "5. Zarządzaj ulubionymi wydarzeniami";
     static final String MAIN_MENU_EXIT = "Wpisane 9 powoduje wyjscie z programu";
 
+    static final Stack<String> BREADCRUMBSTACK = new Stack<>();
+
+
     public static void mainMenu() {
         FilterRepository filterRepository = new FilterRepository();
+        if (!(Menu.BREADCRUMBSTACK.size() > 0)) {
+            Menu.BREADCRUMBSTACK.add("Menu główne");
+        }
 
         int mainExitCode = 0;
+
         ScreenCleaner.cleanConsoleWindow();
         MenuBuilder.printGreeting();
 
+
         while (mainExitCode != 9) {
+            if (!Menu.BREADCRUMBSTACK.peek().equals("Menu główne")) {
+                Menu.BREADCRUMBSTACK.add("Menu główne");
+            }
+            BreadcrumbsPrinter.printBreadcrumbs();
             MenuBuilder.printMenuBuilder();
 
             switch (ChoiceGetter.getChoice()) {
@@ -54,6 +68,7 @@ public class Menu extends MenuBuilder {
                     break;
                 case 9:
                     MenuBuilder.printGoodByeWindow();
+                    Menu.BREADCRUMBSTACK.pop();
                     mainExitCode = 9;
                     break;
                 case -1:
@@ -63,4 +78,5 @@ public class Menu extends MenuBuilder {
             }
         }
     }
+
 }

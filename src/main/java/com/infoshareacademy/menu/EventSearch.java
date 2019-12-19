@@ -35,6 +35,11 @@ public class EventSearch {
 
         while (menuExitCode != 9) {
 
+            if (!Menu.BREADCRUMBSTACK.peek().equals("Wyszukiwanie wydarzeń")) {
+                Menu.BREADCRUMBSTACK.add("Wyszukiwanie wydarzeń");
+            }
+            BreadcrumbsPrinter.printBreadcrumbs();
+
             MenuBuilder.printGeneralEventSearch();
             boolean isDateToEarly = true;
 
@@ -99,7 +104,7 @@ public class EventSearch {
                     break;
 
                 case 9:
-                    stdout.info("Koniec wyszukiwania\n");
+                    Menu.BREADCRUMBSTACK.pop();
                     menuExitCode = 9;
                     break;
 
