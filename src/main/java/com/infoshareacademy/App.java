@@ -1,11 +1,15 @@
 package com.infoshareacademy;
 
+import com.infoshareacademy.menu.AddNewEvents;
 import com.infoshareacademy.menu.Menu;
 import com.infoshareacademy.service.parser.Parser;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+
+
 public class App {
+    public static final String JSON_REPOSITORY = "JSON_example";
 
     private static final Logger stdout = LoggerFactory.getLogger("CONSOLE_OUT");
 
@@ -13,10 +17,14 @@ public class App {
 
 
     public static void main(String[] args) {
-        final String JSON = "JSON_example";
         Parser parser = new Parser();
-        parser.initialization(JSON);
+        parser.initialization(JSON_REPOSITORY);
+
         Menu.mainMenu();
 
     }
 }
+
+
+
+

@@ -1,8 +1,24 @@
 package com.infoshareacademy.domain.parser;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.infoshareacademy.menu.MenuBuilder;
 
 public class Place {
+    @JsonIgnoreProperties(ignoreUnknown = true)
+    private int id;
+
+    private String subname;
+    private String name;
+
+    public Place() {
+    }
+
+    public Place(int id, String subname, String name) {
+        this.id = id;
+        this.subname = subname;
+        this.name = name;
+    }
+
     public int getId() {
         return id;
     }
@@ -26,10 +42,6 @@ public class Place {
     public void setName(String name) {
         this.name = name;
     }
-
-    private int id;
-    private String subname;
-    private String name;
 
     @Override
     public String toString() {

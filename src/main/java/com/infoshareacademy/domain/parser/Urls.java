@@ -1,9 +1,22 @@
 package com.infoshareacademy.domain.parser;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 public class Urls {
     private String www;
+    @JsonIgnoreProperties(ignoreUnknown = true)
     private String fb;
+    @JsonIgnoreProperties(ignoreUnknown = true)
     private String tickets;
+
+    public Urls() {
+    }
+
+    public Urls(String www, String fb, String tickets) {
+        this.www = www;
+        this.fb = fb;
+        this.tickets = tickets;
+    }
 
     public String getTickets() {
         return tickets;
