@@ -1,6 +1,8 @@
 package com.infoshareacademy.domain.parser;
 
 public class FavoriteEvent {
+    private int id;
+
     public int getId() {
         return id;
     }
@@ -8,6 +10,4 @@ public class FavoriteEvent {
     public void setId(int id) {
         this.id = id;
     }
-
-    private int id;
 }

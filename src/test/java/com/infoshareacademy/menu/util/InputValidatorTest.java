@@ -39,4 +39,24 @@ class InputValidatorTest {
         assertFalse(InputValidator.checkSingleDigitRangeInput("-10"));
         assertFalse(InputValidator.checkSingleDigitRangeInput("0.0"));
     }
+
+    @Test
+    void checkFiveDigitRangeInputTrue() {
+        assertTrue(InputValidator.checkFiveDigitRangeInput("12345"));
+        assertTrue(InputValidator.checkFiveDigitRangeInput("99999"));
+        assertTrue(InputValidator.checkFiveDigitRangeInput("10000"));
+        assertTrue(InputValidator.checkFiveDigitRangeInput("00000"));
+        assertTrue(InputValidator.checkFiveDigitRangeInput("00001"));
+    }
+    @Test
+    void checkFiveDigitRangeInputFalse() {
+        assertFalse(InputValidator.checkFiveDigitRangeInput("5"));
+        assertFalse(InputValidator.checkFiveDigitRangeInput("500001"));
+        assertFalse(InputValidator.checkFiveDigitRangeInput("0"));
+        assertFalse(InputValidator.checkFiveDigitRangeInput("10"));
+        assertFalse(InputValidator.checkFiveDigitRangeInput("1111111111"));
+        assertFalse(InputValidator.checkFiveDigitRangeInput("-1"));
+
+    }
+
 }
