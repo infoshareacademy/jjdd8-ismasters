@@ -1,9 +1,16 @@
 package com.infoshareacademy.domain.parser;
 
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class Ticket {
 
+    @JsonIgnoreProperties(ignoreUnknown = true)
     private String type;
+    @JsonIgnoreProperties(ignoreUnknown = true)
     private String startTicket;
+    @JsonIgnoreProperties(ignoreUnknown = true)
     private String endTicket;
 
     public Ticket() {
