@@ -2,11 +2,12 @@ package com.infoshareacademy;
 
 import com.infoshareacademy.menu.AddNewEvents;
 import com.infoshareacademy.menu.Menu;
+import com.infoshareacademy.menu.RemoveEvents;
 import com.infoshareacademy.service.parser.Parser;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import static com.infoshareacademy.menu.AddNewEvents.addNewEvent;
+
 
 
 public class App {
@@ -21,8 +22,11 @@ public class App {
         Parser parser = new Parser();
         parser.initialization(JSON_REPOSITORY);
 
-        Menu.mainMenu();
-
+        //Menu.mainMenu();
+        //AddNewEvents addNewEvents = new AddNewEvents();
+        //addNewEvents.addNewEvent();
+        RemoveEvents removeEvents = new RemoveEvents();
+        removeEvents.removeEvent(70023);
     }
 }
 

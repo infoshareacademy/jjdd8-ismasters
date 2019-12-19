@@ -4,6 +4,7 @@ import com.infoshareacademy.domain.parser.Event;
 import com.infoshareacademy.domain.parser.Organizer;
 import com.infoshareacademy.domain.parser.Place;
 import com.infoshareacademy.domain.parser.Urls;
+import com.infoshareacademy.menu.util.DateValidator;
 import com.infoshareacademy.repository.EventsRepository;
 import com.infoshareacademy.service.parser.Parser;
 import org.slf4j.Logger;
@@ -13,7 +14,6 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-import static com.infoshareacademy.menu.EventsByOrganizer.isDateValid;
 
 public class AddNewEvents {
     private static final Logger stdout = LoggerFactory.getLogger("CONSOLE_OUT");
@@ -29,7 +29,10 @@ public class AddNewEvents {
     public final static String EMPTY_STRING = "";
     public final static Integer EMPTY_INTEGER = 0;
 
-    public static void addNewEvent() {
+
+    DateValidator dateValidator = new DateValidator();
+
+    public  void addNewEvent() {
         stdout.info("\n" + "Operacja dodawania nowego wydarzenia" + "\n");
         collectEventsName();
         collectPlaceSubname();
@@ -47,24 +50,24 @@ public class AddNewEvents {
 
     }
 
-    public static Event createNewEvent(){
+    public  Event createNewEvent(){
        return new Event(giveNewId(), createNewPlace(), EMPTY_STRING, newEventName, createNewUrls(), null,
                EMPTY_STRING, EMPTY_INTEGER, newStartDate + "T" + newStartTime, createNewOrganizer(), EMPTY_INTEGER, EMPTY_STRING, null);
     }
 
-    public static Organizer createNewOrganizer(){
+    public  Organizer createNewOrganizer(){
         return new Organizer(EMPTY_INTEGER,newOrganizerDesignation);
     }
 
-    public static Urls createNewUrls(){
+    public  Urls createNewUrls(){
         return new Urls(newWWW, EMPTY_STRING, EMPTY_STRING);
     }
 
-    public static Place createNewPlace(){
+    public  Place createNewPlace(){
         return new Place(EMPTY_INTEGER, newPlaceSubname, newPlaceName);
     }
 
-    public static String collectUrlWww() {
+    public  String collectUrlWww() {
         do {
             stdout.info("\n" + "Podaj strone internetową" + "\n");
             newWWW = Menu.scanner.nextLine();
@@ -75,7 +78,7 @@ public class AddNewEvents {
         return newWWW;
     }
 
-    public static String collectOrganizersDesignation() {
+    public  String collectOrganizersDesignation() {
         do {
             stdout.info("\n" + "Podaj organizatora" + "\n");
             newOrganizerDesignation = Menu.scanner.nextLine();
@@ -86,7 +89,7 @@ public class AddNewEvents {
         return newOrganizerDesignation;
     }
 
-    public static String collectStartTime() {
+    public  String collectStartTime() {
 
         stdout.info("Podaj Start godzine w formacie HH:MM do wyszukania i wciśnij ENTER\n");
         newStartTime = Menu.scanner.nextLine();
@@ -94,18 +97,18 @@ public class AddNewEvents {
         return newStartTime;
     }
 
-    public static String collectStartDate() {
+    public  String collectStartDate() {
         do {
             stdout.info("Podaj  Start datę w formacie YYYY-MM-DD do wyszukania i wciśnij ENTER\n");
             newStartDate = Menu.scanner.nextLine();
-            if (!isDateValid(newStartDate)) {
+            if (!dateValidator.isDateValid(newStartDate)) {
                 stdout.info("\nZły format daty!\n\n");
             }
-        } while (!isDateValid(newStartDate));
+        } while (!dateValidator.isDateValid(newStartDate));
         return newStartDate;
     }
 
-    public static String collectPlaceName() {
+    public  String collectPlaceName() {
         do {
             stdout.info("\n" + "Podaj miejsca wydarzenia" + "\n");
             newPlaceName = Menu.scanner.nextLine();
@@ -116,7 +119,7 @@ public class AddNewEvents {
         return newPlaceName;
     }
 
-    public static String collectPlaceSubname() {
+    public  String collectPlaceSubname() {
         do {
             stdout.info("\n" + "Podaj opis miejsca wydarzenia" + "\n");
             newPlaceSubname = Menu.scanner.nextLine();
@@ -127,7 +130,7 @@ public class AddNewEvents {
         return newPlaceSubname;
     }
 
-    public static String collectEventsName() {
+    public  String collectEventsName() {
         do {
             stdout.info("\n" + "Podaj nazwe wydarzenia" + "\n");
             newEventName = Menu.scanner.nextLine();
@@ -138,14 +141,14 @@ public class AddNewEvents {
         return newEventName;
     }
 
-    public static List<Integer> listEventsIds() {
+    public  List<Integer> listEventsIds() {
         for (Event event : EventsRepository.getInstance().getEvents()) {
             listOfEventsIds.add(event.getid());
         }
         return listOfEventsIds;
     }
 
-    public static Integer giveNewId() {
+    public  Integer giveNewId() {
         Integer maxIdFromList = Collections.max(listEventsIds());
         randomNewId = maxIdFromList + 1;
         return randomNewId;
@@ -155,7 +158,7 @@ public class AddNewEvents {
         listOfEventsIds.remove(listOfEventsIds.get(idToRemove));
     }
 
-    public static void findEventWithNewId(){
+    public  void findEventWithNewId(){
         for (Event event : EventsRepository.getInstance().getEvents()) {
             if (event.getid() == randomNewId){
                 stdout.info("\n" + "Nowe wydarzenie o ID " + randomNewId + " zostało dodane" +"\n");
