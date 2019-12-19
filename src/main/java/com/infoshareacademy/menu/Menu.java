@@ -11,12 +11,14 @@ import static com.infoshareacademy.menu.EventsPrinter.printEvents;
 public class Menu extends MenuBuilder {
 
     public static final Scanner scanner = new Scanner(System.in);
+    public static final String FAVORITES_CSV_FILE_PATH = "./favorites.csv";
     private static final Logger stdout = LoggerFactory.getLogger("CONSOLE_OUT");
 
     static final String MAIN_MENU_OPTION1 = "1. Pokaż wszystkie wydarzenia";
     static final String MAIN_MENU_OPTION2 = "2. Pokaż najbliższe wydarzenia";
     static final String MAIN_MENU_OPTION3 = "3. Pokaż wydarzenie wyszukanych organizatorów oraz dat";
     static final String MAIN_MENU_OPTION4 = "4. Wyszukaj wydarzenie";
+    static final String MAIN_MENU_OPTION5 = "5. Zarządzaj ulubionymi wydarzeniami";
     static final String MAIN_MENU_EXIT = "Wpisane 9 powoduje wyjscie z programu";
 
     public static void mainMenu() {
@@ -45,6 +47,10 @@ public class Menu extends MenuBuilder {
                 case 4:
                     ScreenCleaner.cleanConsoleWindow();
                     new EventSearch().showSearchResults();
+                    break;
+                case 5:
+                    ScreenCleaner.cleanConsoleWindow();
+                    new FavoritesMenu().showFavoritesOnLoad();
                     break;
                 case 9:
                     MenuBuilder.printGoodByeWindow();

@@ -1,7 +1,6 @@
 package com.infoshareacademy.service.parser;
 
 
-import com.infoshareacademy.FavoritesLogic;
 import com.infoshareacademy.repository.FavoritesRepository;
 import com.opencsv.CSVReader;
 import com.opencsv.CSVWriter;
@@ -13,12 +12,10 @@ import java.io.IOException;
 import java.io.Reader;
 import java.io.Writer;
 import java.nio.file.Files;
-import java.nio.file.OpenOption;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 
-import static java.nio.file.StandardOpenOption.CREATE_NEW;
 import static java.nio.file.StandardOpenOption.TRUNCATE_EXISTING;
 
 public class FavoritesParser {
@@ -27,6 +24,7 @@ public class FavoritesParser {
 
 
     private static final Logger stdout = LoggerFactory.getLogger("CONSOLE_OUT");
+
 
 //    public static void initializeCsvParser(String filename) {
 //        readCSV(filename);

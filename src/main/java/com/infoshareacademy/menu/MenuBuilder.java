@@ -33,6 +33,7 @@ public class MenuBuilder {
                  DynamicLinePrinter.printDynamicMenuRows(Menu.MAIN_MENU_OPTION2) +
                  DynamicLinePrinter.printDynamicMenuRows(Menu.MAIN_MENU_OPTION3) +
                  DynamicLinePrinter.printDynamicMenuRows(Menu.MAIN_MENU_OPTION4) +
+                 DynamicLinePrinter.printDynamicMenuRows(Menu.MAIN_MENU_OPTION5) +
                 new EmptyLineWithPipesPrinter().printEmptyLineWithPipe() +
                 new EmptyLineWithPipesPrinter().printEmptyLineWithPipe() +
                 DynamicLinePrinter.printDynamicMenuRowsPurple(Menu.MAIN_MENU_EXIT) +
@@ -80,6 +81,19 @@ public class MenuBuilder {
                 DynamicLinePrinter.printDynamicMenuRows(NearestEvents.next3Days) +
                 new EmptyLineWithPipesPrinter().printEmptyLineWithPipe() +
                 DynamicLinePrinter.printDynamicMenuRows(NearestEvents.exit) +
+                new EmptyLineWithPipesPrinter().printEmptyLineWithPipe() +
+                MENU_TOP_PIPE);
+    }
+
+    static void printFavoriteEvent(){
+        stdout.info(MENU_BOTTOM_PIPE +
+                new EmptyLineWithPipesPrinter().printEmptyLineWithPipe() +
+                new EmptyLineWithPipesPrinter().printEmptyLineWithPipe() +
+                DynamicLinePrinter.printDynamicMenuRows(FavoritesMenu.first) +
+                DynamicLinePrinter.printDynamicMenuRows(FavoritesMenu.second) +
+                DynamicLinePrinter.printDynamicMenuRows(FavoritesMenu.third) +
+                new EmptyLineWithPipesPrinter().printEmptyLineWithPipe() +
+                DynamicLinePrinter.printDynamicMenuRows(FavoritesMenu.exit) +
                 new EmptyLineWithPipesPrinter().printEmptyLineWithPipe() +
                 MENU_TOP_PIPE);
     }
