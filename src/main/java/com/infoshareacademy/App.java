@@ -4,6 +4,7 @@ import com.infoshareacademy.menu.AddNewEvents;
 import com.infoshareacademy.menu.Menu;
 import com.infoshareacademy.service.parser.Parser;
 
+import static com.infoshareacademy.menu.AddNewEvents.addNewEvent;
 
 
 public class App {

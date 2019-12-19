@@ -15,6 +15,7 @@ import java.util.List;
 
 public class Parser {
     private static final Logger stdout = LoggerFactory.getLogger("CONSOLE_OUT");
+    public static final String JSON_REPOSITORY = "JSON_example";
 
     ObjectMapper objectMapper = new ObjectMapper();
     List<Event> events = new ArrayList<>();
@@ -35,9 +36,9 @@ public class Parser {
         EventsRepository.getInstance().getEvents().addAll(events);
     }
 
-    public void parseDataToJson(String filename, Event newEventToBeAdded){
+    public void parseDataToJson(){
         try{
-            objectMapper.writeValue(new File(filename),newEventToBeAdded);
+            objectMapper.writeValue(new File(JSON_REPOSITORY), EventsRepository.getInstance().getEvents());
         } catch (IOException e) {
             stdout.info("Brak pliku, nalęzy wprowadzić poprawną nazwę pliku" + "\n");
         }

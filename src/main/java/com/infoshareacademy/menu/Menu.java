@@ -17,6 +17,7 @@ public class Menu extends MenuBuilder {
     static final String MAIN_MENU_OPTION2 = "2. Pokaż najbliższe wydarzenia";
     static final String MAIN_MENU_OPTION3 = "3. Pokaż wydarzenie wyszukanych organizatorów oraz dat";
     static final String MAIN_MENU_OPTION4 = "4. Wyszukaj wydarzenie";
+    static final String MAIN_MENU_OPTION5 = "5. Dodaj nowe wydarzenie";
     static final String MAIN_MENU_EXIT = "Wpisane 9 powoduje wyjscie z programu";
 
     public static void mainMenu() {
@@ -45,6 +46,10 @@ public class Menu extends MenuBuilder {
                 case 4:
                     ScreenCleaner.cleanConsoleWindow();
                     new EventSearch().showSearchResults();
+                    break;
+                case 5:
+                    ScreenCleaner.cleanConsoleWindow();
+                    new AddNewEvents().addNewEvent();
                     break;
                 case 9:
                     MenuBuilder.printGoodByeWindow();

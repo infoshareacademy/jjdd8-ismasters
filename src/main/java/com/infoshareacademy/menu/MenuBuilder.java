@@ -33,6 +33,7 @@ public class MenuBuilder {
                  DynamicLinePrinter.printDynamicMenuRows(Menu.MAIN_MENU_OPTION2) +
                  DynamicLinePrinter.printDynamicMenuRows(Menu.MAIN_MENU_OPTION3) +
                  DynamicLinePrinter.printDynamicMenuRows(Menu.MAIN_MENU_OPTION4) +
+                 DynamicLinePrinter.printDynamicMenuRows(Menu.MAIN_MENU_OPTION5) +
                 new EmptyLineWithPipesPrinter().printEmptyLineWithPipe() +
                 new EmptyLineWithPipesPrinter().printEmptyLineWithPipe() +
                 DynamicLinePrinter.printDynamicMenuRowsPurple(Menu.MAIN_MENU_EXIT) +
