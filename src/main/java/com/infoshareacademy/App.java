@@ -21,7 +21,7 @@ public class App {
         final String JSON = "JSON_example";
         Parser parser = new Parser();
         parser.initialization(JSON);
-//        Menu.mainMenu();
+        Menu.mainMenu();
 //        NearestEventInTime.nearestInTime();
     }
 
