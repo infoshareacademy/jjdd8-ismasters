@@ -7,6 +7,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.time.format.ResolverStyle;
 import java.util.function.Predicate;
 
 public class EventSearch {
@@ -29,11 +31,12 @@ public class EventSearch {
         Predicate<Event> searchCondition;
         ScreenCleaner.cleanConsoleWindow();
         DateValidator dateValidator = new DateValidator();
-        boolean isDateToEarly = true;
+
 
         while (menuExitCode != 9) {
 
             MenuBuilder.printGeneralEventSearch();
+            boolean isDateToEarly = true;
 
             switch (ChoiceGetter.getChoice()) {
                 case 1:
@@ -70,6 +73,7 @@ public class EventSearch {
                     break;
 
                 case 3:
+                    LocalDate searchDate;
                     do {
                         do {
                             stdout.info("Podaj datę w formacie YYYY-MM-DD do wyszukania i wciśnij ENTER\n");
@@ -80,15 +84,15 @@ public class EventSearch {
                             }
                         }
                         while (!dateValidator.isDateValid(searchString));
-
-                        if (LocalDate.parse(searchString).isBefore(LocalDate.now())) {
+                        searchDate = LocalDate.parse(searchString, DateTimeFormatter.ofPattern("yyyy-MM-dd").withResolverStyle(ResolverStyle.SMART));
+                        if (searchDate.isBefore(LocalDate.now())) {
                             stdout.info("\nWybierz dzień dzisiejszy lub późniejszą datę!\n\n");
                         } else {
                             isDateToEarly = false;
                         }
                     } while (isDateToEarly);
 
-                    stdout.info("Szukam: " + searchString + "\n\n");
+                    stdout.info("Szukam: " + searchDate.toString() + "\n\n");
                     String effectiveFinalSearchByDate = searchString;
                     searchCondition = event -> event.getStartDate().contains(effectiveFinalSearchByDate);
                     searchEvents(new FilterRepository(), searchCondition);

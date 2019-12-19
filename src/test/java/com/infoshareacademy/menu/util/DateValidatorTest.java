@@ -18,6 +18,7 @@ class DateValidatorTest {
         assertTrue(dateValidator.isDateValid("2020-02-28"));
         assertTrue(dateValidator.isDateValid("2019-02-28"));
         assertTrue(dateValidator.isDateValid("2019-12-31"));
+        assertTrue(dateValidator.isDateValid("2019-12-19"));
 
 
     }
@@ -30,7 +31,6 @@ class DateValidatorTest {
         assertFalse(dateValidator.isDateValid("2019-1-1"));
         assertFalse(dateValidator.isDateValid("2019"));
         assertFalse(dateValidator.isDateValid("01"));
-        assertFalse(dateValidator.isDateValid("2019-02-29"));
         assertFalse(dateValidator.isDateValid("asdgfd"));
 
     }
