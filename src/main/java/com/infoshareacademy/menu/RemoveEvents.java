@@ -27,9 +27,6 @@ public class RemoveEvents {
             if ((event.getid() == Id)){
                 stdout.info("\n" + "Wydarzenie nadal znajduje się w zbiorze");
             }
-            else {
-                stdout.info("\n" + "Wydarzenie usunięto z repositorium." +"\n" + "Zmiany zapisano do pliku źródłowego.");
-            }
         }
     }
     public void removeEventFromRepository(){

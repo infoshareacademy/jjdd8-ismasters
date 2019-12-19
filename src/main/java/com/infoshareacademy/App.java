@@ -22,11 +22,9 @@ public class App {
         Parser parser = new Parser();
         parser.initialization(JSON_REPOSITORY);
 
-        //Menu.mainMenu();
-        //AddNewEvents addNewEvents = new AddNewEvents();
-        //addNewEvents.addNewEvent();
-        RemoveEvents removeEvents = new RemoveEvents();
-        removeEvents.removeEvent(70023);
+        Menu.mainMenu();
+
+
     }
 }
 
