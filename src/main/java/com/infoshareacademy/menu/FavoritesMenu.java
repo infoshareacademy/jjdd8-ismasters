@@ -14,7 +14,6 @@ public class FavoritesMenu {
     private static final String FAVORITES_CSV_FILE_PATH = "./favorites.csv";
 
 
-
     static String first = "1. Pokaż ulubione wydarzenia";
     static String second = "2. Dodaj wydarzenie do ulubionych";
     static String third = "3. Usuń wydarzenie z ulubionych";
@@ -27,6 +26,11 @@ public class FavoritesMenu {
         int returnCheckInt = 0;
 
         while (returnCheckInt != 9) {
+
+            if (!Menu.BREADCRUMBSTACK.peek().equals("Ulubione wydarzenia")) {
+                Menu.BREADCRUMBSTACK.add("Ulubione wydarzenia");
+            }
+            BreadcrumbsPrinter.printBreadcrumbs();
 
             MenuBuilder.printFavoriteEvent();
 
@@ -43,6 +47,7 @@ public class FavoritesMenu {
                     break;
                 case 9:
                     ScreenCleaner.cleanConsoleWindow();
+                    Menu.BREADCRUMBSTACK.pop();
                     returnCheckInt = 9;
                     break;
                 case 0:
@@ -51,12 +56,5 @@ public class FavoritesMenu {
                     MenuBuilder.printNumberInactiveInfo();
             }
         }
-    }
-
-    public static void main(String[] args) {
-
-        Parser parser = new Parser();
-        parser.initialization(JSON_REPOSITORY);
-        new FavoritesMenu().showFavoritesOnLoad();
     }
 }
