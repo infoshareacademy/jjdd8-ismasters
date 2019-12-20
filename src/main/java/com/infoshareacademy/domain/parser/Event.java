@@ -3,7 +3,6 @@ package com.infoshareacademy.domain.parser;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.infoshareacademy.menu.MenuBuilder;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class Event {
@@ -166,6 +165,4 @@ public class Event {
                 getOrganizer() + "\n" +
                 "Adres WWW: " + getUrls() + "\n";
     }
-
-
 }

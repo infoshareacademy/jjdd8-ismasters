@@ -3,16 +3,14 @@ package com.infoshareacademy.filter;
 import com.infoshareacademy.domain.parser.Event;
 import com.infoshareacademy.repository.EventsRepository;
 import com.infoshareacademy.repository.FilterRepository;
-
 import java.time.LocalDate;
 import java.util.*;
 import java.util.stream.Collectors;
 
-
 public class FilteringOnDatesAndOrganizers {
     List<Event> resultList = new ArrayList<>();
-    public final static int START_DATE_SUBSTRING = 0;
-    public final static int END_DATE_SUBSTRING = 10;
+    public static final int START_DATE_SUBSTRING = 0;
+    public static final int END_DATE_SUBSTRING = 10;
     public Set<String> getAllOrganizers() {
         Set<String> allOrganizers = new HashSet<>();
         for (Event event : EventsRepository.getInstance().getEvents()) {
@@ -36,7 +34,7 @@ public class FilteringOnDatesAndOrganizers {
 
         List<Event> sortedList;
         sortedList = resultListAfterOrganizerFilter.stream()
-                .sorted(Comparator.comparing((a) -> a.getOrganizer().getDesignation()))
+                .sorted(Comparator.comparing(a -> a.getOrganizer().getDesignation()))
                 .collect(Collectors.toList());
         return sortedList;
 
