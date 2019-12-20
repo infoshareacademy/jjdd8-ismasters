@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
-public class EventsByOrganizer {
+class EventsByOrganizer {
 
     private static final Logger stdout = LoggerFactory.getLogger("CONSOLE_OUT");
     private static List<String> listOfSelectedOrganizers = new ArrayList<>();

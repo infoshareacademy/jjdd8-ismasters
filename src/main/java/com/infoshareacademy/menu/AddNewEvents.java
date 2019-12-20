@@ -26,8 +26,9 @@ public class AddNewEvents {
     public static String newOrganizerDesignation;
     public static String newWWW;
     public static int randomNewId;
-    public final static String EMPTY_STRING = "";
-    public final static Integer EMPTY_INTEGER = 0;
+    public static final String EMPTY_STRING = "";
+    public static final Integer EMPTY_INTEGER = 0;
+    static final String give3AtLeastChars = "Wpisz co najmniej 3 znaki\n";
 
 
     DateValidator dateValidator = new DateValidator();
@@ -72,7 +73,7 @@ public class AddNewEvents {
             stdout.info("\n" + "Podaj strone internetową" + "\n");
             newWWW = Menu.scanner.nextLine();
             if (newWWW.length() < 3) {
-                stdout.info("Wpisz co najmniej 3 znaki\n");
+                stdout.info(give3AtLeastChars);
             }
         } while ((newWWW.length() < 3));
         return newWWW;
@@ -83,7 +84,7 @@ public class AddNewEvents {
             stdout.info("\n" + "Podaj organizatora" + "\n");
             newOrganizerDesignation = Menu.scanner.nextLine();
             if (newOrganizerDesignation.length() < 3) {
-                stdout.info("Wpisz co najmniej 3 znaki\n");
+                stdout.info(give3AtLeastChars);
             }
         } while ((newOrganizerDesignation.length() < 3));
         return newOrganizerDesignation;
@@ -113,7 +114,7 @@ public class AddNewEvents {
             stdout.info("\n" + "Podaj miejsca wydarzenia" + "\n");
             newPlaceName = Menu.scanner.nextLine();
             if (newPlaceName.length() < 3) {
-                stdout.info("Wpisz co najmniej 3 znaki\n");
+                stdout.info(give3AtLeastChars);
             }
         } while ((newPlaceName.length() < 3));
         return newPlaceName;
@@ -124,7 +125,7 @@ public class AddNewEvents {
             stdout.info("\n" + "Podaj opis miejsca wydarzenia" + "\n");
             newPlaceSubname = Menu.scanner.nextLine();
             if (newPlaceSubname.length() < 3) {
-                stdout.info("Wpisz co najmniej 3 znaki\n");
+                stdout.info(give3AtLeastChars);
             }
         } while ((newPlaceSubname.length() < 3));
         return newPlaceSubname;
@@ -135,7 +136,7 @@ public class AddNewEvents {
             stdout.info("\n" + "Podaj nazwe wydarzenia" + "\n");
             newEventName = Menu.scanner.nextLine();
             if (newEventName.length() < 3) {
-                stdout.info("Wpisz co najmniej 3 znaki\n");
+                stdout.info(give3AtLeastChars);
             }
         } while ((newEventName.length() < 3));
         return newEventName;
