@@ -1,5 +1,6 @@
 package com.infoshareacademy.domain.parser;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.infoshareacademy.menu.MenuBuilder;
 
 import java.util.ArrayList;
@@ -12,15 +13,38 @@ public class Event {
     private String endDate;
     private String name;
     private Urls urls;
-    private List<Attachments> attachments = new ArrayList<>();
+    @JsonIgnoreProperties(ignoreUnknown = true)
+    private List<Attachments> attachments ;
+    @JsonIgnoreProperties(ignoreUnknown = true)
     private String descLong;
     private int categoryId;
     private String startDate;
     private Organizer organizer;
+    @JsonIgnoreProperties(ignoreUnknown = true)
     private int active;
+    @JsonIgnoreProperties(ignoreUnknown = true)
     private String descShort;
+    @JsonIgnoreProperties(ignoreUnknown = true)
     private Ticket tickets;
 
+    public Event() {
+    }
+
+    public Event(int id, Place place, String endDate, String name, Urls urls, List<Attachments> attachments, String descLong, int categoryId, String startDate, Organizer organizer, int active, String descShort, Ticket tickets) {
+        this.id = id;
+        this.place = place;
+        this.endDate = endDate;
+        this.name = name;
+        this.urls = urls;
+        this.attachments = attachments;
+        this.descLong = descLong;
+        this.categoryId = categoryId;
+        this.startDate = startDate;
+        this.organizer = organizer;
+        this.active = active;
+        this.descShort = descShort;
+        this.tickets = tickets;
+    }
 
     public int getid() {
         return id;
@@ -135,7 +159,8 @@ public class Event {
     }
 
     public String toString() {
-        return "Nazwa wydarzenia:" + MenuBuilder.CYAN +   getName() + MenuBuilder.DEFAULT + "\n" +
+        return "Nazwa wydarzenia: " + MenuBuilder.CYAN +   getName() + MenuBuilder.DEFAULT + "\n" +
+                "Id wydarzenia: " + getid() + "\n"+
                 "Miejsce wydarzenia: " + getPlace() + "\n" +
                 "Rozpoczęcie: " + extractDateOnly(getStartDate()) + ", godz: " + extractTimeOnly(getStartDate()) + "\n" +
                 getOrganizer() + "\n" +

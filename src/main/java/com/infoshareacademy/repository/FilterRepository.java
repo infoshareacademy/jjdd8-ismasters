@@ -4,6 +4,8 @@ import com.infoshareacademy.domain.parser.Event;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Predicate;
+import java.util.stream.Collectors;
 
 public class FilterRepository {
     List<Event> filteredOutPutList = new ArrayList<>();
@@ -13,7 +15,7 @@ public class FilterRepository {
         return filteredOutPutList;
     }
 
-    public List<Event> filterAllDatesEvents(String inputDate) {
+    public  List<Event> filterAllDatesEvents(String inputDate) {
 
         for (Event event : EventsRepository.getInstance().getEvents()) {
             if (event.getStartDate().contains(inputDate)) {
@@ -32,5 +34,14 @@ public class FilterRepository {
         }
         return filteredOutPutList;
     }
+
+
+    public List<Event> filterWithLambdaPassedIn(Predicate<Event> lambda) {
+
+        return EventsRepository.getEvents().stream()
+                .filter(lambda)
+                .collect(Collectors.toList());
+    }
+
 }
 

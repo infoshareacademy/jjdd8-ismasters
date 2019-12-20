@@ -4,6 +4,15 @@ public class Organizer {
     private int id;
     private String designation;
 
+
+    public Organizer() {
+    }
+
+    public Organizer(int id, String designation) {
+        this.id = id;
+        this.designation = designation;
+    }
+
     public int getId() {
         return id;
     }
