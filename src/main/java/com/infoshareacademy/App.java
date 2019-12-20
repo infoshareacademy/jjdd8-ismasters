@@ -25,15 +25,16 @@ public class App {
 //        NearestEventInTime.nearestInTime();
     }
 
-    public static void loadConfig(){
+    public static void loadConfig() {
         try {
             File configFile = new File("config.properties");
             FileReader reader = new FileReader(configFile);
             Properties properties = new Properties();
             properties.load(reader);
-        } catch (FileNotFoundException e){
+        } catch (FileNotFoundException e) {
             stdout.info("\nBrak pliku ustawień");
-        } catch (IOException ex){
+        } catch (IOException ex) {
             stdout.info("\nBłąd odczytu pliku");
         }
     }
+}
