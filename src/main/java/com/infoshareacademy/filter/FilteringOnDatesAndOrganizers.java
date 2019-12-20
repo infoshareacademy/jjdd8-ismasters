@@ -52,6 +52,7 @@ public class FilteringOnDatesAndOrganizers {
         }
         return filteredOutputList;
     }
+
     public boolean filterOnDates(Event event,LocalDate startDate, LocalDate endDate){
         return LocalDate.parse(event.getStartDate().substring(START_DATE_SUBSTRING, END_DATE_SUBSTRING)).isAfter(startDate.minusDays(1))
                 && LocalDate.parse(event.getStartDate().substring(START_DATE_SUBSTRING, END_DATE_SUBSTRING)).isBefore(endDate.plusDays(1));
