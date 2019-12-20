@@ -37,4 +37,17 @@ public class App {
             stdout.info("\nBłąd odczytu pliku");
         }
     }
+
+    public static void loadConfig(){
+        try {
+            File configFile = new File("config.properties");
+            FileReader reader = new FileReader(configFile);
+            Properties properties = new Properties();
+            properties.load(reader);
+        } catch (FileNotFoundException e){
+            stdout.info("\nBrak pliku ustawień");
+        } catch (IOException ex){
+            stdout.info("\nBłąd odczytu pliku");
+        }
+    }
 }
