@@ -2,138 +2,20 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="webApp:war exploded" />
+      <artifact name="web:war exploded" />
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f60126c2-6408-4cff-b97e-8f17b26f5b69" name="Default Changelist" comment="Add .gitignore">
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/webApp_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/webApp_war_exploded.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/webApp_war.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/webApp_war_exploded.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jjdd8-ismasters.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jjdd8-ismasters.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/consoleApp/jjdd8-ismasters-console.iml" beforeDir="false" afterPath="$PROJECT_DIR$/app/app.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/consoleApp/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/consoleApp/src/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/consoleApp/src/JSON_example" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/JSON_example" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/consoleApp/src/main/java/com/infoshareacademy/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/infoshareacademy/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/consoleApp/src/main/java/com/infoshareacademy/domain/parser/Attachments.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/infoshareacademy/domain/parser/Attachments.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/consoleApp/src/main/java/com/infoshareacademy/domain/parser/Event.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/infoshareacademy/domain/parser/Event.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/consoleApp/src/main/java/com/infoshareacademy/domain/parser/FavoriteEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/infoshareacademy/domain/parser/FavoriteEvent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/consoleApp/src/main/java/com/infoshareacademy/domain/parser/Organizer.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/infoshareacademy/domain/parser/Organizer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/consoleApp/src/main/java/com/infoshareacademy/domain/parser/Place.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/infoshareacademy/domain/parser/Place.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/consoleApp/src/main/java/com/infoshareacademy/domain/parser/Ticket.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/infoshareacademy/domain/parser/Ticket.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/consoleApp/src/main/java/com/infoshareacademy/domain/parser/Urls.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/infoshareacademy/domain/parser/Urls.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/consoleApp/src/main/java/com/infoshareacademy/filter/FilteringOnDatesAndOrganizers.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/infoshareacademy/filter/FilteringOnDatesAndOrganizers.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/consoleApp/src/main/java/com/infoshareacademy/menu/AddNewEvents.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/infoshareacademy/menu/AddNewEvents.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/consoleApp/src/main/java/com/infoshareacademy/menu/BreadcrumbsPrinter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/infoshareacademy/menu/BreadcrumbsPrinter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/consoleApp/src/main/java/com/infoshareacademy/menu/ChoiceGetter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/infoshareacademy/menu/ChoiceGetter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/consoleApp/src/main/java/com/infoshareacademy/menu/DynamicLinePrinter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/infoshareacademy/menu/DynamicLinePrinter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/consoleApp/src/main/java/com/infoshareacademy/menu/EmptyLineWithPipesPrinter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/infoshareacademy/menu/EmptyLineWithPipesPrinter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/consoleApp/src/main/java/com/infoshareacademy/menu/EventSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/infoshareacademy/menu/EventSearch.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/consoleApp/src/main/java/com/infoshareacademy/menu/EventsByOrganizer.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/infoshareacademy/menu/EventsByOrganizer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/consoleApp/src/main/java/com/infoshareacademy/menu/EventsPrinter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/infoshareacademy/menu/EventsPrinter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/consoleApp/src/main/java/com/infoshareacademy/menu/FavoritesMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/infoshareacademy/menu/FavoritesMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/consoleApp/src/main/java/com/infoshareacademy/menu/FavoritesPrinter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/infoshareacademy/menu/FavoritesPrinter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/consoleApp/src/main/java/com/infoshareacademy/menu/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/infoshareacademy/menu/Menu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/consoleApp/src/main/java/com/infoshareacademy/menu/MenuBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/infoshareacademy/menu/MenuBuilder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/consoleApp/src/main/java/com/infoshareacademy/menu/NearestEvents.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/infoshareacademy/menu/NearestEvents.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/consoleApp/src/main/java/com/infoshareacademy/menu/RemoveEvents.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/infoshareacademy/menu/RemoveEvents.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/consoleApp/src/main/java/com/infoshareacademy/menu/ScreenCleaner.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/infoshareacademy/menu/ScreenCleaner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/consoleApp/src/main/java/com/infoshareacademy/menu/util/DateValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/infoshareacademy/menu/util/DateValidator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/consoleApp/src/main/java/com/infoshareacademy/menu/util/HourValidation.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/infoshareacademy/menu/util/HourValidation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/consoleApp/src/main/java/com/infoshareacademy/menu/util/InputValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/infoshareacademy/menu/util/InputValidator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/consoleApp/src/main/java/com/infoshareacademy/repository/EventsRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/infoshareacademy/repository/EventsRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/consoleApp/src/main/java/com/infoshareacademy/repository/FavoritesRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/infoshareacademy/repository/FavoritesRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/consoleApp/src/main/java/com/infoshareacademy/repository/FilterRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/infoshareacademy/repository/FilterRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/consoleApp/src/main/java/com/infoshareacademy/service/parser/FavoritesParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/infoshareacademy/service/parser/FavoritesParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/consoleApp/src/main/java/com/infoshareacademy/service/parser/Parser.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/infoshareacademy/service/parser/Parser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/consoleApp/src/main/resources/log4j2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/resources/log4j2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/consoleApp/src/test/java/com/infoshareacademy/EventsRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/java/com/infoshareacademy/EventsRepositoryTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/consoleApp/src/test/java/com/infoshareacademy/domain/parser/FavoriteEventTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/java/com/infoshareacademy/domain/parser/FavoriteEventTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/consoleApp/src/test/java/com/infoshareacademy/menu/ChoiceGetterTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/java/com/infoshareacademy/menu/ChoiceGetterTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/consoleApp/src/test/java/com/infoshareacademy/menu/util/DateValidatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/java/com/infoshareacademy/menu/util/DateValidatorTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/consoleApp/src/test/java/com/infoshareacademy/menu/util/InputValidatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/java/com/infoshareacademy/menu/util/InputValidatorTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/consoleApp/src/test/resources/JSON_test.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/resources/JSON_test.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/consoleApp/src/test/resources/mockito-extensions/org.mockito.plugins.MockMaker" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/resources/mockito-extensions/org.mockito.plugins.MockMaker" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/consoleApp/target/classes/com/infoshareacademy/App.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/consoleApp/target/classes/com/infoshareacademy/domain/parser/Attachments.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/consoleApp/target/classes/com/infoshareacademy/domain/parser/Event.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/consoleApp/target/classes/com/infoshareacademy/domain/parser/FavoriteEvent.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/consoleApp/target/classes/com/infoshareacademy/domain/parser/Organizer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/consoleApp/target/classes/com/infoshareacademy/domain/parser/Place.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/consoleApp/target/classes/com/infoshareacademy/domain/parser/Ticket.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/consoleApp/target/classes/com/infoshareacademy/domain/parser/Urls.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/consoleApp/target/classes/com/infoshareacademy/filter/FilteringOnDatesAndOrganizers.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/consoleApp/target/classes/com/infoshareacademy/menu/AddNewEvents.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/consoleApp/target/classes/com/infoshareacademy/menu/BreadcrumbsPrinter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/consoleApp/target/classes/com/infoshareacademy/menu/ChoiceGetter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/consoleApp/target/classes/com/infoshareacademy/menu/DynamicLinePrinter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/consoleApp/target/classes/com/infoshareacademy/menu/EmptyLineWithPipesPrinter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/consoleApp/target/classes/com/infoshareacademy/menu/EventSearch.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/consoleApp/target/classes/com/infoshareacademy/menu/EventsByOrganizer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/consoleApp/target/classes/com/infoshareacademy/menu/EventsPrinter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/consoleApp/target/classes/com/infoshareacademy/menu/FavoritesMenu.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/consoleApp/target/classes/com/infoshareacademy/menu/FavoritesPrinter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/consoleApp/target/classes/com/infoshareacademy/menu/Menu.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/consoleApp/target/classes/com/infoshareacademy/menu/MenuBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/consoleApp/target/classes/com/infoshareacademy/menu/NearestEvents.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/consoleApp/target/classes/com/infoshareacademy/menu/RemoveEvents.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/consoleApp/target/classes/com/infoshareacademy/menu/ScreenCleaner.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/consoleApp/target/classes/com/infoshareacademy/menu/util/DateValidator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/consoleApp/target/classes/com/infoshareacademy/menu/util/HourValidation.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/consoleApp/target/classes/com/infoshareacademy/menu/util/InputValidator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/consoleApp/target/classes/com/infoshareacademy/repository/EventsRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/consoleApp/target/classes/com/infoshareacademy/repository/FavoritesRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/consoleApp/target/classes/com/infoshareacademy/repository/FilterRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/consoleApp/target/classes/com/infoshareacademy/service/parser/FavoritesParser.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/consoleApp/target/classes/com/infoshareacademy/service/parser/Parser$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/consoleApp/target/classes/com/infoshareacademy/service/parser/Parser.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/consoleApp/target/classes/log4j2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/consoleApp/target/consoleApp-1.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/app/target/consoleApp-1.0.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/consoleApp/target/maven-archiver/pom.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/consoleApp/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/consoleApp/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/consoleApp/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/consoleApp/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/consoleApp/target/surefire-reports/TEST-com.infoshareacademy.EventsRepositoryTest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/consoleApp/target/surefire-reports/com.infoshareacademy.EventsRepositoryTest.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/consoleApp/target/test-classes/JSON_test.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/consoleApp/target/test-classes/com/infoshareacademy/EventsRepositoryTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/consoleApp/target/test-classes/com/infoshareacademy/domain/parser/FavoriteEventTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/consoleApp/target/test-classes/com/infoshareacademy/menu/ChoiceGetterTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/consoleApp/target/test-classes/com/infoshareacademy/menu/util/DateValidatorTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/consoleApp/target/test-classes/com/infoshareacademy/menu/util/InputValidatorTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/consoleApp/target/test-classes/mockito-extensions/org.mockito.plugins.MockMaker" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webApp/jjdd8-ismasters-web.iml" beforeDir="false" afterPath="$PROJECT_DIR$/web/web.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webApp/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webApp/src/main/java/com/isa/config/ConfigProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/isa/config/ConfigProvider.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webApp/src/main/java/com/isa/config/TemplateProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/isa/config/TemplateProvider.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webApp/src/main/java/com/isa/servlet/WelcomeUserServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/isa/servlet/WelcomeUserServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webApp/src/main/webapp/WEB-INF/fm-templates/welcome-user.ftlh" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/webapp/WEB-INF/fm-templates/welcome-user.ftlh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webApp/src/main/webapp/WEB-INF/jboss-web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/webapp/WEB-INF/jboss-web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webApp/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webApp/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/webapp/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webApp/target/classes/META-INF/jjdd8-ismasters-web.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webApp/target/classes/com/isa/config/ConfigProvider.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webApp/target/classes/com/isa/config/TemplateProvider.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/target/classes/com/isa/config/TemplateProvider.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webApp/target/classes/com/isa/servlet/WelcomeUserServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webApp/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/web/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webApp/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webApp/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webApp/target/webApp.war" beforeDir="false" afterPath="$PROJECT_DIR$/web/target/webApp.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webApp/target/webApp/WEB-INF/classes/META-INF/jjdd8-ismasters-web.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webApp/target/webApp/WEB-INF/classes/com/isa/config/ConfigProvider.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webApp/target/webApp/WEB-INF/classes/com/isa/config/TemplateProvider.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webApp/target/webApp/WEB-INF/classes/com/isa/servlet/WelcomeUserServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webApp/target/webApp/WEB-INF/fm-templates/welcome-user.ftlh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webApp/target/webApp/WEB-INF/jboss-web.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webApp/target/webApp/WEB-INF/lib/activation-1.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webApp/target/webApp/WEB-INF/lib/freemarker-2.3.29.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webApp/target/webApp/WEB-INF/lib/javaee-api-8.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webApp/target/webApp/WEB-INF/lib/javax.mail-1.6.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webApp/target/webApp/WEB-INF/web.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webApp/target/webApp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/target/webApp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/app/app.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/web.iml" beforeDir="false" afterPath="$PROJECT_DIR$/web/web.iml" afterDir="false" />
     </list>
     <list id="604b85a8-f01e-407c-848c-1001ddbe1f55" name="Refactor bad number format" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -245,7 +127,7 @@
     <property name="full.screen.before.presentation.mode" value="true" />
     <property name="jdk.selected.JAVA_MODULE" value="1.8" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/pom.xml" />
-    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="restartRequiresConfirmation" value="false" />
@@ -301,11 +183,11 @@
       </method>
     </configuration>
     <configuration name="JBoss 18.0.1.Final" type="JBossConfiguration" factoryName="Local" APPLICATION_SERVER_NAME="JBoss 18.0.1.Final" ALTERNATIVE_JRE_ENABLED="false" show_console_on_std_out="true">
-      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/web_war_exploded" />
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/welcome-user?name=GGG" />
       <option name="BROWSER_ID" value="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" />
-      <option name="UPDATING_POLICY" value="redeploy-artifacts" />
+      <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
-        <artifact name="webApp:war exploded">
+        <artifact name="web:war exploded">
           <settings />
         </artifact>
       </deployment>
@@ -370,7 +252,6 @@
         <option name="Make" enabled="true" />
         <option name="BuildArtifacts" enabled="true">
           <artifact name="web:war exploded" />
-          <artifact name="webApp:war exploded" />
         </option>
       </method>
     </configuration>
@@ -532,7 +413,8 @@
       <workItem from="1577270960337" duration="1489000" />
       <workItem from="1577272472001" duration="34000" />
       <workItem from="1577272744191" duration="4677000" />
-      <workItem from="1577279797586" duration="1429000" />
+      <workItem from="1577279797586" duration="2150000" />
+      <workItem from="1577286498304" duration="473000" />
     </task>
     <task id="LOCAL-00001" summary="Zmieniona struktura buildera menu by Rafał">
       <created>1575301989870</created>
@@ -717,10 +599,10 @@
       <screen x="0" y="25" width="1366" height="743" />
     </state>
     <state x="416" y="154" width="524" height="484" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/0.25.1366.743@0.25.1366.743" timestamp="1575298875331" />
-    <state x="550" y="111" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1577278396399">
+    <state x="550" y="111" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1577286728579">
       <screen x="0" y="25" width="1920" height="1055" />
     </state>
-    <state x="550" y="111" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.25.1920.1055/265.1080.1366.768@0.25.1920.1055" timestamp="1577278396399" />
+    <state x="550" y="111" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.25.1920.1055/265.1080.1366.768@0.25.1920.1055" timestamp="1577286728579" />
     <state x="550" y="173" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.25.1920.1823@0.25.1920.1823" timestamp="1576660675399" />
     <state x="100" y="125" width="1720" height="855" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1576787609792">
       <screen x="0" y="25" width="1920" height="1055" />
@@ -813,53 +695,53 @@
       <screen x="0" y="25" width="1920" height="1055" />
     </state>
     <state width="930" height="982" key="GridCell.Tab.-1.right/0.25.1920.1055/288.1080.1366.768@0.25.1920.1055" timestamp="1576509560480" />
-    <state width="703" height="426" key="GridCell.Tab.0.bottom" timestamp="1577279988365">
+    <state width="701" height="426" key="GridCell.Tab.0.bottom" timestamp="1577286741878">
       <screen x="0" y="25" width="1920" height="1055" />
     </state>
     <state width="949" height="436" key="GridCell.Tab.0.bottom/0.25.1366.743/283.1080.1366.768@0.25.1366.743" timestamp="1576857360773" />
     <state width="1122" height="321" key="GridCell.Tab.0.bottom/0.25.1366.743/288.1080.1366.768@0.25.1366.743" timestamp="1576781321724" />
     <state width="531" height="908" key="GridCell.Tab.0.bottom/0.25.1366.743/318.1080.1366.768@0.25.1366.743" timestamp="1576603076709" />
     <state width="665" height="596" key="GridCell.Tab.0.bottom/0.25.1366.743@0.25.1366.743" timestamp="1576654957242" />
-    <state width="703" height="426" key="GridCell.Tab.0.bottom/0.25.1920.1055/265.1080.1366.768@0.25.1920.1055" timestamp="1577279988365" />
+    <state width="701" height="426" key="GridCell.Tab.0.bottom/0.25.1920.1055/265.1080.1366.768@0.25.1920.1055" timestamp="1577286741878" />
     <state width="986" height="341" key="GridCell.Tab.0.bottom/0.25.1920.1055/283.1080.1366.768@0.25.1920.1055" timestamp="1576852239476" />
     <state width="1475" height="341" key="GridCell.Tab.0.bottom/0.25.1920.1055/288.1080.1366.768@0.25.1920.1055" timestamp="1576841543541" />
     <state width="423" height="908" key="GridCell.Tab.0.bottom/0.25.1920.1055/318.1080.1366.768@0.25.1920.1055" timestamp="1576599171737" />
     <state width="366" height="621" key="GridCell.Tab.0.bottom/0.25.1920.1055/318.1080.1366.768@318.1080.1366.768" timestamp="1576569490596" />
     <state width="575" height="908" key="GridCell.Tab.0.bottom/0.25.1920.1823@0.25.1920.1823" timestamp="1576671727040" />
-    <state width="703" height="426" key="GridCell.Tab.0.center" timestamp="1577279988365">
+    <state width="701" height="426" key="GridCell.Tab.0.center" timestamp="1577286741878">
       <screen x="0" y="25" width="1920" height="1055" />
     </state>
     <state width="949" height="436" key="GridCell.Tab.0.center/0.25.1366.743/283.1080.1366.768@0.25.1366.743" timestamp="1576857360773" />
     <state width="1122" height="321" key="GridCell.Tab.0.center/0.25.1366.743/288.1080.1366.768@0.25.1366.743" timestamp="1576781321724" />
     <state width="531" height="908" key="GridCell.Tab.0.center/0.25.1366.743/318.1080.1366.768@0.25.1366.743" timestamp="1576603076709" />
     <state width="665" height="596" key="GridCell.Tab.0.center/0.25.1366.743@0.25.1366.743" timestamp="1576654957242" />
-    <state width="703" height="426" key="GridCell.Tab.0.center/0.25.1920.1055/265.1080.1366.768@0.25.1920.1055" timestamp="1577279988365" />
+    <state width="701" height="426" key="GridCell.Tab.0.center/0.25.1920.1055/265.1080.1366.768@0.25.1920.1055" timestamp="1577286741878" />
     <state width="986" height="341" key="GridCell.Tab.0.center/0.25.1920.1055/283.1080.1366.768@0.25.1920.1055" timestamp="1576852239475" />
     <state width="1475" height="341" key="GridCell.Tab.0.center/0.25.1920.1055/288.1080.1366.768@0.25.1920.1055" timestamp="1576841543540" />
     <state width="423" height="908" key="GridCell.Tab.0.center/0.25.1920.1055/318.1080.1366.768@0.25.1920.1055" timestamp="1576599171737" />
     <state width="366" height="621" key="GridCell.Tab.0.center/0.25.1920.1055/318.1080.1366.768@318.1080.1366.768" timestamp="1576569490595" />
     <state width="575" height="908" key="GridCell.Tab.0.center/0.25.1920.1823@0.25.1920.1823" timestamp="1576671727039" />
-    <state width="703" height="426" key="GridCell.Tab.0.left" timestamp="1577279988365">
+    <state width="701" height="426" key="GridCell.Tab.0.left" timestamp="1577286741878">
       <screen x="0" y="25" width="1920" height="1055" />
     </state>
     <state width="949" height="436" key="GridCell.Tab.0.left/0.25.1366.743/283.1080.1366.768@0.25.1366.743" timestamp="1576857360773" />
     <state width="1122" height="321" key="GridCell.Tab.0.left/0.25.1366.743/288.1080.1366.768@0.25.1366.743" timestamp="1576781321724" />
     <state width="531" height="908" key="GridCell.Tab.0.left/0.25.1366.743/318.1080.1366.768@0.25.1366.743" timestamp="1576603076709" />
     <state width="665" height="596" key="GridCell.Tab.0.left/0.25.1366.743@0.25.1366.743" timestamp="1576654957241" />
-    <state width="703" height="426" key="GridCell.Tab.0.left/0.25.1920.1055/265.1080.1366.768@0.25.1920.1055" timestamp="1577279988365" />
+    <state width="701" height="426" key="GridCell.Tab.0.left/0.25.1920.1055/265.1080.1366.768@0.25.1920.1055" timestamp="1577286741878" />
     <state width="986" height="341" key="GridCell.Tab.0.left/0.25.1920.1055/283.1080.1366.768@0.25.1920.1055" timestamp="1576852239475" />
     <state width="1475" height="341" key="GridCell.Tab.0.left/0.25.1920.1055/288.1080.1366.768@0.25.1920.1055" timestamp="1576841543540" />
     <state width="423" height="908" key="GridCell.Tab.0.left/0.25.1920.1055/318.1080.1366.768@0.25.1920.1055" timestamp="1576599171737" />
     <state width="366" height="621" key="GridCell.Tab.0.left/0.25.1920.1055/318.1080.1366.768@318.1080.1366.768" timestamp="1576569490595" />
     <state width="575" height="908" key="GridCell.Tab.0.left/0.25.1920.1823@0.25.1920.1823" timestamp="1576671727038" />
-    <state width="703" height="426" key="GridCell.Tab.0.right" timestamp="1577279988365">
+    <state width="701" height="426" key="GridCell.Tab.0.right" timestamp="1577286741878">
       <screen x="0" y="25" width="1920" height="1055" />
     </state>
     <state width="949" height="436" key="GridCell.Tab.0.right/0.25.1366.743/283.1080.1366.768@0.25.1366.743" timestamp="1576857360773" />
     <state width="1122" height="321" key="GridCell.Tab.0.right/0.25.1366.743/288.1080.1366.768@0.25.1366.743" timestamp="1576781321724" />
     <state width="531" height="908" key="GridCell.Tab.0.right/0.25.1366.743/318.1080.1366.768@0.25.1366.743" timestamp="1576603076709" />
     <state width="665" height="596" key="GridCell.Tab.0.right/0.25.1366.743@0.25.1366.743" timestamp="1576654957242" />
-    <state width="703" height="426" key="GridCell.Tab.0.right/0.25.1920.1055/265.1080.1366.768@0.25.1920.1055" timestamp="1577279988365" />
+    <state width="701" height="426" key="GridCell.Tab.0.right/0.25.1920.1055/265.1080.1366.768@0.25.1920.1055" timestamp="1577286741878" />
     <state width="986" height="341" key="GridCell.Tab.0.right/0.25.1920.1055/283.1080.1366.768@0.25.1920.1055" timestamp="1576852239475" />
     <state width="1475" height="341" key="GridCell.Tab.0.right/0.25.1920.1055/288.1080.1366.768@0.25.1920.1055" timestamp="1576841543541" />
     <state width="423" height="908" key="GridCell.Tab.0.right/0.25.1920.1055/318.1080.1366.768@0.25.1920.1055" timestamp="1576599171737" />
@@ -943,11 +825,11 @@
       <screen x="0" y="25" width="1366" height="743" />
     </state>
     <state x="501" y="333" width="354" height="126" key="ReplaceDuplicatesPrompt/0.25.1366.743@0.25.1366.743" timestamp="1575712141355" />
-    <state x="636" y="163" width="1024" height="845" key="SettingsEditor" timestamp="1577279832438">
+    <state x="636" y="163" width="1024" height="845" key="SettingsEditor" timestamp="1577286735379">
       <screen x="0" y="25" width="1920" height="1055" />
     </state>
     <state x="187" y="25" width="1024" height="743" key="SettingsEditor/0.25.1366.743@0.25.1366.743" timestamp="1575884041791" />
-    <state x="636" y="163" width="1024" height="845" key="SettingsEditor/0.25.1920.1055/265.1080.1366.768@0.25.1920.1055" timestamp="1577279832438" />
+    <state x="636" y="163" width="1024" height="845" key="SettingsEditor/0.25.1920.1055/265.1080.1366.768@0.25.1920.1055" timestamp="1577286735379" />
     <state x="263" y="25" width="1024" height="730" key="SettingsEditor/0.25.1920.1055/288.1080.1366.768@0.25.1920.1055" timestamp="1576786315685" />
     <state x="263" y="25" key="SettingsEditor/0.25.1920.1055/318.1080.1366.768@0.25.1920.1055" timestamp="1576361327944" />
     <state x="263" y="25" width="1024" height="1055" key="SettingsEditor/0.25.1920.1823@0.25.1920.1823" timestamp="1576660624181" />

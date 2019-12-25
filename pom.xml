@@ -7,8 +7,8 @@
  <!-- <packaging>pom</packaging> -->
   <version>1.0</version>
   <modules>
-    <module>webApp</module>
-    <module>consoleApp</module>
+    <module>web</module>
+    <module>app</module>
   </modules>
   <name>is-masters</name>
   <properties>

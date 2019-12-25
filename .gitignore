@@ -1,4 +1,5 @@
+.idea
+*target
+/app/target/
+/web/target/
 /.idea/
-/webApp/target/
-/target/
-/consoleApp/target/
