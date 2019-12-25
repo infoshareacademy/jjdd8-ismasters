@@ -4,8 +4,12 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.infoshareacademy</groupId>
   <artifactId>is-masters</artifactId>
-  <packaging>jar</packaging>
+  <packaging>pom</packaging>
   <version>1.0</version>
+  <modules>
+    <module>webApp</module>
+    <module>consoleApp</module>
+  </modules>
   <name>is-masters</name>
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

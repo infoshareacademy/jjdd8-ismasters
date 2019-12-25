@@ -1,0 +1,29 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="jjdd8-ismasters-web:war exploded">
+    <output-path>$PROJECT_DIR$/webApp/target/webApp</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <exploded>true</exploded>
+        <module>jjdd8-ismasters-web</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="jjdd8-ismasters-web" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Maven: javax:javaee-api:8.0" />
+          <element id="library" level="project" name="Maven: com.sun.mail:javax.mail:1.6.0" />
+          <element id="library" level="project" name="Maven: javax.activation:activation:1.1" />
+          <element id="library" level="project" name="Maven: org.freemarker:freemarker:2.3.29" />
+        </element>
+      </element>
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/webApp/target/webApp/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="javaee-facet-resources" facet="jjdd8-ismasters-web/web/Web" />
+    </root>
+  </artifact>
+</component>
