@@ -6,8 +6,134 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f60126c2-6408-4cff-b97e-8f17b26f5b69" name="Default Changelist" comment="Remove RuntimeException handlers">
+    <list default="true" id="f60126c2-6408-4cff-b97e-8f17b26f5b69" name="Default Changelist" comment="Add .gitignore">
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/webApp_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/webApp_war_exploded.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/consoleApp/jjdd8-ismasters-console.iml" beforeDir="false" afterPath="$PROJECT_DIR$/app/app.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/consoleApp/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/consoleApp/src/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/consoleApp/src/JSON_example" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/JSON_example" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/consoleApp/src/main/java/com/infoshareacademy/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/infoshareacademy/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/consoleApp/src/main/java/com/infoshareacademy/domain/parser/Attachments.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/infoshareacademy/domain/parser/Attachments.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/consoleApp/src/main/java/com/infoshareacademy/domain/parser/Event.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/infoshareacademy/domain/parser/Event.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/consoleApp/src/main/java/com/infoshareacademy/domain/parser/FavoriteEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/infoshareacademy/domain/parser/FavoriteEvent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/consoleApp/src/main/java/com/infoshareacademy/domain/parser/Organizer.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/infoshareacademy/domain/parser/Organizer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/consoleApp/src/main/java/com/infoshareacademy/domain/parser/Place.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/infoshareacademy/domain/parser/Place.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/consoleApp/src/main/java/com/infoshareacademy/domain/parser/Ticket.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/infoshareacademy/domain/parser/Ticket.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/consoleApp/src/main/java/com/infoshareacademy/domain/parser/Urls.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/infoshareacademy/domain/parser/Urls.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/consoleApp/src/main/java/com/infoshareacademy/filter/FilteringOnDatesAndOrganizers.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/infoshareacademy/filter/FilteringOnDatesAndOrganizers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/consoleApp/src/main/java/com/infoshareacademy/menu/AddNewEvents.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/infoshareacademy/menu/AddNewEvents.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/consoleApp/src/main/java/com/infoshareacademy/menu/BreadcrumbsPrinter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/infoshareacademy/menu/BreadcrumbsPrinter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/consoleApp/src/main/java/com/infoshareacademy/menu/ChoiceGetter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/infoshareacademy/menu/ChoiceGetter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/consoleApp/src/main/java/com/infoshareacademy/menu/DynamicLinePrinter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/infoshareacademy/menu/DynamicLinePrinter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/consoleApp/src/main/java/com/infoshareacademy/menu/EmptyLineWithPipesPrinter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/infoshareacademy/menu/EmptyLineWithPipesPrinter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/consoleApp/src/main/java/com/infoshareacademy/menu/EventSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/infoshareacademy/menu/EventSearch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/consoleApp/src/main/java/com/infoshareacademy/menu/EventsByOrganizer.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/infoshareacademy/menu/EventsByOrganizer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/consoleApp/src/main/java/com/infoshareacademy/menu/EventsPrinter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/infoshareacademy/menu/EventsPrinter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/consoleApp/src/main/java/com/infoshareacademy/menu/FavoritesMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/infoshareacademy/menu/FavoritesMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/consoleApp/src/main/java/com/infoshareacademy/menu/FavoritesPrinter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/infoshareacademy/menu/FavoritesPrinter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/consoleApp/src/main/java/com/infoshareacademy/menu/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/infoshareacademy/menu/Menu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/consoleApp/src/main/java/com/infoshareacademy/menu/MenuBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/infoshareacademy/menu/MenuBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/consoleApp/src/main/java/com/infoshareacademy/menu/NearestEvents.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/infoshareacademy/menu/NearestEvents.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/consoleApp/src/main/java/com/infoshareacademy/menu/RemoveEvents.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/infoshareacademy/menu/RemoveEvents.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/consoleApp/src/main/java/com/infoshareacademy/menu/ScreenCleaner.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/infoshareacademy/menu/ScreenCleaner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/consoleApp/src/main/java/com/infoshareacademy/menu/util/DateValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/infoshareacademy/menu/util/DateValidator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/consoleApp/src/main/java/com/infoshareacademy/menu/util/HourValidation.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/infoshareacademy/menu/util/HourValidation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/consoleApp/src/main/java/com/infoshareacademy/menu/util/InputValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/infoshareacademy/menu/util/InputValidator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/consoleApp/src/main/java/com/infoshareacademy/repository/EventsRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/infoshareacademy/repository/EventsRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/consoleApp/src/main/java/com/infoshareacademy/repository/FavoritesRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/infoshareacademy/repository/FavoritesRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/consoleApp/src/main/java/com/infoshareacademy/repository/FilterRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/infoshareacademy/repository/FilterRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/consoleApp/src/main/java/com/infoshareacademy/service/parser/FavoritesParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/infoshareacademy/service/parser/FavoritesParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/consoleApp/src/main/java/com/infoshareacademy/service/parser/Parser.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/infoshareacademy/service/parser/Parser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/consoleApp/src/main/resources/log4j2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/resources/log4j2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/consoleApp/src/test/java/com/infoshareacademy/EventsRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/java/com/infoshareacademy/EventsRepositoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/consoleApp/src/test/java/com/infoshareacademy/domain/parser/FavoriteEventTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/java/com/infoshareacademy/domain/parser/FavoriteEventTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/consoleApp/src/test/java/com/infoshareacademy/menu/ChoiceGetterTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/java/com/infoshareacademy/menu/ChoiceGetterTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/consoleApp/src/test/java/com/infoshareacademy/menu/util/DateValidatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/java/com/infoshareacademy/menu/util/DateValidatorTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/consoleApp/src/test/java/com/infoshareacademy/menu/util/InputValidatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/java/com/infoshareacademy/menu/util/InputValidatorTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/consoleApp/src/test/resources/JSON_test.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/resources/JSON_test.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/consoleApp/src/test/resources/mockito-extensions/org.mockito.plugins.MockMaker" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/resources/mockito-extensions/org.mockito.plugins.MockMaker" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/consoleApp/target/classes/com/infoshareacademy/App.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/consoleApp/target/classes/com/infoshareacademy/domain/parser/Attachments.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/consoleApp/target/classes/com/infoshareacademy/domain/parser/Event.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/consoleApp/target/classes/com/infoshareacademy/domain/parser/FavoriteEvent.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/consoleApp/target/classes/com/infoshareacademy/domain/parser/Organizer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/consoleApp/target/classes/com/infoshareacademy/domain/parser/Place.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/consoleApp/target/classes/com/infoshareacademy/domain/parser/Ticket.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/consoleApp/target/classes/com/infoshareacademy/domain/parser/Urls.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/consoleApp/target/classes/com/infoshareacademy/filter/FilteringOnDatesAndOrganizers.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/consoleApp/target/classes/com/infoshareacademy/menu/AddNewEvents.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/consoleApp/target/classes/com/infoshareacademy/menu/BreadcrumbsPrinter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/consoleApp/target/classes/com/infoshareacademy/menu/ChoiceGetter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/consoleApp/target/classes/com/infoshareacademy/menu/DynamicLinePrinter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/consoleApp/target/classes/com/infoshareacademy/menu/EmptyLineWithPipesPrinter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/consoleApp/target/classes/com/infoshareacademy/menu/EventSearch.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/consoleApp/target/classes/com/infoshareacademy/menu/EventsByOrganizer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/consoleApp/target/classes/com/infoshareacademy/menu/EventsPrinter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/consoleApp/target/classes/com/infoshareacademy/menu/FavoritesMenu.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/consoleApp/target/classes/com/infoshareacademy/menu/FavoritesPrinter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/consoleApp/target/classes/com/infoshareacademy/menu/Menu.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/consoleApp/target/classes/com/infoshareacademy/menu/MenuBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/consoleApp/target/classes/com/infoshareacademy/menu/NearestEvents.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/consoleApp/target/classes/com/infoshareacademy/menu/RemoveEvents.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/consoleApp/target/classes/com/infoshareacademy/menu/ScreenCleaner.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/consoleApp/target/classes/com/infoshareacademy/menu/util/DateValidator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/consoleApp/target/classes/com/infoshareacademy/menu/util/HourValidation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/consoleApp/target/classes/com/infoshareacademy/menu/util/InputValidator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/consoleApp/target/classes/com/infoshareacademy/repository/EventsRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/consoleApp/target/classes/com/infoshareacademy/repository/FavoritesRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/consoleApp/target/classes/com/infoshareacademy/repository/FilterRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/consoleApp/target/classes/com/infoshareacademy/service/parser/FavoritesParser.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/consoleApp/target/classes/com/infoshareacademy/service/parser/Parser$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/consoleApp/target/classes/com/infoshareacademy/service/parser/Parser.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/consoleApp/target/classes/log4j2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/consoleApp/target/consoleApp-1.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/app/target/consoleApp-1.0.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/consoleApp/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/consoleApp/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/consoleApp/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/consoleApp/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/consoleApp/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/consoleApp/target/surefire-reports/TEST-com.infoshareacademy.EventsRepositoryTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/consoleApp/target/surefire-reports/com.infoshareacademy.EventsRepositoryTest.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/consoleApp/target/test-classes/JSON_test.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/consoleApp/target/test-classes/com/infoshareacademy/EventsRepositoryTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/consoleApp/target/test-classes/com/infoshareacademy/domain/parser/FavoriteEventTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/consoleApp/target/test-classes/com/infoshareacademy/menu/ChoiceGetterTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/consoleApp/target/test-classes/com/infoshareacademy/menu/util/DateValidatorTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/consoleApp/target/test-classes/com/infoshareacademy/menu/util/InputValidatorTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/consoleApp/target/test-classes/mockito-extensions/org.mockito.plugins.MockMaker" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webApp/jjdd8-ismasters-web.iml" beforeDir="false" afterPath="$PROJECT_DIR$/web/web.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webApp/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webApp/src/main/java/com/isa/config/ConfigProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/isa/config/ConfigProvider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webApp/src/main/java/com/isa/config/TemplateProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/isa/config/TemplateProvider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webApp/src/main/java/com/isa/servlet/WelcomeUserServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/isa/servlet/WelcomeUserServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webApp/src/main/webapp/WEB-INF/fm-templates/welcome-user.ftlh" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/webapp/WEB-INF/fm-templates/welcome-user.ftlh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webApp/src/main/webapp/WEB-INF/jboss-web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/webapp/WEB-INF/jboss-web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webApp/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webApp/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/webapp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webApp/target/classes/META-INF/jjdd8-ismasters-web.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webApp/target/classes/com/isa/config/ConfigProvider.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webApp/target/classes/com/isa/config/TemplateProvider.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/target/classes/com/isa/config/TemplateProvider.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webApp/target/classes/com/isa/servlet/WelcomeUserServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webApp/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/web/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webApp/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webApp/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webApp/target/webApp.war" beforeDir="false" afterPath="$PROJECT_DIR$/web/target/webApp.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webApp/target/webApp/WEB-INF/classes/META-INF/jjdd8-ismasters-web.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webApp/target/webApp/WEB-INF/classes/com/isa/config/ConfigProvider.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webApp/target/webApp/WEB-INF/classes/com/isa/config/TemplateProvider.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webApp/target/webApp/WEB-INF/classes/com/isa/servlet/WelcomeUserServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webApp/target/webApp/WEB-INF/fm-templates/welcome-user.ftlh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webApp/target/webApp/WEB-INF/jboss-web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webApp/target/webApp/WEB-INF/lib/activation-1.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webApp/target/webApp/WEB-INF/lib/freemarker-2.3.29.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webApp/target/webApp/WEB-INF/lib/javaee-api-8.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webApp/target/webApp/WEB-INF/lib/javax.mail-1.6.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webApp/target/webApp/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webApp/target/webApp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/target/webApp/index.jsp" afterDir="false" />
     </list>
     <list id="604b85a8-f01e-407c-848c-1001ddbe1f55" name="Refactor bad number format" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -339,6 +465,11 @@
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
                 <item name="JBoss Server" type="7427dc5b:ServiceModel$ServiceGroupNode" />
               </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="JBoss Server" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="Running" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
             </expand>
             <select />
           </treeState>
@@ -401,7 +532,7 @@
       <workItem from="1577270960337" duration="1489000" />
       <workItem from="1577272472001" duration="34000" />
       <workItem from="1577272744191" duration="4677000" />
-      <workItem from="1577279797586" duration="36000" />
+      <workItem from="1577279797586" duration="1429000" />
     </task>
     <task id="LOCAL-00001" summary="Zmieniona struktura buildera menu by Rafał">
       <created>1575301989870</created>
@@ -487,7 +618,14 @@
       <option name="project" value="LOCAL" />
       <updated>1576752565750</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Add .gitignore">
+      <created>1577279985615</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1577279985615</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -558,7 +696,8 @@
     <MESSAGE value="Add Java doc to validators" />
     <MESSAGE value="Change validator" />
     <MESSAGE value="Remove RuntimeException handlers" />
-    <option name="LAST_COMMIT_MESSAGE" value="Remove RuntimeException handlers" />
+    <MESSAGE value="Add .gitignore" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add .gitignore" />
   </component>
   <component name="WindowStateProjectService">
     <state x="278" y="58" width="800" height="677" key="#Notifications" timestamp="1576617252104">
@@ -637,12 +776,12 @@
       <screen x="0" y="25" width="1920" height="1055" />
     </state>
     <state x="523" y="158" width="798" height="585" key="#xdebugger.evaluate/0.25.1920.1055/288.1080.1366.768@0.25.1920.1055" timestamp="1576165749657" />
-    <state x="364" y="25" width="1498" height="1016" key="CommitChangelistDialog2" timestamp="1577279985443">
+    <state x="364" y="25" width="1421" height="1052" key="CommitChangelistDialog2" timestamp="1577285684392">
       <screen x="0" y="25" width="1920" height="1055" />
     </state>
     <state x="71" y="82" width="1214" height="680" key="CommitChangelistDialog2/0.25.1366.743/318.1080.1366.768@0.25.1366.743" timestamp="1576601768830" />
     <state x="259" y="25" width="1092" height="743" key="CommitChangelistDialog2/0.25.1366.743@0.25.1366.743" timestamp="1575732652373" />
-    <state x="364" y="25" key="CommitChangelistDialog2/0.25.1920.1055/265.1080.1366.768@0.25.1920.1055" timestamp="1577279985443" />
+    <state x="364" y="25" width="1421" height="1052" key="CommitChangelistDialog2/0.25.1920.1055/265.1080.1366.768@0.25.1920.1055" timestamp="1577285684392" />
     <state x="364" y="25" width="1498" height="1016" key="CommitChangelistDialog2/0.25.1920.1055/288.1080.1366.768@0.25.1920.1055" timestamp="1576785121871" />
     <state x="731" y="106" width="794" height="801" key="CommitChangelistDialog2/0.25.1920.1055/318.1080.1366.768@0.25.1920.1055" timestamp="1576599236597" />
     <state x="200" y="147" width="1720" height="855" key="DiffContextDialog" timestamp="1576754989984">

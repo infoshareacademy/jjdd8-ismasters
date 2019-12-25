@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/jjdd8-ismasters.iml" filepath="$PROJECT_DIR$/.idea/jjdd8-ismasters.iml" />
-      <module fileurl="file://$PROJECT_DIR$/consoleApp/jjdd8-ismasters-console.iml" filepath="$PROJECT_DIR$/consoleApp/jjdd8-ismasters-console.iml" />
-      <module fileurl="file://$PROJECT_DIR$/webApp/jjdd8-ismasters-web.iml" filepath="$PROJECT_DIR$/webApp/jjdd8-ismasters-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/web/web.iml" filepath="$PROJECT_DIR$/web/web.iml" />
     </modules>
   </component>
 </project>
