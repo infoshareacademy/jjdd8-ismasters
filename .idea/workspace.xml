@@ -7,11 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f60126c2-6408-4cff-b97e-8f17b26f5b69" name="Default Changelist" comment="Remove RuntimeException handlers">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webApp/target/classes/com/isa/config/Config.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webApp/target/classes/com/isa/config/TemplateProvider.class" beforeDir="false" afterPath="$PROJECT_DIR$/webApp/target/classes/com/isa/config/TemplateProvider.class" afterDir="false" />
     </list>
     <list id="604b85a8-f01e-407c-848c-1001ddbe1f55" name="Refactor bad number format" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -122,7 +118,7 @@
     <property name="extract.method.default.visibility" value="public" />
     <property name="full.screen.before.presentation.mode" value="true" />
     <property name="jdk.selected.JAVA_MODULE" value="1.8" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/webApp/src/main/webapp/WEB-INF/fm-templates" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/pom.xml" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -343,11 +339,6 @@
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
                 <item name="JBoss Server" type="7427dc5b:ServiceModel$ServiceGroupNode" />
               </path>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="JBoss Server" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="Finished" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              </path>
             </expand>
             <select />
           </treeState>
@@ -410,6 +401,7 @@
       <workItem from="1577270960337" duration="1489000" />
       <workItem from="1577272472001" duration="34000" />
       <workItem from="1577272744191" duration="4677000" />
+      <workItem from="1577279797586" duration="36000" />
     </task>
     <task id="LOCAL-00001" summary="Zmieniona struktura buildera menu by Rafał">
       <created>1575301989870</created>
@@ -811,11 +803,11 @@
       <screen x="0" y="25" width="1366" height="743" />
     </state>
     <state x="501" y="333" width="354" height="126" key="ReplaceDuplicatesPrompt/0.25.1366.743@0.25.1366.743" timestamp="1575712141355" />
-    <state x="636" y="163" width="1024" height="845" key="SettingsEditor" timestamp="1577278572432">
+    <state x="636" y="163" width="1024" height="845" key="SettingsEditor" timestamp="1577279832438">
       <screen x="0" y="25" width="1920" height="1055" />
     </state>
     <state x="187" y="25" width="1024" height="743" key="SettingsEditor/0.25.1366.743@0.25.1366.743" timestamp="1575884041791" />
-    <state x="636" y="163" width="1024" height="845" key="SettingsEditor/0.25.1920.1055/265.1080.1366.768@0.25.1920.1055" timestamp="1577278572432" />
+    <state x="636" y="163" width="1024" height="845" key="SettingsEditor/0.25.1920.1055/265.1080.1366.768@0.25.1920.1055" timestamp="1577279832438" />
     <state x="263" y="25" width="1024" height="730" key="SettingsEditor/0.25.1920.1055/288.1080.1366.768@0.25.1920.1055" timestamp="1576786315685" />
     <state x="263" y="25" key="SettingsEditor/0.25.1920.1055/318.1080.1366.768@0.25.1920.1055" timestamp="1576361327944" />
     <state x="263" y="25" width="1024" height="1055" key="SettingsEditor/0.25.1920.1823@0.25.1920.1823" timestamp="1576660624181" />
