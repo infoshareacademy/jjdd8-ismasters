@@ -1,5 +1,4 @@
 .idea
 *target
-/app/target/
-/web/target/
-/.idea/
+*.iml
+
