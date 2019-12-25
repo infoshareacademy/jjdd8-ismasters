@@ -1,57 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="webApp:war exploded" />
+    </artifacts-to-build>
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="f60126c2-6408-4cff-b97e-8f17b26f5b69" name="Default Changelist" comment="Remove RuntimeException handlers">
-      <change afterPath="$PROJECT_DIR$/consoleApp/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webApp/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webApp/src/main/java/com/isa/config/ConfigProvider.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webApp/src/main/java/com/isa/config/TemplateProvider.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webApp/src/main/java/com/isa/servlet/WelcomeUserServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webApp/src/main/webapp/WEB-INF/fm-templates/welcome-user.ftlh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webApp/src/main/webapp/WEB-INF/jboss-web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/consoleApp/src/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JSON_example" beforeDir="false" afterPath="$PROJECT_DIR$/consoleApp/src/JSON_example" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/infoshareacademy/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/consoleApp/src/main/java/com/infoshareacademy/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/infoshareacademy/domain/parser/Attachments.java" beforeDir="false" afterPath="$PROJECT_DIR$/consoleApp/src/main/java/com/infoshareacademy/domain/parser/Attachments.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/infoshareacademy/domain/parser/Event.java" beforeDir="false" afterPath="$PROJECT_DIR$/consoleApp/src/main/java/com/infoshareacademy/domain/parser/Event.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/infoshareacademy/domain/parser/FavoriteEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/consoleApp/src/main/java/com/infoshareacademy/domain/parser/FavoriteEvent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/infoshareacademy/domain/parser/Organizer.java" beforeDir="false" afterPath="$PROJECT_DIR$/consoleApp/src/main/java/com/infoshareacademy/domain/parser/Organizer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/infoshareacademy/domain/parser/Place.java" beforeDir="false" afterPath="$PROJECT_DIR$/consoleApp/src/main/java/com/infoshareacademy/domain/parser/Place.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/infoshareacademy/domain/parser/Ticket.java" beforeDir="false" afterPath="$PROJECT_DIR$/consoleApp/src/main/java/com/infoshareacademy/domain/parser/Ticket.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/infoshareacademy/domain/parser/Urls.java" beforeDir="false" afterPath="$PROJECT_DIR$/consoleApp/src/main/java/com/infoshareacademy/domain/parser/Urls.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/infoshareacademy/filter/FilteringOnDatesAndOrganizers.java" beforeDir="false" afterPath="$PROJECT_DIR$/consoleApp/src/main/java/com/infoshareacademy/filter/FilteringOnDatesAndOrganizers.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/infoshareacademy/menu/AddNewEvents.java" beforeDir="false" afterPath="$PROJECT_DIR$/consoleApp/src/main/java/com/infoshareacademy/menu/AddNewEvents.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/infoshareacademy/menu/BreadcrumbsPrinter.java" beforeDir="false" afterPath="$PROJECT_DIR$/consoleApp/src/main/java/com/infoshareacademy/menu/BreadcrumbsPrinter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/infoshareacademy/menu/ChoiceGetter.java" beforeDir="false" afterPath="$PROJECT_DIR$/consoleApp/src/main/java/com/infoshareacademy/menu/ChoiceGetter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/infoshareacademy/menu/DynamicLinePrinter.java" beforeDir="false" afterPath="$PROJECT_DIR$/consoleApp/src/main/java/com/infoshareacademy/menu/DynamicLinePrinter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/infoshareacademy/menu/EmptyLineWithPipesPrinter.java" beforeDir="false" afterPath="$PROJECT_DIR$/consoleApp/src/main/java/com/infoshareacademy/menu/EmptyLineWithPipesPrinter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/infoshareacademy/menu/EventSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/consoleApp/src/main/java/com/infoshareacademy/menu/EventSearch.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/infoshareacademy/menu/EventsByOrganizer.java" beforeDir="false" afterPath="$PROJECT_DIR$/consoleApp/src/main/java/com/infoshareacademy/menu/EventsByOrganizer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/infoshareacademy/menu/EventsPrinter.java" beforeDir="false" afterPath="$PROJECT_DIR$/consoleApp/src/main/java/com/infoshareacademy/menu/EventsPrinter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/infoshareacademy/menu/FavoritesMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/consoleApp/src/main/java/com/infoshareacademy/menu/FavoritesMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/infoshareacademy/menu/FavoritesPrinter.java" beforeDir="false" afterPath="$PROJECT_DIR$/consoleApp/src/main/java/com/infoshareacademy/menu/FavoritesPrinter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/infoshareacademy/menu/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/consoleApp/src/main/java/com/infoshareacademy/menu/Menu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/infoshareacademy/menu/MenuBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/consoleApp/src/main/java/com/infoshareacademy/menu/MenuBuilder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/infoshareacademy/menu/NearestEvents.java" beforeDir="false" afterPath="$PROJECT_DIR$/consoleApp/src/main/java/com/infoshareacademy/menu/NearestEvents.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/infoshareacademy/menu/RemoveEvents.java" beforeDir="false" afterPath="$PROJECT_DIR$/consoleApp/src/main/java/com/infoshareacademy/menu/RemoveEvents.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/infoshareacademy/menu/ScreenCleaner.java" beforeDir="false" afterPath="$PROJECT_DIR$/consoleApp/src/main/java/com/infoshareacademy/menu/ScreenCleaner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/infoshareacademy/menu/util/DateValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/consoleApp/src/main/java/com/infoshareacademy/menu/util/DateValidator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/infoshareacademy/menu/util/HourValidation.java" beforeDir="false" afterPath="$PROJECT_DIR$/consoleApp/src/main/java/com/infoshareacademy/menu/util/HourValidation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/infoshareacademy/menu/util/InputValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/consoleApp/src/main/java/com/infoshareacademy/menu/util/InputValidator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/infoshareacademy/repository/EventsRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/consoleApp/src/main/java/com/infoshareacademy/repository/EventsRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/infoshareacademy/repository/FavoritesRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/consoleApp/src/main/java/com/infoshareacademy/repository/FavoritesRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/infoshareacademy/repository/FilterRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/consoleApp/src/main/java/com/infoshareacademy/repository/FilterRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/infoshareacademy/service/parser/FavoritesParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/consoleApp/src/main/java/com/infoshareacademy/service/parser/FavoritesParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/infoshareacademy/service/parser/Parser.java" beforeDir="false" afterPath="$PROJECT_DIR$/consoleApp/src/main/java/com/infoshareacademy/service/parser/Parser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/log4j2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/consoleApp/src/main/resources/log4j2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/infoshareacademy/EventsRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/consoleApp/src/test/java/com/infoshareacademy/EventsRepositoryTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/infoshareacademy/domain/parser/FavoriteEventTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/consoleApp/src/test/java/com/infoshareacademy/domain/parser/FavoriteEventTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/infoshareacademy/menu/ChoiceGetterTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/consoleApp/src/test/java/com/infoshareacademy/menu/ChoiceGetterTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/infoshareacademy/menu/util/DateValidatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/consoleApp/src/test/java/com/infoshareacademy/menu/util/DateValidatorTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/infoshareacademy/menu/util/InputValidatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/consoleApp/src/test/java/com/infoshareacademy/menu/util/InputValidatorTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/JSON_test.json" beforeDir="false" afterPath="$PROJECT_DIR$/consoleApp/src/test/resources/JSON_test.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/mockito-extensions/org.mockito.plugins.MockMaker" beforeDir="false" afterPath="$PROJECT_DIR$/consoleApp/src/test/resources/mockito-extensions/org.mockito.plugins.MockMaker" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webApp/target/classes/com/isa/config/Config.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webApp/target/classes/com/isa/config/TemplateProvider.class" beforeDir="false" afterPath="$PROJECT_DIR$/webApp/target/classes/com/isa/config/TemplateProvider.class" afterDir="false" />
     </list>
     <list id="604b85a8-f01e-407c-848c-1001ddbe1f55" name="Refactor bad number format" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -163,7 +123,7 @@
     <property name="full.screen.before.presentation.mode" value="true" />
     <property name="jdk.selected.JAVA_MODULE" value="1.8" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/webApp/src/main/webapp/WEB-INF/fm-templates" />
-    <property name="project.structure.last.edited" value="Problems" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="restartRequiresConfirmation" value="false" />
@@ -220,9 +180,10 @@
     </configuration>
     <configuration name="JBoss 18.0.1.Final" type="JBossConfiguration" factoryName="Local" APPLICATION_SERVER_NAME="JBoss 18.0.1.Final" ALTERNATIVE_JRE_ENABLED="false" show_console_on_std_out="true">
       <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/web_war_exploded" />
+      <option name="BROWSER_ID" value="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" />
       <option name="UPDATING_POLICY" value="redeploy-artifacts" />
       <deployment>
-        <artifact name="web:war exploded">
+        <artifact name="webApp:war exploded">
           <settings />
         </artifact>
       </deployment>
@@ -231,8 +192,8 @@
         <option name="BINDING_SET_NAME" value="" />
         <option name="DOMAIN" value="false" />
         <option name="SERVER_GROUP" value="main-server-group" />
-        <option name="USERNAME" value="" />
-        <option name="CREDENTIAL_ALIAS" />
+        <option name="USERNAME" value="dl00gi" />
+        <option name="CREDENTIAL_ALIAS" value="012627f4-3b54-4541-8fdf-2f199f8bf64a" />
       </server-settings>
       <predefined_log_file enabled="true" id="JBoss" />
       <RunnerSettings RunnerId="Debug">
@@ -287,6 +248,7 @@
         <option name="Make" enabled="true" />
         <option name="BuildArtifacts" enabled="true">
           <artifact name="web:war exploded" />
+          <artifact name="webApp:war exploded" />
         </option>
       </method>
     </configuration>
@@ -384,7 +346,7 @@
               <path>
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
                 <item name="JBoss Server" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="Running" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="Finished" type="7427dc5b:ServiceModel$ServiceGroupNode" />
               </path>
             </expand>
             <select />
@@ -447,7 +409,7 @@
       <workItem from="1577028606026" duration="600000" />
       <workItem from="1577270960337" duration="1489000" />
       <workItem from="1577272472001" duration="34000" />
-      <workItem from="1577272744191" duration="3360000" />
+      <workItem from="1577272744191" duration="4677000" />
     </task>
     <task id="LOCAL-00001" summary="Zmieniona struktura buildera menu by Rafał">
       <created>1575301989870</created>
@@ -616,14 +578,18 @@
     </state>
     <state x="278" y="30" width="800" height="677" key="#Project_Structure/0.25.1366.743@0.25.1366.743" timestamp="1575295506181" />
     <state x="391" y="32" width="800" height="677" key="#Project_Structure/0.25.1920.1055/265.1080.1366.768@0.25.1920.1055" timestamp="1577273877947" />
+    <state x="687" y="114" width="800" height="677" key="#Web_Browsers" timestamp="1577278330199">
+      <screen x="0" y="25" width="1920" height="1055" />
+    </state>
+    <state x="687" y="114" width="800" height="677" key="#Web_Browsers/0.25.1920.1055/265.1080.1366.768@0.25.1920.1055" timestamp="1577278330199" />
     <state x="416" y="154" width="524" height="484" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog" timestamp="1575298875331">
       <screen x="0" y="25" width="1366" height="743" />
     </state>
     <state x="416" y="154" width="524" height="484" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/0.25.1366.743@0.25.1366.743" timestamp="1575298875331" />
-    <state x="550" y="111" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1577276050200">
+    <state x="550" y="111" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1577278396399">
       <screen x="0" y="25" width="1920" height="1055" />
     </state>
-    <state x="550" y="111" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.25.1920.1055/265.1080.1366.768@0.25.1920.1055" timestamp="1577276050200" />
+    <state x="550" y="111" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.25.1920.1055/265.1080.1366.768@0.25.1920.1055" timestamp="1577278396399" />
     <state x="550" y="173" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.25.1920.1823@0.25.1920.1823" timestamp="1576660675399" />
     <state x="100" y="125" width="1720" height="855" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1576787609792">
       <screen x="0" y="25" width="1920" height="1055" />
@@ -691,10 +657,11 @@
     </state>
     <state x="200" y="147" width="1720" height="855" key="DiffContextDialog/0.25.1920.1055/288.1080.1366.768@0.25.1920.1055" timestamp="1576754989984" />
     <state x="100" y="125" width="1720" height="855" key="DiffContextDialog/0.25.1920.1055/318.1080.1366.768@0.25.1920.1055" timestamp="1576533146656" />
-    <state x="655" y="170" width="596" height="1055" key="FileChooserDialogImpl" timestamp="1576748527675">
+    <state x="655" y="25" width="596" height="1055" key="FileChooserDialogImpl" timestamp="1577278388414">
       <screen x="0" y="25" width="1920" height="1055" />
     </state>
     <state x="466" y="127" width="424" height="484" key="FileChooserDialogImpl/0.25.1366.743@0.25.1366.743" timestamp="1576655099493" />
+    <state x="655" y="25" key="FileChooserDialogImpl/0.25.1920.1055/265.1080.1366.768@0.25.1920.1055" timestamp="1577278388414" />
     <state x="655" y="170" width="424" height="484" key="FileChooserDialogImpl/0.25.1920.1055/288.1080.1366.768@0.25.1920.1055" timestamp="1576748527675" />
     <state x="655" y="170" key="FileChooserDialogImpl/0.25.1920.1055/318.1080.1366.768@0.25.1920.1055" timestamp="1576357950594" />
     <state x="655" y="25" width="596" height="1055" key="FileChooserDialogImpl/0.25.1920.1823@0.25.1920.1823" timestamp="1576659934240" />
@@ -714,53 +681,53 @@
       <screen x="0" y="25" width="1920" height="1055" />
     </state>
     <state width="930" height="982" key="GridCell.Tab.-1.right/0.25.1920.1055/288.1080.1366.768@0.25.1920.1055" timestamp="1576509560480" />
-    <state width="905" height="276" key="GridCell.Tab.0.bottom" timestamp="1577275935394">
+    <state width="705" height="199" key="GridCell.Tab.0.bottom" timestamp="1577278581496">
       <screen x="0" y="25" width="1920" height="1055" />
     </state>
     <state width="949" height="436" key="GridCell.Tab.0.bottom/0.25.1366.743/283.1080.1366.768@0.25.1366.743" timestamp="1576857360773" />
     <state width="1122" height="321" key="GridCell.Tab.0.bottom/0.25.1366.743/288.1080.1366.768@0.25.1366.743" timestamp="1576781321724" />
     <state width="531" height="908" key="GridCell.Tab.0.bottom/0.25.1366.743/318.1080.1366.768@0.25.1366.743" timestamp="1576603076709" />
     <state width="665" height="596" key="GridCell.Tab.0.bottom/0.25.1366.743@0.25.1366.743" timestamp="1576654957242" />
-    <state width="905" height="276" key="GridCell.Tab.0.bottom/0.25.1920.1055/265.1080.1366.768@0.25.1920.1055" timestamp="1577275935394" />
+    <state width="705" height="199" key="GridCell.Tab.0.bottom/0.25.1920.1055/265.1080.1366.768@0.25.1920.1055" timestamp="1577278581496" />
     <state width="986" height="341" key="GridCell.Tab.0.bottom/0.25.1920.1055/283.1080.1366.768@0.25.1920.1055" timestamp="1576852239476" />
     <state width="1475" height="341" key="GridCell.Tab.0.bottom/0.25.1920.1055/288.1080.1366.768@0.25.1920.1055" timestamp="1576841543541" />
     <state width="423" height="908" key="GridCell.Tab.0.bottom/0.25.1920.1055/318.1080.1366.768@0.25.1920.1055" timestamp="1576599171737" />
     <state width="366" height="621" key="GridCell.Tab.0.bottom/0.25.1920.1055/318.1080.1366.768@318.1080.1366.768" timestamp="1576569490596" />
     <state width="575" height="908" key="GridCell.Tab.0.bottom/0.25.1920.1823@0.25.1920.1823" timestamp="1576671727040" />
-    <state width="905" height="276" key="GridCell.Tab.0.center" timestamp="1577275935393">
+    <state width="705" height="199" key="GridCell.Tab.0.center" timestamp="1577278581496">
       <screen x="0" y="25" width="1920" height="1055" />
     </state>
     <state width="949" height="436" key="GridCell.Tab.0.center/0.25.1366.743/283.1080.1366.768@0.25.1366.743" timestamp="1576857360773" />
     <state width="1122" height="321" key="GridCell.Tab.0.center/0.25.1366.743/288.1080.1366.768@0.25.1366.743" timestamp="1576781321724" />
     <state width="531" height="908" key="GridCell.Tab.0.center/0.25.1366.743/318.1080.1366.768@0.25.1366.743" timestamp="1576603076709" />
     <state width="665" height="596" key="GridCell.Tab.0.center/0.25.1366.743@0.25.1366.743" timestamp="1576654957242" />
-    <state width="905" height="276" key="GridCell.Tab.0.center/0.25.1920.1055/265.1080.1366.768@0.25.1920.1055" timestamp="1577275935393" />
+    <state width="705" height="199" key="GridCell.Tab.0.center/0.25.1920.1055/265.1080.1366.768@0.25.1920.1055" timestamp="1577278581496" />
     <state width="986" height="341" key="GridCell.Tab.0.center/0.25.1920.1055/283.1080.1366.768@0.25.1920.1055" timestamp="1576852239475" />
     <state width="1475" height="341" key="GridCell.Tab.0.center/0.25.1920.1055/288.1080.1366.768@0.25.1920.1055" timestamp="1576841543540" />
     <state width="423" height="908" key="GridCell.Tab.0.center/0.25.1920.1055/318.1080.1366.768@0.25.1920.1055" timestamp="1576599171737" />
     <state width="366" height="621" key="GridCell.Tab.0.center/0.25.1920.1055/318.1080.1366.768@318.1080.1366.768" timestamp="1576569490595" />
     <state width="575" height="908" key="GridCell.Tab.0.center/0.25.1920.1823@0.25.1920.1823" timestamp="1576671727039" />
-    <state width="905" height="276" key="GridCell.Tab.0.left" timestamp="1577275935393">
+    <state width="705" height="199" key="GridCell.Tab.0.left" timestamp="1577278581496">
       <screen x="0" y="25" width="1920" height="1055" />
     </state>
     <state width="949" height="436" key="GridCell.Tab.0.left/0.25.1366.743/283.1080.1366.768@0.25.1366.743" timestamp="1576857360773" />
     <state width="1122" height="321" key="GridCell.Tab.0.left/0.25.1366.743/288.1080.1366.768@0.25.1366.743" timestamp="1576781321724" />
     <state width="531" height="908" key="GridCell.Tab.0.left/0.25.1366.743/318.1080.1366.768@0.25.1366.743" timestamp="1576603076709" />
     <state width="665" height="596" key="GridCell.Tab.0.left/0.25.1366.743@0.25.1366.743" timestamp="1576654957241" />
-    <state width="905" height="276" key="GridCell.Tab.0.left/0.25.1920.1055/265.1080.1366.768@0.25.1920.1055" timestamp="1577275935393" />
+    <state width="705" height="199" key="GridCell.Tab.0.left/0.25.1920.1055/265.1080.1366.768@0.25.1920.1055" timestamp="1577278581496" />
     <state width="986" height="341" key="GridCell.Tab.0.left/0.25.1920.1055/283.1080.1366.768@0.25.1920.1055" timestamp="1576852239475" />
     <state width="1475" height="341" key="GridCell.Tab.0.left/0.25.1920.1055/288.1080.1366.768@0.25.1920.1055" timestamp="1576841543540" />
     <state width="423" height="908" key="GridCell.Tab.0.left/0.25.1920.1055/318.1080.1366.768@0.25.1920.1055" timestamp="1576599171737" />
     <state width="366" height="621" key="GridCell.Tab.0.left/0.25.1920.1055/318.1080.1366.768@318.1080.1366.768" timestamp="1576569490595" />
     <state width="575" height="908" key="GridCell.Tab.0.left/0.25.1920.1823@0.25.1920.1823" timestamp="1576671727038" />
-    <state width="905" height="276" key="GridCell.Tab.0.right" timestamp="1577275935393">
+    <state width="705" height="199" key="GridCell.Tab.0.right" timestamp="1577278581496">
       <screen x="0" y="25" width="1920" height="1055" />
     </state>
     <state width="949" height="436" key="GridCell.Tab.0.right/0.25.1366.743/283.1080.1366.768@0.25.1366.743" timestamp="1576857360773" />
     <state width="1122" height="321" key="GridCell.Tab.0.right/0.25.1366.743/288.1080.1366.768@0.25.1366.743" timestamp="1576781321724" />
     <state width="531" height="908" key="GridCell.Tab.0.right/0.25.1366.743/318.1080.1366.768@0.25.1366.743" timestamp="1576603076709" />
     <state width="665" height="596" key="GridCell.Tab.0.right/0.25.1366.743@0.25.1366.743" timestamp="1576654957242" />
-    <state width="905" height="276" key="GridCell.Tab.0.right/0.25.1920.1055/265.1080.1366.768@0.25.1920.1055" timestamp="1577275935393" />
+    <state width="705" height="199" key="GridCell.Tab.0.right/0.25.1920.1055/265.1080.1366.768@0.25.1920.1055" timestamp="1577278581496" />
     <state width="986" height="341" key="GridCell.Tab.0.right/0.25.1920.1055/283.1080.1366.768@0.25.1920.1055" timestamp="1576852239475" />
     <state width="1475" height="341" key="GridCell.Tab.0.right/0.25.1920.1055/288.1080.1366.768@0.25.1920.1055" timestamp="1576841543541" />
     <state width="423" height="908" key="GridCell.Tab.0.right/0.25.1920.1055/318.1080.1366.768@0.25.1920.1055" timestamp="1576599171737" />
@@ -844,11 +811,11 @@
       <screen x="0" y="25" width="1366" height="743" />
     </state>
     <state x="501" y="333" width="354" height="126" key="ReplaceDuplicatesPrompt/0.25.1366.743@0.25.1366.743" timestamp="1575712141355" />
-    <state x="636" y="163" width="1024" height="845" key="SettingsEditor" timestamp="1577274306817">
+    <state x="636" y="163" width="1024" height="845" key="SettingsEditor" timestamp="1577278572432">
       <screen x="0" y="25" width="1920" height="1055" />
     </state>
     <state x="187" y="25" width="1024" height="743" key="SettingsEditor/0.25.1366.743@0.25.1366.743" timestamp="1575884041791" />
-    <state x="636" y="163" width="1024" height="845" key="SettingsEditor/0.25.1920.1055/265.1080.1366.768@0.25.1920.1055" timestamp="1577274306817" />
+    <state x="636" y="163" width="1024" height="845" key="SettingsEditor/0.25.1920.1055/265.1080.1366.768@0.25.1920.1055" timestamp="1577278572432" />
     <state x="263" y="25" width="1024" height="730" key="SettingsEditor/0.25.1920.1055/288.1080.1366.768@0.25.1920.1055" timestamp="1576786315685" />
     <state x="263" y="25" key="SettingsEditor/0.25.1920.1055/318.1080.1366.768@0.25.1920.1055" timestamp="1576361327944" />
     <state x="263" y="25" width="1024" height="1055" key="SettingsEditor/0.25.1920.1823@0.25.1920.1823" timestamp="1576660624181" />

@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="jjdd8-ismasters-web" />
         <module name="jjdd8-ismasters-console" />
+        <module name="jjdd8-ismasters" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
