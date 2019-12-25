@@ -5,6 +5,7 @@ app/*.iml
 web/target
 app/target
 *.iml
-
+web/.idea
+app/.idea
 
 
