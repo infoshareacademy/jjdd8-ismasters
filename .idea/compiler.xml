@@ -8,11 +8,10 @@
         <outputRelativeToContentRoot value="true" />
         <module name="app" />
         <module name="web" />
-        <module name="jjdd8-ismasters" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="app" target="8" />
+      <module name="app" target="13" />
       <module name="jjdd8-ismasters" target="13" />
       <module name="web" target="13" />
     </bytecodeTargetLevel>
