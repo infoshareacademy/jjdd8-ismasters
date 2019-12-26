@@ -6,8 +6,6 @@ import com.infoshareacademy.service.parser.Parser;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.util.stream.Stream;
-
 public class RemoveEvents {
     private static final Logger stdout = LoggerFactory.getLogger("CONSOLE_OUT");
     Event searchedEvent = new Event();

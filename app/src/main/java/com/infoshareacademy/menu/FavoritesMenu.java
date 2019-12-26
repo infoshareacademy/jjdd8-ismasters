@@ -1,7 +1,6 @@
 package com.infoshareacademy.menu;
 
 import com.infoshareacademy.repository.FilterRepository;
-import com.infoshareacademy.service.parser.Parser;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

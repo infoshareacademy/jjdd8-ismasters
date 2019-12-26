@@ -1,10 +1,7 @@
 package com.infoshareacademy.service.parser;
 
 
-import com.infoshareacademy.domain.parser.Event;
-import com.infoshareacademy.menu.EventSearch;
 import com.infoshareacademy.menu.Menu;
-import com.infoshareacademy.repository.EventsRepository;
 import com.infoshareacademy.repository.FavoritesRepository;
 import com.infoshareacademy.repository.FilterRepository;
 import com.opencsv.CSVReader;
@@ -18,11 +15,9 @@ import java.io.IOException;
 import java.io.Reader;
 import java.io.Writer;
 import java.nio.file.Files;
-import java.nio.file.NoSuchFileException;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.function.Predicate;
 
 import static java.nio.file.StandardOpenOption.TRUNCATE_EXISTING;
 
