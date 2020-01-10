@@ -8,6 +8,7 @@ import java.util.List;
 public class User {
 
     @Id
+    @Column (name = "id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
@@ -18,8 +19,11 @@ public class User {
     private UserType userType;
 
     @ManyToMany
-    @JoinColumn(name = "favorities" )
-    private List<Favorities> favorities;
+    @JoinTable (name = "user_event",
+            joinColumns = @JoinColumn (name = "user_id", referencedColumnName = "id"),
+            inverseJoinColumns = @JoinColumn (name = "event_id", referencedColumnName = "id"))
+    private List<Event> favoriteEvents;
+
 
     public Long getId() {
         return id;
@@ -45,11 +49,11 @@ public class User {
         this.userType = userType;
     }
 
-    public List<Favorities> getFavorities() {
-        return favorities;
+    public List<Event> getFavoriteEvents() {
+        return favoriteEvents;
     }
 
-    public void setFavorities(List<Favorities> favorities) {
-        this.favorities = favorities;
+    public void setFavoriteEvents(List<Event> favoriteEvents) {
+        this.favoriteEvents = favoriteEvents;
     }
 }
