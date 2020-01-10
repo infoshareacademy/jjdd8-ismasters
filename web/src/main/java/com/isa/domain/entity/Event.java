@@ -13,7 +13,7 @@ public class Event {
     @GeneratedValue (strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column (name = "apiId")
+    @Column (name = "api_Id")
     private Long apiId;
 
     @Column (name = "start_date")
