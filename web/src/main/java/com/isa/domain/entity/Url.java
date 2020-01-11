@@ -17,7 +17,7 @@ public class Url {
     @Column (name = "fb_url")
     private String fbUrl;
 
-    @Column (name = "fb_url")
+    @Column (name = "ticket_url")
     private String tickerUrl;
 
     @OneToOne (mappedBy = "url")

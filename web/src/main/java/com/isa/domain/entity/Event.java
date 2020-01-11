@@ -2,6 +2,7 @@ package com.isa.domain.entity;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Entity
 @Table (name = "event")
@@ -12,7 +13,7 @@ public class Event {
     @GeneratedValue (strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column (name = "apiId")
+    @Column (name = "api_Id")
     private Long apiId;
 
     @Column (name = "start_date")
@@ -24,6 +25,9 @@ public class Event {
     @Column (name = "desc_short")
     private String descShort;
 
+    @Column (name = "name")
+    private String name;
+
     @Column (name = "desc_long")
     private String descLong;
 
@@ -33,21 +37,41 @@ public class Event {
     @Column (name = "active")
     private boolean active;
 
-    @ManyToOne
+    @ManyToMany (mappedBy = "favoriteEvents")
+    @JoinTable (name = "user_favorite_event")
+    private List<User> eventFav;
+
+    @ManyToOne (fetch = FetchType.LAZY)
     @JoinColumn (name = "ticket_type_id")
     private TicketType ticketType;
 
-    @ManyToOne
+    @ManyToOne (fetch = FetchType.LAZY)
     @JoinColumn (name = "organizer_id")
     private Organizer organizer;
 
-    @ManyToOne
+    @ManyToOne (fetch = FetchType.LAZY)
     @JoinColumn (name = "place_id", unique = true)
     private Place place;
 
-    @OneToOne
+    @OneToOne (fetch = FetchType.LAZY)
     @JoinColumn (name = "url_id", unique = true)
     private Url url;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public List<User> getEventFav() {
+        return eventFav;
+    }
+
+    public void setEventFav(List<User> eventFav) {
+        this.eventFav = eventFav;
+    }
 
     public Long getId() {
         return id;

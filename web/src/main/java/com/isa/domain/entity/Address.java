@@ -26,7 +26,7 @@ public class Address {
     @Column (name = "lng")
     private String lng;
 
-    @OneToOne (mappedBy = "place")
+    @OneToOne (mappedBy = "place", fetch = FetchType.LAZY)
     private Place place;
 
     public Address(int id) {
