@@ -4,18 +4,18 @@ import javax.persistence.*;
 import java.util.List;
 
 @Entity
-@Table(name = "ticket_type")
+@Table (name = "ticket_type")
 public class TicketType {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue (strategy = GenerationType.IDENTITY)
     @Column (name = "id")
     private int id;
 
     @Column (name = "ticket_type_name")
     private String ticketTypeName;
 
-    @OneToMany (mappedBy = "ticketType")
+    @OneToMany (fetch = FetchType.LAZY, mappedBy = "ticketType")
     private List<TicketType> ticketType;
 
     public TicketType(String ticketTypeName) {

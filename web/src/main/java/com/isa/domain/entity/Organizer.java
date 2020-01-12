@@ -7,18 +7,18 @@ import java.util.List;
 @Table (name = "organizer")
 public class Organizer {
 
-    @Column(name = "api_id")
-    private int apiId;
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column (name = "id")
     private int id;
 
+    @Column(name = "api_id")
+    private int apiId;
+
     @Column (name = "designation")
     private String designation;
 
-    @OneToMany (mappedBy = "organizer")
+    @OneToMany (fetch = FetchType.LAZY, mappedBy = "organizer")
     private List<Event> event;
 
     public int getApiId() {
