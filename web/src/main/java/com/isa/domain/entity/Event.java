@@ -38,7 +38,7 @@ public class Event {
     private boolean active;
 
     @ManyToMany (mappedBy = "favoriteEvents")
-    @JoinTable (name = "user_favorite_event")
+//    @JoinTable (name = "user_favorite_event")
     private List<User> eventFav;
 
     @ManyToOne (fetch = FetchType.LAZY)

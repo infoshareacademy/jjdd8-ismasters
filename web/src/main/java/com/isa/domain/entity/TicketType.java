@@ -15,7 +15,7 @@ public class TicketType {
     @Column (name = "ticket_type_name")
     private String ticketTypeName;
 
-    @OneToMany (mappedBy = "ticket_type")
+    @OneToMany (mappedBy = "ticketType")
     private List<TicketType> ticketType;
 
     public TicketType(String ticketTypeName) {
