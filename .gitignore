@@ -7,5 +7,5 @@ app/target
 *.iml
 web/.idea
 app/.idea
-
+out/
 
