@@ -4,21 +4,21 @@ import javax.persistence.*;
 import java.util.List;
 
 @Entity
-@Table(name = "user")
+@Table (name = "user")
 public class User {
 
     @Id
     @Column (name = "id")
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue (strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Column (name = "email")
     private String email;
 
-    @Column(name = "user_type")
+    @Column (name = "user_type")
     private UserType userType;
 
-    @ManyToMany
+    @ManyToMany (fetch = FetchType.LAZY)
     @JoinTable (name = "user_event",
             joinColumns = @JoinColumn (name = "user_id", referencedColumnName = "id"),
             inverseJoinColumns = @JoinColumn (name = "event_id", referencedColumnName = "id"))

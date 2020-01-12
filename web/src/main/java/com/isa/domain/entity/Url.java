@@ -3,11 +3,11 @@ package com.isa.domain.entity;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "url")
+@Table (name = "url")
 public class Url {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue (strategy = GenerationType.IDENTITY)
     @Column (name = "id")
     private int id;
 
@@ -20,7 +20,7 @@ public class Url {
     @Column (name = "ticket_url")
     private String tickerUrl;
 
-    @OneToOne (mappedBy = "url")
+    @OneToOne (fetch = FetchType.LAZY, mappedBy = "url")
     private Event event;
 
     public int getId() {
