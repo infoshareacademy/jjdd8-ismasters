@@ -1,4 +1,4 @@
-package com.isa.Parser.DomainClass;
+package com.isa.parser.domain;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
@@ -14,12 +14,6 @@ public class Weblink {
     private String fb;
 
     public Weblink() {
-    }
-
-    public Weblink(String website, String tickets, String fb) {
-        this.website = website;
-        this.tickets = tickets;
-        this.fb = fb;
     }
 
     public String getWebsite() {

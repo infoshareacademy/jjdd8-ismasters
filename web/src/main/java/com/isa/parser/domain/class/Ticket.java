@@ -1,4 +1,4 @@
-package com.isa.Parser.DomainClass;
+package com.isa.parser.domain;
 
 import javax.json.bind.annotation.JsonbProperty;
 
@@ -13,11 +13,6 @@ public class Ticket {
     @JsonbProperty("endTicket")
     private String endCost;
 
-    public Ticket(String type, String startCost, String endCost) {
-        this.type = type;
-        this.startCost = startCost;
-        this.endCost = endCost;
-    }
 
     public Ticket() {
     }

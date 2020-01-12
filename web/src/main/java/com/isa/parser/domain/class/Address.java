@@ -1,4 +1,4 @@
-package com.isa.Parser.DomainClass;
+package com.isa.parser.domain;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 

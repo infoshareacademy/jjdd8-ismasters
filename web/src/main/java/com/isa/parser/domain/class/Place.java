@@ -1,4 +1,4 @@
-package com.isa.Parser.DomainClass;
+package com.isa.parser.domain;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
@@ -14,13 +14,7 @@ public class Place {
     private String name;
 
     @JsonProperty("address")
-    private Address address;
-
-    public Place(Long api_Id, String description, String name) {
-        this.api_Id = api_Id;
-        this.description = description;
-        this.name = name;
-    }
+    private com.isa.parser.domain.Address address;
 
     public Place() {
     }
@@ -49,11 +43,11 @@ public class Place {
         this.name = name;
     }
 
-    public Address getAddress() {
+    public com.isa.parser.domain.Address getAddress() {
         return address;
     }
 
-    public void setAddress(Address address) {
+    public void setAddress(com.isa.parser.domain.Address address) {
         this.address = address;
     }
 

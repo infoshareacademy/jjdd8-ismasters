@@ -1,4 +1,4 @@
-package com.isa.Parser.DomainClass;
+package com.isa.parser.domain;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
@@ -7,8 +7,7 @@ public class Attachment {
     @JsonProperty("fileName")
     private String fileName;
 
-    public Attachment(String fileName) {
-        this.fileName = fileName;
+    public Attachment() {
     }
 
     public String getFileName() {

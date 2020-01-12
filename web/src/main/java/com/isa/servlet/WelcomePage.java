@@ -18,7 +18,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 
-@WebServlet("/welcome-page")
+@WebServlet("welcome-page")
 public class WelcomePage extends HttpServlet {
 
     private final Logger logger = LoggerFactory.getLogger(this.getClass().getName());

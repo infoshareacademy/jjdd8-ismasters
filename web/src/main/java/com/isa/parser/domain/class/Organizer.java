@@ -1,4 +1,4 @@
-package com.isa.Parser.DomainClass;
+package com.isa.parser.domain;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
@@ -10,10 +10,6 @@ public class Organizer {
     @JsonProperty("designation")
     private String designation;
 
-    public Organizer(int id, String designation) {
-        this.id = id;
-        this.designation = designation;
-    }
 
     public Organizer() {
     }

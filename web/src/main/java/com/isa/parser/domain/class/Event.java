@@ -1,4 +1,4 @@
-package com.isa.Parser.DomainClass;
+package com.isa.parser.domain;
 
 
 import com.fasterxml.jackson.annotation.JsonFormat;
@@ -13,7 +13,7 @@ public class Event {
     private Long api_Id;
 
     @JsonProperty("place")
-    private Place place;
+    private com.isa.parser.domain.Place place;
 
     @JsonProperty("endDate")
     @JsonFormat(pattern = "YYYY-MM-dd HH:mm")
@@ -23,10 +23,10 @@ public class Event {
     private String name;
 
     @JsonProperty("urls")
-    private Weblink weblink;
+    private com.isa.parser.domain.Weblink weblink;
 
     @JsonProperty("attachments")
-    private List<Attachment> attachments;
+    private List<com.isa.parser.domain.Attachment> attachments;
 
     @JsonProperty("descLong")
     private String LongDescription;
@@ -39,7 +39,7 @@ public class Event {
     private LocalDateTime startDate;
 
     @JsonProperty("organizer")
-    private Organizer organizer;
+    private com.isa.parser.domain.Organizer organizer;
 
     @JsonProperty("active")
     private Boolean activeEvent;
@@ -48,7 +48,7 @@ public class Event {
     private String shortDescription;
 
     @JsonProperty("tickets")
-    private Ticket ticket;
+    private com.isa.parser.domain.Ticket ticket;
 
     public Event() {
     }
@@ -61,11 +61,11 @@ public class Event {
         this.api_Id = api_Id;
     }
 
-    public Place getPlace() {
+    public com.isa.parser.domain.Place getPlace() {
         return place;
     }
 
-    public void setPlace(Place place) {
+    public void setPlace(com.isa.parser.domain.Place place) {
         this.place = place;
     }
 
@@ -85,19 +85,19 @@ public class Event {
         this.name = name;
     }
 
-    public Weblink getWeblink() {
+    public com.isa.parser.domain.Weblink getWeblink() {
         return weblink;
     }
 
-    public void setWeblink(Weblink weblink) {
+    public void setWeblink(com.isa.parser.domain.Weblink weblink) {
         this.weblink = weblink;
     }
 
-    public List<Attachment> getAttachments() {
+    public List<com.isa.parser.domain.Attachment> getAttachments() {
         return attachments;
     }
 
-    public void setAttachments(List<Attachment> attachments) {
+    public void setAttachments(List<com.isa.parser.domain.Attachment> attachments) {
         this.attachments = attachments;
     }
 
@@ -125,11 +125,11 @@ public class Event {
         this.startDate = startDate;
     }
 
-    public Organizer getOrganizer() {
+    public com.isa.parser.domain.Organizer getOrganizer() {
         return organizer;
     }
 
-    public void setOrganizer(Organizer organizer) {
+    public void setOrganizer(com.isa.parser.domain.Organizer organizer) {
         this.organizer = organizer;
     }
 
@@ -149,11 +149,11 @@ public class Event {
         this.shortDescription = shortDescription;
     }
 
-    public Ticket getTicket() {
+    public com.isa.parser.domain.Ticket getTicket() {
         return ticket;
     }
 
-    public void setTicket(Ticket ticket) {
+    public void setTicket(com.isa.parser.domain.Ticket ticket) {
         this.ticket = ticket;
     }
 

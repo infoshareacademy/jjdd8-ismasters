@@ -1,10 +1,10 @@
-package com.isa.Parser;
+package com.isa.parser;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.isa.Parser.DomainClass.Event;
-import com.isa.Parser.DomainClass.Organizer;
-import com.isa.Parser.DomainClass.Place;
+import com.isa.parser.domain.Event;
+import com.isa.parser.domain.Organizer;
+import com.isa.parser.domain.Place;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
