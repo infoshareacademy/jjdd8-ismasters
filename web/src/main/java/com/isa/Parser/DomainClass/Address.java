@@ -2,8 +2,6 @@ package com.isa.Parser.DomainClass;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-import javax.json.bind.annotation.JsonbProperty;
-
 public class Address {
 
     @JsonProperty("street")

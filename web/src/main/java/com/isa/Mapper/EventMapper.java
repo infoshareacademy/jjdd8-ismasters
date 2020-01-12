@@ -9,7 +9,7 @@ import javax.ejb.Stateless;
 public class EventMapper {
 
 
-    public Event fromParserClassToEntity(com.isa.Parser.DomainClass.Event eventParser){
+    public Event fromParserClassToEntity(com.isa.Parser.DomainClass.Event eventParser) {
         Event event = new Event();
 
         event.setApiId(eventParser.getApi_Id());
@@ -21,7 +21,7 @@ public class EventMapper {
         event.setCategoryId(eventParser.getCategoryEventId());
         event.setActive(eventParser.getActiveEvent());
 
-
+        return event;
     }
 
 }
