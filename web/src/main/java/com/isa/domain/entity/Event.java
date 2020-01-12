@@ -56,6 +56,10 @@ public class Event {
     @JoinColumn (name = "url_id", unique = true)
     private Url url;
 
+    public Event() {
+
+    }
+
     public String getName() {
         return name;
     }
