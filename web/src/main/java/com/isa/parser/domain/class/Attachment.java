@@ -7,9 +7,6 @@ public class Attachment {
     @JsonProperty("fileName")
     private String fileName;
 
-    public Attachment() {
-    }
-
     public String getFileName() {
         return fileName;
     }

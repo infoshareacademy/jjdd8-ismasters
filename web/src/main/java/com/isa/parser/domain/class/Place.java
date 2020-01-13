@@ -16,9 +16,6 @@ public class Place {
     @JsonProperty("address")
     private com.isa.parser.domain.Address address;
 
-    public Place() {
-    }
-
     public Long getApi_Id() {
         return api_Id;
     }

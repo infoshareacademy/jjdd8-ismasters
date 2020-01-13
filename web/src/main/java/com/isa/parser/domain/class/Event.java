@@ -50,9 +50,6 @@ public class Event {
     @JsonProperty("tickets")
     private com.isa.parser.domain.Ticket ticket;
 
-    public Event() {
-    }
-
     public Long getApi_Id() {
         return api_Id;
     }

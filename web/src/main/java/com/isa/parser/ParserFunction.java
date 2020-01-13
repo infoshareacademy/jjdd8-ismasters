@@ -20,24 +20,13 @@ public class ParserFunction {
     private final Logger logger = LoggerFactory.getLogger(this.getClass().getName());
     ObjectMapper objectMapper = new ObjectMapper();
 
+    public static final String FILENAME = "/home/robert/Pulpit/Projekt/newWebApp/jjdd8-ismasters/web/src/main/java/com/isa/mock/Json_example.json";
 
-    public List<Event> eventList(String filename) throws IOException {
-        logger.info("Parsing event List from filename");
-        return objectMapper.readValue(new File(filename), new TypeReference<ArrayList<Event>>() {
+    public <T> List<T> parseGenericType(String FILENAME) throws IOException {
+        logger.info("Parsing List from filename");
+        logger.info("file: " +  FILENAME);
+        return objectMapper.readValue(new File(FILENAME), new TypeReference<ArrayList<T>>() {
         });
     }
-
-    public List<Organizer> organizersList(String filename) throws IOException {
-        logger.info("Parsing organizers List from filename");
-        return objectMapper.readValue(new File(filename), new TypeReference<ArrayList<Organizer>>() {
-        });
-    }
-
-    public List<Place> placeList(String filename) throws IOException {
-        logger.info("Parsing place List from filename");
-        return objectMapper.readValue(new File(filename), new TypeReference<ArrayList<Place>>() {
-        });
-    }
-
 
 }

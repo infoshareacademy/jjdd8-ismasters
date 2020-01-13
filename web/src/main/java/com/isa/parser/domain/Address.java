@@ -2,6 +2,9 @@ package com.isa.parser.domain;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class Address {
 
     @JsonProperty("street")
@@ -18,9 +21,6 @@ public class Address {
 
     @JsonProperty("lng")
     private String lng;
-
-    public Address() {
-    }
 
     public String getStreet() {
         return street;

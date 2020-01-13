@@ -10,10 +10,6 @@ public class Organizer {
     @JsonProperty("designation")
     private String designation;
 
-
-    public Organizer() {
-    }
-
     public int getId() {
         return id;
     }

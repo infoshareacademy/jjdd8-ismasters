@@ -13,10 +13,6 @@ public class Ticket {
     @JsonbProperty("endTicket")
     private String endCost;
 
-
-    public Ticket() {
-    }
-
     public String getType() {
         return type;
     }

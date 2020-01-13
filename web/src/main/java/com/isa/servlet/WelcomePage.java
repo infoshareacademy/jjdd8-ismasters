@@ -3,6 +3,7 @@ package com.isa.servlet;
 
 import com.isa.config.TemplateProvider;
 import com.isa.mock.EventDTO_mock;
+import com.isa.parser.ParserFunction;
 import freemarker.template.Template;
 import freemarker.template.TemplateException;
 import org.slf4j.Logger;
@@ -18,12 +19,18 @@ import java.util.HashMap;
 import java.util.Map;
 
 
-@WebServlet("welcome-page")
+@WebServlet("")
 public class WelcomePage extends HttpServlet {
+
+    public static final String FILENAME = "/home/robert/Pulpit/Projekt/newWebApp/jjdd8-ismasters/web/src/main/java/com/isa/mock/Json_example.json";
+
 
     private final Logger logger = LoggerFactory.getLogger(this.getClass().getName());
 
     private EventDTO_mock eventDTO_mock = new EventDTO_mock();
+
+    @Inject
+    private ParserFunction parserFunction;
 
     @Inject
     private TemplateProvider templateProvider;
@@ -38,6 +45,8 @@ public class WelcomePage extends HttpServlet {
         Template template = templateProvider.getTemplate(getServletContext(), "welcome-page.ftlh");
         Map<String, Object> model = new HashMap<>();
         model.put("eventDTO_mock", eventDTO_mock);
+
+        parserFunction.parseGenericType(FILENAME);
 
         try {
             template.process(model, rep.getWriter());

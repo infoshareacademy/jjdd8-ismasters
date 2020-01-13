@@ -13,9 +13,6 @@ public class Weblink {
     @JsonProperty("fb")
     private String fb;
 
-    public Weblink() {
-    }
-
     public String getWebsite() {
         return website;
     }
