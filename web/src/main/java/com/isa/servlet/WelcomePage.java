@@ -1,9 +1,7 @@
 package com.isa.servlet;
 
 
-import com.fasterxml.jackson.core.type.TypeReference;
 import com.isa.config.TemplateProvider;
-import com.isa.domain.api.EventApi;
 import com.isa.mock.EventDTO_mock;
 import com.isa.parser.ApiDataParser;
 import freemarker.template.Template;
@@ -18,14 +16,14 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 
-@WebServlet("")
+@WebServlet ("")
 public class WelcomePage extends HttpServlet {
 
-    public static final String FILENAME = "/home/robert/Pulpit/Projekt/newWebApp/jjdd8-ismasters/web/src/main/java/com/isa/mock/Json_example.json";
+
+    public static final String FILENAME = "Json_example.json";
 
 
     private final Logger logger = LoggerFactory.getLogger(this.getClass().getName());
@@ -38,11 +36,8 @@ public class WelcomePage extends HttpServlet {
     @Inject
     private TemplateProvider templateProvider;
 
-
-
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse rep) throws SecurityException, IOException {
-        rep.setCharacterEncoding("UTF-8");
         eventDTO_mock.setDescShort("Gimnastyka prozdrowotna dla kobiet 50 +Zaj\u0119cia prozdrowotne i uelastyczniaj\u0105ce dla kobiet 50+.Grupa wiekowa: Kobiety 50+Cena: 20 z\u0142 \u2013 pojedyncze zaj\u0119cia,70 z\u0142 - miesi\u0105c (1x w tygodniu)120 z\u0142 - miesi\u0105c (2x w tygodniu)Cz\u0119stotliwo\u015b\u0107 zaj\u0119\u0107...");
         eventDTO_mock.setName("Gimnastyka prozdrowotna");
         eventDTO_mock.setUrls("http://wyspaskarbow.gak.gda.pl");
@@ -51,8 +46,7 @@ public class WelcomePage extends HttpServlet {
         Map<String, Object> model = new HashMap<>();
         model.put("eventDTO_mock", eventDTO_mock);
 
-
-        List<EventApi> eventApis = (List<EventApi>) apiDataParser.parse(FILENAME, EventApi.class);
+        apiDataParser.parse(FILENAME);
 
         try {
             template.process(model, rep.getWriter());

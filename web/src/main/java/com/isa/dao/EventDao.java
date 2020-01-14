@@ -30,7 +30,7 @@ public class EventDao {
         return listOfEvents;
     }
 
-    public Event getById(Long id){
+    public Event findById(Long id){
         return em.find(Event.class, id);
     }
 
