@@ -2,7 +2,7 @@ package com.isa.mapper;
 
 
 import com.isa.domain.entity.Address;
-import com.isa.parser.domain.AddressApi;
+import com.isa.domain.api.AddressApi;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

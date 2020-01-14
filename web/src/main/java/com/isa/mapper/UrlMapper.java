@@ -1,7 +1,7 @@
 package com.isa.mapper;
 
 import com.isa.domain.entity.Url;
-import com.isa.parser.domain.WeblinkApi;
+import com.isa.domain.api.WeblinkApi;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

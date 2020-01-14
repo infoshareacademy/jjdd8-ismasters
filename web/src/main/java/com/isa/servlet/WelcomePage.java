@@ -3,7 +3,7 @@ package com.isa.servlet;
 
 import com.isa.config.TemplateProvider;
 import com.isa.mock.EventDTO_mock;
-import com.isa.parser.ParserFunction;
+import com.isa.parser.ApiDataParser;
 import freemarker.template.Template;
 import freemarker.template.TemplateException;
 import org.slf4j.Logger;
@@ -31,14 +31,13 @@ public class WelcomePage extends HttpServlet {
     private EventDTO_mock eventDTO_mock = new EventDTO_mock();
 
     @Inject
-    private ParserFunction parserFunction;
+    private ApiDataParser apiDataParser;
 
     @Inject
     private TemplateProvider templateProvider;
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse rep) throws SecurityException, IOException {
-        rep.setCharacterEncoding("UTF-8");
         eventDTO_mock.setDescShort("Gimnastyka prozdrowotna dla kobiet 50 +Zaj\u0119cia prozdrowotne i uelastyczniaj\u0105ce dla kobiet 50+.Grupa wiekowa: Kobiety 50+Cena: 20 z\u0142 \u2013 pojedyncze zaj\u0119cia,70 z\u0142 - miesi\u0105c (1x w tygodniu)120 z\u0142 - miesi\u0105c (2x w tygodniu)Cz\u0119stotliwo\u015b\u0107 zaj\u0119\u0107...");
         eventDTO_mock.setName("Gimnastyka prozdrowotna");
         eventDTO_mock.setUrls("http://wyspaskarbow.gak.gda.pl");
@@ -47,7 +46,7 @@ public class WelcomePage extends HttpServlet {
         Map<String, Object> model = new HashMap<>();
         model.put("eventDTO_mock", eventDTO_mock);
 
-        parserFunction.parseGenericType(FILENAME);
+        apiDataParser.parse(FILENAME);
 
         try {
             template.process(model, rep.getWriter());

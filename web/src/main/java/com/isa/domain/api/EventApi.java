@@ -1,4 +1,4 @@
-package com.isa.parser.domain;
+package com.isa.domain.api;
 
 
 import com.fasterxml.jackson.annotation.JsonFormat;

@@ -1,9 +1,7 @@
 package com.isa.mapper;
 
 import com.isa.domain.entity.Organizer;
-import com.isa.domain.entity.Place;
-import com.isa.parser.domain.OrganizerApi;
-import com.isa.parser.domain.PlaceApi;
+import com.isa.domain.api.OrganizerApi;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

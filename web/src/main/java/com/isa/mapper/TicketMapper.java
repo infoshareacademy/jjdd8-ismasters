@@ -1,9 +1,7 @@
 package com.isa.mapper;
 
-import com.isa.domain.entity.Place;
 import com.isa.domain.entity.TicketType;
-import com.isa.parser.domain.PlaceApi;
-import com.isa.parser.domain.TicketApi;
+import com.isa.domain.api.TicketApi;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

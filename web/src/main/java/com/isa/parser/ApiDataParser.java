@@ -12,13 +12,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 @ApplicationScoped
-public class ParserFunction {
+public class ApiDataParser {
 
     private final Logger logger = LoggerFactory.getLogger(this.getClass().getName());
     ObjectMapper objectMapper = new ObjectMapper();
 
 
-    public <T> List<T> parseGenericType(String FILENAME) throws IOException {
+    public <T> List<T> parse(String FILENAME) throws IOException {
         logger.info("Parsing List from filename");
         logger.info("file: " +  FILENAME);
         return objectMapper.readValue(new File(FILENAME), new TypeReference<ArrayList<T>>() {
