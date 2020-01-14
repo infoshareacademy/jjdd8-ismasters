@@ -22,6 +22,9 @@ public class TicketType {
         this.ticketTypeName = ticketTypeName;
     }
 
+    public TicketType() {
+
+    }
     public int getId() {
         return id;
     }

@@ -4,6 +4,10 @@ import javax.persistence.*;
 import java.time.LocalDateTime;
 import java.util.List;
 
+@NamedQueries(
+        @NamedQuery(name = "Event.findAll" ,query = "SELECT e FROM Event e" )
+)
+
 @Entity
 @Table (name = "event")
 public class Event {
@@ -55,6 +59,10 @@ public class Event {
     @OneToOne (fetch = FetchType.LAZY)
     @JoinColumn (name = "url_id", unique = true)
     private Url url;
+
+    public Event() {
+
+    }
 
     public String getName() {
         return name;
@@ -168,7 +176,4 @@ public class Event {
         this.url = url;
     }
 
-    public Event(Long apiId) {
-        this.apiId = apiId;
-    }
 }
