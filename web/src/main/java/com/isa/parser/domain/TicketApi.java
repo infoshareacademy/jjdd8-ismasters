@@ -2,7 +2,7 @@ package com.isa.parser.domain;
 
 import javax.json.bind.annotation.JsonbProperty;
 
-public class Ticket {
+public class TicketApi {
 
     @JsonbProperty("type")
     private String type;

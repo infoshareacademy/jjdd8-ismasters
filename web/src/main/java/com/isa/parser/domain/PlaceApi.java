@@ -2,10 +2,10 @@ package com.isa.parser.domain;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-public class Place {
+public class PlaceApi {
 
     @JsonProperty("id")
-    private Long api_Id;
+    private int api_Id;
 
     @JsonProperty("subname")
     private String description;
@@ -14,13 +14,13 @@ public class Place {
     private String name;
 
     @JsonProperty("address")
-    private com.isa.parser.domain.Address address;
+    private AddressApi addressApi;
 
-    public Long getApi_Id() {
+    public int getApi_Id() {
         return api_Id;
     }
 
-    public void setApi_Id(Long api_Id) {
+    public void setApi_Id(int api_Id) {
         this.api_Id = api_Id;
     }
 
@@ -40,12 +40,12 @@ public class Place {
         this.name = name;
     }
 
-    public com.isa.parser.domain.Address getAddress() {
-        return address;
+    public AddressApi getAddressApi() {
+        return addressApi;
     }
 
-    public void setAddress(com.isa.parser.domain.Address address) {
-        this.address = address;
+    public void setAddressApi(AddressApi addressApi) {
+        this.addressApi = addressApi;
     }
 
     @Override

@@ -2,6 +2,9 @@ package com.isa.domain.entity;
 
 import javax.persistence.*;
 import java.util.List;
+@NamedQueries(
+        @NamedQuery(name = "User.findAll", query = "SELECT u FROM User u")
+)
 
 @Entity
 @Table (name = "user")

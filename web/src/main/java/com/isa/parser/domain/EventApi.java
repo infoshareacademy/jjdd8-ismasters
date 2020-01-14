@@ -2,18 +2,19 @@ package com.isa.parser.domain;
 
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.time.LocalDateTime;
 import java.util.List;
 
-public class Event {
+public class EventApi {
 
     @JsonProperty("id")
     private Long api_Id;
 
     @JsonProperty("place")
-    private com.isa.parser.domain.Place place;
+    private PlaceApi placeApi;
 
     @JsonProperty("endDate")
     @JsonFormat(pattern = "YYYY-MM-dd HH:mm")
@@ -23,10 +24,10 @@ public class Event {
     private String name;
 
     @JsonProperty("urls")
-    private com.isa.parser.domain.Weblink weblink;
+    private WeblinkApi weblinkApi;
 
-    @JsonProperty("attachments")
-    private List<com.isa.parser.domain.Attachment> attachments;
+    @JsonIgnore
+    private List<AttachmentApi> attachmentApis;
 
     @JsonProperty("descLong")
     private String LongDescription;
@@ -39,7 +40,7 @@ public class Event {
     private LocalDateTime startDate;
 
     @JsonProperty("organizer")
-    private com.isa.parser.domain.Organizer organizer;
+    private OrganizerApi organizerApi;
 
     @JsonProperty("active")
     private Boolean activeEvent;
@@ -48,7 +49,7 @@ public class Event {
     private String shortDescription;
 
     @JsonProperty("tickets")
-    private com.isa.parser.domain.Ticket ticket;
+    private TicketApi ticketApi;
 
     public Long getApi_Id() {
         return api_Id;
@@ -58,12 +59,12 @@ public class Event {
         this.api_Id = api_Id;
     }
 
-    public com.isa.parser.domain.Place getPlace() {
-        return place;
+    public PlaceApi getPlaceApi() {
+        return placeApi;
     }
 
-    public void setPlace(com.isa.parser.domain.Place place) {
-        this.place = place;
+    public void setPlaceApi(PlaceApi placeApi) {
+        this.placeApi = placeApi;
     }
 
     public LocalDateTime getEndDate() {
@@ -82,20 +83,21 @@ public class Event {
         this.name = name;
     }
 
-    public com.isa.parser.domain.Weblink getWeblink() {
-        return weblink;
+    public WeblinkApi getWeblinkApi() {
+        return weblinkApi;
     }
 
-    public void setWeblink(com.isa.parser.domain.Weblink weblink) {
-        this.weblink = weblink;
+    public void setWeblinkApi(WeblinkApi weblinkApi) {
+        this.weblinkApi = weblinkApi;
     }
 
-    public List<com.isa.parser.domain.Attachment> getAttachments() {
-        return attachments;
+    @JsonIgnore
+    public List<AttachmentApi> getAttachmentApis() {
+        return attachmentApis;
     }
 
-    public void setAttachments(List<com.isa.parser.domain.Attachment> attachments) {
-        this.attachments = attachments;
+    public void setAttachmentApis(List<AttachmentApi> attachmentApis) {
+        this.attachmentApis = attachmentApis;
     }
 
     public String getLongDescription() {
@@ -122,12 +124,12 @@ public class Event {
         this.startDate = startDate;
     }
 
-    public com.isa.parser.domain.Organizer getOrganizer() {
-        return organizer;
+    public OrganizerApi getOrganizerApi() {
+        return organizerApi;
     }
 
-    public void setOrganizer(com.isa.parser.domain.Organizer organizer) {
-        this.organizer = organizer;
+    public void setOrganizerApi(OrganizerApi organizerApi) {
+        this.organizerApi = organizerApi;
     }
 
     public Boolean getActiveEvent() {
@@ -146,30 +148,30 @@ public class Event {
         this.shortDescription = shortDescription;
     }
 
-    public com.isa.parser.domain.Ticket getTicket() {
-        return ticket;
+    public TicketApi getTicketApi() {
+        return ticketApi;
     }
 
-    public void setTicket(com.isa.parser.domain.Ticket ticket) {
-        this.ticket = ticket;
+    public void setTicketApi(TicketApi ticketApi) {
+        this.ticketApi = ticketApi;
     }
 
     @Override
     public String toString() {
         return "Event{" +
                 "api_Id=" + api_Id +
-                ", place=" + place +
+                ", place=" + placeApi +
                 ", endDate=" + endDate +
                 ", name='" + name + '\'' +
-                ", weblink=" + weblink +
-                ", attachments=" + attachments +
+                ", weblink=" + weblinkApi +
+                ", attachments=" + attachmentApis +
                 ", LongDescription='" + LongDescription + '\'' +
                 ", categoryEventId=" + categoryEventId +
                 ", startDate=" + startDate +
-                ", organizer=" + organizer +
+                ", organizer=" + organizerApi +
                 ", activeEvent=" + activeEvent +
                 ", shortDescription='" + shortDescription + '\'' +
-                ", ticket=" + ticket +
+                ", ticket=" + ticketApi +
                 '}';
     }
 }

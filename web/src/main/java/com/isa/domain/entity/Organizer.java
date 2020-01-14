@@ -3,6 +3,10 @@ package com.isa.domain.entity;
 import javax.persistence.*;
 import java.util.List;
 
+@NamedQueries(
+        @NamedQuery(name = "Organizer.findAll", query = "SELECT o FROM Organizer o")
+)
+
 @Entity
 @Table (name = "organizer")
 public class Organizer {
@@ -20,6 +24,10 @@ public class Organizer {
 
     @OneToMany (fetch = FetchType.LAZY, mappedBy = "organizer")
     private List<Event> event;
+
+    public Organizer() {
+
+    }
 
     public int getApiId() {
         return apiId;
@@ -53,7 +61,4 @@ public class Organizer {
         this.event = event;
     }
 
-    public Organizer(int apiId) {
-        this.apiId = apiId;
-    }
 }

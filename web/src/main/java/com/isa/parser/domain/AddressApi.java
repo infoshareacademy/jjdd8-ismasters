@@ -3,9 +3,8 @@ package com.isa.parser.domain;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 
-import com.fasterxml.jackson.annotation.JsonProperty;
 
-public class Address {
+public class AddressApi {
 
     @JsonProperty("street")
     private String street;

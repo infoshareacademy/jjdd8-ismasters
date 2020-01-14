@@ -2,6 +2,10 @@ package com.isa.domain.entity;
 
 import javax.persistence.*;
 
+@NamedQueries(
+        @NamedQuery(name = "Address.findAll" ,query = "SELECT a FROM Address a" )
+)
+
 @Entity
 @Table (name = "address")
 public class Address {
@@ -29,8 +33,8 @@ public class Address {
     @OneToOne (mappedBy = "address", fetch = FetchType.LAZY)
     private Place place;
 
-    public Address(int id) {
-        this.id = id;
+    public Address() {
+
     }
 
     public int getId() {

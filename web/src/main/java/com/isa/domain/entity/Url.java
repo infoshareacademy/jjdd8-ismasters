@@ -23,6 +23,9 @@ public class Url {
     @OneToOne (fetch = FetchType.LAZY, mappedBy = "url")
     private Event event;
 
+    public Url() {
+
+    }
     public int getId() {
         return id;
     }
@@ -63,7 +66,4 @@ public class Url {
         this.event = event;
     }
 
-    public Url(String wwwUrl) {
-        this.wwwUrl = wwwUrl;
-    }
 }

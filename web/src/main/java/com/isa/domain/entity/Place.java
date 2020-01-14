@@ -3,6 +3,10 @@ package com.isa.domain.entity;
 import javax.persistence.*;
 import java.util.List;
 
+@NamedQueries(
+        @NamedQuery(name = "Place.findAll", query = "SELECT p FROM Place p")
+)
+
 @Entity
 @Table (name = "place")
 public class Place {

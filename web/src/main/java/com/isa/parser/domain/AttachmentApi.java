@@ -2,7 +2,7 @@ package com.isa.parser.domain;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-public class Attachment {
+public class AttachmentApi {
 
     @JsonProperty("fileName")
     private String fileName;
