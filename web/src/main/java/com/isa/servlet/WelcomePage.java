@@ -46,8 +46,6 @@ public class WelcomePage extends HttpServlet {
         Map<String, Object> model = new HashMap<>();
         model.put("eventDTO_mock", eventDTO_mock);
 
-        apiDataParser.parse(FILENAME);
-
         try {
             template.process(model, rep.getWriter());
         } catch (TemplateException e) {

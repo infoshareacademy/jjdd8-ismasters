@@ -1,17 +1,22 @@
 package com.isa.domain.api;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import javax.json.bind.annotation.JsonbProperty;
 
 public class TicketApi {
 
     @JsonbProperty("type")
+    @JsonIgnoreProperties(ignoreUnknown = true)
     private String type;
 
     @JsonbProperty("startTicket")
-    private String startCost;
+    @JsonIgnoreProperties(ignoreUnknown = true)
+    private String startTicket;
 
     @JsonbProperty("endTicket")
-    private String endCost;
+    @JsonIgnoreProperties(ignoreUnknown = true)
+    private String endTicket;
 
     public String getType() {
         return type;
@@ -21,28 +26,28 @@ public class TicketApi {
         this.type = type;
     }
 
-    public String getStartCost() {
-        return startCost;
+    public String getStartTicket() {
+        return startTicket;
     }
 
-    public void setStartCost(String startCost) {
-        this.startCost = startCost;
+    public void setStartTicket(String startTicket) {
+        this.startTicket = startTicket;
     }
 
-    public String getEndCost() {
-        return endCost;
+    public String getEndTicket() {
+        return endTicket;
     }
 
-    public void setEndCost(String endCost) {
-        this.endCost = endCost;
+    public void setEndTicket(String endTicket) {
+        this.endTicket = endTicket;
     }
 
     @Override
     public String toString() {
         return "Ticket{" +
                 "type='" + type + '\'' +
-                ", startCost='" + startCost + '\'' +
-                ", endCost='" + endCost + '\'' +
+                ", startCost='" + startTicket + '\'' +
+                ", endCost='" + endTicket + '\'' +
                 '}';
     }
 }

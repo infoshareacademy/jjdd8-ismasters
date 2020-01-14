@@ -9,6 +9,7 @@ import java.util.List;
 )
 
 @Entity
+@Cacheable(true)
 @Table (name = "event")
 public class Event {
 
@@ -32,7 +33,7 @@ public class Event {
     @Column (name = "name")
     private String name;
 
-    @Column (name = "desc_long")
+    @Column (name = "desc_long", columnDefinition = "NVARCHAR(MAX)")
     private String descLong;
 
     @Column (name = "category_id")

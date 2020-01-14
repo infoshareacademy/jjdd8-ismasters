@@ -1,11 +1,10 @@
 package com.isa.domain.api;
 
 
-import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-import java.time.LocalDateTime;
 import java.util.List;
 
 public class EventApi {
@@ -26,8 +25,10 @@ public class EventApi {
     @JsonProperty("urls")
     private WeblinkApi weblinkApi;
 
-    @JsonIgnore
-    private List<AttachmentApi> attachmentApis;
+
+    @JsonProperty("attachments")
+    @JsonIgnoreProperties(ignoreUnknown = true)
+    private List<AttachmentApi> attachments;
 
     @JsonProperty("descLong")
     private String LongDescription;
@@ -49,6 +50,7 @@ public class EventApi {
     private String shortDescription;
 
     @JsonProperty("tickets")
+    @JsonIgnoreProperties(ignoreUnknown = true)
     private TicketApi ticketApi;
 
     public Long getApi_Id() {
@@ -92,12 +94,13 @@ public class EventApi {
     }
 
     @JsonIgnore
-    public List<AttachmentApi> getAttachmentApis() {
-        return attachmentApis;
+    public List<AttachmentApi> getAttachments() {
+        return attachments;
     }
 
-    public void setAttachmentApis(List<AttachmentApi> attachmentApis) {
-        this.attachmentApis = attachmentApis;
+    @JsonIgnore
+    public void setAttachments(List<AttachmentApi> attachments) {
+        this.attachments = attachments;
     }
 
     public String getLongDescription() {
@@ -164,7 +167,7 @@ public class EventApi {
                 ", endDate=" + endDate +
                 ", name='" + name + '\'' +
                 ", weblink=" + weblinkApi +
-                ", attachments=" + attachmentApis +
+                ", attachments=" + attachments +
                 ", LongDescription='" + LongDescription + '\'' +
                 ", categoryEventId=" + categoryEventId +
                 ", startDate=" + startDate +

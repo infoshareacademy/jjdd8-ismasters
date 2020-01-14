@@ -57,12 +57,14 @@ public class ApiInitialization {
 
     @PostConstruct
     public void importingEvents() throws IOException {
-        List<EventApi> listOfEvents = (List<EventApi>) apiDataParser.parse(eventsFile, EventApi.class);
+        List<EventApi> listOfEvents = apiDataParser.parse(eventsFile, EventApi.class);
         logger.info("Zaimportowano listę Wydarzeń");
 
         for (EventApi e :listOfEvents) {
             logger.info("Wydarzenia mapowane i kierowane do bazy danych");
-            eventDao.addNewEvent(eventMapper.mapApiViewToEntity(e));
+            Event event = new Event();
+            event = eventMapper.mapApiViewToEntity(e);
+            eventDao.addNewEvent(event);
         }
     }
 }

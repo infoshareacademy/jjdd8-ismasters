@@ -18,10 +18,11 @@ public class ApiDataParser {
     private final Logger logger = LoggerFactory.getLogger(this.getClass().getName());
     private ObjectMapper objectMapper = new ObjectMapper();
 
-    public <T> T parse(String FILENAME, Class<T> tClass) throws IOException {
+    public <T> List<T> parse(String FILENAME, Class<T> tClass) throws IOException {
         logger.info("Parsing List from filename");
         logger.info("file: " +  FILENAME);
-        return objectMapper.readValue(new File(FILENAME), new TypeReference<T>(){} );
+
+        return objectMapper.readValue(new File(FILENAME), objectMapper.getTypeFactory().constructCollectionType(ArrayList.class, tClass));
     }
 
 }
