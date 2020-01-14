@@ -22,7 +22,7 @@ public class OrganizerMapper {
         organizer.setApiId(organizerApi.getId());
         organizer.setDesignation(organizerApi.getDesignation());
 
-        // Dodać jeszcze obiekt klasy Address
+        // TODO Robert Dodać jeszcze obiekt klasy Address
 
         logger.info("Organizer mapping to Entity-> all parameters set");
 

@@ -30,7 +30,7 @@ public class PlaceDao {
         return placesList;
     }
 
-    public Place getById(Long id){
+    public Place findById(Long id){
         return em.find(Place.class, id);
     }
 

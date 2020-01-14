@@ -19,10 +19,11 @@ import java.util.HashMap;
 import java.util.Map;
 
 
-@WebServlet("")
+@WebServlet ("")
 public class WelcomePage extends HttpServlet {
 
-    public static final String FILENAME = "/home/robert/Pulpit/Projekt/newWebApp/jjdd8-ismasters/web/src/main/java/com/isa/mock/Json_example.json";
+
+    public static final String FILENAME = "Json_example.json";
 
 
     private final Logger logger = LoggerFactory.getLogger(this.getClass().getName());

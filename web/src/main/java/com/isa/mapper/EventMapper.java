@@ -41,16 +41,16 @@ public class EventMapper {
         event.setActive(eventApiParser.getActiveEvent());
 
         event.setTicketType(ticketMapper.mapApiViewToEntity(eventApiParser.getTicketApi()));
-        logger.debug("Importing Ticket class");
+        logger.info("Importing Ticket class");
 
         event.setOrganizer(organizerMapper.mapApiViewToEntity(eventApiParser.getOrganizerApi()));
-        logger.debug("Importing Organizer class");
+        logger.info("Importing Organizer class");
 
         event.setPlace(placeMapper.mapApiViewToEntity(eventApiParser.getPlaceApi()));
-        logger.debug("Importing Place class");
+        logger.info("Importing Place class");
 
         event.setUrl(urlMapper.mapApiViewToEntity(eventApiParser.getWeblinkApi()));
-        logger.debug("Importing Url class");
+        logger.info("Importing Url class");
 
         return event;
     }
