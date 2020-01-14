@@ -1,4 +1,4 @@
-package com.isa.parser.domain;
+package com.isa.domain.api;
 
 import javax.json.bind.annotation.JsonbProperty;
 

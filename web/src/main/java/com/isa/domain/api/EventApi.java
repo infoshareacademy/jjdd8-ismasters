@@ -1,4 +1,4 @@
-package com.isa.parser.domain;
+package com.isa.domain.api;
 
 
 import com.fasterxml.jackson.annotation.JsonFormat;
@@ -17,8 +17,8 @@ public class EventApi {
     private PlaceApi placeApi;
 
     @JsonProperty("endDate")
-    @JsonFormat(pattern = "YYYY-MM-dd HH:mm")
-    private LocalDateTime endDate;
+   // @JsonFormat(pattern = "YYYY-MM-ddTHH:mm:ssZ")
+    private String endDate;
 
     @JsonProperty("name")
     private String name;
@@ -36,8 +36,8 @@ public class EventApi {
     private int categoryEventId;
 
     @JsonProperty("startDate")
-    @JsonFormat(pattern = "YYYY-MM-dd HH:mm")
-    private LocalDateTime startDate;
+   // @JsonFormat(pattern = "YYYY-MM-ddTHH:mm:ssZ")
+    private String startDate;
 
     @JsonProperty("organizer")
     private OrganizerApi organizerApi;
@@ -67,11 +67,11 @@ public class EventApi {
         this.placeApi = placeApi;
     }
 
-    public LocalDateTime getEndDate() {
+    public String getEndDate() {
         return endDate;
     }
 
-    public void setEndDate(LocalDateTime endDate) {
+    public void setEndDate(String endDate) {
         this.endDate = endDate;
     }
 
@@ -116,11 +116,11 @@ public class EventApi {
         this.categoryEventId = categoryEventId;
     }
 
-    public LocalDateTime getStartDate() {
+    public String getStartDate() {
         return startDate;
     }
 
-    public void setStartDate(LocalDateTime startDate) {
+    public void setStartDate(String startDate) {
         this.startDate = startDate;
     }
 

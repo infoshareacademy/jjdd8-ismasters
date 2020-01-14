@@ -2,7 +2,7 @@ package com.isa.mapper;
 
 
 import com.isa.domain.entity.Event;
-import com.isa.parser.domain.EventApi;
+import com.isa.domain.api.EventApi;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -32,25 +32,14 @@ public class EventMapper {
         Event event = new Event();
 
         event.setApiId(eventApiParser.getApi_Id());
-        event.setStartDate(eventApiParser.getStartDate());
-        event.setEndDate(eventApiParser.getEndDate());
+        //event.setStartDate(eventApiParser.getStartDate());
+        //event.setEndDate(eventApiParser.getEndDate());
         event.setDescShort(eventApiParser.getShortDescription());
         event.setName(eventApiParser.getName());
         event.setDescLong(eventApiParser.getLongDescription());
         event.setCategoryId(eventApiParser.getCategoryEventId());
         event.setActive(eventApiParser.getActiveEvent());
 
-        event.setTicketType(ticketMapper.mapApiViewToEntity(eventApiParser.getTicketApi()));
-        logger.debug("Importing Ticket class");
-
-        event.setOrganizer(organizerMapper.mapApiViewToEntity(eventApiParser.getOrganizerApi()));
-        logger.debug("Importing Organizer class");
-
-        event.setPlace(placeMapper.mapApiViewToEntity(eventApiParser.getPlaceApi()));
-        logger.debug("Importing Place class");
-
-        event.setUrl(urlMapper.mapApiViewToEntity(eventApiParser.getWeblinkApi()));
-        logger.debug("Importing Url class");
 
         return event;
     }

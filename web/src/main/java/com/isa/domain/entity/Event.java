@@ -61,7 +61,6 @@ public class Event {
     private Url url;
 
     public Event() {
-
     }
 
     public String getName() {

@@ -1,9 +1,11 @@
 package com.isa.servlet;
 
 
+import com.fasterxml.jackson.core.type.TypeReference;
 import com.isa.config.TemplateProvider;
+import com.isa.domain.api.EventApi;
 import com.isa.mock.EventDTO_mock;
-import com.isa.parser.ParserFunction;
+import com.isa.parser.ApiDataParser;
 import freemarker.template.Template;
 import freemarker.template.TemplateException;
 import org.slf4j.Logger;
@@ -16,6 +18,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 
@@ -30,10 +33,12 @@ public class WelcomePage extends HttpServlet {
     private EventDTO_mock eventDTO_mock = new EventDTO_mock();
 
     @Inject
-    private ParserFunction parserFunction;
+    private ApiDataParser apiDataParser;
 
     @Inject
     private TemplateProvider templateProvider;
+
+
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse rep) throws SecurityException, IOException {
@@ -46,7 +51,8 @@ public class WelcomePage extends HttpServlet {
         Map<String, Object> model = new HashMap<>();
         model.put("eventDTO_mock", eventDTO_mock);
 
-        parserFunction.parseGenericType(FILENAME);
+
+        List<EventApi> eventApis = (List<EventApi>) apiDataParser.parse(FILENAME, EventApi.class);
 
         try {
             template.process(model, rep.getWriter());
