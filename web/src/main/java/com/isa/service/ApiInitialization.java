@@ -4,7 +4,9 @@ package com.isa.service;
 import com.isa.dao.EventDao;
 import com.isa.dao.PlaceDao;
 import com.isa.domain.api.EventApi;
+import com.isa.domain.api.OrganizerApi;
 import com.isa.domain.entity.Event;
+import com.isa.domain.entity.Organizer;
 import com.isa.mapper.*;
 import com.isa.parser.ApiDataParser;
 import org.slf4j.Logger;
@@ -67,4 +69,16 @@ public class ApiInitialization {
             eventDao.addNewEvent(event);
         }
     }
+
+   /* @PostConstruct
+    public void importingOrganizers() throws IOException {
+        List<OrganizerApi> listOfOrganizers = apiDataParser.parse(organizersFile, OrganizerApi.class);
+        logger.info("Zaimportowano listę organizatorów");
+
+        for (OrganizerApi e :listOfOrganizers) {
+            logger.info("Organizatorzy mapowane i kierowane do bazy danych");
+            Organizer organiz = organizerMapper.mapApiViewToEntity(e);
+            .addNewEvent(organiz);
+        }
+    }*/
 }

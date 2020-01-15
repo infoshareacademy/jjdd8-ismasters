@@ -33,7 +33,7 @@ public class Event {
     @Column (name = "name")
     private String name;
 
-    @Column (name = "desc_long", columnDefinition = "NVARCHAR(MAX)")
+    @Column (name = "desc_long", columnDefinition = "TEXT")
     private String descLong;
 
     @Column (name = "category_id")
