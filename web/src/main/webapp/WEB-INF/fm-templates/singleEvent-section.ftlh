@@ -8,14 +8,14 @@
                 <dd class="col-sm-9">A description list is perfect for defining terms.</dd>
                 <dt class="col-sm-3">Nazwa Wydarzenia</dt>
                 <dd class="col-sm-9">
-                    <p>{EventDTO_mock.getName}</p>
+                    <p>{EventDTO_mock.name}</p>
                 </dd>
-                <dt class="col-sm-3">Długi opis wydarzenia</dt>
-                <dd class="col-sm-9">{EventDTO_mock.getLongDescription}</dd>
+                <dt class="col-sm-3">Data wydarzenia</dt>
+                <dd class="col-sm-9">{EventDTO_mock.startDate}</dd>
                 <dt class="col-sm-3 text-truncate">Organizator/dt>
-                <dd class="col-sm-9">{EventDTO_mock.getOrganizer}</dd>
+                <dd class="col-sm-9">{EventDTO_mock.organizer}</dd>
                 <dt class="col-sm-3 text-truncate">Miejsce/dt>
-                <dd class="col-sm-9">{EventDTO_mock.getPlace}</dd>
+                <dd class="col-sm-9">{EventDTO_mock.place}</dd>
             </dl>
         </div>
     </div>
