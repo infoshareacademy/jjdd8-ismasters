@@ -16,13 +16,13 @@ public class EventDao {
     @PersistenceContext
     private EntityManager em;
 
-    public long addNewEvent(Event event){
+    public long addNewEvent(Event event) {
         em.persist(event);
         logger.info("New event has been added to the DB ");
         return event.getId();
     }
 
-    public List<Event> findAll(){
+    public List<Event> findAll() {
         List listOfEvents = em
                 .createNamedQuery("Event.findAll")
                 .getResultList();
@@ -30,14 +30,13 @@ public class EventDao {
         return listOfEvents;
     }
 
-    public Event findById(Long id){
+    public Event findById(Long id) {
         return em.find(Event.class, id);
     }
 
-    public Event editEvent(Event event){
+    public Event editEvent(Event event) {
         return em.merge(event);
     }
-
 
 
 }

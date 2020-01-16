@@ -1,7 +1,6 @@
 package com.isa.dao;
 
 import com.isa.domain.entity.Address;
-import com.isa.domain.entity.Place;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -17,13 +16,13 @@ public class AddressDao {
     @PersistenceContext
     private EntityManager em;
 
-    public long addNewEvent(Address address){
+    public long addNewEvent(Address address) {
         em.persist(address);
         logger.info("New event has been added to the DB ");
         return address.getId();
     }
 
-    public List<Address> findAll(){
+    public List<Address> findAll() {
         List addressList = em
                 .createNamedQuery("Address.findAll")
                 .getResultList();
@@ -31,11 +30,11 @@ public class AddressDao {
         return addressList;
     }
 
-    public Address findById(Long id){
+    public Address findById(Long id) {
         return em.find(Address.class, id);
     }
 
-    public Address editEvent(Address address){
+    public Address editEvent(Address address) {
         return em.merge(address);
     }
 }

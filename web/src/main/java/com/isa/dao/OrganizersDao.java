@@ -1,7 +1,6 @@
 package com.isa.dao;
 
 import com.isa.domain.entity.Organizer;
-import com.isa.domain.entity.Place;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -44,7 +43,7 @@ public class OrganizersDao {
         Query query = em.createQuery("SELECT o FROM Organizer o WHERE o.apiId=:apiId");
         query.setParameter("apiId", apiId);
         List results = query.getResultList();
-        if(!results.isEmpty()){
+        if (!results.isEmpty()) {
             // ignores multiple results
             return (Organizer) results.get(0);
         }

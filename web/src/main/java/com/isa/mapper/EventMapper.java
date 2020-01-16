@@ -19,8 +19,8 @@ public class EventMapper {
         Event event = new Event();
 
         event.setApiId(eventApiParser.getApi_Id());
-        //event.setStartDate(eventApiParser.getStartDate());
-        //event.setEndDate(eventApiParser.getEndDate());
+        event.setStartDate(eventApiParser.getStartDate());
+        event.setEndDate(eventApiParser.getEndDate());
         event.setDescShort(eventApiParser.getShortDescription());
         event.setName(eventApiParser.getName());
         event.setDescLong(eventApiParser.getLongDescription());
