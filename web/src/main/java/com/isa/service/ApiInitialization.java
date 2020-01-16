@@ -23,8 +23,8 @@ public class ApiInitialization {
     private OrganizersManager organizersManager;
 
 
-    private static final String eventsFile = "/home/robert/Pulpit/Projekt/newWebApp/jjdd8-ismasters/web/src/main/java/com/isa/parser/events.json";
-    private static final String organizersFile = "/home/robert/Pulpit/Projekt/newWebApp/jjdd8-ismasters/web/src/main/java/com/isa/parser/organizers.json";
+    private static final String eventsFile = "/home/chyrzy/Desktop/newapp/jjdd8-ismasters/web/src/main/java/com/isa/parser/events.json";
+    private static final String organizersFile = "/home/chyrzy/Desktop/newapp/jjdd8-ismasters/web/src/main/java/com/isa/parser/organizers.json";
     private static final String placesFile = "com/isa/parser/places.json";
 
     @PostConstruct
