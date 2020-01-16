@@ -5,16 +5,16 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class OrganizerApi {
 
     @JsonProperty("id")
-    private int id;
+    private Long id;
 
     @JsonProperty("designation")
     private String designation;
 
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 

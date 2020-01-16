@@ -1,6 +1,6 @@
 package com.isa.dao;
 
-import com.isa.domain.entity.Event;
+import com.isa.domain.entity.Address;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -10,33 +10,31 @@ import javax.persistence.PersistenceContext;
 import java.util.List;
 
 @Stateless
-public class EventDao {
+public class AddressDao {
     private final Logger logger = LoggerFactory.getLogger(this.getClass().getName());
 
     @PersistenceContext
     private EntityManager em;
 
-    public long addNewEvent(Event event) {
-        em.persist(event);
+    public long addNewEvent(Address address) {
+        em.persist(address);
         logger.info("New event has been added to the DB ");
-        return event.getId();
+        return address.getId();
     }
 
-    public List<Event> findAll() {
-        List listOfEvents = em
-                .createNamedQuery("Event.findAll")
+    public List<Address> findAll() {
+        List addressList = em
+                .createNamedQuery("Address.findAll")
                 .getResultList();
 
-        return listOfEvents;
+        return addressList;
     }
 
-    public Event findById(Long id) {
-        return em.find(Event.class, id);
+    public Address findById(Long id) {
+        return em.find(Address.class, id);
     }
 
-    public Event editEvent(Event event) {
-        return em.merge(event);
+    public Address editEvent(Address address) {
+        return em.merge(address);
     }
-
-
 }

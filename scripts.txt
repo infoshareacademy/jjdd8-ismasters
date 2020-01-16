@@ -1,0 +1,27 @@
+<-- Skrypt do odpalenia instancji mysql w lokalnym dockerze -->
+docker run -p 0.0.0.0:3307:3306 --name mysql-demo -e MYSQL_ROOT_PASSWORD=root -e MYSQL_DATABASE=usersdb -d mysql
+<--Sprawdzić czy obraz został odpalony -->
+docker ps
+<-- Załadować terminal w kliencie mysql -->
+mysql -h 0.0.0.0 --port=3307 -u  root -p
+<-- Stwórz bazę w kliencie mysql -->
+create database 3city_events;
+<--pokaż bazę -->
+show databases;
+test
+/*
+package com.isa.parser;
+import com.isa.domain.api.EventApi;
+import org.junit.Test;
+import java.io.IOException;
+import java.util.List;
+public class ApiDataParserTest {
+    public static final String FILENAME = "/home/robert/Pulpit/Projekt/newWebApp/jjdd8-ismasters/web/src/main/java/com/isa/mock/Json_example.json";
+ */
+/*   @Test
+    public void shouldParse() throws IOException {
+        ApiDataParser apiDataParser = new ApiDataParser();
+       List<EventApi> eventApis = (List<EventApi>) apiDataParser.parse(FILENAME, EventApi.class);
+        System.out.println(eventApis);
+    }
+}*//*
