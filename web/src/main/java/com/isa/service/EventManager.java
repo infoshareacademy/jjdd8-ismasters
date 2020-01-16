@@ -28,15 +28,6 @@ public class EventManager {
     private EventDao eventDao;
 
     @Inject
-    private User user;
-
-    @Inject
-    private TicketType ticketType;
-
-    @Inject
-    private Organizer organizer;
-
-    @Inject
     private PlaceDao placeDao;
 
     @Inject
@@ -48,14 +39,14 @@ public class EventManager {
     @Inject
     private ApiDataParser apiDataParser;
 
-    
+
     public void setRelations(String filename) throws IOException {
         List<EventApi> list = apiDataParser.parse(filename, EventApi.class);
         logger.info("Zaimportowano listę Wydarzeń");
         for (EventApi e: list) {
             Event event = new Event();
             event = eventMapper.mapApiViewToEntity(e);
-            event.setOrganizer(organizersDao.findByApiId(e.getApi_Id()));
+            event.setOrganizer(organizersDao.findByApiId(e.getOrganizerApi().getId()));
             event.setUrl(urlDao.findByWWW(e.getWeblinkApi().getWebsite()));
             event.setPlace(placeDao.findByApiId(e.getPlaceApi().getApi_Id()));
             logger.info("Wydarzenia mapowane i kierowane do bazy danych");
