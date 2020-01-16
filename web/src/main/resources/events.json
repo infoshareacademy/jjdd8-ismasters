@@ -1,0 +1,2848 @@
+[
+  {
+    "id": 48080,
+    "place": {
+      "id": 8,
+      "subname": "Dworek Artura",
+      "name": "Gdański Archipelag Kultury"
+    },
+    "endDate": "2020-01-06T20:00:00+0100",
+    "name": "Karate Shotokan // dorośli i młodzież",
+    "urls": {
+      "www": "http://stacjaorunia.weebly.com"
+    },
+    "attachments": [],
+    "descLong": "<p>KARATE - prowadzący Jerzy Guttkowski</p><p>Instruktor samoobrony. Od 35 lat posiadacz 6 Dan w Karate Shotokan. Świadomy tego, iż dopiero po takim czasie posiadł wystarczającą wiedzę , aby przekazywać ją innym.</p><p>Pierwsze kroki stawiał na polskim gruncie, następnie liczne wjazdy na seminaria i egzaminy oraz kontakty z takimi mistrzami jak: H. NISHIYAMA, H. OCHI, K.ENOEDA, H.SHIRAI, I.JORGA.</p><p> </p><p> </p>",
+    "categoryId": 83,
+    "startDate": "2020-01-06T18:00:00+0100",
+    "organizer": {
+      "id": 5,
+      "designation": "Gdański Archipelag Kultury"
+    },
+    "active": 1,
+    "descShort": "KARATE - prowadzący Jerzy GuttkowskiInstruktor samoobrony. Od 35 lat posiadacz 6 Dan w Karate Shotokan. Świadomy tego, iż dopiero po takim czasie posiadł wystarczającą wiedzę , aby przekazywać ją innym.Pierwsze kroki stawiał na polskim grun...",
+    "tickets": {
+      "type": "unknown"
+    }
+  },
+  {
+    "id": 48527,
+    "place": {
+      "id": 8,
+      "subname": "Dworek Artura",
+      "name": "Gdański Archipelag Kultury"
+    },
+    "endDate": "2020-01-06T20:00:00+0100",
+    "name": "Ceramika // dorośli",
+    "urls": {
+      "www": "http://stacjaorunia.weebly.com"
+    },
+    "attachments": [],
+    "descLong": "<p>CERAMIKA - prowadząca Grażyna Kunicka</p><p>Studia na Państwowej w Państwowej Wyższej Szkole Sztuk Plastycznych (ASP) w Gdańsku na wydziale Malarstwa i Grafiki w pracowni prof. K. Berezińskiego. Dyplom w 1987 r.</p><p>Uprawia malarstwo, ceramikę i ilustrację książkową.</p><p>Jest kuratorką wystaw, animatorką kultury, wykładowcą na studiach podyplomowych, liderką i współautorką scenariuszy międzynarodowych projektów unijnych, uczestniczką plenerów, sympozjów międzynarodowych i społecznych akcji artystycznych organizowanych na rzecz miasta.</p><p>Zajęcia dla dzieci w wieku od 5 lat</p><p>Podstawy technologii ceramiki, tworzenie przestrzennych i płaskich form ceramicznych. Podczas zajęć projektujemy, lepimy, szkliwimy i wypalamy w piecu ceramicznym.</p>",
+    "categoryId": 83,
+    "startDate": "2020-01-06T18:00:00+0100",
+    "organizer": {
+      "id": 5,
+      "designation": "Gdański Archipelag Kultury"
+    },
+    "active": 1,
+    "descShort": "CERAMIKA - prowadząca Grażyna KunickaStudia na Państwowej w Państwowej Wyższej Szkole Sztuk Plastycznych (ASP) w Gdańsku na wydziale Malarstwa i Grafiki w pracowni prof. K. Berezińskiego. Dyplom w 1987 r.Uprawia malarstwo, ceramikę i ilustrac...",
+    "tickets": {
+      "type": "unknown"
+    }
+  },
+  {
+    "id": 68010,
+    "place": {
+      "id": 9,
+      "subname": "Winda",
+      "name": "Gdański Archipelag Kultury"
+    },
+    "endDate": "2020-01-06T23:59:59+0100",
+    "name": "Zajęcia teatralne dla dzieci od 7 do 12 lat",
+    "urls": {
+      "www": "http://winda.gda.pl"
+    },
+    "attachments": [],
+    "descLong": "<p>Zajęcia teatralne skierowane są do dzieci chcących rozwijać swoją pasję teatralną, wzbudzać kreatywność, wyobraźnię, wrażliwość poprzez gry, zabawy, etiudy. <br/>wiek 7-12 lat<br/>60 zł za miesiąc<br/>120 min raz w tygodniu <br/>prowadząca: Paulina Tryba</p>",
+    "categoryId": 69,
+    "startDate": "2020-01-06T18:00:00+0100",
+    "organizer": {
+      "id": 5,
+      "designation": "Gdański Archipelag Kultury"
+    },
+    "active": 1,
+    "descShort": "Zajęcia teatralne skierowane są do dzieci chcących rozwijać swoją pasję teatralną, wzbudzać kreatywność, wyobraźnię, wrażliwość poprzez gry, zabawy, etiudy. wiek 7-12 lat60 zł za miesiąc120 min raz w tygodniu prowadząca: Paulina T...",
+    "tickets": {
+      "type": "unknown"
+    }
+  },
+  {
+    "id": 69749,
+    "place": {
+      "id": 153,
+      "subname": "Teatr na Plaży",
+      "name": "Teatr na Plaży"
+    },
+    "endDate": "2020-01-06T20:00:00+0100",
+    "name": "Pora umarłych poetów",
+    "urls": {
+      "www": "http://www.teatrnaplazy.pl/wydarzenie/pora-umarlych-poetow-3/",
+      "tickets": "https://teatrnaplazy.interticket.pl/"
+    },
+    "attachments": [
+      {
+        "fileName": "http://www.teatrnaplazy.pl/wp-content/uploads/facebook-cover-PC-300x114.png"
+      }
+    ],
+    "descLong": "Teatr na Plaży w Sopocie zaprasza spektakl muzyczny „Pora umarłych poetów”. Jest to nowa autorska produkcja, zrealizowana na deskach sopockiej sceny.<br/>„Pora umarłych poetów” to spektakl z piosenkami Agnieszki Osieckiej, Jeremiego Przybory i Wojciecha Młynarskiego, łączącej formułękoncertu, spektaklu i widowiska multimedialnego. Jego treścią jest spotkanie w zaświatach trójki najwybitniejszych poetów polskiej piosenki, którzy komentując współczesną rzeczywistość, przywołają wspomnienia swojego życia, jednocześnie słuchając i oglądając młodych artystów wykonujących nascenie sopockiego teatru ich najsławniejsze utwory.<br/>Spektakl odbędzie w dwóch przestrzeniach: filmowej oraz realnej. W części filmowej – w zaświatach, w postacie Osieckiej, Przybory i Młynarskiego wcielą się: aktorka Teatru Dramatycznego Agata Wątróbska, aktor filmowy Janusz Chabior oraz wokalista Piotr Zubek. Natomiast w części realnej – na scenie teatru, Ksenia Tchórzko, Adam Hadi i Dominik Rybiałek w towarzystwie zespołu muzycznego zinterpretują piosenki mistrzów.<br/>Całość, na zaproszenie Teatru na Plaży wyreżyserowała Joanna Satanowska, która jest również autorką scenariusza. Zdjęcia do części filmowej realizowane były w różnych miejscach Sopotu:na plaży, dworcu, na Molo, w Państwowej Galerii Sztuki, w klubie Atelier, w Teatrze na Plaży oraz w Warszawie w studiu filmowym i w przestrzeni miejskiej. Za kierownictwo muzyczne, kompozycje i aranże odpowiada Maciej Zakrzewski, m.in. autor muzyki do spektakli Teatru Polskiego we Wrocławiu i krakowskiej Łaźni Nowej. Za kostiumy i scenografię Zuzanna Markiewicz, która pracowała m.in. przy spektaklach Teatro dell’Opera di Roma, Teatru Wielkiego w Łodzi oraz polskich i zagranicznych produkcjach filmowych.Realizatorem zdjęć filmowych jest natomiast Przemysław Jękosz.<br/>„Pora umarłych poetów to nasza największa produkcja, do której przygotowania rozpoczęły się ponad rok temu, a która nie tylko wejdzie na stałe do repertuaru, ale również chcemy z nią pojechać w Polskę, grając ją gościnnie na scenach innych teatrów.”– mówi szef sopockiej sceny Michał Grubman.<br/>Reżyseria i scenariusz: Joanna Satanowska.<br/>Kierownictwo muzyczne: Maciej Zakrzewski<br/>Autor wierszy: Grzegorz Uzdański<br/>Scenografia, kostiumy: Zuzanna Markiewicz<br/>Autor zdjęć filmowych: Przemysław Jękosz<br/>Plakat: Aleksander Walijewski<br/>Występują:<br/>Janusz Chabior, Agata Wątróbska, Piotr Zubek, Ksenia Tchórzko, Adam Hadi, Dominik Rybiałek oraz zespół muzyczny w składzie Mikołaj Basiukiewicz – instr. klawiszowe, Łukasz Łapiński – perkusja .<br/>Spektakl „Pora umarłych poetów” zrealizowano z udziałem finansowym Gminy Miasta Sopotu.<br/>UWAGA: W spektaklu używane jest światło stroboskopowe.<br/>Tickets: https://teatrnaplazy.interticket.pl/.",
+    "categoryId": 19,
+    "startDate": "2020-01-06T18:00:00+0100",
+    "organizer": {
+      "id": 51,
+      "designation": "Teatr na Plaży"
+    },
+    "active": 1,
+    "descShort": "Teatr na Plaży w Sopocie zaprasza spektakl muzyczny „Pora umarłych poetów”. Jest to nowa autorska produkcja, zrealizowana na deskach sopockiej sceny.„Pora umarłych poetów” to spektakl z piosenkami Agnieszki Osieckiej, Jeremiego Przybory ...",
+    "tickets": {
+      "type": "unknown"
+    }
+  },
+  {
+    "id": 70148,
+    "place": {
+      "id": 1131,
+      "subname": "Kameralna",
+      "name": "Wejherowskie Centrum Kultury"
+    },
+    "endDate": "2020-01-06T20:00:00+0100",
+    "name": "Futro z misia",
+    "urls": {
+      "www": "http://wck.org.pl/kalendarium/opis/5160-futro-z-misia.html"
+    },
+    "attachments": [
+      {
+        "fileName": "http://wck.org.pl/images/main/i6k8P8C440P0g1o507d6n2s44399k0u7.jpg"
+      }
+    ],
+    "descLong": "Ekipa kultowej komedii „Chłopaki nie płaczą”: Michał Milowicz, Cezary Pazura, Edward Lubaszenko, Mirosław Zbrojewicz, Bohdan Łazuka i Olaf Lubaszenko, powraca ! Plejada gwiazd w sensacyjnie śmiesznej komedii o przekręcie prawie doskonałym. Sławomir Zapała w brawurowej roli romantyka, który w imię uczucia do kochającej luksusy niewiasty, trafia w samo serce gangsterskich porachunków. Boss podhalańskiej mafii, o wiele mówiącej ksywie Nerwowy, jest wściekły. To akurat w jego przypadku normalne, bo facet z natury nie jest oazą spokoju, ale tym razem ma naprawdę dobry powód. Jego ludzie podczas brawurowej akcji ukradli z komisariatu w Tczewie 120 kilogramów ziołowej herbatki. Po cholerę gangsterom ziołowa herbatka? No właśnie. W policyjnym magazynie miała być marihuana, ale ktoś ubiegł zakopiańskich zakapiorów i zwiał z towarem. Całej sprawie bacznie przyglądają się agenci Dzik i Żubr z CBŚ, którzy podejrzewają przekręt na wojewódzką skalę. Tymczasem na Pomorzu ktoś handluje doskonałej jakości „trawką”…...",
+    "categoryId": 1,
+    "startDate": "2020-01-06T18:00:00+0100",
+    "organizer": {
+      "id": 156,
+      "designation": "Wejherowskie Centrum Kultury"
+    },
+    "active": 1,
+    "descShort": "Ekipa kultowej komedii „Chłopaki nie płaczą”: Michał Milowicz, Cezary Pazura, Edward Lubaszenko, Mirosław Zbrojewicz, Bohdan Łazuka i Olaf Lubaszenko, powraca ! Plejada gwiazd w sensacyjnie śmiesznej komedii o przekręcie prawie doskonały...",
+    "tickets": {
+      "type": "unknown"
+    }
+  },
+  {
+    "id": 70170,
+    "place": {
+      "id": 1132,
+      "subname": "Główna",
+      "name": "Wejherowskie Centrum Kultury"
+    },
+    "endDate": "2020-01-06T20:00:00+0100",
+    "name": "Koty 2D napisy",
+    "urls": {
+      "www": "http://wck.org.pl/kalendarium/opis/5166-koty-2d-napisy.html"
+    },
+    "attachments": [
+      {
+        "fileName": "http://wck.org.pl/images/main/72s1A4C7g020T1u59757t3B7X0m1Z906.jpg"
+      }
+    ],
+    "descLong": "Laureat Oscara® Tom Hooper („Les Misérables. Nędznicy”, „Dziewczyna z portretu”, „Jak zostać królem”) przedstawia zapierającą dech w piersiach filmową wersję kultowego musicalu Andrew Lloyda Webbera. W filmie zobaczymy m.in.: Jamesa Cordena, Judi Dench, Jasona Derulo, Idrisa Elbę, Jennifer Hudson, Iana McKellena, Taylor Swift oraz Rebel Wilson, a także główną solistkę Royal Ballet – Franceskę Hayward w jej ekranowym debiucie. W filmie usłyszymy ikoniczną muzykę Lloyda Webbera, na ekranie zobaczymy światowej klasy tancerzy, którzy pracowali pod dyrekcją wyróżnionego nagrodą Tony choreografa – Andy’ego Blankenbuehlera. Filmowa wersja musicalu to ukłon w stronę nowej generacji – spektakularne sceny, niezwykła scenografia oraz style taneczne – od baletu po taniec współczesny, od hip-hopu po jazz, od tapu po street-dance. „Koty” to jeden z najdłużej wystawianych musicali w historii West Endu i Broadwayu. Przedstawienie zadebiutowało na deskach New London Theatre w 1981 roku, gdzie grano je przez 21 lat. Wielokrotnie nagradzane, otrzymało m.in. nagrodę Oliviera oraz Evening Standard dla najlepszego musicalu. W 1983 roku broadwayowska produkcja otrzymała 7 nagród Tony, w tym dla najlepszego musicalu. Na Broadwayu sztuka święciła triumfy przez 18 lat! Musical wystawiono w ponad 50 krajach, w 19 językach. Szacuje się, że sceniczną wersję obejrzało dotąd ponad 81 milionów ludzi. TWÓRCY FILMU: Reżyseria: Tom Hooper Scenariusz: Lee Hall, Tom Hooper Na podstawie poezji T.S. Eliota i musicalu „Cats” Andrew Lloyda Webbera Produkcja: Debra Hayward, Tim Bevan, Eric Fellner, Tom Hooper Producent wykonawczy: Andrew Lloyd Webber, Steven Spielberg, Angela Morrison, Jo Burn...",
+    "categoryId": 1,
+    "startDate": "2020-01-06T18:00:00+0100",
+    "organizer": {
+      "id": 156,
+      "designation": "Wejherowskie Centrum Kultury"
+    },
+    "active": 1,
+    "descShort": "Laureat Oscara® Tom Hooper („Les Misérables. Nędznicy”, „Dziewczyna z portretu”, „Jak zostać królem”) przedstawia zapierającą dech w piersiach filmową wersję kultowego musicalu Andrew Lloyda Webbera. W filmie zobaczymy m.in.: Jam...",
+    "tickets": {
+      "type": "unknown"
+    }
+  },
+  {
+    "id": 67909,
+    "place": {
+      "id": 6,
+      "subname": "Dom Sztuki",
+      "name": "Gdański Archipelag Kultury"
+    },
+    "endDate": "2020-01-06T20:20:00+0100",
+    "name": "JĘZYK ANGIELSKI W DOMU SZTUKI GAK / GRUPA E1",
+    "urls": {
+      "www": "http://gak.gda.pl/domsztuki"
+    },
+    "attachments": [
+      {
+        "fileName": "http://gak.gda.pl/sites/default/files/styles/big_1000w/public/Galeria/Zajęcia Stałe Angielski_0.png"
+      }
+    ],
+    "descLong": "<p><p><b>W październiku startują zajęcia z języka angielskiego w Domu Sztuki GAK!</b></p></p><p><p> </p><p><b>Zajęcia:</b></p></p><p><p>Grupa E 2 - Poniedziałki i Środy: 17:30 - 18:15Grupa E 1 - Poniedziałki i Środy: 18:20 - 19:05</p></p><p><p> </p></p><p><p><b>Warianty zajęć:</b></p></p><p><p><b>Język angielski gr. do 8 osób</b></p></p><p><p>Odpłatność semestralna: 400 zł</p></p><p><p>Częstotliwość zajęć: 2x45 min.w tygodniu.</p></p><p><p>Wiek uczestnika: od 7 roku życia</p></p><p><p><b>Język angielski gr. do 12 osób</b></p></p><p><p>Odpłatność semestralna: 380 zł</p></p><p><p>Częstotliwość zajęć: 2x45 min.w tygodniu.</p></p><p><p>Wiek uczestnika: od 7 roku życia.</p></p><p><p><b>Język angielski gr. powyżej 12 osób</b></p></p><p><p>Odpłatność semestralna: 360 zł</p></p><p><p>Częstotliwość zajęć: 2x45 min.w tygodniu.</p></p><p><p>Wiek uczestnika: od 7 roku życia</p></p>",
+    "categoryId": 83,
+    "startDate": "2020-01-06T18:20:00+0100",
+    "organizer": {
+      "id": 5,
+      "designation": "Gdański Archipelag Kultury"
+    },
+    "active": 1,
+    "descShort": "W październiku startują zajęcia z języka angielskiego w Domu Sztuki GAK! Zajęcia:Grupa E 2 - Poniedziałki i Środy: 17:30 - 18:15Grupa E 1 - Poniedziałki i Środy: 18:20 - 19:05 Warianty zajęć:Język angielski gr. do 8 osóbOdpłatność...",
+    "tickets": {
+      "type": "unknown"
+    }
+  },
+  {
+    "id": 64010,
+    "place": {
+      "id": 6,
+      "subname": "Dom Sztuki",
+      "name": "Gdański Archipelag Kultury"
+    },
+    "endDate": "2020-01-06T20:30:00+0100",
+    "name": "BLITZ Squad (15-17 lat) I HIP HOP, STREET DANCE, HOUSE, HIP HOP OLDSCHOOL",
+    "urls": {
+      "www": "http://gak.gda.pl/domsztuki"
+    },
+    "attachments": [
+      {
+        "fileName": "http://gak.gda.pl/sites/default/files/styles/big_1000w/public/Galeria/Grafik taneczny _2.png"
+      }
+    ],
+    "descLong": "<p><b>Zapraszamy na zajęcia taneczne z Blitz w poniedziałki!</b></p><p><b>Poniedziałek: </b></p><p>16:00-16:45 soliści tańca współczesnego</p><p>16:45- 17:30 BUBBLE crew grupa początkująca (4-6 lat)</p><p>17:30 -18:25  BUBBLE crew grupa koncertowa (6-9 lat)</p><p>18:30- 19:30  BLITZ Squad (15-17 lat)</p><p>19:30- 21:30 BLITZ two</p><p><b>***</b></p><p><b>Formacje taneczne BLITZ</b>  (hip hop, street dance, house, hip hop oldschool)</p><p><b>Formacje taneczne TRAFIC </b>(tańc współczesny, modern, underground, jazz)</p><p>O przynależności tancerza do konkretnej grupy decyduje instruktor Agnieszka Humięcka</p><p>Treningi 2 razy w tygodniu  (plan zajeć w galerii poniżej)</p><p>Zajęcia: Dom  Sztuki GAK, ul. Stryjewskiego 25 Gdańsk-Stogi</p><p>FB: https://www.facebook.com/BLITZ-crew-144948512270599/</p>",
+    "categoryId": 69,
+    "startDate": "2020-01-06T18:30:00+0100",
+    "organizer": {
+      "id": 5,
+      "designation": "Gdański Archipelag Kultury"
+    },
+    "active": 1,
+    "descShort": "Zapraszamy na zajęcia taneczne z Blitz w poniedziałki!Poniedziałek: 16:00-16:45 soliści tańca współczesnego16:45- 17:30 BUBBLE crew grupa początkująca (4-6 lat)17:30 -18:25  BUBBLE crew grupa koncertowa (6-9 lat)18:30- 19:30  BLITZ Squad ...",
+    "tickets": {
+      "type": "unknown"
+    }
+  },
+  {
+    "id": 64667,
+    "place": {
+      "id": 6,
+      "subname": "Dom Sztuki",
+      "name": "Gdański Archipelag Kultury"
+    },
+    "endDate": "2020-01-06T20:45:00+0100",
+    "name": "Gimnastyka wyszczuplająca z Agnieszką Krause w Domu Sztuki GAK",
+    "urls": {
+      "www": "http://gak.gda.pl/domsztuki"
+    },
+    "attachments": [
+      {
+        "fileName": "http://gak.gda.pl/sites/default/files/styles/big_1000w/public/Galeria/1_3.png"
+      }
+    ],
+    "descLong": "<p><b>Gimnastyka wyszczuplająca:</b></p><p><b>Zajęcia prowadzi:</b> Agnieszka Krause;</p><p><b>Terminy:</b> Poniedziałek i Środy I gody. 18:45.</p>",
+    "categoryId": 77,
+    "startDate": "2020-01-06T18:45:00+0100",
+    "organizer": {
+      "id": 5,
+      "designation": "Gdański Archipelag Kultury"
+    },
+    "active": 1,
+    "descShort": "Gimnastyka wyszczuplająca:Zajęcia prowadzi: Agnieszka Krause;Terminy: Poniedziałek i Środy I gody. 18:45.",
+    "tickets": {
+      "type": "unknown"
+    }
+  },
+  {
+    "id": 51498,
+    "place": {
+      "id": 8,
+      "subname": "Dworek Artura",
+      "name": "Gdański Archipelag Kultury"
+    },
+    "endDate": "2020-01-06T21:15:00+0100",
+    "name": "Combat Self Defense Samoobrona dla Kobiet",
+    "urls": {
+      "www": "http://stacjaorunia.weebly.com"
+    },
+    "attachments": [],
+    "descLong": "<p>Combat Self Defense Samoobrona dla Kobiet<br/><br/>Zajęcia dla dorosłych<br/><br/>System Dźwigni Obezwładniających stosowany w zagrożeniu życia i zdrowia ludzkiego<br/><br/>Nauka koncentracji, poprawa sprawności fizycznej, opanowanie emocji w sytuacji zagrożenia.</p>",
+    "categoryId": 83,
+    "startDate": "2020-01-06T19:15:00+0100",
+    "organizer": {
+      "id": 5,
+      "designation": "Gdański Archipelag Kultury"
+    },
+    "active": 1,
+    "descShort": "Combat Self Defense Samoobrona dla KobietZajęcia dla dorosłychSystem Dźwigni Obezwładniających stosowany w zagrożeniu życia i zdrowia ludzkiegoNauka koncentracji, poprawa sprawności fizycznej, opanowanie emocji w sytuacji zagrożenia.",
+    "tickets": {
+      "type": "unknown"
+    }
+  },
+  {
+    "id": 65830,
+    "place": {
+      "id": 6,
+      "subname": "Dom Sztuki",
+      "name": "Gdański Archipelag Kultury"
+    },
+    "endDate": "2020-01-06T21:30:00+0100",
+    "name": "BLITZ Two I HIP HOP, STREET DANCE, HOUSE, HIP HOP OLDSCHOOL",
+    "urls": {
+      "www": "http://gak.gda.pl/domsztuki"
+    },
+    "attachments": [
+      {
+        "fileName": "http://gak.gda.pl/sites/default/files/styles/big_1000w/public/Galeria/Grafik taneczny _3.png"
+      }
+    ],
+    "descLong": "<p><b>Zapraszamy na zajęcia taneczne z Blitz w poniedziałki!</b></p><p><b>Poniedziałek: </b></p><p>16:00-16:45 soliści tańca współczesnego</p><p>16:45- 17:30 BUBBLE crew grupa początkująca (4-6 lat)</p><p>17:30 -18:25  BUBBLE crew grupa koncertowa (6-9 lat)</p><p>18:30- 19:30  BLITZ Squad (15-17 lat)</p><p>19:30- 21:30 BLITZ two</p><p><b>***</b></p><p><b>Formacje taneczne BLITZ</b>  (hip hop, street dance, house, hip hop oldschool)</p><p><b>Formacje taneczne TRAFIC </b>(tańc współczesny, modern, underground, jazz)</p><p>O przynależności tancerza do konkretnej grupy decyduje instruktor Agnieszka Humięcka</p><p>Treningi 2 razy w tygodniu  (plan zajeć w galerii poniżej)</p><p>Zajęcia: Dom  Sztuki GAK, ul. Stryjewskiego 25 Gdańsk-Stogi</p><p>FB: https://www.facebook.com/BLITZ-crew-144948512270599/</p>",
+    "categoryId": 69,
+    "startDate": "2020-01-06T19:30:00+0100",
+    "organizer": {
+      "id": 5,
+      "designation": "Gdański Archipelag Kultury"
+    },
+    "active": 1,
+    "descShort": "Zapraszamy na zajęcia taneczne z Blitz w poniedziałki!Poniedziałek: 16:00-16:45 soliści tańca współczesnego16:45- 17:30 BUBBLE crew grupa początkująca (4-6 lat)17:30 -18:25  BUBBLE crew grupa koncertowa (6-9 lat)18:30- 19:30  BLITZ Squad ...",
+    "tickets": {
+      "type": "unknown"
+    }
+  },
+  {
+    "id": 70171,
+    "place": {
+      "id": 1131,
+      "subname": "Kameralna",
+      "name": "Wejherowskie Centrum Kultury"
+    },
+    "endDate": "2020-01-06T22:30:00+0100",
+    "name": "Koty 2D napisy",
+    "urls": {
+      "www": "http://wck.org.pl/kalendarium/opis/5166-koty-2d-napisy.html"
+    },
+    "attachments": [
+      {
+        "fileName": "http://wck.org.pl/images/main/72s1A4C7g020T1u59757t3B7X0m1Z906.jpg"
+      }
+    ],
+    "descLong": "Laureat Oscara® Tom Hooper („Les Misérables. Nędznicy”, „Dziewczyna z portretu”, „Jak zostać królem”) przedstawia zapierającą dech w piersiach filmową wersję kultowego musicalu Andrew Lloyda Webbera. W filmie zobaczymy m.in.: Jamesa Cordena, Judi Dench, Jasona Derulo, Idrisa Elbę, Jennifer Hudson, Iana McKellena, Taylor Swift oraz Rebel Wilson, a także główną solistkę Royal Ballet – Franceskę Hayward w jej ekranowym debiucie. W filmie usłyszymy ikoniczną muzykę Lloyda Webbera, na ekranie zobaczymy światowej klasy tancerzy, którzy pracowali pod dyrekcją wyróżnionego nagrodą Tony choreografa – Andy’ego Blankenbuehlera. Filmowa wersja musicalu to ukłon w stronę nowej generacji – spektakularne sceny, niezwykła scenografia oraz style taneczne – od baletu po taniec współczesny, od hip-hopu po jazz, od tapu po street-dance. „Koty” to jeden z najdłużej wystawianych musicali w historii West Endu i Broadwayu. Przedstawienie zadebiutowało na deskach New London Theatre w 1981 roku, gdzie grano je przez 21 lat. Wielokrotnie nagradzane, otrzymało m.in. nagrodę Oliviera oraz Evening Standard dla najlepszego musicalu. W 1983 roku broadwayowska produkcja otrzymała 7 nagród Tony, w tym dla najlepszego musicalu. Na Broadwayu sztuka święciła triumfy przez 18 lat! Musical wystawiono w ponad 50 krajach, w 19 językach. Szacuje się, że sceniczną wersję obejrzało dotąd ponad 81 milionów ludzi. TWÓRCY FILMU: Reżyseria: Tom Hooper Scenariusz: Lee Hall, Tom Hooper Na podstawie poezji T.S. Eliota i musicalu „Cats” Andrew Lloyda Webbera Produkcja: Debra Hayward, Tim Bevan, Eric Fellner, Tom Hooper Producent wykonawczy: Andrew Lloyd Webber, Steven Spielberg, Angela Morrison, Jo Burn...",
+    "categoryId": 1,
+    "startDate": "2020-01-06T20:30:00+0100",
+    "organizer": {
+      "id": 156,
+      "designation": "Wejherowskie Centrum Kultury"
+    },
+    "active": 1,
+    "descShort": "Laureat Oscara® Tom Hooper („Les Misérables. Nędznicy”, „Dziewczyna z portretu”, „Jak zostać królem”) przedstawia zapierającą dech w piersiach filmową wersję kultowego musicalu Andrew Lloyda Webbera. W filmie zobaczymy m.in.: Jam...",
+    "tickets": {
+      "type": "unknown"
+    }
+  },
+  {
+    "id": 70149,
+    "place": {
+      "id": 1132,
+      "subname": "Główna",
+      "name": "Wejherowskie Centrum Kultury"
+    },
+    "endDate": "2020-01-06T22:30:00+0100",
+    "name": "Futro z misia",
+    "urls": {
+      "www": "http://wck.org.pl/kalendarium/opis/5160-futro-z-misia.html"
+    },
+    "attachments": [
+      {
+        "fileName": "http://wck.org.pl/images/main/i6k8P8C440P0g1o507d6n2s44399k0u7.jpg"
+      }
+    ],
+    "descLong": "Ekipa kultowej komedii „Chłopaki nie płaczą”: Michał Milowicz, Cezary Pazura, Edward Lubaszenko, Mirosław Zbrojewicz, Bohdan Łazuka i Olaf Lubaszenko, powraca ! Plejada gwiazd w sensacyjnie śmiesznej komedii o przekręcie prawie doskonałym. Sławomir Zapała w brawurowej roli romantyka, który w imię uczucia do kochającej luksusy niewiasty, trafia w samo serce gangsterskich porachunków. Boss podhalańskiej mafii, o wiele mówiącej ksywie Nerwowy, jest wściekły. To akurat w jego przypadku normalne, bo facet z natury nie jest oazą spokoju, ale tym razem ma naprawdę dobry powód. Jego ludzie podczas brawurowej akcji ukradli z komisariatu w Tczewie 120 kilogramów ziołowej herbatki. Po cholerę gangsterom ziołowa herbatka? No właśnie. W policyjnym magazynie miała być marihuana, ale ktoś ubiegł zakopiańskich zakapiorów i zwiał z towarem. Całej sprawie bacznie przyglądają się agenci Dzik i Żubr z CBŚ, którzy podejrzewają przekręt na wojewódzką skalę. Tymczasem na Pomorzu ktoś handluje doskonałej jakości „trawką”…...",
+    "categoryId": 1,
+    "startDate": "2020-01-06T20:30:00+0100",
+    "organizer": {
+      "id": 156,
+      "designation": "Wejherowskie Centrum Kultury"
+    },
+    "active": 1,
+    "descShort": "Ekipa kultowej komedii „Chłopaki nie płaczą”: Michał Milowicz, Cezary Pazura, Edward Lubaszenko, Mirosław Zbrojewicz, Bohdan Łazuka i Olaf Lubaszenko, powraca ! Plejada gwiazd w sensacyjnie śmiesznej komedii o przekręcie prawie doskonały...",
+    "tickets": {
+      "type": "unknown"
+    }
+  },
+  {
+    "id": 70192,
+    "place": {
+      "id": 1652,
+      "name": "Teatr BOTO"
+    },
+    "endDate": "2020-01-06T23:59:00+0100",
+    "name": "BOTO Bluesowy Poniedziałek s02e89",
+    "urls": {
+      "www": "http://kalendarz.sopot.pl/kalendarz/szczegoly/9612/boto-bluesowy-poniedzialek-s02e89.html"
+    },
+    "attachments": [
+      {
+        "fileName": "http://kalendarz.sopot.pl//images/t2p8u6V1G090x1N5P7p7R7W8O7r7Y3a6.jpg"
+      }
+    ],
+    "descLong": "Otwieramy scenę, udostępniamy wzmacniacze, gitary, mikrofony, cajony, perkusję i zapraszamy wszystkich muzyków i słuchaczy. Gramy bluesa. Słuchamy bluesa.\n\nWstęp wolny\n\n***\nfot. Bartosz Wołk-Karaczewski\n\n***\nWspiera nas Zwierzyniec",
+    "categoryId": 96,
+    "startDate": "2020-01-06T21:00:00+0100",
+    "organizer": {
+      "id": 255,
+      "designation": "Sopot"
+    },
+    "active": 1,
+    "descShort": "Otwieramy scenę, udostępniamy wzmacniacze, gitary, mikrofony, cajony, perkusję i zapraszamy wszystkich muzyków i słuchaczy. Gramy bluesa. Słuchamy bluesa.\n\nWstęp wolny\n\n***\nfot. Bartosz Wołk-Karaczewski\n\n***\nWspiera nas Zwierzyniec",
+    "tickets": {
+      "type": "unknown"
+    }
+  },
+  {
+    "id": 65950,
+    "place": {
+      "id": 10,
+      "subname": "Plama",
+      "name": "Gdański Archipelag Kultury"
+    },
+    "endDate": "2020-01-07T11:00:00+0100",
+    "name": "Angielski 50+ (inst. Monika Wiśniewska) – 2 grupy",
+    "urls": {
+      "www": "http://plama.art.pl"
+    },
+    "attachments": [],
+    "descLong": "<p>Angielski 50+ (inst. Monika Wiśniewska)</p><p> </p><p><p>Kursy języka angielskiego 50+ to oferta dla słuchaczy w dojrzałym wieku. Prowadzone są przez lektorki z kierunkowym przygotowaniem do nauczania języka angielskiego i wieloletnim doświadczeniem w nauczaniu tej grupy wiekowej. Kursy mają charakter praktyczny, z naciskiem na umiejętność komunikacji. Owszem, podajemy poprawne wzorce językowe, jednocześnie stawiamy na: dogadałeś się = osiągnąłeś sukces i jeszcze: done is better than perfect.</p><p> </p><p>Pamietaj, na naukę nigdy nie jest za późno!</p></p>",
+    "categoryId": 83,
+    "startDate": "2020-01-07T09:00:00+0100",
+    "organizer": {
+      "id": 5,
+      "designation": "Gdański Archipelag Kultury"
+    },
+    "active": 1,
+    "descShort": "Angielski 50+ (inst. Monika Wiśniewska) Kursy języka angielskiego 50+ to oferta dla słuchaczy w dojrzałym wieku. Prowadzone są przez lektorki z kierunkowym przygotowaniem do nauczania języka angielskiego i wieloletnim doświadczeniem w naucza...",
+    "tickets": {
+      "type": "unknown"
+    }
+  },
+  {
+    "id": 69621,
+    "place": {
+      "id": 1,
+      "name": "Miejski Teatr MINIATURA"
+    },
+    "endDate": "2020-01-07T12:00:00+0100",
+    "name": "Baltic. Pies na krze",
+    "urls": {
+      "www": "http://www.teatrminiatura.pl/pl/repertuar/detail/206/baltic-pies-na-krze/",
+      "tickets": "http://www.teatrminiatura.pl/pl/bilety/rezerwacje-indywidualne/"
+    },
+    "attachments": [
+      {
+        "fileName": "http://www.teatrminiatura.pl/media/repertoire/baltic_fotPiotr_Pedziszewski8.jpg"
+      }
+    ],
+    "descLong": "<p>na podstawie książki \"Baltic. Pies, który płynął na krze\" Barbary Gawryluk</p>\n<p>adaptacja i reżyseria: <b>Romuald Wicza-Pokojski</b><br/>scenografia: <b>Mariusz Waras</b><br/>muzyka: <b>Michał Jacaszek</b><br/>asystent reżysera: <b>Michał Derlatka</b></p>\n<p>inspicjent: <b>Tomasz Okęcki</b></p>\n<p>obsada<br/>I osoba z załogi |<b> Jolanta Darewicz<br/></b>Pan Adam |<b> Jacek Gierczak<br/></b>II Oficer |<b> Edyta Janusz-Ehrlich/Wioleta Karpowicz<br/></b>Rzeczniczka |<b> Jadwiga Sankowska<br/></b>II osoba z załogi | <b>Joanna Tomasik</b><br/>Kapitan | <b>Andrzej Żak</b></p>\n<p><br/>Spektakl dla dzieci w wieku: <b>od 6 lat<br/></b><br/>Czas trwania spektaklu:<b> 1 godzina 10 minut z przerwą<br/><br/></b>Prapremiera: <b>16 grudnia 2012</b></p>\n<p><b><br/></b>Dziękujemy za pomoc i życzliwe przyjęcie <b>Morskiemu Instytutowi Rybackiemu – Państwowemu Instytutowi Badawczemu</b>, pani Ewie Baradziej-Krzyżankowskiej, Adamowi Buczyńskiemu oraz całej załodze R/V Baltica.<br/><br/>Dziękujemy również <b>Oddziałowi Morskiemu IMGW-PIB w Gdyni</b> za udostępnienie filmu z akcji ratunkowej.<br/><b><br/></b></p>\n<p><b>Spektakl brał udział w 19. Ogólnopolskim Konkursie na Wystawienie Polskiej Sztuki Współczesnej</b>.</p>",
+    "categoryId": 19,
+    "startDate": "2020-01-07T10:00:00+0100",
+    "organizer": {
+      "id": 2,
+      "designation": "Miejski Teatr MINIATURA"
+    },
+    "active": 1,
+    "descShort": "na podstawie książki \"Baltic. Pies, który płynął na krze\" Barbary Gawryluk\nadaptacja i reżyseria: Romuald Wicza-Pokojskiscenografia: Mariusz Warasmuzyka: Michał Jacaszekasystent reżysera: Michał Derlatka\ninspicjent: Tomasz Okęcki\nobsadaI o...",
+    "tickets": {
+      "type": "tickets",
+      "startTicket": "14",
+      "endTicket": "30"
+    }
+  },
+  {
+    "id": 68124,
+    "place": {
+      "id": 9,
+      "subname": "Winda",
+      "name": "Gdański Archipelag Kultury"
+    },
+    "endDate": "2020-01-07T13:00:00+0100",
+    "name": "Zajęcia artystyczne dla maluchów",
+    "urls": {
+      "www": "http://winda.gda.pl"
+    },
+    "attachments": [],
+    "descLong": "<p>UWAGA ZBIERAMY GRUPĘ.<br/>Zajęcia ruchowe, rytmika, zajęcia plastyczne, manualne. Gry łączące zabawę i rozwój.<br/>Prowadzące: Dorota Kozłowska, Julia Tymańska, Lidia Zhukova.<br/>2x 180 minut w tygodniu 140 zł za miesiąc<br/>3-5 lat <br/> wtorki i czwartki 10:00-13:00</p>",
+    "categoryId": 77,
+    "startDate": "2020-01-07T10:00:00+0100",
+    "organizer": {
+      "id": 5,
+      "designation": "Gdański Archipelag Kultury"
+    },
+    "active": 1,
+    "descShort": "UWAGA ZBIERAMY GRUPĘ.Zajęcia ruchowe, rytmika, zajęcia plastyczne, manualne. Gry łączące zabawę i rozwój.Prowadzące: Dorota Kozłowska, Julia Tymańska, Lidia Zhukova.2x 180 minut w tygodniu 140 zł za miesiąc3-5 lat  wtorki i czwartki 10...",
+    "tickets": {
+      "type": "unknown"
+    }
+  },
+  {
+    "id": 65207,
+    "place": {
+      "id": 10,
+      "subname": "Plama",
+      "name": "Gdański Archipelag Kultury"
+    },
+    "endDate": "2020-01-07T13:00:00+0100",
+    "name": "Tkanina artystyczna – dorośli (instr. Anna Niewiarowska – Zawilska)",
+    "urls": {
+      "www": "http://plama.art.pl"
+    },
+    "attachments": [],
+    "descLong": "<p>Na zajęciach z tkaniny artystycznej powstają prawdziwe dzieła, które mogą być chlubą każdego wnętrza. Tkaniny wykonywane są z sizalu, wełny oraz innych nietypowych materiałów, a wszystko to pod okiem doświadczonej, wieloletniej instrukorki.</p><p> </p><p>Zajęcia będą odbywały się we wtorki, w godzinach: 11.00-14.00.</p>",
+    "categoryId": 51,
+    "startDate": "2020-01-07T11:00:00+0100",
+    "organizer": {
+      "id": 5,
+      "designation": "Gdański Archipelag Kultury"
+    },
+    "active": 1,
+    "descShort": "Na zajęciach z tkaniny artystycznej powstają prawdziwe dzieła, które mogą być chlubą każdego wnętrza. Tkaniny wykonywane są z sizalu, wełny oraz innych nietypowych materiałów, a wszystko to pod okiem doświadczonej, wieloletniej instruko...",
+    "tickets": {
+      "type": "unknown"
+    }
+  },
+  {
+    "id": 68341,
+    "place": {
+      "id": 9,
+      "subname": "Winda",
+      "name": "Gdański Archipelag Kultury"
+    },
+    "endDate": "2020-01-07T14:55:00+0100",
+    "name": "Pianino",
+    "urls": {
+      "www": "http://winda.gda.pl"
+    },
+    "attachments": [],
+    "descLong": "<p>Nauka i doskonalenie gry na pianinie. Zajęcia odbywają się indywidualnie, godziny i daty spotkań można ustalić z prowadzącym.<br/>Prowadząca: Lidia Zhukova<br/>wiek: 6-100 lat<br/>140 zł za miesiąc 60 min w tygodniu lub 2x 30min w tygodniu<br/>pojedyncze zajęcia 35 zł za godzinę lub 17,5 zł za 30 min</p>",
+    "categoryId": 35,
+    "startDate": "2020-01-07T12:55:00+0100",
+    "organizer": {
+      "id": 5,
+      "designation": "Gdański Archipelag Kultury"
+    },
+    "active": 1,
+    "descShort": "Nauka i doskonalenie gry na pianinie. Zajęcia odbywają się indywidualnie, godziny i daty spotkań można ustalić z prowadzącym.Prowadząca: Lidia Zhukovawiek: 6-100 lat140 zł za miesiąc 60 min w tygodniu lub 2x 30min w tygodniupojedyncze zaję...",
+    "tickets": {
+      "type": "free"
+    }
+  },
+  {
+    "id": 49417,
+    "place": {
+      "id": 8,
+      "subname": "Dworek Artura",
+      "name": "Gdański Archipelag Kultury"
+    },
+    "endDate": "2020-01-07T17:00:00+0100",
+    "name": "PRZYSTANEK  PLANSZÓWKI",
+    "urls": {
+      "www": "http://stacjaorunia.weebly.com"
+    },
+    "attachments": [],
+    "descLong": "<p>PRZYSTANEK PLANSZÓWKI - Kącik Gier Planszowych (Zajęcia bezpłatne)</p><p>Młodzież i dzieci od 6 lat</p><p>Spotkania w klubie mają na celu rozwianie wśród dzieci i młodzieży jednej z podstawowych form rozrywki jakimi są gry planszowe. Uczą one cierpliwości, logicznego myślenia, koncentracji, refleksu, kreatywności. Mogą być alternatywą dla komputera i telewizora.</p><p>Do dyspozycji uczestników są gry klasyczne, logiczne, przygodowe, edukacyjne, puzzle i inne.</p><p> </p>",
+    "categoryId": 96,
+    "startDate": "2020-01-07T15:00:00+0100",
+    "organizer": {
+      "id": 5,
+      "designation": "Gdański Archipelag Kultury"
+    },
+    "active": 1,
+    "descShort": "PRZYSTANEK PLANSZÓWKI - Kącik Gier Planszowych (Zajęcia bezpłatne)Młodzież i dzieci od 6 latSpotkania w klubie mają na celu rozwianie wśród dzieci i młodzieży jednej z podstawowych form rozrywki jakimi są gry planszowe. Uczą one cierpliw...",
+    "tickets": {
+      "type": "free"
+    }
+  },
+  {
+    "id": 68187,
+    "place": {
+      "id": 9,
+      "subname": "Winda",
+      "name": "Gdański Archipelag Kultury"
+    },
+    "endDate": "2020-01-07T23:59:59+0100",
+    "name": "Zajęcia taneczne dla dzieci",
+    "urls": {
+      "www": "http://winda.gda.pl"
+    },
+    "attachments": [],
+    "descLong": "<p>UWAGA ZBIERAMY GRUPĘ<br/>Zajęcia taneczne rozwijające wyobraźnię ruchowo przestrzenną. <br/>wiek 6+<br/>1x 120 minut w tygodniu<br/>prowadząca Dana Chmielewska<br/><br/></p>",
+    "categoryId": 69,
+    "startDate": "2020-01-07T15:00:00+0100",
+    "organizer": {
+      "id": 5,
+      "designation": "Gdański Archipelag Kultury"
+    },
+    "active": 1,
+    "descShort": "UWAGA ZBIERAMY GRUPĘZajęcia taneczne rozwijające wyobraźnię ruchowo przestrzenną. wiek 6+1x 120 minut w tygodniuprowadząca Dana Chmielewska",
+    "tickets": {
+      "type": "unknown"
+    }
+  },
+  {
+    "id": 65240,
+    "place": {
+      "id": 10,
+      "subname": "Plama",
+      "name": "Gdański Archipelag Kultury"
+    },
+    "endDate": "2020-01-07T17:00:00+0100",
+    "name": "Ceramika – dzieci (instr. Wioletta Ulatowska)",
+    "urls": {
+      "www": "http://plama.art.pl"
+    },
+    "attachments": [
+      {
+        "fileName": "http://gak.gda.pl/sites/default/files/styles/big_1000w/public/Galeria/1956900_10152555450082690_715493120467462847_o_0.jpg"
+      }
+    ],
+    "descLong": "<p><p>Zajęcia prowadzi absolwentka wydziału rzeźby ASP w Gdańsku, od 22 lat pracująca jako pedagog z dziećmi w wieku przedszkolnym, szkolnym i młodzieżą oraz dorosłymi. Pracownię ceramiczną w Plamie prowadzi od 1997 roku. Jej autorski program edukacji ceramicznej skierowany jest do osób rozpoczynających swoje doświadczenia z ceramiką, jak i dla osób rozwijających swój warsztat technologiczny i artystyczny. Każdy uczestnik zajęć może oczekiwać indywidualnego podejścia w procesie realizacji własnych pomysłów.</p><p> </p><p>Zadania podzielone są na: poznanie technik lepienia, formowania naczyń oraz na sposób ich zdobienia. Proces realizacji zadania ceramicznego to proces myślenia o przedmiocie - jego kształcie, formie, fakturze i kolorze. W ceramice nie ma sztywnych reguł, więc każdy ceramik w końcu z łatwością znajdzie swój własny styl, w którym łącząc zasady budowania i konstruowania będzie mógł zrealizować pomysły.</p><p>Zajęcia będą odbywały się we wtorki w godzinach: 15.00-17.00.</p></p><p> </p><p> </p>",
+    "categoryId": 83,
+    "startDate": "2020-01-07T15:00:00+0100",
+    "organizer": {
+      "id": 5,
+      "designation": "Gdański Archipelag Kultury"
+    },
+    "active": 1,
+    "descShort": "Zajęcia prowadzi absolwentka wydziału rzeźby ASP w Gdańsku, od 22 lat pracująca jako pedagog z dziećmi w wieku przedszkolnym, szkolnym i młodzieżą oraz dorosłymi. Pracownię ceramiczną w Plamie prowadzi od 1997 roku. Jej autorski program e...",
+    "tickets": {
+      "type": "unknown"
+    }
+  },
+  {
+    "id": 70141,
+    "place": {
+      "id": 1131,
+      "subname": "Kameralna",
+      "name": "Wejherowskie Centrum Kultury"
+    },
+    "endDate": "2020-01-07T17:35:00+0100",
+    "name": "Gwiezdne wojny: Skywalker. Odrodzenie 2D dubbing",
+    "urls": {
+      "www": "http://wck.org.pl/kalendarium/opis/5144-gwiezdne-wojny-skywalker-odrodzenie-2d-dubbing.html"
+    },
+    "attachments": [
+      {
+        "fileName": "http://wck.org.pl/images/main/78Y2u3z5e0M0h1K5r764s6E9X3g9M7U6.jpg"
+      }
+    ],
+    "descLong": "Lucasfilm i reżyser J.J. Abrams raz jeszcze łączą siły, aby zabrać widzów w spektakularną podróż do odległej galaktyki w filmie Gwiezdne wojny: Skywalker. Odrodzenie. Saga rodziny Skywalkerów dobiega końca. Tego po prostu nie można przegapić! Czym zaskoczą w finale twórcy jednej z najbardziej kultowych serii w historii kina? Jaki będzie finał odwiecznej batalii pomiędzy jasną i ciemną stroną mocy? Ostatnia odsłona kultowej sagi Lucasfilm Gwiezdne wojny: Skywalker. Odrodzenie w kinach od 19 grudnia!...",
+    "categoryId": 1,
+    "startDate": "2020-01-07T15:00:00+0100",
+    "organizer": {
+      "id": 156,
+      "designation": "Wejherowskie Centrum Kultury"
+    },
+    "active": 1,
+    "descShort": "Lucasfilm i reżyser J.J. Abrams raz jeszcze łączą siły, aby zabrać widzów w spektakularną podróż do odległej galaktyki w filmie Gwiezdne wojny: Skywalker. Odrodzenie. Saga rodziny Skywalkerów dobiega końca. Tego po prostu nie można prze...",
+    "tickets": {
+      "type": "unknown"
+    }
+  },
+  {
+    "id": 48229,
+    "place": {
+      "id": 8,
+      "subname": "Dworek Artura",
+      "name": "Gdański Archipelag Kultury"
+    },
+    "endDate": "2020-01-07T18:00:00+0100",
+    "name": "Plastyka // Dzieci",
+    "urls": {
+      "www": "http://stacjaorunia.weebly.com"
+    },
+    "attachments": [],
+    "descLong": "<p>PLASTYKA - prowadząca Renata Nowak</p><p>Absolwentka Akademii Sztuk Pięknych w Gdańsku na Wydziale Grafiki.</p><p>Głównym tworzywem jej pracy jest rysunek, ilustracja i fotografia metodą camera obscura.</p><p>Zajmuje się też projektowaniem graficznym.</p><p>Wystawia w kraju i za granicą.</p><p>Indywidualna wystawa Ilustracji w Galerii Ciasna w Jastrzębiu Zdroju 2016</p><p>Laureatka wielu nagród i wyróżnień.</p><p>Nagroda Prezydenta Gdańska w dziedzinie kultury 2014</p><p>Jej prace znajdują się w Muzeum Sztuki Współczesnej Tajwan, Katalonia, Pekin i w zbiorach prywatnych Polska, Francja, Niemcy, Anglia</p><p> </p><p> </p>",
+    "categoryId": 83,
+    "startDate": "2020-01-07T16:00:00+0100",
+    "organizer": {
+      "id": 5,
+      "designation": "Gdański Archipelag Kultury"
+    },
+    "active": 1,
+    "descShort": "PLASTYKA - prowadząca Renata NowakAbsolwentka Akademii Sztuk Pięknych w Gdańsku na Wydziale Grafiki.Głównym tworzywem jej pracy jest rysunek, ilustracja i fotografia metodą camera obscura.Zajmuje się też projektowaniem graficznym.Wystawia w k...",
+    "tickets": {
+      "type": "unknown"
+    }
+  },
+  {
+    "id": 63706,
+    "place": {
+      "id": 8,
+      "subname": "Dworek Artura",
+      "name": "Gdański Archipelag Kultury"
+    },
+    "endDate": "2020-01-07T17:00:00+0100",
+    "name": "Taniec artystyczny",
+    "urls": {
+      "www": "http://stacjaorunia.weebly.com"
+    },
+    "attachments": [],
+    "descLong": "<p>Zajęcia z tańca artystycznego to forma ruchu dla dziewczynek z elementami tańca, akrobatyki, ćwiczeń z przyborami. Wpływają pozytywnie zarówno na świadomość ciała jak też są doskonałą aktywną formą spędzania wolnego czasu. Prowadząca: Katarzyna Rzyman,absolwentka Akademii Medycznej. Trener z siedmioletnim doświadczeniem, reprezentantka Mistrzostw Polski i Świata federacji FIG i FISAF, medalistka Mistrzostw Polski federacji FISAF.</p>",
+    "categoryId": 77,
+    "startDate": "2020-01-07T16:00:00+0100",
+    "organizer": {
+      "id": 5,
+      "designation": "Gdański Archipelag Kultury"
+    },
+    "active": 1,
+    "descShort": "Zajęcia z tańca artystycznego to forma ruchu dla dziewczynek z elementami tańca, akrobatyki, ćwiczeń z przyborami. Wpływają pozytywnie zarówno na świadomość ciała jak też są doskonałą aktywną formą spędzania wolnego czasu. Prowadz",
+    "tickets": {
+      "type": "unknown"
+    }
+  },
+  {
+    "id": 66338,
+    "place": {
+      "id": 12,
+      "subname": "Gama",
+      "name": "Gdański Archipelag Kultury"
+    },
+    "endDate": "2020-01-07T18:00:00+0100",
+    "name": "Nauka gry na gitarze",
+    "urls": {
+      "www": "http://gama.gak.gda.pl"
+    },
+    "attachments": [
+      {
+        "fileName": "http://gak.gda.pl/sites/default/files/styles/big_1000w/public/Galeria/Gitara-zdjęcie.jpg"
+      }
+    ],
+    "descLong": "<p>Indywidualne zajęcia nauki gry na gitarze akustycznej/elektrycznej. Zajęcia odbywają się raz w tygodniu i są odpłatne. Cena za pojedyncze zajęcia to 20 złotych, cena za miesiąc to 80 złotych. Zajęcia trwają godzinę zegarową. Terminy i godziny zajęć są ustalane indywidualnie.</p>",
+    "categoryId": 35,
+    "startDate": "2020-01-07T16:00:00+0100",
+    "organizer": {
+      "id": 5,
+      "designation": "Gdański Archipelag Kultury"
+    },
+    "active": 1,
+    "descShort": "Indywidualne zajęcia nauki gry na gitarze akustycznej/elektrycznej. Zajęcia odbywają się raz w tygodniu i są odpłatne. Cena za pojedyncze zajęcia to 20 złotych, cena za miesiąc to 80 złotych. Zajęcia trwają godzinę zegarową. Terminy i g...",
+    "tickets": {
+      "type": "unknown"
+    }
+  },
+  {
+    "id": 70160,
+    "place": {
+      "id": 1132,
+      "subname": "Główna",
+      "name": "Wejherowskie Centrum Kultury"
+    },
+    "endDate": "2020-01-07T17:30:00+0100",
+    "name": "Urwis 2D dubbing",
+    "urls": {
+      "www": "http://wck.org.pl/kalendarium/opis/5167-urwis-2d-dubbing.html"
+    },
+    "attachments": [
+      {
+        "fileName": "http://wck.org.pl/images/main/s8h2k1n1M0G0A1p5v7U7t3n7o0d3h5h8.jpg"
+      }
+    ],
+    "descLong": "Porywająca animowana komedia producentów „SHREKA”! Pełna przygód i wyszczekanego humoru opowieść o psie z wyższych sfer, który musi nauczyć się żyć wśród zwykłych ulicznych Burków i Azorów. Jeden prawdziwy przyjaciel wart jest więcej niż cała kiełbasa świata! Przebojowa ścieżka dźwiękowa z nowym utworem samego Snoop Dogga! Urwis od szczeniaka żył w luksusie, nauczony, że na jedno szczeknięcie ma do dyspozycji służbę, miski pełne serdelków i drapanie za uchem. Niestety jego ukochana Pani po długim i szczęśliwym życiu przenosi się do wieczności, a jej spadkobiercy nie lubią czworonogów. Z dnia na dzień rozpieszczony kanapowiec Urwis traci dach nad głową i jedyną bliską osobę. Sam w dzikim, pełnym niebezpieczeństw świecie musi nauczyć się panujących tam reguł: na kogo warknąć, a komu pomerdać, w którym śmietniku szukać smacznych kąsków, a co najważniejsze – jak znaleźć prawdziwego przyjaciela. Trzeba przyznać, że sam sobie nie ułatwia zadania, bo wszystkich wokół traktuje z wyższością i niechęcią. Czeka go więc trudna szkoła życia, dopóki nie zrozumie, że zamiast pokazywać kły lepiej wyciągnąć do innych łapę. Na szczęście spotka na swojej drodze pewną początkującą piosenkarkę, która co prawda mieszkanko ma malutkie, ale serce wielkie. Ten duet będzie prawdziwym przebojem!...",
+    "categoryId": 1,
+    "startDate": "2020-01-07T16:00:00+0100",
+    "organizer": {
+      "id": 156,
+      "designation": "Wejherowskie Centrum Kultury"
+    },
+    "active": 1,
+    "descShort": "Porywająca animowana komedia producentów „SHREKA”! Pełna przygód i wyszczekanego humoru opowieść o psie z wyższych sfer, który musi nauczyć się żyć wśród zwykłych ulicznych Burków i Azorów. Jeden prawdziwy przyjaciel wart jest wi...",
+    "tickets": {
+      "type": "unknown"
+    }
+  },
+  {
+    "id": 64054,
+    "place": {
+      "id": 6,
+      "subname": "Dom Sztuki",
+      "name": "Gdański Archipelag Kultury"
+    },
+    "endDate": "2020-01-07T18:15:00+0100",
+    "name": "TRAFIC NEO (9-12 lat) I TANIEC WSPÓŁCZESNY, MODERN, UNDERGROUND, JAZZ",
+    "urls": {
+      "www": "http://gak.gda.pl/domsztuki"
+    },
+    "attachments": [
+      {
+        "fileName": "http://gak.gda.pl/sites/default/files/styles/big_1000w/public/Galeria/Grafik taneczny _5.png"
+      }
+    ],
+    "descLong": "<p><b>Zapraszamy na zajęcia taneczne z Blitz i Trafic we wtorki!</b></p><p><b>Wtorek: (duża sala)</b></p><p>16:15-17:15 TRAFIC  NEO ( 9-12 lat )</p><p>17:15-18:30 – BLITZ KIDS ( 12-15 lat )</p><p>18:30 –19:45 TRAFIC 2 ( 12- 15 lat )</p><p>19:45-21:00 -TRAFIC ( 16- 19 lat )</p><p><b>***</b></p><p><b>Formacje taneczne BLITZ</b>  (hip hop, street dance, house, hip hop oldschool)</p><p><b>Formacje taneczne TRAFIC </b>(tańc współczesny, modern, underground, jazz)</p><p>O przynależności tancerza do konkretnej grupy decyduje instruktor Agnieszka Humięcka</p><p>Treningi 2 razy w tygodniu  (plan zajeć w galerii poniżej)</p><p>Zajęcia: Dom  Sztuki GAK, ul. Stryjewskiego 25 Gdańsk-Stogi</p><p>FB: https://www.facebook.com/BLITZ-crew-144948512270599/</p>",
+    "categoryId": 69,
+    "startDate": "2020-01-07T16:15:00+0100",
+    "organizer": {
+      "id": 5,
+      "designation": "Gdański Archipelag Kultury"
+    },
+    "active": 1,
+    "descShort": "Zapraszamy na zajęcia taneczne z Blitz i Trafic we wtorki!Wtorek: (duża sala)16:15-17:15 TRAFIC  NEO ( 9-12 lat )17:15-18:30 – BLITZ KIDS ( 12-15 lat )18:30 –19:45 TRAFIC 2 ( 12- 15 lat )19:45-21:00 -TRAFIC ( 16- 19 lat )***Formacje taneczne B...",
+    "tickets": {
+      "type": "unknown"
+    }
+  },
+  {
+    "id": 68920,
+    "place": {
+      "id": 14,
+      "subname": "Projektornia",
+      "name": "Gdański Archipelag Kultury"
+    },
+    "endDate": "2020-01-07T23:59:59+0100",
+    "name": "EKSPRESJA PLASTYCZNA Z ELEMENTAMI TEATRU",
+    "urls": {
+      "www": "http://projektornia.art.pl"
+    },
+    "attachments": [
+      {
+        "fileName": "http://gak.gda.pl/sites/default/files/styles/big_1000w/public/Galeria/30171651_1919429978091734_7864726450818849860_o_0.jpg"
+      }
+    ],
+    "descLong": "<p><b>EKSPRESJA PLASTYCZNA Z ELEMENTAMI TEATRU</b> - Zajęcia plastyczne, na których pojawiają się różne techniki pracy twórczej dostosowane do wieku i zainteresowań uczestników zajęć, rozwijające ich wyobraźnię i zdolność twórczą. Prace dzieci zgłaszane są regularnie do konkursów regionalnych i ogólnopolskich.  Zajęcia dla dwóch grup rozpoczną się od października, dwa razy w tygodniu po 60 minut, wtorek i czwartek, godz. 16:15-17:15 lub 17:30-18:30. Koszt: 50 zł za miesiąc; 25 zł raz w tygodniu; 10 zł za jedne zajęcia.</p><p> </p><p><b>Instruktorka: Izabela Terek-Jopkiewicz - </b>animatorka kultury, plastyczka, twórczyni teatralna,  absolwentka Akademii Sztuk Pięknych w Gdańsku. Współpracuje przy wielu projektach teatralnych i plastycznych w kraju i za granicą. Uczestniczy w wystawach zbiorowych, organizuje artystyczne spotkania edukacyjne dla szkół i wydarzenia kulturalne dla szerokiej rzeszy odbiorców na terenie Trójmiasta. Stypendystka miasta Gdańska i Bremy. W 2012 otrzymała nagrodę Prezydenta Miasta Gdańska za pracę plastyczno-teatralną z dziećmi. Założycielka teatru „PIAN”. W ramach zajęć w Projektorni GAK wspólnie z małymi artystami przygotowała takie spektakle teatralne jak: „O czym zapomnieli dorośli”, „Wiatr” czy „Awaria”.</p><p> </p><p>Zapisy:<br/>Projektornia Gdański Archipelag Kultury<br/>ul. Dworska 29a<br/>tel. 58 343 46 91<br/>e-mail: projektornia@gak.gda.pl</p>",
+    "categoryId": 51,
+    "startDate": "2020-01-07T16:15:00+0100",
+    "organizer": {
+      "id": 5,
+      "designation": "Gdański Archipelag Kultury"
+    },
+    "active": 1,
+    "descShort": "EKSPRESJA PLASTYCZNA Z ELEMENTAMI TEATRU - Zajęcia plastyczne, na których pojawiają się różne techniki pracy twórczej dostosowane do wieku i zainteresowań uczestników zajęć, rozwijające ich wyobraźnię i zdolność twórczą. Prace dziec...",
+    "tickets": {
+      "type": "unknown"
+    }
+  },
+  {
+    "id": 68678,
+    "place": {
+      "id": 14,
+      "subname": "Projektornia",
+      "name": "Gdański Archipelag Kultury"
+    },
+    "endDate": "2020-01-07T23:59:59+0100",
+    "name": "TANIEC ARTYSTYCZNY",
+    "urls": {
+      "www": "http://projektornia.art.pl"
+    },
+    "attachments": [
+      {
+        "fileName": "http://gak.gda.pl/sites/default/files/styles/big_1000w/public/Galeria/19466469_1604315772936491_1714313162130643815_o.jpg"
+      }
+    ],
+    "descLong": "<p>Cieszące się dużą popularnością zajęcia ruchowe. Podczas zajęć kładzie się nacisk na rozwój sprawności fizycznej i poczucie rytmu, naukę podstawowych figur gimnastycznych, pracę z rekwizytami przy muzyce. Zajęcia z tańca artystycznego będą odbywały się od października, dwa razy z tygodniu po 60 minut dla każdej z grup podstawowych:</p>grupa początkująca  -  (dzieci w wieku od 5 do 7 lat),  wtorek i czwartek, godz. 16:25-17:25, koszt: 65 zł za miesiąc, 15 zł za jedne zajęciagrupa zaawansowana „1” -  (dzieci w wieku od 6 do 12 lat), poniedziałek- środa, godz. 16:25-17:25, koszt: 65 zł za miesiąc, 15 zł za jedne zajęciagrupa zaawansowana „0” -  (dzieci w wieku od 6 do 12 lat), wtorek i czwartek, godz. 17:30-18:30, koszt: 65 zł za miesiąc, 15 zł za jedne zajęciakadra -  poniedziałek, godz. 17:30-18:30;  środa, godz. 17:30-19:30 , koszt: 95 zł za miesiąc, 15 zł za jedne zajęcia<p> </p><p><b>Instruktorka: Sandra Tryba – </b>swoją przygodę z tańcem artystycznym rozpoczęła w wieku 5 lat,  początkowo w domu kultury Gdańskiego Archipelagu Kultury na gdańskiej Oruni, później w Brzeźnie. Z wieloma sukcesami brała udział w licznych konkursach tańca artystycznego. W 2016 roku ukończyła kurs na instruktora rekreacji ruchowej o specjalizacji nowoczesne formy gimnastyki i obecnie jest instruktorką gimnastyki artystycznej w domu kultury Projektornia GAK.</p><p> </p><p>Zapisy:<br/>Projektornia Gdański Archipelag Kultury<br/>ul. Dworska 29a<br/>tel. 58 343 46 91<br/>e-mail: projektornia@gak.gda.pl</p>",
+    "categoryId": 77,
+    "startDate": "2020-01-07T16:25:00+0100",
+    "organizer": {
+      "id": 5,
+      "designation": "Gdański Archipelag Kultury"
+    },
+    "active": 1,
+    "descShort": "Cieszące się dużą popularnością zajęcia ruchowe. Podczas zajęć kładzie się nacisk na rozwój sprawności fizycznej i poczucie rytmu, naukę podstawowych figur gimnastycznych, pracę z rekwizytami przy muzyce. Zajęcia z tańca artystyczneg...",
+    "tickets": {
+      "type": "unknown"
+    }
+  },
+  {
+    "id": 64779,
+    "place": {
+      "id": 6,
+      "subname": "Dom Sztuki",
+      "name": "Gdański Archipelag Kultury"
+    },
+    "endDate": "2020-01-07T18:30:00+0100",
+    "name": "Taneczne wtorki z Inside w Domu Sztuki GAK / od 16:30 do 18:30",
+    "urls": {
+      "www": "http://gak.gda.pl/domsztuki"
+    },
+    "attachments": [
+      {
+        "fileName": "http://gak.gda.pl/sites/default/files/styles/big_1000w/public/Galeria/1_0.png"
+      }
+    ],
+    "descLong": "<p><b>Techniki tańca: </b>taniec współczesny, taniec klasyczny, taniec z przyborem, akrobatyka, inne formy tańca</p><p><b>Wtorek:</b></p><p>16.30 Inside mini </p><p>17.30 Inside </p><p><b>Zajęcia prowadzi choreograf i instruktor: </b>Patrycja Krause</p><p>FB: https://www.facebook.com/Inside-Nutki-596542607143156/</p>",
+    "categoryId": 69,
+    "startDate": "2020-01-07T16:30:00+0100",
+    "organizer": {
+      "id": 5,
+      "designation": "Gdański Archipelag Kultury"
+    },
+    "active": 1,
+    "descShort": "Techniki tańca: taniec współczesny, taniec klasyczny, taniec z przyborem, akrobatyka, inne formy tańcaWtorek:16.30 Inside mini 17.30 Inside Zajęcia prowadzi choreograf i instruktor: Patrycja KrauseFB: https://www.facebook.com/Inside-Nutki-...",
+    "tickets": {
+      "type": "unknown"
+    }
+  },
+  {
+    "id": 48378,
+    "place": {
+      "id": 8,
+      "subname": "Dworek Artura",
+      "name": "Gdański Archipelag Kultury"
+    },
+    "endDate": "2020-01-07T18:30:00+0100",
+    "name": "Ceramika // dzieci",
+    "urls": {
+      "www": "http://stacjaorunia.weebly.com"
+    },
+    "attachments": [],
+    "descLong": "<p>CERAMIKA - prowadząca Grażyna Kunicka</p><p>Studia na Państwowej w Państwowej Wyższej Szkole Sztuk Plastycznych (ASP) w Gdańsku na wydziale Malarstwa i Grafiki w pracowni prof. K. Berezińskiego. Dyplom w 1987 r.</p><p>Uprawia malarstwo, ceramikę i ilustrację książkową.</p><p>Jest kuratorką wystaw, animatorką kultury, wykładowcą na studiach podyplomowych, liderką i współautorką scenariuszy międzynarodowych projektów unijnych, uczestniczką plenerów, sympozjów międzynarodowych i społecznych akcji artystycznych organizowanych na rzecz miasta.</p><p>Zajęcia dla dzieci w wieku od 5 lat</p><p>Podstawy technologii ceramiki, tworzenie przestrzennych i płaskich form ceramicznych. Podczas zajęć projektujemy, lepimy, szkliwimy i wypalamy w piecu ceramicznym.</p><p> </p><p> </p>",
+    "categoryId": 83,
+    "startDate": "2020-01-07T16:30:00+0100",
+    "organizer": {
+      "id": 5,
+      "designation": "Gdański Archipelag Kultury"
+    },
+    "active": 1,
+    "descShort": "CERAMIKA - prowadząca Grażyna KunickaStudia na Państwowej w Państwowej Wyższej Szkole Sztuk Plastycznych (ASP) w Gdańsku na wydziale Malarstwa i Grafiki w pracowni prof. K. Berezińskiego. Dyplom w 1987 r.Uprawia malarstwo, ceramikę i ilustrac...",
+    "tickets": {
+      "type": "unknown"
+    }
+  },
+  {
+    "id": 67565,
+    "place": {
+      "id": 6,
+      "subname": "Dom Sztuki",
+      "name": "Gdański Archipelag Kultury"
+    },
+    "endDate": "2020-01-07T19:00:00+0100",
+    "name": "PIANINO W DOMU SZTUKI GAK",
+    "urls": {
+      "www": "http://gak.gda.pl/domsztuki"
+    },
+    "attachments": [
+      {
+        "fileName": "http://gak.gda.pl/sites/default/files/styles/big_1000w/public/Galeria/Zajęcia Stałe_ Dom Sztuki GAK_0.png"
+      }
+    ],
+    "descLong": "<p><b>PIANINO W DOMU SZTUKI GAK</b></p><p><b>Termin</b>:</p><p><b>Poniedziałki od godz. 15:00</b><br/><b>Wtorki od godz. 17:00</b></p><p><b>Zajęcia prowadzi</b>: Maria KA</p><p><p><b>Warianty zajęć:</b></p></p><p><p><b>Pianino indywidualnie</b><br/>Odpłatność: /miesięczna: 240 zł/za połowę miesiąca: 120 zł/za pojedyncze zajęcia: 50 zł.<br/>Częstotliwość zajęć: 2x45 min.w tygodniu.<br/>Wiek uczestnika: od 6 roku życia.<br/><b>Pianino w grupie</b><br/>Odpłatność: /miesięczna: 88 zł/za połowę miesiąca: 44 zł/za pojedyncze zajęcia: 16 zł.<br/>Częstotliwość zajęć: 2x45 min.w tygodniu.<br/>Wiek uczestnika: od 6 roku życia.</p></p>",
+    "categoryId": 51,
+    "startDate": "2020-01-07T17:00:00+0100",
+    "organizer": {
+      "id": 5,
+      "designation": "Gdański Archipelag Kultury"
+    },
+    "active": 1,
+    "descShort": "PIANINO W DOMU SZTUKI GAKTermin:Poniedziałki od godz. 15:00Wtorki od godz. 17:00Zajęcia prowadzi: Maria KAWarianty zajęć:Pianino indywidualnieOdpłatność: /miesięczna: 240 zł/za połowę miesiąca: 120 zł/za pojedyncze zajęcia: 50 zł.Częs...",
+    "tickets": {
+      "type": "unknown"
+    }
+  },
+  {
+    "id": 67603,
+    "place": {
+      "id": 6,
+      "subname": "Dom Sztuki",
+      "name": "Gdański Archipelag Kultury"
+    },
+    "endDate": "2020-01-07T19:00:00+0100",
+    "name": "WOKALISTYKA ORAZ EMISJA GŁOSU W DOMU SZTUKI GAK",
+    "urls": {
+      "www": "http://gak.gda.pl/domsztuki"
+    },
+    "attachments": [
+      {
+        "fileName": "http://gak.gda.pl/sites/default/files/styles/big_1000w/public/Galeria/Zajęcia Stałe_ Dom Sztuki GAK_2.png"
+      }
+    ],
+    "descLong": "<p><b>WOKALISTYKA I EMISJA W DOMU SZTUKI GAK</b></p><p><b>Termin</b>:</p><p><b>Poniedziałki od godz. 15:00</b><br/><b>Wtorki od godz. 17:00</b></p><p><b>Zajęcia prowadzi</b>: Maria KA</p><p><p><b>Wokalistyka</b><br/>odpłatność: /miesięczna: 100 zł/za połowę miesiąca: 50 zł/za pojedyncze zajęcia: 20 zł<br/>Częstotliwość zajęć: 2x45 min.w tygodniu.<br/>Wiek uczestnika: od 6 roku życia.<br/><b>Wokalistyka i emisja głosu</b><br/>Odpłatność: /miesięczna: 240 zł/za połowę miesiąca: 120 zł/za pojedyncze zajęcia: 50 zł<br/>Częstotliwość zajęć: 2x45 min.w tygodniu.<br/>Wiek uczestnika: od 6 roku życia.</p></p>",
+    "categoryId": 51,
+    "startDate": "2020-01-07T17:00:00+0100",
+    "organizer": {
+      "id": 5,
+      "designation": "Gdański Archipelag Kultury"
+    },
+    "active": 1,
+    "descShort": "WOKALISTYKA I EMISJA W DOMU SZTUKI GAKTermin:Poniedziałki od godz. 15:00Wtorki od godz. 17:00Zajęcia prowadzi: Maria KAWokalistykaodpłatność: /miesięczna: 100 zł/za połowę miesiąca: 50 zł/za pojedyncze zajęcia: 20 złCzęstotliwość zaj",
+    "tickets": {
+      "type": "unknown"
+    }
+  },
+  {
+    "id": 63582,
+    "place": {
+      "id": 8,
+      "subname": "Dworek Artura",
+      "name": "Gdański Archipelag Kultury"
+    },
+    "endDate": "2020-01-07T18:30:00+0100",
+    "name": "Plastyka",
+    "urls": {
+      "www": "http://stacjaorunia.weebly.com"
+    },
+    "attachments": [],
+    "descLong": "<p><br/>Dla dzieci powyżej 6 lat. Zajęcia plastyczne dla dzieci, które dzięki różnorodnym technikom twórczym wpływają na rozbudzenie ekspresji plastycznej dzieci. Doskonalą koordynację wzrokowo-ruchową i kształtują umiejętności pracy w grupie. Prowadząca: Renata Nowak, absolwentka Akademii Sztuk Pięknych w Gdańsku na Wydziale Grafiki. Głównym tworzywem jej pracy jest rysunek, ilustracja i fotografia metodą camera obscura.<br/>Zajmuje się też projektowaniem graficznym. Wystawia w kraju i za granicą. Indywidualna wystawa Ilustracji w Galerii Ciasna w Jastrzębiu Zdroju 2016. Laureatka wielu nagród i wyróżnień. Nagroda Prezydenta Gdańska w dziedzinie kultury.<br/><br/><br/></p>",
+    "categoryId": 51,
+    "startDate": "2020-01-07T17:00:00+0100",
+    "organizer": {
+      "id": 5,
+      "designation": "Gdański Archipelag Kultury"
+    },
+    "active": 1,
+    "descShort": "Dla dzieci powyżej 6 lat. Zajęcia plastyczne dla dzieci, które dzięki różnorodnym technikom twórczym wpływają na rozbudzenie ekspresji plastycznej dzieci. Doskonalą koordynację wzrokowo-ruchową i kształtują umiejętności pracy w grupie...",
+    "tickets": {
+      "type": "unknown"
+    }
+  },
+  {
+    "id": 67750,
+    "place": {
+      "id": 9,
+      "subname": "Winda",
+      "name": "Gdański Archipelag Kultury"
+    },
+    "endDate": "2020-01-07T23:59:59+0100",
+    "name": "Improwizacja",
+    "urls": {
+      "www": "http://winda.gda.pl"
+    },
+    "attachments": [],
+    "descLong": "<p>UWAGA ZBIERAMY GRUPĘ. POTRZEBUJEMY 6 OSÓB<br/>Dla kogo: 16-100 lat<br/>Koszt: 150 zł<br/>Kiedy: Spotkania raz w tygodniu po 2 godziny<br/>Kurs kończy się występem grupy<br/>Co daję? : Rozwija kreatywność, radzenie sobie ze stresem, dobra zabawa, odstresowanie, nauka technik improwizacji, ułatwia życie i pracę<br/>Kto prowadzi? :Jakub Suchy Suchecki - aktor, reżyser, improwizator, trener kreatywnego myślenia<br/>Absolwent Wiedzy o teatrze na Uniwersytecie Gdańskim oraz Studia Aktorskiego LART w Krakowie. Od 2013 roku związany z Odyseją Umysłu- konkursem kreatywnego myślenia. W Odysei zdobył wszystko: Mistrzostwo, Wicemistrzostwo Świata, po kilka razy Mistrzostwo i Wicemistrzostwo Polski. Związany z Teatrem ZNAK i Teatrem Tańca. Od lat działa w improwizacji teatralnej. Wraz ze swoimi grupami impro występuje po całej Polsce na największych festiwalach.</p>",
+    "categoryId": 51,
+    "startDate": "2020-01-07T17:00:00+0100",
+    "organizer": {
+      "id": 5,
+      "designation": "Gdański Archipelag Kultury"
+    },
+    "active": 1,
+    "descShort": "UWAGA ZBIERAMY GRUPĘ. POTRZEBUJEMY 6 OSÓBDla kogo: 16-100 latKoszt: 150 złKiedy: Spotkania raz w tygodniu po 2 godzinyKurs kończy się występem grupyCo daję? : Rozwija kreatywność, radzenie sobie ze stresem, dobra zabawa, odstresowanie, nauka...",
+    "tickets": {
+      "type": "unknown"
+    }
+  },
+  {
+    "id": 66631,
+    "place": {
+      "id": 12,
+      "subname": "Gama",
+      "name": "Gdański Archipelag Kultury"
+    },
+    "endDate": "2020-01-07T19:00:00+0100",
+    "name": "Zajęcia tetralne dla dzieci",
+    "urls": {
+      "www": "http://gama.gak.gda.pl"
+    },
+    "attachments": [],
+    "descLong": "<p>Zajęcia teatralne skierowane są do dzieci chcących rozwijać swoją pasję teatralną, wzbudzać kreatywność, wyobraźnię, wrażliwość poprzez gry, zabawy, etiudy.  Udział w zajęciach teatralnych ma na celu również wspomagać rozwój kompetencji osobistych, komunikacyjnych i kulturowych. Zajęcia kończą się premierą teatralną, są odpłatne, 20 złotych za miesiąc/10 złotych z Kartą Dużej Rodziny, pojedyncze zajęcia 10 złotych. </p>",
+    "categoryId": 69,
+    "startDate": "2020-01-07T17:00:00+0100",
+    "organizer": {
+      "id": 5,
+      "designation": "Gdański Archipelag Kultury"
+    },
+    "active": 1,
+    "descShort": "Zajęcia teatralne skierowane są do dzieci chcących rozwijać swoją pasję teatralną, wzbudzać kreatywność, wyobraźnię, wrażliwość poprzez gry, zabawy, etiudy.  Udział w zajęciach teatralnych ma na celu również wspomagać rozwój kom...",
+    "tickets": {
+      "type": "unknown"
+    }
+  },
+  {
+    "id": 65546,
+    "place": {
+      "id": 13,
+      "subname": "Wyspa Skarbów",
+      "name": "Gdański Archipelag Kultury"
+    },
+    "endDate": "2020-01-07T19:00:00+0100",
+    "name": "Język niemiecki",
+    "urls": {
+      "www": "http://wyspaskarbow.gak.gda.pl"
+    },
+    "attachments": [],
+    "descLong": "<p>/ zajęcia grupowe i indywidualne / </p><p>Nauka języka niemieckiego dla każdego na różnych poziomach zaawansowania. <br/></p><p><b>Grupa wiekowa</b>: 5 + młodzież i dorośli<br/><b>Cena zajęć grupowych</b>:<br/>100 zł – miesiąc<br/>35 zł - jednorazowe zajęcia<br/><b>Częstotliwość zajęć</b>: 1 raz w tygodniu, 45 minut<br/><b>ILOŚĆ MIEJSC OGRANICZONA!</b></p><p><b>PROWADZENIE -  Renata Kopińska</b>, <br/></p><p>Zapisy:</p><p><b>„Wyspa Skarbów” Gdańskiego Archipelagu Kultury</b><br/>ul. Turystyczna 3<br/>Tel: 58 323 91 15 (w dni robocze od godz. 10:00 do 20:00)<br/>e-mail: wyspaskarbow@gak.gda.pl</p>",
+    "categoryId": 83,
+    "startDate": "2020-01-07T17:00:00+0100",
+    "organizer": {
+      "id": 5,
+      "designation": "Gdański Archipelag Kultury"
+    },
+    "active": 1,
+    "descShort": "/ zajęcia grupowe i indywidualne / Nauka języka niemieckiego dla każdego na różnych poziomach zaawansowania. Grupa wiekowa: 5 + młodzież i dorośliCena zajęć grupowych:100 zł – miesiąc35 zł - jednorazowe zajęciaCzęstotliwość zajęć...",
+    "tickets": {
+      "type": "unknown"
+    }
+  },
+  {
+    "id": 64097,
+    "place": {
+      "id": 6,
+      "subname": "Dom Sztuki",
+      "name": "Gdański Archipelag Kultury"
+    },
+    "endDate": "2020-01-07T19:15:00+0100",
+    "name": "BLITZ KIDS (12-15 lat) I HIP HOP, STREET DANCE, HOUSE, HIP HOP OLDSCHOOL",
+    "urls": {
+      "www": "http://gak.gda.pl/domsztuki"
+    },
+    "attachments": [
+      {
+        "fileName": "http://gak.gda.pl/sites/default/files/styles/big_1000w/public/Galeria/Grafik taneczny _6.png"
+      }
+    ],
+    "descLong": "<p><b>Zapraszamy na zajęcia taneczne z Blitz i Trafic we wtorki!</b></p><p><b>Zajęcia Blitz Kids 10 września, wyjątkowo rozpoczną się o 18:30 !</b></p><p><b>Wtorek: (duża sala)</b></p><p>16:15-17:15 TRAFIC  NEO ( 9-12 lat )</p><p>17:15-18:30 – BLITZ KIDS ( 12-15 lat )</p><p>18:30 –19:45 TRAFIC 2 ( 12- 15 lat )</p><p>19:45-21:00 -TRAFIC ( 16- 19 lat )</p><p><b>***</b></p><p><b>Formacje taneczne BLITZ</b>  (hip hop, street dance, house, hip hop oldschool)</p><p><b>Formacje taneczne TRAFIC </b>(tańc współczesny, modern, underground, jazz)</p><p>O przynależności tancerza do konkretnej grupy decyduje instruktor Agnieszka Humięcka</p><p>Treningi 2 razy w tygodniu  (plan zajeć w galerii poniżej)</p><p>Zajęcia: Dom  Sztuki GAK, ul. Stryjewskiego 25 Gdańsk-Stogi</p><p>FB: https://www.facebook.com/BLITZ-crew-144948512270599/</p>",
+    "categoryId": 69,
+    "startDate": "2020-01-07T17:15:00+0100",
+    "organizer": {
+      "id": 5,
+      "designation": "Gdański Archipelag Kultury"
+    },
+    "active": 1,
+    "descShort": "Zapraszamy na zajęcia taneczne z Blitz i Trafic we wtorki!Zajęcia Blitz Kids 10 września, wyjątkowo rozpoczną się o 18:30 !Wtorek: (duża sala)16:15-17:15 TRAFIC  NEO ( 9-12 lat )17:15-18:30 – BLITZ KIDS ( 12-15 lat )18:30 –19:45 TRAFIC 2 ...",
+    "tickets": {
+      "type": "unknown"
+    }
+  },
+  {
+    "id": 56125,
+    "place": {
+      "id": 8,
+      "subname": "Dworek Artura",
+      "name": "Gdański Archipelag Kultury"
+    },
+    "endDate": "2020-01-07T19:15:00+0100",
+    "name": "Ceramika // dzieci",
+    "urls": {
+      "www": "http://stacjaorunia.weebly.com"
+    },
+    "attachments": [],
+    "descLong": "<p>CERAMIKA - prowadząca Grażyna Kunicka</p><p>Studia na Państwowej w Państwowej Wyższej Szkole Sztuk Plastycznych (ASP) w Gdańsku na wydziale Malarstwa i Grafiki w pracowni prof. K. Berezińskiego. Dyplom w 1987 r.</p><p>Uprawia malarstwo, ceramikę i ilustrację książkową.</p><p>Jest kuratorką wystaw, animatorką kultury, wykładowcą na studiach podyplomowych, liderką i współautorką scenariuszy międzynarodowych projektów unijnych, uczestniczką plenerów, sympozjów międzynarodowych i społecznych akcji artystycznych organizowanych na rzecz miasta.</p><p>Zajęcia dla dzieci w wieku od 5 lat</p><p>Podstawy technologii ceramiki, tworzenie przestrzennych i płaskich form ceramicznych. Podczas zajęć projektujemy, lepimy, szkliwimy i wypalamy w piecu ceramicznym.</p><p> </p><p> </p>",
+    "categoryId": 83,
+    "startDate": "2020-01-07T17:15:00+0100",
+    "organizer": {
+      "id": 5,
+      "designation": "Gdański Archipelag Kultury"
+    },
+    "active": 1,
+    "descShort": "CERAMIKA - prowadząca Grażyna KunickaStudia na Państwowej w Państwowej Wyższej Szkole Sztuk Plastycznych (ASP) w Gdańsku na wydziale Malarstwa i Grafiki w pracowni prof. K. Berezińskiego. Dyplom w 1987 r.Uprawia malarstwo, ceramikę i ilustrac...",
+    "tickets": {
+      "type": "unknown"
+    }
+  },
+  {
+    "id": 63284,
+    "place": {
+      "id": 8,
+      "subname": "Dworek Artura",
+      "name": "Gdański Archipelag Kultury"
+    },
+    "endDate": "2020-01-07T18:45:00+0100",
+    "name": "Ceramika dla dzieci",
+    "urls": {
+      "www": "http://stacjaorunia.weebly.com"
+    },
+    "attachments": [],
+    "descLong": "<p>Zajęcia dla dzieci w wieku od 5 lat. Podstawy technologii ceramiki, tworzenie przestrzennych i płaskich form ceramicznych. Podczas zajęć projektujemy, lepimy, szkliwimy i wypalamy w piecu ceramicznym.  Prowadząca - Grażyna Kunicka. Ukończyła studia na Państwowej w Państwowej Wyższej Szkole Sztuk Plastycznych (ASP) w Gdańsku na wydziale Malarstwa i Grafiki w pracowni prof. K. Berezińskiego. Dyplom zdobyła w 1987 r. Uprawia malarstwo, ceramikę i ilustrację książkową. Jest kuratorką wystaw, animatorką kultury, wykładowcą na studiach podyplomowych, liderką i współautorką scenariuszy międzynarodowych projektów unijnych, uczestniczką plenerów, sympozjów międzynarodowych i społecznych akcji artystycznych organizowanych na rzecz miasta.</p>",
+    "categoryId": 51,
+    "startDate": "2020-01-07T17:15:00+0100",
+    "organizer": {
+      "id": 5,
+      "designation": "Gdański Archipelag Kultury"
+    },
+    "active": 1,
+    "descShort": "Zajęcia dla dzieci w wieku od 5 lat. Podstawy technologii ceramiki, tworzenie przestrzennych i płaskich form ceramicznych. Podczas zajęć projektujemy, lepimy, szkliwimy i wypalamy w piecu ceramicznym.  Prowadząca - Grażyna Kunicka. Ukończyła...",
+    "tickets": {
+      "type": "unknown"
+    }
+  },
+  {
+    "id": 67396,
+    "place": {
+      "id": 6,
+      "subname": "Dom Sztuki",
+      "name": "Gdański Archipelag Kultury"
+    },
+    "endDate": "2020-01-07T19:30:00+0100",
+    "name": "ZAJĘCIA PLASTYCZNE W DOMU SZTUKI GAK",
+    "urls": {
+      "www": "http://gak.gda.pl/domsztuki"
+    },
+    "attachments": [
+      {
+        "fileName": "http://gak.gda.pl/sites/default/files/styles/big_1000w/public/Galeria/Plakat Plastyka_0.png"
+      }
+    ],
+    "descLong": "<p><p><p><b>Zajęcia plastyczne w Domu Sztuki GAK</b></p><p><b>Termin:</b></p><p>W każdy wtorek od 17:30!</p><p>Startujemy od 08 października 2019</p><p><b>Zajęcia plastyczne dla dzieci</b><br/>Odpłatności: /miesięczna: 88 zł/za połowę miesiąca: 44 zł/za pojedyncze zajęcia: 30zł<br/>Częstotliwość zajęć: 1x90 min.w tygodniu.<br/>Wiek uczestnika: od 6 roku życia.<br/><b>Zajęcia plastyczne dla młodzieży i dorosłych</b><br/>Odpłatności: /miesięczna: 88 zł/za połowę miesiąca: 44 zł/za pojedyncze zajęcia: 30zł<br/>Częstotliwość zajęć: 1x90 min.w tygodniu.<br/>Wiek uczestnika: od 16 roku życia.</p><p>Zajrzyjcie na Stogi i poznajcie naszą nową instruktorkę Yanę!</p><p><b>Czekamy na was!</b></p></p></p><p><p><p><p><p><p> </p></p><p><p> </p><p> </p></p></p></p></p></p>",
+    "categoryId": 96,
+    "startDate": "2020-01-07T17:30:00+0100",
+    "organizer": {
+      "id": 5,
+      "designation": "Gdański Archipelag Kultury"
+    },
+    "active": 1,
+    "descShort": "Zajęcia plastyczne w Domu Sztuki GAKTermin:W każdy wtorek od 17:30!Startujemy od 08 października 2019Zajęcia plastyczne dla dzieciOdpłatności: /miesięczna: 88 zł/za połowę miesiąca: 44 zł/za pojedyncze zajęcia: 30złCzęstotliwość zaj",
+    "tickets": {
+      "type": "unknown"
+    }
+  },
+  {
+    "id": 67972,
+    "place": {
+      "id": 6,
+      "subname": "Dom Sztuki",
+      "name": "Gdański Archipelag Kultury"
+    },
+    "endDate": "2020-01-07T19:30:00+0100",
+    "name": "CERAMIKA W DOMU SZTUKI GAK",
+    "urls": {
+      "www": "http://gak.gda.pl/domsztuki"
+    },
+    "attachments": [
+      {
+        "fileName": "http://gak.gda.pl/sites/default/files/styles/big_1000w/public/Galeria/Ceramika.png"
+      }
+    ],
+    "descLong": "<p><p><b>W październiku startują zajęcia z ceramiki w Domu Sztuki GAK!</b></p></p><p><p><b>Zajęcia z ceramiki w każdy wtorek od godz. 17:30</b></p></p><p><p> </p><p><b>Ceramika</b><br/><b>odpłatność:</b> /miesięczna: 88 zł/za połowę miesiąca: 44 zł/za pojedyncze zajęcia: 30zł<br/><b>Częstotliwość zajęć:</b> 90 min. raz w tygodniu.<br/><b>Wiek uczestnika:</b> od 6 roku życia. </p><p> </p></p>",
+    "categoryId": 51,
+    "startDate": "2020-01-07T17:30:00+0100",
+    "organizer": {
+      "id": 5,
+      "designation": "Gdański Archipelag Kultury"
+    },
+    "active": 1,
+    "descShort": "W październiku startują zajęcia z ceramiki w Domu Sztuki GAK!Zajęcia z ceramiki w każdy wtorek od godz. 17:30 Ceramikaodpłatność: /miesięczna: 88 zł/za połowę miesiąca: 44 zł/za pojedyncze zajęcia: 30złCzęstotliwość zajęć: 90 ...",
+    "tickets": {
+      "type": "unknown"
+    }
+  },
+  {
+    "id": 65274,
+    "place": {
+      "id": 10,
+      "subname": "Plama",
+      "name": "Gdański Archipelag Kultury"
+    },
+    "endDate": "2020-01-07T20:00:00+0100",
+    "name": "„Rytmy Ziemi” – warsztaty gry na bębnach – starsza młodzież i dorośli (instr. Sławomir „Rodriguez” Porębski)",
+    "urls": {
+      "www": "http://plama.art.pl"
+    },
+    "attachments": [
+      {
+        "fileName": "http://gak.gda.pl/sites/default/files/styles/big_1000w/public/Galeria/bebny poprawione_wycięte.jpg"
+      }
+    ],
+    "descLong": "<p>Zajęcia poprowadzi Rodriguez – muzyk perkusjonista z wieloletnim doświadczeniem. Będziemy grać przede wszystkim na bębnach djembe, ale pojawiać się też będą różnego rodzaju perkusjonalia.</p><p> </p><p>Poznamy i będziemy doskonalić różne aspekty techniki wykonawczej, począwszy od najbardziej podstawowych: rodzaje uderzeń, dynamika i tempo w muzyce, akcentacja i frazowanie, polirytmia, aranżacje utworów perkusyjnych, improwizacja.</p><p>Nauczymy się tradycyjnych i współczesnych rytmów różnych kręgów kulturowych, ale przede wszystkim spotkamy się w Kręgu Bębnów, by poczuć moc i pozytywną energię jaką daje wspólne granie!</p><p> </p><p>Zajęcia będą odbywały się we wtorki w godzinach 18.00-20.00.</p><p> </p><p> </p>",
+    "categoryId": 35,
+    "startDate": "2020-01-07T18:00:00+0100",
+    "organizer": {
+      "id": 5,
+      "designation": "Gdański Archipelag Kultury"
+    },
+    "active": 1,
+    "descShort": "Zajęcia poprowadzi Rodriguez – muzyk perkusjonista z wieloletnim doświadczeniem. Będziemy grać przede wszystkim na bębnach djembe, ale pojawiać się też będą różnego rodzaju perkusjonalia. Poznamy i będziemy doskonalić różne aspekty...",
+    "tickets": {
+      "type": "unknown"
+    }
+  },
+  {
+    "id": 70057,
+    "place": {
+      "id": 29,
+      "name": "Instytut Kultury Miejskiej"
+    },
+    "endDate": "2020-01-07T20:00:00+0100",
+    "name": "Idea Squash",
+    "urls": {
+      "www": "http://ikm.gda.pl/wydarzenie/idea-squash-3/",
+      "fb": "https://www.facebook.com/events/2372141563035514/"
+    },
+    "attachments": [],
+    "descLong": "Masz pomysł? Nie siedź z nim sam! Skonfrontuj go z prawdziwymi ludźmi, takimi z krwi i kości. \"Rzuć\" w nich pomysłem, a oni ci oddadzą - powiedzą co myślą, gdzie są punkty zapalne, co nie wypali, a co jest MEGA. Zanim zaczniesz planować, wypróbuj pomysł przed grupą obcych, aczkolwiek przyjaznych osób, które będą chciały ci pomóc ale nie, o nie, nie będą ci słodzić.\n\nOrganizatorzy: Instytut Kultury Miejskiej we współpracy z Hackerspace Trójmiasto\n\nReguły gry dostępne na <a href=\"https://l.facebook.com/l.php?u=https%3A%2F%2Fwiki.hs3.pl%2Fwydarzenia%2Fideasquash%3Ffbclid%3DIwAR1UqdT5nVNtscogl20TPCNNC87nS5iLLBZeqJcGONT7EjvNBsn0cgm3HKk&amp;h=AT3zBoxLMl39-XkoRU67egBYpBc8CSq6y3-Hfsjv4YgpLEx5ReZAYjp3V529GYXwPmU5JaWJAL_u9U33vVGJxNhxFFyOuufGlx9LMQk9U4C2fPgv0Sf8LWaHTstoOMpPKFih\" target=\"_blank\" rel=\"nofollow noopener noreferrer\" data-lynx-mode=\"hover\">https://wiki.hs3.pl/wydarzenia/ideasquash</a>\n\nFormuła spotkania będzie luźna - fotele, pufy, zimne napoje i przekąski.\n\nPrzyjdź. Poznajmy się. Zobacz, co inni mają w głowach, zanim ujrzy to światło dzienne.\n\nIKM ma do przegadania kilka pomysłów, ale jeśli i Ty chciałbyś skorzystać z okazji - ZAPRASZAMY.",
+    "categoryId": 96,
+    "startDate": "2020-01-07T18:00:00+0100",
+    "organizer": {
+      "id": 13,
+      "designation": "Instytut Kultury Miejskiej"
+    },
+    "active": 1,
+    "descShort": "Masz pomysł? Nie siedź z nim sam! Skonfrontuj go z prawdziwymi ludźmi, takimi z krwi i kości. \"Rzuć\" w nich pomysłem, a oni ci oddadzą - powiedzą co myślą, gdzie są punkty zapalne, co nie wypali, a co jest MEGA. Zanim zaczniesz planować, ...",
+    "tickets": {
+      "type": "unknown"
+    }
+  },
+  {
+    "id": 70172,
+    "place": {
+      "id": 1132,
+      "subname": "Główna",
+      "name": "Wejherowskie Centrum Kultury"
+    },
+    "endDate": "2020-01-07T20:00:00+0100",
+    "name": "Koty 2D napisy",
+    "urls": {
+      "www": "http://wck.org.pl/kalendarium/opis/5166-koty-2d-napisy.html"
+    },
+    "attachments": [
+      {
+        "fileName": "http://wck.org.pl/images/main/72s1A4C7g020T1u59757t3B7X0m1Z906.jpg"
+      }
+    ],
+    "descLong": "Laureat Oscara® Tom Hooper („Les Misérables. Nędznicy”, „Dziewczyna z portretu”, „Jak zostać królem”) przedstawia zapierającą dech w piersiach filmową wersję kultowego musicalu Andrew Lloyda Webbera. W filmie zobaczymy m.in.: Jamesa Cordena, Judi Dench, Jasona Derulo, Idrisa Elbę, Jennifer Hudson, Iana McKellena, Taylor Swift oraz Rebel Wilson, a także główną solistkę Royal Ballet – Franceskę Hayward w jej ekranowym debiucie. W filmie usłyszymy ikoniczną muzykę Lloyda Webbera, na ekranie zobaczymy światowej klasy tancerzy, którzy pracowali pod dyrekcją wyróżnionego nagrodą Tony choreografa – Andy’ego Blankenbuehlera. Filmowa wersja musicalu to ukłon w stronę nowej generacji – spektakularne sceny, niezwykła scenografia oraz style taneczne – od baletu po taniec współczesny, od hip-hopu po jazz, od tapu po street-dance. „Koty” to jeden z najdłużej wystawianych musicali w historii West Endu i Broadwayu. Przedstawienie zadebiutowało na deskach New London Theatre w 1981 roku, gdzie grano je przez 21 lat. Wielokrotnie nagradzane, otrzymało m.in. nagrodę Oliviera oraz Evening Standard dla najlepszego musicalu. W 1983 roku broadwayowska produkcja otrzymała 7 nagród Tony, w tym dla najlepszego musicalu. Na Broadwayu sztuka święciła triumfy przez 18 lat! Musical wystawiono w ponad 50 krajach, w 19 językach. Szacuje się, że sceniczną wersję obejrzało dotąd ponad 81 milionów ludzi. TWÓRCY FILMU: Reżyseria: Tom Hooper Scenariusz: Lee Hall, Tom Hooper Na podstawie poezji T.S. Eliota i musicalu „Cats” Andrew Lloyda Webbera Produkcja: Debra Hayward, Tim Bevan, Eric Fellner, Tom Hooper Producent wykonawczy: Andrew Lloyd Webber, Steven Spielberg, Angela Morrison, Jo Burn...",
+    "categoryId": 1,
+    "startDate": "2020-01-07T18:00:00+0100",
+    "organizer": {
+      "id": 156,
+      "designation": "Wejherowskie Centrum Kultury"
+    },
+    "active": 1,
+    "descShort": "Laureat Oscara® Tom Hooper („Les Misérables. Nędznicy”, „Dziewczyna z portretu”, „Jak zostać królem”) przedstawia zapierającą dech w piersiach filmową wersję kultowego musicalu Andrew Lloyda Webbera. W filmie zobaczymy m.in.: Jam...",
+    "tickets": {
+      "type": "unknown"
+    }
+  },
+  {
+    "id": 70150,
+    "place": {
+      "id": 1131,
+      "subname": "Kameralna",
+      "name": "Wejherowskie Centrum Kultury"
+    },
+    "endDate": "2020-01-07T20:15:00+0100",
+    "name": "Futro z misia",
+    "urls": {
+      "www": "http://wck.org.pl/kalendarium/opis/5160-futro-z-misia.html"
+    },
+    "attachments": [
+      {
+        "fileName": "http://wck.org.pl/images/main/i6k8P8C440P0g1o507d6n2s44399k0u7.jpg"
+      }
+    ],
+    "descLong": "Ekipa kultowej komedii „Chłopaki nie płaczą”: Michał Milowicz, Cezary Pazura, Edward Lubaszenko, Mirosław Zbrojewicz, Bohdan Łazuka i Olaf Lubaszenko, powraca ! Plejada gwiazd w sensacyjnie śmiesznej komedii o przekręcie prawie doskonałym. Sławomir Zapała w brawurowej roli romantyka, który w imię uczucia do kochającej luksusy niewiasty, trafia w samo serce gangsterskich porachunków. Boss podhalańskiej mafii, o wiele mówiącej ksywie Nerwowy, jest wściekły. To akurat w jego przypadku normalne, bo facet z natury nie jest oazą spokoju, ale tym razem ma naprawdę dobry powód. Jego ludzie podczas brawurowej akcji ukradli z komisariatu w Tczewie 120 kilogramów ziołowej herbatki. Po cholerę gangsterom ziołowa herbatka? No właśnie. W policyjnym magazynie miała być marihuana, ale ktoś ubiegł zakopiańskich zakapiorów i zwiał z towarem. Całej sprawie bacznie przyglądają się agenci Dzik i Żubr z CBŚ, którzy podejrzewają przekręt na wojewódzką skalę. Tymczasem na Pomorzu ktoś handluje doskonałej jakości „trawką”…...",
+    "categoryId": 1,
+    "startDate": "2020-01-07T18:15:00+0100",
+    "organizer": {
+      "id": 156,
+      "designation": "Wejherowskie Centrum Kultury"
+    },
+    "active": 1,
+    "descShort": "Ekipa kultowej komedii „Chłopaki nie płaczą”: Michał Milowicz, Cezary Pazura, Edward Lubaszenko, Mirosław Zbrojewicz, Bohdan Łazuka i Olaf Lubaszenko, powraca ! Plejada gwiazd w sensacyjnie śmiesznej komedii o przekręcie prawie doskonały...",
+    "tickets": {
+      "type": "unknown"
+    }
+  },
+  {
+    "id": 64141,
+    "place": {
+      "id": 6,
+      "subname": "Dom Sztuki",
+      "name": "Gdański Archipelag Kultury"
+    },
+    "endDate": "2020-01-07T20:30:00+0100",
+    "name": "TRAFIC 2 (12-15 lat) I TANIEC WSPÓŁCZESNY, MODERN, UNDERGROUND, JAZZ",
+    "urls": {
+      "www": "http://gak.gda.pl/domsztuki"
+    },
+    "attachments": [
+      {
+        "fileName": "http://gak.gda.pl/sites/default/files/styles/big_1000w/public/Galeria/Grafik taneczny _8.png"
+      }
+    ],
+    "descLong": "<p><b>Zapraszamy na zajęcia taneczne z Blitz i Trafic we wtorki!</b></p><p><b>Wtorek: </b></p><p>16:15-17:15 TRAFIC  NEO ( 9-12 lat )</p><p>17:15-18:30 – BLITZ KIDS ( 12-15 lat )</p><p>18:30 –19:45 TRAFIC 2 ( 12- 15 lat )</p><p>19:45-21:00 -TRAFIC ( 16- 19 lat )</p><p><b>***</b></p><p><b>Formacje taneczne BLITZ</b>  (hip hop, street dance, house, hip hop oldschool)</p><p><b>Formacje taneczne TRAFIC </b>(tańc współczesny, modern, underground, jazz)</p><p>O przynależności tancerza do konkretnej grupy decyduje instruktor Agnieszka Humięcka</p><p>Treningi 2 razy w tygodniu  (plan zajeć w galerii poniżej)</p><p>Zajęcia: Dom  Sztuki GAK, ul. Stryjewskiego 25 Gdańsk-Stogi</p><p>FB: https://www.facebook.com/BLITZ-crew-144948512270599/</p>",
+    "categoryId": 69,
+    "startDate": "2020-01-07T18:30:00+0100",
+    "organizer": {
+      "id": 5,
+      "designation": "Gdański Archipelag Kultury"
+    },
+    "active": 1,
+    "descShort": "Zapraszamy na zajęcia taneczne z Blitz i Trafic we wtorki!Wtorek: 16:15-17:15 TRAFIC  NEO ( 9-12 lat )17:15-18:30 – BLITZ KIDS ( 12-15 lat )18:30 –19:45 TRAFIC 2 ( 12- 15 lat )19:45-21:00 -TRAFIC ( 16- 19 lat )***Formacje taneczne BLITZ  (hip...",
+    "tickets": {
+      "type": "unknown"
+    }
+  },
+  {
+    "id": 68552,
+    "place": {
+      "id": 14,
+      "subname": "Projektornia",
+      "name": "Gdański Archipelag Kultury"
+    },
+    "endDate": "2020-01-07T23:59:59+0100",
+    "name": "TANIEC WSPÓŁCZESNY",
+    "urls": {
+      "www": "http://projektornia.art.pl"
+    },
+    "attachments": [
+      {
+        "fileName": "http://gak.gda.pl/sites/default/files/styles/big_1000w/public/Galeria/33413529_1951702688197796_4510526138308624384_o_0.jpg"
+      }
+    ],
+    "descLong": "<p>Zajęcia ruchowe skierowane do uczennic szkół podstawowych, podczas których będą rozwijały swoje zdolności i umiejętności taneczne. W trakcie całorocznych zajęć uczestniczki poznają podstawowe elementy tańca współczesnego z uwzględnieniem odpowiedniej techniki. Nauczą się improwizacji, przekazywania emocji oraz interakcji z drugą osobą/grupą w tańcu. Będą trenowały plastykę ruchu poprzez wprowadzenie izolacji do tańca, a także pamięć ucząc się choreografii. Zajęcia rozpoczynają się od października, dwa razy w tygodniu po 60 minut, wtorek i czwartek, godz. 18:45-19:45.  Koszt: 65 zł za miesiąc; 32,50zł jeden raz w tygodniu;  15 zł za jedne zajęcia.</p><p> </p><p><b>Instruktorka: Karolina Piskorowska</b> - Swoją przygodę z tańcem rozpoczęła 9 lat temu, ukończyła kurs Instruktora Tańca Nowoczesnego. Miała do czynienia praktycznie z wszystkimi stylami tańca nowoczesnego, jednak jak sama mówi jej serce zdecydowanie skradł taniec współczesny. Pomimo tego,  że przez cały czas rozwija swoje umiejętności, pragnie również zarazić swoją pasją młodych tancerzy. Oprócz żmudnej pracy nad techniką, na zajęciach nie brakuje różnorodnych choreografii, zabaw i improwizacji tanecznych.</p><p> </p><p>Zapisy:<br/>Projektornia Gdański Archipelag Kultury<br/>ul. Dworska 29a<br/>tel. 58 343 46 91<br/>e-mail: projektornia@gak.gda.pl</p>",
+    "categoryId": 69,
+    "startDate": "2020-01-07T18:45:00+0100",
+    "organizer": {
+      "id": 5,
+      "designation": "Gdański Archipelag Kultury"
+    },
+    "active": 1,
+    "descShort": "Zajęcia ruchowe skierowane do uczennic szkół podstawowych, podczas których będą rozwijały swoje zdolności i umiejętności taneczne. W trakcie całorocznych zajęć uczestniczki poznają podstawowe elementy tańca współczesnego z uwzględni...",
+    "tickets": {
+      "type": "unknown"
+    }
+  },
+  {
+    "id": 64997,
+    "place": {
+      "id": 6,
+      "subname": "Dom Sztuki",
+      "name": "Gdański Archipelag Kultury"
+    },
+    "endDate": "2020-01-07T21:00:00+0100",
+    "name": "Stretching w Domu Sztuki GAK",
+    "urls": {
+      "www": "http://gak.gda.pl/domsztuki"
+    },
+    "attachments": [
+      {
+        "fileName": "http://gak.gda.pl/sites/default/files/styles/big_1000w/public/Galeria/3.png"
+      }
+    ],
+    "descLong": "<p><b>STRETCHING W DOMU SZTUKI GAK</b></p><p><b>Terminy:</b> wtorki oraz czwartki/godz. 19:00.</p><p><b>wiek uczestnika:</b> od 18 lat</p><p><b> opłata miesięczna</b>: 90 zł</p><p><b>Zajecia startują 17 wrzesnia!</b></p>",
+    "categoryId": 77,
+    "startDate": "2020-01-07T19:00:00+0100",
+    "organizer": {
+      "id": 5,
+      "designation": "Gdański Archipelag Kultury"
+    },
+    "active": 1,
+    "descShort": "STRETCHING W DOMU SZTUKI GAKTerminy: wtorki oraz czwartki/godz. 19:00.wiek uczestnika: od 18 lat opłata miesięczna: 90 złZajecia startują 17 wrzesnia!",
+    "tickets": {
+      "type": "unknown"
+    }
+  },
+  {
+    "id": 70113,
+    "place": {
+      "id": 235,
+      "subname": "Teatr w Oknie",
+      "name": "Gdański Teatr Szekspirowski"
+    },
+    "endDate": "2020-01-07T21:00:00+0100",
+    "name": "Impro Teatralne – warsztaty | TwO",
+    "urls": {
+      "www": "https://teatrszekspirowski.pl/wydarzenia/impro-teatralne-warsztaty-two/"
+    },
+    "attachments": [],
+    "descLong": "<h3>Impro Teatralne – warsztaty<br/>wtorki (7, 12, 21, 28 stycznia 2020), godz. 19:00 - 21:00 (zajęcia cykliczne)<br/>Zajęcia prowadzi: Leszek Ludwicki</h3><p>Czym jest impro?<br/>To sztuka tworzenia scen, a nawet i całych spektakli komediowych na żywo, bez scenariusza, ale również i takich poruszających emocjonalnie.</p><p>Dla kogowarsztat?<br/>Dla każdego kto chce poznać sztukę improwizacji od kuchni,z doświadczeniem dramatycznym i dla tych bez żadnego doświadczenia scenicznego.<br/>Czego nauczysz się na zajęciach?<br/>-podstaw improwizacji teatralnej<br/>-pracy scenicznej<br/>-poznasz i rozwiniesz swoją kreatywność<br/>-gier improwizowanych i ich reguł, które leżą u podstaw metodologii wybitnego nauczyciela teatru Keith’a Johnstone’a<br/>-rozwiniesz umiejętności miękkie, które przydają się również w życiu codziennym po za sceną.<br/>Na koniec jeśli zechcesz to wystąpisz w spektaklu krótkich form improwizowanych.</p><p>Co dostajesz?<br/>Cotygodniowe zajęcia. Pozytywnie spędzony czas, w przyjaznej atmosferze, kupę śmiechu i potencjalnie nowych odjechanych znajomych. Naukę w najefektywniejszej formie przyswajania, czyli przyjemnej zabawy.</p><p>W Stanach zajęcia z impro są bardzo cenione, kursy improwizacji przechodzi wielu scenarzystów, komików, stand-uperów, aktorówi reżyserów, o YouTuberach nam nie wiadomo, ale na pewno może pomóc \\;).</p><p>Prowadzi:<br/>Leszek Ludwicki - Improwizator, Aktor, Ex-Tancerz,Teoretyk Teatru. Od 12 lat związany z estradą , 9 lat temu zaczął podróż teatralną, zaś od 5 lat działa jako aktywny improwizator. Od 4 lat w zespole Teatru Korkoro. Doświadczenie zbierał w Polsce i Europie u boku doskonałych trenerów, aktorów i reżyserów z całego świata. Laureat i stały bywalecfestiwali Improwizacji w całej Polsce. Występuje regularnie w grupach No iFajnie - Teatr Impro, L et S DUET, exMOVIEmy</p><p>Info: leszek.ludwicki@korkoro.pl</p><p>Inwestycja:<br/>200 zł/miesiąc<br/>800zł/5 miesięcy (płatność z góry)</p>",
+    "categoryId": 19,
+    "startDate": "2020-01-07T19:00:00+0100",
+    "organizer": {
+      "id": 56,
+      "designation": "Gdański Teatr Szekspirowski"
+    },
+    "active": 1,
+    "descShort": "Impro Teatralne – warsztatywtorki (7, 12, 21, 28 stycznia 2020), godz. 19:00 - 21:00 (zajęcia cykliczne)Zajęcia prowadzi: Leszek LudwickiCzym jest impro?To sztuka tworzenia scen, a nawet i całych spektakli komediowych na żywo, bez scenariusza, ...",
+    "tickets": {
+      "type": "unknown"
+    }
+  },
+  {
+    "id": 64184,
+    "place": {
+      "id": 6,
+      "subname": "Dom Sztuki",
+      "name": "Gdański Archipelag Kultury"
+    },
+    "endDate": "2020-01-07T21:45:00+0100",
+    "name": "Solo I TANIEC WSPÓŁCZESNY, MODERN, UNDERGROUND, JAZZ",
+    "urls": {
+      "www": "http://gak.gda.pl/domsztuki"
+    },
+    "attachments": [
+      {
+        "fileName": "http://gak.gda.pl/sites/default/files/styles/big_1000w/public/Galeria/2_8.png"
+      }
+    ],
+    "descLong": "<p><b>Zapraszamy na zajęcia taneczne z Blitz i Trafic we wtorki!</b></p><p><b>Wtorek: </b></p><p>16:15-17:15 TRAFIC NEO (9-12 lat)</p><p>17:15-18:30 – BLITZ KIDS (12-15 lat)</p><p>18:30–19:45 TRAFIC 2 (12-15 lat)</p><p>19:45-20:30 soliści taniec współczesny</p><p><b>***</b></p><p><b>Formacje taneczne BLITZ</b>  (hip hop, street dance, house, hip hop oldschool)</p><p><b>Formacje taneczne TRAFIC </b>(tańc współczesny, modern, underground, jazz)</p><p>O przynależności tancerza do konkretnej grupy decyduje instruktor Agnieszka Humięcka</p><p>Treningi 2 razy w tygodniu  (plan zajeć w galerii poniżej)</p><p>Zajęcia: Dom  Sztuki GAK, ul. Stryjewskiego 25 Gdańsk-Stogi</p><p>FB: https://www.facebook.com/BLITZ-crew-144948512270599/</p>",
+    "categoryId": 69,
+    "startDate": "2020-01-07T19:45:00+0100",
+    "organizer": {
+      "id": 5,
+      "designation": "Gdański Archipelag Kultury"
+    },
+    "active": 1,
+    "descShort": "Zapraszamy na zajęcia taneczne z Blitz i Trafic we wtorki!Wtorek: 16:15-17:15 TRAFIC NEO (9-12 lat)17:15-18:30 – BLITZ KIDS (12-15 lat)18:30–19:45 TRAFIC 2 (12-15 lat)19:45-20:30 soliści taniec współczesny***Formacje taneczne BLITZ  (hip h...",
+    "tickets": {
+      "type": "unknown"
+    }
+  },
+  {
+    "id": 67113,
+    "place": {
+      "id": 6,
+      "subname": "Dom Sztuki",
+      "name": "Gdański Archipelag Kultury"
+    },
+    "endDate": "2020-01-07T21:45:00+0100",
+    "name": "TRAFIC (16-19 lat) I TANIEC WSPÓŁCZESNY, MODERN, UNDERGROUND, JAZZ",
+    "urls": {
+      "www": "http://gak.gda.pl/domsztuki"
+    },
+    "attachments": [
+      {
+        "fileName": "http://gak.gda.pl/sites/default/files/styles/big_1000w/public/Galeria/Grafik taneczny _9.png"
+      }
+    ],
+    "descLong": "<p><b>Zapraszamy na zajęcia taneczne z Blitz i Trafic we wtorki!</b></p><p>16:15-17:15 TRAFIC  NEO ( 9-12 lat )</p><p>17:15-18:30 – BLITZ KIDS ( 12-15 lat )</p><p>18:30 –19:45 TRAFIC 2 ( 12- 15 lat )</p><p>19:45-21:00 -TRAFIC ( 16- 19 lat )</p><p><b>***</b></p><p><b>Formacje taneczne BLITZ</b>  (hip hop, street dance, house, hip hop oldschool)</p><p><b>Formacje taneczne TRAFIC </b>(tańc współczesny, modern, underground, jazz)</p><p>O przynależności tancerza do konkretnej grupy decyduje instruktor Agnieszka Humięcka</p><p>Treningi 2 razy w tygodniu  (plan zajeć w galerii poniżej)</p><p>Zajęcia: Dom  Sztuki GAK, ul. Stryjewskiego 25 Gdańsk-Stogi</p><p>FB: https://www.facebook.com/BLITZ-crew-144948512270599/</p>",
+    "categoryId": 69,
+    "startDate": "2020-01-07T19:45:00+0100",
+    "organizer": {
+      "id": 5,
+      "designation": "Gdański Archipelag Kultury"
+    },
+    "active": 1,
+    "descShort": "Zapraszamy na zajęcia taneczne z Blitz i Trafic we wtorki!16:15-17:15 TRAFIC  NEO ( 9-12 lat )17:15-18:30 – BLITZ KIDS ( 12-15 lat )18:30 –19:45 TRAFIC 2 ( 12- 15 lat )19:45-21:00 -TRAFIC ( 16- 19 lat )***Formacje taneczne BLITZ  (hip hop, str...",
+    "tickets": {
+      "type": "unknown"
+    }
+  },
+  {
+    "id": 65080,
+    "place": {
+      "id": 6,
+      "subname": "Dom Sztuki",
+      "name": "Gdański Archipelag Kultury"
+    },
+    "endDate": "2020-01-07T22:00:00+0100",
+    "name": "Fitness w Domu Sztuki GAK",
+    "urls": {
+      "www": "http://gak.gda.pl/domsztuki"
+    },
+    "attachments": [
+      {
+        "fileName": "http://gak.gda.pl/sites/default/files/styles/big_1000w/public/Galeria/2_21.png"
+      }
+    ],
+    "descLong": "<p><b>FITNESS W DOMU SZTUKI GAK</b></p><p><b>Terminy:</b> wtorki oraz czwartki/godz. 19:00.</p><p><b>wiek uczestnika:</b> od 18 lat</p><p><b>opłata miesięczna</b>: 90 zł</p><p><b>Zajecia startują 17 wrzesnia!</b></p>",
+    "categoryId": 77,
+    "startDate": "2020-01-07T20:00:00+0100",
+    "organizer": {
+      "id": 5,
+      "designation": "Gdański Archipelag Kultury"
+    },
+    "active": 1,
+    "descShort": "FITNESS W DOMU SZTUKI GAKTerminy: wtorki oraz czwartki/godz. 19:00.wiek uczestnika: od 18 latopłata miesięczna: 90 złZajecia startują 17 wrzesnia!",
+    "tickets": {
+      "type": "unknown"
+    }
+  },
+  {
+    "id": 70173,
+    "place": {
+      "id": 1132,
+      "subname": "Główna",
+      "name": "Wejherowskie Centrum Kultury"
+    },
+    "endDate": "2020-01-07T22:30:00+0100",
+    "name": "Koty 2D napisy",
+    "urls": {
+      "www": "http://wck.org.pl/kalendarium/opis/5166-koty-2d-napisy.html"
+    },
+    "attachments": [
+      {
+        "fileName": "http://wck.org.pl/images/main/72s1A4C7g020T1u59757t3B7X0m1Z906.jpg"
+      }
+    ],
+    "descLong": "Laureat Oscara® Tom Hooper („Les Misérables. Nędznicy”, „Dziewczyna z portretu”, „Jak zostać królem”) przedstawia zapierającą dech w piersiach filmową wersję kultowego musicalu Andrew Lloyda Webbera. W filmie zobaczymy m.in.: Jamesa Cordena, Judi Dench, Jasona Derulo, Idrisa Elbę, Jennifer Hudson, Iana McKellena, Taylor Swift oraz Rebel Wilson, a także główną solistkę Royal Ballet – Franceskę Hayward w jej ekranowym debiucie. W filmie usłyszymy ikoniczną muzykę Lloyda Webbera, na ekranie zobaczymy światowej klasy tancerzy, którzy pracowali pod dyrekcją wyróżnionego nagrodą Tony choreografa – Andy’ego Blankenbuehlera. Filmowa wersja musicalu to ukłon w stronę nowej generacji – spektakularne sceny, niezwykła scenografia oraz style taneczne – od baletu po taniec współczesny, od hip-hopu po jazz, od tapu po street-dance. „Koty” to jeden z najdłużej wystawianych musicali w historii West Endu i Broadwayu. Przedstawienie zadebiutowało na deskach New London Theatre w 1981 roku, gdzie grano je przez 21 lat. Wielokrotnie nagradzane, otrzymało m.in. nagrodę Oliviera oraz Evening Standard dla najlepszego musicalu. W 1983 roku broadwayowska produkcja otrzymała 7 nagród Tony, w tym dla najlepszego musicalu. Na Broadwayu sztuka święciła triumfy przez 18 lat! Musical wystawiono w ponad 50 krajach, w 19 językach. Szacuje się, że sceniczną wersję obejrzało dotąd ponad 81 milionów ludzi. TWÓRCY FILMU: Reżyseria: Tom Hooper Scenariusz: Lee Hall, Tom Hooper Na podstawie poezji T.S. Eliota i musicalu „Cats” Andrew Lloyda Webbera Produkcja: Debra Hayward, Tim Bevan, Eric Fellner, Tom Hooper Producent wykonawczy: Andrew Lloyd Webber, Steven Spielberg, Angela Morrison, Jo Burn...",
+    "categoryId": 1,
+    "startDate": "2020-01-07T20:30:00+0100",
+    "organizer": {
+      "id": 156,
+      "designation": "Wejherowskie Centrum Kultury"
+    },
+    "active": 1,
+    "descShort": "Laureat Oscara® Tom Hooper („Les Misérables. Nędznicy”, „Dziewczyna z portretu”, „Jak zostać królem”) przedstawia zapierającą dech w piersiach filmową wersję kultowego musicalu Andrew Lloyda Webbera. W filmie zobaczymy m.in.: Jam...",
+    "tickets": {
+      "type": "unknown"
+    }
+  },
+  {
+    "id": 65764,
+    "place": {
+      "id": 13,
+      "subname": "Wyspa Skarbów",
+      "name": "Gdański Archipelag Kultury"
+    },
+    "endDate": "2020-01-08T11:05:00+0100",
+    "name": "Gimnastyka prozdrowotna",
+    "urls": {
+      "www": "http://wyspaskarbow.gak.gda.pl"
+    },
+    "attachments": [],
+    "descLong": "<p><b>Gimnastyka prozdrowotna dla kobiet 50 +</b></p><p>Zajęcia prozdrowotne i uelastyczniające dla kobiet 50+.</p><p><b>Grupa wiekowa</b>: Kobiety 50+<br/><b>Cena</b>: </p><p>20 zł – pojedyncze zajęcia,<br/>70 zł - miesiąc (1x w tygodniu)<br/>120 zł - miesiąc (2x w tygodniu)<br/><b>Częstotliwość zajęć</b>: 1 raz lub 2 razy w tygodniu, 60 minut<br/><b>ILOŚĆ MIEJSC OGRANICZONA!</b></p><p><b>PROWADZENIE - Ola Kloska</b>. Z tańcem związana od 7 roku życia, uczestniczka wielu kursów i warsztatów tanecznych - początkowo tańce towarzyskie, narodowe. W 2005 roku poznała reggaeton, najpierw jako styl muzyczny, a trzy lata później na parkiecie. Miłość do reggaetonu przerodziła się w zainteresowanie kulturą krajów Ameryki Środkowej i Południowej i poznawanie innych stylów: salsa, bachata, dancehall, a także sexy dance, afro dance czy hip-hop. Program ZUMBA®FITNESS odkryła w 2010 roku. Połączenie tańca, fitnessu i gorących rytmów stało się jej największą pasją i sposobem na życie. Od kwietnia 2013 roku jest licencjonowaną instruktorką ZUMBA®FITNESS. Swoją pasją pragnie zarażać innych, pokazując jednocześnie, że trening nie musi być nudny, a ćwicząc możemy poczuć się jak na imprezie :)</p><p>Zapisy:</p><p><b>„Wyspa Skarbów” Gdańskiego Archipelagu Kultury</b><br/>ul. Turystyczna 3<br/>Tel: 58 323 91 15 (w dni robocze od godz. 10:00 do 20:00)<br/>e-mail: wyspaskarbow@gak.gda.pl</p>",
+    "categoryId": 77,
+    "startDate": "2020-01-08T09:05:00+0100",
+    "organizer": {
+      "id": 5,
+      "designation": "Gdański Archipelag Kultury"
+    },
+    "active": 1,
+    "descShort": "Gimnastyka prozdrowotna dla kobiet 50 +Zajęcia prozdrowotne i uelastyczniające dla kobiet 50+.Grupa wiekowa: Kobiety 50+Cena: 20 zł – pojedyncze zajęcia,70 zł - miesiąc (1x w tygodniu)120 zł - miesiąc (2x w tygodniu)Częstotliwość zajęć...",
+    "tickets": {
+      "type": "unknown"
+    }
+  },
+  {
+    "id": 69622,
+    "place": {
+      "id": 1,
+      "name": "Miejski Teatr MINIATURA"
+    },
+    "endDate": "2020-01-08T12:00:00+0100",
+    "name": "Baltic. Pies na krze",
+    "urls": {
+      "www": "http://www.teatrminiatura.pl/pl/repertuar/detail/206/baltic-pies-na-krze/",
+      "tickets": "http://www.teatrminiatura.pl/pl/bilety/rezerwacje-indywidualne/"
+    },
+    "attachments": [
+      {
+        "fileName": "http://www.teatrminiatura.pl/media/repertoire/baltic_fotPiotr_Pedziszewski8.jpg"
+      }
+    ],
+    "descLong": "<p>na podstawie książki \"Baltic. Pies, który płynął na krze\" Barbary Gawryluk</p>\n<p>adaptacja i reżyseria: <b>Romuald Wicza-Pokojski</b><br/>scenografia: <b>Mariusz Waras</b><br/>muzyka: <b>Michał Jacaszek</b><br/>asystent reżysera: <b>Michał Derlatka</b></p>\n<p>inspicjent: <b>Tomasz Okęcki</b></p>\n<p>obsada<br/>I osoba z załogi |<b> Jolanta Darewicz<br/></b>Pan Adam |<b> Jacek Gierczak<br/></b>II Oficer |<b> Edyta Janusz-Ehrlich/Wioleta Karpowicz<br/></b>Rzeczniczka |<b> Jadwiga Sankowska<br/></b>II osoba z załogi | <b>Joanna Tomasik</b><br/>Kapitan | <b>Andrzej Żak</b></p>\n<p><br/>Spektakl dla dzieci w wieku: <b>od 6 lat<br/></b><br/>Czas trwania spektaklu:<b> 1 godzina 10 minut z przerwą<br/><br/></b>Prapremiera: <b>16 grudnia 2012</b></p>\n<p><b><br/></b>Dziękujemy za pomoc i życzliwe przyjęcie <b>Morskiemu Instytutowi Rybackiemu – Państwowemu Instytutowi Badawczemu</b>, pani Ewie Baradziej-Krzyżankowskiej, Adamowi Buczyńskiemu oraz całej załodze R/V Baltica.<br/><br/>Dziękujemy również <b>Oddziałowi Morskiemu IMGW-PIB w Gdyni</b> za udostępnienie filmu z akcji ratunkowej.<br/><b><br/></b></p>\n<p><b>Spektakl brał udział w 19. Ogólnopolskim Konkursie na Wystawienie Polskiej Sztuki Współczesnej</b>.</p>",
+    "categoryId": 19,
+    "startDate": "2020-01-08T10:00:00+0100",
+    "organizer": {
+      "id": 2,
+      "designation": "Miejski Teatr MINIATURA"
+    },
+    "active": 1,
+    "descShort": "na podstawie książki \"Baltic. Pies, który płynął na krze\" Barbary Gawryluk\nadaptacja i reżyseria: Romuald Wicza-Pokojskiscenografia: Mariusz Warasmuzyka: Michał Jacaszekasystent reżysera: Michał Derlatka\ninspicjent: Tomasz Okęcki\nobsadaI o...",
+    "tickets": {
+      "type": "tickets",
+      "startTicket": "14",
+      "endTicket": "30"
+    }
+  },
+  {
+    "id": 70058,
+    "place": {
+      "id": 29,
+      "name": "Instytut Kultury Miejskiej"
+    },
+    "endDate": "2020-01-08T13:00:00+0100",
+    "name": "Gdańskie Miniatury | Budujemy nowoczesność &#8211; śladami odbudowy Gdańska",
+    "urls": {
+      "www": "http://ikm.gda.pl/wydarzenie/gdanskie-miniatury-budujemy-nowoczesnosc-sladami-odbudowy-gdanska/"
+    },
+    "attachments": [],
+    "descLong": "Gdańskie Miniatury | Budujemy nowoczesność - śladami odbudowy Gdańska. Odbudowa gdańskich zabytków\n\nGdańsk podczas II Wojny Światowej został doszczętnie zrujnowany. Niemożliwa była odbudowa wszystkich budynków i ulic. Mimo to podjęto niebywały trud, by przywrócić blask i oryginalny wygląd najważniejszych gdańskich budowli. Drugi spacer z cyklu „Gdańskie Miniatury” poprowadzi nas do tych obiektów, których historyczny charakter wiernie zachowano podczas odbudowy. Uwagę skupimy między innymi na odbudowie potężnej Bazyliki Mariackiej, Ratusza Głównego Miasta czy Złotej Kamieniczki. Ile trwało przywrócenie blasku tym wyjątkowym budynkom? Z jakimi trudnościami się zmagano? Tego dowiemy się podczas styczniowych spacerów architektoniczno – historycznych, które poprowadzi doświadczona przewodniczka - Ewa Czerwińska.\n\n<strong>Spacery dla szkół i grup zorganizowanych:</strong>\n8 stycznia, godz. 10.00, 11.30 i 13.00, Gdańskie Miniatury – Odbudowa gdańskich zabytków| gra miejska i spacer dla szkół | zapisy <a href=\"http://gdanskieminiatury.ikm.gda.pl/zapisy-na-spacer/\">http://gdanskieminiatury.ikm.gda.pl/zapisy-na-spacer/</a>",
+    "categoryId": 96,
+    "startDate": "2020-01-08T10:00:00+0100",
+    "organizer": {
+      "id": 13,
+      "designation": "Instytut Kultury Miejskiej"
+    },
+    "active": 1,
+    "descShort": "Gdańskie Miniatury | Budujemy nowoczesność - śladami odbudowy Gdańska. Odbudowa gdańskich zabytków\n\nGdańsk podczas II Wojny Światowej został doszczętnie zrujnowany. Niemożliwa była odbudowa wszystkich budynków i ulic. Mimo to podjęto n...",
+    "tickets": {
+      "type": "unknown"
+    }
+  },
+  {
+    "id": 70130,
+    "place": {
+      "id": 1132,
+      "subname": "Główna",
+      "name": "Wejherowskie Centrum Kultury"
+    },
+    "endDate": "2020-01-09T12:00:00+0100",
+    "name": "KOPCIUSZEK",
+    "urls": {
+      "www": "http://wck.org.pl/kalendarium/opis/4857-kopciuszek-balet.html"
+    },
+    "attachments": [
+      {
+        "fileName": "http://wck.org.pl/images/main/94T4D1q4i0L0x1Y5J4K280l9M8s9E7s7.jpg"
+      }
+    ],
+    "descLong": "(75 min) - Sergei Prokofiev - Elzbieta Czeszejko i Anna Czeszejko-Gromadka - Sabina Czupryńska - Jacek Rogalewski - Mateusz Czech, Radosław Bach Baletowa wersja znanej baśni o Kopciuszku, dwóch złośliwych siostrach i okrutnej macosze. Jest to opowieść o skromności i pysze, szlachetności i prostactwie, nagrodzie i karze, opowiedziana w języku tańca klasycznego, gestu i muzyki. Należy od ponad sześćdziesięciu lat do stałego repertuaru baletowego największych scen baletowych świata. Urzeka w niej nie tylko bajkowa atmosfera, wyrazista choreografia, czytelne przesłanie moralne, ale przede wszystkim wspaniała muzyka, współtworząca urokliwy, baśniowy klimat. Jej melodyjność, bogactwo stylistycznych nawiązań do tańców i rosyjskiej muzyki pozostawia niezapomniane wrażenie. Kopciuszek - Zuzanna Cymann, Natalia Zegzuła Siostra złośnica - Maja Jesionowska, Paula Parchem Siostra grymaśnica - Magdalena Świtała, Hanna Przybysz Macocha - Oliwia Base, Weronika Mudlaff Książe - Jakub Michalski, Karol Formela Wróżka - Anna Morga, Daria Rutkowska Mistrz Ceremonii - Daria Rutkowska, Weronika Araszkiewicz Nauczyciel Tańca - Aleksandra Schark, Daria Szulta Myszki - grupa taneczna Baccarki Gwiazdki - Grupy taneczne Baccara Junior i Baccara Dworzanie - Grupy taneczne Baccara Junior i Baccara Myszki - Amelia Paczos, Amelia Treder, Amelia Zielonko, Dominika Dublinowska, Julita Kałwzan, Marta Cilińdż, Zofia Frey, Oliwia Radulska, Oliwia Lietz, Amelia Kożyczkowska, Oliwia Buchwald, Oliwia Ambroziak, Katarzyna Rojewska, Patrycja Legutko. Dworzanie - Daria Szulta, Martyna Bobkowska, Kinga Maksimuiuk, Agnieszka Araszkiewicz, Weronika Araszkiewicz, Paulina Radtke, Natalia Wasilka, Nikola Wandke, Natalia Klawikowska, Oliwia Gosz, Viktoria Cichy, Małgorzata Voelkner, Vanesa Grzenkowicz, Paulina Szymańska. Gwiazdki - Natalia Zegzuła, Zuzanna Cymann, Oliwia Base, Weronika Mudlaff, Magdalena Świtała, Maja Jesionowska, Hanna Przybysz, Paula Parchem, Anna Morga, Maja Kukowska, Maja Grodzicka, Ewa Odwrot, Wiktoria Gruncholz, Natalia Gruncholz, Klaudia Kochnke, Antonina Kas, Karolina Cholch, Dominika Rompca, Aleksandra Schark, Wiktoria Banel, Vanesa Grzenkowicz, Nicola Domańska...",
+    "categoryId": 19,
+    "startDate": "2020-01-08T11:00:00+0100",
+    "organizer": {
+      "id": 156,
+      "designation": "Wejherowskie Centrum Kultury"
+    },
+    "active": 1,
+    "descShort": "(75 min) - Sergei Prokofiev - Elzbieta Czeszejko i Anna Czeszejko-Gromadka - Sabina Czupryńska - Jacek Rogalewski - Mateusz Czech, Radosław Bach Baletowa wersja znanej baśni o Kopciuszku, dwóch złośliwych siostrach i okrutnej macosze. Jest to o...",
+    "tickets": {
+      "type": "unknown"
+    }
+  },
+  {
+    "id": 70161,
+    "place": {
+      "id": 1131,
+      "subname": "Kameralna",
+      "name": "Wejherowskie Centrum Kultury"
+    },
+    "endDate": "2020-01-08T13:00:00+0100",
+    "name": "Urwis 2D dubbing",
+    "urls": {
+      "www": "http://wck.org.pl/kalendarium/opis/5167-urwis-2d-dubbing.html"
+    },
+    "attachments": [
+      {
+        "fileName": "http://wck.org.pl/images/main/s8h2k1n1M0G0A1p5v7U7t3n7o0d3h5h8.jpg"
+      }
+    ],
+    "descLong": "Porywająca animowana komedia producentów „SHREKA”! Pełna przygód i wyszczekanego humoru opowieść o psie z wyższych sfer, który musi nauczyć się żyć wśród zwykłych ulicznych Burków i Azorów. Jeden prawdziwy przyjaciel wart jest więcej niż cała kiełbasa świata! Przebojowa ścieżka dźwiękowa z nowym utworem samego Snoop Dogga! Urwis od szczeniaka żył w luksusie, nauczony, że na jedno szczeknięcie ma do dyspozycji służbę, miski pełne serdelków i drapanie za uchem. Niestety jego ukochana Pani po długim i szczęśliwym życiu przenosi się do wieczności, a jej spadkobiercy nie lubią czworonogów. Z dnia na dzień rozpieszczony kanapowiec Urwis traci dach nad głową i jedyną bliską osobę. Sam w dzikim, pełnym niebezpieczeństw świecie musi nauczyć się panujących tam reguł: na kogo warknąć, a komu pomerdać, w którym śmietniku szukać smacznych kąsków, a co najważniejsze – jak znaleźć prawdziwego przyjaciela. Trzeba przyznać, że sam sobie nie ułatwia zadania, bo wszystkich wokół traktuje z wyższością i niechęcią. Czeka go więc trudna szkoła życia, dopóki nie zrozumie, że zamiast pokazywać kły lepiej wyciągnąć do innych łapę. Na szczęście spotka na swojej drodze pewną początkującą piosenkarkę, która co prawda mieszkanko ma malutkie, ale serce wielkie. Ten duet będzie prawdziwym przebojem!...",
+    "categoryId": 1,
+    "startDate": "2020-01-08T11:30:00+0100",
+    "organizer": {
+      "id": 156,
+      "designation": "Wejherowskie Centrum Kultury"
+    },
+    "active": 1,
+    "descShort": "Porywająca animowana komedia producentów „SHREKA”! Pełna przygód i wyszczekanego humoru opowieść o psie z wyższych sfer, który musi nauczyć się żyć wśród zwykłych ulicznych Burków i Azorów. Jeden prawdziwy przyjaciel wart jest wi...",
+    "tickets": {
+      "type": "unknown"
+    }
+  },
+  {
+    "id": 49174,
+    "place": {
+      "id": 8,
+      "subname": "Dworek Artura",
+      "name": "Gdański Archipelag Kultury"
+    },
+    "endDate": "2020-01-08T14:00:00+0100",
+    "name": "Nauka gry na perkusji // Młodzież i dorośli",
+    "urls": {
+      "www": "http://stacjaorunia.weebly.com"
+    },
+    "attachments": [],
+    "descLong": "<p>NAUKA GRY NA PERKUSJI - prowadzący Jacek Rezner</p><p>Na perkusji gra od 15 roku życia.</p><p>Koncertował m.in. w Newcastle, Liverpoolu, Kampen, Bergen, Berlinie, Rydze, Lipawie, Tatru, Valmierze, Pradze, Ostrawie.</p><p>Występował na Festiwalach: Liverpool International Festival Of Psychedelia 2016, Soundrive 2015, Offestiwal 2015, Spacefest 2014, Jazz Jantar 2014, Magnetofon 2013</p><p>Uczestnik warsztatów w ramach wymiany Stage Europe Network we Francji prowadzonych przez znanego francuskiego perkusistę Laurenta Piacentino.</p><p>Współpracował z zespołem Enchanted Hunters podczas tworzenia muzyki do filmu „Małe stłuczki”.</p><p>Na co dzień pracownik Stacji Orunia GAK.</p><p>Zajęcia skierowane do osób lubiących rytm, pragnących rozpocząć przygodę z grą na perkusji, jak również do tych o wyższym poziomie wtajemniczenia.</p><p>W programie zajęć:</p><p>Zaznajomienie z instrumentem – przedstawienie szczegółowo elementów składających się na perkusje oraz przedstawienie historii instrumentu. Zapoznanie z technikami gry na perkusji – właściwa technika ułożenia dłoni oraz pracy nadgarstkami. Praca nad właściwym wydobywaniem dźwięków. Zachowanie prawidłowej postawy podczas gry na instrumencie. Stopniowanie dynamiki podczas gry. Kształtowanie samodzielnej pracy nad instrumentem oraz rozwijanie i kształcenie wyobraźni artystycznej.</p><p> </p>",
+    "categoryId": 83,
+    "startDate": "2020-01-08T12:00:00+0100",
+    "organizer": {
+      "id": 5,
+      "designation": "Gdański Archipelag Kultury"
+    },
+    "active": 1,
+    "descShort": "NAUKA GRY NA PERKUSJI - prowadzący Jacek ReznerNa perkusji gra od 15 roku życia.Koncertował m.in. w Newcastle, Liverpoolu, Kampen, Bergen, Berlinie, Rydze, Lipawie, Tatru, Valmierze, Pradze, Ostrawie.Występował na Festiwalach: Liverpool Interna...",
+    "tickets": {
+      "type": "unknown"
+    }
+  },
+  {
+    "id": 68342,
+    "place": {
+      "id": 9,
+      "subname": "Winda",
+      "name": "Gdański Archipelag Kultury"
+    },
+    "endDate": "2020-01-08T14:55:00+0100",
+    "name": "Pianino",
+    "urls": {
+      "www": "http://winda.gda.pl"
+    },
+    "attachments": [],
+    "descLong": "<p>Nauka i doskonalenie gry na pianinie. Zajęcia odbywają się indywidualnie, godziny i daty spotkań można ustalić z prowadzącym.<br/>Prowadząca: Lidia Zhukova<br/>wiek: 6-100 lat<br/>140 zł za miesiąc 60 min w tygodniu lub 2x 30min w tygodniu<br/>pojedyncze zajęcia 35 zł za godzinę lub 17,5 zł za 30 min</p>",
+    "categoryId": 35,
+    "startDate": "2020-01-08T12:55:00+0100",
+    "organizer": {
+      "id": 5,
+      "designation": "Gdański Archipelag Kultury"
+    },
+    "active": 1,
+    "descShort": "Nauka i doskonalenie gry na pianinie. Zajęcia odbywają się indywidualnie, godziny i daty spotkań można ustalić z prowadzącym.Prowadząca: Lidia Zhukovawiek: 6-100 lat140 zł za miesiąc 60 min w tygodniu lub 2x 30min w tygodniupojedyncze zaję...",
+    "tickets": {
+      "type": "free"
+    }
+  },
+  {
+    "id": 65398,
+    "place": {
+      "id": 13,
+      "subname": "Wyspa Skarbów",
+      "name": "Gdański Archipelag Kultury"
+    },
+    "endDate": "2020-01-08T15:15:00+0100",
+    "name": "Nauka gry na gitarze",
+    "urls": {
+      "www": "http://wyspaskarbow.gak.gda.pl"
+    },
+    "attachments": [],
+    "descLong": "<p><b>/ zajęcia indywidualne i grupowe /</b></p><p>Na zajęciach wprowadzimy Was w świat muzyki i dźwięków jakie tworzy instrument. Instruktor stara się uwrażliwić wychowanków na wszelkie otaczające nas dźwięki tworzone przez przyrodę, morze, zwierzęta i urządzenia. Poznacie nuty oraz otrzymacie narzędzia do rozwijania własnej twórczości muzycznej. Nauczycie się podstawowych technik gry na gitarze. (n.p. gra gam, gra appreggio, gra akordowa) oraz koordynacji rąk. Poczujecie jak pracować z muzyką i w jaki sposób o niej myśleć.<br/></p><p><b>Zajęcia indywidualne:<br/>Grupa wiekowa:</b> dzieci 6+ i dorośli<br/><b>Cena:</b> 60 zł – 1 zajęcia, 150 zł – miesiąc<br/><b>Częstotliwość zajęć:</b> 1 raz w tygodniu, 45 minut<br/>ILOŚĆ MIEJSC OGRANICZONA!</p><p><b>Zajęcia grupowe:<br/>Grupa wiekowa:</b> dzieci 6+ i dorośli<br/><b>Cena:</b> 60 zł – 1 zajęcia, 120 zł – miesiąc<br/><b>Częstotliwość zajęć:</b> 1 raz w tygodniu, 45 minut<br/>ILOŚĆ MIEJSC OGRANICZONA!</p><p><b>INSTRUKTOR:</b></p><p><b>Ireneusz Pestka </b>- muzyk, gitarzysta, pedagog. Swoje umiejętności muzyczne zdobywał na uczelniach: słupskiej i bydgoskiej na wydziale - Wychowanie Muzyczne pod okiem takich wykładowców jak Leszek Kułakowski.</p><p>\"Swoje umiejętności muzyczne i nauczycielskie zdobywałem na uczelniach słupskiej i bydgoskiej na kierunku - Wychowanie Muzyczne, pod okiem takich wykładowców jak Leszek Kułakowski.<br/>Jako nauczyciel muzyki pracuję od roku 2003, zdobywając doświadczenie w szkołach podstawowych i gimnazjach Gdańska.<br/>Od kilkunastu lat jestem też instruktorem nauki gry na gitarze, ucząc dzieci i młodzież w Młodzieżowym Domu Kultury w Gdyni i aktualnie w Szkole Muzycznej Yamaha w Gdańsku.<br/>„Wspólne muzykowanie” to idea, która jest realizowana na zajęciach.\"</p><p> Zajęcia gitarowe starają się rozwijać nie tylko techniczne umiejętności gry na instrumencie ale też kształtować poczucie estetyki i wrażliwości poprzez muzykę, biorąc pod uwagę indywidualne predyspozycje uczniów.</p><p>Zapisy:</p><p><b>„Wyspa Skarbów” Gdańskiego Archipelagu Kultury</b><br/>ul. Turystyczna 3<br/>Tel: 58 323 91 15 (w dni robocze od godz. 10:00 do 20:00)<br/>e-mail: wyspaskarbow@gak.gda.pl</p>",
+    "categoryId": 35,
+    "startDate": "2020-01-08T13:15:00+0100",
+    "organizer": {
+      "id": 5,
+      "designation": "Gdański Archipelag Kultury"
+    },
+    "active": 1,
+    "descShort": "/ zajęcia indywidualne i grupowe /Na zajęciach wprowadzimy Was w świat muzyki i dźwięków jakie tworzy instrument. Instruktor stara się uwrażliwić wychowanków na wszelkie otaczające nas dźwięki tworzone przez przyrodę, morze, zwierzęta ...",
+    "tickets": {
+      "type": "unknown"
+    }
+  },
+  {
+    "id": 49025,
+    "place": {
+      "id": 8,
+      "subname": "Dworek Artura",
+      "name": "Gdański Archipelag Kultury"
+    },
+    "endDate": "2020-01-08T17:00:00+0100",
+    "name": "Witraż // od 16 lat",
+    "urls": {
+      "www": "http://stacjaorunia.weebly.com"
+    },
+    "attachments": [],
+    "descLong": "<p>WITRAŻ- prowadzący Andrzej Kapica</p><p>Instruktor z wieloletnim doświadczeniem. Przygodę z witrażami rozpoczął w roku 2001 jako uczestnik Podstawowego Kursu Witrażownictwa, prowadzonego przez znanego gdańskiego witrażystę Grzegorza Zielińskiego w Promocyjnym Klubie Muzycznym MDK na Suchaninie. Nabyte umiejętności doskonalił nieprzerwanie do końca 2003 roku w Pracowni Witraży Grzegorza Zielińskiego, pod okiem właściciela pracowni.</p><p>W roku 2007 został członkiem The Stained Glass Association of America.</p><p>Wielokrotnie prezentował swoje prace na różnych wystawach zarówno w kraju jak i zagranicą między innymi: Wystawa Prac Plastycznych „Tęczowy Most” w Druskiennikach na Litwie, prezentacja prac w ramach wystawy Andrzeja Dudy i Obertasa Żukauskasa pt „Widziane Nie Widzialne” w Galerii Mariackiej w Gdańsku, na zaproszenie Urzędu Miasta Pelplina prezentacja prac witrażowych(lampy) podczas Jarmarku Cysterskiego.</p><p>Ważniejsze prace witrażysty: wykonanie projektu witraży i oświetlenia witrażowego w Kościele NMP Królowej Kościoła w Jantarze.</p><p>Realizowanie zleceń na witraże(lampy, witraży do drzwi) dla klientów w Niemczech, Anglii, Szwecji, USA</p><p>Współpracował z pracowniami artystycznymi m.in. Artystyczna Pracownia Odlewnictwa i Witraży Stanisław Janiszewski</p><p> </p><p> </p>",
+    "categoryId": 83,
+    "startDate": "2020-01-08T15:00:00+0100",
+    "organizer": {
+      "id": 5,
+      "designation": "Gdański Archipelag Kultury"
+    },
+    "active": 1,
+    "descShort": "WITRAŻ- prowadzący Andrzej KapicaInstruktor z wieloletnim doświadczeniem. Przygodę z witrażami rozpoczął w roku 2001 jako uczestnik Podstawowego Kursu Witrażownictwa, prowadzonego przez znanego gdańskiego witrażystę Grzegorza Zielińskiego...",
+    "tickets": {
+      "type": "unknown"
+    }
+  },
+  {
+    "id": 63809,
+    "place": {
+      "id": 8,
+      "subname": "Dworek Artura",
+      "name": "Gdański Archipelag Kultury"
+    },
+    "endDate": "2020-01-08T18:00:00+0100",
+    "name": "Witraż",
+    "urls": {
+      "www": "http://stacjaorunia.weebly.com"
+    },
+    "attachments": [],
+    "descLong": "<p>Zajęcia witrażowe dla dorosłych i młodzieży od 16 lat. Czas trwania kursu wynosi trzy miesiące. Podczas kursu uczestnicy posiądą niepowtarzalną wiedzę jak precyzyjnie pociąć szkło, owinąć szklane elementy miedzianą taśmą oraz połączyć w taki sposób, aby umożliwić ich zalutowanie. Zapewniamy wszystkie niezbędne materiały i narzędzia. Prace wykonane przez uczestników podczas kursu pozostają ich własnością.  Prowadzący: Andrzej Kapica, instruktor z wieloletnim doświadczeniem. Przygodę z witrażami rozpoczął w roku 2001 jako uczestnik Podstawowego Kursu Witrażownictwa, prowadzonego przez znanego gdańskiego witrażystę Grzegorza Zielińskiego w Promocyjnym Klubie Muzycznym MDK na Suchaninie. Nabyte umiejętności doskonalił nieprzerwanie do końca 2003 roku w Pracowni Witraży Grzegorza Zielińskiego, pod okiem właściciela pracowni.W roku 2007 został członkiem The Stained Glass Association of America. Wielokrotnie prezentował swoje prace na różnych wystawach zarówno w kraju jak i zagranicą między innymi: Wystawa Prac Plastycznych „Tęczowy Most” w Druskiennikach na Litwie, prezentacja prac w ramach wystawy Andrzeja Dudy i Obertasa Żukauskasa pt „Widziane Nie Widzialne” w Galerii Mariackiej w Gdańsku, na zaproszenie Urzędu Miasta Pelplina prezentacja prac witrażowych(lampy) podczas Jarmarku Cysterskiego.Ważniejsze prace witrażysty: wykonanie projektu witraży i oświetlenia witrażowego w Kościele NMP Królowej Kościoła w Jantarze.<br/><br/><br/><br/><br/></p>",
+    "categoryId": 51,
+    "startDate": "2020-01-08T15:00:00+0100",
+    "organizer": {
+      "id": 5,
+      "designation": "Gdański Archipelag Kultury"
+    },
+    "active": 1,
+    "descShort": "Zajęcia witrażowe dla dorosłych i młodzieży od 16 lat. Czas trwania kursu wynosi trzy miesiące. Podczas kursu uczestnicy posiądą niepowtarzalną wiedzę jak precyzyjnie pociąć szkło, owinąć szklane elementy miedzianą taśmą oraz połą...",
+    "tickets": {
+      "type": "unknown"
+    }
+  },
+  {
+    "id": 67676,
+    "place": {
+      "id": 9,
+      "subname": "Winda",
+      "name": "Gdański Archipelag Kultury"
+    },
+    "endDate": "2020-01-08T23:59:59+0100",
+    "name": "Rysunek i malarstwo dla dorosłych i seniorów",
+    "urls": {
+      "www": "http://winda.gda.pl"
+    },
+    "attachments": [],
+    "descLong": "<p>Zapoznanie się z technikami tworzenia obrazu. Pomożemy Ci przygotować się do egzaminów na uczelnie artystyczne.<br/>Zajęcia odbywają się w środy od 15:00 do 16:30. Prowadzący: Sebastian Choromański<br/>80 zł za miesiąc<br/>25 zł za jednorazowe zajęcia<br/>18-100 lat</p>",
+    "categoryId": 51,
+    "startDate": "2020-01-08T15:00:00+0100",
+    "organizer": {
+      "id": 5,
+      "designation": "Gdański Archipelag Kultury"
+    },
+    "active": 1,
+    "descShort": "Zapoznanie się z technikami tworzenia obrazu. Pomożemy Ci przygotować się do egzaminów na uczelnie artystyczne.Zajęcia odbywają się w środy od 15:00 do 16:30. Prowadzący: Sebastian Choromański80 zł za miesiąc25 zł za jednorazowe zajęci...",
+    "tickets": {
+      "type": "unknown"
+    }
+  },
+  {
+    "id": 65983,
+    "place": {
+      "id": 10,
+      "subname": "Plama",
+      "name": "Gdański Archipelag Kultury"
+    },
+    "endDate": "2020-01-08T17:00:00+0100",
+    "name": "Ceramika – dzieci (instr. Mikołaj Wyszkowski)",
+    "urls": {
+      "www": "http://plama.art.pl"
+    },
+    "attachments": [],
+    "descLong": "<p>Na zajęciach można wykonać z gliny i wypalić w piecu ceramicznym naczynia i drobne przedmioty artystyczne.</p><p> </p><p>Od stycznia do lipca 2019 roku prowadziłem zajęcia z ceramiki dla dzieci oraz dorosłych w Domu Sztuki GAK na Stogach w Gdańsku. Aktualnie znajduje się na 4 roku rzeźby na Akademii Sztuk Pięknych w Gdańsku. Mój dom od zawsze był przepełniony sztuką, mój Ojciec był nauczycielem rzeźby, malarstwa i grafiki w liceum plastycznym więc atmosfera udzieliła się wszystkim domownikom włącznie ze mną.</p><p> </p><p>Zajęcia będą odbywały się w środy w godzinach: 15.00-17.00.</p><p> </p><p> </p>",
+    "categoryId": 83,
+    "startDate": "2020-01-08T15:00:00+0100",
+    "organizer": {
+      "id": 5,
+      "designation": "Gdański Archipelag Kultury"
+    },
+    "active": 1,
+    "descShort": "Na zajęciach można wykonać z gliny i wypalić w piecu ceramicznym naczynia i drobne przedmioty artystyczne. Od stycznia do lipca 2019 roku prowadziłem zajęcia z ceramiki dla dzieci oraz dorosłych w Domu Sztuki GAK na Stogach w Gdańsku. Aktual...",
+    "tickets": {
+      "type": "unknown"
+    }
+  },
+  {
+    "id": 66016,
+    "place": {
+      "id": 10,
+      "subname": "Plama",
+      "name": "Gdański Archipelag Kultury"
+    },
+    "endDate": "2020-01-08T17:00:00+0100",
+    "name": "Plastyka dla dzieci - klasy I-III (instr. Monika Krause)",
+    "urls": {
+      "www": "http://plama.art.pl"
+    },
+    "attachments": [
+      {
+        "fileName": "http://gak.gda.pl/sites/default/files/styles/big_1000w/public/Galeria/Ferie_plastyka_0.jpg"
+      }
+    ],
+    "descLong": "<p><p>Program zajęć to szeroka edukacja w zakresie plastyki. Różne techniki, podstawowe pojęcia z dziedziny sztuki plastycznej. Atrakcyjna forma spędzania wolnego czasu dająca możliwość rozwoju talentu i nabywania nowych umiejętności.</p><p> </p><p>Zajęcia będą odbywały się w środy w godzinach 15.00-17.00.</p><p> </p><p> </p><p> </p><p> </p><p> </p></p>",
+    "categoryId": 83,
+    "startDate": "2020-01-08T15:00:00+0100",
+    "organizer": {
+      "id": 5,
+      "designation": "Gdański Archipelag Kultury"
+    },
+    "active": 1,
+    "descShort": "Program zajęć to szeroka edukacja w zakresie plastyki. Różne techniki, podstawowe pojęcia z dziedziny sztuki plastycznej. Atrakcyjna forma spędzania wolnego czasu dająca możliwość rozwoju talentu i nabywania nowych umiejętności. Zajęcia...",
+    "tickets": {
+      "type": "unknown"
+    }
+  },
+  {
+    "id": 70142,
+    "place": {
+      "id": 1131,
+      "subname": "Kameralna",
+      "name": "Wejherowskie Centrum Kultury"
+    },
+    "endDate": "2020-01-08T17:35:00+0100",
+    "name": "Gwiezdne wojny: Skywalker. Odrodzenie 2D dubbing",
+    "urls": {
+      "www": "http://wck.org.pl/kalendarium/opis/5144-gwiezdne-wojny-skywalker-odrodzenie-2d-dubbing.html"
+    },
+    "attachments": [
+      {
+        "fileName": "http://wck.org.pl/images/main/78Y2u3z5e0M0h1K5r764s6E9X3g9M7U6.jpg"
+      }
+    ],
+    "descLong": "Lucasfilm i reżyser J.J. Abrams raz jeszcze łączą siły, aby zabrać widzów w spektakularną podróż do odległej galaktyki w filmie Gwiezdne wojny: Skywalker. Odrodzenie. Saga rodziny Skywalkerów dobiega końca. Tego po prostu nie można przegapić! Czym zaskoczą w finale twórcy jednej z najbardziej kultowych serii w historii kina? Jaki będzie finał odwiecznej batalii pomiędzy jasną i ciemną stroną mocy? Ostatnia odsłona kultowej sagi Lucasfilm Gwiezdne wojny: Skywalker. Odrodzenie w kinach od 19 grudnia!...",
+    "categoryId": 1,
+    "startDate": "2020-01-08T15:00:00+0100",
+    "organizer": {
+      "id": 156,
+      "designation": "Wejherowskie Centrum Kultury"
+    },
+    "active": 1,
+    "descShort": "Lucasfilm i reżyser J.J. Abrams raz jeszcze łączą siły, aby zabrać widzów w spektakularną podróż do odległej galaktyki w filmie Gwiezdne wojny: Skywalker. Odrodzenie. Saga rodziny Skywalkerów dobiega końca. Tego po prostu nie można prze...",
+    "tickets": {
+      "type": "unknown"
+    }
+  },
+  {
+    "id": 64227,
+    "place": {
+      "id": 6,
+      "subname": "Dom Sztuki",
+      "name": "Gdański Archipelag Kultury"
+    },
+    "endDate": "2020-01-08T18:00:00+0100",
+    "name": "Soliści/Duety I HIP HOP, STREET DANCE, HOUSE, HIP HOP OLDSCHOOL",
+    "urls": {
+      "www": "http://gak.gda.pl/domsztuki"
+    },
+    "attachments": [
+      {
+        "fileName": "http://gak.gda.pl/sites/default/files/styles/big_1000w/public/Galeria/2_9.png"
+      }
+    ],
+    "descLong": "<p><b>Zapraszamy na zajęcia taneczne z Blitz i Trafic w środy!</b></p><p><b>Środa: </b></p><p><b>16:00-17:00 Soliści, duety hip hop</b></p><p><b>17:00- 18:30 Soliści, duety taniec współczesny</b></p><p><b>19:30-21:00 - TRAFIC (16-19 lat)</b></p><p><b> </b></p><p><b>***</b></p><p><b>Formacje taneczne BLITZ</b>  (hip hop, street dance, house, hip hop oldschool)</p><p><b>Formacje taneczne TRAFIC </b>(tańc współczesny, modern, underground, jazz)</p><p>O przynależności tancerza do konkretnej grupy decyduje instruktor Agnieszka Humięcka</p><p>Treningi 2 razy w tygodniu  (plan zajeć w galerii poniżej)</p><p>Zajęcia: Dom  Sztuki GAK, ul. Stryjewskiego 25 Gdańsk-Stogi</p><p>FB: https://www.facebook.com/BLITZ-crew-144948512270599/</p>",
+    "categoryId": 69,
+    "startDate": "2020-01-08T16:00:00+0100",
+    "organizer": {
+      "id": 5,
+      "designation": "Gdański Archipelag Kultury"
+    },
+    "active": 1,
+    "descShort": "Zapraszamy na zajęcia taneczne z Blitz i Trafic w środy!Środa: 16:00-17:00 Soliści, duety hip hop17:00- 18:30 Soliści, duety taniec współczesny19:30-21:00 - TRAFIC (16-19 lat) ***Formacje taneczne BLITZ  (hip hop, street dance, house, hip h...",
+    "tickets": {
+      "type": "unknown"
+    }
+  },
+  {
+    "id": 65711,
+    "place": {
+      "id": 13,
+      "subname": "Wyspa Skarbów",
+      "name": "Gdański Archipelag Kultury"
+    },
+    "endDate": "2020-01-08T18:00:00+0100",
+    "name": "Plastyka dla dzieci",
+    "urls": {
+      "www": "http://wyspaskarbow.gak.gda.pl"
+    },
+    "attachments": [],
+    "descLong": "<p>/ zajęcia grupowe / </p><p>Rozwijamy niczym nieskrępowaną dziecięcą fantazję oraz wrażliwość artystyczną poprzez świat sztuki. <br/>Mali artyści pod okiem doświadczonej instruktorki stworzą swoje indywidualne, niepowtarzalne dzieła, jak i otrzymają możliwość wystawy swoich prac. </p><p>Dzieci zetkną się z wielką sztuką (kuratorskie oprowadzanie po aktualnych wystawach galerii „Wyspy Skarbów”), przygotują do udziału w akcjach typu Artystyczne Ferie letnie i zimowe.</p><p><b>Grupa wiekowa</b>: dzieci 5 – 15 lat<br/><b>Cena</b>: 15 zł – 1 zajęcia, 50 zł – miesiąc<br/><b>Częstotliwość zajęć</b>: 1 raz w tygodniu, 90 minut<br/><b>ILOŚĆ MIEJSC OGRANICZONA!</b></p><p><b>PROWADZENIE -  Paulina Llera Arias</b>, Wyspiarka. Ukończyła Liceum Plastyczne w Gdyni Orłowie o profilu Fotografia Artystyczna. <br/>Absolwentka Akademii Sztuk Pięknych w Gdańsku (kierunek-  Edukacja Artystyczna). Swoją zawodową przygodę kontynuowała pracując przez kilka lat w pracowni plastycznej Teatru Miniatura, a od 2005 roku związana jest z Gdańskim Archipelagiem Kultury „Wyspa Skarbów”.</p><p>Zapisy:</p><p><b>„Wyspa Skarbów” Gdańskiego Archipelagu Kultury</b><br/>ul. Turystyczna 3<br/>Tel: 58 323 91 15 (w dni robocze od godz. 10:00 do 20:00)<br/>e-mail: wyspaskarbow@gak.gda.pl</p>",
+    "categoryId": 51,
+    "startDate": "2020-01-08T16:00:00+0100",
+    "organizer": {
+      "id": 5,
+      "designation": "Gdański Archipelag Kultury"
+    },
+    "active": 1,
+    "descShort": "/ zajęcia grupowe / Rozwijamy niczym nieskrępowaną dziecięcą fantazję oraz wrażliwość artystyczną poprzez świat sztuki. Mali artyści pod okiem doświadczonej instruktorki stworzą swoje indywidualne, niepowtarzalne dzieła, jak i otrzymaj...",
+    "tickets": {
+      "type": "unknown"
+    }
+  },
+  {
+    "id": 70162,
+    "place": {
+      "id": 1132,
+      "subname": "Główna",
+      "name": "Wejherowskie Centrum Kultury"
+    },
+    "endDate": "2020-01-08T17:30:00+0100",
+    "name": "Urwis 2D dubbing",
+    "urls": {
+      "www": "http://wck.org.pl/kalendarium/opis/5167-urwis-2d-dubbing.html"
+    },
+    "attachments": [
+      {
+        "fileName": "http://wck.org.pl/images/main/s8h2k1n1M0G0A1p5v7U7t3n7o0d3h5h8.jpg"
+      }
+    ],
+    "descLong": "Porywająca animowana komedia producentów „SHREKA”! Pełna przygód i wyszczekanego humoru opowieść o psie z wyższych sfer, który musi nauczyć się żyć wśród zwykłych ulicznych Burków i Azorów. Jeden prawdziwy przyjaciel wart jest więcej niż cała kiełbasa świata! Przebojowa ścieżka dźwiękowa z nowym utworem samego Snoop Dogga! Urwis od szczeniaka żył w luksusie, nauczony, że na jedno szczeknięcie ma do dyspozycji służbę, miski pełne serdelków i drapanie za uchem. Niestety jego ukochana Pani po długim i szczęśliwym życiu przenosi się do wieczności, a jej spadkobiercy nie lubią czworonogów. Z dnia na dzień rozpieszczony kanapowiec Urwis traci dach nad głową i jedyną bliską osobę. Sam w dzikim, pełnym niebezpieczeństw świecie musi nauczyć się panujących tam reguł: na kogo warknąć, a komu pomerdać, w którym śmietniku szukać smacznych kąsków, a co najważniejsze – jak znaleźć prawdziwego przyjaciela. Trzeba przyznać, że sam sobie nie ułatwia zadania, bo wszystkich wokół traktuje z wyższością i niechęcią. Czeka go więc trudna szkoła życia, dopóki nie zrozumie, że zamiast pokazywać kły lepiej wyciągnąć do innych łapę. Na szczęście spotka na swojej drodze pewną początkującą piosenkarkę, która co prawda mieszkanko ma malutkie, ale serce wielkie. Ten duet będzie prawdziwym przebojem!...",
+    "categoryId": 1,
+    "startDate": "2020-01-08T16:00:00+0100",
+    "organizer": {
+      "id": 156,
+      "designation": "Wejherowskie Centrum Kultury"
+    },
+    "active": 1,
+    "descShort": "Porywająca animowana komedia producentów „SHREKA”! Pełna przygód i wyszczekanego humoru opowieść o psie z wyższych sfer, który musi nauczyć się żyć wśród zwykłych ulicznych Burków i Azorów. Jeden prawdziwy przyjaciel wart jest wi...",
+    "tickets": {
+      "type": "unknown"
+    }
+  },
+  {
+    "id": 67075,
+    "place": {
+      "id": 6,
+      "subname": "Dom Sztuki",
+      "name": "Gdański Archipelag Kultury"
+    },
+    "endDate": "2020-01-08T18:15:00+0100",
+    "name": "SOLIŚCI I DUETY / TANIEC WSPÓŁCZESNY, MODERN, UNDERGROUND, JAZZ",
+    "urls": {
+      "www": "http://gak.gda.pl/domsztuki"
+    },
+    "attachments": [
+      {
+        "fileName": "http://gak.gda.pl/sites/default/files/styles/big_1000w/public/Galeria/Grafik taneczny _10.png"
+      }
+    ],
+    "descLong": "<p><b>Zapraszamy na zajęcia taneczne z Blitz i Trafic w środy!</b></p><p><b>Środa: </b></p><p>16:15-17:00 Soliści, duety taniec współczesny</p><p>17:00- 18:30 Freestyle hip hop ( soliści –wszystkie grupy )</p><p>19:30-21:00 – dodatkowe treningi dla wybranych formacji</p><p><b>***</b></p><p><b>Formacje taneczne BLITZ</b>  (hip hop, street dance, house, hip hop oldschool)</p><p><b>Formacje taneczne TRAFIC </b>(tańc współczesny, modern, underground, jazz)</p><p>O przynależności tancerza do konkretnej grupy decyduje instruktor Agnieszka Humięcka</p><p>Treningi 2 razy w tygodniu  (plan zajeć w galerii poniżej)</p><p>Zajęcia: Dom  Sztuki GAK, ul. Stryjewskiego 25 Gdańsk-Stogi</p><p>FB: https://www.facebook.com/BLITZ-crew-144948512270599/</p>",
+    "categoryId": 69,
+    "startDate": "2020-01-08T16:15:00+0100",
+    "organizer": {
+      "id": 5,
+      "designation": "Gdański Archipelag Kultury"
+    },
+    "active": 1,
+    "descShort": "Zapraszamy na zajęcia taneczne z Blitz i Trafic w środy!Środa: 16:15-17:00 Soliści, duety taniec współczesny17:00- 18:30 Freestyle hip hop ( soliści –wszystkie grupy )19:30-21:00 – dodatkowe treningi dla wybranych formacji***Formacje tane...",
+    "tickets": {
+      "type": "unknown"
+    }
+  },
+  {
+    "id": 68921,
+    "place": {
+      "id": 14,
+      "subname": "Projektornia",
+      "name": "Gdański Archipelag Kultury"
+    },
+    "endDate": "2020-01-08T23:59:59+0100",
+    "name": "EKSPRESJA PLASTYCZNA Z ELEMENTAMI TEATRU",
+    "urls": {
+      "www": "http://projektornia.art.pl"
+    },
+    "attachments": [
+      {
+        "fileName": "http://gak.gda.pl/sites/default/files/styles/big_1000w/public/Galeria/30171651_1919429978091734_7864726450818849860_o_0.jpg"
+      }
+    ],
+    "descLong": "<p><b>EKSPRESJA PLASTYCZNA Z ELEMENTAMI TEATRU</b> - Zajęcia plastyczne, na których pojawiają się różne techniki pracy twórczej dostosowane do wieku i zainteresowań uczestników zajęć, rozwijające ich wyobraźnię i zdolność twórczą. Prace dzieci zgłaszane są regularnie do konkursów regionalnych i ogólnopolskich.  Zajęcia dla dwóch grup rozpoczną się od października, dwa razy w tygodniu po 60 minut, wtorek i czwartek, godz. 16:15-17:15 lub 17:30-18:30. Koszt: 50 zł za miesiąc; 25 zł raz w tygodniu; 10 zł za jedne zajęcia.</p><p> </p><p><b>Instruktorka: Izabela Terek-Jopkiewicz - </b>animatorka kultury, plastyczka, twórczyni teatralna,  absolwentka Akademii Sztuk Pięknych w Gdańsku. Współpracuje przy wielu projektach teatralnych i plastycznych w kraju i za granicą. Uczestniczy w wystawach zbiorowych, organizuje artystyczne spotkania edukacyjne dla szkół i wydarzenia kulturalne dla szerokiej rzeszy odbiorców na terenie Trójmiasta. Stypendystka miasta Gdańska i Bremy. W 2012 otrzymała nagrodę Prezydenta Miasta Gdańska za pracę plastyczno-teatralną z dziećmi. Założycielka teatru „PIAN”. W ramach zajęć w Projektorni GAK wspólnie z małymi artystami przygotowała takie spektakle teatralne jak: „O czym zapomnieli dorośli”, „Wiatr” czy „Awaria”.</p><p> </p><p>Zapisy:<br/>Projektornia Gdański Archipelag Kultury<br/>ul. Dworska 29a<br/>tel. 58 343 46 91<br/>e-mail: projektornia@gak.gda.pl</p>",
+    "categoryId": 51,
+    "startDate": "2020-01-08T16:15:00+0100",
+    "organizer": {
+      "id": 5,
+      "designation": "Gdański Archipelag Kultury"
+    },
+    "active": 1,
+    "descShort": "EKSPRESJA PLASTYCZNA Z ELEMENTAMI TEATRU - Zajęcia plastyczne, na których pojawiają się różne techniki pracy twórczej dostosowane do wieku i zainteresowań uczestników zajęć, rozwijające ich wyobraźnię i zdolność twórczą. Prace dziec...",
+    "tickets": {
+      "type": "unknown"
+    }
+  },
+  {
+    "id": 68679,
+    "place": {
+      "id": 14,
+      "subname": "Projektornia",
+      "name": "Gdański Archipelag Kultury"
+    },
+    "endDate": "2020-01-08T23:59:59+0100",
+    "name": "TANIEC ARTYSTYCZNY",
+    "urls": {
+      "www": "http://projektornia.art.pl"
+    },
+    "attachments": [
+      {
+        "fileName": "http://gak.gda.pl/sites/default/files/styles/big_1000w/public/Galeria/19466469_1604315772936491_1714313162130643815_o.jpg"
+      }
+    ],
+    "descLong": "<p>Cieszące się dużą popularnością zajęcia ruchowe. Podczas zajęć kładzie się nacisk na rozwój sprawności fizycznej i poczucie rytmu, naukę podstawowych figur gimnastycznych, pracę z rekwizytami przy muzyce. Zajęcia z tańca artystycznego będą odbywały się od października, dwa razy z tygodniu po 60 minut dla każdej z grup podstawowych:</p>grupa początkująca  -  (dzieci w wieku od 5 do 7 lat),  wtorek i czwartek, godz. 16:25-17:25, koszt: 65 zł za miesiąc, 15 zł za jedne zajęciagrupa zaawansowana „1” -  (dzieci w wieku od 6 do 12 lat), poniedziałek- środa, godz. 16:25-17:25, koszt: 65 zł za miesiąc, 15 zł za jedne zajęciagrupa zaawansowana „0” -  (dzieci w wieku od 6 do 12 lat), wtorek i czwartek, godz. 17:30-18:30, koszt: 65 zł za miesiąc, 15 zł za jedne zajęciakadra -  poniedziałek, godz. 17:30-18:30;  środa, godz. 17:30-19:30 , koszt: 95 zł za miesiąc, 15 zł za jedne zajęcia<p> </p><p><b>Instruktorka: Sandra Tryba – </b>swoją przygodę z tańcem artystycznym rozpoczęła w wieku 5 lat,  początkowo w domu kultury Gdańskiego Archipelagu Kultury na gdańskiej Oruni, później w Brzeźnie. Z wieloma sukcesami brała udział w licznych konkursach tańca artystycznego. W 2016 roku ukończyła kurs na instruktora rekreacji ruchowej o specjalizacji nowoczesne formy gimnastyki i obecnie jest instruktorką gimnastyki artystycznej w domu kultury Projektornia GAK.</p><p> </p><p>Zapisy:<br/>Projektornia Gdański Archipelag Kultury<br/>ul. Dworska 29a<br/>tel. 58 343 46 91<br/>e-mail: projektornia@gak.gda.pl</p>",
+    "categoryId": 77,
+    "startDate": "2020-01-08T16:25:00+0100",
+    "organizer": {
+      "id": 5,
+      "designation": "Gdański Archipelag Kultury"
+    },
+    "active": 1,
+    "descShort": "Cieszące się dużą popularnością zajęcia ruchowe. Podczas zajęć kładzie się nacisk na rozwój sprawności fizycznej i poczucie rytmu, naukę podstawowych figur gimnastycznych, pracę z rekwizytami przy muzyce. Zajęcia z tańca artystyczneg...",
+    "tickets": {
+      "type": "unknown"
+    }
+  },
+  {
+    "id": 64823,
+    "place": {
+      "id": 6,
+      "subname": "Dom Sztuki",
+      "name": "Gdański Archipelag Kultury"
+    },
+    "endDate": "2020-01-08T18:30:00+0100",
+    "name": "Taneczne środy z Inside i Nutkami w Domu Sztuki GAK / od 16:30 do 19:30",
+    "urls": {
+      "www": "http://gak.gda.pl/domsztuki"
+    },
+    "attachments": [
+      {
+        "fileName": "http://gak.gda.pl/sites/default/files/styles/big_1000w/public/Galeria/1_1.png"
+      }
+    ],
+    "descLong": "<p><b>Techniki tańca: </b>taniec współczesny, taniec klasyczny, taniec z przyborem, akrobatyka, inne formy tańca</p><p><b>Środa:</b></p><p>16.30 Inside mini</p><p>17.30 Nutki gr. turniejowa  (6-7 lat)</p><p>18.30 Inside </p><p><b>Zajęcia prowadzi choreograf i instruktor: </b>Patrycja Krause</p><p>FB: https://www.facebook.com/Inside-Nutki-596542607143156/</p>",
+    "categoryId": 69,
+    "startDate": "2020-01-08T16:30:00+0100",
+    "organizer": {
+      "id": 5,
+      "designation": "Gdański Archipelag Kultury"
+    },
+    "active": 1,
+    "descShort": "Techniki tańca: taniec współczesny, taniec klasyczny, taniec z przyborem, akrobatyka, inne formy tańcaŚroda:16.30 Inside mini17.30 Nutki gr. turniejowa  (6-7 lat)18.30 Inside Zajęcia prowadzi choreograf i instruktor: Patrycja KrauseFB: ht...",
+    "tickets": {
+      "type": "unknown"
+    }
+  },
+  {
+    "id": 64269,
+    "place": {
+      "id": 6,
+      "subname": "Dom Sztuki",
+      "name": "Gdański Archipelag Kultury"
+    },
+    "endDate": "2020-01-08T19:00:00+0100",
+    "name": "Soliści/Duety I TANIEC WSPÓŁCZESNY, MODERN, UNDERGROUND, JAZZ",
+    "urls": {
+      "www": "http://gak.gda.pl/domsztuki"
+    },
+    "attachments": [
+      {
+        "fileName": "http://gak.gda.pl/sites/default/files/styles/big_1000w/public/Galeria/2_10.png"
+      }
+    ],
+    "descLong": "<p><b>Zapraszamy na zajęcia taneczne z Blitz i Trafic w środy!</b></p><p><b>Środa: </b></p><p>16:00-17:00 Soliści, duety hip hop</p><p>17:00- 18:30 Soliści, duety taniec współczesny</p><p>19:30-21:00 - TRAFIC (16-19 lat)</p><p><b>***</b></p><p><b>Formacje taneczne BLITZ</b>  (hip hop, street dance, house, hip hop oldschool)</p><p><b>Formacje taneczne TRAFIC </b>(tańc współczesny, modern, underground, jazz)</p><p>O przynależności tancerza do konkretnej grupy decyduje instruktor Agnieszka Humięcka</p><p>Treningi 2 razy w tygodniu  (plan zajeć w galerii poniżej)</p><p>Zajęcia: Dom  Sztuki GAK, ul. Stryjewskiego 25 Gdańsk-Stogi</p><p>FB: https://www.facebook.com/BLITZ-crew-144948512270599/</p>",
+    "categoryId": 69,
+    "startDate": "2020-01-08T17:00:00+0100",
+    "organizer": {
+      "id": 5,
+      "designation": "Gdański Archipelag Kultury"
+    },
+    "active": 1,
+    "descShort": "Zapraszamy na zajęcia taneczne z Blitz i Trafic w środy!Środa: 16:00-17:00 Soliści, duety hip hop17:00- 18:30 Soliści, duety taniec współczesny19:30-21:00 - TRAFIC (16-19 lat)***Formacje taneczne BLITZ  (hip hop, street dance, house, hip hop...",
+    "tickets": {
+      "type": "unknown"
+    }
+  },
+  {
+    "id": 67036,
+    "place": {
+      "id": 6,
+      "subname": "Dom Sztuki",
+      "name": "Gdański Archipelag Kultury"
+    },
+    "endDate": "2020-01-08T19:00:00+0100",
+    "name": "FREESTYLE / HIP HOP, STREET DANCE, HOUSE, HIP HOP OLDSCHOOL",
+    "urls": {
+      "www": "http://gak.gda.pl/domsztuki"
+    },
+    "attachments": [
+      {
+        "fileName": "http://gak.gda.pl/sites/default/files/styles/big_1000w/public/Galeria/Grafik taneczny _11.png"
+      }
+    ],
+    "descLong": "<p><b>Zapraszamy na zajęcia taneczne z Blitz i Trafic w środy!</b></p><p><b>Środa: </b></p><p>16:15-17:00 Soliści, duety taniec współczesny</p><p>17:00- 18:30 Freestyle hip hop ( soliści – wszystkie grupy )</p><p>19:30-21:00 – dodatkowe treningi dla wybranych formacji</p><p><b>***</b></p><p><b>Formacje taneczne BLITZ</b>  (hip hop, street dance, house, hip hop oldschool)</p><p><b>Formacje taneczne TRAFIC </b>(tańc współczesny, modern, underground, jazz)</p><p>O przynależności tancerza do konkretnej grupy decyduje instruktor Agnieszka Humięcka</p><p>Treningi 2 razy w tygodniu  (plan zajeć w galerii poniżej)</p><p>Zajęcia: Dom  Sztuki GAK, ul. Stryjewskiego 25 Gdańsk-Stogi</p><p>FB: https://www.facebook.com/BLITZ-crew-144948512270599/</p>",
+    "categoryId": 69,
+    "startDate": "2020-01-08T17:00:00+0100",
+    "organizer": {
+      "id": 5,
+      "designation": "Gdański Archipelag Kultury"
+    },
+    "active": 1,
+    "descShort": "Zapraszamy na zajęcia taneczne z Blitz i Trafic w środy!Środa: 16:15-17:00 Soliści, duety taniec współczesny17:00- 18:30 Freestyle hip hop ( soliści – wszystkie grupy )19:30-21:00 – dodatkowe treningi dla wybranych formacji***Formacje tan...",
+    "tickets": {
+      "type": "unknown"
+    }
+  },
+  {
+    "id": 63462,
+    "place": {
+      "id": 8,
+      "subname": "Dworek Artura",
+      "name": "Gdański Archipelag Kultury"
+    },
+    "endDate": "2020-01-08T18:00:00+0100",
+    "name": "Karate dla dzieci",
+    "urls": {
+      "www": "http://stacjaorunia.weebly.com"
+    },
+    "attachments": [],
+    "descLong": "<p>Karate Shotokan dla dzieci w wieku od 7 lat. Zajęcia mające na celu poszerzenie i pogłębienie sprawności fizycznej, nauka samoobrony, ćwiczenia korekcyjne, ćwiczenia ogólnorozwojowe. Prowadzący: Jerzy Guttkowski, instruktor samoobrony, od 35 lat posiadacz 6 Dan w Karate Shotokan. Świadomy tego, iż dopiero po takim czasie posiadł wystarczającą wiedzę , aby przekazywać ją innym. Pierwsze kroki stawiał na polskim gruncie, następnie liczne wjazdy na seminaria i egzaminy oraz kontakty z takimi mistrzami jak: H. NISHIYAMA, H. OCHI, K.ENOEDA, H.SHIRAI, I.JORGA.<br/><br/></p>",
+    "categoryId": 77,
+    "startDate": "2020-01-08T17:00:00+0100",
+    "organizer": {
+      "id": 5,
+      "designation": "Gdański Archipelag Kultury"
+    },
+    "active": 1,
+    "descShort": "Karate Shotokan dla dzieci w wieku od 7 lat. Zajęcia mające na celu poszerzenie i pogłębienie sprawności fizycznej, nauka samoobrony, ćwiczenia korekcyjne, ćwiczenia ogólnorozwojowe. Prowadzący: Jerzy Guttkowski, instruktor samoobrony, od 35...",
+    "tickets": {
+      "type": "unknown"
+    }
+  },
+  {
+    "id": 66050,
+    "place": {
+      "id": 10,
+      "subname": "Plama",
+      "name": "Gdański Archipelag Kultury"
+    },
+    "endDate": "2020-01-08T19:00:00+0100",
+    "name": "Plastyka dla dzieci - klasy IV-VI (instr. Monika Krause)",
+    "urls": {
+      "www": "http://plama.art.pl"
+    },
+    "attachments": [],
+    "descLong": "<p>Program zajęć to szeroka edukacja w zakresie plastyki. Różne techniki, podstawowe pojęcia z dziedziny sztuki plastycznej. Atrakcyjna forma spędzania wolnego czasu dająca możliwość rozwoju talentu i nabywania nowych umiejętności.</p><p> </p><p>Zajęcia będą odbywały się w środy w godzinach 17.00-19.00.</p><p> </p><p> </p>",
+    "categoryId": 83,
+    "startDate": "2020-01-08T17:00:00+0100",
+    "organizer": {
+      "id": 5,
+      "designation": "Gdański Archipelag Kultury"
+    },
+    "active": 1,
+    "descShort": "Program zajęć to szeroka edukacja w zakresie plastyki. Różne techniki, podstawowe pojęcia z dziedziny sztuki plastycznej. Atrakcyjna forma spędzania wolnego czasu dająca możliwość rozwoju talentu i nabywania nowych umiejętności. Zajęcia...",
+    "tickets": {
+      "type": "unknown"
+    }
+  },
+  {
+    "id": 66084,
+    "place": {
+      "id": 10,
+      "subname": "Plama",
+      "name": "Gdański Archipelag Kultury"
+    },
+    "endDate": "2020-01-08T19:00:00+0100",
+    "name": "Ceramika – starsza młodzież i dorośli (instr. Mikołaj Wyszkowski)",
+    "urls": {
+      "www": "http://plama.art.pl"
+    },
+    "attachments": [
+      {
+        "fileName": "http://gak.gda.pl/sites/default/files/styles/big_1000w/public/Galeria/20180228_120939 (1).jpg"
+      },
+      {
+        "fileName": "http://gak.gda.pl/sites/default/files/styles/big_1000w/public/Galeria/IMG_7711 (1).jpg"
+      },
+      {
+        "fileName": "http://gak.gda.pl/sites/default/files/styles/big_1000w/public/Galeria/IMG_7737 (1).jpg"
+      },
+      {
+        "fileName": "http://gak.gda.pl/sites/default/files/styles/big_1000w/public/Galeria/IMG_9071 (1).jpg"
+      }
+    ],
+    "descLong": "<p><p>Od stycznia do lipca 2019 roku prowadziłem zajęcia z ceramiki dla dzieci oraz dorosłych w Domu Sztuki GAK na Stogach w Gdańsku. Aktualnie znajduje się na 4 roku rzeźby na Akademii Sztuk Pięknych w Gdańsku. Mój dom od zawsze był przepełniony sztuką, mój Ojciec był nauczycielem rzeźby, malarstwa i grafiki w liceum plastycznym więc atmosfera udzieliła się wszystkim domownikom włącznie ze mną.</p><p> </p><p>Zajęcia będą odbywały się w środy w godzinach 17.00-20.00.</p><p> </p><p> </p></p>",
+    "categoryId": 51,
+    "startDate": "2020-01-08T17:00:00+0100",
+    "organizer": {
+      "id": 5,
+      "designation": "Gdański Archipelag Kultury"
+    },
+    "active": 1,
+    "descShort": "Od stycznia do lipca 2019 roku prowadziłem zajęcia z ceramiki dla dzieci oraz dorosłych w Domu Sztuki GAK na Stogach w Gdańsku. Aktualnie znajduje się na 4 roku rzeźby na Akademii Sztuk Pięknych w Gdańsku. Mój dom od zawsze był przepełnion...",
+    "tickets": {
+      "type": "unknown"
+    }
+  },
+  {
+    "id": 65547,
+    "place": {
+      "id": 13,
+      "subname": "Wyspa Skarbów",
+      "name": "Gdański Archipelag Kultury"
+    },
+    "endDate": "2020-01-08T19:00:00+0100",
+    "name": "Język niemiecki",
+    "urls": {
+      "www": "http://wyspaskarbow.gak.gda.pl"
+    },
+    "attachments": [],
+    "descLong": "<p>/ zajęcia grupowe i indywidualne / </p><p>Nauka języka niemieckiego dla każdego na różnych poziomach zaawansowania. <br/></p><p><b>Grupa wiekowa</b>: 5 + młodzież i dorośli<br/><b>Cena zajęć grupowych</b>:<br/>100 zł – miesiąc<br/>35 zł - jednorazowe zajęcia<br/><b>Częstotliwość zajęć</b>: 1 raz w tygodniu, 45 minut<br/><b>ILOŚĆ MIEJSC OGRANICZONA!</b></p><p><b>PROWADZENIE -  Renata Kopińska</b>, <br/></p><p>Zapisy:</p><p><b>„Wyspa Skarbów” Gdańskiego Archipelagu Kultury</b><br/>ul. Turystyczna 3<br/>Tel: 58 323 91 15 (w dni robocze od godz. 10:00 do 20:00)<br/>e-mail: wyspaskarbow@gak.gda.pl</p>",
+    "categoryId": 83,
+    "startDate": "2020-01-08T17:00:00+0100",
+    "organizer": {
+      "id": 5,
+      "designation": "Gdański Archipelag Kultury"
+    },
+    "active": 1,
+    "descShort": "/ zajęcia grupowe i indywidualne / Nauka języka niemieckiego dla każdego na różnych poziomach zaawansowania. Grupa wiekowa: 5 + młodzież i dorośliCena zajęć grupowych:100 zł – miesiąc35 zł - jednorazowe zajęciaCzęstotliwość zajęć...",
+    "tickets": {
+      "type": "unknown"
+    }
+  },
+  {
+    "id": 70114,
+    "place": {
+      "id": 235,
+      "subname": "Teatr w Oknie",
+      "name": "Gdański Teatr Szekspirowski"
+    },
+    "endDate": "2020-01-08T19:00:00+0100",
+    "name": "II Konserwatorium Teatralne Korkoro – nabór do zespołu | TwO",
+    "urls": {
+      "www": "https://teatrszekspirowski.pl/wydarzenia/ii-konserwatorium-teatralne-korkoro-nabor-do-zespolu-two/"
+    },
+    "attachments": [],
+    "descLong": "<h3>II Konserwatorium Teatralne Korkoro - nabór do zespołu Teatru Korkoro<br/>środy – 8, 15, 22, 29 stycznia 2020,godz. 17:00-20:00 (zajęcia cykliczne)<br/>Zajęcia prowadzi: Krzysztof Dziwny Gojtowski</h3><p>Konserwatorium Teatralne Korkoro to projekt edukacyjny, skierowany do aktorów, tancerzy, artystów i pasjonatów sztuki, zdeterminowanych do praktycznej pracy aktorskiej oraz innych działań scenicznych.<br/>Konserwatorium Korkoro staje się naturalnym inkubatorem dla nowych członków naszego zespołu aktorskiego. Są to intensywne cotygodniowe treningi opierające się na praktykach teatrów rytualistycznych, eksperymentalnych ilaboratoryjnych (w tym między innymi: pracy wzajemnościowej, rzemieślniczych umiejętności scenicznych, warsztatu wolności wewnętrznej). Stosujemy autorskie metody nauczania, wynikające z poszukiwań Teatru Korkoro oraz techniki warsztatowe osiągnięte podczas pracy nad spektaklami.<br/>Dzięki zajęciom uczestnicy będą mogli odkryć nowe możliwości własnego ciała, dotrzećdo osobistego języka komunikacji pozawerbalnej, poszerzyć samoświadomość sceniczną.</p><p>Całość treningu jest przemyślana jako proces powiększania percepcji, zachowania permanentnej przytomności oraz zwiększenia wrażliwości wszystkich zmysłów na bodźce. Będziemy rozwijać, jako aktorzy, nasze instynkty, reakcje i odruchy.</p><p><b>Dlaczego Konserwatorium?</b><br/>Aktor na scenie winien odgrywać “partyturę sceniczną”, bazując na konkretnych zdolnościach wykonywanego przez siebie rzemiosła. Wierzymy, żepraca aktora wymaga wysiłku i uporu, który należy podejmować. Ową determinację można porównać do wytrwałości z jaką słuchacze konserwatoriów muzycznych realizują stawiane przed nimi zadania.</p><p>Treningi mają charakter trzygodzinnej intensywnej pracy “okołoteatralnej”. Obowiązuje wygodny, niekrępujący ruchów strój odzież bez metalowych elementów, takich jak: guziki,zamki, itp.).<br/>Zajęcia skierowane są do aktorów, tancerzy, artystówi pasjonatów sztuki, zdeterminowanych do praktycznej pracy aktorskiej oraz innych działań scenicznych.<br/>Zajęcia prowadzone są w języku angielskim, polskim lub poza słowami.</p><p>Nadzór artystyczny:<br/>Krzysztof Dziwny Gojtowski - założyciel i lider Teatru Korkoro, innowator społeczny. Przez lata współpracował z teatrami rytualistycznymi i antropologicznymi takimi jak Ośrodek Praktyk Teatralnych \"Gardzienice\" czy norweski teatr uliczny \"Stella Pollaris\".<br/>Zrealizował szereg widowisk na zlecenie Gdańskiego Teatru Szekspirowskiego jak Parada płaczek Szekspir400, przywitanie brytyjskiej pary książęcej w Gdańsku czy happeningi uliczne w ramach \"Lata z Szekspirem\". Stworzył także nagradzany spektakl \"Hipergenitalia Witkacego\".<br/>Nominowany do \"Osobowości Roku 2018\" w kategorii kultura, kapituły Dziennika Bałtyckiego.<br/>Twórca i realizator koncepcji pracy z wolnością wewnętrzną. Miły, uśmiechnięty człowiek.</p><p>Info: office@korkoro.pl<br/>Cena symboliczna: 100zł/mc<br/>Zapisy/zapłata na miejscu bądź pod tym linkiem.</p><p> </p>",
+    "categoryId": 19,
+    "startDate": "2020-01-08T17:00:00+0100",
+    "organizer": {
+      "id": 56,
+      "designation": "Gdański Teatr Szekspirowski"
+    },
+    "active": 1,
+    "descShort": "II Konserwatorium Teatralne Korkoro - nabór do zespołu Teatru Korkorośrody – 8, 15, 22, 29 stycznia 2020,godz. 17:00-20:00 (zajęcia cykliczne)Zajęcia prowadzi: Krzysztof Dziwny GojtowskiKonserwatorium Teatralne Korkoro to projekt edukacyjny, s...",
+    "tickets": {
+      "type": "unknown"
+    }
+  },
+  {
+    "id": 67836,
+    "place": {
+      "id": 6,
+      "subname": "Dom Sztuki",
+      "name": "Gdański Archipelag Kultury"
+    },
+    "endDate": "2020-01-08T19:30:00+0100",
+    "name": "JĘZYK ANGIELSKI W DOMU SZTUKI GAK/ GRUPA E2",
+    "urls": {
+      "www": "http://gak.gda.pl/domsztuki"
+    },
+    "attachments": [
+      {
+        "fileName": "http://gak.gda.pl/sites/default/files/styles/big_1000w/public/Galeria/Zajęcia Stałe Angielski.png"
+      }
+    ],
+    "descLong": "<p><p><b>W październiku startują zajęcia z języka angielskiego w Domu Sztuki GAK!</b></p></p><p><p> </p><p><b>Zajęcia: </b></p></p><p><p>Grupa E 2 - Poniedziałki i Środy: 17:30 - 18:15Grupa E 1 - Poniedziałki i Środy: 18:20 - 19:05</p></p><p><p> </p></p><p><p><b>Warianty zajęć:</b></p></p><p><p><b>Język angielski gr. do 8 osób</b></p></p><p><p>Odpłatność semestralna: 400 zł</p></p><p><p>Częstotliwość zajęć: 2x45 min.w tygodniu.</p></p><p><p>Wiek uczestnika: od 7 roku życia</p></p><p><p><b>Język angielski gr. do 12 osób</b></p></p><p><p>Odpłatność semestralna: 380 zł</p></p><p><p>Częstotliwość zajęć: 2x45 min.w tygodniu.</p></p><p><p>Wiek uczestnika: od 7 roku życia.</p></p><p><p><b>Język angielski gr. powyżej 12 osób</b></p></p><p><p>Odpłatność semestralna: 360 zł</p></p><p><p>Częstotliwość zajęć: 2x45 min.w tygodniu.</p></p><p><p>Wiek uczestnika: od 7 roku życia</p></p>",
+    "categoryId": 83,
+    "startDate": "2020-01-08T17:30:00+0100",
+    "organizer": {
+      "id": 5,
+      "designation": "Gdański Archipelag Kultury"
+    },
+    "active": 1,
+    "descShort": "W październiku startują zajęcia z języka angielskiego w Domu Sztuki GAK! Zajęcia: Grupa E 2 - Poniedziałki i Środy: 17:30 - 18:15Grupa E 1 - Poniedziałki i Środy: 18:20 - 19:05 Warianty zajęć:Język angielski gr. do 8 osóbOdpłatnoś",
+    "tickets": {
+      "type": "unknown"
+    }
+  },
+  {
+    "id": 63502,
+    "place": {
+      "id": 8,
+      "subname": "Dworek Artura",
+      "name": "Gdański Archipelag Kultury"
+    },
+    "endDate": "2020-01-08T19:00:00+0100",
+    "name": "Samoobrona dla kobiet",
+    "urls": {
+      "www": "http://stacjaorunia.weebly.com"
+    },
+    "attachments": [],
+    "descLong": "<p>Zajęcia dla dorosłych. Combat Self Defense  - system dźwigni obezwładniających stosowany w zagrożeniu życia i zdrowia ludzkiego. Nauka koncentracji, poprawa sprawności fizycznej, opanowanie emocji w sytuacji zagrożenia. Jerzy Guttkowski, instruktor samoobrony, od 35 lat posiadacz 6 Dan w Karate Shotokan. Świadomy tego, iż dopiero po takim czasie posiadł wystarczającą wiedzę , aby przekazywać ją innym.Pierwsze kroki stawiał na polskim gruncie, następnie liczne wjazdy na seminaria i egzaminy oraz kontakty z takimi mistrzami jak: H. NISHIYAMA, H. OCHI, K.ENOEDA, H.SHIRAI, I.JORGA.</p><p> </p><p> </p>",
+    "categoryId": 77,
+    "startDate": "2020-01-08T18:00:00+0100",
+    "organizer": {
+      "id": 5,
+      "designation": "Gdański Archipelag Kultury"
+    },
+    "active": 1,
+    "descShort": "Zajęcia dla dorosłych. Combat Self Defense  - system dźwigni obezwładniających stosowany w zagrożeniu życia i zdrowia ludzkiego. Nauka koncentracji, poprawa sprawności fizycznej, opanowanie emocji w sytuacji zagrożenia. Jerzy Guttkowski, in...",
+    "tickets": {
+      "type": "unknown"
+    }
+  },
+  {
+    "id": 67713,
+    "place": {
+      "id": 9,
+      "subname": "Winda",
+      "name": "Gdański Archipelag Kultury"
+    },
+    "endDate": "2020-01-08T23:59:59+0100",
+    "name": "Rysunek i malarstwo dla dzieci od 10 do 15 lat",
+    "urls": {
+      "www": "http://winda.gda.pl"
+    },
+    "attachments": [],
+    "descLong": "<p>Zajęcia rozwijające wrażliwość artystyczną i zdolności manualne dzieci w wieku 10-15 lat.<br/>Prowadząca: Magdalena Zięba<br/>80 zł miesiąc<br/>25 zł pojedyncze zajęcia</p>",
+    "categoryId": 51,
+    "startDate": "2020-01-08T18:00:00+0100",
+    "organizer": {
+      "id": 5,
+      "designation": "Gdański Archipelag Kultury"
+    },
+    "active": 1,
+    "descShort": "Zajęcia rozwijające wrażliwość artystyczną i zdolności manualne dzieci w wieku 10-15 lat.Prowadząca: Magdalena Zięba80 zł miesiąc25 zł pojedyncze zajęcia",
+    "tickets": {
+      "type": "unknown"
+    }
+  },
+  {
+    "id": 65318,
+    "place": {
+      "id": 13,
+      "subname": "Wyspa Skarbów",
+      "name": "Gdański Archipelag Kultury"
+    },
+    "endDate": "2020-01-08T20:00:00+0100",
+    "name": "Zumba",
+    "urls": {
+      "www": "http://wyspaskarbow.gak.gda.pl"
+    },
+    "attachments": [],
+    "descLong": "<p>ZUMBA®FITNESS jest treningiem powstałym przez połączenie tańca z elementami fitness. Intensywność poszczególnych treningów dostosowana jest do możliwości grupy. Celem zajęć jest przede wszystkim intensywne spalanie kalorii, natomiast forma treningu (energetyczna muzyka i możliwość śpiewania) sprawia, że nie odczuwamy tego, że ćwiczymy.</p><p><b>Grupa wiekowa</b>: 14+ (także dla seniorów!)<br/><b>Cena</b>: <br/>20 zł - 1 godzina <br/>70 zł - miesiąc <br/><br/><b>Częstotliwość zajęć</b>: 1 raz w tygodniu, 50 minut<br/><b>ILOŚĆ MIEJSC OGRANICZONA!</b></p><p><b>PROWADZENIE - Ola Kloska</b>. Z tańcem związana od 7 roku życia, uczestniczka wielu kursów i warsztatów tanecznych - początkowo tańce towarzyskie, narodowe. W 2005 roku poznała reggaeton, najpierw jako styl muzyczny, a trzy lata później na parkiecie. Miłość do reggaetonu przerodziła się w zainteresowanie kulturą krajów Ameryki Środkowej i Południowej i poznawanie innych stylów: salsa, bachata, dancehall, a także sexy dance, afro dance czy hip-hop. Program ZUMBA®FITNESS odkryła w 2010 roku. Połączenie tańca, fitnessu i gorących rytmów stało się jej największą pasją i sposobem na życie. Od kwietnia 2013 roku jest licencjonowaną instruktorką ZUMBA®FITNESS. Swoją pasją pragnie zarażać innych, pokazując jednocześnie, że trening nie musi być nudny, a ćwicząc możemy poczuć się jak na imprezie :)</p><p>Zapisy:</p><p><b>„Wyspa Skarbów” Gdańskiego Archipelagu Kultury</b><br/>ul. Turystyczna 3<br/>Tel: 58 323 91 15 (w dni robocze od godz. 10:00 do 20:00)<br/>e-mail: wyspaskarbow@gak.gda.pl</p>",
+    "categoryId": 77,
+    "startDate": "2020-01-08T18:00:00+0100",
+    "organizer": {
+      "id": 5,
+      "designation": "Gdański Archipelag Kultury"
+    },
+    "active": 1,
+    "descShort": "ZUMBA®FITNESS jest treningiem powstałym przez połączenie tańca z elementami fitness. Intensywność poszczególnych treningów dostosowana jest do możliwości grupy. Celem zajęć jest przede wszystkim intensywne spalanie kalorii, natomiast for...",
+    "tickets": {
+      "type": "unknown"
+    }
+  },
+  {
+    "id": 70174,
+    "place": {
+      "id": 1132,
+      "subname": "Główna",
+      "name": "Wejherowskie Centrum Kultury"
+    },
+    "endDate": "2020-01-08T20:00:00+0100",
+    "name": "Koty 2D napisy",
+    "urls": {
+      "www": "http://wck.org.pl/kalendarium/opis/5166-koty-2d-napisy.html"
+    },
+    "attachments": [
+      {
+        "fileName": "http://wck.org.pl/images/main/72s1A4C7g020T1u59757t3B7X0m1Z906.jpg"
+      }
+    ],
+    "descLong": "Laureat Oscara® Tom Hooper („Les Misérables. Nędznicy”, „Dziewczyna z portretu”, „Jak zostać królem”) przedstawia zapierającą dech w piersiach filmową wersję kultowego musicalu Andrew Lloyda Webbera. W filmie zobaczymy m.in.: Jamesa Cordena, Judi Dench, Jasona Derulo, Idrisa Elbę, Jennifer Hudson, Iana McKellena, Taylor Swift oraz Rebel Wilson, a także główną solistkę Royal Ballet – Franceskę Hayward w jej ekranowym debiucie. W filmie usłyszymy ikoniczną muzykę Lloyda Webbera, na ekranie zobaczymy światowej klasy tancerzy, którzy pracowali pod dyrekcją wyróżnionego nagrodą Tony choreografa – Andy’ego Blankenbuehlera. Filmowa wersja musicalu to ukłon w stronę nowej generacji – spektakularne sceny, niezwykła scenografia oraz style taneczne – od baletu po taniec współczesny, od hip-hopu po jazz, od tapu po street-dance. „Koty” to jeden z najdłużej wystawianych musicali w historii West Endu i Broadwayu. Przedstawienie zadebiutowało na deskach New London Theatre w 1981 roku, gdzie grano je przez 21 lat. Wielokrotnie nagradzane, otrzymało m.in. nagrodę Oliviera oraz Evening Standard dla najlepszego musicalu. W 1983 roku broadwayowska produkcja otrzymała 7 nagród Tony, w tym dla najlepszego musicalu. Na Broadwayu sztuka święciła triumfy przez 18 lat! Musical wystawiono w ponad 50 krajach, w 19 językach. Szacuje się, że sceniczną wersję obejrzało dotąd ponad 81 milionów ludzi. TWÓRCY FILMU: Reżyseria: Tom Hooper Scenariusz: Lee Hall, Tom Hooper Na podstawie poezji T.S. Eliota i musicalu „Cats” Andrew Lloyda Webbera Produkcja: Debra Hayward, Tim Bevan, Eric Fellner, Tom Hooper Producent wykonawczy: Andrew Lloyd Webber, Steven Spielberg, Angela Morrison, Jo Burn...",
+    "categoryId": 1,
+    "startDate": "2020-01-08T18:00:00+0100",
+    "organizer": {
+      "id": 156,
+      "designation": "Wejherowskie Centrum Kultury"
+    },
+    "active": 1,
+    "descShort": "Laureat Oscara® Tom Hooper („Les Misérables. Nędznicy”, „Dziewczyna z portretu”, „Jak zostać królem”) przedstawia zapierającą dech w piersiach filmową wersję kultowego musicalu Andrew Lloyda Webbera. W filmie zobaczymy m.in.: Jam...",
+    "tickets": {
+      "type": "unknown"
+    }
+  },
+  {
+    "id": 70054,
+    "place": {
+      "id": 2240,
+      "subname": "Towarzystwo Przyjaciół Sopotu",
+      "name": "Dworek Sierakowskich"
+    },
+    "endDate": "2020-02-02T18:00:00+0100",
+    "name": "Wystawa prac Tadeusza Ciesiulewicza",
+    "urls": {
+      "www": "https://tps-dworek.pl/wystawa-prac-tadeusza-ciesiulewicza-8-01-2-02-2020-2/",
+      "fb": "https://www.facebook.com/events/467073287313718/"
+    },
+    "attachments": [
+      {
+        "fileName": "events/eventthumb_5e09cc2dd4d25.png"
+      }
+    ],
+    "descLong": "Towarzystwo Przyjaciół Sopotu zaprasza na wystawę prac Tadeusza Ciesiulewicza, trójmiejskiego malarza i wieloletniego wykładowcy orłowskiego Liceum Plastycznego, członka zarządu ZPAP i Towarzystwa Przyjaciół Sopotu.\r\nPrezentowane w dworkowej galerii obrazy i miniatury pochodzą z prywatnych kolekcji m.in. Ewy Dębskiej, Barbary Głuszczyńskiej, Krystyny Kisielewskiej, Zbigniewa Osa, Jana Jakuba Osa i innych, a także zostały udostępnione przez Urząd Miasta Sopotu. Ekspozycja powstała we współpracy z kolekcjonerem Zbigniewem Osem.\r\n\r\nNa wernisaż zapraszamy w środę 8 stycznia 2020 roku o godzinie 18.00.\r\nPrace będzie można oglądać do 2 lutego. Galeria Sztuki w Dworku Sierakowskich czynna jest codziennie w godzinach 12.00-18.00.\r\n\r\nWstęp wolny.\r\nZapraszamy!",
+    "categoryId": 51,
+    "startDate": "2020-01-08T18:00:00+0100",
+    "organizer": {
+      "id": 61,
+      "designation": "Towarzystwo Przyjaciół Sopotu"
+    },
+    "active": 1,
+    "descShort": "Towarzystwo Przyjaciół Sopotu zaprasza na wystawę prac Tadeusza Ciesiulewicza, trójmiejskiego malarza i wieloletniego wykładowcy orłowskiego Liceum Plastycznego, członka zarządu ZPAP i Towarzystwa Przyjaciół Sopotu.",
+    "tickets": {
+      "type": "free"
+    }
+  },
+  {
+    "id": 70151,
+    "place": {
+      "id": 1131,
+      "subname": "Kameralna",
+      "name": "Wejherowskie Centrum Kultury"
+    },
+    "endDate": "2020-01-08T20:15:00+0100",
+    "name": "Futro z misia",
+    "urls": {
+      "www": "http://wck.org.pl/kalendarium/opis/5160-futro-z-misia.html"
+    },
+    "attachments": [
+      {
+        "fileName": "http://wck.org.pl/images/main/i6k8P8C440P0g1o507d6n2s44399k0u7.jpg"
+      }
+    ],
+    "descLong": "Ekipa kultowej komedii „Chłopaki nie płaczą”: Michał Milowicz, Cezary Pazura, Edward Lubaszenko, Mirosław Zbrojewicz, Bohdan Łazuka i Olaf Lubaszenko, powraca ! Plejada gwiazd w sensacyjnie śmiesznej komedii o przekręcie prawie doskonałym. Sławomir Zapała w brawurowej roli romantyka, który w imię uczucia do kochającej luksusy niewiasty, trafia w samo serce gangsterskich porachunków. Boss podhalańskiej mafii, o wiele mówiącej ksywie Nerwowy, jest wściekły. To akurat w jego przypadku normalne, bo facet z natury nie jest oazą spokoju, ale tym razem ma naprawdę dobry powód. Jego ludzie podczas brawurowej akcji ukradli z komisariatu w Tczewie 120 kilogramów ziołowej herbatki. Po cholerę gangsterom ziołowa herbatka? No właśnie. W policyjnym magazynie miała być marihuana, ale ktoś ubiegł zakopiańskich zakapiorów i zwiał z towarem. Całej sprawie bacznie przyglądają się agenci Dzik i Żubr z CBŚ, którzy podejrzewają przekręt na wojewódzką skalę. Tymczasem na Pomorzu ktoś handluje doskonałej jakości „trawką”…...",
+    "categoryId": 1,
+    "startDate": "2020-01-08T18:15:00+0100",
+    "organizer": {
+      "id": 156,
+      "designation": "Wejherowskie Centrum Kultury"
+    },
+    "active": 1,
+    "descShort": "Ekipa kultowej komedii „Chłopaki nie płaczą”: Michał Milowicz, Cezary Pazura, Edward Lubaszenko, Mirosław Zbrojewicz, Bohdan Łazuka i Olaf Lubaszenko, powraca ! Plejada gwiazd w sensacyjnie śmiesznej komedii o przekręcie prawie doskonały...",
+    "tickets": {
+      "type": "unknown"
+    }
+  },
+  {
+    "id": 67910,
+    "place": {
+      "id": 6,
+      "subname": "Dom Sztuki",
+      "name": "Gdański Archipelag Kultury"
+    },
+    "endDate": "2020-01-08T20:20:00+0100",
+    "name": "JĘZYK ANGIELSKI W DOMU SZTUKI GAK / GRUPA E1",
+    "urls": {
+      "www": "http://gak.gda.pl/domsztuki"
+    },
+    "attachments": [
+      {
+        "fileName": "http://gak.gda.pl/sites/default/files/styles/big_1000w/public/Galeria/Zajęcia Stałe Angielski_0.png"
+      }
+    ],
+    "descLong": "<p><p><b>W październiku startują zajęcia z języka angielskiego w Domu Sztuki GAK!</b></p></p><p><p> </p><p><b>Zajęcia:</b></p></p><p><p>Grupa E 2 - Poniedziałki i Środy: 17:30 - 18:15Grupa E 1 - Poniedziałki i Środy: 18:20 - 19:05</p></p><p><p> </p></p><p><p><b>Warianty zajęć:</b></p></p><p><p><b>Język angielski gr. do 8 osób</b></p></p><p><p>Odpłatność semestralna: 400 zł</p></p><p><p>Częstotliwość zajęć: 2x45 min.w tygodniu.</p></p><p><p>Wiek uczestnika: od 7 roku życia</p></p><p><p><b>Język angielski gr. do 12 osób</b></p></p><p><p>Odpłatność semestralna: 380 zł</p></p><p><p>Częstotliwość zajęć: 2x45 min.w tygodniu.</p></p><p><p>Wiek uczestnika: od 7 roku życia.</p></p><p><p><b>Język angielski gr. powyżej 12 osób</b></p></p><p><p>Odpłatność semestralna: 360 zł</p></p><p><p>Częstotliwość zajęć: 2x45 min.w tygodniu.</p></p><p><p>Wiek uczestnika: od 7 roku życia</p></p>",
+    "categoryId": 83,
+    "startDate": "2020-01-08T18:20:00+0100",
+    "organizer": {
+      "id": 5,
+      "designation": "Gdański Archipelag Kultury"
+    },
+    "active": 1,
+    "descShort": "W październiku startują zajęcia z języka angielskiego w Domu Sztuki GAK! Zajęcia:Grupa E 2 - Poniedziałki i Środy: 17:30 - 18:15Grupa E 1 - Poniedziałki i Środy: 18:20 - 19:05 Warianty zajęć:Język angielski gr. do 8 osóbOdpłatność...",
+    "tickets": {
+      "type": "unknown"
+    }
+  },
+  {
+    "id": 64668,
+    "place": {
+      "id": 6,
+      "subname": "Dom Sztuki",
+      "name": "Gdański Archipelag Kultury"
+    },
+    "endDate": "2020-01-08T20:45:00+0100",
+    "name": "Gimnastyka wyszczuplająca z Agnieszką Krause w Domu Sztuki GAK",
+    "urls": {
+      "www": "http://gak.gda.pl/domsztuki"
+    },
+    "attachments": [
+      {
+        "fileName": "http://gak.gda.pl/sites/default/files/styles/big_1000w/public/Galeria/1_3.png"
+      }
+    ],
+    "descLong": "<p><b>Gimnastyka wyszczuplająca:</b></p><p><b>Zajęcia prowadzi:</b> Agnieszka Krause;</p><p><b>Terminy:</b> Poniedziałek i Środy I gody. 18:45.</p>",
+    "categoryId": 77,
+    "startDate": "2020-01-08T18:45:00+0100",
+    "organizer": {
+      "id": 5,
+      "designation": "Gdański Archipelag Kultury"
+    },
+    "active": 1,
+    "descShort": "Gimnastyka wyszczuplająca:Zajęcia prowadzi: Agnieszka Krause;Terminy: Poniedziałek i Środy I gody. 18:45.",
+    "tickets": {
+      "type": "unknown"
+    }
+  },
+  {
+    "id": 63397,
+    "place": {
+      "id": 8,
+      "subname": "Dworek Artura",
+      "name": "Gdański Archipelag Kultury"
+    },
+    "endDate": "2020-01-08T20:30:00+0100",
+    "name": "Karate dla młodzieży i dorosłych",
+    "urls": {
+      "www": "http://stacjaorunia.weebly.com"
+    },
+    "attachments": [],
+    "descLong": "<p>Karate Shotokan dla dorosłych i młodzieży( powyżej 15 lat). Kompletny system samoobrony(obrona, kontratak, dźwignie obezwładniające, pady i nauka Kata). Wszystkie poziomy nauczania. Prowadzący: Jerzy Guttkowski, instruktor samoobrony, od 35 lat posiadacz 6 Dan w Karate Shotokan. Świadomy tego, iż dopiero po takim czasie posiadł wystarczającą wiedzę , aby przekazywać ją innym.Pierwsze kroki stawiał na polskim gruncie, następnie liczne wjazdy na seminaria i egzaminy oraz kontakty z takimi mistrzami jak: H. NISHIYAMA, H. OCHI, K.ENOEDA, H.SHIRAI, I.JORGA.<br/><br/><br/></p><p> </p><p> </p>",
+    "categoryId": 77,
+    "startDate": "2020-01-08T19:00:00+0100",
+    "organizer": {
+      "id": 5,
+      "designation": "Gdański Archipelag Kultury"
+    },
+    "active": 1,
+    "descShort": "Karate Shotokan dla dorosłych i młodzieży( powyżej 15 lat). Kompletny system samoobrony(obrona, kontratak, dźwignie obezwładniające, pady i nauka Kata). Wszystkie poziomy nauczania. Prowadzący: Jerzy Guttkowski, instruktor samoobrony, od 35 l...",
+    "tickets": {
+      "type": "unknown"
+    }
+  },
+  {
+    "id": 70224,
+    "place": {
+      "id": 1508,
+      "name": "Sala Prób"
+    },
+    "endDate": "2020-01-08T20:30:00+0100",
+    "name": "W małym kinie - spektakl muzyczny",
+    "urls": {
+      "fb": "https://www.facebook.com/events/434782267429759/?active_tab=about"
+    },
+    "attachments": [
+      {
+        "fileName": "events/eventthumb_5e10dcbd0dc4a.png"
+      }
+    ],
+    "descLong": "\"W małym kinie\" - czyli Ada, Hela i Lodzia powracają!\r\nJuż po raz trzeci na Kochanowskiego odwiedzimy słynny pokój na drugim piętrze internatu szkoły dla dziewcząt. Muzyka lat 20-tych i 30-tych z genialnymi polskimi tekstami przeniesie nas w zupełnie inny świat. Wszystko toczy się wolniej, jest czas na chorowanie z miłości, na marzenie o niebieskich migdałach, na opowieści dziwnej treści  oraz ... czas na bibkę i rybkę! A to wszystko w doborowym towarzystwie jazzujących muzyków!\r\nBędzie to także wieczór przedpremierowy płyty \"W małym kinie\" Les Femmes  & Ignacy Wiśniewski Jazz Band\r\n\r\nZapraszamy do wspólnego świętowania  wspaniałego Nowego Roku 2020!\r\n\r\nwykonawcy:\r\n\r\nLES FEMMES:\r\nNatalia Krajewska-Kitowska\r\nJoanna Sobowiec-Jamioł\r\nEmilia Osowska\r\n\r\nIGNACY WIŚNIEWSKI JAZZ BAND\r\nIgnacy Wiśniewski - piano\r\nMaja Miro-Wiśniewska - flet\r\nPiotr Jamioł - skrzypce\r\nFilip Arasimowicz - kontrabas\r\nAntoni Wojnar - perkusja\r\n\r\nwstęp: opłata dobrowolna (!) \r\norganizator: Przystań na Sztukę\r\nPatronat Medialny : Pruszczanie.pl, Wiercany Art & Design, Radio Spin, Toksyna FM\r\nwsparcie: Piekarnia Sobowidz\r\n--------------------------------------------------------------------------------------\r\nmuzyka wieczoru:\r\n\r\n1. Ada, to nie wypada – muz. Zygmunt Wiehler sł. Jerzy Jurandot\r\n2. Nie ma mowy - muz. F. Arroso sł. Marian Hemar\r\n3. Zapomniana piosenka - muz. Fernando Obradors sł. Michał Tyszkiewicz\r\n4. Trudno, gdy człowiek zakochany! - muz. Tadeusz Müller sł. Emanuel Schlechter\r\n5. Chcesz, to mnie bierz - muz. Zygmunt Karasiński/Szymon Kataszek sł. Emanuel Schlechter\r\n6. Les Chemins de l’amour – muz. Francis Poulenc sł. Jean Anouilh\r\n7. Tata da raka - muz. Anda Kitschman sł. Julian Tuwim\r\n8. Sex appeal - muz. Henryk Wars sł. Emanuel Schlechter\r\n9. Creole love call - muz. Edward Ellington\r\n10. Mów! (Please) - muz. Ralph Rainger sł. Henryk Rostworowski\r\n11. Bezsenna noc (Scalinatella) muz. Giuseppe Cioffi sł. Marian Hemar\r\n12. Na pierwszy znak - muz. Henryk Wars sł. Julian Tuwim\r\n13. Sierotka, maskotka – muz. Anda Kitschman sł. Konstanty Ildefons Gałczyński\r\n14. Robaczki świętojańskie - muz. Paul Lincke sł. Wincenty Rapacki\r\n15. Krzyś z 5B - muz. Ignacy Jan Wiśniewski sł. Szymon Jachimek",
+    "categoryId": 35,
+    "startDate": "2020-01-08T19:00:00+0100",
+    "organizer": {
+      "id": 201,
+      "designation": "Stowarzyszenie Przystań na Sztukę"
+    },
+    "active": 1,
+    "descShort": "Spektakl muzyczny z muzyką lat 20-tych i 30-tych",
+    "tickets": {
+      "type": "unknown"
+    }
+  },
+  {
+    "id": 68234,
+    "place": {
+      "id": 9,
+      "subname": "Winda",
+      "name": "Gdański Archipelag Kultury"
+    },
+    "endDate": "2020-01-08T23:59:59+0100",
+    "name": "Taniec towarzyski",
+    "urls": {
+      "www": "http://winda.gda.pl"
+    },
+    "attachments": [],
+    "descLong": "<p>Zajęcia grupowe obejmujące podstawy tańca towarzyskiego. Nie musisz przyprowadzać partnera. <br/>prowadzący: Robert Melon<br/>19:15-20:45 w środy lub czwartki<br/>90min raz w tygodniu 240 zł za miesiąc</p>",
+    "categoryId": 69,
+    "startDate": "2020-01-08T19:15:00+0100",
+    "organizer": {
+      "id": 5,
+      "designation": "Gdański Archipelag Kultury"
+    },
+    "active": 1,
+    "descShort": "Zajęcia grupowe obejmujące podstawy tańca towarzyskiego. Nie musisz przyprowadzać partnera. prowadzący: Robert Melon19:15-20:45 w środy lub czwartki90min raz w tygodniu 240 zł za miesiąc",
+    "tickets": {
+      "type": "unknown"
+    }
+  },
+  {
+    "id": 65872,
+    "place": {
+      "id": 6,
+      "subname": "Dom Sztuki",
+      "name": "Gdański Archipelag Kultury"
+    },
+    "endDate": "2020-01-08T21:30:00+0100",
+    "name": "TRAFIC (16-19 lat) I TANIEC WSPÓŁCZESNY, MODERN, UNDERGROUND, JAZZ",
+    "urls": {
+      "www": "http://gak.gda.pl/domsztuki"
+    },
+    "attachments": [
+      {
+        "fileName": "http://gak.gda.pl/sites/default/files/styles/big_1000w/public/Galeria/2_11.png"
+      }
+    ],
+    "descLong": "<p><b>Zapraszamy na zajęcia taneczne z Blitz i Trafic w środy!</b></p><p><b>Środa: </b></p><p>16:00-17:00 Soliści, duety hip hop</p><p>17:00- 18:30 Soliści, duety taniec współczesny</p><p>19:30-21:00 - TRAFIC (16-19 lat)</p><p><b>***</b></p><p><b>Formacje taneczne BLITZ</b>  (hip hop, street dance, house, hip hop oldschool)</p><p><b>Formacje taneczne TRAFIC </b>(tańc współczesny, modern, underground, jazz)</p><p>O przynależności tancerza do konkretnej grupy decyduje instruktor Agnieszka Humięcka</p><p>Treningi 2 razy w tygodniu  (plan zajeć w galerii poniżej)</p><p>Zajęcia: Dom  Sztuki GAK, ul. Stryjewskiego 25 Gdańsk-Stogi</p><p>FB: https://www.facebook.com/BLITZ-crew-144948512270599/</p>",
+    "categoryId": 69,
+    "startDate": "2020-01-08T19:30:00+0100",
+    "organizer": {
+      "id": 5,
+      "designation": "Gdański Archipelag Kultury"
+    },
+    "active": 1,
+    "descShort": "Zapraszamy na zajęcia taneczne z Blitz i Trafic w środy!Środa: 16:00-17:00 Soliści, duety hip hop17:00- 18:30 Soliści, duety taniec współczesny19:30-21:00 - TRAFIC (16-19 lat)***Formacje taneczne BLITZ  (hip hop, street dance, house, hip hop...",
+    "tickets": {
+      "type": "unknown"
+    }
+  },
+  {
+    "id": 70175,
+    "place": {
+      "id": 1132,
+      "subname": "Główna",
+      "name": "Wejherowskie Centrum Kultury"
+    },
+    "endDate": "2020-01-08T22:30:00+0100",
+    "name": "Koty 2D napisy",
+    "urls": {
+      "www": "http://wck.org.pl/kalendarium/opis/5166-koty-2d-napisy.html"
+    },
+    "attachments": [
+      {
+        "fileName": "http://wck.org.pl/images/main/72s1A4C7g020T1u59757t3B7X0m1Z906.jpg"
+      }
+    ],
+    "descLong": "Laureat Oscara® Tom Hooper („Les Misérables. Nędznicy”, „Dziewczyna z portretu”, „Jak zostać królem”) przedstawia zapierającą dech w piersiach filmową wersję kultowego musicalu Andrew Lloyda Webbera. W filmie zobaczymy m.in.: Jamesa Cordena, Judi Dench, Jasona Derulo, Idrisa Elbę, Jennifer Hudson, Iana McKellena, Taylor Swift oraz Rebel Wilson, a także główną solistkę Royal Ballet – Franceskę Hayward w jej ekranowym debiucie. W filmie usłyszymy ikoniczną muzykę Lloyda Webbera, na ekranie zobaczymy światowej klasy tancerzy, którzy pracowali pod dyrekcją wyróżnionego nagrodą Tony choreografa – Andy’ego Blankenbuehlera. Filmowa wersja musicalu to ukłon w stronę nowej generacji – spektakularne sceny, niezwykła scenografia oraz style taneczne – od baletu po taniec współczesny, od hip-hopu po jazz, od tapu po street-dance. „Koty” to jeden z najdłużej wystawianych musicali w historii West Endu i Broadwayu. Przedstawienie zadebiutowało na deskach New London Theatre w 1981 roku, gdzie grano je przez 21 lat. Wielokrotnie nagradzane, otrzymało m.in. nagrodę Oliviera oraz Evening Standard dla najlepszego musicalu. W 1983 roku broadwayowska produkcja otrzymała 7 nagród Tony, w tym dla najlepszego musicalu. Na Broadwayu sztuka święciła triumfy przez 18 lat! Musical wystawiono w ponad 50 krajach, w 19 językach. Szacuje się, że sceniczną wersję obejrzało dotąd ponad 81 milionów ludzi. TWÓRCY FILMU: Reżyseria: Tom Hooper Scenariusz: Lee Hall, Tom Hooper Na podstawie poezji T.S. Eliota i musicalu „Cats” Andrew Lloyda Webbera Produkcja: Debra Hayward, Tim Bevan, Eric Fellner, Tom Hooper Producent wykonawczy: Andrew Lloyd Webber, Steven Spielberg, Angela Morrison, Jo Burn...",
+    "categoryId": 1,
+    "startDate": "2020-01-08T20:30:00+0100",
+    "organizer": {
+      "id": 156,
+      "designation": "Wejherowskie Centrum Kultury"
+    },
+    "active": 1,
+    "descShort": "Laureat Oscara® Tom Hooper („Les Misérables. Nędznicy”, „Dziewczyna z portretu”, „Jak zostać królem”) przedstawia zapierającą dech w piersiach filmową wersję kultowego musicalu Andrew Lloyda Webbera. W filmie zobaczymy m.in.: Jam...",
+    "tickets": {
+      "type": "unknown"
+    }
+  },
+  {
+    "id": 69623,
+    "place": {
+      "id": 1,
+      "name": "Miejski Teatr MINIATURA"
+    },
+    "endDate": "2020-01-09T12:00:00+0100",
+    "name": "Baltic. Pies na krze",
+    "urls": {
+      "www": "http://www.teatrminiatura.pl/pl/repertuar/detail/206/baltic-pies-na-krze/",
+      "tickets": "http://www.teatrminiatura.pl/pl/bilety/rezerwacje-indywidualne/"
+    },
+    "attachments": [
+      {
+        "fileName": "http://www.teatrminiatura.pl/media/repertoire/baltic_fotPiotr_Pedziszewski8.jpg"
+      }
+    ],
+    "descLong": "<p>na podstawie książki \"Baltic. Pies, który płynął na krze\" Barbary Gawryluk</p>\n<p>adaptacja i reżyseria: <b>Romuald Wicza-Pokojski</b><br/>scenografia: <b>Mariusz Waras</b><br/>muzyka: <b>Michał Jacaszek</b><br/>asystent reżysera: <b>Michał Derlatka</b></p>\n<p>inspicjent: <b>Tomasz Okęcki</b></p>\n<p>obsada<br/>I osoba z załogi |<b> Jolanta Darewicz<br/></b>Pan Adam |<b> Jacek Gierczak<br/></b>II Oficer |<b> Edyta Janusz-Ehrlich/Wioleta Karpowicz<br/></b>Rzeczniczka |<b> Jadwiga Sankowska<br/></b>II osoba z załogi | <b>Joanna Tomasik</b><br/>Kapitan | <b>Andrzej Żak</b></p>\n<p><br/>Spektakl dla dzieci w wieku: <b>od 6 lat<br/></b><br/>Czas trwania spektaklu:<b> 1 godzina 10 minut z przerwą<br/><br/></b>Prapremiera: <b>16 grudnia 2012</b></p>\n<p><b><br/></b>Dziękujemy za pomoc i życzliwe przyjęcie <b>Morskiemu Instytutowi Rybackiemu – Państwowemu Instytutowi Badawczemu</b>, pani Ewie Baradziej-Krzyżankowskiej, Adamowi Buczyńskiemu oraz całej załodze R/V Baltica.<br/><br/>Dziękujemy również <b>Oddziałowi Morskiemu IMGW-PIB w Gdyni</b> za udostępnienie filmu z akcji ratunkowej.<br/><b><br/></b></p>\n<p><b>Spektakl brał udział w 19. Ogólnopolskim Konkursie na Wystawienie Polskiej Sztuki Współczesnej</b>.</p>",
+    "categoryId": 19,
+    "startDate": "2020-01-09T10:00:00+0100",
+    "organizer": {
+      "id": 2,
+      "designation": "Miejski Teatr MINIATURA"
+    },
+    "active": 1,
+    "descShort": "na podstawie książki \"Baltic. Pies, który płynął na krze\" Barbary Gawryluk\nadaptacja i reżyseria: Romuald Wicza-Pokojskiscenografia: Mariusz Warasmuzyka: Michał Jacaszekasystent reżysera: Michał Derlatka\ninspicjent: Tomasz Okęcki\nobsadaI o...",
+    "tickets": {
+      "type": "tickets",
+      "startTicket": "14",
+      "endTicket": "30"
+    }
+  },
+  {
+    "id": 68125,
+    "place": {
+      "id": 9,
+      "subname": "Winda",
+      "name": "Gdański Archipelag Kultury"
+    },
+    "endDate": "2020-01-09T13:00:00+0100",
+    "name": "Zajęcia artystyczne dla maluchów",
+    "urls": {
+      "www": "http://winda.gda.pl"
+    },
+    "attachments": [],
+    "descLong": "<p>UWAGA ZBIERAMY GRUPĘ.<br/>Zajęcia ruchowe, rytmika, zajęcia plastyczne, manualne. Gry łączące zabawę i rozwój.<br/>Prowadzące: Dorota Kozłowska, Julia Tymańska, Lidia Zhukova.<br/>2x 180 minut w tygodniu 140 zł za miesiąc<br/>3-5 lat <br/> wtorki i czwartki 10:00-13:00</p>",
+    "categoryId": 77,
+    "startDate": "2020-01-09T10:00:00+0100",
+    "organizer": {
+      "id": 5,
+      "designation": "Gdański Archipelag Kultury"
+    },
+    "active": 1,
+    "descShort": "UWAGA ZBIERAMY GRUPĘ.Zajęcia ruchowe, rytmika, zajęcia plastyczne, manualne. Gry łączące zabawę i rozwój.Prowadzące: Dorota Kozłowska, Julia Tymańska, Lidia Zhukova.2x 180 minut w tygodniu 140 zł za miesiąc3-5 lat  wtorki i czwartki 10...",
+    "tickets": {
+      "type": "unknown"
+    }
+  },
+  {
+    "id": 48921,
+    "place": {
+      "id": 8,
+      "subname": "Dworek Artura",
+      "name": "Gdański Archipelag Kultury"
+    },
+    "endDate": "2020-01-09T13:00:00+0100",
+    "name": "Warsztaty twórcze dla rodziców z małymi dziećmi",
+    "urls": {
+      "www": "http://stacjaorunia.weebly.com"
+    },
+    "attachments": [],
+    "descLong": "<p>WARSZTATY  TWÓRCZE DLA MAŁYCH DZIECI Z RODZICAMI - prowadząca Iwona Kopeć</p><p>Instruktor z wieloletnim doświadczeniem w pracy z dziećmi. W latach 2007-2014 instruktor prowadzący Zajęcia Artystyczne dla Maluchów w Stacji Orunia GAK.</p><p>Dzieci w wieku 2,5-4 lat z opiekunami.</p><p>Celem zajęć jest rozwijanie umiejętności manualnych, sprzyjających twórczemu myśleniu, wspólna zabawa i budowanie więzi między rodzicem a dzieckiem, kształtowanie umiejętności wyrażania emocji poprzez środki artystyczne, obcowanie z różnego rodzaju materiałami plastycznymi(wykorzystywanie materiałów odnawialnych), co sprzyja rozbudzeniu potrzeby tworzenia i uwrażliwia na piękno.</p><p> </p>",
+    "categoryId": 83,
+    "startDate": "2020-01-09T11:00:00+0100",
+    "organizer": {
+      "id": 5,
+      "designation": "Gdański Archipelag Kultury"
+    },
+    "active": 1,
+    "descShort": "WARSZTATY  TWÓRCZE DLA MAŁYCH DZIECI Z RODZICAMI - prowadząca Iwona KopećInstruktor z wieloletnim doświadczeniem w pracy z dziećmi. W latach 2007-2014 instruktor prowadzący Zajęcia Artystyczne dla Maluchów w Stacji Orunia GAK.Dzieci w wieku...",
+    "tickets": {
+      "type": "unknown"
+    }
+  }
+]
