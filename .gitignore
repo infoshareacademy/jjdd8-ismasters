@@ -7,5 +7,8 @@ app/target
 *.iml
 web/.idea
 app/.idea
+web/wildfly.docker
 
+
+out/
 
