@@ -2,6 +2,10 @@ package com.isa.domain.entity;
 
 import javax.persistence.*;
 
+@NamedQueries(
+        @NamedQuery(name = "Url.findAll", query = "SELECT u FROM Url u")
+)
+
 @Entity
 @Table (name = "url")
 public class Url {

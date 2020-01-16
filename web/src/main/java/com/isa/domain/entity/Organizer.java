@@ -4,7 +4,8 @@ import javax.persistence.*;
 import java.util.List;
 
 @NamedQueries(
-        @NamedQuery(name = "Organizer.findAll", query = "SELECT o FROM Organizer o")
+        {@NamedQuery(name = "Organizer.findAll",
+                query = "SELECT o FROM Organizer o")}
 )
 
 @Entity
@@ -16,7 +17,7 @@ public class Organizer {
     @Column (name = "id")
     private int id;
 
-    @Column(name = "api_id")
+     @Column(name = "api_id")
     private int apiId;
 
     @Column (name = "designation")

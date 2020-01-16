@@ -52,33 +52,17 @@ public class ApiInitialization {
     @Inject
     private ApiDataParser apiDataParser;
 
-    private static final String eventsFile = "/home/robert/Pulpit/Projekt/newWebApp/jjdd8-ismasters/web/src/main/java/com/isa/parser/events.json";
-    private static final String organizersFile = "/home/robert/Pulpit/Projekt/newWebApp/jjdd8-ismasters/web/src/main/java/com/isa/parser/organizers.json";
-    private static final String placesFile = "/home/robert/Pulpit/Projekt/newWebApp/jjdd8-ismasters/web/src/main/java/com/isa/parser/places.json";
-    private static final String categoriesFile = "/home/robert/Pulpit/Projekt/newWebApp/jjdd8-ismasters/web/src/main/java/com/isa/parser/places.json";
+    @Inject
+    private EventManager eventManager;
+
+    private static final String eventsFile = "com/isa/parser/events.json";
+    private static final String organizersFile = "com/isa/parser/organizers.json";
+    private static final String placesFile = "com/isa/parser/places.json";
 
     @PostConstruct
-    public void importingEvents() throws IOException {
-        List<EventApi> listOfEvents = apiDataParser.parse(eventsFile, EventApi.class);
-        logger.info("Zaimportowano listę Wydarzeń");
-
-        for (EventApi e :listOfEvents) {
-            logger.info("Wydarzenia mapowane i kierowane do bazy danych");
-            Event event = new Event();
-            event = eventMapper.mapApiViewToEntity(e);
-            eventDao.addNewEvent(event);
-        }
+    public void apiInitialization() throws IOException {
+       eventManager.setRelations(eventsFile);
     }
 
-   /* @PostConstruct
-    public void importingOrganizers() throws IOException {
-        List<OrganizerApi> listOfOrganizers = apiDataParser.parse(organizersFile, OrganizerApi.class);
-        logger.info("Zaimportowano listę organizatorów");
 
-        for (OrganizerApi e :listOfOrganizers) {
-            logger.info("Organizatorzy mapowane i kierowane do bazy danych");
-            Organizer organiz = organizerMapper.mapApiViewToEntity(e);
-            .addNewEvent(organiz);
-        }
-    }*/
 }
