@@ -7,16 +7,18 @@
             ${organizer}<br>
             ${startDate}
         </div>
-        <div class="leftContainer">
-        <div class="leftTop">
+        <div class="subcontainer">
+        <div class="leftBanner">
+        <div class="leftBannerChild1">
             obrazek
         </div>
-        <div class="leftBottom">
+        <div class="leftBannerChild2">
             butony
         </div>
         </div>
-        <div class="rightContainer">
+        <div class="submain">
             ${descLong}
+        </div>
         </div>
     </div>
 </section>

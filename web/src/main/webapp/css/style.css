@@ -83,7 +83,7 @@ ol {
 }
 
 /*-------
-mine div's for event display
+div's for event display
 -------*/
 
 .title {
@@ -93,12 +93,36 @@ mine div's for event display
 }
 
 .subcontainer {
-	margin-bottom: 40px;
+	margin-bottom: 300px;
+	width: 100%;
 }
 
-.buttons {
-	text-align: center;
+.leftBanner {
+	width: 20%;
+	height: 100%;
+	position: relative;
+	float:left;
 }
+
+.leftBannerChild1 {
+	text-align: center;
+	float: top;
+	height: 50%;
+}
+
+.leftBannerChild2 {
+	text-align: center;
+	float: bottom;
+	height: 50%;
+}
+
+
+.submain {
+	width: 80%;
+	float: right;
+	position: relative;
+}
+
 
 /*---------------------
 Helper CSS
