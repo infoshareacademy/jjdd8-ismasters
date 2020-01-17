@@ -3,7 +3,7 @@
 <section class="property-section">
     <div class="container">
         <div class="section-title">
-            <h2>Ulubione wydarzenia: ${event}</h2>
+            <h2>Ulubione wydarzenia: ${name}</h2>
         </div>
     </div>
 </section>

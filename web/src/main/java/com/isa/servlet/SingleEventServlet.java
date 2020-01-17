@@ -1,8 +1,7 @@
 package com.isa.servlet;
 
 import com.isa.config.TemplateProvider;
-import com.isa.mock.EventDTO;
-import com.isa.service.SingleEventService;
+import com.isa.service.EventService;
 import freemarker.template.Template;
 import freemarker.template.TemplateException;
 import org.slf4j.Logger;
@@ -24,7 +23,7 @@ public class SingleEventServlet extends HttpServlet {
     private TemplateProvider templateProvider;
 
     @Inject
-    private SingleEventService singleService;
+    private EventService eventService;
 
 //    @Inject
 //    EventDTO_mock dto;
@@ -46,7 +45,7 @@ public class SingleEventServlet extends HttpServlet {
 //        Object model = singleService.toSingleEvent();
 
 
-        Object model = singleService.getSingleEvent();
+        Object model = eventService.getSingleEvent();
 
         try {
             template.process(model, resp.getWriter());

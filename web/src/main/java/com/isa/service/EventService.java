@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.Map;
 
 @Stateless
-public class SingleEventService {
+public class EventService {
 
 //    public Map<String, Object> toSingleEvent() {
 //        Map <String, Object> model = new HashMap<>();
@@ -36,7 +36,7 @@ public class SingleEventService {
 
         //FIXME
         EventDTO dto = new EventDTO();
-        dto.setName("nazwa");
+        dto.setName("wydarzxenieadasfas f");
         return dto;
     }
 
