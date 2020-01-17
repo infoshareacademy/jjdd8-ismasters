@@ -3,7 +3,7 @@
 <section class="property-section">
     <div class="container">
         <div class="title">
-            <h1>${name}</h1> + id: ${id}<br>
+            <h1>${name}</h1> <br>
             ${organizer}<br>
             ${startDate}
         </div>
