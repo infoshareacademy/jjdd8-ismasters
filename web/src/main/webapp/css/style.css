@@ -82,6 +82,24 @@ ol {
 	margin: 0;
 }
 
+/*-------
+mine div's for event display
+-------*/
+
+.title {
+	text-align: left;
+	margin-top: 35px;
+	margin-bottom: 65px;
+}
+
+.subcontainer {
+	margin-bottom: 40px;
+}
+
+.buttons {
+	text-align: center;
+}
+
 /*---------------------
 Helper CSS
  -----------------------*/

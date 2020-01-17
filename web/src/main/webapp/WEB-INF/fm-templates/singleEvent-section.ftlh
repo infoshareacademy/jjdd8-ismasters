@@ -2,7 +2,7 @@
 <#include "search-section.ftlh">
 <section class="property-section">
     <div class="container">
-        <div class="section-title">
+        <div class="title">
             <h1>${name}</h1> + id: ${id}<br>
             ${organizer}<br>
             ${startDate}
