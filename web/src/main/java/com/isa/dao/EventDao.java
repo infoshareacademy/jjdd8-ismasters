@@ -8,6 +8,7 @@ import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import java.util.List;
+import java.util.Optional;
 
 @Stateless
 public class EventDao {
@@ -30,12 +31,12 @@ public class EventDao {
         return listOfEvents;
     }
 
-    public Event findById(Long id) {
-        return em.find(Event.class, id);
+    public Optional<Event> findById(Long id) {
+        return Optional.ofNullable(em.find(Event.class, id));
     }
 
-    public Event editEvent(Event event) {
-        return em.merge(event);
+    public Optional<Event> editEvent(Event event) {
+        return Optional.ofNullable(em.merge(event));
     }
 
 
