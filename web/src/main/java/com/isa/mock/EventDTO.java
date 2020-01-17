@@ -3,7 +3,7 @@ package com.isa.mock;
 import javax.enterprise.context.RequestScoped;
 import java.util.List;
 
-public class EventDTO_mock {
+public class EventDTO {
 
     private int id;
     private String place;

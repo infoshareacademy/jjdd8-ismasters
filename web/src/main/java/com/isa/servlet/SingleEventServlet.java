@@ -1,6 +1,8 @@
 package com.isa.servlet;
 
 import com.isa.config.TemplateProvider;
+import com.isa.mock.EventDTO;
+import com.isa.service.SingleEventService;
 import freemarker.template.Template;
 import freemarker.template.TemplateException;
 import org.slf4j.Logger;
@@ -12,8 +14,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.util.HashMap;
-import java.util.Map;
 
 @WebServlet ("/single")
 public class SingleEventServlet extends HttpServlet {
@@ -23,22 +23,30 @@ public class SingleEventServlet extends HttpServlet {
     @Inject
     private TemplateProvider templateProvider;
 
+    @Inject
+    private SingleEventService singleService;
+
+//    @Inject
+//    EventDTO_mock dto;
+
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         resp.setContentType("text/html; charset=UTF-8");
 
-        String event = req.getParameter("event");
-        if (event == null || event.isEmpty()) {
-            resp.setStatus(HttpServletResponse.SC_BAD_REQUEST);
-            logger.error("Bad request");
-            logger.debug("Bad request");
-            return;
-        }
+//        String event = req.getParameter("event");
+//        if (event == null || event.isEmpty()) {
+//            resp.setStatus(HttpServletResponse.SC_BAD_REQUEST);
+//            logger.error("Bad request");
+//            logger.debug("Bad request");
+//            return;
+//        }
 
         Template template = templateProvider.getTemplate(getServletContext(),"singleEvent-section.ftlh");
 
-        Map<String, Object> model = new HashMap<>();
-        model.put("event", event);
+//        Object model = singleService.toSingleEvent();
+
+
+        Object model = singleService.getSingleEvent();
 
         try {
             template.process(model, resp.getWriter());
