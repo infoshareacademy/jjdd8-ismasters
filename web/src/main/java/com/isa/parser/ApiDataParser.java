@@ -1,8 +1,6 @@
 package com.isa.parser;
 
-import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.isa.domain.api.EventApi;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -20,7 +18,7 @@ public class ApiDataParser {
 
     public <T> List<T> parse(String FILENAME, Class<T> tClass) throws IOException {
         logger.info("Parsing List from filename");
-        logger.info("file: " +  FILENAME);
+        logger.info("file: " + FILENAME);
 
         return objectMapper.readValue(new File(FILENAME), objectMapper.getTypeFactory().constructCollectionType(ArrayList.class, tClass));
     }
