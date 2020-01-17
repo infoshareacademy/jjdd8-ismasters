@@ -1,12 +1,15 @@
 package com.isa.dao;
 
 import com.isa.domain.entity.Address;
+import com.isa.domain.entity.Place;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import javax.persistence.Query;
+import javax.transaction.Transactional;
 import java.util.List;
 
 @Stateless
@@ -16,9 +19,9 @@ public class AddressDao {
     @PersistenceContext
     private EntityManager em;
 
-    public long addNewEvent(Address address) {
+    public long addNewAddress(Address address) {
         em.persist(address);
-        logger.info("New event has been added to the DB ");
+        logger.info("New address has been added to the DB ");
         return address.getId();
     }
 
@@ -34,7 +37,19 @@ public class AddressDao {
         return em.find(Address.class, id);
     }
 
-    public Address editEvent(Address address) {
+    public Address editAddress(Address address) {
         return em.merge(address);
     }
+
+    public Address findByStreet(String street) {
+        Query query = em.createQuery("SELECT a FROM Address a WHERE a.street=:street");
+        query.setParameter("street", street);
+        List results = query.getResultList();
+        if (!results.isEmpty()) {
+            // ignores multiple results
+            return (Address) results.get(0);
+        }
+        return null;
+    }
+
 }

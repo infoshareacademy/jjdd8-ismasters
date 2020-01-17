@@ -2,7 +2,7 @@ package com.isa.domain.api;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-public class WeblinkApi {
+public class WeblinkExternal {
 
     @JsonProperty("www")
     private String website;

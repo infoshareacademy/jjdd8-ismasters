@@ -23,12 +23,12 @@ public class EventApi {
     private String name;
 
     @JsonProperty("urls")
-    private WeblinkApi weblinkApi;
+    private WeblinkExternal weblinkExternal;
 
 
     @JsonProperty("attachments")
     @JsonIgnoreProperties(ignoreUnknown = true)
-    private List<AttachmentApi> attachments;
+    private List<AttachmentExternal> attachments;
 
     @JsonProperty("descLong")
     private String LongDescription;
@@ -41,7 +41,7 @@ public class EventApi {
     private String startDate;
 
     @JsonProperty("organizer")
-    private OrganizerApi organizerApi;
+    private OrganizerExternal organizerExternal;
 
     @JsonProperty("active")
     private Boolean activeEvent;
@@ -85,21 +85,21 @@ public class EventApi {
         this.name = name;
     }
 
-    public WeblinkApi getWeblinkApi() {
-        return weblinkApi;
+    public WeblinkExternal getWeblinkExternal() {
+        return weblinkExternal;
     }
 
-    public void setWeblinkApi(WeblinkApi weblinkApi) {
-        this.weblinkApi = weblinkApi;
+    public void setWeblinkExternal(WeblinkExternal weblinkExternal) {
+        this.weblinkExternal = weblinkExternal;
     }
 
     @JsonIgnore
-    public List<AttachmentApi> getAttachments() {
+    public List<AttachmentExternal> getAttachments() {
         return attachments;
     }
 
     @JsonIgnore
-    public void setAttachments(List<AttachmentApi> attachments) {
+    public void setAttachments(List<AttachmentExternal> attachments) {
         this.attachments = attachments;
     }
 
@@ -127,12 +127,12 @@ public class EventApi {
         this.startDate = startDate;
     }
 
-    public OrganizerApi getOrganizerApi() {
-        return organizerApi;
+    public OrganizerExternal getOrganizerExternal() {
+        return organizerExternal;
     }
 
-    public void setOrganizerApi(OrganizerApi organizerApi) {
-        this.organizerApi = organizerApi;
+    public void setOrganizerExternal(OrganizerExternal organizerExternal) {
+        this.organizerExternal = organizerExternal;
     }
 
     public Boolean getActiveEvent() {
@@ -166,12 +166,12 @@ public class EventApi {
                 ", place=" + placeApi +
                 ", endDate=" + endDate +
                 ", name='" + name + '\'' +
-                ", weblink=" + weblinkApi +
+                ", weblink=" + weblinkExternal +
                 ", attachments=" + attachments +
                 ", LongDescription='" + LongDescription + '\'' +
                 ", categoryEventId=" + categoryEventId +
                 ", startDate=" + startDate +
-                ", organizer=" + organizerApi +
+                ", organizer=" + organizerExternal +
                 ", activeEvent=" + activeEvent +
                 ", shortDescription='" + shortDescription + '\'' +
                 ", ticket=" + ticketApi +

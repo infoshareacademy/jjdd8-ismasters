@@ -17,7 +17,7 @@ public class PlaceDao {
     @PersistenceContext
     private EntityManager em;
 
-    public long addNewEvent(Place place) {
+    public long addNewPlace(Place place) {
         em.persist(place);
         logger.info("New event has been added to the DB ");
         return place.getId();
@@ -35,7 +35,7 @@ public class PlaceDao {
         return em.find(Place.class, id);
     }
 
-    public Place editEvent(Place place) {
+    public Place editPlace(Place place) {
         return em.merge(place);
     }
 
