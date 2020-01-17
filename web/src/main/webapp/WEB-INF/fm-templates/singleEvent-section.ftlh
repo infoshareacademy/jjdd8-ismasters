@@ -3,7 +3,20 @@
 <section class="property-section">
     <div class="container">
         <div class="section-title">
-            <h2>Ulubione wydarzenia: ${name}</h2>
+            <h1>${name}</h1> + id: ${id}<br>
+            ${organizer}<br>
+            ${startDate}
+        </div>
+        <div class="leftContainer">
+        <div class="leftTop">
+            obrazek
+        </div>
+        <div class="leftBottom">
+            butony
+        </div>
+        </div>
+        <div class="rightContainer">
+            ${descLong}
         </div>
     </div>
 </section>

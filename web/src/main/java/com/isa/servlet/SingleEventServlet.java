@@ -29,13 +29,13 @@ public class SingleEventServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         resp.setContentType("text/html; charset=UTF-8");
 
-        String event = req.getParameter("event");
-        if (event == null || event.isEmpty()) {
-            resp.setStatus(HttpServletResponse.SC_BAD_REQUEST);
-            logger.error("Bad request");
-            logger.debug("Bad request");
-            return;
-        }
+//        String event = req.getParameter("event");
+//        if (event == null || event.isEmpty()) {
+//            resp.setStatus(HttpServletResponse.SC_BAD_REQUEST);
+//            logger.error("Bad request");
+//            logger.debug("Bad request");
+//            return;
+//        }
 
         Template template = templateProvider.getTemplate(getServletContext(),"singleEvent-section.ftlh");
 
