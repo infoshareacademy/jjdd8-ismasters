@@ -13,7 +13,7 @@ import java.util.Optional;
 
 @Stateless
 public class PlaceDao {
-    private final Logger logger = LoggerFactory.getLogger(this.getClass().getName());
+    private final Logger logger = LoggerFactory.getLogger(getClass().getName());
 
     @PersistenceContext
     private EntityManager em;
@@ -41,7 +41,7 @@ public class PlaceDao {
     }
 
     public Place findByApiId(Integer apiId) {
-        Query query = em.createQuery("SELECT p FROM Place p WHERE p.apiId=:apiId");
+        Query query = em.createNamedQuery("Place.findByApiId");
         query.setParameter("apiId", apiId);
         List results = query.getResultList();
         if (!results.isEmpty()) {

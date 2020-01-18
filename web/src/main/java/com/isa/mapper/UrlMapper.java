@@ -9,7 +9,7 @@ import javax.ejb.Stateless;
 
 @Stateless
 public class UrlMapper {
-    private final Logger logger = LoggerFactory.getLogger(this.getClass().getName());
+    private final Logger logger = LoggerFactory.getLogger(getClass().getName());
 
     public Url mapApiViewToEntity(WeblinkExternal weblinkExternal) {
         logger.info("Url mapping to Entity");

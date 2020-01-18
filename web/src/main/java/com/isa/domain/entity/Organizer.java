@@ -3,21 +3,24 @@ package com.isa.domain.entity;
 import javax.persistence.*;
 import java.util.List;
 
-@NamedQueries(
-        {@NamedQuery(name = "Organizer.findAll",
-                query = "SELECT o FROM Organizer o")}
+@NamedQueries (
+        {
+                @NamedQuery (name = "Organizer.findAll", query = "SELECT o FROM Organizer o"),
+                @NamedQuery (name = "Organizer.findByApiId", query = "SELECT o FROM Organizer o WHERE o.apiId=:apiId")
+        }
 )
+
 
 @Entity
 @Table (name = "organizer")
 public class Organizer {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue (strategy = GenerationType.IDENTITY)
     @Column (name = "id")
     private int id;
 
-     @Column(name = "api_id")
+    @Column (name = "api_id")
     private Long apiId;
 
     @Column (name = "designation")

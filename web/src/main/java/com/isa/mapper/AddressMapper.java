@@ -10,7 +10,7 @@ import javax.ejb.Stateless;
 
 @Stateless
 public class AddressMapper {
-    private final Logger logger = LoggerFactory.getLogger(this.getClass().getName());
+    private final Logger logger = LoggerFactory.getLogger(getClass().getName());
 
     public Address mapApiViewToEntity(AddressExternal addressApi) {
         logger.info("Address mapping to Entity");

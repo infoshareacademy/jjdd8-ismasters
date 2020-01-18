@@ -13,7 +13,7 @@ import java.util.Optional;
 
 @Stateless
 public class AddressDao {
-    private final Logger logger = LoggerFactory.getLogger(this.getClass().getName());
+    private final Logger logger = LoggerFactory.getLogger(getClass().getName());
 
     @PersistenceContext
     private EntityManager em;
@@ -41,7 +41,7 @@ public class AddressDao {
     }
 
     public Address findByStreet(String street) {
-        Query query = em.createQuery("SELECT a FROM Address a WHERE a.street=:street");
+        Query query = em.createNamedQuery("Address.findByStreet");
         query.setParameter("street", street);
         List results = query.getResultList();
         if (!results.isEmpty()) {

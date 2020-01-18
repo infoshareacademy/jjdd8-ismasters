@@ -19,7 +19,7 @@ import java.io.IOException;
 @Startup
 public class ApiInitialization {
 
-    private final Logger logger = LoggerFactory.getLogger(this.getClass().getName());
+    private final Logger logger = LoggerFactory.getLogger(getClass().getName());
 
     @Inject
     private EventManager eventManager;

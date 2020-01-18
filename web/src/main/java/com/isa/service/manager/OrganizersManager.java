@@ -14,7 +14,7 @@ import java.util.List;
 
 @ApplicationScoped
 public class OrganizersManager {
-    private final Logger logger = LoggerFactory.getLogger(this.getClass().getName());
+    private final Logger logger = LoggerFactory.getLogger(getClass().getName());
 
     @Inject
     private OrganizerMapper organizerMapper;
