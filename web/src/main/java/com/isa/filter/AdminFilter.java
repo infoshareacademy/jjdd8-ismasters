@@ -1,7 +1,6 @@
 package com.isa.filter;
 
 import com.isa.config.TemplateProvider;
-import freemarker.template.Template;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -9,12 +8,8 @@ import javax.inject.Inject;
 import javax.servlet.*;
 import javax.servlet.annotation.WebFilter;
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.net.http.HttpRequest;
-import java.util.HashMap;
-import java.util.Map;
 
 @WebFilter (
         filterName = "AdminAccessFilter",
@@ -55,7 +50,6 @@ public class AdminFilter implements Filter {
             }
         }
     }
-
 
 
     @Override

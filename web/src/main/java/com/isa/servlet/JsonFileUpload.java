@@ -17,6 +17,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.Part;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.io.UnsupportedEncodingException;
 import java.util.HashMap;
 import java.util.Map;
@@ -52,20 +53,21 @@ public class JsonFileUpload extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         setEncoding(req, resp);
         logger.info("Session id: " + req.getSession().getId());
-
         logger.info("doPost invoked");
+        PrintWriter writer = resp.getWriter();
 
         Part json_file = req.getPart("json_file");
         String filePath = "";
         try {
             filePath = fileUploadProcessor.getUploadFilePath() + fileUploadProcessor.uploadFile(json_file).getName();
+            writer.println("Plik " + filePath + " został załadowany");
         } catch (Exception e) {
             logger.warn("Upload file not found: " + e.getMessage());
         }
 
         req.getSession().setAttribute("JsonFilePath", filePath);
         logger.info("Events.json file path set to: " + filePath);
-        //TODO Grzesiek przekazać zmienną do ApiInitialization
+
 
     }
 

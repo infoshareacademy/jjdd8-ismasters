@@ -10,25 +10,24 @@ import java.util.List;
 public class EventApi {
 
     @JsonProperty("id")
-    private Long api_Id;
+    private Long apiId;
 
     @JsonProperty("place")
     private PlaceApi placeApi;
 
     @JsonProperty("endDate")
-   // @JsonFormat(pattern = "YYYY-MM-ddTHH:mm:ssZ")
     private String endDate;
 
     @JsonProperty("name")
     private String name;
 
     @JsonProperty("urls")
-    private WeblinkApi weblinkApi;
+    private WeblinkExternal weblinkExternal;
 
 
     @JsonProperty("attachments")
     @JsonIgnoreProperties(ignoreUnknown = true)
-    private List<AttachmentApi> attachments;
+    private List<AttachmentExternal> attachments;
 
     @JsonProperty("descLong")
     private String LongDescription;
@@ -37,11 +36,10 @@ public class EventApi {
     private int categoryEventId;
 
     @JsonProperty("startDate")
-   // @JsonFormat(pattern = "YYYY-MM-ddTHH:mm:ssZ")
     private String startDate;
 
     @JsonProperty("organizer")
-    private OrganizerApi organizerApi;
+    private OrganizerExternal organizerExternal;
 
     @JsonProperty("active")
     private Boolean activeEvent;
@@ -53,12 +51,12 @@ public class EventApi {
     @JsonIgnoreProperties(ignoreUnknown = true)
     private TicketApi ticketApi;
 
-    public Long getApi_Id() {
-        return api_Id;
+    public Long getApiId() {
+        return apiId;
     }
 
-    public void setApi_Id(Long api_Id) {
-        this.api_Id = api_Id;
+    public void setApiId(Long apiId) {
+        this.apiId = apiId;
     }
 
     public PlaceApi getPlaceApi() {
@@ -85,21 +83,21 @@ public class EventApi {
         this.name = name;
     }
 
-    public WeblinkApi getWeblinkApi() {
-        return weblinkApi;
+    public WeblinkExternal getWeblinkExternal() {
+        return weblinkExternal;
     }
 
-    public void setWeblinkApi(WeblinkApi weblinkApi) {
-        this.weblinkApi = weblinkApi;
+    public void setWeblinkExternal(WeblinkExternal weblinkExternal) {
+        this.weblinkExternal = weblinkExternal;
     }
 
     @JsonIgnore
-    public List<AttachmentApi> getAttachments() {
+    public List<AttachmentExternal> getAttachments() {
         return attachments;
     }
 
     @JsonIgnore
-    public void setAttachments(List<AttachmentApi> attachments) {
+    public void setAttachments(List<AttachmentExternal> attachments) {
         this.attachments = attachments;
     }
 
@@ -127,12 +125,12 @@ public class EventApi {
         this.startDate = startDate;
     }
 
-    public OrganizerApi getOrganizerApi() {
-        return organizerApi;
+    public OrganizerExternal getOrganizerExternal() {
+        return organizerExternal;
     }
 
-    public void setOrganizerApi(OrganizerApi organizerApi) {
-        this.organizerApi = organizerApi;
+    public void setOrganizerExternal(OrganizerExternal organizerExternal) {
+        this.organizerExternal = organizerExternal;
     }
 
     public Boolean getActiveEvent() {
@@ -162,16 +160,16 @@ public class EventApi {
     @Override
     public String toString() {
         return "Event{" +
-                "api_Id=" + api_Id +
+                "apiId=" + apiId +
                 ", place=" + placeApi +
                 ", endDate=" + endDate +
                 ", name='" + name + '\'' +
-                ", weblink=" + weblinkApi +
+                ", weblink=" + weblinkExternal +
                 ", attachments=" + attachments +
                 ", LongDescription='" + LongDescription + '\'' +
                 ", categoryEventId=" + categoryEventId +
                 ", startDate=" + startDate +
-                ", organizer=" + organizerApi +
+                ", organizer=" + organizerExternal +
                 ", activeEvent=" + activeEvent +
                 ", shortDescription='" + shortDescription + '\'' +
                 ", ticket=" + ticketApi +

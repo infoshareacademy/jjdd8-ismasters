@@ -1,8 +1,7 @@
-package com.isa.service;
+package com.isa.service.manager;
 
 import com.isa.dao.OrganizersDao;
-import com.isa.domain.api.OrganizerApi;
-import com.isa.domain.entity.Organizer;
+import com.isa.domain.api.OrganizerExternal;
 import com.isa.mapper.OrganizerMapper;
 import com.isa.parser.ApiDataParser;
 import org.slf4j.Logger;
@@ -15,7 +14,7 @@ import java.util.List;
 
 @ApplicationScoped
 public class OrganizersManager {
-    private final Logger logger = LoggerFactory.getLogger(this.getClass().getName());
+    private final Logger logger = LoggerFactory.getLogger(getClass().getName());
 
     @Inject
     private OrganizerMapper organizerMapper;
@@ -27,14 +26,16 @@ public class OrganizersManager {
     private ApiDataParser apiDataParser;
 
     public void setRelations(String filename) throws IOException {
-        List<OrganizerApi> list = apiDataParser.parse(filename, OrganizerApi.class);
+        List<OrganizerExternal> list = apiDataParser.parse(filename, OrganizerExternal.class);
         logger.info("Zaimportowano listę organizatorów");
-        for (OrganizerApi o : list) {
-            Organizer organizer = new Organizer();
-            organizer = organizerMapper.mapApiViewToEntity(o);
 
-            logger.info("Organizatorzy mapowane i kierowane do bazy danych");
-            organizersDao.addNewOrganizer(organizer);
-        }
+        list.stream()
+                .map(o->organizerMapper.mapApiViewToEntity(o))
+                .forEach(o ->{
+                    organizersDao.addNewOrganizer(o);
+                    logger.debug("Organizer {}",o.getId() );
+                });
+
+        logger.info("Organizatorzy mapowane i kierowane do bazy danych");
     }
 }

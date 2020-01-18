@@ -12,7 +12,7 @@
 </head>
 <body>
 <form method="post" action="/admin/upload" enctype="multipart/form-data">
-<h2>Wgraj plik z repozytorium w formacie JSON</h2>
+<h2>Wgraj plik z repozytorium w formacie JSON</h2><br>
     File: <input type="file" name="json_file"/><br/>
     <input type="submit" name="save" value="Dodaj plik"/><br/><br/>
 </form>
