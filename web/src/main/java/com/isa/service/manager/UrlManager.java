@@ -15,7 +15,7 @@ import java.util.List;
 @Stateless
 public class UrlManager {
 
-    private final Logger logger = LoggerFactory.getLogger(this.getClass().getName());
+    private final Logger logger = LoggerFactory.getLogger(getClass().getName());
 
 
     @Inject

@@ -9,7 +9,7 @@ import javax.ejb.Stateless;
 
 @Stateless
 public class PlaceMapper {
-    private final Logger logger = LoggerFactory.getLogger(this.getClass().getName());
+    private final Logger logger = LoggerFactory.getLogger(getClass().getName());
 
 
     public Place mapApiViewToEntity(PlaceApi placeApi) {
@@ -17,7 +17,7 @@ public class PlaceMapper {
 
         Place place = new Place();
 
-        place.setApiId(placeApi.getApi_Id());
+        place.setApiId(placeApi.getApiId());
         place.setName(placeApi.getName());
         place.setSubName(placeApi.getDescription());
 

@@ -10,7 +10,7 @@ import javax.ejb.Stateless;
 @Stateless
 public class OrganizerMapper {
 
-    private final Logger logger = LoggerFactory.getLogger(this.getClass().getName());
+    private final Logger logger = LoggerFactory.getLogger(getClass().getName());
 
     public Organizer mapApiViewToEntity(OrganizerExternal organizerExternal) {
         logger.info("Organizer mapping to Entity");

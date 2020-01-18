@@ -13,7 +13,7 @@ import java.util.Optional;
 
 @Stateless
 public class OrganizersDao {
-    private final Logger logger = LoggerFactory.getLogger(this.getClass().getName());
+    private final Logger logger = LoggerFactory.getLogger(getClass().getName());
 
     @PersistenceContext
     private EntityManager em;
@@ -41,7 +41,7 @@ public class OrganizersDao {
     }
 
     public Organizer findByApiId(Long apiId) {
-        Query query = em.createQuery("SELECT o FROM Organizer o WHERE o.apiId=:apiId");
+        Query query = em.createNamedQuery("Organizer.findByApiId");
         query.setParameter("apiId", apiId);
         List results = query.getResultList();
         if (!results.isEmpty()) {

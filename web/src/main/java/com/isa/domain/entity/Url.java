@@ -3,7 +3,10 @@ package com.isa.domain.entity;
 import javax.persistence.*;
 
 @NamedQueries(
-        @NamedQuery(name = "Url.findAll", query = "SELECT u FROM Url u")
+        {
+                @NamedQuery (name = "Url.findAll", query = "SELECT u FROM Url u"),
+                @NamedQuery(name = "Url.findByWww", query = "SELECT u FROM Url u WHERE u.wwwUrl = :www")
+        }
 )
 
 @Entity

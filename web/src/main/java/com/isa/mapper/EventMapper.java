@@ -12,14 +12,14 @@ import javax.ejb.Stateless;
 @Stateless
 public class EventMapper {
 
-    private final Logger logger = LoggerFactory.getLogger(this.getClass().getName());
+    private final Logger logger = LoggerFactory.getLogger(getClass().getName());
 
     public Event mapApiViewToEntity(EventApi eventApiParser) {
         logger.info("Event mapping to Entity");
 
         Event event = new Event();
 
-        event.setApiId(eventApiParser.getApi_Id());
+        event.setApiId(eventApiParser.getApiId());
         event.setStartDate(eventApiParser.getStartDate());
         event.setEndDate(eventApiParser.getEndDate());
         event.setDescShort(eventApiParser.getShortDescription());

@@ -18,7 +18,7 @@ import java.util.Map;
 @WebServlet ("/welcome-user")
 public class WelcomeUserServlet extends HttpServlet {
 
-    private final Logger logger = LoggerFactory.getLogger(this.getClass().getName());
+    private final Logger logger = LoggerFactory.getLogger(getClass().getName());
 
     @Inject
     private TemplateProvider templateProvider;

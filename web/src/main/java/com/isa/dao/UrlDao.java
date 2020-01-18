@@ -14,7 +14,7 @@ import java.util.Optional;
 @Stateless
 public class UrlDao {
 
-    private final Logger logger = LoggerFactory.getLogger(this.getClass().getName());
+    private final Logger logger = LoggerFactory.getLogger(getClass().getName());
 
     @PersistenceContext
     private EntityManager em;
@@ -41,8 +41,8 @@ public class UrlDao {
         return Optional.ofNullable(em.merge(url));
     }
 
-    public Url findByWWW(String www) {
-        Query query = em.createQuery("SELECT u FROM Url u WHERE u.wwwUrl = :www");
+    public Url findByWww(String www) {
+        Query query = em.createNamedQuery("Url.findByWww");
         query.setParameter("www", www);
         List results = query.getResultList();
         if (!results.isEmpty()) {

@@ -18,7 +18,7 @@ import java.util.List;
 @Stateless
 public class AddressManager {
 
-    private final Logger logger = LoggerFactory.getLogger(this.getClass().getName());
+    private final Logger logger = LoggerFactory.getLogger(getClass().getName());
 
     @Inject
     private PlaceMapper placeMapper;

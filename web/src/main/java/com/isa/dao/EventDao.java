@@ -12,7 +12,7 @@ import java.util.Optional;
 
 @Stateless
 public class EventDao {
-    private final Logger logger = LoggerFactory.getLogger(this.getClass().getName());
+    private final Logger logger = LoggerFactory.getLogger(getClass().getName());
 
     @PersistenceContext
     private EntityManager em;

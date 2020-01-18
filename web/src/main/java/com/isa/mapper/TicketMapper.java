@@ -9,7 +9,7 @@ import javax.ejb.Stateless;
 
 @Stateless
 public class TicketMapper {
-    private final Logger logger = LoggerFactory.getLogger(this.getClass().getName());
+    private final Logger logger = LoggerFactory.getLogger(getClass().getName());
 
     public TicketType mapApiViewToEntity(TicketApi ticketApi) {
         logger.info("TicketType mapping to Entity");

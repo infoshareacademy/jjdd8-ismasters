@@ -26,7 +26,7 @@ public class WelcomePage extends HttpServlet {
     public static final String FILENAME = "Json_example.json";
 
 
-    private final Logger logger = LoggerFactory.getLogger(this.getClass().getName());
+    private final Logger logger = LoggerFactory.getLogger(getClass().getName());
 
     private EventDTO eventDTO = new EventDTO();
 
