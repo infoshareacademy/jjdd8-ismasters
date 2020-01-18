@@ -43,7 +43,7 @@ public class SingleEventServlet extends HttpServlet {
         Long id = Long.parseLong(idParam);
         EventDTO eventDTO = eventService.findById(id);
 
-        Template template = templateProvider.getTemplate(getServletContext(),"singleEvent-section.ftlh");
+        Template template = templateProvider.getTemplate(getServletContext(),"bootstrapsingleevent.ftlh");
         Map<String, Object> model = new HashMap<>();
 
         if (eventDTO != null) {

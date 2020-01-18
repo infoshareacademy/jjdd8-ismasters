@@ -1,25 +1,32 @@
 <#include "header-section.ftlh">
 <#include "search-section.ftlh">
-<section class="property-section">
-    <div class="container">
-        <div class="title">
-            <h1>nazwa</h1> <br>
-            organizator<br>
-            data
+
+<#if errorMessage??>
+    <span style="color: #ff0000;">${errorMessage}</span><br/><br/>
+</#if>
+
+<#if event??>
+    <section class="property-section">
+        <div class="box">
+            <div class="title">
+                <h1>${event.name}</h1>
+            </div>
+            <div class="subcontainer">
+                <div class="leftBanner">
+                    <div class="leftBannerChild1">
+                        ${event.organizer}<br>
+                        ${event.startDate}
+                    </div>
+                <div class="leftBannerChild2">
+                        <input type="submit" name="favAdd" value="Dodaj do ulubionych">
+                        <input type="submit" name="edit" value="Edytuj">
+                </div>
+            </div>
+            <div class="submain">
+                ${event.descLong}
+            </div>
+            </div>
         </div>
-        <div class="subcontainer">
-        <div class="leftBanner">
-        <div class="leftBannerChild1">
-            obrazek
-        </div>
-        <div class="leftBannerChild2">
-            butony
-        </div>
-        </div>
-        <div class="submain">
-            opiasdasdadssdadassadsda
-        </div>
-        </div>
-    </div>
-</section>
+    </section>
+</#if>
 <#include "footer-section.ftlh">
