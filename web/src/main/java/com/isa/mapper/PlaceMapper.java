@@ -1,5 +1,6 @@
 package com.isa.mapper;
 
+import com.isa.domain.dto.PlaceDto;
 import com.isa.domain.entity.Place;
 import com.isa.domain.api.PlaceApi;
 import org.slf4j.Logger;
@@ -24,5 +25,19 @@ public class PlaceMapper {
         logger.info("Place mapping to Entity-> all parameters set");
 
         return place;
+    }
+
+    public PlaceDto mapApiViewToDto(Place place) {
+        logger.info("Place mapping to DTO");
+
+        PlaceDto placeDto = new PlaceDto();
+
+        placeDto.setId(place.getId());
+        placeDto.setName(place.getName());
+        placeDto.setSubname(place.getSubName());
+
+        logger.info("Place mapping to DTO-> all parameters set");
+
+        return placeDto;
     }
 }

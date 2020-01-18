@@ -36,6 +36,6 @@ public class OrganizersManager {
                     logger.debug("Organizer {}",o.getId() );
                 });
 
-        logger.info("Organizatorzy mapowane i kierowane do bazy danych");
+        logger.info("Organizatorzy zmapowani i zaimportowani do bazy");
     }
 }

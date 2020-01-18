@@ -1,6 +1,7 @@
 package com.isa.mapper;
 
 
+import com.isa.domain.dto.AddressDto;
 import com.isa.domain.entity.Address;
 import com.isa.domain.api.AddressExternal;
 import org.slf4j.Logger;
@@ -26,5 +27,20 @@ public class AddressMapper {
         logger.info("Address mapping to Entity-> all parameters set");
 
         return address;
+    }
+
+    public AddressDto mapEntityToDto(Address address){
+        AddressDto addressDto = new AddressDto();
+
+        addressDto.setCity(address.getCity());
+        addressDto.setId(address.getId());
+        addressDto.setLat(address.getLat());
+        addressDto.setLng(address.getLng());
+        addressDto.setStreet(address.getStreet());
+        addressDto.setZipcode(address.getZipcode());
+
+        logger.info("Address mapping to DTO -> all parameters are set");
+
+        return addressDto;
     }
 }

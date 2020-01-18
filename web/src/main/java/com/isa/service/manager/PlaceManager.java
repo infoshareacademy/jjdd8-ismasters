@@ -58,16 +58,5 @@ public class PlaceManager {
 
         logger.info("Miejsce z adresem dodane do tabeli");
 
-       /* logger.info("Zaimportowano listę lokalizacji ");
-        for (PlaceApi e: list) {
-
-            Place place = new Place();
-            place = placeMapper.mapApiViewToEntity(e);
-
-            place.setAddress(addressDao.findByStreet(e.getAddressApi().getStreet()));
-
-            logger.info("Lokalizacje mapowane i kierowane do bazy danych");
-            placeDao.addNewPlace(place);
-        }*/
     }
 }

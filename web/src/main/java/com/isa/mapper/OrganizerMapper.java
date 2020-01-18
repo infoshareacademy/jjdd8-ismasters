@@ -1,5 +1,6 @@
 package com.isa.mapper;
 
+import com.isa.domain.dto.OrganizerDto;
 import com.isa.domain.entity.Organizer;
 import com.isa.domain.api.OrganizerExternal;
 import org.slf4j.Logger;
@@ -23,5 +24,18 @@ public class OrganizerMapper {
         logger.info("Organizer mapping to Entity-> all parameters set");
 
         return organizer;
+    }
+
+    public OrganizerDto mapApiViewToDto(Organizer organizer) {
+        logger.info("Organizer mapping to DTO");
+
+        OrganizerDto organizerDto = new OrganizerDto();
+
+        organizerDto.setIdDb(organizer.getId());
+        organizerDto.setDesignation(organizer.getDesignation());
+
+        logger.info("Organizer mapping to DTO-> all parameters set");
+
+        return organizerDto;
     }
 }
