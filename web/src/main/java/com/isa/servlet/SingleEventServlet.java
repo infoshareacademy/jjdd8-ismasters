@@ -1,6 +1,7 @@
 package com.isa.servlet;
 
 import com.isa.config.TemplateProvider;
+import com.isa.mock.EventDTO;
 import com.isa.service.EventService;
 import freemarker.template.Template;
 import freemarker.template.TemplateException;
@@ -13,6 +14,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.HashMap;
+import java.util.Map;
 
 @WebServlet ("/single")
 public class SingleEventServlet extends HttpServlet {
@@ -27,27 +31,32 @@ public class SingleEventServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
-        resp.setContentType("text/html; charset=UTF-8");
+
+        String idParam = req.getParameter("id");
+        PrintWriter writer = resp.getWriter();
+
+        if (idParam == null || idParam.isEmpty()){
+            resp.setStatus(HttpServletResponse.SC_BAD_REQUEST);
+            return;
+        }
+
+        Long id = Long.parseLong(idParam);
+        EventDTO eventDTO = eventService.findById(id);
 
         Template template = templateProvider.getTemplate(getServletContext(),"singleEvent-section.ftlh");
+        Map<String, Object> model = new HashMap<>();
 
-        Object model = eventService.getSingleEvent();
+        if (eventDTO != null) {
+            model.put("event", eventDTO);
+        } else {
+            model.put("errorMessage", "Event nie znaleziony");
+        }
+
 
         try {
-            template.process(model, resp.getWriter());
+            template.process(model, writer);
         } catch (TemplateException e) {
             logger.error(e.getMessage());
         }
-
-        System.out.println("Error: " + logger.isErrorEnabled());
-        logger.error("Test error log");
-        System.out.println("Warn: " + logger.isWarnEnabled());
-        logger.warn("Test warn log");
-        System.out.println("Info: " + logger.isInfoEnabled());
-        logger.info("Test info log");
-        System.out.println("Debug: " + logger.isDebugEnabled());
-        logger.debug("Test debug log");
-        System.out.println("Trace: " + logger.isTraceEnabled());
-        logger.trace("Test trace log");
     }
 }

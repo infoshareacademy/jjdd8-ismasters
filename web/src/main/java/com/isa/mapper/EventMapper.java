@@ -3,6 +3,7 @@ package com.isa.mapper;
 
 import com.isa.domain.entity.Event;
 import com.isa.domain.api.EventApi;
+import com.isa.mock.EventDTO;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -28,6 +29,14 @@ public class EventMapper {
         event.setActive(eventApiParser.getActiveEvent());
 
         return event;
+    }
+
+    //FIXME
+    public EventDTO mapEntityToDto(Event event){
+
+        EventDTO eventDTO = new EventDTO();
+
+        return eventDTO;
     }
 
 }

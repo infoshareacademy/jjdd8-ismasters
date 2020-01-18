@@ -3,9 +3,9 @@
 <section class="property-section">
     <div class="container">
         <div class="title">
-            <h1>${name}</h1> <br>
-            ${organizer}<br>
-            ${startDate}
+            <h1>nazwa</h1> <br>
+            organizator<br>
+            data
         </div>
         <div class="subcontainer">
         <div class="leftBanner">
@@ -17,7 +17,7 @@
         </div>
         </div>
         <div class="submain">
-            ${descLong}
+            opiasdasdadssdadassadsda
         </div>
         </div>
     </div>
