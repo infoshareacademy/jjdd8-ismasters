@@ -7,6 +7,8 @@ import com.isa.mock.EventDTO;
 
 import javax.ejb.Stateless;
 import javax.inject.Inject;
+import java.util.List;
+import java.util.stream.Collectors;
 
 @Stateless
 public class EventService {
@@ -20,5 +22,11 @@ public class EventService {
     public EventDTO findById(Long id) {
         Event event = eventDao.findById(id).orElseThrow();
         return eventMapper.mapEntityToDto(event);
+    }
+
+    public List<EventDTO> searchEvents(String search) {
+        return eventDao.searchEvents(search).stream()
+                .map((event -> eventMapper.mapEntityToDto(event)))
+                .collect(Collectors.toList());
     }
 }

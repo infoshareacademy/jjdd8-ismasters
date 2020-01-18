@@ -35,6 +35,10 @@ public class EventDao {
         return Optional.ofNullable(em.find(Event.class, id));
     }
 
+    public Optional<Event> searchEvents(String search) {
+        return Optional.ofNullable(em.find(Event.class, search));
+    }
+
     public Optional<Event> editEvent(Event event) {
         return Optional.ofNullable(em.merge(event));
     }
