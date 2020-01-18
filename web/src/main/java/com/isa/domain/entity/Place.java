@@ -25,7 +25,7 @@ public class Place {
     @Column (name = "name")
     private String name;
 
-    @OneToOne(fetch = FetchType.LAZY)
+    @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     @JoinColumn (name = "address_id", unique = true)
     private Address address;
 

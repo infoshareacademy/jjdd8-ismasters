@@ -9,6 +9,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
 import java.util.List;
+import java.util.Optional;
 
 @Stateless
 public class PlaceDao {
@@ -17,7 +18,7 @@ public class PlaceDao {
     @PersistenceContext
     private EntityManager em;
 
-    public long addNewEvent(Place place) {
+    public long addNewPlace(Place place) {
         em.persist(place);
         logger.info("New event has been added to the DB ");
         return place.getId();
@@ -31,12 +32,12 @@ public class PlaceDao {
         return placesList;
     }
 
-    public Place findById(Long id) {
-        return em.find(Place.class, id);
+    public Optional<Place> findById(Long id) {
+        return Optional.ofNullable(em.find(Place.class, id));
     }
 
-    public Place editEvent(Place place) {
-        return em.merge(place);
+    public Optional<Place> editPlace(Place place) {
+        return Optional.ofNullable(em.merge(place));
     }
 
     public Place findByApiId(Integer apiId) {

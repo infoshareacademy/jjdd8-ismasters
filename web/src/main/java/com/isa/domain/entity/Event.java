@@ -8,7 +8,6 @@ import java.util.List;
 )
 
 @Entity
-@Cacheable(true)
 @Table(name = "event")
 public class Event {
 
@@ -52,11 +51,11 @@ public class Event {
     @JoinColumn(name = "organizer_id")
     private Organizer organizer;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "place_id", unique = true)
+    @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @JoinColumn(name = "place_id")
     private Place place;
 
-    @OneToOne(fetch = FetchType.LAZY)
+    @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     @JoinColumn(name = "url_id", unique = true)
     private Url url;
 

@@ -9,6 +9,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
 import java.util.List;
+import java.util.Optional;
 
 @Stateless
 public class OrganizersDao {
@@ -31,12 +32,12 @@ public class OrganizersDao {
         return listOfEvents;
     }
 
-    public Organizer findById(Long id) {
-        return em.find(Organizer.class, id);
+    public Optional<Organizer> findById(Long id) {
+        return Optional.ofNullable(em.find(Organizer.class, id));
     }
 
-    public Organizer editEvent(Organizer organizer) {
-        return em.merge(organizer);
+    public Optional<Organizer> editEvent(Organizer organizer) {
+        return Optional.ofNullable(em.merge(organizer));
     }
 
     public Organizer findByApiId(Long apiId) {

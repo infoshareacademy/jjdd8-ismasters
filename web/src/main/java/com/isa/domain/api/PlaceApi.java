@@ -14,7 +14,7 @@ public class PlaceApi {
     private String name;
 
     @JsonProperty("address")
-    private AddressApi addressApi;
+    private AddressExternal addressApi;
 
     public int getApi_Id() {
         return api_Id;
@@ -40,11 +40,11 @@ public class PlaceApi {
         this.name = name;
     }
 
-    public AddressApi getAddressApi() {
+    public AddressExternal getAddressApi() {
         return addressApi;
     }
 
-    public void setAddressApi(AddressApi addressApi) {
+    public void setAddressApi(AddressExternal addressApi) {
         this.addressApi = addressApi;
     }
 
