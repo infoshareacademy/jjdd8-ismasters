@@ -2,6 +2,7 @@ package com.isa.service;
 
 import com.isa.dao.EventDao;
 import com.isa.domain.dto.EventDto;
+import com.isa.mapper.EventMapper;
 import com.isa.service.manager.EventManager;
 
 import javax.ejb.Stateless;
@@ -18,6 +19,9 @@ public class EventService {
     private EventManager eventManager;
 
     @Inject
+    private EventMapper eventMapper;
+
+    @Inject
     private EventDao eventDao;
 
 
@@ -26,7 +30,7 @@ public class EventService {
         List<EventDto> eventDtoList = new ArrayList<>();
 
         eventDao.findAll().stream()
-                .forEach(event -> eventDtoList.add(eventManager.setRelationsToDTO(event)));
+                .forEach(event -> eventDtoList.add(eventMapper.mapApiViewToDto(event)));
 
         return eventDtoList;
     }

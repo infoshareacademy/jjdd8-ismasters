@@ -24,11 +24,8 @@ public class EventDao {
     }
 
     public List<Event> findAll() {
-        List listOfEvents = em
-                .createNamedQuery("Event.findAll")
-                .getResultList();
 
-        return listOfEvents;
+        return em.createNamedQuery("Event.findAll").getResultList();
     }
 
     public Optional<Event> findById(Long id) {

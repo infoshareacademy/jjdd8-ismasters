@@ -87,6 +87,8 @@ public class EventManager {
 
     }
 
+
+
     public EventDto setRelationsToDTO(Event event) {
 
         EventDto eventDto = new EventDto();
