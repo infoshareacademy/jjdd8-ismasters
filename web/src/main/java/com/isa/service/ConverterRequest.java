@@ -12,7 +12,7 @@ import javax.ws.rs.core.Response;
 @Stateless
 public class ConverterRequest {
 
-    private final Logger logger = LoggerFactory.getLogger(this.getClass().getName());
+    private final Logger logger = LoggerFactory.getLogger(getClass().getName());
 
 
     public String buildClientRequest(String url) {

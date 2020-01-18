@@ -73,7 +73,7 @@ public class EventManager {
                     Url url = urlMapper.mapApiViewToEntity(e.getWeblinkExternal());
                     event.setUrl(url);
 
-                    int placeExternalId = e.getPlaceApi().getApi_Id();
+                    int placeExternalId = e.getPlaceApi().getApiId();
 
                     Place place = placeDao.findByApiId(placeExternalId);
                     logger.info("Place id {}, {}", placeExternalId, place);

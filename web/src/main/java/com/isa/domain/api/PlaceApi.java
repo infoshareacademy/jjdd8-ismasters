@@ -5,7 +5,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PlaceApi {
 
     @JsonProperty("id")
-    private int api_Id;
+    private int apiId;
 
     @JsonProperty("subname")
     private String description;
@@ -16,12 +16,12 @@ public class PlaceApi {
     @JsonProperty("address")
     private AddressExternal addressApi;
 
-    public int getApi_Id() {
-        return api_Id;
+    public int getApiId() {
+        return apiId;
     }
 
-    public void setApi_Id(int api_Id) {
-        this.api_Id = api_Id;
+    public void setApiId(int apiId) {
+        this.apiId = apiId;
     }
 
     public String getDescription() {
@@ -51,7 +51,7 @@ public class PlaceApi {
     @Override
     public String toString() {
         return "Place{" +
-                "api_Id=" + api_Id +
+                "apiId=" + apiId +
                 ", description='" + description + '\'' +
                 ", name='" + name + '\'' +
                 '}';

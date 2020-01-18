@@ -9,10 +9,11 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
 import java.util.List;
+import java.util.Optional;
 
 @Stateless
 public class PlaceDao {
-    private final Logger logger = LoggerFactory.getLogger(this.getClass().getName());
+    private final Logger logger = LoggerFactory.getLogger(getClass().getName());
 
     @PersistenceContext
     private EntityManager em;
@@ -31,16 +32,16 @@ public class PlaceDao {
         return placesList;
     }
 
-    public Place findById(Long id) {
-        return em.find(Place.class, id);
+    public Optional<Place> findById(Long id) {
+        return Optional.ofNullable(em.find(Place.class, id));
     }
 
-    public Place editPlace(Place place) {
-        return em.merge(place);
+    public Optional<Place> editPlace(Place place) {
+        return Optional.ofNullable(em.merge(place));
     }
 
     public Place findByApiId(Integer apiId) {
-        Query query = em.createQuery("SELECT p FROM Place p WHERE p.apiId=:apiId");
+        Query query = em.createNamedQuery("Place.findByApiId");
         query.setParameter("apiId", apiId);
         List results = query.getResultList();
         if (!results.isEmpty()) {

@@ -9,11 +9,12 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
 import java.util.List;
+import java.util.Optional;
 
 @Stateless
 public class UrlDao {
 
-    private final Logger logger = LoggerFactory.getLogger(this.getClass().getName());
+    private final Logger logger = LoggerFactory.getLogger(getClass().getName());
 
     @PersistenceContext
     private EntityManager em;
@@ -32,16 +33,16 @@ public class UrlDao {
         return listOfUrl;
     }
 
-    public Url findById(Long id) {
-        return em.find(Url.class, id);
+    public Optional<Url> findById(Long id) {
+        return Optional.ofNullable(em.find(Url.class, id));
     }
 
-    public Url editEvent(Url url) {
-        return em.merge(url);
+    public Optional<Url> editEvent(Url url) {
+        return Optional.ofNullable(em.merge(url));
     }
 
-    public Url findByWWW(String www) {
-        Query query = em.createQuery("SELECT u FROM Url u WHERE u.wwwUrl = :www");
+    public Url findByWww(String www) {
+        Query query = em.createNamedQuery("Url.findByWww");
         query.setParameter("www", www);
         List results = query.getResultList();
         if (!results.isEmpty()) {

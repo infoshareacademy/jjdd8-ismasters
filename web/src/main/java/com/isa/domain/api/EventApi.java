@@ -10,13 +10,12 @@ import java.util.List;
 public class EventApi {
 
     @JsonProperty("id")
-    private Long api_Id;
+    private Long apiId;
 
     @JsonProperty("place")
     private PlaceApi placeApi;
 
     @JsonProperty("endDate")
-   // @JsonFormat(pattern = "YYYY-MM-ddTHH:mm:ssZ")
     private String endDate;
 
     @JsonProperty("name")
@@ -37,7 +36,6 @@ public class EventApi {
     private int categoryEventId;
 
     @JsonProperty("startDate")
-   // @JsonFormat(pattern = "YYYY-MM-ddTHH:mm:ssZ")
     private String startDate;
 
     @JsonProperty("organizer")
@@ -53,12 +51,12 @@ public class EventApi {
     @JsonIgnoreProperties(ignoreUnknown = true)
     private TicketApi ticketApi;
 
-    public Long getApi_Id() {
-        return api_Id;
+    public Long getApiId() {
+        return apiId;
     }
 
-    public void setApi_Id(Long api_Id) {
-        this.api_Id = api_Id;
+    public void setApiId(Long apiId) {
+        this.apiId = apiId;
     }
 
     public PlaceApi getPlaceApi() {
@@ -162,7 +160,7 @@ public class EventApi {
     @Override
     public String toString() {
         return "Event{" +
-                "api_Id=" + api_Id +
+                "apiId=" + apiId +
                 ", place=" + placeApi +
                 ", endDate=" + endDate +
                 ", name='" + name + '\'' +

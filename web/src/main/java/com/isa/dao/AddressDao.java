@@ -1,7 +1,6 @@
 package com.isa.dao;
 
 import com.isa.domain.entity.Address;
-import com.isa.domain.entity.Place;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -9,19 +8,19 @@ import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
-import javax.transaction.Transactional;
 import java.util.List;
+import java.util.Optional;
 
 @Stateless
 public class AddressDao {
-    private final Logger logger = LoggerFactory.getLogger(this.getClass().getName());
+    private final Logger logger = LoggerFactory.getLogger(getClass().getName());
 
     @PersistenceContext
     private EntityManager em;
 
     public long addNewAddress(Address address) {
         em.persist(address);
-        logger.info("New address has been added to the DB ");
+        logger.info("New address has been added to the DB, id: {}", address.getId());
         return address.getId();
     }
 
@@ -33,16 +32,16 @@ public class AddressDao {
         return addressList;
     }
 
-    public Address findById(Long id) {
-        return em.find(Address.class, id);
+    public Optional<Address> findById(Long id) {
+        return Optional.ofNullable(em.find(Address.class, id));
     }
 
-    public Address editAddress(Address address) {
-        return em.merge(address);
+    public Optional<Address> editAddress(Address address) {
+        return Optional.ofNullable(em.merge(address));
     }
 
     public Address findByStreet(String street) {
-        Query query = em.createQuery("SELECT a FROM Address a WHERE a.street=:street");
+        Query query = em.createNamedQuery("Address.findByStreet");
         query.setParameter("street", street);
         List results = query.getResultList();
         if (!results.isEmpty()) {

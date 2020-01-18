@@ -15,7 +15,7 @@ import java.util.List;
 @ApplicationScoped
 public class ApiDataParser {
 
-    private final Logger logger = LoggerFactory.getLogger(this.getClass().getName());
+    private final Logger logger = LoggerFactory.getLogger(getClass().getName());
     private ObjectMapper objectMapper = new ObjectMapper();
 
     public <T> List<T> parse(String json, Class<T> tClass) throws IOException {

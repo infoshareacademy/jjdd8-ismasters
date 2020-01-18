@@ -9,10 +9,11 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
 import java.util.List;
+import java.util.Optional;
 
 @Stateless
 public class OrganizersDao {
-    private final Logger logger = LoggerFactory.getLogger(this.getClass().getName());
+    private final Logger logger = LoggerFactory.getLogger(getClass().getName());
 
     @PersistenceContext
     private EntityManager em;
@@ -31,16 +32,16 @@ public class OrganizersDao {
         return listOfEvents;
     }
 
-    public Organizer findById(Long id) {
-        return em.find(Organizer.class, id);
+    public Optional<Organizer> findById(Long id) {
+        return Optional.ofNullable(em.find(Organizer.class, id));
     }
 
-    public Organizer editEvent(Organizer organizer) {
-        return em.merge(organizer);
+    public Optional<Organizer> editEvent(Organizer organizer) {
+        return Optional.ofNullable(em.merge(organizer));
     }
 
     public Organizer findByApiId(Long apiId) {
-        Query query = em.createQuery("SELECT o FROM Organizer o WHERE o.apiId=:apiId");
+        Query query = em.createNamedQuery("Organizer.findByApiId");
         query.setParameter("apiId", apiId);
         List results = query.getResultList();
         if (!results.isEmpty()) {
