@@ -3,17 +3,25 @@ package com.isa.domain.entity;
 import javax.persistence.*;
 import java.util.List;
 
+@NamedQueries (
+        {
+                @NamedQuery (name = "Organizer.findAll", query = "SELECT o FROM Organizer o"),
+                @NamedQuery (name = "Organizer.findByApiId", query = "SELECT o FROM Organizer o WHERE o.apiId=:apiId")
+        }
+)
+
+
 @Entity
 @Table (name = "organizer")
 public class Organizer {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue (strategy = GenerationType.IDENTITY)
     @Column (name = "id")
     private int id;
 
-    @Column(name = "api_id")
-    private int apiId;
+    @Column (name = "api_id")
+    private Long apiId;
 
     @Column (name = "designation")
     private String designation;
@@ -21,11 +29,15 @@ public class Organizer {
     @OneToMany (fetch = FetchType.LAZY, mappedBy = "organizer")
     private List<Event> event;
 
-    public int getApiId() {
+    public Organizer() {
+
+    }
+
+    public Long getApiId() {
         return apiId;
     }
 
-    public void setApiId(int apiId) {
+    public void setApiId(Long apiId) {
         this.apiId = apiId;
     }
 
@@ -53,7 +65,4 @@ public class Organizer {
         this.event = event;
     }
 
-    public Organizer(int apiId) {
-        this.apiId = apiId;
-    }
 }

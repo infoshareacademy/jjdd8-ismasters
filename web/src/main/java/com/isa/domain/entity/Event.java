@@ -1,60 +1,66 @@
 package com.isa.domain.entity;
 
 import javax.persistence.*;
-import java.time.LocalDateTime;
 import java.util.List;
 
+@NamedQueries(
+        @NamedQuery(name = "Event.findAll", query = "SELECT e FROM Event e")
+)
+
 @Entity
-@Table (name = "event")
+@Table(name = "event")
 public class Event {
 
     @Id
-    @Column (name = "id")
-    @GeneratedValue (strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column (name = "api_Id")
+    @Column(name = "api_id")
     private Long apiId;
 
-    @Column (name = "start_date")
-    private LocalDateTime startDate;
+    @Column(name = "start_date")
+    private String startDate;
 
-    @Column (name = "end_date")
-    private LocalDateTime endDate;
+    @Column(name = "end_date")
+    private String endDate;
 
-    @Column (name = "desc_short")
+    @Column(name = "desc_short")
     private String descShort;
 
-    @Column (name = "name")
+    @Column(name = "name")
     private String name;
 
-    @Column (name = "desc_long")
+    @Column(name = "desc_long", columnDefinition = "TEXT")
     private String descLong;
 
-    @Column (name = "category_id")
+    @Column(name = "category_id")
     private int categoryId;
 
-    @Column (name = "active")
+    @Column(name = "active")
     private boolean active;
 
-    @ManyToMany (fetch = FetchType.LAZY, mappedBy = "favoriteEvents")
+    @ManyToMany(fetch = FetchType.LAZY, mappedBy = "favoriteEvents")
     private List<User> eventFav;
 
-    @ManyToOne (fetch = FetchType.LAZY)
-    @JoinColumn (name = "ticket_type_id")
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "ticket_type_id")
     private TicketType ticketType;
 
-    @ManyToOne (fetch = FetchType.LAZY)
-    @JoinColumn (name = "organizer_id")
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "organizer_id")
     private Organizer organizer;
 
-    @ManyToOne (fetch = FetchType.LAZY)
-    @JoinColumn (name = "place_id", unique = true)
+    @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @JoinColumn(name = "place_id")
     private Place place;
 
-    @OneToOne (fetch = FetchType.LAZY)
-    @JoinColumn (name = "url_id", unique = true)
+    @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @JoinColumn(name = "url_id", unique = true)
     private Url url;
+
+    public Event() {
+    }
 
     public String getName() {
         return name;
@@ -88,19 +94,19 @@ public class Event {
         this.apiId = apiId;
     }
 
-    public LocalDateTime getStartDate() {
+    public String getStartDate() {
         return startDate;
     }
 
-    public void setStartDate(LocalDateTime startDate) {
+    public void setStartDate(String startDate) {
         this.startDate = startDate;
     }
 
-    public LocalDateTime getEndDate() {
+    public String getEndDate() {
         return endDate;
     }
 
-    public void setEndDate(LocalDateTime endDate) {
+    public void setEndDate(String endDate) {
         this.endDate = endDate;
     }
 
@@ -168,7 +174,4 @@ public class Event {
         this.url = url;
     }
 
-    public Event(Long apiId) {
-        this.apiId = apiId;
-    }
 }

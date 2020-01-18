@@ -3,6 +3,13 @@ package com.isa.domain.entity;
 import javax.persistence.*;
 import java.util.List;
 
+@NamedQueries (
+        {
+                @NamedQuery (name = "Place.findAll", query = "SELECT p FROM Place p"),
+                @NamedQuery (name = "Place.findByApiId", query = "SELECT p FROM Place p WHERE p.apiId=:apiId")
+        }
+)
+
 @Entity
 @Table (name = "place")
 public class Place {
@@ -21,7 +28,7 @@ public class Place {
     @Column (name = "name")
     private String name;
 
-    @OneToOne (fetch = FetchType.LAZY)
+    @OneToOne (fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     @JoinColumn (name = "address_id", unique = true)
     private Address address;
 

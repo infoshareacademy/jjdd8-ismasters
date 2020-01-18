@@ -16,12 +16,15 @@ public class TicketType {
     private String ticketTypeName;
 
     @OneToMany (fetch = FetchType.LAZY, mappedBy = "ticketType")
-    private List<TicketType> ticketType;
+    private List<Event> events;
 
     public TicketType(String ticketTypeName) {
         this.ticketTypeName = ticketTypeName;
     }
 
+    public TicketType() {
+
+    }
     public int getId() {
         return id;
     }
@@ -38,11 +41,11 @@ public class TicketType {
         this.ticketTypeName = ticketTypeName;
     }
 
-    public List<TicketType> getTicketType() {
-        return ticketType;
+    public List<Event> getEvents() {
+        return events;
     }
 
-    public void setTicketType(List<TicketType> ticketType) {
-        this.ticketType = ticketType;
+    public void setEvents(List<Event> events) {
+        this.events = events;
     }
 }

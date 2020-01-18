@@ -2,6 +2,13 @@ package com.isa.domain.entity;
 
 import javax.persistence.*;
 
+@NamedQueries(
+        {
+                @NamedQuery (name = "Url.findAll", query = "SELECT u FROM Url u"),
+                @NamedQuery(name = "Url.findByWww", query = "SELECT u FROM Url u WHERE u.wwwUrl = :www")
+        }
+)
+
 @Entity
 @Table (name = "url")
 public class Url {
@@ -23,6 +30,9 @@ public class Url {
     @OneToOne (fetch = FetchType.LAZY, mappedBy = "url")
     private Event event;
 
+    public Url() {
+
+    }
     public int getId() {
         return id;
     }
@@ -63,7 +73,4 @@ public class Url {
         this.event = event;
     }
 
-    public Url(String wwwUrl) {
-        this.wwwUrl = wwwUrl;
-    }
 }

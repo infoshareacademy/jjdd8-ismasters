@@ -2,35 +2,42 @@ package com.isa.domain.entity;
 
 import javax.persistence.*;
 
+@NamedQueries(
+        {
+                @NamedQuery (name = "Address.findAll", query = "SELECT a FROM Address a"),
+                @NamedQuery (name = "Address.findByStreet", query = "SELECT a FROM Address a WHERE a.street=:street")
+        }
+)
+
 @Entity
-@Table (name = "address")
+@Table(name = "address")
 public class Address {
 
     @Id
-    @GeneratedValue (strategy = GenerationType.IDENTITY)
-    @Column (name = "id")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
     private int id;
 
-    @Column (name = "street")
+    @Column(name = "street")
     private String street;
 
-    @Column (name = "zipcode")
+    @Column(name = "zipcode")
     private String zipcode;
 
-    @Column (name = "city")
+    @Column(name = "city")
     private String city;
 
-    @Column (name = "lat")
+    @Column(name = "lat")
     private String lat;
 
-    @Column (name = "lng")
+    @Column(name = "lng")
     private String lng;
 
-    @OneToOne (mappedBy = "address", fetch = FetchType.LAZY)
+    @OneToOne(mappedBy = "address", fetch = FetchType.LAZY)
     private Place place;
 
-    public Address(int id) {
-        this.id = id;
+    public Address() {
+
     }
 
     public int getId() {
