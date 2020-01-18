@@ -1,8 +1,8 @@
 package com.isa.servlet;
 
 import com.isa.config.TemplateProvider;
+import com.isa.mock.EventDTO;
 import com.isa.service.EventService;
-import freemarker.template.Template;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet("/search")
+@WebServlet("/search/{id}")
 public class SearchEvents extends HttpServlet {
 
     private final Logger logger = LoggerFactory.getLogger(this.getClass().getName());
@@ -27,7 +27,15 @@ public class SearchEvents extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
 
-        String searchParam = req.getParameter("")
+        String search = req.getParameter("search");
+
+        if (search == null || search.isEmpty()){
+            resp.setStatus(HttpServletResponse.SC_BAD_REQUEST);
+            return;
+        }
+
+//        EventDTO eventDTO = eventService.searchEvents(search);
+
 
     }
 }

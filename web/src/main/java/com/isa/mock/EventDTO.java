@@ -1,6 +1,5 @@
 package com.isa.mock;
 
-import javax.enterprise.context.RequestScoped;
 import java.util.List;
 
 public class EventDTO {
