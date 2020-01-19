@@ -46,11 +46,7 @@ public class SingleEventServlet extends HttpServlet {
         Template template = templateProvider.getTemplate(getServletContext(),"bootstrapsingleevent.ftlh");
         Map<String, Object> model = new HashMap<>();
 
-        if (eventDto != null) {
-            model.put("eventDto", eventDto);
-        } else {
-            model.put("errorMessage", "Event nie znaleziony");
-        }
+        model.put("eventDto", eventDto);
 
         try {
             template.process(model, writer);
