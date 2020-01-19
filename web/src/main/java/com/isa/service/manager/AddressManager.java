@@ -34,7 +34,7 @@ public class AddressManager {
 
     public void setRelationsAddress(String jsonString) throws IOException {
         List<PlaceApi> list = apiDataParser.parse(jsonString, PlaceApi.class);
-        logger.info("Zaimportowano listę lokalizacji ");
+        logger.debug("Zaimportowano listę lokalizacji ");
         for (PlaceApi e: list) {
             Address address = new Address();
             address.setLng(e.getAddressApi().getLng());
@@ -44,7 +44,7 @@ public class AddressManager {
             address.setCity(e.getAddressApi().getCity());
 
             addressDao.addNewAddress(address);
-            logger.info("Adresy mapowane i kierowane do bazy danych");
+            logger.debug("Adresy mapowane i kierowane do bazy danych");
         }
     }
 }

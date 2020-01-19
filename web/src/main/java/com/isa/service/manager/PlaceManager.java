@@ -56,7 +56,7 @@ public class PlaceManager {
                     logger.debug("Place {}",place );
                 });
 
-        logger.info("Miejsce z adresem dodane do tabeli");
+        logger.debug("Miejsce z adresem dodane do tabeli");
 
     }
 }

@@ -14,7 +14,7 @@ public class PlaceMapper {
 
 
     public Place mapApiViewToEntity(PlaceApi placeApi) {
-        logger.info("Place mapping to Entity");
+        logger.debug("Place mapping to Entity");
 
         Place place = new Place();
 
@@ -22,13 +22,13 @@ public class PlaceMapper {
         place.setName(placeApi.getName());
         place.setSubName(placeApi.getDescription());
 
-        logger.info("Place mapping to Entity-> all parameters set");
+        logger.debug("Place mapping to Entity-> all parameters set");
 
         return place;
     }
 
     public PlaceDto mapApiViewToDto(Place place) {
-        logger.info("Place mapping to DTO");
+        logger.debug("Place mapping to DTO");
 
         PlaceDto placeDto = new PlaceDto();
 
@@ -36,7 +36,7 @@ public class PlaceMapper {
         placeDto.setName(place.getName());
         placeDto.setSubname(place.getSubName());
 
-        logger.info("Place mapping to DTO-> all parameters set");
+        logger.debug("Place mapping to DTO-> all parameters set");
 
         return placeDto;
     }

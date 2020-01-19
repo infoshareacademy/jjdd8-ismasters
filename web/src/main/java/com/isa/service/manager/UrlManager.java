@@ -26,7 +26,7 @@ public class UrlManager {
 
     public void setRelationsUrl(String jsonString) throws IOException {
         List<EventApi> list = apiDataParser.parse(jsonString, EventApi.class);
-        logger.info("Weblinki listę Wydarzeń");
+        logger.debug("Weblinki listę Wydarzeń");
         for (EventApi e: list) {
             Url url = new Url();
 
@@ -35,7 +35,7 @@ public class UrlManager {
             url.setWwwUrl(e.getWeblinkExternal().getWebsite());
             urlDao.addNewUrl(url);
 
-            logger.info("Wydarzenia mapowane i kierowane do bazy danych");
+            logger.debug("Wydarzenia mapowane i kierowane do bazy danych");
 
         }
     }
