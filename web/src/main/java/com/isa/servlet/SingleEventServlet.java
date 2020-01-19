@@ -47,11 +47,10 @@ public class SingleEventServlet extends HttpServlet {
         Map<String, Object> model = new HashMap<>();
 
         if (eventDto != null) {
-            model.put("event", eventDto);
+            model.put("eventDto", eventDto);
         } else {
             model.put("errorMessage", "Event nie znaleziony");
         }
-
 
         try {
             template.process(model, writer);
