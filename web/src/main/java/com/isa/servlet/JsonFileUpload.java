@@ -1,7 +1,6 @@
 package com.isa.servlet;
 
 import com.isa.config.TemplateProvider;
-import com.isa.service.ApiInitialization;
 import com.isa.service.FileUploadProcessor;
 import freemarker.template.Template;
 import freemarker.template.TemplateException;
@@ -56,17 +55,29 @@ public class JsonFileUpload extends HttpServlet {
         logger.info("doPost invoked");
         PrintWriter writer = resp.getWriter();
 
-        Part json_file = req.getPart("json_file");
-        String filePath = "";
+        Part EventsJson = req.getPart("events");
+        Part PlacesJson = req.getPart("places");
+        Part OrganizersJson = req.getPart("organizers");
+        String EventsFilePath = "";
+        String PlacesFilePath = "";
+        String OrganizersFilePath = "";
         try {
-            filePath = fileUploadProcessor.getUploadFilePath() + fileUploadProcessor.uploadFile(json_file).getName();
-            writer.println("Plik " + filePath + " został załadowany");
+            EventsFilePath = fileUploadProcessor.getUploadFilePath() + fileUploadProcessor.uploadFile(EventsJson).getName();
+            PlacesFilePath = fileUploadProcessor.getUploadFilePath() + fileUploadProcessor.uploadFile(PlacesJson).getName();
+            OrganizersFilePath = fileUploadProcessor.getUploadFilePath() + fileUploadProcessor.uploadFile(OrganizersJson).getName();
+            writer.println("Plik " + EventsFilePath + " został załadowany");
+            writer.println("Plik " + OrganizersFilePath + " został załadowany");
+            writer.println("Plik " + PlacesFilePath + " został załadowany");
         } catch (Exception e) {
             logger.warn("Upload file not found: " + e.getMessage());
         }
 
-        req.getSession().setAttribute("JsonFilePath", filePath);
-        logger.info("Events.json file path set to: " + filePath);
+        req.getSession().setAttribute("EventsFilePath", EventsFilePath);
+        req.getSession().setAttribute("PlacesFilePath", PlacesFilePath);
+        req.getSession().setAttribute("OrganizersFilePath", OrganizersFilePath);
+        logger.info("Events.json file path set to: " + EventsFilePath);
+        logger.info("Organizer.json file path set to: " + OrganizersFilePath);
+        logger.info("Places.json file path set to: " + PlacesFilePath);
 
 
     }

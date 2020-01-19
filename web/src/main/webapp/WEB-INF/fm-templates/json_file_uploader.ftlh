@@ -13,7 +13,9 @@
 <body>
 <form method="post" action="/admin/upload" enctype="multipart/form-data">
 <h2>Wgraj plik z repozytorium w formacie JSON</h2><br>
-    File: <input type="file" name="json_file"/><br/>
+    File: <input type="file" name="organizers"/><br/>
+    File: <input type="file" name="places"/><br/>
+    File: <input type="file" name="events"/><br/>
     <input type="submit" name="save" value="Dodaj plik"/><br/><br/>
 </form>
 </body>
