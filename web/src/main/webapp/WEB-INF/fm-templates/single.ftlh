@@ -10,33 +10,33 @@
             <div class="col">
 
                 <div class="property-item">
-                    <h5> Miejsce wydarzenia : ${eventDTO_mock.place}</h5>
+                    <h5> Miejsce wydarzenia : ${event.place}</h5>
                 </div>
 
                 <div class="property-item">
-                    <h5> Organizato wydarzenia : ${eventDTO_mock.organizer}</h5>
-                </div>
-
-
-                <div class="property-item">
-                    <h5> Data wydarzenia : ${eventDTO_mock.startDate}</h5>
+                    <h5> Organizato wydarzenia : ${event.organizer}</h5>
                 </div>
 
 
                 <div class="property-item">
-                    <h5> Bilety wydarzenia : ${eventDTO_mock.tickets}</h5>
+                    <h5> Data wydarzenia : ${event.startDate}</h5>
+                </div>
+
+
+                <div class="property-item">
+                    <h5> Bilety wydarzenia : ${event.tickets}</h5>
                 </div>
 
                 <div class="property-item">
-                    <a href="${eventDTO_mock.urls}" class="readmore-btn">Find out more</a>
+                    <a href="${event.urls}" class="readmore-btn">Find out more</a>
                 </div>
 
             </div>
 
             <div class="col-10">
                 <div class="property-item">
-                    <h5> Nazwa wydarzenia : ${eventDTO_mock.name}</h5>
-                    <p>Opis wydarzenia : ${eventDTO_mock.descLong}</p>
+                    <h5> Nazwa wydarzenia : ${event.name}</h5>
+                    <p>Opis wydarzenia : ${event.descLong}</p>
                 </div>
             </div>
 
