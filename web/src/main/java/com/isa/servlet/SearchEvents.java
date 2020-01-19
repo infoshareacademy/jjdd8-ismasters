@@ -1,7 +1,6 @@
 package com.isa.servlet;
 
 import com.isa.config.TemplateProvider;
-import com.isa.mock.EventDTO;
 import com.isa.service.EventService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
