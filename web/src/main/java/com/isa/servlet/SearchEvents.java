@@ -1,7 +1,11 @@
 package com.isa.servlet;
 
 import com.isa.config.TemplateProvider;
+import com.isa.domain.dto.EventDto;
 import com.isa.service.EventService;
+import com.isa.service.SearchService;
+import freemarker.template.Template;
+import freemarker.template.TemplateException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -11,8 +15,11 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
-@WebServlet("/search/{id}")
+@WebServlet("/search")
 public class SearchEvents extends HttpServlet {
 
     private final Logger logger = LoggerFactory.getLogger(this.getClass().getName());
@@ -21,7 +28,7 @@ public class SearchEvents extends HttpServlet {
     private TemplateProvider templateProvider;
 
     @Inject
-    private EventService eventService;
+    private SearchService searchService;
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
@@ -33,8 +40,18 @@ public class SearchEvents extends HttpServlet {
             return;
         }
 
-//        EventDTO eventDTO = eventService.searchEvents(search);
+        List<EventDto> foundEvents = searchService.searchEvents(search);
 
+        Template template = templateProvider.getTemplate(getServletContext(), "search.ftlh");
+        Map<String, Object> model = new HashMap<>();
+
+        model.put("foundEvents", foundEvents);
+
+        try {
+            template.process(model, resp.getWriter());
+        } catch (TemplateException e) {
+            logger.error(e.getMessage());
+        }
 
     }
 }
