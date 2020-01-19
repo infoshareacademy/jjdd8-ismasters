@@ -2,7 +2,6 @@ package com.isa.servlet;
 
 import com.isa.config.TemplateProvider;
 import com.isa.domain.dto.EventDto;
-import com.isa.service.EventService;
 import com.isa.service.SearchService;
 import freemarker.template.Template;
 import freemarker.template.TemplateException;
