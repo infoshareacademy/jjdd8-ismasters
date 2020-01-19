@@ -24,4 +24,22 @@ public class ApiDataParserTest {
        List<EventApi> eventApis = (List<EventApi>) apiDataParser.parse(FILENAME, EventApi.class);
         System.out.println(eventApis);
     }
+<<<<<<< Updated upstream
 }*//*
+=======
+}*//*
+
+ public void setRelations(String filename) throws IOException {
+        List<EventApi> list = apiDataParser.parse(filename, EventApi.class);
+        logger.info("Zaimportowano listę Wydarzeń");
+        for (EventApi e: list) {
+            Event event = new Event();
+            event = eventMapper.mapApiViewToEntity(e);
+            event.setOrganizer(organizersDao.findByApiId(e.getApi_Id()));
+            event.setUrl(urlDao.findByWWW(e.getWeblinkApi().getWebsite()));
+            event.setPlace(placeDao.findByApiId(e.getPlaceApi().getApi_Id()));
+            logger.info("Wydarzenia mapowane i kierowane do bazy danych");
+            eventDao.addNewEvent(event);
+        }
+    }
+>>>>>>> Stashed changes
