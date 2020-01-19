@@ -3,7 +3,6 @@ package com.isa.service.manager;
 import com.isa.dao.EventDao;
 import com.isa.dao.OrganizersDao;
 import com.isa.dao.PlaceDao;
-import com.isa.dao.UrlDao;
 import com.isa.domain.api.EventApi;
 import com.isa.domain.dto.EventDto;
 import com.isa.domain.dto.OrganizerDto;
@@ -93,7 +92,7 @@ public class EventManager {
 
         EventDto eventDto = new EventDto();
 
-        eventDto = eventMapper.mapApiViewToDto(event);
+        eventDto = eventMapper.mapEntityToDto(event);
 
         OrganizerDto organizerDto = organizerMapper.mapApiViewToDto(event.getOrganizer());
 

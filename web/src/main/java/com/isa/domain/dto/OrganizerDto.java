@@ -43,4 +43,14 @@ public class OrganizerDto {
     public void setDesignation(String designation) {
         this.designation = designation;
     }
+
+    @Override
+    public String toString() {
+        return "OrganizerDto{" +
+                "idDb=" + idDb +
+                ", idExternal=" + idExternal +
+                ", designation='" + designation + '\'' +
+                ", eventDtoList=" + eventDtoList +
+                '}';
+    }
 }

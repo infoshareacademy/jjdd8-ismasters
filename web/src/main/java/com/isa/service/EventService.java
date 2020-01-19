@@ -29,8 +29,8 @@ public class EventService {
 
         List<EventDto> eventDtoList = new ArrayList<>();
 
-        eventDao.findAll().stream()
-                .forEach(event -> eventDtoList.add(eventMapper.mapApiViewToDto(event)));
+        eventDao.findAll()
+                .forEach(event -> eventDtoList.add(eventManager.setRelationsToDTO(event)));
 
         return eventDtoList;
     }

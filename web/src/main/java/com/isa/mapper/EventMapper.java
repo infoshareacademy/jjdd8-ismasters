@@ -33,7 +33,7 @@ public class EventMapper {
         return event;
     }
 
-    public EventDto mapApiViewToDto(Event eventEntity) {
+    public EventDto mapEntityToDto(Event eventEntity) {
         logger.info("Event mapping to DTO");
 
         EventDto eventDto = new EventDto();
