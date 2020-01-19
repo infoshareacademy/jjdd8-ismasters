@@ -32,7 +32,7 @@ public class AddressManager {
     @Inject
     private ApiDataParser apiDataParser;
 
-    public void setRelationsAdress(String jsonString) throws IOException {
+    public void setRelationsAddress(String jsonString) throws IOException {
         List<PlaceApi> list = apiDataParser.parse(jsonString, PlaceApi.class);
         logger.info("Zaimportowano listę lokalizacji ");
         for (PlaceApi e: list) {
@@ -42,11 +42,9 @@ public class AddressManager {
             address.setZipcode(e.getAddressApi().getZipcode());
             address.setStreet(e.getAddressApi().getStreet());
             address.setCity(e.getAddressApi().getCity());
+
             addressDao.addNewAddress(address);
-
-
             logger.info("Adresy mapowane i kierowane do bazy danych");
-
         }
     }
 }
