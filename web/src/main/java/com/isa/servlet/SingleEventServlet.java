@@ -1,7 +1,7 @@
 package com.isa.servlet;
 
 import com.isa.config.TemplateProvider;
-import com.isa.mock.EventDTO;
+import com.isa.domain.dto.EventDto;
 import com.isa.service.EventService;
 import freemarker.template.Template;
 import freemarker.template.TemplateException;
@@ -41,13 +41,13 @@ public class SingleEventServlet extends HttpServlet {
         }
 
         Long id = Long.parseLong(idParam);
-        EventDTO eventDTO = eventService.findById(id);
+        EventDto eventDto = eventService.findById(id);
 
         Template template = templateProvider.getTemplate(getServletContext(),"bootstrapsingleevent.ftlh");
         Map<String, Object> model = new HashMap<>();
 
-        if (eventDTO != null) {
-            model.put("event", eventDTO);
+        if (eventDto != null) {
+            model.put("event", eventDto);
         } else {
             model.put("errorMessage", "Event nie znaleziony");
         }

@@ -11,12 +11,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.isa.domain.entity.Event;
-import com.isa.mapper.EventMapper;
-import com.isa.mock.EventDTO;
+import com.isa.mock.EventDTO_mock;
 
-import javax.ejb.Stateless;
-import javax.inject.Inject;
-import java.util.List;
 import java.util.stream.Collectors;
 
 @Stateless
@@ -43,12 +39,12 @@ public class EventService {
         return eventDtoList;
     }
 
-    public EventDTO findById(Long id) {
+    public EventDto findById(Long id) {
         Event event = eventDao.findById(id).orElseThrow();
         return eventMapper.mapEntityToDto(event);
     }
 
-    public List<EventDTO> searchEvents(String search) {
+    public List<EventDto> searchEvents(String search) {
         return eventDao.searchEvents(search).stream()
                 .map((event -> eventMapper.mapEntityToDto(event)))
                 .collect(Collectors.toList());

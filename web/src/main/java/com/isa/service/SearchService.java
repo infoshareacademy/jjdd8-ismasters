@@ -1,6 +1,6 @@
 package com.isa.service;
 
-import com.isa.mock.EventDTO;
+import com.isa.domain.dto.EventDto;
 
 import javax.ejb.EJB;
 import javax.ejb.Stateless;
@@ -12,7 +12,7 @@ public class SearchService {
     @EJB
     private EventService eventService;
 
-    public List<EventDTO> searchEvents(String string) {
+    public List<EventDto> searchEvents(String string) {
         return eventService.searchEvents(string);
     }
 }

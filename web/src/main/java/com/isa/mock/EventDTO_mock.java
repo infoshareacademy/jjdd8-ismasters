@@ -2,7 +2,7 @@ package com.isa.mock;
 
 import java.util.List;
 
-public class EventDTO {
+public class EventDTO_mock {
 
     private int id;
     private String name;
