@@ -1,42 +1,42 @@
 <#include "header-section.ftlh">
 <#include "search-section.ftlh">
-
 <section class="property-section">
     <div class="container">
         <div class="section-title">
-            <h2>Widok pojedynczego wydarzenia</h2>
+            <h3>Widok pojedynczego wydarzenia</h3>
         </div>
         <div class="row">
-            <div class="col">
+            <div class="col-3">
 
                 <div class="property-item">
-                    <h5> Miejsce wydarzenia : ${event.place}</h5>
+                    <h6> Miejsce wydarzenia : <p>${event.place ! "Nie podano"}</p></h6>
                 </div>
 
                 <div class="property-item">
-                    <h5> Organizato wydarzenia : ${event.organizer}</h5>
-                </div>
-
-
-                <div class="property-item">
-                    <h5> Data wydarzenia : ${event.startDate}</h5>
+                    <h6> Organizato wydarzenia : <p>${event.organizer ! "Organizator nie znany"}</p></h6>
                 </div>
 
 
                 <div class="property-item">
-                    <h5> Bilety wydarzenia : ${event.tickets}</h5>
+                    <h6> Data wydarzenia : <p>${event.startDate ! "Data nie znana"}</p></h6>
+                </div>
+
+
+                <div class="property-item">
+                    <h6> Bilety wydarzenia : <p>${event.tickets ! "Brak informacji o biletach"}</p></h6>
                 </div>
 
                 <div class="property-item">
-                    <a href="${event.urls}" class="readmore-btn">Find out more</a>
+                    <h6> <a href="${event.urls ! "brak"}" class="readmore-btn">Find out more</a> </h6>
+
                 </div>
 
             </div>
 
-            <div class="col-10">
+            <div class="col-8">
                 <div class="property-item">
-                    <h5> Nazwa wydarzenia : ${event.name}</h5>
-                    <p>Opis wydarzenia : ${event.descLong}</p>
+                    <h4> Nazwa wydarzenia : ${event.name ! "Brak nazwy"}</h4>
+                    <p>Opis wydarzenia : ${event.descLong ! "Brak opisu"}</p>
                 </div>
             </div>
 

@@ -1,11 +1,5 @@
 <#include "header-section.ftlh">
 <#include "search-section.ftlh">
-
-<#if errorMessage??>
-    <span style="color: #ff0000;">${errorMessage}</span><br/><br/>
-</#if>
-
-<#if event??>
 <section class="intro-section spad">
     <div class="container">
         <div class="section-title">
@@ -22,11 +16,9 @@
                         ${eventDto.startDate ! "Brak informacji"}
                     </h3>
                     ${eventDto.descLong ! " Brak informacji"}
-                    <a href="#" class="readmore-btn">Find out more</a>
                 </div>
             </div>
         </div>
     </div>
 </section>
-</#if>
 <#include "footer-section.ftlh">

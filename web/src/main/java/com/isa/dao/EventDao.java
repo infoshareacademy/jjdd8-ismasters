@@ -7,6 +7,7 @@ import org.slf4j.LoggerFactory;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import javax.persistence.Query;
 import java.util.List;
 import java.util.Optional;
 
@@ -24,7 +25,6 @@ public class EventDao {
     }
 
     public List<Event> findAll() {
-
         return em.createNamedQuery("Event.findAll").getResultList();
     }
 
@@ -39,6 +39,4 @@ public class EventDao {
     public Optional<Event> editEvent(Event event) {
         return Optional.ofNullable(em.merge(event));
     }
-
-
 }
