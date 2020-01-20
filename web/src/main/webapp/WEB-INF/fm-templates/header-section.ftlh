@@ -46,30 +46,14 @@
     </a>
     <nav class="header-nav">
         <ul class="main-menu">
-            <li><a href="news.html">Wydarzenia</a></li>
-            <li><a href="contact.html">Kontakt</a></li>
+            <li><a href="single?id=2">Widok pojedynczego wydarzenia</a></li>
+            <li><a href="list-events">Lista wydarzeń</a></li>
         </ul>
         <div class="header-right">
             <div class="user-panel">
-                <a href="#" class="login">Zaloguj się</a>
-                <a href="#" class="register rounded-pill">Zarejestruj się</a>
+                <a href="#" class="register rounded-pill">Zaloguj się</a>
             </div>
         </div>
     </nav>
-    <div class="slicknav_menu"><a href="#" aria-haspopup="true" role="button" tabindex="0" class="slicknav_btn slicknav_collapsed" style="outline: none;">
-            <span class="slicknav_menutxt">MENU</span><span class="slicknav_icon"><span class="slicknav_icon-bar"></span>
-                <span class="slicknav_icon-bar"></span><span class="slicknav_icon-bar"></span></span></a>
-        <ul class="slicknav_nav slicknav_hidden" aria-hidden="true" role="menu" style="display: none;">
-            <li class="header-right-warp"><div class="header-right">
-                    <div class="user-panel">
-                        <a href="#" class="login">Zaloguj się</a>
-                        <a href="#" class="register">Zarejestruj się</a>
-                    </div>
-                </div>
-            </li>
-            <li><a href="news.html" role="menuitem" tabindex="-1">Wydarzenia</a></li>
-            <li><a href="contact.html" role="menuitem" tabindex="-1">Kontakt</a></li>
-        </ul>
-    </div>
 </header>
 <!-- Header Section end -->

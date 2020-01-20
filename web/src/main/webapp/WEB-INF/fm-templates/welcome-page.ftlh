@@ -11,7 +11,7 @@
                 <div class="property-item">
                     <div class="pi-image">
                         <img src="/img/1.jpg" alt="">
-                        <div class="pi-badge new">Ulubione</div>
+                        <div class="pi-badge new">Witamy w aplikacji 3 City Event's</div>
                     </div>
                     <h5> Nazwa wydarzenia : ${eventDTO_mock.name}</h5>
                     <p>Krótki opis : ${eventDTO_mock.descShort}</p>
