@@ -12,7 +12,6 @@ import javax.annotation.PostConstruct;
 import javax.ejb.Singleton;
 import javax.ejb.Startup;
 import javax.inject.Inject;
-import javax.transaction.Transactional;
 import java.io.IOException;
 
 @Singleton
@@ -42,6 +41,6 @@ public class ApiInitialization {
 
         organizersManager.setRelations(converter.buildClientRequest(constantValuesBean.getOrganizersApi()));
         placeManager.setRelations(converter.buildClientRequest(constantValuesBean.getPlaceApi()));
-        eventManager.setRelations(converter.buildClientRequest(constantValuesBean.getEventsApi()));
+        eventManager.setRelationsToEntity(converter.buildClientRequest(constantValuesBean.getEventsApi()));
     }
 }

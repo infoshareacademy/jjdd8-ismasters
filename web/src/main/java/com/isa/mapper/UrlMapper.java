@@ -1,5 +1,6 @@
 package com.isa.mapper;
 
+import com.isa.domain.dto.UrlDto;
 import com.isa.domain.entity.Url;
 import com.isa.domain.api.WeblinkExternal;
 import org.slf4j.Logger;
@@ -23,6 +24,20 @@ public class UrlMapper {
         logger.info("Url mapping to Entity-> all parameters set");
 
         return url;
+    }
+
+    public UrlDto mapApiViewToDto(Url url) {
+        logger.info("Url mapping to DTO");
+
+        UrlDto urlDto = new UrlDto();
+
+        urlDto.setWebsite(url.getWwwUrl());
+        urlDto.setFbLink(url.getFbUrl());
+        urlDto.setTicketLink(url.getTickerUrl());
+
+        logger.info("Url mapping to DTO-> all parameters set");
+
+        return urlDto;
     }
 
 }
