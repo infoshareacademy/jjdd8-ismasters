@@ -39,11 +39,16 @@ public class PlaceManager {
     @Inject
     private AddressMapper addressMapper;
 
-    public void setRelations(String jsonString) throws IOException {
+    public void setRelations(String jsonString) {
 
        // addressManager.setRelationsAdress(jsonString);
 
-        List<PlaceApi> list = apiDataParser.parse(jsonString, PlaceApi.class);
+        List<PlaceApi> list = null;
+        try {
+            list = apiDataParser.parse(jsonString, PlaceApi.class);
+        } catch (IOException e) {
+            logger.error(e.getMessage(), e);
+        }
 
         list.stream()
                 .forEach(p ->{

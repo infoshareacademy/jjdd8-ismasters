@@ -8,15 +8,15 @@
     <meta http-equiv="pragma" content="no-cache">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
-    <title>Załaduj plik JSON z repozytorium</title>
+    <title>Load JSON file</title>
 </head>
 <body>
 <form method="post" action="/admin/upload" enctype="multipart/form-data">
 <h2>Wgraj plik z repozytorium w formacie JSON</h2><br>
-    File: <input type="file" name="organizers"/><br/>
-    File: <input type="file" name="places"/><br/>
-    File: <input type="file" name="events"/><br/>
-    <input type="submit" name="save" value="Dodaj plik"/><br/><br/>
+    Organizers: <input type="file" name="organizers"/><br/>
+    Places: <input type="file" name="places"/><br/>
+    Events: <input type="file" name="events"/><br/>
+    <input type="submit" name="save" value="Add file"/><br/><br/>
 </form>
 </body>
 </html>

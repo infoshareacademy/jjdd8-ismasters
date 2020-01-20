@@ -1,20 +1,28 @@
 package com.isa.service.constant;
 
-import com.isa.service.ApiInitialization;
-
 import javax.ejb.Stateless;
 
 @Stateless
 public class ConstantValuesBean {
 
-    private final String eventsFile = ApiInitialization.class.getClassLoader().getResource("/events.json").getPath();
-    private final String organizersFile = ApiInitialization.class.getClassLoader().getResource("/organizers.json").getPath();
-    private final String placeFile = ApiInitialization.class.getClassLoader().getResource("/places.json").getPath();
+    private final String eventsFile = "events.json";
+    private final String organizersFile = "organizers.json";
+    private final String placeFile = "places.json";
 
     private final String eventsApi = "http://isa-proxy.blueazurit.com/gdansk-events/events.json";
     private final String organizersApi = "http://isa-proxy.blueazurit.com/gdansk-events/organizers.json";
     private final String placeApi = "http://isa-proxy.blueazurit.com/gdansk-events/places.json";
 
+
+    private boolean externalApiStatus = false;
+
+    public boolean getExternalApiStatus() {
+        return externalApiStatus;
+    }
+
+    public void setExternalApiStatus(boolean externalApiStatus) {
+        this.externalApiStatus = externalApiStatus;
+    }
 
     public String getEventsApi() {
         return eventsApi;
@@ -39,7 +47,6 @@ public class ConstantValuesBean {
     public String getPlaceFile() {
         return placeFile;
     }
-
 
 
 }

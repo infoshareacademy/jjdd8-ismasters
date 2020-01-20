@@ -38,13 +38,13 @@ public class AdminFilter implements Filter {
         logger.info("Admin paramtere inf filter: {}", adminStatus);
 
         if (adminStatus == null || adminStatus.isEmpty()) {
-            writer.println("Ta strona wymaga uprawnień administratora");
+            writer.println("<h2>Admin privileges required</h2>");
             logger.info("Admin variable not set");
         } else {
             logger.info("Session admin value: {}", adminStatus);
             if (!adminStatus.equals("true")) {
                 logger.info("Session attribute admin set to: {}", adminStatus);
-                writer.println("Ta strona wymaga uprawnień administratora");
+                writer.println("<h2>Admin privileges required</h2>");
             } else {
                 filterChain.doFilter(servletRequest, servletResponse);
             }

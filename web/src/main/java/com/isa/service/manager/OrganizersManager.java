@@ -25,9 +25,14 @@ public class OrganizersManager {
     @Inject
     private ApiDataParser apiDataParser;
 
-    public void setRelations(String filename) throws IOException {
+    public void setRelations(String filename)  {
 
-        List<OrganizerExternal> list = apiDataParser.parse(filename, OrganizerExternal.class);
+        List<OrganizerExternal> list = null;
+        try {
+            list = apiDataParser.parse(filename, OrganizerExternal.class);
+        } catch (IOException e) {
+            logger.error(e.getMessage(), e);
+        }
 
         logger.info("Zaimportowano listę organizatorów");
 

@@ -1,7 +1,12 @@
 package com.isa.servlet;
 
 import com.isa.config.TemplateProvider;
+import com.isa.service.ConverterRequest;
 import com.isa.service.FileUploadProcessor;
+import com.isa.service.constant.ConstantValuesBean;
+import com.isa.service.manager.EventManager;
+import com.isa.service.manager.OrganizersManager;
+import com.isa.service.manager.PlaceManager;
 import freemarker.template.Template;
 import freemarker.template.TemplateException;
 import org.slf4j.Logger;
@@ -15,6 +20,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.Part;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.io.UnsupportedEncodingException;
@@ -30,6 +36,19 @@ public class JsonFileUpload extends HttpServlet {
 
     @Inject
     private TemplateProvider templateProvider;
+
+    @Inject
+    private EventManager eventManager;
+
+    @Inject
+    private OrganizersManager organizersManager;
+
+    @Inject
+    private ConverterRequest converter;
+
+    @Inject
+    private PlaceManager placeManager;
+
 
     Logger logger = LoggerFactory.getLogger(this.getClass().getName());
 
@@ -49,37 +68,52 @@ public class JsonFileUpload extends HttpServlet {
     }
 
     @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        setEncoding(req, resp);
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException {
+        try {
+            setEncoding(req, resp);
+        } catch (UnsupportedEncodingException e) {
+            logger.error(e.getMessage(), e);
+        }
         logger.info("Session id: " + req.getSession().getId());
         logger.info("doPost invoked");
-        PrintWriter writer = resp.getWriter();
 
-        Part EventsJson = req.getPart("events");
-        Part PlacesJson = req.getPart("places");
-        Part OrganizersJson = req.getPart("organizers");
-        String EventsFilePath = "";
-        String PlacesFilePath = "";
-        String OrganizersFilePath = "";
+        PrintWriter writer = null;
+        Part eventsJson = null;
+        Part placesJson = null;
+        Part organizersJson = null;
         try {
-            EventsFilePath = fileUploadProcessor.getUploadFilePath() + fileUploadProcessor.uploadFile(EventsJson).getName();
-            PlacesFilePath = fileUploadProcessor.getUploadFilePath() + fileUploadProcessor.uploadFile(PlacesJson).getName();
-            OrganizersFilePath = fileUploadProcessor.getUploadFilePath() + fileUploadProcessor.uploadFile(OrganizersJson).getName();
-            writer.println("Plik " + EventsFilePath + " został załadowany");
-            writer.println("Plik " + OrganizersFilePath + " został załadowany");
-            writer.println("Plik " + PlacesFilePath + " został załadowany");
-        } catch (Exception e) {
-            logger.warn("Upload file not found: " + e.getMessage());
+            writer = resp.getWriter();
+
+            eventsJson = req.getPart("events");
+            placesJson = req.getPart("places");
+            organizersJson = req.getPart("organizers");
+        } catch (IOException e) {
+            logger.error(e.getMessage(), e);
         }
 
-        req.getSession().setAttribute("EventsFilePath", EventsFilePath);
-        req.getSession().setAttribute("PlacesFilePath", PlacesFilePath);
-        req.getSession().setAttribute("OrganizersFilePath", OrganizersFilePath);
-        logger.info("Events.json file path set to: " + EventsFilePath);
-        logger.info("Organizer.json file path set to: " + OrganizersFilePath);
-        logger.info("Places.json file path set to: " + PlacesFilePath);
+        String eventsFilePath = "";
+        String placesFilePath = "";
+        String organizersFilePath = "";
+
+        try {
+            eventsFilePath = fileUploadProcessor.getUploadFilePath() + fileUploadProcessor.uploadFile(eventsJson).getName();
+            placesFilePath = fileUploadProcessor.getUploadFilePath() + fileUploadProcessor.uploadFile(placesJson).getName();
+            organizersFilePath = fileUploadProcessor.getUploadFilePath() + fileUploadProcessor.uploadFile(organizersJson).getName();
+            writer.println("Plik " + eventsFilePath + " został załadowany");
+            writer.println("Plik " + organizersFilePath + " został załadowany");
+            writer.println("Plik " + placesFilePath + " został załadowany");
+        } catch (IOException e) {
+            logger.error(e.getMessage(), e);
+        }
 
 
+        organizersManager.setRelations(eventsFilePath);
+        placeManager.setRelations(placesFilePath);
+        eventManager.setRelationsToEntity(eventsFilePath);
+
+        logger.info("Events.json file path set to: " + eventsFilePath);
+        logger.info("Organizer.json file path set to: " + organizersFilePath);
+        logger.info("Places.json file path set to: " + placesFilePath);
     }
 
     private void setEncoding(HttpServletRequest req, HttpServletResponse resp) throws UnsupportedEncodingException {

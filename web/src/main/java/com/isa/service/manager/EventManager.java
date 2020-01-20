@@ -54,10 +54,15 @@ public class EventManager {
     @Inject
     private PlaceMapper placeMapper;
 
-    public void setRelationsToEntity(String jsonString) throws IOException {
+    public void setRelationsToEntity(String jsonString) {
 
-        List<EventApi> list = apiDataParser.parse(jsonString, EventApi.class);
-        logger.info("Zaimportowano listę Wydarzeń");
+        List<EventApi> list = null;
+        try {
+            list = apiDataParser.parse(jsonString, EventApi.class);
+            logger.info("Zaimportowano listę Wydarzeń");
+        } catch (IOException e) {
+            logger.error(e.getMessage(), e);
+        }
 
         list.stream()
                 .forEach(e -> {

@@ -37,7 +37,7 @@ public class ApiInitialization {
 
 
     @PostConstruct
-    public void apiInitialization() throws IOException {
+    public void apiInitialization()  {
 
         organizersManager.setRelations(converter.buildClientRequest(constantValuesBean.getOrganizersApi()));
         placeManager.setRelations(converter.buildClientRequest(constantValuesBean.getPlaceApi()));

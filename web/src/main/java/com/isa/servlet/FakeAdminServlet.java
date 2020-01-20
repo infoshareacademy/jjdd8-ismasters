@@ -35,7 +35,7 @@ public class FakeAdminServlet extends HttpServlet {
 //        }
 
         if (adminStatus == null || adminStatus.isEmpty()) {
-            writer.println("Podaj parametr, aby ustawić status administratora");
+            writer.println("Set admin parameter to proceed");
         } else {
             logger.info("Passed admin value: {}", adminStatus);
             if (adminStatus.equals("true")) {
