@@ -18,9 +18,6 @@ public class TicketType {
     @OneToMany (fetch = FetchType.LAZY, mappedBy = "ticketType")
     private List<Event> events;
 
-    public TicketType(String ticketTypeName) {
-        this.ticketTypeName = ticketTypeName;
-    }
 
     public TicketType() {
 
