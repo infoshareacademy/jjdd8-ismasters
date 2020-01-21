@@ -12,7 +12,7 @@ public class SearchService {
     @EJB
     private EventService eventService;
 
-    public List<EventDto> searchEvents(String string) {
+    public List<EventDto> searchByName(String string) {
         return eventService.searchByName(string);
     }
 }

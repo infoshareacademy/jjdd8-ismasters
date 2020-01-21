@@ -40,19 +40,19 @@ public class SearchEvents extends HttpServlet {
             return;
         }
 
-        List<EventDto> foundEvents = new ArrayList<>();
+        List<EventDto> eventDtoList = new ArrayList<>(searchService.searchByName(search));
 
-        foundEvents.addAll(searchService.searchEvents(search));
-
-        Template template = templateProvider.getTemplate(getServletContext(), "event-list.ftlh");
-        Map<String, Object> model = new HashMap<>();
-
-        model.put("foundEvents", foundEvents);
-
-        try {
-            template.process(model, resp.getWriter());
-        } catch (TemplateException e) {
-            logger.error(e.getMessage());
+        if (eventDtoList.isEmpty()) {
+            resp.setStatus(HttpServletResponse.SC_BAD_REQUEST);
+        } else {
+            Template template = templateProvider.getTemplate(getServletContext(), "event-list.ftlh");
+            Map<String, Object> model = new HashMap<>();
+            model.put("eventDtoList", eventDtoList);
+            try {
+                template.process(model, resp.getWriter());
+            } catch (TemplateException e) {
+                logger.error(e.getMessage());
+            }
         }
 
     }
