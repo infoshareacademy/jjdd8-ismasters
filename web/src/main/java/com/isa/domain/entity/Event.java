@@ -3,9 +3,12 @@ package com.isa.domain.entity;
 import javax.persistence.*;
 import java.util.List;
 
-@NamedQueries(
-        @NamedQuery(name = "Event.findAll", query = "SELECT e FROM Event e")
-)
+@NamedQueries({
+        @NamedQuery(name = "Event.findAll",
+                query = "SELECT e FROM Event e"),
+//        @NamedQuery(name = "Event.findByName",
+//                query = "SELECT e FROM Event e WHERE e.event.name LIKE :search"),
+})
 
 @Entity
 @Table(name = "event")

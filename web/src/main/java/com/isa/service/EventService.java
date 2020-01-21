@@ -44,9 +44,19 @@ public class EventService {
         return eventMapper.mapEntityToDto(event);
     }
 
-    public List<EventDto> searchEvents(String search) {
-        return eventDao.searchEvents(search).stream()
-                .map((event -> eventMapper.mapEntityToDto(event)))
-                .collect(Collectors.toList());
+    public List<EventDto> searchByName(String search) {
+
+        List<EventDto> eventDtoList = new ArrayList<>();
+
+        eventDao.searchEvents(search)
+                .forEach(event -> eventDtoList.add(eventManager.setRelationsToDTO(event)));
+
+        return eventDtoList;
     }
+
+//    public List<EventDto> searchEvents(String search) {
+//        return eventDao.searchEvents(search).stream()
+//                .map((event -> eventMapper.mapEntityToDto(event)))
+//                .collect(Collectors.toList());
+//    }
 }

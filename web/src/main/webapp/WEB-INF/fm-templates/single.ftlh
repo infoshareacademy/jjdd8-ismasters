@@ -9,25 +9,25 @@
             <div class="col-3">
 
                 <div class="property-item">
-                    <h6> Miejsce wydarzenia : <p>${event.place ! "Nie podano"}</p></h6>
+                    <h6> Miejsce wydarzenia : <p>${eventDto.place ! "Nie podano"}</p></h6>
                 </div>
 
                 <div class="property-item">
-                    <h6> Organizato wydarzenia : <p>${event.organizer ! "Organizator nie znany"}</p></h6>
-                </div>
-
-
-                <div class="property-item">
-                    <h6> Data wydarzenia : <p>${event.startDate ! "Data nie znana"}</p></h6>
+                    <h6> Organizato wydarzenia : <p>${eventDto.organizer ! "Organizator nie znany"}</p></h6>
                 </div>
 
 
                 <div class="property-item">
-                    <h6> Bilety wydarzenia : <p>${event.tickets ! "Brak informacji o biletach"}</p></h6>
+                    <h6> Data wydarzenia : <p>${eventDto.startDate ! "Data nie znana"}</p></h6>
+                </div>
+
+
+                <div class="property-item">
+                    <h6> Bilety wydarzenia : <p>${eventDto.tickets ! "Brak informacji o biletach"}</p></h6>
                 </div>
 
                 <div class="property-item">
-                    <h6> <a href="${event.urls ! "brak"}" class="readmore-btn">Find out more</a> </h6>
+                    <h6> <a href="${eventDto.urls ! "brak"}" class="readmore-btn">Find out more</a> </h6>
 
                 </div>
 
@@ -35,8 +35,8 @@
 
             <div class="col-8">
                 <div class="property-item">
-                    <h4> Nazwa wydarzenia : ${event.name ! "Brak nazwy"}</h4>
-                    <p>Opis wydarzenia : ${event.descLong ! "Brak opisu"}</p>
+                    <h4> Nazwa wydarzenia : ${eventDto.name ! "Brak nazwy"}</h4>
+                    <p>Opis wydarzenia : ${eventDto.descLong ! "Brak opisu"}</p>
                 </div>
             </div>
 

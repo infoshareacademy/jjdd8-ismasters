@@ -13,6 +13,6 @@ public class SearchService {
     private EventService eventService;
 
     public List<EventDto> searchEvents(String string) {
-        return eventService.searchEvents(string);
+        return eventService.searchByName(string);
     }
 }

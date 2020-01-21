@@ -44,7 +44,7 @@ public class SearchEvents extends HttpServlet {
 
         foundEvents.addAll(searchService.searchEvents(search));
 
-        Template template = templateProvider.getTemplate(getServletContext(), "search.ftlh");
+        Template template = templateProvider.getTemplate(getServletContext(), "event-list.ftlh");
         Map<String, Object> model = new HashMap<>();
 
         model.put("foundEvents", foundEvents);
