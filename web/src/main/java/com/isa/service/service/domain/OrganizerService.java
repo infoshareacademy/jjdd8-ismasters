@@ -1,4 +1,4 @@
-package com.isa.service.manager;
+package com.isa.service.service.domain;
 
 import com.isa.dao.OrganizersDao;
 import com.isa.domain.api.OrganizerExternal;
@@ -13,7 +13,7 @@ import java.io.IOException;
 import java.util.List;
 
 @ApplicationScoped
-public class OrganizersManager {
+public class OrganizerService {
     private final Logger logger = LoggerFactory.getLogger(getClass().getName());
 
     @Inject
@@ -32,7 +32,7 @@ public class OrganizersManager {
         logger.info("Zaimportowano listę organizatorów");
 
         list.stream()
-                .map(o->organizerMapper.mapApiViewToEntity(o))
+                .map(o->organizerMapper.mapViewToEntity(o))
                 .forEach(o ->{
                     organizersDao.addNewOrganizer(o);
                     logger.debug("Organizer {}",o.getId() );

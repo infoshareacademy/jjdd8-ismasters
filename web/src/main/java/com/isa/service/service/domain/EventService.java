@@ -1,4 +1,4 @@
-package com.isa.service.manager;
+package com.isa.service.service.domain;
 
 import com.isa.dao.EventDao;
 import com.isa.dao.OrganizersDao;
@@ -26,7 +26,7 @@ import java.io.IOException;
 import java.util.List;
 
 @Stateless
-public class EventManager {
+public class EventService {
 
     private final Logger logger = LoggerFactory.getLogger(this.getClass().getName());
 
@@ -64,12 +64,12 @@ public class EventManager {
 
                     Long externalOrganizerId = e.getOrganizerExternal().getId();
                     Organizer organizer = organizersDao.findByApiId(externalOrganizerId);
-                    Event event = eventMapper.mapApiViewToEntity(e);
+                    Event event = eventMapper.mapApiToEntity(e);
 
                     logger.info("Organizer {},{}", externalOrganizerId, organizer);
 
                     event.setOrganizer(organizer);
-                    Url url = urlMapper.mapApiViewToEntity(e.getWeblinkExternal());
+                    Url url = urlMapper.mapApiToEntity(e.getWeblinkExternal());
                     event.setUrl(url);
 
                     int placeExternalId = e.getPlaceApi().getApiId();
@@ -83,7 +83,6 @@ public class EventManager {
                     eventDao.addNewEvent(event);
                     logger.info("Dodano do bazy {}", event);
                 });
-
     }
 
 
@@ -105,6 +104,5 @@ public class EventManager {
         eventDto.setPlace(placeDto);
 
         return eventDto;
-
     }
 }

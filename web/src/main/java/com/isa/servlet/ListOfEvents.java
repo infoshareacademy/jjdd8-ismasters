@@ -45,7 +45,6 @@ public class ListOfEvents extends HttpServlet {
 
         eventDtoList.addAll(eventService.findAll());
 
-
         model.put("eventDtoList", eventDtoList);
 
         try {

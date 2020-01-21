@@ -14,7 +14,7 @@ public class EventMapper {
 
     private final Logger logger = LoggerFactory.getLogger(getClass().getName());
 
-    public Event mapApiViewToEntity(EventApi eventApiParser) {
+    public Event mapApiToEntity(EventApi eventApiParser) {
         logger.info("Event mapping to Entity");
 
         Event event = new Event();

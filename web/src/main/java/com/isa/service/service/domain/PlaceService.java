@@ -1,4 +1,4 @@
-package com.isa.service.manager;
+package com.isa.service.service.domain;
 
 import com.isa.dao.AddressDao;
 import com.isa.dao.PlaceDao;
@@ -17,7 +17,7 @@ import java.io.IOException;
 import java.util.List;
 
 @Stateless
-public class PlaceManager {
+public class PlaceService {
 
     private final Logger logger = LoggerFactory.getLogger(getClass().getName());
 
@@ -27,21 +27,15 @@ public class PlaceManager {
     @Inject
     private PlaceDao placeDao;
 
-    @Inject
-    private AddressDao addressDao;
 
     @Inject
     private ApiDataParser apiDataParser;
 
-    @Inject
-    private AddressManager addressManager;
 
     @Inject
     private AddressMapper addressMapper;
 
     public void setRelations(String jsonString) throws IOException {
-
-       // addressManager.setRelationsAdress(jsonString);
 
         List<PlaceApi> list = apiDataParser.parse(jsonString, PlaceApi.class);
 
@@ -49,8 +43,8 @@ public class PlaceManager {
                 .forEach(p ->{
                     Address address = new Address();
                     Place place = new Place();
-                    address = addressMapper.mapApiViewToEntity(p.getAddressApi());
-                    place = placeMapper.mapApiViewToEntity(p);
+                    address = addressMapper.mapApiToEntity(p.getAddressApi());
+                    place = placeMapper.mapApiToEntity(p);
                     place.setAddress(address);
                     placeDao.addNewPlace(place);
                     logger.debug("Place {}",place );

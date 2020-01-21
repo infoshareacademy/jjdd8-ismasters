@@ -10,9 +10,10 @@ import javax.ejb.Stateless;
 
 @Stateless
 public class UrlMapper {
+
     private final Logger logger = LoggerFactory.getLogger(getClass().getName());
 
-    public Url mapApiViewToEntity(WeblinkExternal weblinkExternal) {
+    public Url mapApiToEntity(WeblinkExternal weblinkExternal) {
         logger.info("Url mapping to Entity");
 
         Url url = new Url();
@@ -25,6 +26,7 @@ public class UrlMapper {
 
         return url;
     }
+
 
     public UrlDto mapApiViewToDto(Url url) {
         logger.info("Url mapping to DTO");

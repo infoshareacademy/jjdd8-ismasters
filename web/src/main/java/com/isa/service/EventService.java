@@ -3,7 +3,6 @@ package com.isa.service;
 import com.isa.dao.EventDao;
 import com.isa.domain.dto.EventDto;
 import com.isa.mapper.EventMapper;
-import com.isa.service.manager.EventManager;
 
 import javax.ejb.Stateless;
 import javax.inject.Inject;
@@ -11,7 +10,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.isa.domain.entity.Event;
-import com.isa.mock.EventDTO_mock;
 
 import java.util.stream.Collectors;
 
@@ -20,7 +18,7 @@ public class EventService {
 
 
     @Inject
-    private EventManager eventManager;
+    private com.isa.service.service.domain.EventService eventService;
 
     @Inject
     private EventMapper eventMapper;
@@ -34,14 +32,14 @@ public class EventService {
         List<EventDto> eventDtoList = new ArrayList<>();
 
         eventDao.findAll()
-                .forEach(event -> eventDtoList.add(eventManager.setRelationsToDTO(event)));
+                .forEach(event -> eventDtoList.add(eventService.setRelationsToDTO(event)));
 
         return eventDtoList;
     }
 
     public EventDto findById(Long id) {
         Event event = eventDao.findById(id).orElseThrow();
-        return eventMapper.mapEntityToDto(event);
+        return eventService.setRelationsToDTO(event);
     }
 
     public List<EventDto> searchEvents(String search) {
