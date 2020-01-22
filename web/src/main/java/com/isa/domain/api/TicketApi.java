@@ -6,15 +6,15 @@ import javax.json.bind.annotation.JsonbProperty;
 
 public class TicketApi {
 
-    @JsonbProperty("type")
+
     @JsonIgnoreProperties(ignoreUnknown = true)
     private String type;
 
-    @JsonbProperty("startTicket")
+
     @JsonIgnoreProperties(ignoreUnknown = true)
     private String startTicket;
 
-    @JsonbProperty("endTicket")
+
     @JsonIgnoreProperties(ignoreUnknown = true)
     private String endTicket;
 

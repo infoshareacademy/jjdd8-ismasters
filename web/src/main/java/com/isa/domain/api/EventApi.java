@@ -24,13 +24,9 @@ public class EventApi {
     @JsonProperty("urls")
     private WeblinkExternal weblinkExternal;
 
-
-    @JsonProperty("schedule")
-    @JsonIgnore
+    @JsonIgnoreProperties(ignoreUnknown = true)
     private String schedule;
 
-
-    @JsonProperty("attachments")
     @JsonIgnoreProperties(ignoreUnknown = true)
     private List<AttachmentExternal> attachments;
 
@@ -160,6 +156,14 @@ public class EventApi {
 
     public void setTicketApi(TicketApi ticketApi) {
         this.ticketApi = ticketApi;
+    }
+
+    public String getSchedule() {
+        return schedule;
+    }
+
+    public void setSchedule(String schedule) {
+        this.schedule = schedule;
     }
 
     @Override
