@@ -32,7 +32,7 @@ public class EventDao {
         return Optional.ofNullable(em.find(Event.class, id));
     }
 
-    public List<Event> searchEvents(String search) {
+    public List<Event> searchByName(String search) {
         Query q = em.createQuery("SELECT e FROM Event e WHERE e.name LIKE :search");
         q.setParameter("search", "%" + search + "%");
         return q.getResultList();
