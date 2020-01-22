@@ -25,6 +25,11 @@ public class EventApi {
     private WeblinkExternal weblinkExternal;
 
 
+    @JsonProperty("schedule")
+    @JsonIgnore
+    private String schedule;
+
+
     @JsonProperty("attachments")
     @JsonIgnoreProperties(ignoreUnknown = true)
     private List<AttachmentExternal> attachments;

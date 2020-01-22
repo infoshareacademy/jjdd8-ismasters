@@ -23,7 +23,9 @@ import org.slf4j.LoggerFactory;
 import javax.ejb.Stateless;
 import javax.inject.Inject;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Stateless
 public class EventService {
@@ -86,23 +88,24 @@ public class EventService {
     }
 
 
+    public List<EventDto> findAll() {
 
-    public EventDto convertToLongDto(Event event) {
+        List<EventDto> eventDtoList = new ArrayList<>();
 
-        EventDto eventDto = new EventDto();
+        eventDao.findAll()
+                .forEach(event -> eventDtoList.add(eventMapper.mapEntityToDto(event)));
 
-        eventDto = eventMapper.mapEntityToDto(event);
+        return eventDtoList;
+    }
 
-        OrganizerDto organizerDto = organizerMapper.mapApiViewToDto(event.getOrganizer());
+    public EventDto findById(Long id) {
+        Event event = eventDao.findById(id).orElseThrow();
+        return eventMapper.mapEntityToDto(event);
+    }
 
-        UrlDto urlDto = urlMapper.mapApiViewToDto(event.getUrl());
-
-        PlaceDto placeDto = placeMapper.mapApiViewToDto(event.getPlace());
-
-        eventDto.setOrganizer(organizerDto);
-        eventDto.setUrls(urlDto);
-        eventDto.setPlace(placeDto);
-
-        return eventDto;
+    public List<EventDto> searchEvents(String search) {
+        return eventDao.searchEvents(search).stream()
+                .map((event -> eventMapper.mapEntityToDto(event)))
+                .collect(Collectors.toList());
     }
 }
