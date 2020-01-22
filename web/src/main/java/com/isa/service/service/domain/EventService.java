@@ -27,6 +27,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
+
 @Stateless
 public class EventService {
 
@@ -68,7 +69,7 @@ public class EventService {
                     Organizer organizer = organizersDao.findByApiId(externalOrganizerId);
                     Event event = eventMapper.mapApiToEntity(e);
 
-                    logger.info("Organizer {},{}", externalOrganizerId, organizer);
+                    logger.debug("Organizer {},{}", externalOrganizerId, organizer);
 
                     event.setOrganizer(organizer);
                     Url url = urlMapper.mapApiToEntity(e.getWeblinkExternal());
@@ -77,13 +78,13 @@ public class EventService {
                     int placeExternalId = e.getPlaceApi().getApiId();
 
                     Place place = placeDao.findByApiId(placeExternalId);
-                    logger.info("Place id {}, {}", placeExternalId, place);
+                    logger.debug("Place id {}, {}", placeExternalId, place);
 
                     event.setPlace(place);
-                    logger.info("Przed zapisem {}", event);
+                    logger.debug("Przed zapisem {}", event);
 
                     eventDao.addNewEvent(event);
-                    logger.info("Dodano do bazy {}", event);
+                    logger.debug("Dodano do bazy {}", event);
                 });
     }
 
@@ -98,10 +99,12 @@ public class EventService {
         return eventDtoList;
     }
 
+
     public EventDto findById(Long id) {
         Event event = eventDao.findById(id).orElseThrow();
         return eventMapper.mapEntityToDto(event);
     }
+
 
     public List<EventDto> searchEvents(String search) {
         return eventDao.searchEvents(search).stream()

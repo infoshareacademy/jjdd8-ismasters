@@ -33,6 +33,7 @@ public class EventMapper {
     public Event mapApiToEntity(EventApi eventApiParser) {
         logger.info("Event mapping to Entity");
 
+
         Event event = new Event();
 
         event.setApiId(eventApiParser.getApiId());
@@ -44,16 +45,17 @@ public class EventMapper {
         event.setCategoryId(eventApiParser.getCategoryEventId());
         event.setActive(eventApiParser.getActiveEvent());
 
-        logger.info("Event mapping to Entity -> all parameters are set");
+        logger.debug("Event mapping to Entity -> all parameters are set");
 
         return event;
     }
 
     public EventDto mapEntityToDto(Event eventEntity) {
-        logger.info("Event mapping to DTO");
+        logger.debug("Event mapping to DTO");
 
         EventDto eventDto = new EventDto();
 
+        eventDto.setId(eventEntity.getId());
         eventDto.setApiExternalId(eventEntity.getApiId());
         eventDto.setStartDate(eventEntity.getStartDate());
         eventDto.setEndDate(eventEntity.getEndDate());
@@ -66,7 +68,7 @@ public class EventMapper {
 
         OrganizerDto organizerDto = organizerMapper.mapApiViewToDto(eventEntity.getOrganizer());
 
-        UrlDto urlDto = urlMapper.mapApiViewToDto(eventEntity.getUrl());
+        UrlDto urlDto = urlMapper.mapApiToDto(eventEntity.getUrl());
 
         PlaceDto placeDto = placeMapper.mapApiViewToDto(eventEntity.getPlace());
 

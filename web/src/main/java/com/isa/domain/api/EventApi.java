@@ -52,6 +52,7 @@ public class EventApi {
     @JsonIgnoreProperties(ignoreUnknown = true)
     private TicketApi ticketApi;
 
+
     public Long getApiId() {
         return apiId;
     }

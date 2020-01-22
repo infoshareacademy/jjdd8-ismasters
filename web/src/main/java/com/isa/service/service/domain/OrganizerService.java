@@ -29,7 +29,7 @@ public class OrganizerService {
 
         List<OrganizerExternal> list = apiDataParser.parse(filename, OrganizerExternal.class);
 
-        logger.info("Zaimportowano listę organizatorów");
+        logger.debug("Zaimportowano listę organizatorów");
 
         list.stream()
                 .map(o->organizerMapper.mapViewToEntity(o))
@@ -38,6 +38,6 @@ public class OrganizerService {
                     logger.debug("Organizer {}",o.getId() );
                 });
 
-        logger.info("Organizatorzy zmapowani i zaimportowani do bazy");
+        logger.debug("Organizatorzy zmapowani i zaimportowani do bazy");
     }
 }
