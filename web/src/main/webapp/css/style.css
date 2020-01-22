@@ -78,8 +78,8 @@ a:focus {
 
 ul,
 ol {
-	padding-top: 10px;
-	margin-top: 10px;
+	padding: 0;
+	margin: 0;
 }
 
 /*-------
@@ -622,8 +622,8 @@ Hero section
  -------------------*/
 
 .hero-section {
-	height: 60%;
-	padding-top: 5%;
+	height: 80%;
+	padding-top: 20%;
 }
 
 .hero-warp {

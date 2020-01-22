@@ -2,9 +2,9 @@ package com.isa.service;
 
 
 import com.isa.service.constant.ConstantValuesBean;
-import com.isa.service.service.domain.EventService;
-import com.isa.service.service.domain.OrganizerService;
-import com.isa.service.service.domain.PlaceService;
+import com.isa.service.manager.EventManager;
+import com.isa.service.manager.OrganizersManager;
+import com.isa.service.manager.PlaceManager;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -21,26 +21,26 @@ public class ApiInitialization {
     private final Logger logger = LoggerFactory.getLogger(getClass().getName());
 
     @Inject
-    private EventService eventService;
+    private EventManager eventManager;
 
     @Inject
-    private OrganizerService organizerService;
+    private OrganizersManager organizersManager;
 
     @Inject
     private ConstantValuesBean constantValuesBean;
 
     @Inject
-    private GenerateRequest generateRequest;
+    private ConverterRequest converter;
 
     @Inject
-    private PlaceService placeService;
+    private PlaceManager placeManager;
 
 
     @PostConstruct
     public void apiInitialization() throws IOException {
 
-        organizerService.inputToDatabase(generateRequest.buildClientRequest(constantValuesBean.getOrganizersApi()));
-        placeService.inputToDatabase(generateRequest.buildClientRequest(constantValuesBean.getPlaceApi()));
-        eventService.inputToDatabase(generateRequest.buildClientRequest(constantValuesBean.getEventsApi()));
+        organizersManager.setRelations(converter.buildClientRequest(constantValuesBean.getOrganizersApi()));
+        placeManager.setRelations(converter.buildClientRequest(constantValuesBean.getPlaceApi()));
+        eventManager.setRelationsToEntity(converter.buildClientRequest(constantValuesBean.getEventsApi()));
     }
 }

@@ -2,7 +2,7 @@ package com.isa.servlet;
 
 import com.isa.config.TemplateProvider;
 import com.isa.domain.dto.EventDto;
-import com.isa.service.service.domain.EventService;
+import com.isa.service.EventService;
 import freemarker.template.Template;
 import freemarker.template.TemplateException;
 import org.slf4j.Logger;
@@ -44,6 +44,7 @@ public class ListOfEvents extends HttpServlet {
         List<EventDto> eventDtoList = new ArrayList<>();
 
         eventDtoList.addAll(eventService.findAll());
+
 
         model.put("eventDtoList", eventDtoList);
 

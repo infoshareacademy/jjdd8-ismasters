@@ -2,37 +2,20 @@ package com.isa.mapper;
 
 
 import com.isa.domain.dto.EventDto;
-import com.isa.domain.dto.OrganizerDto;
-import com.isa.domain.dto.PlaceDto;
-import com.isa.domain.dto.UrlDto;
 import com.isa.domain.entity.Event;
 import com.isa.domain.api.EventApi;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import javax.ejb.Stateless;
-import javax.inject.Inject;
 
 @Stateless
 public class EventMapper {
 
     private final Logger logger = LoggerFactory.getLogger(getClass().getName());
 
-
-    @Inject
-    private OrganizerMapper organizerMapper;
-
-    @Inject
-    private UrlMapper urlMapper;
-
-
-    @Inject
-    private PlaceMapper placeMapper;
-
-
-    public Event mapApiToEntity(EventApi eventApiParser) {
-        logger.info("Event mapping to Entity");
-
+    public Event mapApiViewToEntity(EventApi eventApiParser) {
+        logger.debug("Event mapping to Entity");
 
         Event event = new Event();
 
@@ -65,17 +48,7 @@ public class EventMapper {
         eventDto.setCategoryId(eventEntity.getCategoryId());
         eventDto.setActive(eventEntity.isActive());
 
-
-        OrganizerDto organizerDto = organizerMapper.mapApiViewToDto(eventEntity.getOrganizer());
-
-        UrlDto urlDto = urlMapper.mapApiToDto(eventEntity.getUrl());
-
-        PlaceDto placeDto = placeMapper.mapApiViewToDto(eventEntity.getPlace());
-
-        eventDto.setOrganizer(organizerDto);
-        eventDto.setUrls(urlDto);
-        eventDto.setPlace(placeDto);
-        logger.info("Event mapping to DTO -> all parameters are set");
+        logger.debug("Event mapping to DTO -> all parameters are set");
 
         return eventDto;
     }
