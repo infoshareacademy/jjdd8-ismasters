@@ -10,7 +10,7 @@ import javax.ws.rs.client.WebTarget;
 import javax.ws.rs.core.Response;
 
 @Stateless
-public class GenerateRequest {
+public class ConverterRequest {
 
     private final Logger logger = LoggerFactory.getLogger(getClass().getName());
 

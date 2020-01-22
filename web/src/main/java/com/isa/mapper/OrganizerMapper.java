@@ -13,7 +13,7 @@ public class OrganizerMapper {
 
     private final Logger logger = LoggerFactory.getLogger(getClass().getName());
 
-    public Organizer mapApiToEntity(OrganizerExternal organizerExternal) {
+    public Organizer mapApiViewToEntity(OrganizerExternal organizerExternal) {
         logger.debug("Organizer mapping to Entity");
 
         Organizer organizer = new Organizer();
