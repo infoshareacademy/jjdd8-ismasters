@@ -54,7 +54,7 @@ public class EventService {
     @Inject
     private PlaceMapper placeMapper;
 
-    public void setRelationsToEntity(String jsonString) throws IOException {
+    public void inputToDatabase(String jsonString) throws IOException {
 
         List<EventApi> list = apiDataParser.parse(jsonString, EventApi.class);
         logger.info("Zaimportowano listę Wydarzeń");
@@ -87,7 +87,7 @@ public class EventService {
 
 
 
-    public EventDto setRelationsToDTO(Event event) {
+    public EventDto convertToLongDto(Event event) {
 
         EventDto eventDto = new EventDto();
 

@@ -39,8 +39,8 @@ public class ApiInitialization {
     @PostConstruct
     public void apiInitialization() throws IOException {
 
-        organizerService.setRelations(generateRequest.buildClientRequest(constantValuesBean.getOrganizersApi()));
-        placeService.setRelations(generateRequest.buildClientRequest(constantValuesBean.getPlaceApi()));
-        eventService.setRelationsToEntity(generateRequest.buildClientRequest(constantValuesBean.getEventsApi()));
+        organizerService.inputToDatabase(generateRequest.buildClientRequest(constantValuesBean.getOrganizersApi()));
+        placeService.inputToDatabase(generateRequest.buildClientRequest(constantValuesBean.getPlaceApi()));
+        eventService.inputToDatabase(generateRequest.buildClientRequest(constantValuesBean.getEventsApi()));
     }
 }

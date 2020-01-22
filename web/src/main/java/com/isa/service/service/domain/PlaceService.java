@@ -35,7 +35,7 @@ public class PlaceService {
     @Inject
     private AddressMapper addressMapper;
 
-    public void setRelations(String jsonString) throws IOException {
+    public void inputToDatabase(String jsonString) throws IOException {
 
         List<PlaceApi> list = apiDataParser.parse(jsonString, PlaceApi.class);
 

@@ -25,7 +25,7 @@ public class OrganizerService {
     @Inject
     private ApiDataParser apiDataParser;
 
-    public void setRelations(String filename) throws IOException {
+    public void inputToDatabase(String filename) throws IOException {
 
         List<OrganizerExternal> list = apiDataParser.parse(filename, OrganizerExternal.class);
 

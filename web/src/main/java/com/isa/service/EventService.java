@@ -32,14 +32,14 @@ public class EventService {
         List<EventDto> eventDtoList = new ArrayList<>();
 
         eventDao.findAll()
-                .forEach(event -> eventDtoList.add(eventService.setRelationsToDTO(event)));
+                .forEach(event -> eventDtoList.add(eventService.convertToLongDto(event)));
 
         return eventDtoList;
     }
 
     public EventDto findById(Long id) {
         Event event = eventDao.findById(id).orElseThrow();
-        return eventService.setRelationsToDTO(event);
+        return eventService.convertToLongDto(event);
     }
 
     public List<EventDto> searchEvents(String search) {
