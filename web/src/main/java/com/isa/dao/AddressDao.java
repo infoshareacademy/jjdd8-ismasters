@@ -20,7 +20,7 @@ public class AddressDao {
 
     public long addNewAddress(Address address) {
         em.persist(address);
-        logger.info("New address has been added to the DB, id: {}", address.getId());
+        logger.debug("New address has been added to the DB, id: {}", address.getId());
         return address.getId();
     }
 

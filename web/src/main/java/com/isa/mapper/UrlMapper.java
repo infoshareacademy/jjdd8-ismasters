@@ -10,11 +10,10 @@ import javax.ejb.Stateless;
 
 @Stateless
 public class UrlMapper {
-
     private final Logger logger = LoggerFactory.getLogger(getClass().getName());
 
-    public Url mapApiToEntity(WeblinkExternal weblinkExternal) {
-        logger.info("Url mapping to Entity");
+    public Url mapApiViewToEntity(WeblinkExternal weblinkExternal) {
+        logger.debug("Url mapping to Entity");
 
         Url url = new Url();
 
@@ -22,14 +21,13 @@ public class UrlMapper {
         url.setFbUrl(weblinkExternal.getFb());
         url.setTickerUrl(weblinkExternal.getTickets());
 
-        logger.info("Url mapping to Entity-> all parameters set");
+        logger.debug("Url mapping to Entity-> all parameters set");
 
         return url;
     }
 
-
     public UrlDto mapApiViewToDto(Url url) {
-        logger.info("Url mapping to DTO");
+        logger.debug("Url mapping to DTO");
 
         UrlDto urlDto = new UrlDto();
 
@@ -37,7 +35,7 @@ public class UrlMapper {
         urlDto.setFbLink(url.getFbUrl());
         urlDto.setTicketLink(url.getTickerUrl());
 
-        logger.info("Url mapping to DTO-> all parameters set");
+        logger.debug("Url mapping to DTO-> all parameters set");
 
         return urlDto;
     }

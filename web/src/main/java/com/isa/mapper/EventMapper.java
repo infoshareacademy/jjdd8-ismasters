@@ -14,8 +14,8 @@ public class EventMapper {
 
     private final Logger logger = LoggerFactory.getLogger(getClass().getName());
 
-    public Event mapApiToEntity(EventApi eventApiParser) {
-        logger.info("Event mapping to Entity");
+    public Event mapApiViewToEntity(EventApi eventApiParser) {
+        logger.debug("Event mapping to Entity");
 
         Event event = new Event();
 
@@ -28,16 +28,17 @@ public class EventMapper {
         event.setCategoryId(eventApiParser.getCategoryEventId());
         event.setActive(eventApiParser.getActiveEvent());
 
-        logger.info("Event mapping to Entity -> all parameters are set");
+        logger.debug("Event mapping to Entity -> all parameters are set");
 
         return event;
     }
 
     public EventDto mapEntityToDto(Event eventEntity) {
-        logger.info("Event mapping to DTO");
+        logger.debug("Event mapping to DTO");
 
         EventDto eventDto = new EventDto();
 
+        eventDto.setId(eventEntity.getId());
         eventDto.setApiExternalId(eventEntity.getApiId());
         eventDto.setStartDate(eventEntity.getStartDate());
         eventDto.setEndDate(eventEntity.getEndDate());
@@ -47,7 +48,7 @@ public class EventMapper {
         eventDto.setCategoryId(eventEntity.getCategoryId());
         eventDto.setActive(eventEntity.isActive());
 
-        logger.info("Event mapping to DTO -> all parameters are set");
+        logger.debug("Event mapping to DTO -> all parameters are set");
 
         return eventDto;
     }
