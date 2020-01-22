@@ -12,8 +12,6 @@ RUN wget https://download.java.net/java/GA/jdk13/5b8a42f3905b406298b72d750b6919f
 RUN tar -xvf openjdk-13_linux-x64_bin.tar.gz
 RUN export JAVA_HOME=/opt/jboss/jdk-13/
 RUN export PATH=$PATH:/opt/jboss/jdk-13/bin
-#RUN yes | rm /usr/bin/java
-#RUN ln -s /opt/jboss/jdk-13/bin/java /usr/bin/java
 RUN echo "JAVA_HOME=/opt/jboss/jdk-13" >> /opt/jboss/wildfly/bin/standalone.conf
 
 CMD ["/opt/jboss/wildfly/bin/standalone.sh", "-b", "0.0.0.0", "-bmanagement", "0.0.0.0"]
