@@ -12,14 +12,14 @@ public class TicketMapper {
     private final Logger logger = LoggerFactory.getLogger(getClass().getName());
 
     public TicketType mapApiViewToEntity(TicketApi ticketApi) {
-        logger.info("TicketType mapping to Entity");
+        logger.debug("TicketType mapping to Entity");
 
         TicketType ticketType = new TicketType();
 
         ticketType.setTicketTypeName(ticketApi.getType());
 
 
-        logger.info("TicketType mapping to Entity-> all parameters set");
+        logger.debug("TicketType mapping to Entity-> all parameters set");
 
         return ticketType;
     }

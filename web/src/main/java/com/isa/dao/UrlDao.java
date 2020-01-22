@@ -21,7 +21,7 @@ public class UrlDao {
 
     public long addNewUrl(Url url) {
         em.persist(url);
-        logger.info("New url has been added to the DB ");
+        logger.debug("New url has been added to the DB ");
         return url.getId();
     }
 

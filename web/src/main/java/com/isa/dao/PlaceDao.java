@@ -20,7 +20,7 @@ public class PlaceDao {
 
     public long addNewPlace(Place place) {
         em.persist(place);
-        logger.info("New event has been added to the DB ");
+        logger.debug("New event has been added to the DB ");
         return place.getId();
     }
 

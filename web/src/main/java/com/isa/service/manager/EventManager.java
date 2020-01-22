@@ -24,6 +24,7 @@ import javax.ejb.Stateless;
 import javax.inject.Inject;
 import java.io.IOException;
 import java.util.List;
+import java.util.Optional;
 
 @Stateless
 public class EventManager {
@@ -66,7 +67,7 @@ public class EventManager {
                     Organizer organizer = organizersDao.findByApiId(externalOrganizerId);
                     Event event = eventMapper.mapApiViewToEntity(e);
 
-                    logger.info("Organizer {},{}", externalOrganizerId, organizer);
+                    logger.debug("Organizer {},{}", externalOrganizerId, organizer);
 
                     event.setOrganizer(organizer);
                     Url url = urlMapper.mapApiViewToEntity(e.getWeblinkExternal());
@@ -75,13 +76,13 @@ public class EventManager {
                     int placeExternalId = e.getPlaceApi().getApiId();
 
                     Place place = placeDao.findByApiId(placeExternalId);
-                    logger.info("Place id {}, {}", placeExternalId, place);
+                    logger.debug("Place id {}, {}", placeExternalId, place);
 
                     event.setPlace(place);
-                    logger.info("Przed zapisem {}", event);
+                    logger.debug("Przed zapisem {}", event);
 
                     eventDao.addNewEvent(event);
-                    logger.info("Dodano do bazy {}", event);
+                    logger.debug("Dodano do bazy {}", event);
                 });
 
     }
@@ -99,6 +100,16 @@ public class EventManager {
         UrlDto urlDto = urlMapper.mapApiViewToDto(event.getUrl());
 
         PlaceDto placeDto = placeMapper.mapApiViewToDto(event.getPlace());
+
+        logger.info("______________");
+        logger.info("OrganizerDTO designation: {}", organizerDto.getDesignation());
+        logger.info("OrganizerDTO eventDtoList(0): {}", Optional.ofNullable(organizerDto.getEventDtoList().get(0)));
+        logger.info("OrganizerDTO idDb: {}", organizerDto.getIdDb());
+        logger.info("OrganizerDTO idExternal: {}", organizerDto.getIdExternal());
+        logger.info("______________");
+        logger.info("Event getOrganizer {}", event.getOrganizer().getId());
+        logger.info("URL getUrl {}", event.getUrl().getId());
+        logger.info("Place getPlace {}", event.getPlace().getId());
 
         eventDto.setOrganizer(organizerDto);
         eventDto.setUrls(urlDto);
