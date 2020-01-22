@@ -2,7 +2,7 @@ package com.isa.web;
 
 
 import com.isa.domain.dto.EventDto;
-import com.isa.service.EventService;
+import com.isa.service.service.domain.EventService;
 
 import javax.inject.Inject;
 import javax.ws.rs.GET;

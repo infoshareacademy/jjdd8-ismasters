@@ -5,7 +5,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class AttachmentExternal {
 
-    @JsonProperty("fileName")
+
     @JsonIgnore
     private String fileName;
 

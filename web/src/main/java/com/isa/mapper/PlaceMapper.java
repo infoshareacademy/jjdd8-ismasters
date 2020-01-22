@@ -13,7 +13,7 @@ public class PlaceMapper {
     private final Logger logger = LoggerFactory.getLogger(getClass().getName());
 
 
-    public Place mapApiViewToEntity(PlaceApi placeApi) {
+    public Place mapApiToEntity(PlaceApi placeApi) {
         logger.debug("Place mapping to Entity");
 
         Place place = new Place();

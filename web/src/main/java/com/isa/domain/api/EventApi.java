@@ -24,8 +24,9 @@ public class EventApi {
     @JsonProperty("urls")
     private WeblinkExternal weblinkExternal;
 
+    @JsonIgnoreProperties(ignoreUnknown = true)
+    private String schedule;
 
-    @JsonProperty("attachments")
     @JsonIgnoreProperties(ignoreUnknown = true)
     private List<AttachmentExternal> attachments;
 
@@ -51,9 +52,6 @@ public class EventApi {
     @JsonIgnoreProperties(ignoreUnknown = true)
     private TicketApi ticketApi;
 
-    @JsonProperty ("schedule")
-    @JsonIgnore
-    private String schedule;
 
     public Long getApiId() {
         return apiId;
@@ -159,6 +157,14 @@ public class EventApi {
 
     public void setTicketApi(TicketApi ticketApi) {
         this.ticketApi = ticketApi;
+    }
+
+    public String getSchedule() {
+        return schedule;
+    }
+
+    public void setSchedule(String schedule) {
+        this.schedule = schedule;
     }
 
     @Override
