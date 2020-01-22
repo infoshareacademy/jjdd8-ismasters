@@ -1,0 +1,29 @@
+version: '2'
+
+services:
+  mysql:
+    image: mysql
+    environment:
+      MYSQL_DATABASE: "3city_events"
+      MYSQL_USER: "root"
+      MYSQL_ROOT_PASSWORD: "root"
+    ports:
+      - 4316:3306
+    command: ["mysqld",
+              "--character-set-server=utf8",
+              "--collation-server=utf8_unicode_ci",
+              "--init-connect='SET NAMES UTF8;'",
+              "--innodb-flush-log-at-trx-commit=0" ]
+
+  wildfly:
+    build:
+      context: ./web
+    ports:
+      - 4310:8080
+      - 4311:9990
+    depends_on:
+      - mysql
+    links:
+      - mysql
+    environment:
+      - T2=Europe/Warsaw
