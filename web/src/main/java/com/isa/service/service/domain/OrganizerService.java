@@ -32,7 +32,7 @@ public class OrganizerService {
         logger.debug("Zaimportowano listę organizatorów");
 
         list.stream()
-                .map(o->organizerMapper.mapViewToEntity(o))
+                .map(o->organizerMapper.mapApiToEntity(o))
                 .forEach(o ->{
                     organizersDao.addNewOrganizer(o);
                     logger.debug("Organizer {}",o.getId() );
