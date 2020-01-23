@@ -29,6 +29,8 @@
     <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
     <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <meta name="google-signin-client_id" content="410089355802-o038dh5aoqgr5ebt7fqflfglm66t4e8k.apps.googleusercontent.com">
     <![endif]-->
 
 </head>
@@ -51,8 +53,10 @@
         </ul>
         <div class="header-right">
             <div class="user-panel">
-                <a href="#" class="login">Zaloguj się</a>
-                <a href="#" class="register rounded-pill">Zarejestruj się</a>
+                <div class="g-signin2" data-onsuccess="onSignIn"></div>
+
+<#--                <a href="#" class="login">Zaloguj się</a>-->
+<#--                <a href="#" class="register rounded-pill">Zarejestruj się</a>-->
             </div>
         </div>
     </nav>
