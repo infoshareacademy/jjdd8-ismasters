@@ -39,6 +39,4 @@ public class EventDao {
     public Optional<Event> editEvent(Event event) {
         return Optional.ofNullable(em.merge(event));
     }
-
-    
 }

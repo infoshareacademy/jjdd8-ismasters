@@ -1,4 +1,4 @@
-package com.isa.service.service.domain;
+package com.isa.service.manager;
 
 import com.isa.dao.EventDao;
 import com.isa.dao.OrganizersDao;
@@ -23,13 +23,11 @@ import org.slf4j.LoggerFactory;
 import javax.ejb.Stateless;
 import javax.inject.Inject;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
-
+import java.util.Optional;
 
 @Stateless
-public class EventService {
+public class EventManager {
 
     private final Logger logger = LoggerFactory.getLogger(this.getClass().getName());
 
@@ -57,7 +55,7 @@ public class EventService {
     @Inject
     private PlaceMapper placeMapper;
 
-    public void inputToDatabase(String jsonString) throws IOException {
+    public void setRelationsToEntity(String jsonString) throws IOException {
 
         List<EventApi> list = apiDataParser.parse(jsonString, EventApi.class);
         logger.info("Zaimportowano listę Wydarzeń");
@@ -67,12 +65,12 @@ public class EventService {
 
                     Long externalOrganizerId = e.getOrganizerExternal().getId();
                     Organizer organizer = organizersDao.findByApiId(externalOrganizerId);
-                    Event event = eventMapper.mapApiToEntity(e);
+                    Event event = eventMapper.mapApiViewToEntity(e);
 
                     logger.debug("Organizer {},{}", externalOrganizerId, organizer);
 
                     event.setOrganizer(organizer);
-                    Url url = urlMapper.mapApiToEntity(e.getWeblinkExternal());
+                    Url url = urlMapper.mapApiViewToEntity(e.getWeblinkExternal());
                     event.setUrl(url);
 
                     int placeExternalId = e.getPlaceApi().getApiId();
@@ -86,29 +84,38 @@ public class EventService {
                     eventDao.addNewEvent(event);
                     logger.debug("Dodano do bazy {}", event);
                 });
+
     }
 
 
-    public List<EventDto> findAll() {
 
-        List<EventDto> eventDtoList = new ArrayList<>();
+    public EventDto setRelationsToDTO(Event event) {
 
-        eventDao.findAll()
-                .forEach(event -> eventDtoList.add(eventMapper.mapEntityToDto(event)));
+        EventDto eventDto = new EventDto();
 
-        return eventDtoList;
-    }
+        eventDto = eventMapper.mapEntityToDto(event);
 
+        OrganizerDto organizerDto = organizerMapper.mapApiViewToDto(event.getOrganizer());
 
-    public EventDto findById(Long id) {
-        Event event = eventDao.findById(id).orElseThrow();
-        return eventMapper.mapEntityToDto(event);
-    }
+        UrlDto urlDto = urlMapper.mapApiViewToDto(event.getUrl());
 
+        PlaceDto placeDto = placeMapper.mapApiViewToDto(event.getPlace());
 
-    public List<EventDto> searchEvents(String search) {
-        return eventDao.searchEvents(search).stream()
-                .map((event -> eventMapper.mapEntityToDto(event)))
-                .collect(Collectors.toList());
+        logger.info("______________");
+        logger.info("OrganizerDTO designation: {}", organizerDto.getDesignation());
+        logger.info("OrganizerDTO eventDtoList(0): {}", Optional.ofNullable(organizerDto.getEventDtoList().get(0)));
+        logger.info("OrganizerDTO idDb: {}", organizerDto.getIdDb());
+        logger.info("OrganizerDTO idExternal: {}", organizerDto.getIdExternal());
+        logger.info("______________");
+        logger.info("Event getOrganizer {}", event.getOrganizer().getId());
+        logger.info("URL getUrl {}", event.getUrl().getId());
+        logger.info("Place getPlace {}", event.getPlace().getId());
+
+        eventDto.setOrganizer(organizerDto);
+        eventDto.setUrls(urlDto);
+        eventDto.setPlace(placeDto);
+
+        return eventDto;
+
     }
 }
