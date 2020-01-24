@@ -10,6 +10,7 @@ import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
 import java.io.IOException;
 import java.time.LocalDate;
+import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Optional;
@@ -44,7 +45,7 @@ public class EventDao {
     }
 
     public List<Event> findAllUserFavEvents(Long id) {
-        Query q = em.createNamedQuery("SELECT e FROM Event e INNER JOIN e.users u");
+        Query q = em.createNamedQuery("SELECT e FROM User u INNER JOIN u.favourtieEvents e WHERE u.id = :id");
         q.setParameter("id", id);
         return q.getResultList();
     }
@@ -56,7 +57,7 @@ public class EventDao {
         String today = LocalDate.now().toString();
         q.setParameter("today", today);
 //        if (!q.getResultList().isEmpty()){
-            q.getResultList().get(0);
+        Arrays.toString(q.getResultList().get(0));
             return q;
 //        }
     }
