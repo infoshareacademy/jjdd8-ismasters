@@ -2,7 +2,6 @@ package com.isa.service;
 
 import com.isa.dao.EventDao;
 import com.isa.domain.dto.EventDto;
-import com.isa.domain.dto.FavSneapPeakDto;
 import com.isa.mapper.EventMapper;
 import com.isa.service.manager.EventManager;
 
@@ -12,7 +11,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.isa.domain.entity.Event;
-import com.isa.mock.EventDTO_mock;
 
 import java.util.stream.Collectors;
 
@@ -49,5 +47,10 @@ public class EventService {
         return eventDao.searchEvents(search).stream()
                 .map((event -> eventMapper.mapEntityToDto(event)))
                 .collect(Collectors.toList());
+    }
+
+    public EventDto userClosestFavEvent(Long id) {
+        Event favEvent = eventDao.getClosestInTimeUserFav(id);
+         return eventMapper.mapEntityToDto(favEvent);
     }
 }
