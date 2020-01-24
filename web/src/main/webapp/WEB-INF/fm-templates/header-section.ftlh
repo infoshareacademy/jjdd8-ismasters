@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zxx">
+<html>
 <head>
     <title>3City Events</title>
     <meta charset="UTF-8">
@@ -10,8 +10,6 @@
     <!-- Favicon -->
     <link href="/img/favicon.ico" rel="shortcut icon"/>
 
-    <!-- Google font -->
-    <link href="https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i,900%7cRoboto:400,400i,500,500i,700,700i&display=swap" rel="stylesheet">
 
 
     <!-- Stylesheets -->
@@ -22,6 +20,17 @@
     <!-- Main Stylesheets -->
     <link rel="stylesheet" href="/css/style.css"/>
 
+    <!-- Google font -->
+    <meta name="google-signin-scope" content="profile email">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i,900%7cRoboto:400,400i,500,500i,700,700i&display=swap" rel="stylesheet">
+    <meta name="google-signin-client_id" content="410089355802-o038dh5aoqgr5ebt7fqflfglm66t4e8k.apps.googleusercontent.com">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+
+<#--    gapi.load('auth2', function() {-->
+<#--    gapi.auth2.init();-->
+<#--    });-->
+
+
 
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -29,8 +38,8 @@
     <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
     <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-    <script src="https://apis.google.com/js/platform.js" async defer></script>
-    <meta name="google-signin-client_id" content="410089355802-o038dh5aoqgr5ebt7fqflfglm66t4e8k.apps.googleusercontent.com">
+
+
     <![endif]-->
 
 </head>
@@ -53,10 +62,8 @@
         </ul>
         <div class="header-right">
             <div class="user-panel">
-                <div class="g-signin2" data-onsuccess="onSignIn"></div>
-
-<#--                <a href="#" class="login">Zaloguj się</a>-->
-<#--                <a href="#" class="register rounded-pill">Zarejestruj się</a>-->
+<#--                <a href="#" class="login">Zaaaloguj się</a>-->
+                <a href="/login" class="register rounded-pill">Zaloguj się</a>
             </div>
         </div>
     </nav>
@@ -65,14 +72,15 @@
                 <span class="slicknav_icon-bar"></span><span class="slicknav_icon-bar"></span></span></a>
         <ul class="slicknav_nav slicknav_hidden" aria-hidden="true" role="menu" style="display: none;">
             <li class="header-right-warp"><div class="header-right">
-                    <div class="user-panel">
-                        <a href="#" class="login">Zaloguj się</a>
-                        <a href="#" class="register">Zarejestruj się</a>
-                    </div>
+<#--                    <div class="user-panel">-->
+<#--                        <a href="#" class="login">Zaloguj się</a>-->
+<#--                        <a href="#" class="register">Zarejestruj się</a>-->
+<#--                    </div>-->
                 </div>
             </li>
             <li><a href="news.html" role="menuitem" tabindex="-1">Wydarzenia</a></li>
             <li><a href="contact.html" role="menuitem" tabindex="-1">Kontakt</a></li>
+<#--            <li><a href="/login" role="menuitem" tabindex="-1">Logowanie</a></li>-->
         </ul>
     </div>
 </header>

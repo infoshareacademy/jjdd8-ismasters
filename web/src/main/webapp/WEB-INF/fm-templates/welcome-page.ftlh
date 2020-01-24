@@ -13,8 +13,8 @@
                         <img src="/img/1.jpg" alt="">
                         <div class="pi-badge new">Ulubione</div>
                     </div>
-                    <h5> Nazwa wydarzenia : ${eventDTO_mock.name}</h5>
-                    <p>Krótki opis : ${eventDTO_mock.descShort}</p>
+                    <h5>${eventDTO_mock.name}</h5>
+                    <p>${eventDTO_mock.descShort}</p>
                     <a href="${eventDTO_mock.urls}" class="readmore-btn">Find out more</a>
                 </div>
             </div>
@@ -24,8 +24,8 @@
                         <img src="/img/2.jpg" alt="">
                         <div class="pi-badge offer">Ulubione</div>
                     </div>
-                    <h5> Nazwa wydarzenia : ${eventDTO_mock.name}</h5>
-                    <p>Krótki opis : ${eventDTO_mock.descShort}</p>
+                    <h5>${eventDTO_mock.name}</h5>
+                    <p>${eventDTO_mock.descShort}</p>
                     <a href="${eventDTO_mock.urls}" class="readmore-btn">Find out more</a>
                 </div>
             </div>
@@ -36,8 +36,8 @@
                         <div class="pi-badge new">Ulubione</div>
                     </div>
 
-                    <h5> Nazwa wydarzenia : ${eventDTO_mock.name}</h5>
-                    <p>Krótki opis : ${eventDTO_mock.descShort}</p>
+                    <h5>${eventDTO_mock.name}</h5>
+                    <p>${eventDTO_mock.descShort}</p>
                     <a href="${eventDTO_mock.urls}" class="readmore-btn">Find out more</a>
                 </div>
             </div>

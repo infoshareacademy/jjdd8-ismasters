@@ -2,9 +2,21 @@ package com.isa.domain.entity;
 
 import javax.persistence.*;
 import java.util.List;
-@NamedQueries(
-        @NamedQuery(name = "User.findAll", query = "SELECT u FROM User u")
-)
+
+@NamedQueries({
+        @NamedQuery(
+                name = "User.findAll",
+                query = "SELECT u FROM User u"
+        ),
+        @NamedQuery(
+                name = "User.findByEmail",
+                query = "SELECT u FROM User u WHERE u.email = :email"
+        ),
+        @NamedQuery(
+                name = "User.findWithFavouriteEvents",
+                query = "SELECT u FROM User u INNER JOIN u.favoriteEvents e WHERE e.id = :id"
+        )
+})
 
 @Entity
 @Table (name = "user")
@@ -27,6 +39,16 @@ public class User {
             inverseJoinColumns = @JoinColumn (name = "event_id", referencedColumnName = "id"))
     private List<Event> favoriteEvents;
 
+    @Column (name = "name")
+    private String name;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
 
     public Long getId() {
         return id;
