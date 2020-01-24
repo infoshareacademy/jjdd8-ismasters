@@ -2,6 +2,7 @@ package com.isa.service;
 
 import com.isa.dao.EventDao;
 import com.isa.domain.dto.EventDto;
+import com.isa.domain.dto.FavSneapPeakDto;
 import com.isa.mapper.EventMapper;
 import com.isa.service.manager.EventManager;
 
