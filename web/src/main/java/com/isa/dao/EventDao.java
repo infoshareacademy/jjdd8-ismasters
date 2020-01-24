@@ -8,10 +8,7 @@ import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
-import java.io.IOException;
 import java.time.LocalDate;
-import java.util.Arrays;
-import java.util.Comparator;
 import java.util.List;
 import java.util.Optional;
 
@@ -50,16 +47,14 @@ public class EventDao {
         return q.getResultList();
     }
 
-    //FIXME
-    public Optional<Event> getClosestInTimeUserFav(Long id) {
+    public Event getClosestInTimeUserFav(Long id) {
         Query q = em.createNamedQuery("SELECT e FROM User u INNER JOIN u.favouriteEvents e WHERE u.id = :id and e.startDate > :today ORDER BY e.startDate LIMIT 1");
         q.setParameter("id", id);
         String today = LocalDate.now().toString();
         q.setParameter("today", today);
-//        if (!q.getResultList().isEmpty()){
-        Arrays.toString(q.getResultList().get(0));
-            return q;
-//        }
+        List<Event> single = q.getResultList();
+        Event qwe = single.get(0);
+            return qwe;
     }
 }
 
