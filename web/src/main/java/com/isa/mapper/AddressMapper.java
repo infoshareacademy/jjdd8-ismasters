@@ -1,9 +1,9 @@
 package com.isa.mapper;
 
 
+import com.isa.domain.api.AddressExternal;
 import com.isa.domain.dto.AddressDto;
 import com.isa.domain.entity.Address;
-import com.isa.domain.api.AddressExternal;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -29,7 +29,7 @@ public class AddressMapper {
         return address;
     }
 
-    public AddressDto mapEntityToDto(Address address){
+    public AddressDto mapEntityToDto(Address address) {
         AddressDto addressDto = new AddressDto();
 
         addressDto.setCity(address.getCity());

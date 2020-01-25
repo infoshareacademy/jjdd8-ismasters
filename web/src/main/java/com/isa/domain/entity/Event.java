@@ -3,8 +3,11 @@ package com.isa.domain.entity;
 import javax.persistence.*;
 import java.util.List;
 
-@NamedQueries(
-        @NamedQuery(name = "Event.findAll", query = "SELECT e FROM Event e")
+@NamedQueries({
+        @NamedQuery(name = "Event.findAll", query = "SELECT e FROM Event e"),
+
+        @NamedQuery(name = "Event.countAll", query = "SELECT COUNT (e) FROM Event e")
+}
 )
 
 @Entity

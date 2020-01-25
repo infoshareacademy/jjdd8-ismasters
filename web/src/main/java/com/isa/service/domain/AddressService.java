@@ -1,10 +1,9 @@
-package com.isa.service.manager;
+package com.isa.service.domain;
 
 import com.isa.dao.AddressDao;
 import com.isa.dao.PlaceDao;
 import com.isa.domain.api.PlaceApi;
 import com.isa.domain.entity.Address;
-import com.isa.domain.entity.Place;
 import com.isa.mapper.PlaceMapper;
 import com.isa.parser.ApiDataParser;
 import org.slf4j.Logger;
@@ -16,7 +15,7 @@ import java.io.IOException;
 import java.util.List;
 
 @Stateless
-public class AddressManager {
+public class AddressService {
 
     private final Logger logger = LoggerFactory.getLogger(getClass().getName());
 

@@ -2,7 +2,8 @@ package com.isa.servlet;
 
 import com.isa.config.TemplateProvider;
 import com.isa.domain.dto.EventDto;
-import com.isa.service.EventService;
+import com.isa.service.constant.PageEventSize;
+import com.isa.service.domain.EventService;
 import freemarker.template.Template;
 import freemarker.template.TemplateException;
 import org.slf4j.Logger;
@@ -33,6 +34,8 @@ public class ListOfEvents extends HttpServlet {
     @Inject
     private EventService eventService;
 
+    @Inject
+    private PageEventSize pageEventSize;
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse rep) throws SecurityException, IOException {
@@ -43,8 +46,9 @@ public class ListOfEvents extends HttpServlet {
 
         List<EventDto> eventDtoList = new ArrayList<>();
 
-        eventDtoList.addAll(eventService.findAll());
+        eventDtoList.addAll(eventService.getEventsForView(0,20));
 
+        logger.info("The size of a arraylist " + eventDtoList.size());
 
         model.put("eventDtoList", eventDtoList);
 
@@ -54,4 +58,7 @@ public class ListOfEvents extends HttpServlet {
             logger.error(e.getMessage());
         }
     }
+
+
+
 }

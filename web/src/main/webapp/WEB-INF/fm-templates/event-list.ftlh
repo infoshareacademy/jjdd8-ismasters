@@ -18,7 +18,7 @@
                     <img alt="Independence Day" src="https://farm4.staticflickr.com/3100/2693171833_3545fb852c_q.jpg" />
                     <div class="info">
                         <h2 class="title">${eventDto.name ! "Brak opisu"}</h2>
-                        <p class="desc">${eventDto.organizer.designation ! "Brak Organizatora"}</p>
+
                     </div>
                     </#list>
                 </li>
@@ -27,5 +27,5 @@
         </div>
     </div>
 </div>
-
+<#include "paggination.ftlh">
 <#include "footer-section.ftlh">

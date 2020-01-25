@@ -1,4 +1,4 @@
-package com.isa.service.manager;
+package com.isa.service.domain;
 
 import com.isa.dao.UrlDao;
 import com.isa.domain.api.EventApi;
@@ -13,7 +13,7 @@ import java.io.IOException;
 import java.util.List;
 
 @Stateless
-public class UrlManager {
+public class UrlService {
 
     private final Logger logger = LoggerFactory.getLogger(getClass().getName());
 

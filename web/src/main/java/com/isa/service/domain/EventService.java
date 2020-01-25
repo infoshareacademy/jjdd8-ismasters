@@ -1,4 +1,4 @@
-package com.isa.service.manager;
+package com.isa.service.domain;
 
 import com.isa.dao.EventDao;
 import com.isa.dao.OrganizersDao;
@@ -23,11 +23,13 @@ import org.slf4j.LoggerFactory;
 import javax.ejb.Stateless;
 import javax.inject.Inject;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 @Stateless
-public class EventManager {
+public class EventService {
 
     private final Logger logger = LoggerFactory.getLogger(this.getClass().getName());
 
@@ -88,7 +90,6 @@ public class EventManager {
     }
 
 
-
     public EventDto setRelationsToDTO(Event event) {
 
         EventDto eventDto = new EventDto();
@@ -118,4 +119,32 @@ public class EventManager {
         return eventDto;
 
     }
+
+
+    public List<EventDto> findAll() {
+
+        List<EventDto> eventDtoList = new ArrayList<>();
+
+        eventDao.findAll()
+                .forEach(event -> eventDtoList.add(setRelationsToDTO(event)));
+        return eventDtoList;
+    }
+
+    public EventDto findById(Long id) {
+        Event event = eventDao.findById(id).orElseThrow();
+        return eventMapper.mapEntityToDto(event);
+    }
+
+    public List<EventDto> searchEvents(String search) {
+        return eventDao.searchEvents(search).stream()
+                .map((event -> eventMapper.mapEntityToDto(event)))
+                .collect(Collectors.toList());
+    }
+
+    public List<EventDto> getEventsForView(int setStartEvent, int maxEvent) {
+
+        return eventDao.getEventsForView(setStartEvent, maxEvent).stream().map(e -> setRelationsToDTO(e))
+                .collect(Collectors.toList());
+    }
+
 }

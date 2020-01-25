@@ -39,4 +39,16 @@ public class EventDao {
     public Optional<Event> editEvent(Event event) {
         return Optional.ofNullable(em.merge(event));
     }
+
+    public List<Event> getEventsForView(int startEvent, int maxPage){
+        Query query = em.createNamedQuery("Event.findAll");
+        query.setFirstResult(startEvent);
+        query.setMaxResults(maxPage);
+        return query.getResultList();
+    }
+
+    public Integer getNumberOfEvents(){
+        return (Integer) em.createNamedQuery("Event.countAll").getResultList().get(0);
+    }
+
 }
