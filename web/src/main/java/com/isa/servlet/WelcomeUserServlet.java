@@ -38,6 +38,7 @@ public class WelcomeUserServlet extends HttpServlet {
         Template template = templateProvider.getTemplate(getServletContext(), "welcome-user.ftlh");
 
         Map<String, Object> model = new HashMap<>();
+        logger.info("User name: {}", name);
         model.put("name", name);
 
         try {

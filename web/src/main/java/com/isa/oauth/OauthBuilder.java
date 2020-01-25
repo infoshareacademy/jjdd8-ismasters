@@ -20,7 +20,7 @@ public class OauthBuilder {
         new NetHttpTransport(),
         JacksonFactory.getDefaultInstance(),
         gCredential)
-        .setApplicationName("3cityevent")
+        .setApplicationName("3city_events")
         .build();
 
     return oauth2;

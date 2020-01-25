@@ -45,6 +45,9 @@ public class WelcomePage extends HttpServlet {
         Template template = templateProvider.getTemplate(getServletContext(), "welcome-page.ftlh");
         Map<String, Object> model = new HashMap<>();
         model.put("eventDTO_mock", eventDTO_mock);
+        model.put("userName", req.getSession().getAttribute("userName"));
+        logger.info("UserName: {}", req.getSession().getAttribute("userName"));
+        logger.info("Session Attributes: {}", req.getSession().getAttributeNames().toString());
 
         try {
             template.process(model, rep.getWriter());

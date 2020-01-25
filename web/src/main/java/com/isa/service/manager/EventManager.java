@@ -101,16 +101,6 @@ public class EventManager {
 
         PlaceDto placeDto = placeMapper.mapApiViewToDto(event.getPlace());
 
-        logger.info("______________");
-        logger.info("OrganizerDTO designation: {}", organizerDto.getDesignation());
-        logger.info("OrganizerDTO eventDtoList(0): {}", Optional.ofNullable(organizerDto.getEventDtoList().get(0)));
-        logger.info("OrganizerDTO idDb: {}", organizerDto.getIdDb());
-        logger.info("OrganizerDTO idExternal: {}", organizerDto.getIdExternal());
-        logger.info("______________");
-        logger.info("Event getOrganizer {}", event.getOrganizer().getId());
-        logger.info("URL getUrl {}", event.getUrl().getId());
-        logger.info("Place getPlace {}", event.getPlace().getId());
-
         eventDto.setOrganizer(organizerDto);
         eventDto.setUrls(urlDto);
         eventDto.setPlace(placeDto);

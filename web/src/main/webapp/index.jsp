@@ -1,5 +1,1 @@
-<html>
-<body>
-<h2>Greetings from isMasters!</h2>
-</body>
-</html>
+<h2>Greetings</h2>

@@ -9,8 +9,32 @@
 
     <!-- Favicon -->
     <link href="/img/favicon.ico" rel="shortcut icon"/>
+    <script src="/js/login_logout.js"></script>
+<#--    <script>-->
+<#--        //google callback. This function will redirect to our login servlet-->
+<#--        function onSignIn(googleUser) {-->
+<#--            var profile = googleUser.getBasicProfile();-->
+<#--            console.log('ID: ' + profile.getId());-->
+<#--            console.log('Name: ' + profile.getName());-->
+<#--            console.log('Image URL: ' + profile.getImageUrl());-->
+<#--            console.log('Email: ' + profile.getEmail());-->
+<#--            console.log('id_token: ' + googleUser.getAuthResponse().id_token);-->
 
+<#--            //do not post all above info to the server because that is not secure.-->
+<#--            //just send the id_token-->
 
+<#--            var redirectUrl = 'login';-->
+
+<#--            //using jquery to post data dynamically-->
+<#--            var form = $('<form action="' + redirectUrl + '" method="post">' +-->
+<#--                '<input type="text" name="id_token" value="' +-->
+<#--                googleUser.getAuthResponse().id_token + '" />' +-->
+<#--                '</form>');-->
+<#--            $('body').append(form);-->
+<#--            form.submit();-->
+<#--        }-->
+
+<#--    </script>-->
 
     <!-- Stylesheets -->
     <link rel="stylesheet" href="/css/bootstrap.min.css"/>
@@ -23,7 +47,7 @@
     <!-- Google font -->
     <meta name="google-signin-scope" content="profile email">
     <link href="https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i,900%7cRoboto:400,400i,500,500i,700,700i&display=swap" rel="stylesheet">
-    <meta name="google-signin-client_id" content="410089355802-o038dh5aoqgr5ebt7fqflfglm66t4e8k.apps.googleusercontent.com">
+    <meta name="google-signin-client_id" content="410089355802-edk5jsfjas6cmf08v219irj2i3lvrtcm.apps.googleusercontent.com">
     <script src="https://apis.google.com/js/platform.js" async defer></script>
 
 <#--    gapi.load('auth2', function() {-->
@@ -63,7 +87,12 @@
         <div class="header-right">
             <div class="user-panel">
 <#--                <a href="#" class="login">Zaaaloguj się</a>-->
-                <a href="/login" class="register rounded-pill">Zaloguj się</a>
+                <a href="/login" class="btn btn-danger btn-sm" id="login">
+                    <i class="fa fa-google"></i> Zaloguj się przez <b>Google</b></a>
+                <a href="/logout" class="btn btn-danger btn-sm"
+                   id="logout"><i class="fa fa-google"></i> Wyloguj się</a>
+<#--                <div class="g-signin2" data-onsuccess="onSignIn"></div>Username: <<#if userName??><div>${userName}></div></#if>-->
+<#--                <a href="/login" class="register rounded-pill">Zaloguj się</a>-->
             </div>
         </div>
     </nav>

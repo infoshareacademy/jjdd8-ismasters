@@ -50,6 +50,7 @@ public class UserService {
 
     public void editUser(User user) {
         userDao.updateUser(user);
+
     }
 
     public void editDtoUser(UserDto user) {
