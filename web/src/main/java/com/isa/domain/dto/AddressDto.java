@@ -74,8 +74,7 @@ public class AddressDto {
 
     @Override
     public String toString() {
-        return  "Ulica'" + street + '\'' +
-                "Kod pocztowy'" + zipcode + '\'' +
-                "Miasto'" + city + '\'' ;
+        return  street + '\''
+                + city  ;
     }
 }

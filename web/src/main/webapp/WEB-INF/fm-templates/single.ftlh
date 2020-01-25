@@ -9,29 +9,30 @@
             <div class="col-3">
 
                 <div class="property-item">
-                    <h6> Miejsce wydarzenia : <p>${placeDto.place ! "Nie podano"}</p></h6>
+                    <h6> Miejsce  : <p>${placeDto.name ! "Nie podano"}</p></h6>
                 </div>
 
                 <div class="property-item">
-                    <h6> Adres wydarzenia : <p>${addressDto ! "Nie podano"}</p></h6>
+                    <h6> Adres  : <p>${addressDto ! "Nie podano"}</p></h6>
                 </div>
 
                 <div class="property-item">
-                    <h6> Organizator wydarzenia : <p>${organizerDto.designation ! "Organizator nie znany"}</p></h6>
-                </div>
-
-
-                <div class="property-item">
-                    <h6> Data wydarzenia : <p>${eventDto.startDate ! "Data nie znana"}</p></h6>
+                    <h6> Organizator  : <p>${organizerDto.designation ! "Organizator nie znany"}</p></h6>
                 </div>
 
 
                 <div class="property-item">
-                    <h6> Bilety wydarzenia : <p>${eventDto.tickets ! "Brak informacji o biletach"}</p></h6>
+                    <h6> Data  : <p>${eventDto.startDate ! "Data nie znana"}</p></h6>
+                </div>
+
+
+                <div class="property-item">
+                    <h6> Bilety  : <p>${eventDto.tickets ! "Brak informacji o biletach"}</p></h6>
                 </div>
 
                 <div class="property-item">
-                    <h6> <a href="${urlDto.website ! "brak"}" class="readmore-btn">Find out more</a> </h6>
+
+                    <h6> <a href="${urlDto.website ! "brak"}" class="readmore-btn">Dowiedz się więcej</a> </h6>
 
                 </div>
 
@@ -39,8 +40,8 @@
 
             <div class="col-8">
                 <div class="property-item">
-                    <h4> Nazwa wydarzenia : ${eventDto.name ! "Brak nazwy"}</h4>
-                    <p>Opis wydarzenia : ${eventDto.descLong ! "Brak opisu"}</p>
+                    <h4> Nazwa  : ${eventDto.name ! "Brak nazwy"}</h4>
+                    <p>Opis  : ${eventDto.descLong ! "Brak opisu"}</p>
                 </div>
             </div>
 

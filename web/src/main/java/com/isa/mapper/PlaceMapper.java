@@ -7,11 +7,14 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import javax.ejb.Stateless;
+import javax.inject.Inject;
 
 @Stateless
 public class PlaceMapper {
     private final Logger logger = LoggerFactory.getLogger(getClass().getName());
 
+    @Inject
+    AddressMapper addressMapper;
 
     public Place mapApiToEntity(PlaceApi placeApi) {
         logger.debug("Place mapping to Entity");
@@ -35,6 +38,7 @@ public class PlaceMapper {
         placeDto.setId(place.getId());
         placeDto.setName(place.getName());
         placeDto.setSubname(place.getSubName());
+        placeDto.setAddressDto(addressMapper.mapEntityToDto(place.getAddress()));
 
         logger.debug("Place mapping to DTO-> all parameters set");
 
