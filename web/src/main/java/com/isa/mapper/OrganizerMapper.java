@@ -2,7 +2,7 @@ package com.isa.mapper;
 
 import com.isa.domain.dto.OrganizerDto;
 import com.isa.domain.entity.Organizer;
-import com.isa.domain.api.OrganizerExternal;
+import com.isa.domain.api.OrganizerApi;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -13,13 +13,13 @@ public class OrganizerMapper {
 
     private final Logger logger = LoggerFactory.getLogger(getClass().getName());
 
-    public Organizer mapApiViewToEntity(OrganizerExternal organizerExternal) {
+    public Organizer mapApiViewToEntity(OrganizerApi organizerApi) {
         logger.debug("Organizer mapping to Entity");
 
         Organizer organizer = new Organizer();
 
-        organizer.setApiId(organizerExternal.getId());
-        organizer.setDesignation(organizerExternal.getDesignation());
+        organizer.setApiId(organizerApi.getId());
+        organizer.setDesignation(organizerApi.getDesignation());
 
         logger.debug("Organizer mapping to Entity-> all parameters set");
 

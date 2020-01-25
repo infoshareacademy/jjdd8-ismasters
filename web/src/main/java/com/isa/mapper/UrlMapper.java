@@ -2,7 +2,7 @@ package com.isa.mapper;
 
 import com.isa.domain.dto.UrlDto;
 import com.isa.domain.entity.Url;
-import com.isa.domain.api.WeblinkExternal;
+import com.isa.domain.api.WeblinkApi;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -12,14 +12,14 @@ import javax.ejb.Stateless;
 public class UrlMapper {
     private final Logger logger = LoggerFactory.getLogger(getClass().getName());
 
-    public Url mapApiViewToEntity(WeblinkExternal weblinkExternal) {
+    public Url mapApiViewToEntity(WeblinkApi weblinkApi) {
         logger.debug("Url mapping to Entity");
 
         Url url = new Url();
 
-        url.setWwwUrl(weblinkExternal.getWebsite());
-        url.setFbUrl(weblinkExternal.getFb());
-        url.setTickerUrl(weblinkExternal.getTickets());
+        url.setWwwUrl(weblinkApi.getWebsite());
+        url.setFbUrl(weblinkApi.getFb());
+        url.setTickerUrl(weblinkApi.getTickets());
 
         logger.debug("Url mapping to Entity-> all parameters set");
 

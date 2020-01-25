@@ -3,7 +3,7 @@ package com.isa.domain.api;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 
-public class AddressExternal {
+public class AddressApi {
 
     @JsonProperty("street")
     private String street;

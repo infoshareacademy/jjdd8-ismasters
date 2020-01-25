@@ -30,9 +30,9 @@ public class UrlService {
         for (EventApi e: list) {
             Url url = new Url();
 
-            url.setTickerUrl(e.getWeblinkExternal().getTickets());
-            url.setFbUrl(e.getWeblinkExternal().getFb());
-            url.setWwwUrl(e.getWeblinkExternal().getWebsite());
+            url.setTickerUrl(e.getWeblinkApi().getTickets());
+            url.setFbUrl(e.getWeblinkApi().getFb());
+            url.setWwwUrl(e.getWeblinkApi().getWebsite());
             urlDao.addNewUrl(url);
 
             logger.debug("Wydarzenia mapowane i kierowane do bazy danych");

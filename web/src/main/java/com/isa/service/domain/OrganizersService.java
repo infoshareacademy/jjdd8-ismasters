@@ -1,7 +1,7 @@
 package com.isa.service.domain;
 
 import com.isa.dao.OrganizersDao;
-import com.isa.domain.api.OrganizerExternal;
+import com.isa.domain.api.OrganizerApi;
 import com.isa.mapper.OrganizerMapper;
 import com.isa.parser.ApiDataParser;
 import org.slf4j.Logger;
@@ -27,7 +27,7 @@ public class OrganizersService {
 
     public void setRelations(String filename) throws IOException {
 
-        List<OrganizerExternal> list = apiDataParser.parse(filename, OrganizerExternal.class);
+        List<OrganizerApi> list = apiDataParser.parse(filename, OrganizerApi.class);
 
         logger.debug("Zaimportowano listę organizatorów");
 

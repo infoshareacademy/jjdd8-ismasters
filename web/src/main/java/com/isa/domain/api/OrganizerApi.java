@@ -2,7 +2,7 @@ package com.isa.domain.api;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-public class OrganizerExternal {
+public class OrganizerApi {
 
     @JsonProperty("id")
     private Long id;

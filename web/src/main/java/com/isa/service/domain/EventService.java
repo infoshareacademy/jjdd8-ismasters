@@ -65,14 +65,14 @@ public class EventService {
         list.stream()
                 .forEach(e -> {
 
-                    Long externalOrganizerId = e.getOrganizerExternal().getId();
+                    Long externalOrganizerId = e.getOrganizerApi().getId();
                     Organizer organizer = organizersDao.findByApiId(externalOrganizerId);
                     Event event = eventMapper.mapApiViewToEntity(e);
 
                     logger.debug("Organizer {},{}", externalOrganizerId, organizer);
 
                     event.setOrganizer(organizer);
-                    Url url = urlMapper.mapApiViewToEntity(e.getWeblinkExternal());
+                    Url url = urlMapper.mapApiViewToEntity(e.getWeblinkApi());
                     event.setUrl(url);
 
                     int placeExternalId = e.getPlaceApi().getApiId();

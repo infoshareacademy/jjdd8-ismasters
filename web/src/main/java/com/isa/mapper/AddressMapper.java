@@ -1,7 +1,7 @@
 package com.isa.mapper;
 
 
-import com.isa.domain.api.AddressExternal;
+import com.isa.domain.api.AddressApi;
 import com.isa.domain.dto.AddressDto;
 import com.isa.domain.entity.Address;
 import org.slf4j.Logger;
@@ -13,7 +13,7 @@ import javax.ejb.Stateless;
 public class AddressMapper {
     private final Logger logger = LoggerFactory.getLogger(getClass().getName());
 
-    public Address mapApiViewToEntity(AddressExternal addressApi) {
+    public Address mapApiViewToEntity(AddressApi addressApi) {
         logger.debug("Address mapping to Entity");
 
         Address address = new Address();
