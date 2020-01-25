@@ -14,7 +14,7 @@ public class AddressMapper {
     private final Logger logger = LoggerFactory.getLogger(getClass().getName());
 
     public Address mapApiViewToEntity(AddressExternal addressApi) {
-        logger.info("Address mapping to Entity");
+        logger.debug("Address mapping to Entity");
 
         Address address = new Address();
 
@@ -24,7 +24,7 @@ public class AddressMapper {
         address.setLat(address.getLat());
         address.setLng(addressApi.getLng());
 
-        logger.info("Address mapping to Entity-> all parameters set");
+        logger.debug("Address mapping to Entity-> all parameters set");
 
         return address;
     }
@@ -39,7 +39,7 @@ public class AddressMapper {
         addressDto.setStreet(address.getStreet());
         addressDto.setZipcode(address.getZipcode());
 
-        logger.info("Address mapping to DTO -> all parameters are set");
+        logger.debug("Address mapping to DTO -> all parameters are set");
 
         return addressDto;
     }

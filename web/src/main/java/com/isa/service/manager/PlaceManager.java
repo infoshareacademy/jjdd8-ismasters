@@ -64,4 +64,30 @@ public class PlaceManager {
         logger.info("Miejsce z adresem dodane do tabeli");
 
     }
+
+    public void setRelationsFromFile(String jsonString) {
+
+        // addressManager.setRelationsAdress(jsonString);
+
+        List<PlaceApi> list = null;
+        try {
+            list = apiDataParser.parseFromFile(jsonString, PlaceApi.class);
+        } catch (IOException e) {
+            logger.error(e.getMessage(), e);
+        }
+
+        list.stream()
+                .forEach(p ->{
+                    Address address = new Address();
+                    Place place = new Place();
+                    address = addressMapper.mapApiViewToEntity(p.getAddressApi());
+                    place = placeMapper.mapApiViewToEntity(p);
+                    place.setAddress(address);
+                    placeDao.addNewPlace(place);
+                    logger.debug("Place {}",place );
+                });
+
+        logger.info("Miejsce z adresem dodane do tabeli");
+
+    }
 }

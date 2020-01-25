@@ -3,7 +3,6 @@ package com.isa.servlet;
 import com.isa.config.TemplateProvider;
 import com.isa.service.ConverterRequest;
 import com.isa.service.FileUploadProcessor;
-import com.isa.service.constant.ConstantValuesBean;
 import com.isa.service.manager.EventManager;
 import com.isa.service.manager.OrganizersManager;
 import com.isa.service.manager.PlaceManager;
@@ -20,7 +19,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.Part;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.io.UnsupportedEncodingException;
@@ -106,14 +104,14 @@ public class JsonFileUpload extends HttpServlet {
             logger.error(e.getMessage(), e);
         }
 
-
-        organizersManager.setRelations(eventsFilePath);
-        placeManager.setRelations(placesFilePath);
-        eventManager.setRelationsToEntity(eventsFilePath);
-
         logger.info("Events.json file path set to: " + eventsFilePath);
         logger.info("Organizer.json file path set to: " + organizersFilePath);
         logger.info("Places.json file path set to: " + placesFilePath);
+
+        organizersManager.setRelationsFromFile(organizersFilePath);
+        placeManager.setRelationsFromFile(placesFilePath);
+        eventManager.setRelationsFromFileToEntity(eventsFilePath);
+
     }
 
     private void setEncoding(HttpServletRequest req, HttpServletResponse resp) throws UnsupportedEncodingException {

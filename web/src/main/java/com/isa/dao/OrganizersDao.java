@@ -20,7 +20,7 @@ public class OrganizersDao {
 
     public long addNewOrganizer(Organizer organizer) {
         em.persist(organizer);
-        logger.info("New organizer has been added to the DB ");
+        logger.debug("New organizer has been added to the DB ");
         return organizer.getId();
     }
 

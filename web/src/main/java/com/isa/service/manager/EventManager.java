@@ -80,13 +80,50 @@ public class EventManager {
                     int placeExternalId = e.getPlaceApi().getApiId();
 
                     Place place = placeDao.findByApiId(placeExternalId);
-                    logger.info("Place id {}, {}", placeExternalId, place);
+                    logger.debug("Place id {}, {}", placeExternalId, place);
 
                     event.setPlace(place);
-                    logger.info("Przed zapisem {}", event);
+                    logger.debug("Przed zapisem {}", event);
 
                     eventDao.addNewEvent(event);
-                    logger.info("Dodano do bazy {}", event);
+                    logger.debug("Dodano do bazy {}", event);
+                });
+
+    }
+
+    public void setRelationsFromFileToEntity(String jsonString) {
+
+        List<EventApi> list = null;
+        try {
+            list = apiDataParser.parseFromFile(jsonString, EventApi.class);
+            logger.debug("Zaimportowano listę Wydarzeń");
+        } catch (IOException e) {
+            logger.error(e.getMessage(), e);
+        }
+
+        list.stream()
+                .forEach(e -> {
+
+                    Long externalOrganizerId = e.getOrganizerExternal().getId();
+                    Organizer organizer = organizersDao.findByApiId(externalOrganizerId);
+                    Event event = eventMapper.mapApiViewToEntity(e);
+
+                    logger.debug("Organizer {},{}", externalOrganizerId, organizer);
+
+                    event.setOrganizer(organizer);
+                    Url url = urlMapper.mapApiViewToEntity(e.getWeblinkExternal());
+                    event.setUrl(url);
+
+                    int placeExternalId = e.getPlaceApi().getApiId();
+
+                    Place place = placeDao.findByApiId(placeExternalId);
+                    logger.debug("Place id {}, {}", placeExternalId, place);
+
+                    event.setPlace(place);
+                    logger.debug("Przed zapisem {}", event);
+
+                    eventDao.addNewEvent(event);
+                    logger.debug("Dodano do bazy {}", event);
                 });
 
     }
