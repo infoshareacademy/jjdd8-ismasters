@@ -41,12 +41,12 @@
 
 <!-- Header Section -->
 <header class="header-section">
-    <a href="index.html" class="site-logo">
+    <a href="" class="site-logo">
         <img src="/img/logo_100.png" alt="">
     </a>
     <nav class="header-nav">
         <ul class="main-menu">
-            <li><a href="news.html">Wydarzenia</a></li>
+            <li><a href="/list-events?pageNumber=0">Wydarzenia</a></li>
             <li><a href="contact.html">Kontakt</a></li>
         </ul>
         <div class="header-right">
@@ -67,7 +67,7 @@
                     </div>
                 </div>
             </li>
-            <li><a href="news.html" role="menuitem" tabindex="-1">Wydarzenia</a></li>
+            <li><a href="/list-events?pageNumber=0" role="menuitem" tabindex="-1">Wydarzenia</a></li>
             <li><a href="contact.html" role="menuitem" tabindex="-1">Kontakt</a></li>
         </ul>
     </div>

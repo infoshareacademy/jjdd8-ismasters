@@ -47,8 +47,8 @@ public class EventDao {
         return query.getResultList();
     }
 
-    public Integer getNumberOfEvents(){
-        return (Integer) em.createNamedQuery("Event.countAll").getResultList().get(0);
+    public int getNumberOfEvents(){
+        return ((Number) em.createNamedQuery("Event.countAll").getSingleResult()).intValue();
     }
 
 }

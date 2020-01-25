@@ -71,4 +71,11 @@ public class AddressDto {
     public void setPlaceDto(PlaceDto placeDto) {
         this.placeDto = placeDto;
     }
+
+    @Override
+    public String toString() {
+        return  "Ulica'" + street + '\'' +
+                "Kod pocztowy'" + zipcode + '\'' +
+                "Miasto'" + city + '\'' ;
+    }
 }

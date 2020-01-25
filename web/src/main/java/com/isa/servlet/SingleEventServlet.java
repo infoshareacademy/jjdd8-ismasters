@@ -2,6 +2,7 @@ package com.isa.servlet;
 
 import com.isa.config.TemplateProvider;
 import com.isa.domain.dto.EventDto;
+import com.isa.domain.dto.OrganizerDto;
 import com.isa.service.domain.EventService;
 import freemarker.template.Template;
 import freemarker.template.TemplateException;
@@ -41,7 +42,11 @@ public class SingleEventServlet extends HttpServlet {
         }
 
         Long id = Long.parseLong(idParam);
+
+
         EventDto eventDto = eventService.findById(id);
+       // OrganizerDto organizerDto  = eventDto.getOrganizer();
+
 
         Template template = templateProvider.getTemplate(getServletContext(),"single.ftlh");
         Map<String, Object> model = new HashMap<>();

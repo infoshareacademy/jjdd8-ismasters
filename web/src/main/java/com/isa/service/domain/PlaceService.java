@@ -47,8 +47,8 @@ public class PlaceService {
                 .forEach(p ->{
                     Address address = new Address();
                     Place place = new Place();
-                    address = addressMapper.mapApiViewToEntity(p.getAddressApi());
-                    place = placeMapper.mapApiViewToEntity(p);
+                    address = addressMapper.mapApiToEntity(p.getAddressApi());
+                    place = placeMapper.mapApiToEntity(p);
                     place.setAddress(address);
                     placeDao.addNewPlace(place);
                     logger.debug("Place {}",place );

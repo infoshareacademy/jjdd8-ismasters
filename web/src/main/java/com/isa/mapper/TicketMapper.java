@@ -11,7 +11,7 @@ import javax.ejb.Stateless;
 public class TicketMapper {
     private final Logger logger = LoggerFactory.getLogger(getClass().getName());
 
-    public TicketType mapApiViewToEntity(TicketApi ticketApi) {
+    public TicketType mapApiToEntity(TicketApi ticketApi) {
         logger.debug("TicketType mapping to Entity");
 
         TicketType ticketType = new TicketType();

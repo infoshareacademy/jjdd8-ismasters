@@ -41,6 +41,6 @@ public class ApiInitialization {
 
         organizersService.setRelations(converter.buildClientRequest(constantValuesBean.getOrganizersApi()));
         placeService.setRelations(converter.buildClientRequest(constantValuesBean.getPlaceApi()));
-        eventService.setRelationsToEntity(converter.buildClientRequest(constantValuesBean.getEventsApi()));
+        eventService.mapApiToEntity(converter.buildClientRequest(constantValuesBean.getEventsApi()));
     }
 }

@@ -25,7 +25,6 @@ import javax.inject.Inject;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Stateless
@@ -57,7 +56,7 @@ public class EventService {
     @Inject
     private PlaceMapper placeMapper;
 
-    public void setRelationsToEntity(String jsonString) throws IOException {
+    public void mapApiToEntity(String jsonString) throws IOException {
 
         List<EventApi> list = apiDataParser.parse(jsonString, EventApi.class);
         logger.info("Zaimportowano listę Wydarzeń");
@@ -67,7 +66,7 @@ public class EventService {
 
                     Long externalOrganizerId = e.getOrganizerApi().getId();
                     Organizer organizer = organizersDao.findByApiId(externalOrganizerId);
-                    Event event = eventMapper.mapApiViewToEntity(e);
+                    Event event = eventMapper.mapApiToEntity(e);
 
                     logger.debug("Organizer {},{}", externalOrganizerId, organizer);
 
@@ -90,17 +89,18 @@ public class EventService {
     }
 
 
-    public EventDto setRelationsToDTO(Event event) {
+    public EventDto mapEntityToDto(Event event) {
 
         EventDto eventDto = new EventDto();
 
         eventDto = eventMapper.mapEntityToDto(event);
 
-        OrganizerDto organizerDto = organizerMapper.mapApiViewToDto(event.getOrganizer());
+        OrganizerDto organizerDto = organizerMapper.mapEnityToDto(event.getOrganizer());
 
         UrlDto urlDto = urlMapper.mapApiViewToDto(event.getUrl());
 
-        PlaceDto placeDto = placeMapper.mapApiViewToDto(event.getPlace());
+        PlaceDto placeDto = placeMapper.mapEntityToDto(event.getPlace());
+/*
 
         logger.info("______________");
         logger.info("OrganizerDTO designation: {}", organizerDto.getDesignation());
@@ -111,6 +111,7 @@ public class EventService {
         logger.info("Event getOrganizer {}", event.getOrganizer().getId());
         logger.info("URL getUrl {}", event.getUrl().getId());
         logger.info("Place getPlace {}", event.getPlace().getId());
+*/
 
         eventDto.setOrganizer(organizerDto);
         eventDto.setUrls(urlDto);
@@ -126,13 +127,13 @@ public class EventService {
         List<EventDto> eventDtoList = new ArrayList<>();
 
         eventDao.findAll()
-                .forEach(event -> eventDtoList.add(setRelationsToDTO(event)));
+                .forEach(event -> eventDtoList.add(mapEntityToDto(event)));
         return eventDtoList;
     }
 
     public EventDto findById(Long id) {
         Event event = eventDao.findById(id).orElseThrow();
-        return eventMapper.mapEntityToDto(event);
+        return mapEntityToDto(event);
     }
 
     public List<EventDto> searchEvents(String search) {
@@ -143,7 +144,7 @@ public class EventService {
 
     public List<EventDto> getEventsForView(int setStartEvent, int maxEvent) {
 
-        return eventDao.getEventsForView(setStartEvent, maxEvent).stream().map(e -> setRelationsToDTO(e))
+        return eventDao.getEventsForView(setStartEvent, maxEvent).stream().map(e -> mapEntityToDto(e))
                 .collect(Collectors.toList());
     }
 
