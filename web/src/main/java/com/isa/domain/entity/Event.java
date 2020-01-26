@@ -8,7 +8,7 @@ import java.util.List;
 
         @NamedQuery(name = "Event.countAll", query = "SELECT COUNT (e) FROM Event e"),
 
-        @NamedQuery(name = "Event.findByName", query = "SELECT e FROM Event e WHERE e.name LIKE :param")
+        @NamedQuery(name = "Event.findByName", query = "SELECT e FROM Event e JOIN e.organizer o WHERE e.name LIKE :param or o.designation like :param")
 }
 )
 

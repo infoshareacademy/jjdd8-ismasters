@@ -27,4 +27,5 @@ public class LiveSearch {
 
         return Response.ok().entity(eventDtoList).build();
     }
+
 }

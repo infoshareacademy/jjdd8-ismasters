@@ -20,13 +20,13 @@ $('#eventsearch').keyup(function (e) {
                         return;
                     }
                     $.each(data, function (i, item) {
-                        $("#result-div").append('<a href="/single?id='+item.id+'" class="list-group-item list-group-item-action list-group-item-primary">'+item.name+'</a>');
+                        $("#result-div").append('<a href="/single?id='+item.id+'" class="list-group-item list-group-item-action list-group-item-primary">'+item.name+', '+item.organizer.designation+'</a>');
                     });
                 })
             .fail(
                 function () {
                     $("#result-div").show();
-                    $("#result-div").html("Fatal error!");
+                    $("#result-div").html("");
                 });
     }
 });

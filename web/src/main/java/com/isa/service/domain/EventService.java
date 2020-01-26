@@ -152,7 +152,7 @@ public class EventService {
             logger.info("Live search param: {}", param);
             List<Event> eventList = eventDao.findByName(param);
             return eventList.stream()
-                    .map(e -> eventMapper.mapEntityToDto(e))
+                    .map(e -> mapEntityToDto(e))
                     .collect(Collectors.toList());
         }
 
