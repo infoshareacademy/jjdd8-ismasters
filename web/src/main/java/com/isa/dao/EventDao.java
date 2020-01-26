@@ -51,4 +51,9 @@ public class EventDao {
         return ((Number) em.createNamedQuery("Event.countAll").getSingleResult()).intValue();
     }
 
+    public List<Event> findByName(String param) {
+        Query query = em.createNamedQuery("Event.findByName");
+        query.setParameter("param", "%" + param + "%");
+        return query.setMaxResults(5).getResultList();
+    }
 }

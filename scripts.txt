@@ -21,7 +21,8 @@ public class ApiDataParserTest {
 /*   @Test
     public void shouldParse() throws IOException {
         ApiDataParser apiDataParser = new ApiDataParser();
-       List<EventApi> eventApis = (List<EventApi>) apiDataParser.parse(FILENAME, EventApi.class);
+       List<EventApi> eventApis = (List<EventApi>) adocker ps -a
+       piDataParser.parse(FILENAME, EventApi.class);
         System.out.println(eventApis);
     }
 <<<<<<< Updated upstream
@@ -43,3 +44,8 @@ public class ApiDataParserTest {
         }
     }
 >>>>>>> Stashed changes
+
+
+<img
+                                       src="https://wolnelektury.pl/media/${cat.coverThumb!}"
+                                        alt="Okładka"></a>

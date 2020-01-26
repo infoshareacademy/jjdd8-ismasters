@@ -10,9 +10,11 @@
                     </div>
                 </div>
                 <div class="search-input">
-                    <input type="text" placeholder="Wyszukaj wydarzenie w Trójmieście">
-                    <button class="site-btn">Wyszukaj</button>
+                    <input type="text" title="Wyszukiwanie, wpisz co najmniej 3 znaki" name="eventsearch" class="form-control form-control-user" pattern=".{3,}"
+                           id="eventsearch" placeholder="Wyszukiwanie, wpisz co najmniej 3 znaki." autocomplete="off"></div>
+                <div id="result-div" class="list-group" style="margin-top:2px;position:absolute;margin-left:0;z-index: 1001 !important; ">
                 </div>
+
                 <p>Baza wyszukań na podstawie udostępnionych informacji z API miasta Gdańsk.</p>
             </form>
         </div>
