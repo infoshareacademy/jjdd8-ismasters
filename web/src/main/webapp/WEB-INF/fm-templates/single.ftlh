@@ -40,13 +40,9 @@
 
             <div class="col-8">
                 <div class="property-item">
-                    <h4> Nazwa  : ${eventDto.name ! "Brak nazwy"}</h4>
-                    <p>Opis  : ${eventDto.descLong ! "Brak opisu"}</p>
+                    <h4> ${eventDto.name ! "Brak nazwy"}</h4>
+                    <p> ${eventDto.descLong ! "Brak opisu"}</p>
                 </div>
-            </div>
-
-            <div class="col">
-
             </div>
         </div>
     </div>

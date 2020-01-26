@@ -15,6 +15,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.time.LocalDateTime;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -49,7 +50,10 @@ public class SingleEventServlet extends HttpServlet {
         AddressDto addressDto = placeDto.getAddressDto();
         UrlDto urlDto = eventDto.getUrls();
 
+       // LocalDateTime localDateTime = LocalDateTime.parse(eventDto.getStartDate())  ;
 
+        logger.info("Long description: {}", eventDto.getDescLong());
+        logger.info("Short description: {}", eventDto.getDescShort());
         Template template = templateProvider.getTemplate(getServletContext(),"single.ftlh");
         Map<String, Object> model = new HashMap<>();
 
@@ -58,6 +62,7 @@ public class SingleEventServlet extends HttpServlet {
         model.put("placeDto", placeDto);
         model.put("urlDto", urlDto);
         model.put("addressDto", addressDto);
+        //model.put("localDateTime", localDateTime);
 
         try {
             template.process(model, writer);
