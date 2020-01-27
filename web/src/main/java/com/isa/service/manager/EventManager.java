@@ -24,7 +24,6 @@ import javax.ejb.Stateless;
 import javax.inject.Inject;
 import java.io.IOException;
 import java.util.List;
-import java.util.Optional;
 
 @Stateless
 public class EventManager {
@@ -55,10 +54,52 @@ public class EventManager {
     @Inject
     private PlaceMapper placeMapper;
 
-    public void setRelationsToEntity(String jsonString) throws IOException {
+    public void setRelationsToEntity(String jsonString) {
 
-        List<EventApi> list = apiDataParser.parse(jsonString, EventApi.class);
-        logger.info("Zaimportowano listę Wydarzeń");
+        List<EventApi> list = null;
+        try {
+            list = apiDataParser.parse(jsonString, EventApi.class);
+            logger.info("Zaimportowano listę Wydarzeń");
+        } catch (IOException e) {
+            logger.error(e.getMessage(), e);
+        }
+
+        list.stream()
+                .forEach(e -> {
+
+                    Long externalOrganizerId = e.getOrganizerExternal().getId();
+                    Organizer organizer = organizersDao.findByApiId(externalOrganizerId);
+                    Event event = eventMapper.mapApiViewToEntity(e);
+
+                    logger.info("Organizer {},{}", externalOrganizerId, organizer);
+
+                    event.setOrganizer(organizer);
+                    Url url = urlMapper.mapApiViewToEntity(e.getWeblinkExternal());
+                    event.setUrl(url);
+
+                    int placeExternalId = e.getPlaceApi().getApiId();
+
+                    Place place = placeDao.findByApiId(placeExternalId);
+                    logger.debug("Place id {}, {}", placeExternalId, place);
+
+                    event.setPlace(place);
+                    logger.debug("Przed zapisem {}", event);
+
+                    eventDao.addNewEvent(event);
+                    logger.debug("Dodano do bazy {}", event);
+                });
+
+    }
+
+    public void setRelationsFromFileToEntity(String jsonString) {
+
+        List<EventApi> list = null;
+        try {
+            list = apiDataParser.parseFromFile(jsonString, EventApi.class);
+            logger.debug("Zaimportowano listę Wydarzeń");
+        } catch (IOException e) {
+            logger.error(e.getMessage(), e);
+        }
 
         list.stream()
                 .forEach(e -> {

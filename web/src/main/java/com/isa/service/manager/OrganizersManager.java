@@ -25,11 +25,16 @@ public class OrganizersManager {
     @Inject
     private ApiDataParser apiDataParser;
 
-    public void setRelations(String filename) throws IOException {
+    public void setRelations(String filename)  {
 
-        List<OrganizerExternal> list = apiDataParser.parse(filename, OrganizerExternal.class);
+        List<OrganizerExternal> list = null;
+        try {
+            list = apiDataParser.parse(filename, OrganizerExternal.class);
+        } catch (IOException e) {
+            logger.error(e.getMessage(), e);
+        }
 
-        logger.debug("Zaimportowano listę organizatorów");
+        logger.info("Zaimportowano listę organizatorów");
 
         list.stream()
                 .map(o->organizerMapper.mapApiViewToEntity(o))
@@ -38,6 +43,34 @@ public class OrganizersManager {
                     logger.debug("Organizer {}",o.getId() );
                 });
 
-        logger.debug("Organizatorzy zmapowani i zaimportowani do bazy");
+        logger.info("Organizatorzy zmapowani i zaimportowani do bazy");
+    }
+
+    public void setRelationsFromFile(String filename)  {
+
+        List<OrganizerExternal> list = null;
+        try {
+            list = apiDataParser.parseFromFile(filename, OrganizerExternal.class);
+        } catch (IOException e) {
+            logger.error(e.getMessage(), e);
+        }
+
+        logger.info("Zaimportowano listę organizatorów");
+
+        list.stream()
+                .map(organizerMapper::mapApiViewToEntity)
+                .forEach(o ->{
+                    logger.info("Organizer Api ID: {}", o.getApiId());
+                    logger.info("Organizer from DB Api ID: {}", organizersDao.findByApiId(o.getApiId()).getApiId());
+                    if (!o.getApiId().equals(organizersDao.findByApiId(o.getApiId()).getApiId())) {
+                        organizersDao.addNewOrganizer(o);
+                        logger.info("OK ADDING");
+                        logger.info("Organizer {}",o.getApiId() );
+                    } else {
+                        logger.info("Organizer already exists {}", o.getDesignation());
+                    }
+                });
+
+        logger.info("Organizatorzy zmapowani i zaimportowani do bazy");
     }
 }
