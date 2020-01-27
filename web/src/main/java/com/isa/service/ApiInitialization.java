@@ -1,10 +1,6 @@
 package com.isa.service;
 
 
-import com.isa.service.constant.ConstantValuesBean;
-import com.isa.service.manager.EventManager;
-import com.isa.service.manager.OrganizersManager;
-import com.isa.service.manager.PlaceManager;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -18,7 +14,7 @@ import java.io.IOException;
 @Startup
 public class ApiInitialization {
 
-    private final Logger logger = LoggerFactory.getLogger(getClass().getName());
+    private final Logger logger = LoggerFactory.getLogger(this.getClass().getName());
 
     @Inject
     private EventManager eventManager;
@@ -26,21 +22,18 @@ public class ApiInitialization {
     @Inject
     private OrganizersManager organizersManager;
 
-    @Inject
-    private ConstantValuesBean constantValuesBean;
 
-    @Inject
-    private ConverterRequest converter;
-
-    @Inject
-    private PlaceManager placeManager;
-
+    private static final String eventsFile = "/home/chyrzy/Desktop/newapp/jjdd8-ismasters/web/src/main/java/com/isa/parser/events.json";
+    private static final String organizersFile = "/home/chyrzy/Desktop/newapp/jjdd8-ismasters/web/src/main/java/com/isa/parser/organizers.json";
+    private static final String placesFile = "com/isa/parser/places.json";
 
     @PostConstruct
     public void apiInitialization() throws IOException {
 
-        organizersManager.setRelations(converter.buildClientRequest(constantValuesBean.getOrganizersApi()));
-        placeManager.setRelations(converter.buildClientRequest(constantValuesBean.getPlaceApi()));
-        eventManager.setRelationsToEntity(converter.buildClientRequest(constantValuesBean.getEventsApi()));
+        organizersManager.setRelations(organizersFile);
+        eventManager.setRelations(eventsFile);
+
     }
+
+
 }
