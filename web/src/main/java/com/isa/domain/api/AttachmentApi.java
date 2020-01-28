@@ -6,15 +6,14 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AttachmentApi {
 
     @JsonProperty("fileName")
-    @JsonIgnore
     private String fileName;
 
-    @JsonIgnore
+
     public String getFileName() {
         return fileName;
     }
 
-    @JsonIgnore
+
     public void setFileName(String fileName) {
         this.fileName = fileName;
     }

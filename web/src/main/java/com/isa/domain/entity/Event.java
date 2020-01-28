@@ -1,6 +1,9 @@
 package com.isa.domain.entity;
 
 import javax.persistence.*;
+import javax.transaction.Transactional;
+import javax.xml.namespace.QName;
+import java.util.ArrayList;
 import java.util.List;
 
 @NamedQueries({
@@ -14,6 +17,7 @@ import java.util.List;
 
 @Entity
 @Table(name = "event")
+@Transactional
 public class Event {
 
     @Id
@@ -63,6 +67,17 @@ public class Event {
     @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     @JoinColumn(name = "url_id", unique = true)
     private Url url;
+
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "event")
+    private List<Attachments> attachments;
+
+    public List<Attachments> getAttachments() {
+        return attachments;
+    }
+
+    public void setAttachments(List<Attachments> attachments) {
+        this.attachments = attachments;
+    }
 
     public Event() {
     }

@@ -25,7 +25,6 @@ public class EventApi {
     private WeblinkApi weblinkApi;
 
     @JsonProperty("attachments")
-    @JsonIgnoreProperties(ignoreUnknown = true)
     private List<AttachmentApi> attachments;
 
     @JsonProperty("descLong")
@@ -101,12 +100,12 @@ public class EventApi {
         this.weblinkApi = weblinkApi;
     }
 
-    @JsonIgnore
+
     public List<AttachmentApi> getAttachments() {
         return attachments;
     }
 
-    @JsonIgnore
+
     public void setAttachments(List<AttachmentApi> attachments) {
         this.attachments = attachments;
     }

@@ -1,5 +1,7 @@
 package com.isa.domain.dto;
 
+import com.isa.domain.entity.Attachments;
+
 import java.util.List;
 
 
@@ -22,6 +24,16 @@ public class EventDto {
     private int categoryId;
 
     private boolean active;
+
+    private AttachmentDto attachmentDto;
+
+    public AttachmentDto getAttachmentDto() {
+        return attachmentDto;
+    }
+
+    public void setAttachmentDto(AttachmentDto attachmentDto) {
+        this.attachmentDto = attachmentDto;
+    }
 
     private List<UserDto> eventFav;
 

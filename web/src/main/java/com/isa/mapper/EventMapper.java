@@ -47,6 +47,7 @@ public class EventMapper {
         eventDto.setDescLong(eventEntity.getDescLong());
         eventDto.setCategoryId(eventEntity.getCategoryId());
         eventDto.setActive(eventEntity.isActive());
+//        eventDto.setAttachments(eventEntity.getAttachments());
 
         logger.debug("Event mapping to DTO -> all parameters are set");
 

@@ -4,18 +4,9 @@ import com.isa.dao.EventDao;
 import com.isa.dao.OrganizersDao;
 import com.isa.dao.PlaceDao;
 import com.isa.domain.api.EventApi;
-import com.isa.domain.dto.EventDto;
-import com.isa.domain.dto.OrganizerDto;
-import com.isa.domain.dto.PlaceDto;
-import com.isa.domain.dto.UrlDto;
-import com.isa.domain.entity.Event;
-import com.isa.domain.entity.Organizer;
-import com.isa.domain.entity.Place;
-import com.isa.domain.entity.Url;
-import com.isa.mapper.EventMapper;
-import com.isa.mapper.OrganizerMapper;
-import com.isa.mapper.PlaceMapper;
-import com.isa.mapper.UrlMapper;
+import com.isa.domain.dto.*;
+import com.isa.domain.entity.*;
+import com.isa.mapper.*;
 import com.isa.parser.ApiDataParser;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -26,6 +17,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
+
 
 @Stateless
 public class EventService {
@@ -56,6 +48,9 @@ public class EventService {
     @Inject
     private PlaceMapper placeMapper;
 
+    @Inject
+    private AttachmentMapper attachmentMapper;
+
     public void mapApiToEntity(String jsonString) throws IOException {
 
         List<EventApi> list = apiDataParser.parse(jsonString, EventApi.class);
@@ -74,16 +69,25 @@ public class EventService {
                     Url url = urlMapper.mapApiViewToEntity(e.getWeblinkApi());
                     event.setUrl(url);
 
+                    List<Attachments> attachments = attachmentMapper.mapApiToEntity(e.getAttachments());
+
+                    event.setAttachments(attachments);
+
+                    attachments.stream().forEach(a->a.setEvent(event));
                     int placeExternalId = e.getPlaceApi().getApiId();
 
                     Place place = placeDao.findByApiId(placeExternalId);
                     logger.debug("Place id {}, {}", placeExternalId, place);
-
+//                    List<Attachments> attachments = attachmentMapper.mapAttachmentApiToEntity(e.getAttachments());
+//                    event.setAttachments(attachments);
+//                    logger.debug("Attachments  {}", attachments.get(0));
                     event.setPlace(place);
                     logger.debug("Przed zapisem {}", event);
 
                     eventDao.addNewEvent(event);
                     logger.debug("Dodano do bazy {}", event);
+
+                    logger.info("Attachments {}", event.getAttachments());
                 });
 
     }
@@ -100,23 +104,14 @@ public class EventService {
         UrlDto urlDto = urlMapper.mapApiViewToDto(event.getUrl());
 
         PlaceDto placeDto = placeMapper.mapEntityToDto(event.getPlace());
-/*
 
-        logger.info("______________");
-        logger.info("OrganizerDTO designation: {}", organizerDto.getDesignation());
-        logger.info("OrganizerDTO eventDtoList(0): {}", Optional.ofNullable(organizerDto.getEventDtoList().get(0)));
-        logger.info("OrganizerDTO idDb: {}", organizerDto.getIdDb());
-        logger.info("OrganizerDTO idExternal: {}", organizerDto.getIdExternal());
-        logger.info("______________");
-        logger.info("Event getOrganizer {}", event.getOrganizer().getId());
-        logger.info("URL getUrl {}", event.getUrl().getId());
-        logger.info("Place getPlace {}", event.getPlace().getId());
-*/
+        AttachmentDto attachmentDto = attachmentMapper.mapAttachmentToDto(event.getAttachments());
 
         eventDto.setOrganizer(organizerDto);
         eventDto.setUrls(urlDto);
         eventDto.setPlace(placeDto);
-
+        eventDto.setAttachmentDto(attachmentDto);
+        logger.info("Zdjęcie : {}", eventDto.getAttachmentDto());
         return eventDto;
 
     }
