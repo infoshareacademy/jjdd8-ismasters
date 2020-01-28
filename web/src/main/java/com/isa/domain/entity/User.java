@@ -30,6 +30,10 @@ public class User {
     @Column (name = "email")
     private String email;
 
+    @Column (name = "google_id")
+    private String googleId;
+
+
     @Column (name = "user_type")
     private UserType userType;
 
@@ -80,5 +84,13 @@ public class User {
 
     public void setFavoriteEvents(List<Event> favoriteEvents) {
         this.favoriteEvents = favoriteEvents;
+    }
+
+    public String getGoogleId() {
+        return googleId;
+    }
+
+    public void setGoogleId(String googleId) {
+        this.googleId = googleId;
     }
 }

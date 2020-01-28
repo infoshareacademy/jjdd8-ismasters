@@ -48,14 +48,14 @@ public class WelcomeUserServlet extends HttpServlet {
         }
 
         System.out.println("Error: " + logger.isErrorEnabled());
-        logger.error("Test error log");
+        logger.error("Login error log");
         System.out.println("Warn: " + logger.isWarnEnabled());
-        logger.warn("Test warn log");
+        logger.warn("Login warn log");
         System.out.println("Info: " + logger.isInfoEnabled());
-        logger.info("Test info log");
+        logger.info("Login info log");
         System.out.println("Debug: " + logger.isDebugEnabled());
-        logger.debug("Test debug log");
+        logger.debug("Login debug log");
         System.out.println("Trace: " + logger.isTraceEnabled());
-        logger.trace("Test trace log");
+        logger.trace("Login trace log");
     }
 }

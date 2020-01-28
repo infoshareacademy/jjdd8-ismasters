@@ -37,7 +37,7 @@ public final class GoogleAuthHelper {
 	/**
 	 * Callback URI that google will redirect to after successful authentication
 	 */
-	private static final String CALLBACK_URI = "http://localhost:8080/test";
+	private static final String CALLBACK_URI = "http://localhost:8080/";
 	
 	// start google authentication constants
 	private static final Collection<String> SCOPE = Arrays.asList("https://www.googleapis.com/auth/userinfo.profile;https://www.googleapis.com/auth/userinfo.email".split(";"));
@@ -110,7 +110,7 @@ public final class GoogleAuthHelper {
 		// Make an authenticated request
 		final GenericUrl url = new GenericUrl(USER_INFO_URL);
 		final HttpRequest request = requestFactory.buildGetRequest(url);
-		request.getHeaders().setContentType("application/json");
+		request.getHeaders().setContentType("text/plain");
 		HttpResponse gResponse = request.execute();
 		logger.info("get headers: {}", gResponse.getHeaders());
 		final String jsonIdentity = request.execute().parseAsString();

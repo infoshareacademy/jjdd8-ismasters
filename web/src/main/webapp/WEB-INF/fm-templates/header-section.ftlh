@@ -10,31 +10,7 @@
     <!-- Favicon -->
     <link href="/img/favicon.ico" rel="shortcut icon"/>
     <script src="/js/login_logout.js"></script>
-<#--    <script>-->
-<#--        //google callback. This function will redirect to our login servlet-->
-<#--        function onSignIn(googleUser) {-->
-<#--            var profile = googleUser.getBasicProfile();-->
-<#--            console.log('ID: ' + profile.getId());-->
-<#--            console.log('Name: ' + profile.getName());-->
-<#--            console.log('Image URL: ' + profile.getImageUrl());-->
-<#--            console.log('Email: ' + profile.getEmail());-->
-<#--            console.log('id_token: ' + googleUser.getAuthResponse().id_token);-->
 
-<#--            //do not post all above info to the server because that is not secure.-->
-<#--            //just send the id_token-->
-
-<#--            var redirectUrl = 'login';-->
-
-<#--            //using jquery to post data dynamically-->
-<#--            var form = $('<form action="' + redirectUrl + '" method="post">' +-->
-<#--                '<input type="text" name="id_token" value="' +-->
-<#--                googleUser.getAuthResponse().id_token + '" />' +-->
-<#--                '</form>');-->
-<#--            $('body').append(form);-->
-<#--            form.submit();-->
-<#--        }-->
-
-<#--    </script>-->
 
     <!-- Stylesheets -->
     <link rel="stylesheet" href="/css/bootstrap.min.css"/>
@@ -50,11 +26,6 @@
     <meta name="google-signin-client_id" content="410089355802-edk5jsfjas6cmf08v219irj2i3lvrtcm.apps.googleusercontent.com">
     <script src="https://apis.google.com/js/platform.js" async defer></script>
 
-<#--    gapi.load('auth2', function() {-->
-<#--    gapi.auth2.init();-->
-<#--    });-->
-
-
 
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -65,6 +36,27 @@
 
 
     <![endif]-->
+    <style>
+
+
+        .auth a {
+            display: block;
+            border-style: solid;
+            border-color: #bbb #888 #666 #aaa;
+            border-width: 1px 2px 2px 1px;
+            background: #ccc;
+            color: #333;
+            line-height: 2;
+            text-align: center;
+            text-decoration: none;
+            font-weight: 900;
+            width: 13em;
+        }
+
+        .auth pre {
+            background: #ccc;
+        }
+    </style>
 
 </head>
 <body>
@@ -84,15 +76,24 @@
             <li><a href="news.html">Wydarzenia</a></li>
             <li><a href="contact.html">Kontakt</a></li>
         </ul>
+
+<#--        <#if Session.loginStatus??>-->
+<#--            <p>${Session.loginStatus}</p>-->
+<#--            <#else> <p>No session attribute</p>-->
+<#--        </#if>-->
+
+<#--        <p>${loginStatus ! "No login"}</p>-->
+
+
         <div class="header-right">
             <div class="user-panel">
-<#--                <a href="#" class="login">Zaaaloguj się</a>-->
-                <a href="/login" class="btn btn-danger btn-sm" id="login">
+                <#if !loginStatus>
+                <a href="${loginUrl}" class="btn btn-danger btn-sm" id="login">
                     <i class="fa fa-google"></i> Zaloguj się przez <b>Google</b></a>
+                <#else>
                 <a href="/logout" class="btn btn-danger btn-sm"
                    id="logout"><i class="fa fa-google"></i> Wyloguj się</a>
-<#--                <div class="g-signin2" data-onsuccess="onSignIn"></div>Username: <<#if userName??><div>${userName}></div></#if>-->
-<#--                <a href="/login" class="register rounded-pill">Zaloguj się</a>-->
+                </#if>
             </div>
         </div>
     </nav>
@@ -101,15 +102,10 @@
                 <span class="slicknav_icon-bar"></span><span class="slicknav_icon-bar"></span></span></a>
         <ul class="slicknav_nav slicknav_hidden" aria-hidden="true" role="menu" style="display: none;">
             <li class="header-right-warp"><div class="header-right">
-<#--                    <div class="user-panel">-->
-<#--                        <a href="#" class="login">Zaloguj się</a>-->
-<#--                        <a href="#" class="register">Zarejestruj się</a>-->
-<#--                    </div>-->
                 </div>
             </li>
             <li><a href="news.html" role="menuitem" tabindex="-1">Wydarzenia</a></li>
             <li><a href="contact.html" role="menuitem" tabindex="-1">Kontakt</a></li>
-<#--            <li><a href="/login" role="menuitem" tabindex="-1">Logowanie</a></li>-->
         </ul>
     </div>
 </header>
