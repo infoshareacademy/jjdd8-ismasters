@@ -33,7 +33,7 @@ public class User {
     @Column (name = "google_id")
     private String googleId;
 
-
+    @Enumerated (EnumType.STRING)
     @Column (name = "user_type")
     private UserType userType;
 

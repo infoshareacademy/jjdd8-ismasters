@@ -68,7 +68,7 @@
 
 <!-- Header Section -->
 <header class="header-section">
-    <a href="index.html" class="site-logo">
+    <a href="/" class="site-logo">
         <img src="/img/logo_100.png" alt="">
     </a>
     <nav class="header-nav">

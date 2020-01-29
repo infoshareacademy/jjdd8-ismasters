@@ -3,8 +3,10 @@ package com.isa.servlet;
 
 import com.isa.auth.UserAuthenticationService;
 import com.isa.config.TemplateProvider;
+import com.isa.domain.dto.UserDto;
+import com.isa.domain.entity.UserType;
 import com.isa.mock.EventDTO_mock;
-import com.isa.parser.ApiDataParser;
+import com.isa.service.UserService;
 import freemarker.template.Template;
 import freemarker.template.TemplateException;
 import org.slf4j.Logger;
@@ -21,6 +23,7 @@ import java.io.IOException;
 import java.io.StringReader;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Optional;
 
 
 @WebServlet ("")
@@ -31,7 +34,7 @@ public class WelcomePage extends HttpServlet {
     private EventDTO_mock eventDTO_mock = new EventDTO_mock();
 
     @Inject
-    private ApiDataParser apiDataParser;
+    private UserService userService;
 
     @Inject
     private TemplateProvider templateProvider;
@@ -58,18 +61,53 @@ public class WelcomePage extends HttpServlet {
         String state = req.getParameter("state");
         logger.info("State initial {}", state);
 
-        if ( (code != null) && !code.isEmpty() && (state != null) && !state.isEmpty()) {
+        if ((code != null) && !code.isEmpty() && (state != null) && !state.isEmpty()) {
 
             if (req.getSession().getAttribute("googleId") == null) {
                 String googleJson = userAuthenticationService.getUserInfoJson(code);
                 JsonObject googleUser = Json.createReader(new StringReader(googleJson)).readObject();
 
-                logger.info("Google user logged {}", googleUser.getString("email"));
-                req.getSession().setAttribute("googleId", googleUser.getString("id"));
+                String googleUserEmail = googleUser.getString("email");
+                String googleUserId = googleUser.getString("id");
+
+                logger.info("Google user logged {}", googleUserEmail);
+
+                logger.info("Is user in DB: {}", googleUserEmail);
+
+                if (userService.userExists(googleUserEmail)) {
+
+                    Optional<UserDto> userDto = userService.getUserByEmail(googleUserEmail);
+                    logger.info("UserType from DB {}", userDto.get().getUserType());
+
+                    req.getSession().setAttribute("userType", userDto.get().getUserType());
+                    req.getSession().setAttribute("googleId", userDto.get().getGoogleId());
+                    req.getSession().setAttribute("googleEmail", userDto.get().getEmail());
+
+                    logger.info("Usertype from db {}", req.getSession().getAttribute("userType"));
+                    logger.info("Googleid from db {}", req.getSession().getAttribute("googleId"));
+                    logger.info("GoogleEmail from db {}", req.getSession().getAttribute("googleEmail"));
+
+                } else {
+
+                    UserDto userDto = new UserDto();
+                    userDto.setGoogleId(googleUserId);
+                    userDto.setEmail(googleUserEmail);
+                    userDto.setUserType(UserType.USER);
+
+                    userService.createNewUser(userDto);
+
+                    req.getSession().setAttribute("userType", userDto.getUserType());
+                    req.getSession().setAttribute("googleId", userDto.getGoogleId());
+                    req.getSession().setAttribute("googleEmail", userDto.getEmail());
+
+                    logger.info("Usertype sent to DB {}", userDto.getUserType());
+                    logger.info("Googleid sent to DB {}", userDto.getGoogleId());
+                    logger.info("GoogleEmail sent to DB {}", userDto.getEmail());
+                }
             }
         }
-            final String googleId = (String) req.getSession().getAttribute("googleId");
-            logger.info("GoogleId: {}", googleId);
+        final String googleId = (String) req.getSession().getAttribute("googleId");
+        logger.info("GoogleId: {}", googleId);
 
         if (googleId != null && !googleId.isEmpty()) {
             model.put("logged", "yes");

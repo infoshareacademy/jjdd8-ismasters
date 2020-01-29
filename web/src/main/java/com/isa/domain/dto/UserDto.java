@@ -10,6 +10,8 @@ public class UserDto {
 
     private String email;
 
+    private String googleId;
+
     private UserType userType;
 
     private List<EventDto> eventDtoList;
@@ -54,5 +56,13 @@ public class UserDto {
 
     public void setEventDtoList(List<EventDto> eventDtoList) {
         this.eventDtoList = eventDtoList;
+    }
+
+    public String getGoogleId() {
+        return googleId;
+    }
+
+    public void setGoogleId(String googleId) {
+        this.googleId = googleId;
     }
 }

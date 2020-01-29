@@ -20,6 +20,7 @@ public class UserMapper {
     userDto.setId(user.getId());
     userDto.setName(user.getName());
     userDto.setEmail(user.getEmail());
+    userDto.setGoogleId(user.getGoogleId());
     userDto.setEventDtoList(user.getFavoriteEvents().stream()
         .map(event -> eventMapper.mapEntityToDto(event))
         .collect(Collectors.toList()));
@@ -33,6 +34,7 @@ public class UserMapper {
     user.setName(userDto.getName());
     user.setEmail(userDto.getEmail());
     user.setUserType(userDto.getUserType());
+    user.setGoogleId(userDto.getGoogleId());
     return user;
   }
 }
