@@ -19,7 +19,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 @WebServlet ("/single")
-public class SingleEventServlet extends HttpServlet {
+public class SingleEvent extends HttpServlet {
 
     private final Logger logger = LoggerFactory.getLogger(this.getClass().getName());
 

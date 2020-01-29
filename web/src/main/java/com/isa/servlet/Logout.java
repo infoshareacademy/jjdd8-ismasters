@@ -1,4 +1,4 @@
-package com.isa.auth;
+package com.isa.servlet;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -17,10 +17,9 @@ public class Logout extends HttpServlet {
 
 
     @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
         request.getSession().removeAttribute("googleId");
         logger.info("User logged out");
-
         response.sendRedirect("/");
     }
 }

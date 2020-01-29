@@ -31,7 +31,6 @@ public class FileUploadProcessor {
 
     public File uploadFile(Part filePart) throws IOException {
 
-
         String fileName = Paths.get(filePart.getSubmittedFileName()).getFileName().toString();
 
         if (fileName == null || fileName.isEmpty()) {

@@ -1,7 +1,6 @@
 package com.isa.servlet;
 
 import com.isa.config.TemplateProvider;
-import com.isa.service.ConverterRequest;
 import com.isa.service.FileUploadProcessor;
 import com.isa.service.manager.EventManager;
 import com.isa.service.manager.OrganizersManager;
@@ -42,9 +41,6 @@ public class JsonFileUpload extends HttpServlet {
     private OrganizersManager organizersManager;
 
     @Inject
-    private ConverterRequest converter;
-
-    @Inject
     private PlaceManager placeManager;
 
 
@@ -54,7 +50,6 @@ public class JsonFileUpload extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         logger.info("Session id: " + req.getSession().getId());
         setEncoding(req, resp);
-        logger.info("Json file upload form opened");
         Template template = templateProvider.getTemplate(getServletContext(), "json_file_uploader.ftlh");
         Map<String, Object> model = new HashMap<>();
 
@@ -94,8 +89,11 @@ public class JsonFileUpload extends HttpServlet {
         String organizersFilePath = "";
 
         try {
+            assert eventsJson != null;
             eventsFilePath = fileUploadProcessor.getUploadFilePath() + fileUploadProcessor.uploadFile(eventsJson).getName();
+            assert placesJson != null;
             placesFilePath = fileUploadProcessor.getUploadFilePath() + fileUploadProcessor.uploadFile(placesJson).getName();
+            assert organizersJson != null;
             organizersFilePath = fileUploadProcessor.getUploadFilePath() + fileUploadProcessor.uploadFile(organizersJson).getName();
             writer.println("Plik " + eventsFilePath + " został załadowany");
             writer.println("Plik " + organizersFilePath + " został załadowany");

@@ -1,7 +1,7 @@
 package com.isa.servlet;
 
 
-import com.isa.auth.GoogleAuthHelper;
+import com.isa.auth.UserAuthenticationService;
 import com.isa.config.TemplateProvider;
 import com.isa.mock.EventDTO_mock;
 import com.isa.parser.ApiDataParser;
@@ -35,7 +35,7 @@ public class WelcomePage extends HttpServlet {
 
     @Inject
     private TemplateProvider templateProvider;
-    private GoogleAuthHelper googleAuthHelper = new GoogleAuthHelper();
+    private UserAuthenticationService userAuthenticationService = new UserAuthenticationService();
 
 
     @Override
@@ -61,7 +61,7 @@ public class WelcomePage extends HttpServlet {
         if ( (code != null) && !code.isEmpty() && (state != null) && !state.isEmpty()) {
 
             if (req.getSession().getAttribute("googleId") == null) {
-                String googleJson = googleAuthHelper.getUserInfoJson(code);
+                String googleJson = userAuthenticationService.getUserInfoJson(code);
                 JsonObject googleUser = Json.createReader(new StringReader(googleJson)).readObject();
 
                 logger.info("Google user logged {}", googleUser.getString("email"));
@@ -75,7 +75,7 @@ public class WelcomePage extends HttpServlet {
             model.put("logged", "yes");
         } else {
             model.put("logged", "no");
-            model.put("loginUrl", googleAuthHelper.buildLoginUrl());
+            model.put("loginUrl", userAuthenticationService.buildLoginUrl());
         }
 
         try {
