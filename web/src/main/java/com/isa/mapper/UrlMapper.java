@@ -1,8 +1,8 @@
 package com.isa.mapper;
 
+import com.isa.domain.api.WeblinkApi;
 import com.isa.domain.dto.UrlDto;
 import com.isa.domain.entity.Url;
-import com.isa.domain.api.WeblinkApi;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -21,7 +21,7 @@ public class UrlMapper {
         url.setFbUrl(weblinkApi.getFb());
         url.setTickerUrl(weblinkApi.getTickets());
 
-        logger.debug("Url mapping to Entity-> all parameters set");
+        logger.debug("Url mapping to Entity-> all parameters set Url {}", url.getWwwUrl());
 
         return url;
     }
@@ -35,7 +35,7 @@ public class UrlMapper {
         urlDto.setFbLink(url.getFbUrl());
         urlDto.setTicketLink(url.getTickerUrl());
 
-        logger.debug("Url mapping to DTO-> all parameters set");
+        logger.debug("Url mapping to DTO-> all parameters set Url {}", urlDto.getWebsite());
 
         return urlDto;
     }

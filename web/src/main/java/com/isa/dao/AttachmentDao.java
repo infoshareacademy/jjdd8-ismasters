@@ -19,7 +19,7 @@ public class AttachmentDao {
     @PersistenceContext
     private EntityManager em;
 
-    public long addNewAttachment(Attachments attachments) {
+    public long add(Attachments attachments) {
         em.persist(attachments);
         logger.debug("New attachment has been added to the DB, id: {}", attachments.getId());
         return attachments.getId();
@@ -33,13 +33,5 @@ public class AttachmentDao {
         return AttachmentsList;
     }
 
-    public Optional<Attachments> findById(Long id) {
-        return Optional.ofNullable(em.find(Attachments.class, id));
-    }
-
-    public Optional<Attachments> editAddress(Attachments attachments) {
-        return Optional.ofNullable(em.merge(attachments));
-    }
-
-
+    
 }

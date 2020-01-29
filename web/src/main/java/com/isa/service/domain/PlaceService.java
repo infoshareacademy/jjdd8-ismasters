@@ -50,7 +50,7 @@ public class PlaceService {
                     address = addressMapper.mapApiToEntity(p.getAddressApi());
                     place = placeMapper.mapApiToEntity(p);
                     place.setAddress(address);
-                    placeDao.addNewPlace(place);
+                    placeDao.add(place);
                     logger.debug("Place {}",place );
                 });
 

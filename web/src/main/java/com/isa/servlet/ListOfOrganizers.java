@@ -1,11 +1,7 @@
 package com.isa.servlet;
 
 import com.isa.config.TemplateProvider;
-import com.isa.domain.dto.EventDto;
 import com.isa.domain.dto.OrganizerDto;
-import com.isa.service.PaginationService;
-import com.isa.service.constant.PageEventSize;
-import com.isa.service.domain.EventService;
 import com.isa.service.domain.OrganizersService;
 import freemarker.template.Template;
 import freemarker.template.TemplateException;
@@ -18,11 +14,12 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.util.*;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Map;
+import java.util.Set;
 
-/**
- *
- */
+
 @WebServlet("/organizers-list")
 public class ListOfOrganizers extends HttpServlet {
 
@@ -31,22 +28,14 @@ public class ListOfOrganizers extends HttpServlet {
     @Inject
     private TemplateProvider templateProvider;
 
-   @Inject
+    @Inject
     private OrganizersService organizersService;
-
-    @Inject
-    private PageEventSize pageEventSize;
-
-    @Inject
-    private PaginationService paginationService;
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse rep) throws SecurityException, IOException {
 
-
         Template template = templateProvider.getTemplate(getServletContext(), "organizers-list.ftlh");
         Map<String, Object> model = new HashMap<>();
-
 
         Set<OrganizerDto> organizersDtoList = new HashSet<>(organizersService.findAll());
 
@@ -60,7 +49,4 @@ public class ListOfOrganizers extends HttpServlet {
             logger.error(e.getMessage());
         }
     }
-
-
-
 }

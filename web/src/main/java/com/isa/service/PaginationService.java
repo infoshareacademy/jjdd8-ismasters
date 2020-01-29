@@ -11,17 +11,15 @@ public class PaginationService {
     @Inject
     EventDao eventDao;
 
-    public int add(int num) {
-        return num + 20;
+    public int add(int numberOfElementsOnPage) {
+        return numberOfElementsOnPage + 20;
     }
 
-    public int reduce(int num) {
-        return num - 20;
+    public int reduce(int numberOfElementsOnPage) {
+        return numberOfElementsOnPage - 20;
     }
 
-    public int getLastPage(){return eventDao.getNumberOfEvents() - 20;}
-
-
-
-
+    public int getLastPage() {
+        return eventDao.getNumberOfEvents() - 20;
+    }
 }

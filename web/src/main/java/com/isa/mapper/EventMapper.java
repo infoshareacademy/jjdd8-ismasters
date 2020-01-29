@@ -1,9 +1,9 @@
 package com.isa.mapper;
 
 
+import com.isa.domain.api.EventApi;
 import com.isa.domain.dto.EventDto;
 import com.isa.domain.entity.Event;
-import com.isa.domain.api.EventApi;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -28,7 +28,7 @@ public class EventMapper {
         event.setCategoryId(eventApiParser.getCategoryEventId());
         event.setActive(eventApiParser.getActiveEvent());
 
-        logger.debug("Event mapping to Entity -> all parameters are set");
+        logger.debug("Event mapping to DTO -> all parameters are set for Event ApiID {}", event.getApiId());
 
         return event;
     }
@@ -47,9 +47,8 @@ public class EventMapper {
         eventDto.setDescLong(eventEntity.getDescLong());
         eventDto.setCategoryId(eventEntity.getCategoryId());
         eventDto.setActive(eventEntity.isActive());
-//        eventDto.setAttachments(eventEntity.getAttachments());
 
-        logger.debug("Event mapping to DTO -> all parameters are set");
+        logger.debug("Event mapping to DTO -> all parameters are set for Event ID {}", eventDto.getId());
 
         return eventDto;
     }

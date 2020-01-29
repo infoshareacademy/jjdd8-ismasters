@@ -24,7 +24,7 @@ public class AddressMapper {
         address.setLat(address.getLat());
         address.setLng(addressApi.getLng());
 
-        logger.debug("Address mapping to Entity-> all parameters set");
+        logger.debug("Address mapping to Entity-> all parameters set for Address Street {}", address.getStreet());
 
         return address;
     }
@@ -39,7 +39,7 @@ public class AddressMapper {
         addressDto.setStreet(address.getStreet());
         addressDto.setZipcode(address.getZipcode());
 
-        logger.debug("Address mapping to DTO -> all parameters are set");
+        logger.debug("Address mapping to DTO-> all parameters set for Address Id {}", addressDto.getId());
 
         return addressDto;
     }

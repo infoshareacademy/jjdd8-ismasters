@@ -5,8 +5,6 @@ import com.isa.service.constant.ConstantValuesBean;
 import com.isa.service.domain.EventService;
 import com.isa.service.domain.OrganizersService;
 import com.isa.service.domain.PlaceService;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import javax.annotation.PostConstruct;
 import javax.ejb.Singleton;
@@ -18,7 +16,6 @@ import java.io.IOException;
 @Startup
 public class ApiInitialization {
 
-    private final Logger logger = LoggerFactory.getLogger(getClass().getName());
 
     @Inject
     private EventService eventService;

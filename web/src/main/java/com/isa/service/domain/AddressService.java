@@ -20,12 +20,6 @@ public class AddressService {
     private final Logger logger = LoggerFactory.getLogger(getClass().getName());
 
     @Inject
-    private PlaceMapper placeMapper;
-
-    @Inject
-    private PlaceDao placeDao;
-
-    @Inject
     private AddressDao addressDao;
 
     @Inject
@@ -42,7 +36,7 @@ public class AddressService {
             address.setStreet(e.getAddressApi().getStreet());
             address.setCity(e.getAddressApi().getCity());
 
-            addressDao.addNewAddress(address);
+            addressDao.add(address);
             logger.debug("Adresy mapowane i kierowane do bazy danych");
         }
     }

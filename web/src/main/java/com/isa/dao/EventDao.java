@@ -1,7 +1,6 @@
 package com.isa.dao;
 
 import com.isa.domain.entity.Event;
-import org.hibernate.engine.spi.NamedQueryDefinitionBuilder;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -19,7 +18,7 @@ public class EventDao {
     @PersistenceContext
     private EntityManager em;
 
-    public long addNewEvent(Event event) {
+    public long add(Event event) {
         em.persist(event);
         logger.debug("New event has been added to the DB ");
         return event.getId();
@@ -37,18 +36,14 @@ public class EventDao {
         return Optional.ofNullable(em.find(Event.class, search));
     }
 
-    public Optional<Event> editEvent(Event event) {
-        return Optional.ofNullable(em.merge(event));
-    }
-
-    public List<Event> getEventsForView(int startEvent, int maxPage){
+    public List<Event> getEventsForView(int startEvent, int maxPage) {
         Query query = em.createNamedQuery("Event.findAll");
         query.setFirstResult(startEvent);
         query.setMaxResults(maxPage);
         return query.getResultList();
     }
 
-    public int getNumberOfEvents(){
+    public int getNumberOfEvents() {
         return ((Number) em.createNamedQuery("Event.countAll").getSingleResult()).intValue();
     }
 
@@ -61,10 +56,14 @@ public class EventDao {
     }
 
     public List<Event> findByNameRest(String param, String startDate, String endDate) {
+        String queryParam = "%" + param + "%";
+        String startDateParam = "%" + startDate + "%";
+        String endDateParam = "%" + endDate + "%";
+
         Query query = em.createNamedQuery("Event.findByName");
-        query.setParameter("param", "%" + param + "%");
-        query.setParameter("startDate","%" +   startDate + "%" );
-        query.setParameter("endDate",  "%" + endDate + "%" );
+        query.setParameter("param", queryParam);
+        query.setParameter("startDate", startDateParam);
+        query.setParameter("endDate", endDateParam);
 
         return query.setMaxResults(5).getResultList();
     }

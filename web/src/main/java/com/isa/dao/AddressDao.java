@@ -18,7 +18,7 @@ public class AddressDao {
     @PersistenceContext
     private EntityManager em;
 
-    public long addNewAddress(Address address) {
+    public long add(Address address) {
         em.persist(address);
         logger.debug("New address has been added to the DB, id: {}", address.getId());
         return address.getId();
@@ -32,23 +32,6 @@ public class AddressDao {
         return addressList;
     }
 
-    public Optional<Address> findById(Long id) {
-        return Optional.ofNullable(em.find(Address.class, id));
-    }
 
-    public Optional<Address> editAddress(Address address) {
-        return Optional.ofNullable(em.merge(address));
-    }
-
-    public Address findByStreet(String street) {
-        Query query = em.createNamedQuery("Address.findByStreet");
-        query.setParameter("street", street);
-        List results = query.getResultList();
-        if (!results.isEmpty()) {
-            // ignores multiple results
-            return (Address) results.get(0);
-        }
-        return null;
-    }
 
 }

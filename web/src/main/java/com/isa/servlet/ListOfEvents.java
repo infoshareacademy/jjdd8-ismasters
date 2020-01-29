@@ -3,7 +3,6 @@ package com.isa.servlet;
 import com.isa.config.TemplateProvider;
 import com.isa.domain.dto.EventDto;
 import com.isa.service.PaginationService;
-import com.isa.service.constant.PageEventSize;
 import com.isa.service.domain.EventService;
 import freemarker.template.Template;
 import freemarker.template.TemplateException;
@@ -45,10 +44,10 @@ public class ListOfEvents extends HttpServlet {
         Template template = templateProvider.getTemplate(getServletContext(), "event-list.ftlh");
         Map<String, Object> model = new HashMap<>();
 
-        String pageNumber = req.getParameter("pageNumber") ;
+        String pageNumber = req.getParameter("pageNumber");
         String pageSize = req.getParameter("pageSize");
 
-        int  pageNum = Integer.parseInt(pageNumber);
+        int pageNum = Integer.parseInt(pageNumber);
 
         int next = paginationService.add(pageNum);
 
@@ -59,7 +58,7 @@ public class ListOfEvents extends HttpServlet {
 
         List<EventDto> eventDtoList = new ArrayList<>();
 
-        eventDtoList.addAll(eventService.getEventsForView(pageNum,20));
+        eventDtoList.addAll(eventService.getEventsForView(pageNum, 20));
 
         logger.info("The size of a arraylist " + eventDtoList.size());
 
@@ -74,7 +73,4 @@ public class ListOfEvents extends HttpServlet {
             logger.error(e.getMessage());
         }
     }
-
-
-
 }

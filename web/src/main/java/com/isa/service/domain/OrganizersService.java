@@ -34,20 +34,20 @@ public class OrganizersService {
         logger.debug("Zaimportowano listę organizatorów");
 
         list.stream()
-                .map(o->organizerMapper.mapApiToEntity(o))
-                .forEach(o ->{
-                    organizersDao.addNewOrganizer(o);
-                    logger.debug("Organizer {}",o.getId() );
+                .map(o -> organizerMapper.mapApiToEntity(o))
+                .forEach(o -> {
+                    organizersDao.add(o);
+                    logger.debug("Organizer {}", o.getId());
                 });
 
         logger.debug("Organizatorzy zmapowani i zaimportowani do bazy");
     }
 
-    public List<OrganizerDto> findAll(){
+    public List<OrganizerDto> findAll() {
         List<OrganizerDto> organizerDtoList = new ArrayList<>();
 
         organizersDao.findAll().forEach(
-                o-> organizerDtoList.add(organizerMapper.mapEnityToDto(o))
+                o -> organizerDtoList.add(organizerMapper.mapEnityToDto(o))
         );
         return organizerDtoList;
     }

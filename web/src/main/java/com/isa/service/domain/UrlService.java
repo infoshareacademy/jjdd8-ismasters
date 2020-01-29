@@ -33,7 +33,7 @@ public class UrlService {
             url.setTickerUrl(e.getWeblinkApi().getTickets());
             url.setFbUrl(e.getWeblinkApi().getFb());
             url.setWwwUrl(e.getWeblinkApi().getWebsite());
-            urlDao.addNewUrl(url);
+            urlDao.add(url);
 
             logger.debug("Wydarzenia mapowane i kierowane do bazy danych");
 

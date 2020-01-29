@@ -19,7 +19,7 @@ public class UrlDao {
     @PersistenceContext
     private EntityManager em;
 
-    public long addNewUrl(Url url) {
+    public long add(Url url) {
         em.persist(url);
         logger.debug("New url has been added to the DB ");
         return url.getId();
@@ -33,23 +33,5 @@ public class UrlDao {
         return listOfUrl;
     }
 
-    public Optional<Url> findById(Long id) {
-        return Optional.ofNullable(em.find(Url.class, id));
-    }
-
-    public Optional<Url> editEvent(Url url) {
-        return Optional.ofNullable(em.merge(url));
-    }
-
-    public Url findByWww(String www) {
-        Query query = em.createNamedQuery("Url.findByWww");
-        query.setParameter("www", www);
-        List results = query.getResultList();
-        if (!results.isEmpty()) {
-            // ignores multiple results
-            return (Url) results.get(0);
-        }
-        return null;
-    }
 
 }

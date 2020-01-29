@@ -35,7 +35,7 @@ public class SearchEvents extends HttpServlet {
 
         String search = req.getParameter("search");
 
-        if (search == null || search.isEmpty()){
+        if (search == null || search.isEmpty()) {
             resp.setStatus(HttpServletResponse.SC_BAD_REQUEST);
             return;
         }
@@ -54,6 +54,5 @@ public class SearchEvents extends HttpServlet {
         } catch (TemplateException e) {
             logger.error(e.getMessage());
         }
-
     }
 }

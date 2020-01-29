@@ -73,18 +73,16 @@ public class EventService {
 
                     event.setAttachments(attachments);
 
-                    attachments.stream().forEach(a->a.setEvent(event));
+                    attachments.stream().forEach(a -> a.setEvent(event));
                     int placeExternalId = e.getPlaceApi().getApiId();
 
                     Place place = placeDao.findByApiId(placeExternalId);
                     logger.debug("Place id {}, {}", placeExternalId, place);
-//                    List<Attachments> attachments = attachmentMapper.mapAttachmentApiToEntity(e.getAttachments());
-//                    event.setAttachments(attachments);
-//                    logger.debug("Attachments  {}", attachments.get(0));
+
                     event.setPlace(place);
                     logger.debug("Przed zapisem {}", event);
 
-                    eventDao.addNewEvent(event);
+                    eventDao.add(event);
                     logger.debug("Dodano do bazy {}", event);
 
                     logger.info("Attachments {}", event.getAttachments());
@@ -95,9 +93,7 @@ public class EventService {
 
     public EventDto mapEntityToDto(Event event) {
 
-        EventDto eventDto = new EventDto();
-
-        eventDto = eventMapper.mapEntityToDto(event);
+        EventDto eventDto = eventMapper.mapEntityToDto(event);
 
         OrganizerDto organizerDto = organizerMapper.mapEnityToDto(event.getOrganizer());
 
@@ -144,12 +140,12 @@ public class EventService {
     }
 
     public List<EventDto> findByName(String param) {
-            logger.info("Live search param: {}", param);
-            List<Event> eventList = eventDao.findByName(param);
-            return eventList.stream()
-                    .map(e -> mapEntityToDto(e))
-                    .collect(Collectors.toList());
-        }
+        logger.info("Live search param: {}", param);
+        List<Event> eventList = eventDao.findByName(param);
+        return eventList.stream()
+                .map(e -> mapEntityToDto(e))
+                .collect(Collectors.toList());
+    }
 
     public List<EventDto> findByNameRest(String param, String startDate, String endDate) {
         logger.info("Live search param: {}", param);
@@ -157,7 +153,9 @@ public class EventService {
         return eventList.stream()
                 .map(e -> mapEntityToDto(e))
                 .collect(Collectors.toList());
-    }
 
     }
+
+
+}
 

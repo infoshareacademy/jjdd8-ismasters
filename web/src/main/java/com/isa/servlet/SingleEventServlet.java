@@ -15,11 +15,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.time.LocalDateTime;
 import java.util.HashMap;
 import java.util.Map;
 
-@WebServlet ("/single")
+@WebServlet("/single")
 public class SingleEventServlet extends HttpServlet {
 
     private final Logger logger = LoggerFactory.getLogger(this.getClass().getName());
@@ -36,7 +35,7 @@ public class SingleEventServlet extends HttpServlet {
         String idParam = req.getParameter("id");
         PrintWriter writer = resp.getWriter();
 
-        if (idParam == null || idParam.isEmpty()){
+        if (idParam == null || idParam.isEmpty()) {
             resp.setStatus(HttpServletResponse.SC_BAD_REQUEST);
             return;
         }
@@ -45,16 +44,14 @@ public class SingleEventServlet extends HttpServlet {
 
 
         EventDto eventDto = eventService.findById(id);
-        OrganizerDto organizerDto  = eventDto.getOrganizer();
+        OrganizerDto organizerDto = eventDto.getOrganizer();
         PlaceDto placeDto = eventDto.getPlace();
         AddressDto addressDto = placeDto.getAddressDto();
         UrlDto urlDto = eventDto.getUrls();
 
-       // LocalDateTime localDateTime = LocalDateTime.parse(eventDto.getStartDate())  ;
-
         logger.info("Long description: {}", eventDto.getDescLong());
         logger.info("Short description: {}", eventDto.getDescShort());
-        Template template = templateProvider.getTemplate(getServletContext(),"single.ftlh");
+        Template template = templateProvider.getTemplate(getServletContext(), "single.ftlh");
         Map<String, Object> model = new HashMap<>();
 
         model.put("eventDto", eventDto);
@@ -62,7 +59,6 @@ public class SingleEventServlet extends HttpServlet {
         model.put("placeDto", placeDto);
         model.put("urlDto", urlDto);
         model.put("addressDto", addressDto);
-        //model.put("localDateTime", localDateTime);
 
         try {
             template.process(model, writer);
