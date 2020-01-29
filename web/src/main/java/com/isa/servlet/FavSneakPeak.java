@@ -34,7 +34,7 @@ public class FavSneakPeak extends HttpServlet {
         Long id = Long.parseLong(idParam);
         EventDto eventDto = eventService.userClosestFavEvent(id);
 
-        Template template = templateProvider.getTemplate(getServletContext(),"fav.ftlh");
+        Template template = templateProvider.getTemplate(getServletContext(),"favourite-beam-section.ftlh");
         Map<String, Object> model = new HashMap<>();
 
         model.put("eventDto", eventDto);
