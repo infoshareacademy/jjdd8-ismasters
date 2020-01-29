@@ -2,8 +2,7 @@ package com.isa.domain.entity;
 
 import javax.persistence.*;
 import javax.transaction.Transactional;
-import javax.xml.namespace.QName;
-import java.util.ArrayList;
+import java.time.LocalDateTime;
 import java.util.List;
 
 @NamedQueries({
@@ -11,7 +10,7 @@ import java.util.List;
 
         @NamedQuery(name = "Event.countAll", query = "SELECT COUNT (e) FROM Event e"),
 
-        @NamedQuery(name = "Event.findByName", query = "SELECT e FROM Event e JOIN e.organizer o WHERE e.startDate>: startDate AND e.endDate<:endDate AND e.name LIKE :param OR o.designation LIKE :param")
+        @NamedQuery(name = "Event.findByName", query = "SELECT e FROM Event e JOIN e.organizer o WHERE e.startDate>: startDate AND e.endDate<:endDate AND e.name LIKE CONCAT('%', :param, '%') OR o.designation LIKE CONCAT('%', :param, '%')")
 }
 )
 
@@ -29,10 +28,10 @@ public class Event {
     private Long apiId;
 
     @Column(name = "start_date")
-    private String startDate;
+    private LocalDateTime startDate;
 
     @Column(name = "end_date")
-    private String endDate;
+    private LocalDateTime endDate;
 
     @Column(name = "desc_short")
     private String descShort;
@@ -114,21 +113,6 @@ public class Event {
         this.apiId = apiId;
     }
 
-    public String getStartDate() {
-        return startDate;
-    }
-
-    public void setStartDate(String startDate) {
-        this.startDate = startDate;
-    }
-
-    public String getEndDate() {
-        return endDate;
-    }
-
-    public void setEndDate(String endDate) {
-        this.endDate = endDate;
-    }
 
     public String getDescShort() {
         return descShort;
@@ -194,4 +178,19 @@ public class Event {
         this.url = url;
     }
 
+    public LocalDateTime getStartDate() {
+        return startDate;
+    }
+
+    public void setStartDate(LocalDateTime startDate) {
+        this.startDate = startDate;
+    }
+
+    public LocalDateTime getEndDate() {
+        return endDate;
+    }
+
+    public void setEndDate(LocalDateTime endDate) {
+        this.endDate = endDate;
+    }
 }

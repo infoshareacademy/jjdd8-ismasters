@@ -14,6 +14,7 @@ import org.slf4j.LoggerFactory;
 import javax.ejb.Stateless;
 import javax.inject.Inject;
 import java.io.IOException;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -147,7 +148,7 @@ public class EventService {
                 .collect(Collectors.toList());
     }
 
-    public List<EventDto> findByNameRest(String param, String startDate, String endDate) {
+    public List<EventDto> findByNameRest(String param, LocalDateTime startDate, LocalDateTime endDate) {
         logger.info("Live search param: {}", param);
         List<Event> eventList = eventDao.findByNameRest(param, startDate, endDate);
         return eventList.stream()

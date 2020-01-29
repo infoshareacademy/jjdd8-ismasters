@@ -2,6 +2,7 @@ package com.isa.domain.dto;
 
 import com.isa.domain.entity.Attachments;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 
@@ -11,9 +12,9 @@ public class EventDto {
 
     private Long apiExternalId;
 
-    private String startDate;
+    private LocalDateTime startDate;
 
-    private String endDate;
+    private LocalDateTime endDate;
 
     private String descShort;
 
@@ -57,21 +58,6 @@ public class EventDto {
         this.apiExternalId = apiExternalId;
     }
 
-    public String getStartDate() {
-        return startDate;
-    }
-
-    public void setStartDate(String startDate) {
-        this.startDate = startDate;
-    }
-
-    public String getEndDate() {
-        return endDate;
-    }
-
-    public void setEndDate(String endDate) {
-        this.endDate = endDate;
-    }
 
     public String getDescShort() {
         return descShort;
@@ -157,5 +143,19 @@ public class EventDto {
 
     private UrlDto urls;
 
+    public LocalDateTime getStartDate() {
+        return startDate;
+    }
 
+    public void setStartDate(LocalDateTime startDate) {
+        this.startDate = startDate;
+    }
+
+    public LocalDateTime getEndDate() {
+        return endDate;
+    }
+
+    public void setEndDate(LocalDateTime endDate) {
+        this.endDate = endDate;
+    }
 }

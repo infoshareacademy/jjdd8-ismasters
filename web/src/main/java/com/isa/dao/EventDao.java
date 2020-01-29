@@ -8,6 +8,7 @@ import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
+import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Optional;
 
@@ -15,6 +16,7 @@ import java.util.Optional;
 public class EventDao {
     private final Logger logger = LoggerFactory.getLogger(getClass().getName());
 
+    private int MAX_RESULT_ON_PAGE = 5;
     @PersistenceContext
     private EntityManager em;
 
@@ -52,19 +54,16 @@ public class EventDao {
         query.setParameter("param", "%" + param + "%");
 
 
-        return query.setMaxResults(5).getResultList();
+        return query.setMaxResults(MAX_RESULT_ON_PAGE).getResultList();
     }
 
-    public List<Event> findByNameRest(String param, String startDate, String endDate) {
-        String queryParam = "%" + param + "%";
-        String startDateParam = "%" + startDate + "%";
-        String endDateParam = "%" + endDate + "%";
-
+    public List<Event> findByNameRest(String param, LocalDateTime startDate, LocalDateTime endDate) {
         Query query = em.createNamedQuery("Event.findByName");
-        query.setParameter("param", queryParam);
-        query.setParameter("startDate", startDateParam);
-        query.setParameter("endDate", endDateParam);
 
-        return query.setMaxResults(5).getResultList();
+        query.setParameter("param", param);
+        query.setParameter("startDate", startDate);
+        query.setParameter("endDate", endDate);
+
+        return query.setMaxResults(MAX_RESULT_ON_PAGE).getResultList();
     }
 }
