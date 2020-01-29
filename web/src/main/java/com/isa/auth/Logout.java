@@ -9,7 +9,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.io.PrintWriter;
 
 
 @WebServlet ("/logout")
@@ -19,31 +18,9 @@ public class Logout extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        logger.info("Doget invoke");
+        request.getSession().removeAttribute("googleId");
+        logger.info("User logged out");
 
-        final GoogleAuthHelper helper = new GoogleAuthHelper();
-
-        PrintWriter writer = response.getWriter();
-
-        logger.info("0 Code status: {}", request.getParameter("code"));
-        logger.info("0 State status: {}", request.getParameter("state"));
-
-        request.setCharacterEncoding("UTF-8");
-        response.setCharacterEncoding("UTF-8");
-        response.setContentType("Content-Type = text/hml");
-
-        Boolean isLogged = (Boolean) request.getSession().getAttribute("admin");
-
-        if (!isLogged) {
-
-            logger.info("No user logged");
-            response.sendRedirect("/");
-        } else {
-            request.getSession().setAttribute("admin", false);
-            logger.info("User logged out");
-
-            String callbackUri = request.getRequestURI();
-            response.sendRedirect(callbackUri);
-        }
+        response.sendRedirect("/");
     }
 }

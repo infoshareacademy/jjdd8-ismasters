@@ -25,18 +25,9 @@ public final class GoogleAuthHelper {
 
 	Logger logger = LoggerFactory.getLogger(getClass().getName());
 
-	/**
-	 * Please provide a value for the CLIENT_ID constant before proceeding, set this up at https://code.google.com/apis/console/
-	 */
 	private static final String CLIENT_ID = "410089355802-edk5jsfjas6cmf08v219irj2i3lvrtcm.apps.googleusercontent.com";
-	/**
-	 * Please provide a value for the CLIENT_SECRET constant before proceeding, set this up at https://code.google.com/apis/console/
-	 */
 	private static final String CLIENT_SECRET = "YjyHK81XWx2sRPipEHzcHRIh";
 
-	/**
-	 * Callback URI that google will redirect to after successful authentication
-	 */
 	private static final String CALLBACK_URI = "http://localhost:8080/";
 	
 	// start google authentication constants

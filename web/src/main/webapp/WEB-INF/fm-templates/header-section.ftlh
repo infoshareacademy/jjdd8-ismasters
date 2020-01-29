@@ -77,22 +77,14 @@
             <li><a href="contact.html">Kontakt</a></li>
         </ul>
 
-<#--        <#if Session.loginStatus??>-->
-<#--            <p>${Session.loginStatus}</p>-->
-<#--            <#else> <p>No session attribute</p>-->
-<#--        </#if>-->
-
-<#--        <p>${loginStatus ! "No login"}</p>-->
-
-
         <div class="header-right">
             <div class="user-panel">
-                <#if !loginStatus>
-                <a href="${loginUrl}" class="btn btn-danger btn-sm" id="login">
-                    <i class="fa fa-google"></i> Zaloguj się przez <b>Google</b></a>
+                <#if logged == "yes" >
+                    <a href="/logout" class="btn btn-danger btn-sm"
+                       id="logout"><i class="fa fa-google"></i> Wyloguj się</a>
                 <#else>
-                <a href="/logout" class="btn btn-danger btn-sm"
-                   id="logout"><i class="fa fa-google"></i> Wyloguj się</a>
+                    <a href="${loginUrl}" class="btn btn-danger btn-sm" id="login">
+                    <i class="fa fa-google"></i> Zaloguj się przez <b>Google</b></a>
                 </#if>
             </div>
         </div>

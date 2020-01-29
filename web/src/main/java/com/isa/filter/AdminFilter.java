@@ -32,17 +32,16 @@ public class AdminFilter implements Filter {
 
         HttpServletRequest httpRequest = (HttpServletRequest) servletRequest;
 
-        Boolean isLogged = (Boolean) httpRequest.getSession().getAttribute("admin");
+        String isLogged = (String) httpRequest.getSession().getAttribute("googleId");
 
-//        String isLogged = httpRequest.get("admin");
-        logger.info("Admin paramtere inf filter: {}", isLogged);
+        logger.info("isLogged: {}", isLogged);
 
-        if (isLogged == null) {
+        if (httpRequest.getSession().getAttribute("googleId") == null) {
             writer.println("<h2>Admin privileges required</h2>");
             logger.info("Admin variable not set");
         } else {
             logger.info("Session admin value: {}", isLogged);
-            if (!isLogged) {
+            if (isLogged == null) {
                 logger.info("Session attribute admin set to: {}", isLogged);
                 writer.println("<h2>Admin privileges required</h2>");
             } else {
