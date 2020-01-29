@@ -11,7 +11,7 @@ import java.util.List;
 
         @NamedQuery(name = "Event.countAll", query = "SELECT COUNT (e) FROM Event e"),
 
-        @NamedQuery(name = "Event.findByName", query = "SELECT e FROM Event e JOIN e.organizer o WHERE e.name LIKE :param or o.designation like :param")
+        @NamedQuery(name = "Event.findByName", query = "SELECT e FROM Event e JOIN e.organizer o WHERE e.startDate>: startDate AND e.endDate<:endDate AND e.name LIKE :param OR o.designation LIKE :param")
 }
 )
 

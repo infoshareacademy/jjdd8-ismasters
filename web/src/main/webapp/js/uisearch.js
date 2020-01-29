@@ -8,7 +8,7 @@ $('#eventsearch').keyup(function (e) {
     if($('#eventsearch').val().length >=3) {
         $.ajax({
             type: "GET",
-            url: "/api/search/" + $('#eventsearch').val(),
+            url: "/api/search/" + $('#eventsearch').val()+"?startDate="+ $('#datepicker').val() +"&endDate="+  $('#datepicker2').val(),
             enctype: 'application/json; charset=UTF-8',
             dataType: 'json',
             contentType: 'application/json; charset=UTF-8'

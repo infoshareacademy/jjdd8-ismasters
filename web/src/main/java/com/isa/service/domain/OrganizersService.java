@@ -2,6 +2,7 @@ package com.isa.service.domain;
 
 import com.isa.dao.OrganizersDao;
 import com.isa.domain.api.OrganizerApi;
+import com.isa.domain.dto.OrganizerDto;
 import com.isa.mapper.OrganizerMapper;
 import com.isa.parser.ApiDataParser;
 import org.slf4j.Logger;
@@ -10,6 +11,7 @@ import org.slf4j.LoggerFactory;
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 @ApplicationScoped
@@ -39,5 +41,14 @@ public class OrganizersService {
                 });
 
         logger.debug("Organizatorzy zmapowani i zaimportowani do bazy");
+    }
+
+    public List<OrganizerDto> findAll(){
+        List<OrganizerDto> organizerDtoList = new ArrayList<>();
+
+        organizersDao.findAll().forEach(
+                o-> organizerDtoList.add(organizerMapper.mapEnityToDto(o))
+        );
+        return organizerDtoList;
     }
 }

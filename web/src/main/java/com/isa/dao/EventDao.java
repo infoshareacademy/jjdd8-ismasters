@@ -1,6 +1,7 @@
 package com.isa.dao;
 
 import com.isa.domain.entity.Event;
+import org.hibernate.engine.spi.NamedQueryDefinitionBuilder;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -54,6 +55,17 @@ public class EventDao {
     public List<Event> findByName(String param) {
         Query query = em.createNamedQuery("Event.findByName");
         query.setParameter("param", "%" + param + "%");
+
+
+        return query.setMaxResults(5).getResultList();
+    }
+
+    public List<Event> findByNameRest(String param, String startDate, String endDate) {
+        Query query = em.createNamedQuery("Event.findByName");
+        query.setParameter("param", "%" + param + "%");
+        query.setParameter("startDate","%" +   startDate + "%" );
+        query.setParameter("endDate",  "%" + endDate + "%" );
+
         return query.setMaxResults(5).getResultList();
     }
 }

@@ -1,5 +1,5 @@
-
-<section class="hero-section set-bg" data-setbg="../../img/koncert.jpg" style="background-image: url('../../img/koncert.jpg');">
+<section class="hero-section set-bg" data-setbg="../../img/koncert.jpg"
+         style="background-image: url('../../img/koncert.jpg');" xmlns="http://www.w3.org/1999/html">
     <div class="container">
         <div class="hero-warp">
             <form class="main-search-form" action="search-events">
@@ -14,8 +14,25 @@
                            id="eventsearch" placeholder="Wyszukiwanie, wpisz co najmniej 3 znaki." autocomplete="off" ></div>
                 <div id="result-div" class="list-group" style="margin-top:2px;position:absolute;margin-left:0;z-index: 1001 !important; ">
                 </div>
-
                 <p>Baza wyszukań na podstawie udostępnionych informacji z API miasta Gdańsk.</p>
+                <span>
+                    <a href="javascript:void(0)" title="More Options"
+                       rel="advance" id="options-search" class="search-option-link btn-link" data-toggle="collapse" data-target=".optionsDiv">
+                        More Options</a>
+                </span>
+                <input id="datepicker" width="276" name = "startDate" title="Data rozpoczęcia" />
+                </br>
+                <input id="datepicker2" width="276" name = "endDate" title="Data zakończenia"/>
+                <script>
+                    $('#datepicker').datepicker({
+                        uiLibrary: 'bootstrap4'
+                    });
+
+                    $('#datepicker2').datepicker({
+                        uiLibrary: 'bootstrap4'
+                    });
+                </script>
+
             </form>
         </div>
     </div>

@@ -151,5 +151,13 @@ public class EventService {
                     .collect(Collectors.toList());
         }
 
+    public List<EventDto> findByNameRest(String param, String startDate, String endDate) {
+        logger.info("Live search param: {}", param);
+        List<Event> eventList = eventDao.findByNameRest(param, startDate, endDate);
+        return eventList.stream()
+                .map(e -> mapEntityToDto(e))
+                .collect(Collectors.toList());
+    }
+
     }
 
