@@ -1,4 +1,4 @@
-package com.isa.service.manager;
+package com.isa.service.domain;
 
 import com.isa.dao.UrlDao;
 import com.isa.domain.api.EventApi;
@@ -13,7 +13,7 @@ import java.io.IOException;
 import java.util.List;
 
 @Stateless
-public class UrlManager {
+public class UrlService {
 
     private final Logger logger = LoggerFactory.getLogger(getClass().getName());
 
@@ -30,10 +30,10 @@ public class UrlManager {
         for (EventApi e: list) {
             Url url = new Url();
 
-            url.setTickerUrl(e.getWeblinkExternal().getTickets());
-            url.setFbUrl(e.getWeblinkExternal().getFb());
-            url.setWwwUrl(e.getWeblinkExternal().getWebsite());
-            urlDao.addNewUrl(url);
+            url.setTickerUrl(e.getWeblinkApi().getTickets());
+            url.setFbUrl(e.getWeblinkApi().getFb());
+            url.setWwwUrl(e.getWeblinkApi().getWebsite());
+            urlDao.add(url);
 
             logger.debug("Wydarzenia mapowane i kierowane do bazy danych");
 

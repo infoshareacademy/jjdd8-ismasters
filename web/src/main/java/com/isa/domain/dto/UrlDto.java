@@ -51,4 +51,15 @@ public class UrlDto {
     public void setEventDTO(EventDto eventDTO) {
         this.eventDTO = eventDTO;
     }
+
+    @Override
+    public String toString() {
+        return "UrlDto{" +
+                "id=" + id +
+                ", website='" + website + '\'' +
+                ", fbLink='" + fbLink + '\'' +
+                ", ticketLink='" + ticketLink + '\'' +
+                ", eventDTO=" + eventDTO +
+                '}';
+    }
 }

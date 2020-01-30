@@ -22,12 +22,10 @@ public class EventApi {
     private String name;
 
     @JsonProperty("urls")
-    private WeblinkExternal weblinkExternal;
-
+    private WeblinkApi weblinkApi;
 
     @JsonProperty("attachments")
-    @JsonIgnoreProperties(ignoreUnknown = true)
-    private List<AttachmentExternal> attachments;
+    private List<AttachmentApi> attachments;
 
     @JsonProperty("descLong")
     private String LongDescription;
@@ -39,7 +37,7 @@ public class EventApi {
     private String startDate;
 
     @JsonProperty("organizer")
-    private OrganizerExternal organizerExternal;
+    private OrganizerApi organizerApi;
 
     @JsonProperty("active")
     private Boolean activeEvent;
@@ -51,9 +49,16 @@ public class EventApi {
     @JsonIgnoreProperties(ignoreUnknown = true)
     private TicketApi ticketApi;
 
-    @JsonProperty ("schedule")
     @JsonIgnore
     private String schedule;
+
+    public String getSchedule() {
+        return schedule;
+    }
+
+    public void setSchedule(String schedule) {
+        this.schedule = schedule;
+    }
 
     public Long getApiId() {
         return apiId;
@@ -87,21 +92,21 @@ public class EventApi {
         this.name = name;
     }
 
-    public WeblinkExternal getWeblinkExternal() {
-        return weblinkExternal;
+    public WeblinkApi getWeblinkApi() {
+        return weblinkApi;
     }
 
-    public void setWeblinkExternal(WeblinkExternal weblinkExternal) {
-        this.weblinkExternal = weblinkExternal;
+    public void setWeblinkApi(WeblinkApi weblinkApi) {
+        this.weblinkApi = weblinkApi;
     }
 
-    @JsonIgnore
-    public List<AttachmentExternal> getAttachments() {
+
+    public List<AttachmentApi> getAttachments() {
         return attachments;
     }
 
-    @JsonIgnore
-    public void setAttachments(List<AttachmentExternal> attachments) {
+
+    public void setAttachments(List<AttachmentApi> attachments) {
         this.attachments = attachments;
     }
 
@@ -129,12 +134,12 @@ public class EventApi {
         this.startDate = startDate;
     }
 
-    public OrganizerExternal getOrganizerExternal() {
-        return organizerExternal;
+    public OrganizerApi getOrganizerApi() {
+        return organizerApi;
     }
 
-    public void setOrganizerExternal(OrganizerExternal organizerExternal) {
-        this.organizerExternal = organizerExternal;
+    public void setOrganizerApi(OrganizerApi organizerApi) {
+        this.organizerApi = organizerApi;
     }
 
     public Boolean getActiveEvent() {
@@ -168,12 +173,12 @@ public class EventApi {
                 ", place=" + placeApi +
                 ", endDate=" + endDate +
                 ", name='" + name + '\'' +
-                ", weblink=" + weblinkExternal +
+                ", weblink=" + weblinkApi +
                 ", attachments=" + attachments +
                 ", LongDescription='" + LongDescription + '\'' +
                 ", categoryEventId=" + categoryEventId +
                 ", startDate=" + startDate +
-                ", organizer=" + organizerExternal +
+                ", organizer=" + organizerApi +
                 ", activeEvent=" + activeEvent +
                 ", shortDescription='" + shortDescription + '\'' +
                 ", ticket=" + ticketApi +

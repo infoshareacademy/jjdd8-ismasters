@@ -18,7 +18,7 @@ public class OrganizersDao {
     @PersistenceContext
     private EntityManager em;
 
-    public long addNewOrganizer(Organizer organizer) {
+    public long add(Organizer organizer) {
         em.persist(organizer);
         logger.debug("New organizer has been added to the DB ");
         return organizer.getId();
@@ -32,13 +32,6 @@ public class OrganizersDao {
         return listOfEvents;
     }
 
-    public Optional<Organizer> findById(Long id) {
-        return Optional.ofNullable(em.find(Organizer.class, id));
-    }
-
-    public Optional<Organizer> editEvent(Organizer organizer) {
-        return Optional.ofNullable(em.merge(organizer));
-    }
 
     public Organizer findByApiId(Long apiId) {
         Query query = em.createNamedQuery("Organizer.findByApiId");
