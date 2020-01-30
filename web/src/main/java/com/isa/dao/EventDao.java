@@ -34,10 +34,6 @@ public class EventDao {
         return Optional.ofNullable(em.find(Event.class, id));
     }
 
-    public Optional<Event> searchEvents(String search) {
-        return Optional.ofNullable(em.find(Event.class, search));
-    }
-
     public List<Event> getEventsForView(int startEvent, int maxPage) {
         Query query = em.createNamedQuery("Event.findAll");
         query.setFirstResult(startEvent);

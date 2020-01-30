@@ -128,12 +128,6 @@ public class EventService {
         return mapEntityToDto(event);
     }
 
-    public List<EventDto> searchEvents(String search) {
-        return eventDao.searchEvents(search).stream()
-                .map((event -> eventMapper.mapEntityToDto(event)))
-                .collect(Collectors.toList());
-    }
-
     public List<EventDto> getEventsForView(int setStartEvent, int maxEvent) {
 
         return eventDao.getEventsForView(setStartEvent, maxEvent).stream().map(e -> mapEntityToDto(e))
