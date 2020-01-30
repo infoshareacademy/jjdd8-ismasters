@@ -1,5 +1,6 @@
 package com.isa.config;
 
+import freemarker.core.PlainTextOutputFormat;
 import freemarker.template.Configuration;
 import freemarker.template.TemplateExceptionHandler;
 
@@ -17,6 +18,7 @@ public class ConfigProvider {
             configuration.setTemplateExceptionHandler(TemplateExceptionHandler.RETHROW_HANDLER);
             configuration.setLogTemplateExceptions(false);
             configuration.setWrapUncheckedExceptions(true);
+            configuration.setOutputFormat(PlainTextOutputFormat.INSTANCE);
         }
         return configuration;
     }

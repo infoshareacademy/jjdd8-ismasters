@@ -19,7 +19,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 
-@WebServlet ("")
+@WebServlet("")
 public class WelcomePage extends HttpServlet {
 
 

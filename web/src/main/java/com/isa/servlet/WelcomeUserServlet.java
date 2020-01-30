@@ -15,7 +15,7 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
-@WebServlet ("/welcome-user")
+@WebServlet("/welcome-user")
 public class WelcomeUserServlet extends HttpServlet {
 
     private final Logger logger = LoggerFactory.getLogger(getClass().getName());

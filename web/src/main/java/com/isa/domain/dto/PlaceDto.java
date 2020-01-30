@@ -66,4 +66,16 @@ public class PlaceDto {
     public void setEventDtoList(List<EventDto> eventDtoList) {
         this.eventDtoList = eventDtoList;
     }
+
+    @Override
+    public String toString() {
+        return "PlaceDto{" +
+                "id=" + id +
+                ", idExternal=" + idExternal +
+                ", subname='" + subname + '\'' +
+                ", name='" + name + '\'' +
+                ", addressDto=" + addressDto +
+                ", eventDtoList=" + eventDtoList +
+                '}';
+    }
 }

@@ -8,7 +8,7 @@ import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
-import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Optional;
 
@@ -16,10 +16,11 @@ import java.util.Optional;
 public class EventDao {
     private final Logger logger = LoggerFactory.getLogger(getClass().getName());
 
+    private int MAX_RESULT_ON_PAGE = 5;
     @PersistenceContext
     private EntityManager em;
 
-    public long addNewEvent(Event event) {
+    public long add(Event event) {
         em.persist(event);
         logger.debug("New event has been added to the DB ");
         return event.getId();
@@ -37,28 +38,32 @@ public class EventDao {
         return Optional.ofNullable(em.find(Event.class, search));
     }
 
-    public Optional<Event> editEvent(Event event) {
-        return Optional.ofNullable(em.merge(event));
+    public List<Event> getEventsForView(int startEvent, int maxPage) {
+        Query query = em.createNamedQuery("Event.findAll");
+        query.setFirstResult(startEvent);
+        query.setMaxResults(maxPage);
+        return query.getResultList();
     }
 
-    public List<Event> findAllUserFavEvents(Long id) {
-        Query q = em.createNamedQuery("SELECT e FROM User u INNER JOIN u.favourtieEvents e WHERE u.id = :id");
-        q.setParameter("id", id);
-        return q.getResultList();
+    public int getNumberOfEvents() {
+        return ((Number) em.createNamedQuery("Event.countAll").getSingleResult()).intValue();
     }
 
-    public Event getClosestInTimeUserFav(Long id) {
-        Query q = em.createNamedQuery("SELECT e FROM User u INNER JOIN u.favouriteEvents e WHERE u.id = :id and e.startDate > :today ORDER BY e.startDate LIMIT 1");
-        q.setParameter("id", id);
-        String today = LocalDate.now().toString();
-        q.setParameter("today", today);
-        List<Event> single = q.getResultList();
-        Event qwe = single.get(0);
-            return qwe;
+    public List<Event> findByName(String param) {
+        Query query = em.createNamedQuery("Event.findByName");
+        query.setParameter("param", "%" + param + "%");
+
+
+        return query.setMaxResults(MAX_RESULT_ON_PAGE).getResultList();
+    }
+
+    public List<Event> findByNameRest(String param, LocalDateTime startDate, LocalDateTime endDate) {
+        Query query = em.createNamedQuery("Event.findByName");
+
+        query.setParameter("param", param);
+        query.setParameter("startDate", startDate);
+        query.setParameter("endDate", endDate);
+
+        return query.setMaxResults(MAX_RESULT_ON_PAGE).getResultList();
     }
 }
-
-/**
- * zapytanie jpql wyciagajace liste ulubionych z usera sortujace po dacie wyciagajace najblizsze
- * sortowanie na selekcie i limit na jedno
- **/

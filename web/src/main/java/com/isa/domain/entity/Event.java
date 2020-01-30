@@ -1,14 +1,22 @@
 package com.isa.domain.entity;
 
 import javax.persistence.*;
+import javax.transaction.Transactional;
+import java.time.LocalDateTime;
 import java.util.List;
 
-@NamedQueries(
-        @NamedQuery(name = "Event.findAll", query = "SELECT e FROM Event e")
+@NamedQueries({
+        @NamedQuery(name = "Event.findAll", query = "SELECT e FROM Event e"),
+
+        @NamedQuery(name = "Event.countAll", query = "SELECT COUNT (e) FROM Event e"),
+
+        @NamedQuery(name = "Event.findByName", query = "SELECT e FROM Event e JOIN e.organizer o WHERE e.startDate>: startDate AND e.endDate<:endDate AND e.name LIKE CONCAT('%', :param, '%') OR o.designation LIKE CONCAT('%', :param, '%')")
+}
 )
 
 @Entity
 @Table(name = "event")
+@Transactional
 public class Event {
 
     @Id
@@ -20,10 +28,10 @@ public class Event {
     private Long apiId;
 
     @Column(name = "start_date")
-    private String startDate;
+    private LocalDateTime startDate;
 
     @Column(name = "end_date")
-    private String endDate;
+    private LocalDateTime endDate;
 
     @Column(name = "desc_short")
     private String descShort;
@@ -58,6 +66,17 @@ public class Event {
     @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     @JoinColumn(name = "url_id", unique = true)
     private Url url;
+
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "event")
+    private List<Attachments> attachments;
+
+    public List<Attachments> getAttachments() {
+        return attachments;
+    }
+
+    public void setAttachments(List<Attachments> attachments) {
+        this.attachments = attachments;
+    }
 
     public Event() {
     }
@@ -94,21 +113,6 @@ public class Event {
         this.apiId = apiId;
     }
 
-    public String getStartDate() {
-        return startDate;
-    }
-
-    public void setStartDate(String startDate) {
-        this.startDate = startDate;
-    }
-
-    public String getEndDate() {
-        return endDate;
-    }
-
-    public void setEndDate(String endDate) {
-        this.endDate = endDate;
-    }
 
     public String getDescShort() {
         return descShort;
@@ -174,4 +178,19 @@ public class Event {
         this.url = url;
     }
 
+    public LocalDateTime getStartDate() {
+        return startDate;
+    }
+
+    public void setStartDate(LocalDateTime startDate) {
+        this.startDate = startDate;
+    }
+
+    public LocalDateTime getEndDate() {
+        return endDate;
+    }
+
+    public void setEndDate(LocalDateTime endDate) {
+        this.endDate = endDate;
+    }
 }

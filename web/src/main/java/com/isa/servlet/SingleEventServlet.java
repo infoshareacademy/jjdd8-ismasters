@@ -1,8 +1,8 @@
 package com.isa.servlet;
 
 import com.isa.config.TemplateProvider;
-import com.isa.domain.dto.EventDto;
-import com.isa.service.EventService;
+import com.isa.domain.dto.*;
+import com.isa.service.domain.EventService;
 import freemarker.template.Template;
 import freemarker.template.TemplateException;
 import org.slf4j.Logger;
@@ -18,7 +18,7 @@ import java.io.PrintWriter;
 import java.util.HashMap;
 import java.util.Map;
 
-@WebServlet ("/single")
+@WebServlet("/single")
 public class SingleEventServlet extends HttpServlet {
 
     private final Logger logger = LoggerFactory.getLogger(this.getClass().getName());
@@ -35,18 +35,30 @@ public class SingleEventServlet extends HttpServlet {
         String idParam = req.getParameter("id");
         PrintWriter writer = resp.getWriter();
 
-        if (idParam == null || idParam.isEmpty()){
+        if (idParam == null || idParam.isEmpty()) {
             resp.setStatus(HttpServletResponse.SC_BAD_REQUEST);
             return;
         }
 
         Long id = Long.parseLong(idParam);
-        EventDto eventDto = eventService.findById(id);
 
-        Template template = templateProvider.getTemplate(getServletContext(),"single.ftlh");
+
+        EventDto eventDto = eventService.findById(id);
+        OrganizerDto organizerDto = eventDto.getOrganizer();
+        PlaceDto placeDto = eventDto.getPlace();
+        AddressDto addressDto = placeDto.getAddressDto();
+        UrlDto urlDto = eventDto.getUrls();
+
+        logger.info("Long description: {}", eventDto.getDescLong());
+        logger.info("Short description: {}", eventDto.getDescShort());
+        Template template = templateProvider.getTemplate(getServletContext(), "single.ftlh");
         Map<String, Object> model = new HashMap<>();
 
         model.put("eventDto", eventDto);
+        model.put("organizerDto", organizerDto);
+        model.put("placeDto", placeDto);
+        model.put("urlDto", urlDto);
+        model.put("addressDto", addressDto);
 
         try {
             template.process(model, writer);
