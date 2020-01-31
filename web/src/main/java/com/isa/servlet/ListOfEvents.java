@@ -2,7 +2,8 @@ package com.isa.servlet;
 
 import com.isa.config.TemplateProvider;
 import com.isa.domain.dto.EventDto;
-import com.isa.service.EventService;
+import com.isa.service.PaginationService;
+import com.isa.service.domain.EventService;
 import freemarker.template.Template;
 import freemarker.template.TemplateException;
 import org.slf4j.Logger;
@@ -33,6 +34,8 @@ public class ListOfEvents extends HttpServlet {
     @Inject
     private EventService eventService;
 
+    @Inject
+    private PaginationService paginationService;
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse rep) throws SecurityException, IOException {
@@ -41,12 +44,28 @@ public class ListOfEvents extends HttpServlet {
         Template template = templateProvider.getTemplate(getServletContext(), "event-list.ftlh");
         Map<String, Object> model = new HashMap<>();
 
+        String pageNumber = req.getParameter("pageNumber");
+        String pageSize = req.getParameter("pageSize");
+
+        int pageNum = Integer.parseInt(pageNumber);
+
+        int next = paginationService.add(pageNum);
+
+        int previous = paginationService.reduce(pageNum);
+
+        int lastPageView = paginationService.getLastPage();
+
+
         List<EventDto> eventDtoList = new ArrayList<>();
 
-        eventDtoList.addAll(eventService.findAll());
+        eventDtoList.addAll(eventService.getEventsForView(pageNum, 20));
 
+        logger.info("The size of a arraylist " + eventDtoList.size());
 
         model.put("eventDtoList", eventDtoList);
+        model.put("next", next);
+        model.put("previous", previous);
+        model.put("lastPageView", lastPageView);
 
         try {
             template.process(model, rep.getWriter());

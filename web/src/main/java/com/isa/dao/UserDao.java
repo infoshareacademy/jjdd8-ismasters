@@ -24,12 +24,12 @@ public class UserDao {
     return query.getResultList();
   }
 
-  public void saveUser(User user) {
+  public void add(User user) {
     logger.info("Object user id: {} persist to DB", user.getId());
     entityManager.persist(user);
   }
 
-  public void updateUser(User user) {
+  public void update(User user) {
     entityManager.merge(user);
   }
 

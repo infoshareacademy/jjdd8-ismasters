@@ -9,7 +9,9 @@
 
     <!-- Favicon -->
     <link href="/img/favicon.ico" rel="shortcut icon"/>
-    <script src="/js/login_logout.js"></script>
+
+    <!-- Google font -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i,900%7cRoboto:400,400i,500,500i,700,700i&display=swap" rel="stylesheet">
 
 
     <!-- Stylesheets -->
@@ -20,6 +22,13 @@
     <!-- Main Stylesheets -->
     <link rel="stylesheet" href="/css/style.css"/>
 
+  <!--Date -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://unpkg.com/gijgo@1.9.13/js/gijgo.min.js" type="text/javascript"></script>
+    <link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css" />
+
+
     <!-- Google font -->
     <meta name="google-signin-scope" content="profile email">
     <link href="https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i,900%7cRoboto:400,400i,500,500i,700,700i&display=swap" rel="stylesheet">
@@ -28,13 +37,12 @@
 
 
     <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
     <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-
-
     <![endif]-->
     <style>
 
@@ -73,7 +81,8 @@
     </a>
     <nav class="header-nav">
         <ul class="main-menu">
-            <li><a href="news.html">Wydarzenia</a></li>
+            <li><a href="/organizers-list">Organizatorzy</a></li>
+            <li><a href="/list-events?pageNumber=0">Wydarzenia</a></li>
             <li><a href="contact.html">Kontakt</a></li>
         </ul>
 
@@ -96,7 +105,7 @@
             <li class="header-right-warp"><div class="header-right">
                 </div>
             </li>
-            <li><a href="news.html" role="menuitem" tabindex="-1">Wydarzenia</a></li>
+            <li><a href="/list-events?pageNumber=0" role="menuitem" tabindex="-1">Wydarzenia</a></li>
             <li><a href="contact.html" role="menuitem" tabindex="-1">Kontakt</a></li>
         </ul>
     </div>

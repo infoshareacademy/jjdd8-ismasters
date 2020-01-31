@@ -1,10 +1,9 @@
-package com.isa.service.manager;
+package com.isa.service.domain;
 
 import com.isa.dao.AddressDao;
 import com.isa.dao.PlaceDao;
 import com.isa.domain.api.PlaceApi;
 import com.isa.domain.entity.Address;
-import com.isa.domain.entity.Place;
 import com.isa.mapper.PlaceMapper;
 import com.isa.parser.ApiDataParser;
 import org.slf4j.Logger;
@@ -16,15 +15,9 @@ import java.io.IOException;
 import java.util.List;
 
 @Stateless
-public class AddressManager {
+public class AddressService {
 
     private final Logger logger = LoggerFactory.getLogger(getClass().getName());
-
-    @Inject
-    private PlaceMapper placeMapper;
-
-    @Inject
-    private PlaceDao placeDao;
 
     @Inject
     private AddressDao addressDao;
@@ -43,7 +36,7 @@ public class AddressManager {
             address.setStreet(e.getAddressApi().getStreet());
             address.setCity(e.getAddressApi().getCity());
 
-            addressDao.addNewAddress(address);
+            addressDao.add(address);
             logger.debug("Adresy mapowane i kierowane do bazy danych");
         }
     }

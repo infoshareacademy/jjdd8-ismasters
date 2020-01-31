@@ -45,16 +45,16 @@ public class UserService {
         } else {
             user.setUserType(UserType.USER);
         }
-        userDao.saveUser(user);
+        userDao.add(user);
     }
 
     public void editUser(User user) {
-        userDao.updateUser(user);
+        userDao.update(user);
 
     }
 
     public void editDtoUser(UserDto user) {
-        userDao.updateUser(userMapper.mapDtoToEntity(user));
+        userDao.update(userMapper.mapDtoToEntity(user));
     }
 
     public Optional<UserDto> getUserByEmail(String email) {

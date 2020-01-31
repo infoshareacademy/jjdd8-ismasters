@@ -1,9 +1,9 @@
 package com.isa.mapper;
 
 
+import com.isa.domain.api.AddressApi;
 import com.isa.domain.dto.AddressDto;
 import com.isa.domain.entity.Address;
-import com.isa.domain.api.AddressExternal;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -13,7 +13,7 @@ import javax.ejb.Stateless;
 public class AddressMapper {
     private final Logger logger = LoggerFactory.getLogger(getClass().getName());
 
-    public Address mapApiViewToEntity(AddressExternal addressApi) {
+    public Address mapApiToEntity(AddressApi addressApi) {
         logger.debug("Address mapping to Entity");
 
         Address address = new Address();
@@ -24,12 +24,12 @@ public class AddressMapper {
         address.setLat(address.getLat());
         address.setLng(addressApi.getLng());
 
-        logger.debug("Address mapping to Entity-> all parameters set");
+        logger.debug("Address mapping to Entity-> all parameters set for Address Street {}", address.getStreet());
 
         return address;
     }
 
-    public AddressDto mapEntityToDto(Address address){
+    public AddressDto mapEntityToDto(Address address) {
         AddressDto addressDto = new AddressDto();
 
         addressDto.setCity(address.getCity());
@@ -39,7 +39,7 @@ public class AddressMapper {
         addressDto.setStreet(address.getStreet());
         addressDto.setZipcode(address.getZipcode());
 
-        logger.debug("Address mapping to DTO -> all parameters are set");
+        logger.debug("Address mapping to DTO-> all parameters set for Address Id {}", addressDto.getId());
 
         return addressDto;
     }

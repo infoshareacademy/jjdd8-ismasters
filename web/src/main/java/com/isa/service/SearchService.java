@@ -1,6 +1,7 @@
 package com.isa.service;
 
 import com.isa.domain.dto.EventDto;
+import com.isa.service.domain.EventService;
 
 import javax.ejb.EJB;
 import javax.ejb.Stateless;

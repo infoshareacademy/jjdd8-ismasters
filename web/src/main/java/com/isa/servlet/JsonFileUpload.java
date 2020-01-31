@@ -2,9 +2,9 @@ package com.isa.servlet;
 
 import com.isa.config.TemplateProvider;
 import com.isa.service.FileUploadProcessor;
-import com.isa.service.manager.EventManager;
-import com.isa.service.manager.OrganizersManager;
-import com.isa.service.manager.PlaceManager;
+import com.isa.service.domain.EventService;
+import com.isa.service.domain.OrganizersService;
+import com.isa.service.domain.PlaceService;
 import freemarker.template.Template;
 import freemarker.template.TemplateException;
 import org.slf4j.Logger;
@@ -35,13 +35,13 @@ public class JsonFileUpload extends HttpServlet {
     private TemplateProvider templateProvider;
 
     @Inject
-    private EventManager eventManager;
+    private EventService eventService;
 
     @Inject
-    private OrganizersManager organizersManager;
+    private OrganizersService organizersService;
 
     @Inject
-    private PlaceManager placeManager;
+    private PlaceService placeService;
 
 
     Logger logger = LoggerFactory.getLogger(this.getClass().getName());
@@ -98,6 +98,11 @@ public class JsonFileUpload extends HttpServlet {
             writer.println("Plik " + eventsFilePath + " został załadowany");
             writer.println("Plik " + organizersFilePath + " został załadowany");
             writer.println("Plik " + placesFilePath + " został załadowany");
+
+            organizersService.setRelations(organizersFilePath);
+            placeService.setRelations(placesFilePath);
+            eventService.searchEvents(eventsFilePath);
+//
         } catch (IOException e) {
             logger.error(e.getMessage(), e);
         }
@@ -106,9 +111,9 @@ public class JsonFileUpload extends HttpServlet {
         logger.info("Organizer.json file path set to: " + organizersFilePath);
         logger.info("Places.json file path set to: " + placesFilePath);
 
-        organizersManager.setRelationsFromFile(organizersFilePath);
-        placeManager.setRelationsFromFile(placesFilePath);
-        eventManager.setRelationsFromFileToEntity(eventsFilePath);
+//        organizersService.setRelationsFromFile(organizersFilePath);
+//        placeService.setRelationsFromFile(placesFilePath);
+//        eventService.setRelationsFromFileToEntity(eventsFilePath);
 
     }
 

@@ -18,6 +18,11 @@ public class Logout extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
         request.getSession().removeAttribute("googleId");
+        request.getSession().removeAttribute("userType");
+        request.getSession().removeAttribute("googleEmail");
+        request.getSession().removeAttribute("code");
+        request.getSession().removeAttribute("state");
+
         logger.info("User logged out");
         response.sendRedirect("/");
     }

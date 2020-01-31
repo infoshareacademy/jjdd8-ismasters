@@ -29,7 +29,6 @@ import java.util.Optional;
 @WebServlet ("")
 public class WelcomePage extends HttpServlet {
 
-    public static final String FILENAME = "Json_example.json";
     private final Logger logger = LoggerFactory.getLogger(getClass().getName());
     private EventDTO_mock eventDTO_mock = new EventDTO_mock();
 
@@ -38,7 +37,9 @@ public class WelcomePage extends HttpServlet {
 
     @Inject
     private TemplateProvider templateProvider;
-    private UserAuthenticationService userAuthenticationService = new UserAuthenticationService();
+
+    @Inject
+    private UserAuthenticationService userAuthenticationService;
 
 
     @Override
@@ -57,9 +58,7 @@ public class WelcomePage extends HttpServlet {
         resp.setContentType("Content-Type = text/html");
 
         String code = req.getParameter("code");
-        logger.info("Code initial {}", code);
         String state = req.getParameter("state");
-        logger.info("State initial {}", state);
 
         if ((code != null) && !code.isEmpty() && (state != null) && !state.isEmpty()) {
 
@@ -70,9 +69,7 @@ public class WelcomePage extends HttpServlet {
                 String googleUserEmail = googleUser.getString("email");
                 String googleUserId = googleUser.getString("id");
 
-                logger.info("Google user logged {}", googleUserEmail);
-
-                logger.info("Is user in DB: {}", googleUserEmail);
+                logger.info("Google user logged {}\n", googleUserEmail);
 
                 if (userService.userExists(googleUserEmail)) {
 
@@ -102,12 +99,11 @@ public class WelcomePage extends HttpServlet {
 
                     logger.info("Usertype sent to DB {}", userDto.getUserType());
                     logger.info("Googleid sent to DB {}", userDto.getGoogleId());
-                    logger.info("GoogleEmail sent to DB {}", userDto.getEmail());
+                    logger.info("GoogleEmail sent to DB {}\n", userDto.getEmail());
                 }
             }
         }
         final String googleId = (String) req.getSession().getAttribute("googleId");
-        logger.info("GoogleId: {}", googleId);
 
         if (googleId != null && !googleId.isEmpty()) {
             model.put("logged", "yes");
