@@ -3,6 +3,8 @@ package com.isa.servlet;
 import com.isa.auth.UserAuthenticationService;
 import com.isa.config.TemplateProvider;
 import com.isa.domain.dto.EventDto;
+import com.isa.domain.dto.OrganizerDto;
+import com.isa.domain.entity.Organizer;
 import com.isa.service.PaginationService;
 import com.isa.service.domain.EventService;
 import freemarker.template.Template;
@@ -23,6 +25,8 @@ import java.util.Map;
 
 @WebServlet("/list-events")
 public class ListOfEvents extends HttpServlet {
+
+    private final int MAX_EVENT_NUMBER = 20;
 
     private final Logger logger = LoggerFactory.getLogger(getClass().getName());
 
@@ -46,12 +50,9 @@ public class ListOfEvents extends HttpServlet {
         Map<String, Object> model = new HashMap<>();
 
         String pageNumber = req.getParameter("pageNumber");
-        String pageSize = req.getParameter("pageSize");
 
         int pageNum = Integer.parseInt(pageNumber);
-
         int next = paginationService.add(pageNum);
-
         int previous = paginationService.reduce(pageNum);
 
         int lastPageView = paginationService.getLastPage();
@@ -59,7 +60,7 @@ public class ListOfEvents extends HttpServlet {
 
         List<EventDto> eventDtoList = new ArrayList<>();
 
-        eventDtoList.addAll(eventService.getEventsForView(pageNum, 20));
+        eventDtoList.addAll(eventService.getEventsForView(pageNum, MAX_EVENT_NUMBER));
 
         logger.info("The size of a arraylist " + eventDtoList.size());
 

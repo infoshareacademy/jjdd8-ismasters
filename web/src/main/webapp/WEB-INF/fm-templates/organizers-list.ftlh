@@ -2,33 +2,15 @@
 
 <!------ Include the above in your HEAD tag ---------->
 <section>
-    <div class="container">
-        <#list  organizersDtoList as organizerDto>
-                <table class="table">
-
-                    <tr>
-<<<<<<< HEAD
-                        <th></th>
-                        <td class="col-lg-2"><a href="/list-events-organizer?id=${organizerDto.idDb}"></a></td>
-                        <td class="col-lg-10">
-                            <div class="text-center">
-                                <h3 class="text-danger"><a href="/list-events-organizer?id=${organizerDto.idDb}">${organizerDto.designation} </a></h3>
-                            </div>
-=======
-                        <td class="col-lg-2"><a href="/single?id=${organizerDto.idDb}"></a></td>
-                        <td class="col-lg-10">
-                         <h4 class="text-danger"><a href="/single?id=${organizerDto.idDb}">${organizerDto.designation} </a></h4>
->>>>>>> develop
-                        </td>
-                    </tr>
-
-                </table>
-        </#list>
+    <div class="container_org">
+        <table class="table">
+            <#list  organizersDtoList as organizerDto>
+                <tr>
+                    <h4 class="text-danger"><a href="/single?id=${organizerDto.idDb}">${organizerDto.designation} </a></h4>
+                    <hr style="width:50%;height:1px;border:none;color:#ccc;background-color:#ccc;" />
+                </tr>
+            </#list>
+        </table>
     </div>
 </section>
-<<<<<<< HEAD
-
-
-=======
->>>>>>> develop
 <#include "footer-section.ftlh">
