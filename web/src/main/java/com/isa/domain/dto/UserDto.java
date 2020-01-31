@@ -10,9 +10,21 @@ public class UserDto {
 
     private String email;
 
+    private String googleId;
+
     private UserType userType;
 
     private List<EventDto> eventDtoList;
+
+    private String name;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
 
     public Long getId() {
         return id;
@@ -44,5 +56,13 @@ public class UserDto {
 
     public void setEventDtoList(List<EventDto> eventDtoList) {
         this.eventDtoList = eventDtoList;
+    }
+
+    public String getGoogleId() {
+        return googleId;
+    }
+
+    public void setGoogleId(String googleId) {
+        this.googleId = googleId;
     }
 }

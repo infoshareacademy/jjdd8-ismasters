@@ -47,7 +47,7 @@ public class AttachmentMapper {
     }
 
     public List<Attachments> mapApiToEntity(List<AttachmentApi> attachmentApiList) {
-        logger.info("Map attachmentApi to entity");
+        logger.debug("Map attachmentApi to entity");
         List<Attachments> attachmentsList = new ArrayList<>();
         attachmentApiList.forEach(singleAttachment -> {
                     Attachments attachments = new Attachments();

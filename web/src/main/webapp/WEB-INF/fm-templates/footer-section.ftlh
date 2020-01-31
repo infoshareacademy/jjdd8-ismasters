@@ -8,8 +8,6 @@
                         <div class="aw-text">
                             <img src="/img/logo_100.png"
                                  alt="">
-                            <p>Donec eget efficitur ex. Donec eget dolor vitae eros feugiat tristique id vitae massa.
-                                Proin vulputate cong ue rutrum. Fusce lobortis a enim eget tempus. </p>
                         </div>
                     </div>
                 </div>
