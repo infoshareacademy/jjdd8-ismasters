@@ -66,4 +66,12 @@ public class EventDao {
 
         return query.setMaxResults(MAX_RESULT_ON_PAGE).getResultList();
     }
+
+    public List<Event> findByOrganizersId(int ID) {
+        Query query = em.createNamedQuery("Event.findByOrganizersId");
+
+        query.setParameter("organizerId",ID);
+
+        return query.setMaxResults(MAX_RESULT_ON_PAGE).getResultList();
+    }
 }

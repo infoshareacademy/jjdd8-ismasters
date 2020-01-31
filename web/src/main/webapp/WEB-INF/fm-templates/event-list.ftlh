@@ -30,6 +30,7 @@
     </div>
 </section>
 
+<#--
 <div class="container">
     <div class="col-sm-12 col-lg-12 row">
         <nav aria-label="Pagination">
@@ -59,6 +60,7 @@
         </nav>
     </div>
 </div>
+-->
 
 
 <#include "footer-section.ftlh">

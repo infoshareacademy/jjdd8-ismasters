@@ -10,7 +10,10 @@ import java.util.List;
 
         @NamedQuery(name = "Event.countAll", query = "SELECT COUNT (e) FROM Event e"),
 
-        @NamedQuery(name = "Event.findByName", query = "SELECT e FROM Event e JOIN e.organizer o WHERE e.startDate>: startDate AND e.endDate<:endDate AND e.name LIKE CONCAT('%', :param, '%') OR o.designation LIKE CONCAT('%', :param, '%')")
+        @NamedQuery(name = "Event.findByName", query = "SELECT e FROM Event e JOIN e.organizer o WHERE e.startDate>: startDate AND e.endDate<:endDate AND e.name LIKE CONCAT('%', :param, '%') OR o.designation LIKE CONCAT('%', :param, '%')"),
+
+        @NamedQuery(name = "Event.findByOrganizersId", query = "SELECT e FROM Event e JOIN e.organizer o WHERE o.id = :organizerId"),
+
 }
 )
 

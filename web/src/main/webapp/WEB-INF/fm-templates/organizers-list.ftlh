@@ -16,10 +16,10 @@
                     <tbody>
                     <tr>
                         <th></th>
-                        <td class="col-lg-2"><a href="/single?id=${organizerDto.idDb}"></a></td>
+                        <td class="col-lg-2"><a href="/list-events-organizer?id=${organizerDto.idDb}"></a></td>
                         <td class="col-lg-10">
                             <div class="text-center">
-                                <h3 class="text-danger"><a href="/single?id=${organizerDto.idDb}">${organizerDto.designation} </a></h3>
+                                <h3 class="text-danger"><a href="/list-events-organizer?id=${organizerDto.idDb}">${organizerDto.designation} </a></h3>
                             </div>
                         </td>
                     </tr>
@@ -28,8 +28,6 @@
         </#list>
     </div>
 </section>
-
-
 
 
 <#include "footer-section.ftlh">
