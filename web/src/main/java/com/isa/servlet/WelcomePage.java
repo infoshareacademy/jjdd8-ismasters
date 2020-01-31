@@ -3,10 +3,11 @@ package com.isa.servlet;
 
 import com.isa.auth.UserAuthenticationService;
 import com.isa.config.TemplateProvider;
-import com.isa.domain.dto.UserDto;
+import com.isa.domain.dto.*;
 import com.isa.domain.entity.UserType;
 import com.isa.mock.EventDTO_mock;
 import com.isa.service.UserService;
+import com.isa.service.domain.EventService;
 import freemarker.template.Template;
 import freemarker.template.TemplateException;
 import org.slf4j.Logger;
@@ -21,9 +22,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.StringReader;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Optional;
+import java.util.*;
 
 
 @WebServlet("")
@@ -41,19 +40,35 @@ public class WelcomePage extends HttpServlet {
     @Inject
     private UserAuthenticationService userAuthenticationService;
 
-
+    @Inject
+    private EventService eventService;
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws SecurityException, IOException {
         eventDTO_mock.setDescShort("Gimnastyka prozdrowotna dla kobiet 50 +Zaj\u0119cia prozdrowotne i uelastyczniaj\u0105ce dla kobiet 50+.Grupa wiekowa: Kobiety 50+Cena: 20 z\u0142 \u2013 pojedyncze zaj\u0119cia,70 z\u0142 - miesi\u0105c (1x w tygodniu)120 z\u0142 - miesi\u0105c (2x w tygodniu)Cz\u0119stotliwo\u015b\u0107 zaj\u0119\u0107...");
         eventDTO_mock.setName("Gimnastyka prozdrowotna");
         eventDTO_mock.setUrls("http://wyspaskarbow.gak.gda.pl");
 
+
+
         Template template = templateProvider.getTemplate(getServletContext(), "welcome-page.ftlh");
         Map<String, Object> model = new HashMap<>();
 
-        model.put("eventDTO_mock", eventDTO_mock);
+        List<EventDto> eventDtoList = new ArrayList<>();
 
-        req.setCharacterEncoding("UTF-8");
+        eventDtoList.addAll(eventService.findAll());
+
+
+        EventDto eventDto1 = eventDtoList.get(3);
+        logger.info("Foto1 {}\n", eventDto1.getAttachmentDto().getFileName());
+        EventDto eventDto2 = eventDtoList.get(4);
+        logger.info("Foto1 {}\n", eventDto2.getAttachmentDto().getFileName());
+        EventDto eventDto3 = eventDtoList.get(5);
+        logger.info("Foto1 {}\n", eventDto3.getAttachmentDto().getFileName());
+
+        model.put("eventDto1", eventDto1);
+        model.put("eventDto2", eventDto2);
+        model.put("eventDto3", eventDto3);
+
         resp.setCharacterEncoding("UTF-8");
         resp.setContentType("Content-Type = text/html");
 
