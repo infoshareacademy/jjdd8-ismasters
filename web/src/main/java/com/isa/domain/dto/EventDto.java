@@ -1,7 +1,5 @@
 package com.isa.domain.dto;
 
-import com.isa.domain.entity.Attachments;
-
 import java.time.LocalDateTime;
 import java.util.List;
 
