@@ -8,10 +8,5 @@ app/target
 web/.idea
 app/.idea
 web/wildfly.docker
-Różne_druty_na_brudno.txt
-
 out/
 
-web.xml
-web/src/main/webapp/WEB-INF/web.xml
-web/src/main/resources/google.properties
