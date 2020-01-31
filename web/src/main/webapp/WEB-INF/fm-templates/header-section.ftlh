@@ -63,8 +63,9 @@
         <div class="header-right">
             <div class="user-panel">
                 <#if logged == "yes" >
+
                     <a href="/logout" class="btn btn-danger btn-sm"
-                       id="logout"><i class="fa fa-google"></i> Wyloguj się</a>
+                       id="logout">(${googleEmail})      <i class="fa fa-google"></i> Wyloguj się</a>
                 <#else>
                     <a href="${loginUrl}" class="btn btn-danger btn-sm" id="login">
                     <i class="fa fa-google"></i> Zaloguj się przez <b>Google</b></a>
