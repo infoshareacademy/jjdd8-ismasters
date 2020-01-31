@@ -1,5 +1,6 @@
 package com.isa.servlet;
 
+import com.isa.auth.UserAuthenticationService;
 import com.isa.config.TemplateProvider;
 import com.isa.domain.dto.EventDto;
 import com.isa.service.PaginationService;
@@ -20,9 +21,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-/**
- *
- */
 @WebServlet("/list-events")
 public class ListOfEvents extends HttpServlet {
 
@@ -36,6 +34,9 @@ public class ListOfEvents extends HttpServlet {
 
     @Inject
     private PaginationService paginationService;
+
+    @Inject
+    private UserAuthenticationService userAuthenticationService;
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse rep) throws SecurityException, IOException {
@@ -66,6 +67,15 @@ public class ListOfEvents extends HttpServlet {
         model.put("next", next);
         model.put("previous", previous);
         model.put("lastPageView", lastPageView);
+
+        final String googleId = (String) req.getSession().getAttribute("googleId");
+
+        if (googleId != null && !googleId.isEmpty()) {
+            model.put("logged", "yes");
+        } else {
+            model.put("logged", "no");
+            model.put("loginUrl", userAuthenticationService.buildLoginUrl());
+        }
 
         try {
             template.process(model, rep.getWriter());

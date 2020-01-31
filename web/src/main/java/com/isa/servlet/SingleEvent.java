@@ -1,5 +1,6 @@
 package com.isa.servlet;
 
+import com.isa.auth.UserAuthenticationService;
 import com.isa.config.TemplateProvider;
 import com.isa.domain.dto.*;
 import com.isa.service.domain.EventService;
@@ -28,6 +29,9 @@ public class SingleEvent extends HttpServlet {
 
     @Inject
     private EventService eventService;
+
+    @Inject
+    private UserAuthenticationService userAuthenticationService;
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
@@ -59,6 +63,15 @@ public class SingleEvent extends HttpServlet {
         model.put("placeDto", placeDto);
         model.put("urlDto", urlDto);
         model.put("addressDto", addressDto);
+
+        final String googleId = (String) req.getSession().getAttribute("googleId");
+
+        if (googleId != null && !googleId.isEmpty()) {
+            model.put("logged", "yes");
+        } else {
+            model.put("logged", "no");
+            model.put("loginUrl", userAuthenticationService.buildLoginUrl());
+        }
 
         try {
             template.process(model, writer);

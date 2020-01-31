@@ -1,5 +1,6 @@
 package com.isa.servlet;
 
+import com.isa.auth.UserAuthenticationService;
 import com.isa.config.TemplateProvider;
 import com.isa.domain.dto.OrganizerDto;
 import com.isa.service.domain.OrganizersService;
@@ -31,6 +32,9 @@ public class ListOfOrganizers extends HttpServlet {
     @Inject
     private OrganizersService organizersService;
 
+    @Inject
+    private UserAuthenticationService userAuthenticationService;
+
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse rep) throws SecurityException, IOException {
 
@@ -42,6 +46,15 @@ public class ListOfOrganizers extends HttpServlet {
         logger.info("The size of a arraylist " + organizersDtoList.size());
 
         model.put("organizersDtoList", organizersDtoList);
+
+        final String googleId = (String) req.getSession().getAttribute("googleId");
+
+        if (googleId != null && !googleId.isEmpty()) {
+            model.put("logged", "yes");
+        } else {
+            model.put("logged", "no");
+            model.put("loginUrl", userAuthenticationService.buildLoginUrl());
+        }
 
         try {
             template.process(model, rep.getWriter());
