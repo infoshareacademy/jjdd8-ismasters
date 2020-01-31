@@ -626,6 +626,7 @@ Hero section
 .hero-section {
 	height: 80%;
 	padding-top: 20%;
+	min-height: 750px;
 }
 
 .hero-warp {
