@@ -1,6 +1,7 @@
 package com.isa.servlet;
 
 
+import com.isa.auth.UserAuthenticationService;
 import com.isa.config.TemplateProvider;
 import com.isa.domain.dto.EventDto;
 import com.isa.service.domain.EventService;
@@ -30,21 +31,27 @@ public class AdminServlet extends HttpServlet {
     @Inject
     private EventService eventService;
 
+    @Inject
+    UserAuthenticationService userAuthenticationService;
+
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse rep) throws SecurityException, IOException {
 
 
-
         Template template = templateProvider.getTemplate(getServletContext(), "admin-view.ftlh");
         Map<String, Object> model = new HashMap<>();
+        final String googleId = (String) req.getSession().getAttribute("googleId");
 
-
-
+        if (googleId != null && !googleId.isEmpty()) {
+            model.put("logged", "yes");
+        } else {
+            model.put("logged", "no");
+            model.put("loginUrl", userAuthenticationService.buildLoginUrl());
+        }
         try {
             template.process(model, rep.getWriter());
         } catch (TemplateException e) {
             logger.error(e.getMessage());
         }
     }
-
 }

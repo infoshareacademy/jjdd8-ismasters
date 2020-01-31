@@ -37,9 +37,5 @@
 <!-- Extra JavaScript/CSS added manually in "Settings" tab -->
 <!-- Include jQuery -->
 
-
-
-
-
 </body>
 </html>
