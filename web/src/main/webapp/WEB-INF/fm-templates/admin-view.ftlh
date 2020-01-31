@@ -49,9 +49,9 @@
             <div class="modal-body" style="color: #0b0b0b" >
             </div>
             <!-- Modal footer -->
-            <div class="modal-footer">
+            <#--<div class="modal-footer">
                 <button type="button" class="btn btn-danger" data-dismiss="modal" onclick="location.reload()">Close</button>
-            </div>
+            </div>-->
         </div>
     </div>
 </div>

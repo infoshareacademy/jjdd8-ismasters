@@ -1,6 +1,5 @@
 package com.isa.domain.dto;
 
-import com.isa.domain.entity.Attachments;
 
 import java.time.LocalDateTime;
 import java.util.List;
@@ -28,6 +27,17 @@ public class EventDto {
 
     private AttachmentDto attachmentDto;
 
+    private List<UserDto> eventFav;
+
+    private PlaceDto place;
+
+    private UrlDto urls;
+
+    private TicketTypeDto ticketType;
+
+    private OrganizerDto organizer;
+
+
     public AttachmentDto getAttachmentDto() {
         return attachmentDto;
     }
@@ -35,12 +45,6 @@ public class EventDto {
     public void setAttachmentDto(AttachmentDto attachmentDto) {
         this.attachmentDto = attachmentDto;
     }
-
-    private List<UserDto> eventFav;
-
-    private TicketTypeDto ticketType;
-
-    private OrganizerDto organizer;
 
     public Long getId() {
         return id;
@@ -138,10 +142,6 @@ public class EventDto {
     public void setUrls(UrlDto urls) {
         this.urls = urls;
     }
-
-    private PlaceDto place;
-
-    private UrlDto urls;
 
     public LocalDateTime getStartDate() {
         return startDate;
