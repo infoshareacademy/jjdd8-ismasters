@@ -26,7 +26,7 @@ import java.util.Map;
 import java.util.Optional;
 
 
-@WebServlet ("")
+@WebServlet("")
 public class WelcomePage extends HttpServlet {
 
     private final Logger logger = LoggerFactory.getLogger(getClass().getName());

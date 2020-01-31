@@ -10,6 +10,7 @@ import org.slf4j.LoggerFactory;
 import javax.ejb.Stateless;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.Locale;
 
 @Stateless
 public class EventMapper {
@@ -28,8 +29,8 @@ public class EventMapper {
 
         event.setApiId(eventApiParser.getApiId());
 
-        event.setStartDate(LocalDateTime.parse(eventApiParser.getStartDate().substring(START_YEAR_DATE, END_SECONDS_DATE), formatter));
-        event.setEndDate(LocalDateTime.parse(eventApiParser.getEndDate().substring(START_YEAR_DATE, END_SECONDS_DATE), formatter));
+        event.setStartDate(LocalDateTime.parse(eventApiParser.getStartDate().substring(START_YEAR_DATE,END_SECONDS_DATE),formatter));
+        event.setEndDate(LocalDateTime.parse(eventApiParser.getEndDate().substring(START_YEAR_DATE,END_SECONDS_DATE),formatter));
         event.setDescShort(eventApiParser.getShortDescription());
         event.setName(eventApiParser.getName());
         event.setDescLong(eventApiParser.getLongDescription());

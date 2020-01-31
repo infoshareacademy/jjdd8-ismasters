@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="zxx">
 <head>
     <title>3City Events</title>
     <meta charset="UTF-8">
@@ -29,12 +29,6 @@
     <link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css" />
 
 
-    <!-- Google font -->
-    <meta name="google-signin-scope" content="profile email">
-    <link href="https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i,900%7cRoboto:400,400i,500,500i,700,700i&display=swap" rel="stylesheet">
-    <meta name="google-signin-client_id" content="410089355802-edk5jsfjas6cmf08v219irj2i3lvrtcm.apps.googleusercontent.com">
-    <script src="https://apis.google.com/js/platform.js" async defer></script>
-
 
     <!--[if lt IE 9]>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -43,28 +37,8 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
     <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
     <![endif]-->
-    <style>
-
-
-        .auth a {
-            display: block;
-            border-style: solid;
-            border-color: #bbb #888 #666 #aaa;
-            border-width: 1px 2px 2px 1px;
-            background: #ccc;
-            color: #333;
-            line-height: 2;
-            text-align: center;
-            text-decoration: none;
-            font-weight: 900;
-            width: 13em;
-        }
-
-        .auth pre {
-            background: #ccc;
-        }
-    </style>
 
 </head>
 <body>
