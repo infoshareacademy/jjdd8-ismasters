@@ -141,7 +141,7 @@ public class EventService {
     }
 
     public List<EventDto> findByName(String param) {
-        logger.info("Live search param: {}", param);
+        logger.debug("Live search param: {}", param);
         List<Event> eventList = eventDao.findByName(param);
         return eventList.stream()
                 .map(e -> mapEntityToDto(e))
@@ -149,12 +149,20 @@ public class EventService {
     }
 
     public List<EventDto> findByNameRest(String param, LocalDateTime startDate, LocalDateTime endDate) {
-        logger.info("Live search param: {}", param);
+        logger.debug("Live search param: {}", param);
         List<Event> eventList = eventDao.findByNameRest(param, startDate, endDate);
         return eventList.stream()
                 .map(e -> mapEntityToDto(e))
                 .collect(Collectors.toList());
+    }
 
+    public List<EventDto> findByOrganizersId(int organizersId){
+        logger.debug("Events with Organizer id {} ",organizersId );
+
+        List<Event> eventList = eventDao.findByOrganizersId(organizersId);
+        return eventList.stream()
+                .map(e -> mapEntityToDto(e))
+                .collect(Collectors.toList());
     }
 
 
