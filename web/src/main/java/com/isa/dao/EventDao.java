@@ -8,6 +8,7 @@ import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Optional;
@@ -61,5 +62,14 @@ public class EventDao {
         query.setParameter("endDate", endDate);
 
         return query.setMaxResults(MAX_RESULT_ON_PAGE).getResultList();
+    }
+
+    public List<Event> getFavouritiesEvents(Long id) {
+        Query query = em.createNamedQuery("User.favouritiesOrderedByDate");
+        query.setParameter("id", id);
+        String today = LocalDate.now().toString();
+        query.setParameter("today", today);
+        List<Event> favouritiesEvents = query.getResultList();
+        return favouritiesEvents;
     }
 }

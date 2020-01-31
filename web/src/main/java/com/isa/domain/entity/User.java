@@ -2,8 +2,11 @@ package com.isa.domain.entity;
 
 import javax.persistence.*;
 import java.util.List;
-@NamedQueries(
-        @NamedQuery(name = "User.findAll", query = "SELECT u FROM User u")
+@NamedQueries({
+        @NamedQuery(name = "User.findAll", query = "SELECT u FROM User u"),
+
+        @NamedQuery(name = "User.favouritiesOrderedByDate", query = "SELECT e FROM User u INNER JOIN u.favouriteEvents e WHERE u.id = :id and e.startDate > :today ORDER BY e.startDate")
+}
 )
 
 @Entity

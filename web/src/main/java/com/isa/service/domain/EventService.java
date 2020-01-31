@@ -13,10 +13,13 @@ import org.slf4j.LoggerFactory;
 
 import javax.ejb.Stateless;
 import javax.inject.Inject;
+import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
 
 
@@ -149,5 +152,16 @@ public class EventService {
                 .map(e -> mapEntityToDto(e))
                 .collect(Collectors.toList());
 
+    }
+
+    public void getClosestFavourite(Long id, HttpServletRequest request, List<Event> favouritiesEvents) {
+        if (request.getSession().getAttribute("beamStatus") == "true") {
+            if (favouritiesEvents.size() !=0) {
+                Event closestFavouriteEvent = eventDao.getFavouritiesEvents(id).get(0);
+                EventDto closestEventForView = mapEntityToDto(closestFavouriteEvent);
+                Map<String, Object> model = new HashMap<>();
+                model.put("eventDto", closestEventForView);
+            }
+        }
     }
 }
