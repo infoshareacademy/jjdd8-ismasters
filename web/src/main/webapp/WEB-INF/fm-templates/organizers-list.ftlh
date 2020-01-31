@@ -6,7 +6,7 @@
         <table class="table">
             <#list  organizersDtoList as organizerDto>
                 <tr>
-                    <h4 class="text-danger"><a href="/single?id=${organizerDto.idDb}">${organizerDto.designation} </a></h4>
+                    <h4 class="text-danger"><a href="/list-events-organizer?id=${organizerDto.idDb}">${organizerDto.designation} </a></h4>
                     <hr style="width:50%;height:1px;border:none;color:#ccc;background-color:#ccc;" />
                 </tr>
             </#list>
