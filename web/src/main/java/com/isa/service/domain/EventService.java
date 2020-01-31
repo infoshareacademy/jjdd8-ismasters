@@ -86,7 +86,7 @@ public class EventService {
                     eventDao.add(event);
                     logger.debug("Dodano do bazy {}", event);
 
-                    logger.info("Attachments {}", event.getAttachments());
+                    logger.debug("Attachments {}", event.getAttachments());
                 });
 
     }
@@ -108,7 +108,7 @@ public class EventService {
         eventDto.setUrls(urlDto);
         eventDto.setPlace(placeDto);
         eventDto.setAttachmentDto(attachmentDto);
-        logger.info("Zdjęcie : {}", eventDto.getAttachmentDto());
+        logger.info("Zdjęcie : {}", eventDto.getAttachmentDto().getFileName());
         return eventDto;
 
     }

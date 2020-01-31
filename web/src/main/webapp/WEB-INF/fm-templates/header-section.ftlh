@@ -59,10 +59,16 @@
             <li><a href="/list-events?pageNumber=0">Wydarzenia</a></li>
             <li><a href="contact.html">Kontakt</a></li>
         </ul>
+
         <div class="header-right">
             <div class="user-panel">
-                <a href="#" class="login">Zaloguj się</a>
-                <a href="#" class="register rounded-pill">Zarejestruj się</a>
+                <#if logged == "yes" >
+                    <a href="/logout" class="btn btn-danger btn-sm"
+                       id="logout"><i class="fa fa-google"></i> Wyloguj się</a>
+                <#else>
+                    <a href="${loginUrl}" class="btn btn-danger btn-sm" id="login">
+                    <i class="fa fa-google"></i> Zaloguj się przez <b>Google</b></a>
+                </#if>
             </div>
         </div>
     </nav>
@@ -71,10 +77,6 @@
                 <span class="slicknav_icon-bar"></span><span class="slicknav_icon-bar"></span></span></a>
         <ul class="slicknav_nav slicknav_hidden" aria-hidden="true" role="menu" style="display: none;">
             <li class="header-right-warp"><div class="header-right">
-                    <div class="user-panel">
-                        <a href="#" class="login">Zaloguj się</a>
-                        <a href="#" class="register">Zarejestruj się</a>
-                    </div>
                 </div>
             </li>
             <li><a href="/list-events?pageNumber=0" role="menuitem" tabindex="-1">Wydarzenia</a></li>

@@ -4,5 +4,6 @@ public enum UserType {
     GUEST,
     USER,
     ADMIN,
-    SUPERADMIN;
+    SUPER_ADMIN,
+    TEST;
 }
