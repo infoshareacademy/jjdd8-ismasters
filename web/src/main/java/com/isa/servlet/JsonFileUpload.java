@@ -111,11 +111,14 @@ public class JsonFileUpload extends HttpServlet {
 
         try {
             assert eventsJson != null;
-            eventsFilePath = fileUploadProcessor.getUploadFilePath() + fileUploadProcessor.uploadFile(eventsJson).getName();
+            eventsFilePath = fileUploadProcessor.uploadFile(eventsJson).getName();
+//            eventsFilePath = fileUploadProcessor.getUploadFilePath() + fileUploadProcessor.uploadFile(eventsJson).getName();
             assert placesJson != null;
-            placesFilePath = fileUploadProcessor.getUploadFilePath() + fileUploadProcessor.uploadFile(placesJson).getName();
+            placesFilePath = fileUploadProcessor.uploadFile(placesJson).getName();
+//            placesFilePath = fileUploadProcessor.getUploadFilePath() + fileUploadProcessor.uploadFile(placesJson).getName();
             assert organizersJson != null;
-            organizersFilePath = fileUploadProcessor.getUploadFilePath() + fileUploadProcessor.uploadFile(organizersJson).getName();
+            organizersFilePath = fileUploadProcessor.uploadFile(organizersJson).getName();
+//            organizersFilePath = fileUploadProcessor.getUploadFilePath() + fileUploadProcessor.uploadFile(organizersJson).getName();
 
 
             organizersService.setRelationsFromFile(organizersFilePath);
