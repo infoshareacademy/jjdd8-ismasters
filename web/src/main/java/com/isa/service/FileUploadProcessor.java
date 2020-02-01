@@ -32,13 +32,14 @@ public class FileUploadProcessor {
     public File uploadFile(Part filePart) throws IOException {
 
         String fileName = Paths.get(filePart.getSubmittedFileName()).getFileName().toString();
+        logger.info("File upload name {}", fileName);
 
         if (fileName == null || fileName.isEmpty()) {
             logger.error("Upload file error");
             throw new IOException("File error");
         }
 
-        File file = new File(getUploadFilePath() + fileName);
+        File file = new File(fileName);
         Files.deleteIfExists(file.toPath());
 
         InputStream fileContent = filePart.getInputStream();
