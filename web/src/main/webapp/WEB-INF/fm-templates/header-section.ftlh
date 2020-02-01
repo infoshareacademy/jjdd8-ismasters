@@ -19,6 +19,9 @@
     <link rel="stylesheet" href="/css/font-awesome.min.css"/>
     <link rel="stylesheet" href="/css/slicknav.min.css"/>
 
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
     <!-- Main Stylesheets -->
     <link rel="stylesheet" href="/css/style.css"/>
 
