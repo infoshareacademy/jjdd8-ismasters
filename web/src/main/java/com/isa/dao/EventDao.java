@@ -84,4 +84,9 @@ public class EventDao {
         query.setMaxResults(maxPage);
         return query.getResultList();
     }
+    public List<Event> getFavEventsList(long userId) {
+        Query query = em.createNamedQuery("Event.findAllFavorites");
+        query.setParameter("id",userId);
+        return query.getResultList();
+    }
 }

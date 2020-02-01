@@ -170,13 +170,12 @@ public class EventService {
                 .collect(Collectors.toList());
     }
 
-    public List<EventDto> getFavEvents(){
-        List<Event> eventList = eventDao.findByName(param);
-        return eventList.stream()
-                .map(e -> mapEntityToDto(e))
+    public List<EventDto> getFavEvents(long userId) {
+        return eventDao.getFavEventsList(userId).stream().map(e -> mapEntityToDto(e))
                 .collect(Collectors.toList());
-
     }
+
+
 
 
 }
