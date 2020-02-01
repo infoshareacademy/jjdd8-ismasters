@@ -1,6 +1,12 @@
 <#include "header-section.ftlh">
 
-
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 <h1>Dodaj nowe wydarzenie do bazy</h1>
 <form method="post" action="/add-event" enctype="multipart/form-data">
     Nazwa Wydarzenia: <input type="text" name="name"/><br/><br/>

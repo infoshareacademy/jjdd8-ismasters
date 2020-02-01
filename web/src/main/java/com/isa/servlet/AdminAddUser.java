@@ -2,8 +2,12 @@ package com.isa.servlet;
 
 import com.isa.auth.UserAuthenticationService;
 import com.isa.config.TemplateProvider;
+import com.isa.dao.UserDao;
+import com.isa.domain.dto.UserDto;
+import com.isa.domain.entity.User;
 import com.isa.domain.entity.UserType;
-import com.isa.service.domain.EventService;
+import com.isa.mapper.UserMapper;
+import com.isa.service.UserService;
 import freemarker.template.Template;
 import freemarker.template.TemplateException;
 import org.slf4j.Logger;
@@ -15,12 +19,11 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.Part;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
-@WebServlet("/add-user-admin")
+@WebServlet ("/admin/add-user")
 public class AdminAddUser extends HttpServlet {
     private final Logger logger = LoggerFactory.getLogger(getClass().getName());
 
@@ -28,17 +31,25 @@ public class AdminAddUser extends HttpServlet {
     private TemplateProvider templateProvider;
 
     @Inject
-    private EventService eventService;
+    private UserAuthenticationService userAuthenticationService;
 
     @Inject
-    UserAuthenticationService userAuthenticationService;
+    private UserService userService;
+
+    @Inject
+    private UserMapper userMapper;
+
+    @Inject
+    private UserDao userDao;
 
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws SecurityException, IOException {
 
+        req.setCharacterEncoding("UTF-8");
+        resp.setCharacterEncoding("UTF-8");
 
-        Template template = templateProvider.getTemplate(getServletContext(), "add-new-user-admin.ftlh");
+        Template template = templateProvider.getTemplate(getServletContext(), "admin-add-new-user.ftlh");
         Map<String, Object> model = new HashMap<>();
 
         final String googleId = (String) req.getSession().getAttribute("googleId");
@@ -65,29 +76,30 @@ public class AdminAddUser extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-        String idParam = req.getParameter("id");
-        String nameParam = req.getParameter("name");
-        String loginParam = req.getParameter("login");
-        String ageParam = req.getParameter("age");
-/*
+        String name = req.getParameter("name");
+        String mail = req.getParameter("mail");
+        String userRole= req.getParameter("userRole");
+
+
+        logger.info("---Name: {}", name);
+        logger.info("---Email: {}", mail);
+        logger.info("---Role: {}", userRole);
+
         User user = new User();
-        user.setId(Long.valueOf(idParam));
-        user.setName(nameParam);
-        user.setLogin(loginParam);
-        user.setAge(Integer.valueOf(ageParam));
-
-        Part image = req.getPart("image");
-        String imageUrl = "";
-        try {
-            imageUrl = "/images/" + fileUploadProcessor
-                    .uploadImageFile(image).getName();
-        } catch (UserImageNotFound userImageNotFound) {
-            logger.warning(userImageNotFound.getMessage());
+        user.setName(name);
+        user.setEmail(mail);
+        if ("ADMIN".equals(userRole)) {
+            user.setUserType(UserType.ADMIN);
+        } else {
+            user.setUserType(UserType.USER);
         }
+//        userService.createNewUser();
 
-        user.setImageUrl(imageUrl);
+        logger.info("Name: {}", user.getName());
+        logger.info("Email: {}", user.getEmail());
+        logger.info("Role: {}", user.getUserType());
 
-        userService.saveUser(user);*/
+        userDao.add(user);
 
         resp.getWriter().println("User has been added.");
     }

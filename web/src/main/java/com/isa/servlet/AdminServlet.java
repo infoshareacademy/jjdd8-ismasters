@@ -4,7 +4,6 @@ package com.isa.servlet;
 import com.isa.auth.UserAuthenticationService;
 import com.isa.config.TemplateProvider;
 import com.isa.domain.entity.UserType;
-import com.isa.service.domain.EventService;
 import freemarker.template.Template;
 import freemarker.template.TemplateException;
 import org.slf4j.Logger;
@@ -19,15 +18,13 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
-@WebServlet ("/admin-template")
+@WebServlet ("/admin")
 public class AdminServlet extends HttpServlet {
     private final Logger logger = LoggerFactory.getLogger(getClass().getName());
     @Inject
     UserAuthenticationService userAuthenticationService;
     @Inject
     private TemplateProvider templateProvider;
-    @Inject
-    private EventService eventService;
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws SecurityException, IOException {

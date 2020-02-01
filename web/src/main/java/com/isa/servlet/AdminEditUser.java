@@ -2,73 +2,54 @@ package com.isa.servlet;
 
 import com.isa.auth.UserAuthenticationService;
 import com.isa.config.TemplateProvider;
-import com.isa.domain.dto.EventDto;
-import com.isa.domain.dto.OrganizerDto;
-import com.isa.domain.entity.Organizer;
+import com.isa.dao.UserDao;
+import com.isa.domain.entity.User;
 import com.isa.domain.entity.UserType;
-import com.isa.service.PaginationService;
-import com.isa.service.domain.EventService;
+import com.isa.mapper.UserMapper;
+import com.isa.service.UserService;
 import freemarker.template.Template;
 import freemarker.template.TemplateException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import javax.inject.Inject;
+import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
-@WebServlet("/admin/event-list")
-public class AdminListOfEvents extends HttpServlet {
-
-    private final int MAX_EVENT_NUMBER = 20;
-
+@WebServlet ("/admin/edit-user")
+public class AdminEditUser extends HttpServlet {
     private final Logger logger = LoggerFactory.getLogger(getClass().getName());
 
     @Inject
     private TemplateProvider templateProvider;
 
     @Inject
-    private EventService eventService;
-
-    @Inject
-    private PaginationService paginationService;
-
-    @Inject
     private UserAuthenticationService userAuthenticationService;
+
+    @Inject
+    private UserService userService;
+
+    @Inject
+    private UserMapper userMapper;
+
+    @Inject
+    private UserDao userDao;
+
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws SecurityException, IOException {
 
+        req.setCharacterEncoding("UTF-8");
+        resp.setCharacterEncoding("UTF-8");
 
-        Template template = templateProvider.getTemplate(getServletContext(), "admin-event-list.ftlh");
+        Template template = templateProvider.getTemplate(getServletContext(), "admin-add-new-user.ftlh");
         Map<String, Object> model = new HashMap<>();
-
-        String pageNumber = req.getParameter("pageNumber");
-
-        int pageNum = Integer.parseInt(pageNumber);
-        int next = paginationService.add(pageNum);
-        int previous = paginationService.reduce(pageNum);
-
-        int lastPageView = paginationService.getLastPage();
-
-
-        List<EventDto> eventDtoList = new ArrayList<>();
-
-        eventDtoList.addAll(eventService.getEventsForView(pageNum, MAX_EVENT_NUMBER));
-
-        logger.info("The size of a arraylist " + eventDtoList.size());
-
-        model.put("eventDtoList", eventDtoList);
-        model.put("next", next);
-        model.put("previous", previous);
-        model.put("lastPageView", lastPageView);
 
         final String googleId = (String) req.getSession().getAttribute("googleId");
         final String googleEmail = (String) req.getSession().getAttribute("googleEmail");
@@ -89,5 +70,34 @@ public class AdminListOfEvents extends HttpServlet {
         } catch (TemplateException e) {
             logger.error(e.getMessage());
         }
+    }
+
+    @Override
+    protected void doPut(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        resp.setContentType("text/html; charset=UTF-8");
+        req.setCharacterEncoding("UTF-8");
+        resp.setCharacterEncoding("UTF-8");
+        resp.getWriter().println("<br>Put method<br><ul>");
+
+        Long userId = Long.valueOf(req.getParameter("id"));
+        String name = req.getParameter("name");
+        String login = req.getParameter("login");
+        String password = req.getParameter("password");
+        int age = Integer.parseInt(req.getParameter("age"));
+
+
+        logger.info("doPut form data");
+        logger.info("Id: " + userId);
+        logger.info("Name: " + name);
+        logger.info("Login: " + login);
+        logger.info("Password: " + password);
+        logger.info("Age: " + age);
+
+        User user = userService.findUserById(userId);
+        user.setName(name);
+        user.setPassword(password);
+        user.setLogin(login);
+        user.setAge(age);
+        userService.saveUser(user);
     }
 }
