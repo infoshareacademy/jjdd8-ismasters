@@ -134,12 +134,6 @@ public class EventService {
                 .collect(Collectors.toList());
     }
 
-    public List<EventDto> getEventsForView(int setStartEvent, int maxEvent) {
-
-        return eventDao.getEventsForView(setStartEvent, maxEvent).stream().map(e -> mapEntityToDto(e))
-                .collect(Collectors.toList());
-    }
-
     public List<EventDto> findByName(String param) {
         logger.debug("Live search param: {}", param);
         List<Event> eventList = eventDao.findByName(param);
@@ -157,11 +151,15 @@ public class EventService {
     }
 
     public List<EventDto> findByOrganizersId(int organizersId){
-        logger.debug("Events with Organizer id {} ",organizersId );
-
         List<Event> eventList = eventDao.findByOrganizersId(organizersId);
         return eventList.stream()
                 .map(e -> mapEntityToDto(e))
+                .collect(Collectors.toList());
+    }
+
+    public List<EventDto> getEventsForView(int setStartEvent, int maxEvent) {
+
+        return eventDao.getEventsForView(setStartEvent, maxEvent).stream().map(e -> mapEntityToDto(e))
                 .collect(Collectors.toList());
     }
 

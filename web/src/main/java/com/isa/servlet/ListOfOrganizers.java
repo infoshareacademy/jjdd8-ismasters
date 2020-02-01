@@ -3,6 +3,7 @@ package com.isa.servlet;
 import com.isa.auth.UserAuthenticationService;
 import com.isa.config.TemplateProvider;
 import com.isa.domain.dto.OrganizerDto;
+import com.isa.service.domain.EventService;
 import com.isa.service.domain.OrganizersService;
 import freemarker.template.Template;
 import freemarker.template.TemplateException;
@@ -15,10 +16,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
+import java.util.stream.Collectors;
 
 
 @WebServlet("/organizers-list")
@@ -33,6 +32,9 @@ public class ListOfOrganizers extends HttpServlet {
     private OrganizersService organizersService;
 
     @Inject
+    private EventService eventService;
+
+    @Inject
     private UserAuthenticationService userAuthenticationService;
 
     @Override
@@ -43,9 +45,15 @@ public class ListOfOrganizers extends HttpServlet {
 
         Set<OrganizerDto> organizersDtoList = new HashSet<>(organizersService.findAll());
 
-        logger.info("The size of a arraylist " + organizersDtoList.size());
+        List<OrganizerDto> filteredOrganizerList = organizersDtoList.stream()
+                .filter(e -> eventService.findByOrganizersId(e.getIdDb()).size() > 0)
+                .sorted(Comparator.comparing(OrganizerDto::getDesignation))
+                .collect(Collectors.toList());
 
-        model.put("organizersDtoList", organizersDtoList);
+
+        logger.info("The size of a filtered list  " + filteredOrganizerList.size());
+
+        model.put("organizersDtoList", filteredOrganizerList);
 
         final String googleId = (String) req.getSession().getAttribute("googleId");
         final String googleEmail = (String) req.getSession().getAttribute("googleEmail");
