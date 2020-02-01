@@ -58,6 +58,10 @@ public class SingleEvent extends HttpServlet {
         Template template = templateProvider.getTemplate(getServletContext(), "single.ftlh");
         Map<String, Object> model = new HashMap<>();
 
+        String dateOfEvent = eventDto.getStartDate().toString().substring(0, 10).concat(", godz: ").concat(eventDto.getStartDate().toString().substring(11));
+        logger.info("dateOfEvent {}", dateOfEvent);
+
+        model.put("date", dateOfEvent);
         model.put("eventDto", eventDto);
         model.put("organizerDto", organizerDto);
         model.put("placeDto", placeDto);

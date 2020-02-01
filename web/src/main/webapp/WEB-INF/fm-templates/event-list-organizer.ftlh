@@ -2,6 +2,7 @@
 <div class="container_org">
         <tr>
             <td>
+                <#if (numberOfEvents > 19 )>
             <ul class="pagination">
                 <li class="page-item"><a class="page-link" href="/list-events-organizer?pageNumber=0<#if idOrganizer??>&id=${idOrganizer}</#if> ">Pierwsza strona</a></li>
                 <#if (previous > -1)>
@@ -23,6 +24,7 @@
                         strona</a>
                 </li>
             </ul>
+                </#if>
             </td>
         </tr>
     </table>

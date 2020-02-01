@@ -67,10 +67,8 @@ public class ListOfEventsForOrganizers extends HttpServlet {
         int lastPageView = paginationService.getLastPage();
 
         List<EventDto> eventDtoList = new ArrayList<>();
-        logger.info("idOrganizer {}", idOrganizer);
-//        eventDtoList.addAll(eventService.findByOrganizersId(idOrganizer));
 
-        eventDtoList.addAll(eventService.getEventsForView(pageNum, 20));
+        eventDtoList.addAll(eventService.findByOrganizersIdPaged(idOrganizer, pageNum, 20));
 
         final String googleId = (String) req.getSession().getAttribute("googleId");
         final String googleEmail = (String) req.getSession().getAttribute("googleEmail");
@@ -83,13 +81,14 @@ public class ListOfEventsForOrganizers extends HttpServlet {
             model.put("loginUrl", userAuthenticationService.buildLoginUrl());
         }
 
-        logger.info("The size of a arraylist " + eventDtoList.size());
+        logger.info("EVENT DTO LIST: {}", eventDtoList.size());
 
         model.put("idOrganizer", idOrganizer);
         model.put("eventDtoList", eventDtoList);
         model.put("next", next);
         model.put("previous", previous);
         model.put("lastPageView", lastPageView);
+        model.put("numberOfEvents", eventDtoList.size());
 
         try {
             template.process(model, rep.getWriter());
