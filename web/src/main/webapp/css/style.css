@@ -92,6 +92,20 @@ div's for event display
     text-align: center;
 }
 
+
+
+.red-square {
+
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+
 .box {
     border: 2px solid red;
     border-radius: 8px;
