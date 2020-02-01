@@ -2,8 +2,6 @@ package com.isa.servlet;
 
 import com.isa.auth.UserAuthenticationService;
 import com.isa.config.TemplateProvider;
-import com.isa.domain.dto.OrganizerDto;
-import com.isa.service.domain.OrganizersService;
 import freemarker.template.Template;
 import freemarker.template.TemplateException;
 import org.slf4j.Logger;
@@ -16,36 +14,26 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.HashMap;
-import java.util.HashSet;
 import java.util.Map;
-import java.util.Set;
 
+@WebServlet ("/noprivileges")
+public class NoPrivileges extends HttpServlet {
 
-@WebServlet("/organizers-list")
-public class ListOfOrganizers extends HttpServlet {
-
-    private final Logger logger = LoggerFactory.getLogger(getClass().getName());
+    private final Logger logger = LoggerFactory.getLogger(this.getClass().getName());
 
     @Inject
     private TemplateProvider templateProvider;
 
     @Inject
-    private OrganizersService organizersService;
-
-    @Inject
     private UserAuthenticationService userAuthenticationService;
 
     @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse rep) throws SecurityException, IOException {
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
 
-        Template template = templateProvider.getTemplate(getServletContext(), "organizers-list.ftlh");
+        Template template = templateProvider.getTemplate(getServletContext(), "noprivileges.ftlh");
         Map<String, Object> model = new HashMap<>();
 
-        Set<OrganizerDto> organizersDtoList = new HashSet<>(organizersService.findAll());
-
-        logger.info("The size of a arraylist " + organizersDtoList.size());
-
-        model.put("organizersDtoList", organizersDtoList);
+        model.put("error", "Dostęp do tej sekcji wymaga uprawnień administratora");
 
         final String googleId = (String) req.getSession().getAttribute("googleId");
         final String googleEmail = (String) req.getSession().getAttribute("googleEmail");
@@ -60,7 +48,7 @@ public class ListOfOrganizers extends HttpServlet {
         }
 
         try {
-            template.process(model, rep.getWriter());
+            template.process(model, resp.getWriter());
         } catch (TemplateException e) {
             logger.error(e.getMessage());
         }
