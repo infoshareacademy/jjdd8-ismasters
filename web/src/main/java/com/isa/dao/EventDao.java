@@ -17,6 +17,7 @@ public class EventDao {
     private final Logger logger = LoggerFactory.getLogger(getClass().getName());
 
     private int MAX_RESULT_ON_PAGE = 15;
+    private int MAX_RESULT_ON_PAGE_API = 5;
     @PersistenceContext
     private EntityManager em;
 
@@ -64,7 +65,7 @@ public class EventDao {
         query.setParameter("startDate", startDate);
         query.setParameter("endDate", endDate);
 
-        return query.setMaxResults(MAX_RESULT_ON_PAGE).getResultList();
+        return query.setMaxResults(MAX_RESULT_ON_PAGE_API).getResultList();
     }
 
     public List<Event> findByOrganizersId(int ID) {

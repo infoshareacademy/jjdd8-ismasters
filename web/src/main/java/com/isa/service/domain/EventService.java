@@ -108,7 +108,7 @@ public class EventService {
         eventDto.setUrls(urlDto);
         eventDto.setPlace(placeDto);
         eventDto.setAttachmentDto(attachmentDto);
-        logger.info("Zdjęcie : {}", eventDto.getAttachmentDto().getFileName());
+        logger.debug("Zdjęcie : {}", eventDto.getAttachmentDto().getFileName());
         return eventDto;
 
     }
