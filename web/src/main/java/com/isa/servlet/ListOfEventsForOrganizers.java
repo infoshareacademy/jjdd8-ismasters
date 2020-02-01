@@ -53,22 +53,24 @@ public class ListOfEventsForOrganizers extends HttpServlet {
         if (!pageNumber.matches("[0-9]+")){
             pageNumber = "0";
         }
+        int pageNum = Integer.parseInt(pageNumber);
+        logger.info("Page number {}", pageNumber);
 
         int idOrganizer = 1;
         if (req.getParameter("id") != null && !req.getParameter("id").isEmpty()) {
             idOrganizer = Integer.parseInt(req.getParameter("id")) ;
+            logger.info("idorganizer: {}", idOrganizer);
         }
 
-        int pageNum = Integer.parseInt(pageNumber);
         int next = paginationService.add(pageNum);
         int previous = paginationService.reduce(pageNum);
         int lastPageView = paginationService.getLastPage();
 
         List<EventDto> eventDtoList = new ArrayList<>();
         logger.info("idOrganizer {}", idOrganizer);
-        eventDtoList.addAll(eventService.findByOrganizersId(idOrganizer));
+//        eventDtoList.addAll(eventService.findByOrganizersId(idOrganizer));
 
-//        eventDtoList.addAll(eventService.getEventsForView(pageNum, 20));
+        eventDtoList.addAll(eventService.getEventsForView(pageNum, 20));
 
         final String googleId = (String) req.getSession().getAttribute("googleId");
         final String googleEmail = (String) req.getSession().getAttribute("googleEmail");

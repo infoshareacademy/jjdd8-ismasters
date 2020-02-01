@@ -19,8 +19,7 @@
                                                                     href="/list-events-organizer?pageNumber=${next}<#if idOrganizer??>&id=${idOrganizer}</#if>"></a>
                     </li>
                 </#if>
-                <li class="page-item"><a class="page-link" href="/list-events-organizer
-                ?pageNumber=${lastPageView}<#if idOrganizer??>&id=${idOrganizer}</#if>">Ostatnia
+                <li class="page-item"><a class="page-link" href="/list-events-organizer?pageNumber=${lastPageView}<#if idOrganizer??>&id=${idOrganizer}</#if>">Ostatnia
                         strona</a>
                 </li>
             </ul>

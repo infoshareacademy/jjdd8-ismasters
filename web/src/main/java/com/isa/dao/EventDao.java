@@ -16,7 +16,7 @@ import java.util.Optional;
 public class EventDao {
     private final Logger logger = LoggerFactory.getLogger(getClass().getName());
 
-    private int MAX_RESULT_ON_PAGE = 5;
+    private int MAX_RESULT_ON_PAGE = 15;
     @PersistenceContext
     private EntityManager em;
 
@@ -72,7 +72,7 @@ public class EventDao {
 
         query.setParameter("organizerId", ID);
         logger.info("DAO event list size {}", query.getResultList().size());
-//        return query.setMaxResults(MAX_RESULT_ON_PAGE).getResultList();
-        return query.getResultList();
+        return query.setMaxResults(MAX_RESULT_ON_PAGE).getResultList();
+//        return query.getResultList();
     }
 }
