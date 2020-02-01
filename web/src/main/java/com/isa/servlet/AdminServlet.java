@@ -3,6 +3,7 @@ package com.isa.servlet;
 
 import com.isa.auth.UserAuthenticationService;
 import com.isa.config.TemplateProvider;
+import com.isa.domain.dto.EventDto;
 import com.isa.domain.entity.UserType;
 import com.isa.service.domain.EventService;
 import freemarker.template.Template;
@@ -16,7 +17,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 @WebServlet ("/admin-template")
@@ -35,6 +38,9 @@ public class AdminServlet extends HttpServlet {
 
         Template template = templateProvider.getTemplate(getServletContext(), "admin-view.ftlh");
         Map<String, Object> model = new HashMap<>();
+
+        List<EventDto> eventDtoList = new ArrayList<>();
+
 
         final String googleId = (String) req.getSession().getAttribute("googleId");
         final String googleEmail = (String) req.getSession().getAttribute("googleEmail");

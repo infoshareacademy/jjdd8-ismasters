@@ -1,5 +1,6 @@
 package com.isa.dao;
 
+import com.isa.domain.entity.Event;
 import com.isa.domain.entity.User;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -51,10 +52,10 @@ public class UserDao {
     return Optional.of(users.get(0));
   }
 
-  public List<User> findUsersWithFavouriteEvents(Long id) {
+ /* public List<User> findUsersWithFavouriteEvents(Long id) {
     Query query = entityManager.createNamedQuery("User.findWithFavouriteEvents");
     query.setParameter("id", id);
     return query.getResultList();
-  }
+  }*/
 
 }
