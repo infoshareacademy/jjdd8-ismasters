@@ -1,59 +1,45 @@
 <#include "header-section.ftlh">
-<body>
-<div class="container bg-white text-white">
-    <div class="btn-group">
-        <button type="button" class="btn btn-danger dropdown-toggle " data-toggle="dropdown" aria-haspopup="true"
-                aria-expanded="false">
-           Zarządzanie wydarzeniami
-        </button>
-        <div class="dropdown-menu">
-            <a class="dropdown-item" href="/admin/add-book">Dodaj</a>
-            <a class="dropdown-item" href="/admin/list-book">Lista</a>
-        </div>
-    </div>
-    <div class="btn-group">
-        <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
-                aria-expanded="false">
-            Użytkownicy
-        </button>
-        <div class="dropdown-menu">
-            <a class="dropdown-item" id="1" href="#">dodaj</a>
-            <a class="dropdown-item" id="3" href="#">edytuj</a>
-            <a class="dropdown-item" id="2" href="#">usuń</a>
-        </div>
-    </div>
-    <div class="btn-group">
-        <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
-                aria-expanded="false">
-            Ulubione
-        </button>
-        <div class="dropdown-menu">
-            <a class="dropdown-item" href="#">usuń</a>
-        </div>
-    </div>
-    <div class="container" style="margin-top:30px">
-        <#if content??>
-            <#include "/${content}">
-        </#if>
-    </div>
-</div>
-<div class="modal" id="myModal">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <!-- Modal Header -->
-            <div class="modal-header">
-                <h4 class="modal-title">Modal Heading</h4>
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+
+<section class="property-section" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+    <div class="container">
+        </br>
+        <h1> Panel Admina</h1>
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-12">
+                <h4> Zarządzanie wydarzeniami</h4>
+                <a href="/add-event" class="readmore-btn" target="_blank">
+                <button type="button" class="btn btn-primary btn-lg btn-block">Dodaj wydarzenie </button>
+                </a>
+                <a href="/event-list-admin?pageNumber=0" class="readmore-btn" target="_blank">
+                    <br>
+                    <button type="button" class="btn btn-primary btn-lg btn-block">Edytuj / Usuń wydarzenia </button>
+                </a>
+
             </div>
-            <!-- Modal body -->
-            <div class="modal-body" style="color: #0b0b0b" >
+            <div class="col-lg-6 col-md-6 col-sm-12">
+                <h4> Zarządzanie użytkownikami</h4>
+                <a href="/add-user-admin" class="readmore-btn" target="_blank">
+                    <button type="button" class="btn btn-primary btn-lg btn-block">Dodaj użytkownika </button>
+                </a>
+                <a href="/user-list" class="readmore-btn" target="_blank">
+                    <br>
+                    <button type="button" class="btn btn-primary btn-lg btn-block">Edytuj / Usuń użytkownika </button>
+                </a>
             </div>
-            <!-- Modal footer -->
-            <#--<div class="modal-footer">
-                <button type="button" class="btn btn-danger" data-dismiss="modal" onclick="location.reload()">Close</button>
-            </div>-->
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-12">
+                <h4>Ładowanie danych z pliku</h4>
+                <a href="/add-event" class="readmore-btn" target="_blank">
+                    <br>
+                    <button type="button" class="btn btn-primary btn-lg btn-block">Załaduj pliki do bazy</button>
+                </a>
         </div>
     </div>
-</div>
-</body>
+</section>
+
+
+
 <#include "footer-section.ftlh">
