@@ -157,6 +157,13 @@ public class EventService {
                 .collect(Collectors.toList());
     }
 
+    public List<EventDto> findByOrganizersIdPaged(int organizersId, int startEvent, int maxPage){
+        List<Event> eventList = eventDao.findByOrganizersIdPaged(organizersId, startEvent, maxPage);
+        return eventList.stream()
+                .map(e -> mapEntityToDto(e))
+                .collect(Collectors.toList());
+    }
+
     public List<EventDto> getEventsForView(int setStartEvent, int maxEvent) {
 
         return eventDao.getEventsForView(setStartEvent, maxEvent).stream().map(e -> mapEntityToDto(e))

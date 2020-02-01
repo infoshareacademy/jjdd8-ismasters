@@ -20,7 +20,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 @WebServlet("/add-event")
-public class AddEventAdmin extends HttpServlet {
+public class AdminAddEvent extends HttpServlet {
     private final Logger logger = LoggerFactory.getLogger(getClass().getName());
 
     @Inject

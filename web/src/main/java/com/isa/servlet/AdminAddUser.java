@@ -2,6 +2,7 @@ package com.isa.servlet;
 
 import com.isa.auth.UserAuthenticationService;
 import com.isa.config.TemplateProvider;
+import com.isa.domain.entity.UserType;
 import com.isa.service.domain.EventService;
 import freemarker.template.Template;
 import freemarker.template.TemplateException;
@@ -20,7 +21,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 @WebServlet("/add-user-admin")
-public class AddUserAdmin extends HttpServlet {
+public class AdminAddUser extends HttpServlet {
     private final Logger logger = LoggerFactory.getLogger(getClass().getName());
 
     @Inject
@@ -34,21 +35,28 @@ public class AddUserAdmin extends HttpServlet {
 
 
     @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse rep) throws SecurityException, IOException {
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws SecurityException, IOException {
 
 
         Template template = templateProvider.getTemplate(getServletContext(), "add-new-user-admin.ftlh");
         Map<String, Object> model = new HashMap<>();
+
         final String googleId = (String) req.getSession().getAttribute("googleId");
+        final String googleEmail = (String) req.getSession().getAttribute("googleEmail");
+        final UserType userType = (UserType) req.getSession().getAttribute("userType");
+        logger.info("Google email set to {}", googleEmail);
 
         if (googleId != null && !googleId.isEmpty()) {
             model.put("logged", "yes");
+            model.put("googleEmail", googleEmail);
+            model.put("userType", userType);
         } else {
             model.put("logged", "no");
             model.put("loginUrl", userAuthenticationService.buildLoginUrl());
         }
+
         try {
-            template.process(model, rep.getWriter());
+            template.process(model, resp.getWriter());
         } catch (TemplateException e) {
             logger.error(e.getMessage());
         }

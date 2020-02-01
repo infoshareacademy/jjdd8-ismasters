@@ -4,6 +4,7 @@ package com.isa.servlet;
 import com.isa.auth.UserAuthenticationService;
 import com.isa.config.TemplateProvider;
 import com.isa.domain.dto.UserDto;
+import com.isa.domain.entity.UserType;
 import com.isa.service.UserService;
 import com.isa.service.domain.EventService;
 import freemarker.template.Template;
@@ -24,7 +25,7 @@ import java.util.List;
 import java.util.Map;
 
 @WebServlet("/user-list")
-public class UserAdmin extends HttpServlet {
+public class AdminUserSetup extends HttpServlet {
     private final Logger logger = LoggerFactory.getLogger(getClass().getName());
 
     @Inject
@@ -50,13 +51,19 @@ public class UserAdmin extends HttpServlet {
         model.put("userDtoList",userDtoList );
 
         final String googleId = (String) req.getSession().getAttribute("googleId");
+        final String googleEmail = (String) req.getSession().getAttribute("googleEmail");
+        final UserType userType = (UserType) req.getSession().getAttribute("userType");
+        logger.info("Google email set to {}", googleEmail);
 
         if (googleId != null && !googleId.isEmpty()) {
             model.put("logged", "yes");
+            model.put("googleEmail", googleEmail);
+            model.put("userType", userType);
         } else {
             model.put("logged", "no");
             model.put("loginUrl", userAuthenticationService.buildLoginUrl());
         }
+
         try {
             template.process(model, resp.getWriter());
         } catch (TemplateException e) {

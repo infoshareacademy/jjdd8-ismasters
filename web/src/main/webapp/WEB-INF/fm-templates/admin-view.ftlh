@@ -4,6 +4,8 @@
 <section class="property-section" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
     <div class="container">
         </br>
+        </br>
+        </br>
         <h1> Panel Admina</h1>
         <div class="row">
             <div class="col-lg-6 col-md-6 col-sm-12">
@@ -32,7 +34,7 @@
         <div class="row">
             <div class="col-lg-6 col-md-6 col-sm-12">
                 <h4>Ładowanie danych z pliku</h4>
-                <a href="/add-event" class="readmore-btn" target="_blank">
+                <a href="/admin/upload" class="readmore-btn" target="_blank">
                     <br>
                     <button type="button" class="btn btn-primary btn-lg btn-block">Załaduj pliki do bazy</button>
                 </a>

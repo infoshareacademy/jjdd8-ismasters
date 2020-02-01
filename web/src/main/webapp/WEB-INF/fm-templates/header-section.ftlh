@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<html lang="zxx">
 <head>
     <title>3City Events</title>
     <meta charset="UTF-8">
@@ -69,7 +68,7 @@
         <div class="header-right">
             <div class="user-panel">
                 <#if logged == "yes" >
-
+                    <#if userType = "SUPER_ADMIN"><a href="/admin-template">ADMIN</a></#if>
                     <a href="/logout" class="btn btn-danger btn-sm"
                        id="logout"><i class="fa fa-google"></i> Wyloguj się  (${googleEmail}) </a>
                 <#else>
