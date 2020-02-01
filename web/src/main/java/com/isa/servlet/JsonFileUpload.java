@@ -116,14 +116,38 @@ public class JsonFileUpload extends HttpServlet {
             placesFilePath = fileUploadProcessor.getUploadFilePath() + fileUploadProcessor.uploadFile(placesJson).getName();
             assert organizersJson != null;
             organizersFilePath = fileUploadProcessor.getUploadFilePath() + fileUploadProcessor.uploadFile(organizersJson).getName();
-            writer.println("Plik " + eventsFilePath + " został załadowany");
-            writer.println("Plik " + organizersFilePath + " został załadowany");
-            writer.println("Plik " + placesFilePath + " został załadowany");
 
-            organizersService.setRelations(organizersFilePath);
-            placeService.setRelations(placesFilePath);
-            eventService.searchEvents(eventsFilePath);
-//
+
+            organizersService.setRelationsFromFile(organizersFilePath);
+            placeService.setRelationsFromFile(placesFilePath);
+            eventService.mapApiToEntityFromFile(eventsFilePath);
+
+            Template template = templateProvider.getTemplate(getServletContext(), "upload_success.ftlh");
+            Map<String, Object> model = new HashMap<>();
+
+            model.put("success", "Pliki zostały załadowane");
+
+            final String googleId = (String) req.getSession().getAttribute("googleId");
+            final String googleEmail = (String) req.getSession().getAttribute("googleEmail");
+            final UserType userType = (UserType) req.getSession().getAttribute("userType");
+            logger.info("Google email set to {}", googleEmail);
+
+            if (googleId != null && !googleId.isEmpty()) {
+                model.put("logged", "yes");
+                model.put("googleEmail", googleEmail);
+                model.put("userType", userType);
+            } else {
+                model.put("logged", "no");
+                model.put("loginUrl", userAuthenticationService.buildLoginUrl());
+            }
+
+            try {
+                template.process(model, resp.getWriter());
+            } catch (TemplateException e) {
+                logger.error(e.getMessage());
+            }
+
+
         } catch (IOException e) {
             logger.error(e.getMessage(), e);
         }
@@ -131,10 +155,6 @@ public class JsonFileUpload extends HttpServlet {
         logger.info("Events.json file path set to: " + eventsFilePath);
         logger.info("Organizer.json file path set to: " + organizersFilePath);
         logger.info("Places.json file path set to: " + placesFilePath);
-
-//        organizersService.setRelationsFromFile(organizersFilePath);
-//        placeService.setRelationsFromFile(placesFilePath);
-//        eventService.setRelationsFromFileToEntity(eventsFilePath);
 
     }
 
