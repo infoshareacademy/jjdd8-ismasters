@@ -1,9 +1,11 @@
 package com.isa.servlet;
 
-
 import com.isa.auth.UserAuthenticationService;
 import com.isa.config.TemplateProvider;
 import com.isa.domain.dto.EventDto;
+import com.isa.domain.dto.OrganizerDto;
+import com.isa.domain.entity.Organizer;
+import com.isa.service.PaginationService;
 import com.isa.service.domain.EventService;
 import freemarker.template.Template;
 import freemarker.template.TemplateException;
@@ -21,8 +23,11 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@WebServlet("/admin-template")
-public class AdminServlet extends HttpServlet {
+@WebServlet("/event-list-admin")
+public class ListOfEventsAdmin extends HttpServlet {
+
+    private final int MAX_EVENT_NUMBER = 20;
+
     private final Logger logger = LoggerFactory.getLogger(getClass().getName());
 
     @Inject
@@ -32,14 +37,38 @@ public class AdminServlet extends HttpServlet {
     private EventService eventService;
 
     @Inject
-    UserAuthenticationService userAuthenticationService;
+    private PaginationService paginationService;
+
+    @Inject
+    private UserAuthenticationService userAuthenticationService;
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse rep) throws SecurityException, IOException {
 
 
-        Template template = templateProvider.getTemplate(getServletContext(), "admin-view.ftlh");
+        Template template = templateProvider.getTemplate(getServletContext(), "event-list-admin.ftlh");
         Map<String, Object> model = new HashMap<>();
+
+        String pageNumber = req.getParameter("pageNumber");
+
+        int pageNum = Integer.parseInt(pageNumber);
+        int next = paginationService.add(pageNum);
+        int previous = paginationService.reduce(pageNum);
+
+        int lastPageView = paginationService.getLastPage();
+
+
+        List<EventDto> eventDtoList = new ArrayList<>();
+
+        eventDtoList.addAll(eventService.getEventsForView(pageNum, MAX_EVENT_NUMBER));
+
+        logger.info("The size of a arraylist " + eventDtoList.size());
+
+        model.put("eventDtoList", eventDtoList);
+        model.put("next", next);
+        model.put("previous", previous);
+        model.put("lastPageView", lastPageView);
+
         final String googleId = (String) req.getSession().getAttribute("googleId");
 
         if (googleId != null && !googleId.isEmpty()) {
@@ -48,6 +77,7 @@ public class AdminServlet extends HttpServlet {
             model.put("logged", "no");
             model.put("loginUrl", userAuthenticationService.buildLoginUrl());
         }
+
         try {
             template.process(model, rep.getWriter());
         } catch (TemplateException e) {
