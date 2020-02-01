@@ -57,4 +57,24 @@ public class PlaceService {
         logger.debug("Miejsce z adresem dodane do tabeli");
 
     }
+
+    public void setRelationsFromFile(String jsonString) throws IOException {
+
+        List<PlaceApi> list = apiDataParser.parseFromFile(jsonString, PlaceApi.class);
+
+        list.stream()
+                .forEach(p ->{
+                    Address address = new Address();
+                    Place place = new Place();
+                    address = addressMapper.mapApiToEntity(p.getAddressApi());
+                    place = placeMapper.mapApiToEntity(p);
+                    place.setAddress(address);
+                    placeDao.addFromFile(place);
+                    logger.debug("Place {}",place );
+                });
+
+        logger.debug("Miejsce z adresem dodane do tabeli");
+
+    }
 }
+

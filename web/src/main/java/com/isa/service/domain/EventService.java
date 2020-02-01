@@ -91,6 +91,47 @@ public class EventService {
 
     }
 
+    public void mapApiToEntityFromFile(String jsonString) throws IOException {
+
+        List<EventApi> list = apiDataParser.parseFromFile(jsonString, EventApi.class);
+        logger.info("Zaimportowano listę Wydarzeń");
+
+        list.stream()
+                .forEach(e -> {
+
+                    Long externalOrganizerId = e.getOrganizerApi().getId();
+                    Organizer organizer = organizersDao.findByApiId(externalOrganizerId);
+                    Event event = eventMapper.mapApiToEntity(e);
+
+                    logger.debug("Organizer {},{}", externalOrganizerId, organizer);
+
+                    event.setOrganizer(organizer);
+                    Url url = urlMapper.mapApiViewToEntity(e.getWeblinkApi());
+                    event.setUrl(url);
+
+                    List<Attachments> attachments = attachmentMapper.mapApiToEntity(e.getAttachments());
+
+                    event.setAttachments(attachments);
+
+                    attachments.stream().forEach(a -> a.setEvent(event));
+                    int placeExternalId = e.getPlaceApi().getApiId();
+
+                    Place place = placeDao.findByApiId(placeExternalId);
+                    logger.debug("Place id {}, {}", placeExternalId, place);
+
+                    event.setPlace(place);
+                    logger.debug("Przed zapisem {}", event);
+
+                    eventDao.addFromFile(event);
+                    logger.debug("Dodano do bazy {}", event);
+
+                    logger.debug("Attachments {}", event.getAttachments());
+                });
+
+    }
+
+
+
 
     public EventDto mapEntityToDto(Event event) {
 
