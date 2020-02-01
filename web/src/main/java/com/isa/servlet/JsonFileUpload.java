@@ -1,6 +1,8 @@
 package com.isa.servlet;
 
+import com.isa.auth.UserAuthenticationService;
 import com.isa.config.TemplateProvider;
+import com.isa.domain.entity.UserType;
 import com.isa.service.FileUploadProcessor;
 import com.isa.service.domain.EventService;
 import com.isa.service.domain.OrganizersService;
@@ -43,15 +45,33 @@ public class JsonFileUpload extends HttpServlet {
     @Inject
     private PlaceService placeService;
 
+    @Inject
+    UserAuthenticationService userAuthenticationService;
+
 
     Logger logger = LoggerFactory.getLogger(this.getClass().getName());
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
+
         logger.info("Session id: " + req.getSession().getId());
         setEncoding(req, resp);
         Template template = templateProvider.getTemplate(getServletContext(), "json_file_uploader.ftlh");
         Map<String, Object> model = new HashMap<>();
+
+        final String googleId = (String) req.getSession().getAttribute("googleId");
+        final String googleEmail = (String) req.getSession().getAttribute("googleEmail");
+        final UserType userType = (UserType) req.getSession().getAttribute("userType");
+        logger.info("Google email set to {}", googleEmail);
+
+        if (googleId != null && !googleId.isEmpty()) {
+            model.put("logged", "yes");
+            model.put("googleEmail", googleEmail);
+            model.put("userType", userType);
+        } else {
+            model.put("logged", "no");
+            model.put("loginUrl", userAuthenticationService.buildLoginUrl());
+        }
 
         try {
             template.process(model, resp.getWriter());
@@ -59,6 +79,7 @@ public class JsonFileUpload extends HttpServlet {
             logger.error(e.getMessage());
         }
     }
+
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException {

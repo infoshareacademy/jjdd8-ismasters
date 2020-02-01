@@ -5,6 +5,7 @@ import com.isa.config.TemplateProvider;
 import com.isa.domain.dto.EventDto;
 import com.isa.domain.dto.OrganizerDto;
 import com.isa.domain.entity.Organizer;
+import com.isa.domain.entity.UserType;
 import com.isa.service.PaginationService;
 import com.isa.service.domain.EventService;
 import freemarker.template.Template;
@@ -24,7 +25,7 @@ import java.util.List;
 import java.util.Map;
 
 @WebServlet("/event-list-admin")
-public class ListOfEventsAdmin extends HttpServlet {
+public class AdminListOfEvents extends HttpServlet {
 
     private final int MAX_EVENT_NUMBER = 20;
 
@@ -43,7 +44,7 @@ public class ListOfEventsAdmin extends HttpServlet {
     private UserAuthenticationService userAuthenticationService;
 
     @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse rep) throws SecurityException, IOException {
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws SecurityException, IOException {
 
 
         Template template = templateProvider.getTemplate(getServletContext(), "event-list-admin.ftlh");
@@ -70,16 +71,21 @@ public class ListOfEventsAdmin extends HttpServlet {
         model.put("lastPageView", lastPageView);
 
         final String googleId = (String) req.getSession().getAttribute("googleId");
+        final String googleEmail = (String) req.getSession().getAttribute("googleEmail");
+        final UserType userType = (UserType) req.getSession().getAttribute("userType");
+        logger.info("Google email set to {}", googleEmail);
 
         if (googleId != null && !googleId.isEmpty()) {
             model.put("logged", "yes");
+            model.put("googleEmail", googleEmail);
+            model.put("userType", userType);
         } else {
             model.put("logged", "no");
             model.put("loginUrl", userAuthenticationService.buildLoginUrl());
         }
 
         try {
-            template.process(model, rep.getWriter());
+            template.process(model, resp.getWriter());
         } catch (TemplateException e) {
             logger.error(e.getMessage());
         }
