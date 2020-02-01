@@ -157,8 +157,6 @@ public class EventService {
     }
 
     public List<EventDto> findByOrganizersId(int organizersId){
-        logger.debug("Events with Organizer id {} ",organizersId );
-
         List<Event> eventList = eventDao.findByOrganizersId(organizersId);
         return eventList.stream()
                 .map(e -> mapEntityToDto(e))

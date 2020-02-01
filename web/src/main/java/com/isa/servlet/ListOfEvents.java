@@ -51,6 +51,10 @@ public class ListOfEvents extends HttpServlet {
 
         String pageNumber = req.getParameter("pageNumber");
 
+        if (!pageNumber.matches("[0-9]+")){
+            pageNumber = "0";
+        }
+
         int pageNum = Integer.parseInt(pageNumber);
         int next = paginationService.add(pageNum);
         int previous = paginationService.reduce(pageNum);
