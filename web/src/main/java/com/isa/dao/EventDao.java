@@ -67,12 +67,20 @@ public class EventDao {
         return query.setMaxResults(MAX_RESULT_ON_PAGE).getResultList();
     }
 
-    public List<Event> findByOrganizersId(int ID) {
+    public List<Event> findByOrganizersId(int id) {
         Query query = em.createNamedQuery("Event.findByOrganizersId");
 
-        query.setParameter("organizerId", ID);
+        query.setParameter("organizerId", id);
         logger.info("DAO event list size {}", query.getResultList().size());
         return query.setMaxResults(MAX_RESULT_ON_PAGE).getResultList();
 //        return query.getResultList();
+    }
+
+    public List<Event> findByOrganizersIdPaged(int id, int startEvent, int maxPage) {
+        Query query = em.createNamedQuery("Event.findByOrganizersId");
+        query.setParameter("organizerId", id);
+        query.setFirstResult(startEvent);
+        query.setMaxResults(maxPage);
+        return query.getResultList();
     }
 }

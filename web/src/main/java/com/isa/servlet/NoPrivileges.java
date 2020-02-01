@@ -2,6 +2,7 @@ package com.isa.servlet;
 
 import com.isa.auth.UserAuthenticationService;
 import com.isa.config.TemplateProvider;
+import com.isa.domain.entity.UserType;
 import freemarker.template.Template;
 import freemarker.template.TemplateException;
 import org.slf4j.Logger;
@@ -37,11 +38,13 @@ public class NoPrivileges extends HttpServlet {
 
         final String googleId = (String) req.getSession().getAttribute("googleId");
         final String googleEmail = (String) req.getSession().getAttribute("googleEmail");
+        final UserType userType = (UserType) req.getSession().getAttribute("userType");
         logger.info("Google email set to {}", googleEmail);
 
         if (googleId != null && !googleId.isEmpty()) {
             model.put("logged", "yes");
             model.put("googleEmail", googleEmail);
+            model.put("userType", userType);
         } else {
             model.put("logged", "no");
             model.put("loginUrl", userAuthenticationService.buildLoginUrl());
