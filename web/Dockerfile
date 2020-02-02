@@ -1,5 +1,7 @@
 FROM jboss/wildfly
 
+ENV SENDGRID_API_KEY="${IM_SENDGRID_API_KEY}"
+
 RUN /opt/jboss/wildfly/bin/add-user.sh root root --silent
 
 
