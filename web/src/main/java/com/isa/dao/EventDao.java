@@ -23,8 +23,14 @@ public class EventDao {
 
     public long add(Event event) {
         em.persist(event);
-        logger.debug("New event has been added to the DB ");
+      logger.debug("New event has been added to the DB ");
         return event.getId();
+    }
+
+    public long addFromFile(Event event) {
+//        em.merge(event);
+        logger.debug("New event has been added to the DB ");
+        return em.merge(event).getId();
     }
 
     public List<Event> findAll() {
