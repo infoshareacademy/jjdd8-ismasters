@@ -41,7 +41,7 @@
                         <h4>Organizator: ${(eventDto.organizer.designation) ! "Brak danych"} </h4>
                         <hr style="width:50%;height:1px;border:none;color:#ccc;background-color:#ccc;" />
                         <a href="/single?id=${eventDto.id}"><i class="material-icons" title="Edit">&#xE15C;</i></a>
-                        <a href="/single?id=${eventDto.id}">
+                        <a href="/admin/delete/${eventDto.id}">
                             <i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i>
                         </a>
                     </div>

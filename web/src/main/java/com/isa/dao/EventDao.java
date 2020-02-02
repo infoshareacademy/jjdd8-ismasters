@@ -89,4 +89,11 @@ public class EventDao {
         query.setMaxResults(maxPage);
         return query.getResultList();
     }
+
+    public void delete(Long id) {
+        final Event e = em.find(Event.class, id);
+        if (e != null) {
+            em.remove(e);
+        }
+    }
 }

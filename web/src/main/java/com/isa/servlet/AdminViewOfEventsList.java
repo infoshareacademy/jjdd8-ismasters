@@ -42,7 +42,7 @@ public class AdminViewOfEventsList extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse rep) throws SecurityException, IOException {
 
 
-        Template template = templateProvider.getTemplate(getServletContext(), "admin-event-list.ftlh");
+        Template template = templateProvider.getTemplate(getServletContext(), "event-list-admin.ftlh");
         Map<String, Object> model = new HashMap<>();
 
         String pageNumber = req.getParameter("pageNumber");
