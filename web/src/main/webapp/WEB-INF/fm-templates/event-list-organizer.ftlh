@@ -1,29 +1,30 @@
 <#include "header-section.ftlh">
 <div class="container_org">
-    <table width="100%" align="center">
         <tr>
             <td>
+                <#if (numberOfEvents > 19 )>
             <ul class="pagination">
-                <li class="page-item"><a class="page-link" href="/list-events?pageNumber=0">Pierwsza strona</a></li>
+                <li class="page-item"><a class="page-link" href="/list-events-organizer?pageNumber=0<#if idOrganizer??>&id=${idOrganizer}</#if> ">Pierwsza strona</a></li>
                 <#if (previous > -1)>
-                    <li class="page-item"><a class="page-link" href="/list-events?pageNumber=${previous}">Poprzednia</a>
+                    <li class="page-item"><a class="page-link" href="/list-events-organizer?pageNumber=${previous}<#if idOrganizer??>&id=${idOrganizer}</#if>">Poprzednia</a>
                     </li>
                 <#else>
                     <li style="display: none " class="page-item"><a class="page-link"
-                                                                    href="/list-events?pageNumber=${previous}"></a></li>
+                                                                    href="/list-events-organizer?pageNumber=${previous}<#if idOrganizer??>&id=${idOrganizer}</#if>"></a></li>
                 </#if>
 
                 <#if (next < 80)>
-                    <li class="page-item"><a class="page-link" href="/list-events?pageNumber=${next}">Następna</a></li>
+                    <li class="page-item"><a class="page-link" href="/list-events-organizer?pageNumber=${next}<#if idOrganizer??>&id=${idOrganizer}</#if>">Następna</a></li>
                 <#else>
                     <li style="display: none " class="page-item"><a class="page-link"
-                                                                    href="/list-events?pageNumber=${next}"></a>
+                                                                    href="/list-events-organizer?pageNumber=${next}<#if idOrganizer??>&id=${idOrganizer}</#if>"></a>
                     </li>
                 </#if>
-                <li class="page-item"><a class="page-link" href="/list-events?pageNumber=${lastPageView}">Ostatnia
+                <li class="page-item"><a class="page-link" href="/list-events-organizer?pageNumber=${lastPageView}<#if idOrganizer??>&id=${idOrganizer}</#if>">Ostatnia
                         strona</a>
                 </li>
             </ul>
+                </#if>
             </td>
         </tr>
     </table>

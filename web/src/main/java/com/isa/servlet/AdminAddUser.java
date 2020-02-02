@@ -2,59 +2,44 @@ package com.isa.servlet;
 
 import com.isa.auth.UserAuthenticationService;
 import com.isa.config.TemplateProvider;
-import com.isa.domain.dto.OrganizerDto;
 import com.isa.domain.entity.UserType;
 import com.isa.service.domain.EventService;
-import com.isa.service.domain.OrganizersService;
 import freemarker.template.Template;
 import freemarker.template.TemplateException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import javax.inject.Inject;
+import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.Part;
 import java.io.IOException;
-import java.util.*;
-import java.util.stream.Collectors;
+import java.util.HashMap;
+import java.util.Map;
 
-
-@WebServlet("/organizers-list")
-public class ListOfOrganizers extends HttpServlet {
-
+@WebServlet("/add-user-admin")
+public class AdminAddUser extends HttpServlet {
     private final Logger logger = LoggerFactory.getLogger(getClass().getName());
 
     @Inject
     private TemplateProvider templateProvider;
 
     @Inject
-    private OrganizersService organizersService;
-
-    @Inject
     private EventService eventService;
 
     @Inject
-    private UserAuthenticationService userAuthenticationService;
+    UserAuthenticationService userAuthenticationService;
+
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws SecurityException, IOException {
 
-        Template template = templateProvider.getTemplate(getServletContext(), "organizers-list.ftlh");
+
+        Template template = templateProvider.getTemplate(getServletContext(), "add-new-user-admin.ftlh");
         Map<String, Object> model = new HashMap<>();
-
-        Set<OrganizerDto> organizersDtoList = new HashSet<>(organizersService.findAll());
-
-        List<OrganizerDto> filteredOrganizerList = organizersDtoList.stream()
-                .filter(e -> eventService.findByOrganizersId(e.getIdDb()).size() > 0)
-                .sorted(Comparator.comparing(OrganizerDto::getDesignation))
-                .collect(Collectors.toList());
-
-
-        logger.info("The size of a filtered list  " + filteredOrganizerList.size());
-
-        model.put("organizersDtoList", filteredOrganizerList);
 
         final String googleId = (String) req.getSession().getAttribute("googleId");
         final String googleEmail = (String) req.getSession().getAttribute("googleEmail");
@@ -75,5 +60,35 @@ public class ListOfOrganizers extends HttpServlet {
         } catch (TemplateException e) {
             logger.error(e.getMessage());
         }
+    }
+
+    @Override
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+
+        String idParam = req.getParameter("id");
+        String nameParam = req.getParameter("name");
+        String loginParam = req.getParameter("login");
+        String ageParam = req.getParameter("age");
+/*
+        User user = new User();
+        user.setId(Long.valueOf(idParam));
+        user.setName(nameParam);
+        user.setLogin(loginParam);
+        user.setAge(Integer.valueOf(ageParam));
+
+        Part image = req.getPart("image");
+        String imageUrl = "";
+        try {
+            imageUrl = "/images/" + fileUploadProcessor
+                    .uploadImageFile(image).getName();
+        } catch (UserImageNotFound userImageNotFound) {
+            logger.warning(userImageNotFound.getMessage());
+        }
+
+        user.setImageUrl(imageUrl);
+
+        userService.saveUser(user);*/
+
+        resp.getWriter().println("User has been added.");
     }
 }

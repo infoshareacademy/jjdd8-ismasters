@@ -1,6 +1,8 @@
 package com.isa.servlet;
 
+import com.isa.auth.UserAuthenticationService;
 import com.isa.config.TemplateProvider;
+import com.isa.domain.entity.UserType;
 import com.isa.service.FileUploadProcessor;
 import com.isa.service.domain.EventService;
 import com.isa.service.domain.OrganizersService;
@@ -43,15 +45,33 @@ public class JsonFileUpload extends HttpServlet {
     @Inject
     private PlaceService placeService;
 
+    @Inject
+    UserAuthenticationService userAuthenticationService;
+
 
     Logger logger = LoggerFactory.getLogger(this.getClass().getName());
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
+
         logger.info("Session id: " + req.getSession().getId());
         setEncoding(req, resp);
         Template template = templateProvider.getTemplate(getServletContext(), "json_file_uploader.ftlh");
         Map<String, Object> model = new HashMap<>();
+
+        final String googleId = (String) req.getSession().getAttribute("googleId");
+        final String googleEmail = (String) req.getSession().getAttribute("googleEmail");
+        final UserType userType = (UserType) req.getSession().getAttribute("userType");
+        logger.info("Google email set to {}", googleEmail);
+
+        if (googleId != null && !googleId.isEmpty()) {
+            model.put("logged", "yes");
+            model.put("googleEmail", googleEmail);
+            model.put("userType", userType);
+        } else {
+            model.put("logged", "no");
+            model.put("loginUrl", userAuthenticationService.buildLoginUrl());
+        }
 
         try {
             template.process(model, resp.getWriter());
@@ -59,6 +79,7 @@ public class JsonFileUpload extends HttpServlet {
             logger.error(e.getMessage());
         }
     }
+
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException {
@@ -90,19 +111,46 @@ public class JsonFileUpload extends HttpServlet {
 
         try {
             assert eventsJson != null;
-            eventsFilePath = fileUploadProcessor.getUploadFilePath() + fileUploadProcessor.uploadFile(eventsJson).getName();
+            eventsFilePath = fileUploadProcessor.uploadFile(eventsJson).getName();
+//            eventsFilePath = fileUploadProcessor.getUploadFilePath() + fileUploadProcessor.uploadFile(eventsJson).getName();
             assert placesJson != null;
-            placesFilePath = fileUploadProcessor.getUploadFilePath() + fileUploadProcessor.uploadFile(placesJson).getName();
+            placesFilePath = fileUploadProcessor.uploadFile(placesJson).getName();
+//            placesFilePath = fileUploadProcessor.getUploadFilePath() + fileUploadProcessor.uploadFile(placesJson).getName();
             assert organizersJson != null;
-            organizersFilePath = fileUploadProcessor.getUploadFilePath() + fileUploadProcessor.uploadFile(organizersJson).getName();
-            writer.println("Plik " + eventsFilePath + " został załadowany");
-            writer.println("Plik " + organizersFilePath + " został załadowany");
-            writer.println("Plik " + placesFilePath + " został załadowany");
+            organizersFilePath = fileUploadProcessor.uploadFile(organizersJson).getName();
+//            organizersFilePath = fileUploadProcessor.getUploadFilePath() + fileUploadProcessor.uploadFile(organizersJson).getName();
 
-            organizersService.setRelations(organizersFilePath);
-            placeService.setRelations(placesFilePath);
-            eventService.searchEvents(eventsFilePath);
-//
+
+            organizersService.setRelationsFromFile(organizersFilePath);
+            placeService.setRelationsFromFile(placesFilePath);
+            eventService.mapApiToEntityFromFile(eventsFilePath);
+
+            Template template = templateProvider.getTemplate(getServletContext(), "upload_success.ftlh");
+            Map<String, Object> model = new HashMap<>();
+
+            model.put("success", "Pliki zostały załadowane");
+
+            final String googleId = (String) req.getSession().getAttribute("googleId");
+            final String googleEmail = (String) req.getSession().getAttribute("googleEmail");
+            final UserType userType = (UserType) req.getSession().getAttribute("userType");
+            logger.info("Google email set to {}", googleEmail);
+
+            if (googleId != null && !googleId.isEmpty()) {
+                model.put("logged", "yes");
+                model.put("googleEmail", googleEmail);
+                model.put("userType", userType);
+            } else {
+                model.put("logged", "no");
+                model.put("loginUrl", userAuthenticationService.buildLoginUrl());
+            }
+
+            try {
+                template.process(model, resp.getWriter());
+            } catch (TemplateException e) {
+                logger.error(e.getMessage());
+            }
+
+
         } catch (IOException e) {
             logger.error(e.getMessage(), e);
         }
@@ -110,10 +158,6 @@ public class JsonFileUpload extends HttpServlet {
         logger.info("Events.json file path set to: " + eventsFilePath);
         logger.info("Organizer.json file path set to: " + organizersFilePath);
         logger.info("Places.json file path set to: " + placesFilePath);
-
-//        organizersService.setRelationsFromFile(organizersFilePath);
-//        placeService.setRelationsFromFile(placesFilePath);
-//        eventService.setRelationsFromFileToEntity(eventsFilePath);
 
     }
 

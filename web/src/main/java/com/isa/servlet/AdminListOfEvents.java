@@ -2,8 +2,11 @@ package com.isa.servlet;
 
 import com.isa.auth.UserAuthenticationService;
 import com.isa.config.TemplateProvider;
-import com.isa.domain.dto.*;
+import com.isa.domain.dto.EventDto;
+import com.isa.domain.dto.OrganizerDto;
+import com.isa.domain.entity.Organizer;
 import com.isa.domain.entity.UserType;
+import com.isa.service.PaginationService;
 import com.isa.service.domain.EventService;
 import freemarker.template.Template;
 import freemarker.template.TemplateException;
@@ -16,14 +19,17 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.io.PrintWriter;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
-@WebServlet("/single")
-public class SingleEvent extends HttpServlet {
+@WebServlet("/event-list-admin")
+public class AdminListOfEvents extends HttpServlet {
 
-    private final Logger logger = LoggerFactory.getLogger(this.getClass().getName());
+    private final int MAX_EVENT_NUMBER = 20;
+
+    private final Logger logger = LoggerFactory.getLogger(getClass().getName());
 
     @Inject
     private TemplateProvider templateProvider;
@@ -32,42 +38,37 @@ public class SingleEvent extends HttpServlet {
     private EventService eventService;
 
     @Inject
+    private PaginationService paginationService;
+
+    @Inject
     private UserAuthenticationService userAuthenticationService;
 
     @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
-
-        String idParam = req.getParameter("id");
-        PrintWriter writer = resp.getWriter();
-
-        if (idParam == null || idParam.isEmpty()) {
-            resp.setStatus(HttpServletResponse.SC_BAD_REQUEST);
-            return;
-        }
-
-        Long id = Long.parseLong(idParam);
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws SecurityException, IOException {
 
 
-        EventDto eventDto = eventService.findById(id);
-        OrganizerDto organizerDto = eventDto.getOrganizer();
-        PlaceDto placeDto = eventDto.getPlace();
-        AddressDto addressDto = placeDto.getAddressDto();
-        UrlDto urlDto = eventDto.getUrls();
-
-        logger.info("Long description: {}", eventDto.getDescLong());
-        logger.info("Short description: {}", eventDto.getDescShort());
-        Template template = templateProvider.getTemplate(getServletContext(), "single.ftlh");
+        Template template = templateProvider.getTemplate(getServletContext(), "event-list-admin.ftlh");
         Map<String, Object> model = new HashMap<>();
 
-        String dateOfEvent = eventDto.getStartDate().toString().substring(0, 10).concat(", godz: ").concat(eventDto.getStartDate().toString().substring(11));
-        logger.info("dateOfEvent {}", dateOfEvent);
+        String pageNumber = req.getParameter("pageNumber");
 
-        model.put("date", dateOfEvent);
-        model.put("eventDto", eventDto);
-        model.put("organizerDto", organizerDto);
-        model.put("placeDto", placeDto);
-        model.put("urlDto", urlDto);
-        model.put("addressDto", addressDto);
+        int pageNum = Integer.parseInt(pageNumber);
+        int next = paginationService.add(pageNum);
+        int previous = paginationService.reduce(pageNum);
+
+        int lastPageView = paginationService.getLastPage();
+
+
+        List<EventDto> eventDtoList = new ArrayList<>();
+
+        eventDtoList.addAll(eventService.getEventsForView(pageNum, MAX_EVENT_NUMBER));
+
+        logger.info("The size of a arraylist " + eventDtoList.size());
+
+        model.put("eventDtoList", eventDtoList);
+        model.put("next", next);
+        model.put("previous", previous);
+        model.put("lastPageView", lastPageView);
 
         final String googleId = (String) req.getSession().getAttribute("googleId");
         final String googleEmail = (String) req.getSession().getAttribute("googleEmail");

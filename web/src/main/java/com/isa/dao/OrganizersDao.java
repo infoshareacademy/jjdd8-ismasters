@@ -24,6 +24,11 @@ public class OrganizersDao {
         return organizer.getId();
     }
 
+    public long addFromFile(Organizer organizer) {
+        logger.debug("New organizer has been added to the DB ");
+        return em.merge(organizer).getId();
+    }
+
     public List<Organizer> findAll() {
         List listOfEvents = em
                 .createNamedQuery("Organizer.findAll")

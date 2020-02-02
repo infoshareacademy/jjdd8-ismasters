@@ -3,8 +3,6 @@ package com.isa.servlet;
 import com.isa.auth.UserAuthenticationService;
 import com.isa.config.TemplateProvider;
 import com.isa.domain.dto.EventDto;
-import com.isa.domain.dto.OrganizerDto;
-import com.isa.domain.entity.Organizer;
 import com.isa.domain.entity.UserType;
 import com.isa.service.PaginationService;
 import com.isa.service.domain.EventService;
@@ -24,10 +22,11 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@WebServlet("/list-events")
-public class ListOfEvents extends HttpServlet {
-
-    private final int MAX_EVENT_NUMBER = 20;
+/**
+ *
+ */
+@WebServlet("/list-events-organizer")
+public class ListOfEventsForOrganizers extends HttpServlet {
 
     private final Logger logger = LoggerFactory.getLogger(getClass().getName());
 
@@ -44,35 +43,33 @@ public class ListOfEvents extends HttpServlet {
     private UserAuthenticationService userAuthenticationService;
 
     @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws SecurityException, IOException {
+    protected void doGet(HttpServletRequest req, HttpServletResponse rep) throws SecurityException, IOException {
 
 
-        Template template = templateProvider.getTemplate(getServletContext(), "event-list.ftlh");
+        Template template = templateProvider.getTemplate(getServletContext(), "event-list-organizer.ftlh");
         Map<String, Object> model = new HashMap<>();
 
         String pageNumber = req.getParameter("pageNumber");
 
-        if (!pageNumber.matches("[0-9]+")) {
+        if (!pageNumber.matches("[0-9]+")){
             pageNumber = "0";
         }
-
         int pageNum = Integer.parseInt(pageNumber);
+        logger.info("Page number {}", pageNumber);
+
+        int idOrganizer = 1;
+        if (req.getParameter("id") != null && !req.getParameter("id").isEmpty()) {
+            idOrganizer = Integer.parseInt(req.getParameter("id")) ;
+            logger.info("idorganizer: {}", idOrganizer);
+        }
+
         int next = paginationService.add(pageNum);
         int previous = paginationService.reduce(pageNum);
-
         int lastPageView = paginationService.getLastPage();
-
 
         List<EventDto> eventDtoList = new ArrayList<>();
 
-        eventDtoList.addAll(eventService.getEventsForView(pageNum, MAX_EVENT_NUMBER));
-
-        logger.info("The size of a arraylist " + eventDtoList.size());
-
-        model.put("eventDtoList", eventDtoList);
-        model.put("next", next);
-        model.put("previous", previous);
-        model.put("lastPageView", lastPageView);
+        eventDtoList.addAll(eventService.findByOrganizersIdPaged(idOrganizer, pageNum, 20));
 
         final String googleId = (String) req.getSession().getAttribute("googleId");
         final String googleEmail = (String) req.getSession().getAttribute("googleEmail");
@@ -88,8 +85,17 @@ public class ListOfEvents extends HttpServlet {
             model.put("loginUrl", userAuthenticationService.buildLoginUrl());
         }
 
+        logger.info("EVENT DTO LIST: {}", eventDtoList.size());
+
+        model.put("idOrganizer", idOrganizer);
+        model.put("eventDtoList", eventDtoList);
+        model.put("next", next);
+        model.put("previous", previous);
+        model.put("lastPageView", lastPageView);
+        model.put("numberOfEvents", eventDtoList.size());
+
         try {
-            template.process(model, resp.getWriter());
+            template.process(model, rep.getWriter());
         } catch (TemplateException e) {
             logger.error(e.getMessage());
         }

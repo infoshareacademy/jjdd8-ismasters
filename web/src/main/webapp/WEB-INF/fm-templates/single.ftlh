@@ -1,39 +1,47 @@
 <#ftl output_format="plainText" auto_esc=false>
 <#include "header-section.ftlh">
-<#include "search-section.ftlh">
 <section class="property-section" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
     <div class="container">
         </br>
         <div class="row">
             <div class="col-3">
+                <#if placeDto.name??>
                 <div class="property-item">
-                    <h6> Miejsce  : <p>${placeDto.name ! "Nie podano"}</p></h6>
+                    <h6> Miejsce: <p>${placeDto.name ! "Nie podano"}</p></h6>
                 </div>
+                </#if>
+
 
                 <div class="property-item">
-                    <h6> Adres  : <br>${addressDto.street ! "Nie podano"}</br>
-                        ${addressDto.city ! "Nie podano"}</p></h6>
+                    <#if addressDto.street??>
+                    <h6> Adres: <br>${addressDto.street ! "Nie podano"}</br></#if>
+                        <#if addressDto.city??> ${addressDto.city ! "Nie podano"}</p></h6>
                 </div>
+                </#if>
 
+                <#if organizerDto.designation??>
                 <div class="property-item">
-                    <h6> Organizator  : <p>${organizerDto.designation ! "Organizator nieznany"}</p></h6>
+                    <h6> Organizator: <p>${organizerDto.designation ! "Organizator nieznany"}</p></h6>
                 </div>
+                </#if>
 
-
+                <#if date??>
                 <div class="property-item">
-                    <h6> Data  : <p>${eventDto.startDate ! "Data nieznana"}</p></h6>
+                    <h6> Data: <p>${date ! "Data nieznana"}</p></h6>
                 </div>
+                </#if>
 
-
+                <#if eventDto.tickets??>
                 <div class="property-item">
-                    <h6> Bilety  : <p>${eventDto.tickets ! "Brak informacji o biletach"}</p></h6>
+                    <h6> Bilety: <p>${eventDto.tickets ! "Brak informacji o biletach"}</p></h6>
                 </div>
+                </#if>
 
+                <#if urlDto.website??>
                 <div class="property-item">
-
                     <h6> <a href="${urlDto.website ! "javascript:void(0);"}" class="readmore-btn" target="_blank">Dowiedz się więcej</a> </h6>
-
                 </div>
+                </#if>
 
             </div>
 

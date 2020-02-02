@@ -16,7 +16,7 @@ import java.util.Optional;
 public class EventDao {
     private final Logger logger = LoggerFactory.getLogger(getClass().getName());
 
-    private int MAX_RESULT_ON_PAGE = 5;
+    private int MAX_RESULT_ON_PAGE = 15;
     @PersistenceContext
     private EntityManager em;
 
@@ -24,6 +24,12 @@ public class EventDao {
         em.persist(event);
         logger.debug("New event has been added to the DB ");
         return event.getId();
+    }
+
+    public long addFromFile(Event event) {
+//        em.merge(event);
+        logger.debug("New event has been added to the DB ");
+        return em.merge(event).getId();
     }
 
     public List<Event> findAll() {
@@ -65,5 +71,22 @@ public class EventDao {
         query.setParameter("endDate", endDate);
 
         return query.setMaxResults(MAX_RESULT_ON_PAGE).getResultList();
+    }
+
+    public List<Event> findByOrganizersId(int id) {
+        Query query = em.createNamedQuery("Event.findByOrganizersId");
+
+        query.setParameter("organizerId", id);
+        logger.info("DAO event list size {}", query.getResultList().size());
+        return query.setMaxResults(MAX_RESULT_ON_PAGE).getResultList();
+//        return query.getResultList();
+    }
+
+    public List<Event> findByOrganizersIdPaged(int id, int startEvent, int maxPage) {
+        Query query = em.createNamedQuery("Event.findByOrganizersId");
+        query.setParameter("organizerId", id);
+        query.setFirstResult(startEvent);
+        query.setMaxResults(maxPage);
+        return query.getResultList();
     }
 }

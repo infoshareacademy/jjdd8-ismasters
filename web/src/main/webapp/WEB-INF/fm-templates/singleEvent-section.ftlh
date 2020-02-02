@@ -1,6 +1,4 @@
 <#include "header-section.ftlh">
-<#include "search-section.ftlh">
-
 <#if errorMessage??>
     <span style="color: #ff0000;">${errorMessage}</span><br/><br/>
 </#if>

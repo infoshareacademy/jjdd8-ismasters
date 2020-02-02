@@ -1,60 +1,54 @@
 package com.isa.servlet;
 
+
 import com.isa.auth.UserAuthenticationService;
 import com.isa.config.TemplateProvider;
-import com.isa.domain.dto.OrganizerDto;
+import com.isa.domain.dto.UserDto;
 import com.isa.domain.entity.UserType;
+import com.isa.service.UserService;
 import com.isa.service.domain.EventService;
-import com.isa.service.domain.OrganizersService;
 import freemarker.template.Template;
 import freemarker.template.TemplateException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import javax.inject.Inject;
+import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.util.*;
-import java.util.stream.Collectors;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
-
-@WebServlet("/organizers-list")
-public class ListOfOrganizers extends HttpServlet {
-
+@WebServlet("/user-list")
+public class AdminUserSetup extends HttpServlet {
     private final Logger logger = LoggerFactory.getLogger(getClass().getName());
 
     @Inject
     private TemplateProvider templateProvider;
 
     @Inject
-    private OrganizersService organizersService;
-
-    @Inject
     private EventService eventService;
 
     @Inject
-    private UserAuthenticationService userAuthenticationService;
+    UserAuthenticationService userAuthenticationService;
+
+    @Inject
+    UserService userService;
 
     @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws SecurityException, IOException {
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        Template template = templateProvider.getTemplate(getServletContext(), "user-list-admin.ftlh");
 
-        Template template = templateProvider.getTemplate(getServletContext(), "organizers-list.ftlh");
+        List<UserDto> userDtoList = new ArrayList<>();
+        userDtoList.addAll(userService.getUsers());
+
         Map<String, Object> model = new HashMap<>();
-
-        Set<OrganizerDto> organizersDtoList = new HashSet<>(organizersService.findAll());
-
-        List<OrganizerDto> filteredOrganizerList = organizersDtoList.stream()
-                .filter(e -> eventService.findByOrganizersId(e.getIdDb()).size() > 0)
-                .sorted(Comparator.comparing(OrganizerDto::getDesignation))
-                .collect(Collectors.toList());
-
-
-        logger.info("The size of a filtered list  " + filteredOrganizerList.size());
-
-        model.put("organizersDtoList", filteredOrganizerList);
+        model.put("userDtoList",userDtoList );
 
         final String googleId = (String) req.getSession().getAttribute("googleId");
         final String googleEmail = (String) req.getSession().getAttribute("googleEmail");

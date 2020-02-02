@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<html lang="zxx">
 <head>
     <title>3City Events</title>
     <meta charset="UTF-8">
@@ -18,6 +17,9 @@
     <link rel="stylesheet" href="/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="/css/font-awesome.min.css"/>
     <link rel="stylesheet" href="/css/slicknav.min.css"/>
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
     <!-- Main Stylesheets -->
     <link rel="stylesheet" href="/css/style.css"/>
@@ -63,8 +65,9 @@
         <div class="header-right">
             <div class="user-panel">
                 <#if logged == "yes" >
+                    <#if userType = "SUPER_ADMIN"><a href="/admin-template">ADMIN</a></#if>
                     <a href="/logout" class="btn btn-danger btn-sm"
-                       id="logout"><i class="fa fa-google"></i> Wyloguj się</a>
+                       id="logout"><i class="fa fa-google"></i> Wyloguj się  (${googleEmail}) </a>
                 <#else>
                     <a href="${loginUrl}" class="btn btn-danger btn-sm" id="login">
                     <i class="fa fa-google"></i> Zaloguj się przez <b>Google</b></a>

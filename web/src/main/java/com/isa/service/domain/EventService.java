@@ -91,6 +91,47 @@ public class EventService {
 
     }
 
+    public void mapApiToEntityFromFile(String jsonString) throws IOException {
+
+        List<EventApi> list = apiDataParser.parseFromFile(jsonString, EventApi.class);
+        logger.info("Zaimportowano listę Wydarzeń");
+
+        list.stream()
+                .forEach(e -> {
+
+                    Long externalOrganizerId = e.getOrganizerApi().getId();
+                    Organizer organizer = organizersDao.findByApiId(externalOrganizerId);
+                    Event event = eventMapper.mapApiToEntity(e);
+
+                    logger.debug("Organizer {},{}", externalOrganizerId, organizer);
+
+                    event.setOrganizer(organizer);
+                    Url url = urlMapper.mapApiViewToEntity(e.getWeblinkApi());
+                    event.setUrl(url);
+
+                    List<Attachments> attachments = attachmentMapper.mapApiToEntity(e.getAttachments());
+
+                    event.setAttachments(attachments);
+
+                    attachments.stream().forEach(a -> a.setEvent(event));
+                    int placeExternalId = e.getPlaceApi().getApiId();
+
+                    Place place = placeDao.findByApiId(placeExternalId);
+                    logger.debug("Place id {}, {}", placeExternalId, place);
+
+                    event.setPlace(place);
+                    logger.debug("Przed zapisem {}", event);
+
+                    eventDao.addFromFile(event);
+                    logger.debug("Dodano do bazy {}", event);
+
+                    logger.debug("Attachments {}", event.getAttachments());
+                });
+
+    }
+
+
+
 
     public EventDto mapEntityToDto(Event event) {
 
@@ -134,14 +175,8 @@ public class EventService {
                 .collect(Collectors.toList());
     }
 
-    public List<EventDto> getEventsForView(int setStartEvent, int maxEvent) {
-
-        return eventDao.getEventsForView(setStartEvent, maxEvent).stream().map(e -> mapEntityToDto(e))
-                .collect(Collectors.toList());
-    }
-
     public List<EventDto> findByName(String param) {
-        logger.info("Live search param: {}", param);
+        logger.debug("Live search param: {}", param);
         List<Event> eventList = eventDao.findByName(param);
         return eventList.stream()
                 .map(e -> mapEntityToDto(e))
@@ -149,12 +184,31 @@ public class EventService {
     }
 
     public List<EventDto> findByNameRest(String param, LocalDateTime startDate, LocalDateTime endDate) {
-        logger.info("Live search param: {}", param);
+        logger.debug("Live search param: {}", param);
         List<Event> eventList = eventDao.findByNameRest(param, startDate, endDate);
         return eventList.stream()
                 .map(e -> mapEntityToDto(e))
                 .collect(Collectors.toList());
+    }
 
+    public List<EventDto> findByOrganizersId(int organizersId){
+        List<Event> eventList = eventDao.findByOrganizersId(organizersId);
+        return eventList.stream()
+                .map(e -> mapEntityToDto(e))
+                .collect(Collectors.toList());
+    }
+
+    public List<EventDto> findByOrganizersIdPaged(int organizersId, int startEvent, int maxPage){
+        List<Event> eventList = eventDao.findByOrganizersIdPaged(organizersId, startEvent, maxPage);
+        return eventList.stream()
+                .map(e -> mapEntityToDto(e))
+                .collect(Collectors.toList());
+    }
+
+    public List<EventDto> getEventsForView(int setStartEvent, int maxEvent) {
+
+        return eventDao.getEventsForView(setStartEvent, maxEvent).stream().map(e -> mapEntityToDto(e))
+                .collect(Collectors.toList());
     }
 
 

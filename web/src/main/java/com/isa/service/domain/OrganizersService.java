@@ -43,6 +43,22 @@ public class OrganizersService {
         logger.debug("Organizatorzy zmapowani i zaimportowani do bazy");
     }
 
+    public void setRelationsFromFile(String filename) throws IOException {
+
+        List<OrganizerApi> list = apiDataParser.parseFromFile(filename, OrganizerApi.class);
+
+        logger.debug("Zaimportowano listę organizatorów");
+
+        list.stream()
+                .map(o -> organizerMapper.mapApiToEntity(o))
+                .forEach(o -> {
+                    organizersDao.addFromFile(o);
+                    logger.debug("Organizer {}", o.getId());
+                });
+
+        logger.debug("Organizatorzy zmapowani i zaimportowani do bazy");
+    }
+
     public List<OrganizerDto> findAll() {
         List<OrganizerDto> organizerDtoList = new ArrayList<>();
 
@@ -51,4 +67,5 @@ public class OrganizersService {
         );
         return organizerDtoList;
     }
+
 }
