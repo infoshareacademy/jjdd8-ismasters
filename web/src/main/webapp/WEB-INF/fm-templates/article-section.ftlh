@@ -5,7 +5,7 @@
         </div>
         <div class="row intro-first">
             <div class="col-lg-6 order-lg-2">
-                <img src="https://www.national-geographic.pl/media/cache/default_view/uploads/media/default/0012/48/831359522ce15d5ff142a979b971eb948f546ad8.jpeg" width="700" height="400">
+                <img src="https://w ww.national-geographic.pl/media/cache/default_view/uploads/media/default/0012/48/831359522ce15d5ff142a979b971eb948f546ad8.jpeg" width="700" height="400">
             </div>
             <div class="col-lg-6 order-lg-1">
                 <div class="about-text">

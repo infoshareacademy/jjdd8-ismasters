@@ -26,4 +26,5 @@ services:
     links:
       - mysql
     environment:
-      - T2=Europe/Warsaw
+      - TZ=Europe/Warsaw
+      - ENDGRID_API_KEY=${IM_SENDGRID_API_KEY}
