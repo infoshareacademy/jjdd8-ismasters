@@ -23,7 +23,7 @@ public class MailService {
     public void createMail(Email from, String subject, Email to, Content content) throws IOException {
         Mail mail = new Mail(from, subject, to, content);
 
-        SendGrid sg = new SendGrid("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");
+       // SendGrid sg = new SendGrid("");
         Request request = new Request();
         request.setMethod(Method.POST);
         request.setEndpoint("mail/send");
@@ -45,7 +45,7 @@ public class MailService {
 
     private void createMail2(Email from, String subject, Email to, Content content) throws IOException {
         Mail mail = new Mail(from, subject, to, content);
-        SendGrid sg = new SendGrid("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");
+        SendGrid sg = new SendGrid("");
         Request request = new Request();
         request.setMethod(Method.POST);
         request.setEndpoint("mail/send");
