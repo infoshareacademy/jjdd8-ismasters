@@ -22,7 +22,7 @@ public class EventDao {
 
     public long add(Event event) {
         em.persist(event);
-        logger.debug("New event has been added to the DB ");
+      logger.debug("New event has been added to the DB ");
         return event.getId();
     }
 
