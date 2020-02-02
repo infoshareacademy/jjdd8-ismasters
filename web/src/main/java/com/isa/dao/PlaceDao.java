@@ -23,6 +23,11 @@ public class PlaceDao {
         return place.getId();
     }
 
+    public long addFromFile(Place place) {
+        logger.debug("New event has been added to the DB ");
+        return em.merge(place).getId();
+    }
+
     public List<Place> findAll() {
         List placesList = em
                 .createNamedQuery("Place.findAll")

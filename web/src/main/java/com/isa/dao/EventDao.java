@@ -26,6 +26,12 @@ public class EventDao {
         return event.getId();
     }
 
+    public long addFromFile(Event event) {
+//        em.merge(event);
+        logger.debug("New event has been added to the DB ");
+        return em.merge(event).getId();
+    }
+
     public List<Event> findAll() {
         return em.createNamedQuery("Event.findAll").getResultList();
     }

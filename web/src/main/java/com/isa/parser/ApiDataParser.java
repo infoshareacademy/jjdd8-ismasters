@@ -17,7 +17,7 @@ public class ApiDataParser {
     private ObjectMapper objectMapper = new ObjectMapper();
 
     public <T> List<T> parse(String json, Class<T> tClass) throws IOException {
-        logger.info("Parsing List from filename");
+        logger.info("Parsing List from API");
 
         return objectMapper.readValue(json, objectMapper.getTypeFactory().constructCollectionType(ArrayList.class, tClass));
     }
