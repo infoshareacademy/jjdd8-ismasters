@@ -41,7 +41,7 @@
                         <h4>Organizator: ${(eventDto.organizer.designation) ! "Brak danych"} </h4>
                         <hr style="width:50%;height:1px;border:none;color:#ccc;background-color:#ccc;" />
                         <#if logged == "yes" >
-                            <a href="" >Dodaj do ulubionych</a>
+                            <a href="" onclick="postFav(${eventDto.id})" >Dodaj do ulubionych</a>
                         </#if>
                     </div>
                 </tr>

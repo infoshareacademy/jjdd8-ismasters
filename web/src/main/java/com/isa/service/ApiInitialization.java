@@ -33,11 +33,17 @@ public class ApiInitialization {
     private PlaceService placeService;
 
 
+    @Inject
+    public MailService mailService;
+
     @PostConstruct
     public void apiInitialization() throws IOException {
 
         organizersService.setRelations(converter.buildClientRequest(constantValuesBean.getOrganizersApi()));
         placeService.setRelations(converter.buildClientRequest(constantValuesBean.getPlaceApi()));
         eventService.mapApiToEntity(converter.buildClientRequest(constantValuesBean.getEventsApi()));
+
+
+
     }
 }

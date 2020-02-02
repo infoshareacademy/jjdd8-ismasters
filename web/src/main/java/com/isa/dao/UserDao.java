@@ -52,10 +52,10 @@ public class UserDao {
     return Optional.of(users.get(0));
   }
 
- /* public List<User> findUsersWithFavouriteEvents(Long id) {
+  public List<User> findUsersWithFavouriteEvents(Long id) {
     Query query = entityManager.createNamedQuery("User.findWithFavouriteEvents");
     query.setParameter("id", id);
     return query.getResultList();
-  }*/
+  }
 
 }

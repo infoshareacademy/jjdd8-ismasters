@@ -175,6 +175,11 @@ public class EventService {
                 .collect(Collectors.toList());
     }
 
+    public List<EventDto> getAllFavEvents() {
+        return eventDao.getAllFavEventsList().stream().map(e -> mapEntityToDto(e))
+                .collect(Collectors.toList());
+    }
+
 
 
 

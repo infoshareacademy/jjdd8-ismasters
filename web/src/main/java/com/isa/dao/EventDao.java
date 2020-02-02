@@ -85,8 +85,13 @@ public class EventDao {
         return query.getResultList();
     }
     public List<Event> getFavEventsList(long userId) {
-        Query query = em.createNamedQuery("Event.findAllFavorites");
+        Query query = em.createNamedQuery("Event.findAllForUser");
         query.setParameter("id",userId);
+        return query.getResultList();
+    }
+
+    public List<Event> getAllFavEventsList() {
+        Query query = em.createNamedQuery("Event.findAllFavorites");
         return query.getResultList();
     }
 }

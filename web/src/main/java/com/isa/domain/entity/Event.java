@@ -25,7 +25,9 @@ import java.util.List;
 
         @NamedQuery(name = "Event.findByOrganizersId", query = "SELECT e FROM Event e JOIN e.organizer o WHERE o.id = :organizerId"),
 
-        @NamedQuery(name = "Event.findAllFavorites", query = "SELECT e FROM Event e INNER JOIN e.users u WHERE u.id = :id"),
+        @NamedQuery(name = "Event.findAllForUser", query = "SELECT e FROM Event e INNER JOIN e.users u WHERE u.id = :id"),
+
+        @NamedQuery(name = "Event.findAllFavorites", query = "SELECT e FROM Event e INNER JOIN e.users u"),
 
 }
 )
