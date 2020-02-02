@@ -98,4 +98,11 @@ public class EventDao {
         Query query = em.createNamedQuery("Event.findAllFavorites");
         return query.getResultList();
     }
+
+    public void deleteEvent(Long id) {
+        final Event e = em.find(Event.class, id);
+        if (e != null) {
+            em.remove(e);
+        }
+    }
 }
