@@ -1,7 +1,5 @@
 <#include "header-section.ftlh">
-
-
-<section class="property-section" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+<section class="property-section">
     <div class="container">
         </br>
         </br>
@@ -41,7 +39,4 @@
         </div>
     </div>
 </section>
-
-
-
 <#include "footer-section.ftlh">

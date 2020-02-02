@@ -2,12 +2,8 @@
 <head>
     <title>3City Events</title>
     <meta charset="UTF-8">
-    <meta name="description" content="Real estate HTML Template">
-    <meta name="keywords" content="real estate, html">
+    <meta name="description" content="3city Events">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Favicon -->
-    <link href="/img/favicon.ico" rel="shortcut icon"/>
 
     <!-- Google font -->
     <link href="https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i,900%7cRoboto:400,400i,500,500i,700,700i&display=swap" rel="stylesheet">

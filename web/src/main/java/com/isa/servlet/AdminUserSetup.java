@@ -18,6 +18,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -39,6 +40,8 @@ public class AdminUserSetup extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         Template template = templateProvider.getTemplate(getServletContext(), "admin-user-list.ftlh");
+
+        setEncoding(req, resp);
 
         List<UserDto> userDtoList = new ArrayList<>();
         userDtoList.addAll(userService.getUsers());
@@ -66,4 +69,10 @@ public class AdminUserSetup extends HttpServlet {
             logger.error(e.getMessage());
         }
     }
+    private void setEncoding(HttpServletRequest req, HttpServletResponse resp) throws UnsupportedEncodingException {
+        resp.setContentType("text/html; charset=UTF-8");
+        req.setCharacterEncoding("UTF-8");
+        resp.setCharacterEncoding("UTF-8");
+    }
+
 }

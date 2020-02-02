@@ -6,76 +6,26 @@
 <br>
 <br>
 <br>
-<br>
-<br>
-<br>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-<script type="text/javascript">
-    let id;
+<title>Edycja użytkownika</title>
 
-    function deleteUser(x) {
-        id = x;
-        $.ajax({
-            type: "DELETE",
-            data: {
-                id: id
-            },
-            success: location.reload(true)
-        });
-    }
-
-    function editUser(x) {
-        id = x;
-        $.ajax({
-
-                url: 'edit-user?id=' + id,
-                method: 'POST',
-                data: {
-                    id: $('input[name=id]').val(),
-                    name: $('input[name=name]').val(),
-                    login: $('input[name=login]').val(),
-                    password: $('input[name=password]').val(),
-                    age: $('input[name=age]').val(),
-                },
-                success: location.href = 'edit-user?id=' + id
-            },
-        )
-    }
-</script>
-
-<title>Edytuj użytkownika</title>
-
-
-<#if Error??>
-    <h3>Błąd!</h3>
-
+<#if error??>
+    <h3>Błąd! ${error}</h3>
 <#else>
-    <form>
-    <#list .data_model?values as value>
-        <ul>
-            <#if value.id??>
-                <li>Id: ${value.id}</li></#if>
-            <#if value.name??>
-                <li>Name: ${value.name}</li></#if>
-            <#if value.login??>
-                <li>Login: ${value.login}</li></#if>
-            <#if value.password??>
-                <li>Password: ${value.password}</li></#if>
-            <#if value.age??>
-                <li>Age: ${value.age}</li></#if>
-            <#if value.gender??>
-                <li>Age: ${value.gender}</li></#if>
-            <#if value.imageUrl??>
-                <li>Image: ${value.imageUrl}</li></#if>
-
-            <p><a href="edit-user?id=${value.id}">Edit user</a><br>
-                <a href="" onclick="deleteUser(${value.id})">Delete user</a></p>
-            <#--            <#if value.gender??><li>Gender: ${value.gender}</li></#if>-->
-
-            <#--            <input type="submit" value="DELETE" onclick="deleteUser(${value.id})">-->
-        </ul>
-        </form>
-    </#list>
+    <h4>Edycja użytkownika</h4>
+<form method="POST" action="/admin/edit-user">
+        Id: <input type="text" name="id" required="required" readonly value="${id !""}"/><br/>
+        Name: <input type="text" name="name" required="required" value="${name !""}"/><br/>
+        Email: <input type="text" name="email" required="required" value="${email !""}"/><br/>
+        User type: <br/>
+    <select name="userType">
+        <option value="USER" <#if userType == "USER"> selected</#if>>USER</option>
+        <option value="ADMIN" <#if userType == "ADMIN"> selected</#if>>ADMIN</option>
+        <option value="SUPER_ADMIN" <#if userType == "SUPER_ADMIN"> selected</#if>>SUPER_ADMIN</option>
+    </select>
+    <br/><br/>
+        <input type="reset" name="reset" value="Reset">
+        <input type="submit" name="save" value="Zapisz"><br/><br/>
+    </form>
 </#if>
 <#include "footer-section.ftlh">
 
