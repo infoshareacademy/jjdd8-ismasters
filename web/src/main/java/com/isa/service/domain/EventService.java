@@ -149,7 +149,7 @@ public class EventService {
         eventDto.setUrls(urlDto);
         eventDto.setPlace(placeDto);
         eventDto.setAttachmentDto(attachmentDto);
-        logger.info("Zdjęcie : {}", eventDto.getAttachmentDto().getFileName());
+        logger.debug("Zdjęcie : {}", eventDto.getAttachmentDto().getFileName());
         return eventDto;
 
     }
@@ -210,6 +210,18 @@ public class EventService {
         return eventDao.getEventsForView(setStartEvent, maxEvent).stream().map(e -> mapEntityToDto(e))
                 .collect(Collectors.toList());
     }
+
+    public List<EventDto> getFavEvents(long userId) {
+        return eventDao.getFavEventsList(userId).stream().map(e -> mapEntityToDto(e))
+                .collect(Collectors.toList());
+    }
+
+    public List<EventDto> getAllFavEvents() {
+        return eventDao.getAllFavEventsList().stream().map(e -> mapEntityToDto(e))
+                .collect(Collectors.toList());
+    }
+
+
 
 
 }

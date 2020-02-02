@@ -53,6 +53,9 @@
     </a>
     <nav class="header-nav">
         <ul class="main-menu">
+            <#if logged == "yes" >
+                <li><a href="/favorite-events-list">Twoje ulubione wydarzenia</a></li>
+            </#if>
             <li><a href="/organizers-list">Organizatorzy</a></li>
             <li><a href="/list-events?pageNumber=0">Wydarzenia</a></li>
             <li><a href="contact.html">Kontakt</a></li>

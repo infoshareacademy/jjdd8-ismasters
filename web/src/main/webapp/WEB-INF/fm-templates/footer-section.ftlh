@@ -27,6 +27,7 @@
 <script src="/js/jquery.magnific-popup.min.js"></script>
 <script src="/js/main.js"></script>
 <script src="/js/uisearch.js"></script>
+<script src="/js/favorities.js"></script>
 
 <!-- Extra JavaScript/CSS added manually in "Settings" tab -->
 <!-- Include jQuery -->

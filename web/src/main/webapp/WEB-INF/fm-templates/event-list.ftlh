@@ -40,6 +40,9 @@
                         <h4 class="text-danger"><a href="/single?id=${eventDto.id}">${eventDto.name} </a></h4>
                         <h4>Organizator: ${(eventDto.organizer.designation) ! "Brak danych"} </h4>
                         <hr style="width:50%;height:1px;border:none;color:#ccc;background-color:#ccc;" />
+                        <#if logged == "yes" >
+                            <a href="" onclick="postFav(${eventDto.id})" >Dodaj do ulubionych</a>
+                        </#if>
                     </div>
                 </tr>
                 </tbody>

@@ -17,12 +17,13 @@ public class EventDao {
     private final Logger logger = LoggerFactory.getLogger(getClass().getName());
 
     private int MAX_RESULT_ON_PAGE = 15;
+    private int MAX_RESULT_ON_PAGE_API = 5;
     @PersistenceContext
     private EntityManager em;
 
     public long add(Event event) {
         em.persist(event);
-        logger.debug("New event has been added to the DB ");
+      logger.debug("New event has been added to the DB ");
         return event.getId();
     }
 
@@ -69,7 +70,7 @@ public class EventDao {
         query.setParameter("startDate", startDate);
         query.setParameter("endDate", endDate);
 
-        return query.setMaxResults(MAX_RESULT_ON_PAGE).getResultList();
+        return query.setMaxResults(MAX_RESULT_ON_PAGE_API).getResultList();
     }
 
     public List<Event> findByOrganizersId(int id) {
@@ -85,6 +86,16 @@ public class EventDao {
         query.setParameter("organizerId", id);
         query.setFirstResult(startEvent);
         query.setMaxResults(maxPage);
+        return query.getResultList();
+    }
+    public List<Event> getFavEventsList(long userId) {
+        Query query = em.createNamedQuery("Event.findAllForUser");
+        query.setParameter("id",userId);
+        return query.getResultList();
+    }
+
+    public List<Event> getAllFavEventsList() {
+        Query query = em.createNamedQuery("Event.findAllFavorites");
         return query.getResultList();
     }
 }

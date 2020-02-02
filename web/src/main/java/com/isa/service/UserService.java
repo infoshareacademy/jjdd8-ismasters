@@ -1,19 +1,18 @@
 package com.isa.service;
 
 import com.isa.dao.UserDao;
+import com.isa.domain.dto.EventDto;
 import com.isa.domain.dto.UserDto;
 import com.isa.domain.entity.User;
 import com.isa.domain.entity.UserType;
 import com.isa.mapper.UserMapper;
+import com.isa.service.domain.EventService;
 
 import javax.ejb.EJB;
 import javax.ejb.Stateless;
 import javax.transaction.Transactional;
 import java.io.IOException;
-import java.util.List;
-import java.util.Objects;
-import java.util.Optional;
-import java.util.Properties;
+import java.util.*;
 import java.util.stream.Collectors;
 
 @Transactional
@@ -27,6 +26,9 @@ public class UserService {
 
     @EJB
     UserMapper userMapper;
+
+    @EJB
+    EventService eventService;
 
 
     public User findUserById(Long id) {
@@ -99,21 +101,5 @@ public class UserService {
         return userDao.findByEmail(email);
     }
 
-    public boolean removeUser(Long id) {
-        // wyszukaj user po id
-
-        User user = userDao.findById(id);
-
-        // sprawdź czy nie jest nullem
-
-        if (user != null) {
-
-        }
-        // skasuj ulubione eventy z tabeli po id user
-        // skasuj usera
-
-        return true;
-
-    }
 
 }

@@ -2,11 +2,13 @@ package com.isa.servlet;
 
 import com.isa.auth.UserAuthenticationService;
 import com.isa.config.TemplateProvider;
+import com.isa.dao.EventDao;
 import com.isa.domain.dto.EventDto;
-import com.isa.domain.dto.OrganizerDto;
-import com.isa.domain.entity.Organizer;
+import com.isa.domain.entity.Event;
+import com.isa.domain.entity.User;
 import com.isa.domain.entity.UserType;
 import com.isa.service.PaginationService;
+import com.isa.service.UserService;
 import com.isa.service.domain.EventService;
 import freemarker.template.Template;
 import freemarker.template.TemplateException;
@@ -14,16 +16,16 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import javax.inject.Inject;
+import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.transaction.Transactional;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
+@Transactional
 @WebServlet("/list-events")
 public class ListOfEvents extends HttpServlet {
 
@@ -38,13 +40,19 @@ public class ListOfEvents extends HttpServlet {
     private EventService eventService;
 
     @Inject
+    private UserService userService;
+
+    @Inject
     private PaginationService paginationService;
 
     @Inject
     private UserAuthenticationService userAuthenticationService;
 
+    @Inject
+    private EventDao eventDao;
+
     @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws SecurityException, IOException {
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
 
         Template template = templateProvider.getTemplate(getServletContext(), "event-list.ftlh");
@@ -68,6 +76,7 @@ public class ListOfEvents extends HttpServlet {
         eventDtoList.addAll(eventService.getEventsForView(pageNum, MAX_EVENT_NUMBER));
 
         logger.info("The size of a arraylist " + eventDtoList.size());
+
 
         model.put("eventDtoList", eventDtoList);
         model.put("next", next);
@@ -93,5 +102,19 @@ public class ListOfEvents extends HttpServlet {
         } catch (TemplateException e) {
             logger.error(e.getMessage());
         }
+    }
+    @Override
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp)
+            throws ServletException, IOException {
+        logger.info("Request POST method");
+        String eventId = req.getParameter("id");
+
+        final String googleEmail = (String) req.getSession().getAttribute("googleEmail");
+
+        Optional<User> user = userService.findByEmail(googleEmail);
+        Optional<Event> event = eventDao.findById(Long.parseLong(eventId));
+
+        user.get().getFavoriteEvents().add(event.get());
+
     }
 }

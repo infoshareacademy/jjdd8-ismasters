@@ -10,9 +10,24 @@ import java.util.List;
 
         @NamedQuery(name = "Event.countAll", query = "SELECT COUNT (e) FROM Event e"),
 
-        @NamedQuery(name = "Event.findByName", query = "SELECT e FROM Event e JOIN e.organizer o WHERE e.startDate>: startDate AND e.endDate<:endDate AND e.name LIKE CONCAT('%', :param, '%') OR o.designation LIKE CONCAT('%', :param, '%')"),
+        @NamedQuery(name = "Event.findByNameold", query = "SELECT e FROM Event e JOIN e.organizer o WHERE e.startDate>: startDate AND e.endDate<:endDate AND e.name LIKE CONCAT('%', :param, '%') OR o.designation LIKE CONCAT('%', :param, '%')"),
+
+        @NamedQuery(name = "Event.findByName", query = "SELECT e FROM Event e "
+                + "INNER JOIN "
+                + "e.organizer o "
+                + "WHERE "
+                + "o.designation LIKE CONCAT('%', :param, '%')"
+                + "AND "
+                + "e.startDate>= :startDate "
+                + "AND "
+                + "e.endDate<= :endDate "
+                + "ORDER BY e.startDate"),
 
         @NamedQuery(name = "Event.findByOrganizersId", query = "SELECT e FROM Event e JOIN e.organizer o WHERE o.id = :organizerId"),
+
+        @NamedQuery(name = "Event.findAllForUser", query = "SELECT e FROM Event e INNER JOIN e.users u WHERE u.id = :id"),
+
+        @NamedQuery(name = "Event.findAllFavorites", query = "SELECT e FROM Event e INNER JOIN e.users u"),
 
 }
 )
@@ -52,7 +67,7 @@ public class Event {
     private boolean active;
 
     @ManyToMany(fetch = FetchType.LAZY, mappedBy = "favoriteEvents")
-    private List<User> eventFav;
+    private List<User> users;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "ticket_type_id")
@@ -92,12 +107,12 @@ public class Event {
         this.name = name;
     }
 
-    public List<User> getEventFav() {
-        return eventFav;
+    public List<User> getUsers() {
+        return users;
     }
 
-    public void setEventFav(List<User> eventFav) {
-        this.eventFav = eventFav;
+    public void setUsers(List<User> eventFav) {
+        this.users = eventFav;
     }
 
     public Long getId() {
