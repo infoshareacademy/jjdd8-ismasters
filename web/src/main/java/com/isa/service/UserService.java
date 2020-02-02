@@ -99,4 +99,21 @@ public class UserService {
         return userDao.findByEmail(email);
     }
 
+    public boolean removeUser(Long id) {
+        // wyszukaj user po id
+
+        User user = userDao.findById(id);
+
+        // sprawdź czy nie jest nullem
+
+        if (user != null) {
+
+        }
+        // skasuj ulubione eventy z tabeli po id user
+        // skasuj usera
+
+        return true;
+
+    }
+
 }

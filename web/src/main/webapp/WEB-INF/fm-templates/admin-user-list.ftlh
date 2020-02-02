@@ -13,9 +13,7 @@
                 <tbody>
                 <tr>
                     <div class="text-center">
-                        <h4>${userDto.name ! ""} </h4>
-                        <h4>${userDto.email ! ""}</h4>
-                        <h4>${userDto.userType ! ""}</h4>
+                        <h4>${userDto.name ! ""}, ${userDto.email ! ""}, ${userDto.userType ! ""}</h4>
                         <a href="/admin/edit-user?id=${userDto.id}"><i class="material-icons" title="Edit">&#xE15C;</i></a>
                         <a href="/"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
                         <hr style="width:50%;height:1px;border:none;color:#ccc;background-color:#ccc;" />

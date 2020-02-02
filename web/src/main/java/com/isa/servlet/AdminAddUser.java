@@ -101,6 +101,6 @@ public class AdminAddUser extends HttpServlet {
 
         userDao.add(user);
 
-        resp.getWriter().println("User has been added.");
+        resp.sendRedirect("/admin/user-list");
     }
 }
