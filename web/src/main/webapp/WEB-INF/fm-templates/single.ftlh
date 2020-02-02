@@ -1,6 +1,8 @@
 <#ftl output_format="plainText" auto_esc=false>
 <#include "header-section.ftlh">
-<section class="property-section" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+    <br>
+    <br>
+    <section class="property-section" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
     <div class="container">
         </br>
         <div class="row">
@@ -49,6 +51,7 @@
                 <div class="property-item">
                     <h4> ${eventDto.name ! "Brak nazwy"}</h4>
                     <p> ${eventDto.descLong ! "Brak opisu"}</p>
+                    <#if eventDto.attachmentDto.fileName??><img src="${eventDto.attachmentDto.fileName}" alt="" width="50%" height="50%" </#if>>
                 </div>
             </div>
         </div>

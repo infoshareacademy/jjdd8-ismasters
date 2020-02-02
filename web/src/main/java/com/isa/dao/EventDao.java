@@ -58,8 +58,6 @@ public class EventDao {
     public List<Event> findByName(String param) {
         Query query = em.createNamedQuery("Event.findByName");
         query.setParameter("param", "%" + param + "%");
-
-
         return query.setMaxResults(MAX_RESULT_ON_PAGE).getResultList();
     }
 
@@ -97,5 +95,10 @@ public class EventDao {
     public List<Event> getAllFavEventsList() {
         Query query = em.createNamedQuery("Event.findAllFavorites");
         return query.getResultList();
+    }
+
+    public void removeEvent(Event event) {
+        logger.debug("Object event id: {} remove from DB", event.getId());
+        em.remove(event);
     }
 }

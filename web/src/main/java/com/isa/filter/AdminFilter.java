@@ -10,12 +10,12 @@ import javax.servlet.annotation.WebFilter;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.io.PrintWriter;
 
 @WebFilter (
         filterName = "AdminAccessFilter",
-        urlPatterns = {"/admin/*"}
+        urlPatterns = {"/admin","/admin/*"}
 )
+
 public class AdminFilter implements Filter {
 
     private final Logger logger = LoggerFactory.getLogger(this.getClass().getName());
@@ -25,14 +25,15 @@ public class AdminFilter implements Filter {
 
     @Override
     public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {
-
-
-        PrintWriter writer = servletResponse.getWriter();
         servletRequest.setCharacterEncoding("UTF-8");
         servletResponse.setCharacterEncoding("UTF-8");
         servletResponse.setContentType("text/html; charset=UTF-8");
 
         HttpServletRequest httpRequest = (HttpServletRequest) servletRequest;
+
+        httpRequest.setCharacterEncoding("UTF-8");
+        servletResponse.setCharacterEncoding("UTF-8");
+        servletResponse.setContentType("text/html; charset=UTF-8");
 
         String loggedEmail = (String) httpRequest.getSession().getAttribute("googleEmail");
         Boolean isAdmin = userService.isSuperAdmin(loggedEmail);

@@ -3,7 +3,10 @@ package com.isa.servlet;
 
 import com.isa.auth.UserAuthenticationService;
 import com.isa.config.TemplateProvider;
+import com.isa.dao.UserDao;
 import com.isa.domain.dto.UserDto;
+import com.isa.domain.entity.Event;
+import com.isa.domain.entity.User;
 import com.isa.domain.entity.UserType;
 import com.isa.service.UserService;
 import freemarker.template.Template;
@@ -17,13 +20,12 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.transaction.Transactional;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
+@Transactional
 @WebServlet ("/admin/user-list")
 public class AdminUserSetup extends HttpServlet {
     private final Logger logger = LoggerFactory.getLogger(getClass().getName());
@@ -36,6 +38,9 @@ public class AdminUserSetup extends HttpServlet {
 
     @Inject
     UserService userService;
+
+    @Inject
+    private UserDao userDao;
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -69,6 +74,19 @@ public class AdminUserSetup extends HttpServlet {
             logger.error(e.getMessage());
         }
     }
+
+    @Override
+    protected void doDelete(HttpServletRequest req, HttpServletResponse resp)
+            throws ServletException, IOException {
+        logger.info("Request DELETE method");
+        String id = req.getParameter("id");
+        Long userId = Long.parseLong(id);
+
+        User user = userService.findUserById(userId);
+        userDao.removeUser(user);
+
+    }
+
     private void setEncoding(HttpServletRequest req, HttpServletResponse resp) throws UnsupportedEncodingException {
         resp.setContentType("text/html; charset=UTF-8");
         req.setCharacterEncoding("UTF-8");

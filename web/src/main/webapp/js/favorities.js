@@ -5,8 +5,8 @@ function postFav(x) {
         method: "POST",
         data: {id: x},
         success: function () {
+            confirm('Wydarzenie dodane do listy ulubionych');
             location.reload();
-            alert('Wydarzenie dodane do listy ulubionych')
         },
         error: function (error) {
             alert('Nie można dodać wydarzenia do ulubionych. Maksymalna liczba wydarzeń ulubionych wynosi 3');
@@ -20,8 +20,20 @@ function deleteFav(x) {
         method: "DELETE",
         data: {id: x},
         success: function () {
+            confirm('WYDARZENIE USUNIĘTE Z LISTY ULUBIONYCH');
             location.reload();
-            alert('WYDARZENIE USUNIĘTE Z LISTY ULUBIONYCH')
+        },
+    });
+}
+
+function deleteUser(x) {
+    $.ajax({
+        url: "/admin/user-list",
+        method: "DELETE",
+        data: {id: x},
+        success: function () {
+            confirm('USER USUNIĘTY Z LISTY ULUBIONYCH');
+            location.reload();
         },
     });
 }
