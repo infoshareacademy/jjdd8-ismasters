@@ -2,6 +2,13 @@ package com.isa.servlet;
 
 import com.isa.auth.UserAuthenticationService;
 import com.isa.config.TemplateProvider;
+import com.isa.dao.EventDao;
+import com.isa.dao.UserDao;
+import com.isa.domain.entity.Event;
+import com.isa.domain.entity.User;
+import com.isa.domain.entity.UserType;
+import com.isa.mapper.UserMapper;
+import com.isa.service.UserService;
 import com.isa.service.domain.EventService;
 import freemarker.template.Template;
 import freemarker.template.TemplateException;
@@ -15,6 +22,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -26,28 +36,37 @@ public class AdminAddEvent extends HttpServlet {
     private TemplateProvider templateProvider;
 
     @Inject
-    private EventService eventService;
+    private UserAuthenticationService userAuthenticationService;
 
     @Inject
-    UserAuthenticationService userAuthenticationService;
+    private EventDao eventDao;
 
 
     @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse rep) throws SecurityException, IOException {
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws SecurityException, IOException {
 
+        req.setCharacterEncoding("UTF-8");
+        resp.setCharacterEncoding("UTF-8");
 
         Template template = templateProvider.getTemplate(getServletContext(), "admin-add-event.ftlh");
         Map<String, Object> model = new HashMap<>();
+
         final String googleId = (String) req.getSession().getAttribute("googleId");
+        final String googleEmail = (String) req.getSession().getAttribute("googleEmail");
+        final UserType userType = (UserType) req.getSession().getAttribute("userType");
+        logger.info("Google email set to {}", googleEmail);
 
         if (googleId != null && !googleId.isEmpty()) {
             model.put("logged", "yes");
+            model.put("googleEmail", googleEmail);
+            model.put("userType", userType);
         } else {
             model.put("logged", "no");
             model.put("loginUrl", userAuthenticationService.buildLoginUrl());
         }
+
         try {
-            template.process(model, rep.getWriter());
+            template.process(model, resp.getWriter());
         } catch (TemplateException e) {
             logger.error(e.getMessage());
         }
@@ -56,30 +75,36 @@ public class AdminAddEvent extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-        String idParam = req.getParameter("id");
-        String nameParam = req.getParameter("name");
-        String loginParam = req.getParameter("login");
-        String ageParam = req.getParameter("age");
-/*
-        User user = new User();
-        user.setId(Long.valueOf(idParam));
-        user.setName(nameParam);
-        user.setLogin(loginParam);
-        user.setAge(Integer.valueOf(ageParam));
+        String name = req.getParameter("name");
+        String startDate = req.getParameter("startDate");
+        String endDate = req.getParameter("endDate");
+        String descShort = req.getParameter("descShort");
+        String descLong = req.getParameter("descLong");
+        String link = req.getParameter("link");
 
-        Part image = req.getPart("image");
-        String imageUrl = "";
-        try {
-            imageUrl = "/images/" + fileUploadProcessor
-                    .uploadImageFile(image).getName();
-        } catch (UserImageNotFound userImageNotFound) {
-            logger.warning(userImageNotFound.getMessage());
-        }
+        logger.info("name {}" , name);
+        logger.info("descShort {}" , descShort);
+        logger.info("descLong {}" , descLong);
+        logger.info("startDate {}" , startDate);
+        logger.info("endDate {}" , endDate);
 
-        user.setImageUrl(imageUrl);
+        final DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MM/dd/yyyy");
 
-        userService.saveUser(user);*/
+        LocalDateTime localStartDate =  LocalDate.parse(startDate,formatter).atStartOfDay();
+        LocalDateTime localEndDate =  LocalDate.parse(endDate,formatter).atStartOfDay();
 
-        resp.getWriter().println("User has been added.");
+
+        Event event = new Event();
+        event.setName(name);
+        event.setDescLong(descLong);
+        event.setDescShort(descShort);
+        event.setStartDate(localStartDate);
+        event.setEndDate(localEndDate);
+
+        logger.info("Adding new event");
+
+        eventDao.add(event);
+
+        resp.sendRedirect("/admin/user-list");
     }
 }

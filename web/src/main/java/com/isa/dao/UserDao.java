@@ -51,4 +51,8 @@ public class UserDao {
     }
     return Optional.of(users.get(0));
   }
+  public void removeUser(User user) {
+    logger.debug("Object event id: {} remove from DB", user.getId());
+    entityManager.remove(user);
+  }
 }

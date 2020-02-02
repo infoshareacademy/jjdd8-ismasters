@@ -58,7 +58,7 @@
             </#if>
             <li><a href="/organizers-list">Organizatorzy</a></li>
             <li><a href="/list-events?pageNumber=0">Wydarzenia</a></li>
-            <li><a href="contact.html">Kontakt</a></li>
+            <li><a href="/contact">Kontakt</a></li>
         </ul>
 
         <div class="header-right">
@@ -74,16 +74,16 @@
             </div>
         </div>
     </nav>
-    <div class="slicknav_menu"><a href="#" aria-haspopup="true" role="button" tabindex="0" class="slicknav_btn slicknav_collapsed" style="outline: none;">
-            <span class="slicknav_menutxt">MENU</span><span class="slicknav_icon"><span class="slicknav_icon-bar"></span>
-                <span class="slicknav_icon-bar"></span><span class="slicknav_icon-bar"></span></span></a>
-        <ul class="slicknav_nav slicknav_hidden" aria-hidden="true" role="menu" style="display: none;">
-            <li class="header-right-warp"><div class="header-right">
-                </div>
-            </li>
-            <li><a href="/list-events?pageNumber=0" role="menuitem" tabindex="-1">Wydarzenia</a></li>
-            <li><a href="contact.html" role="menuitem" tabindex="-1">Kontakt</a></li>
-        </ul>
-    </div>
+<#--    <div class="slicknav_menu"><a href="#" aria-haspopup="true" role="button" tabindex="0" class="slicknav_btn slicknav_collapsed" style="outline: none;">-->
+<#--            <span class="slicknav_menutxt">MENU</span><span class="slicknav_icon"><span class="slicknav_icon-bar"></span>-->
+<#--                <span class="slicknav_icon-bar"></span><span class="slicknav_icon-bar"></span></span></a>-->
+<#--        <ul class="slicknav_nav slicknav_hidden" aria-hidden="true" role="menu" style="display: none;">-->
+<#--            <li class="header-right-warp"><div class="header-right">-->
+<#--                </div>-->
+<#--            </li>-->
+<#--            <li><a href="/list-events?pageNumber=0" role="menuitem" tabindex="-1">Wydarzenia</a></li>-->
+<#--            <li><a href="/contact" role="menuitem" tabindex="-1">Kontakt</a></li>-->
+<#--        </ul>-->
+<#--    </div>-->
 </header>
 <!-- Header Section end -->

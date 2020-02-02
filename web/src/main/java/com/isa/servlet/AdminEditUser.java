@@ -40,6 +40,7 @@ public class AdminEditUser extends HttpServlet {
         setEncoding(req, resp);
 
         Template template = templateProvider.getTemplate(getServletContext(), "admin-edit-user.ftlh");
+
         Map<String, Object> model = new HashMap<>();
 
         final String googleId = (String) req.getSession().getAttribute("googleId");

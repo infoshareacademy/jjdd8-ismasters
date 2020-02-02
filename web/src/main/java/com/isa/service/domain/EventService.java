@@ -131,8 +131,6 @@ public class EventService {
     }
 
 
-
-
     public EventDto mapEntityToDto(Event event) {
 
         EventDto eventDto = eventMapper.mapEntityToDto(event);
