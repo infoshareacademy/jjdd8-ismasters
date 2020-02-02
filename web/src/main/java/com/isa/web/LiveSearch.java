@@ -38,17 +38,16 @@ public class LiveSearch {
 
         final DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MM/dd/yyyy");
 
-        logger.info("startDate załadowane {}", startDate);
-        logger.info("enddate załadowane {}", endDate);
 
-        LocalDateTime localStartDate =  LocalDate.parse(startDate.replace("''", ""),formatter).atStartOfDay();
-        LocalDateTime localEndDate =  LocalDate.parse(endDate.replace("''", ""),formatter).atStartOfDay();
 
-        logger.info("startDate załadowane {}", startDate);
+        LocalDateTime localStartDate =  LocalDate.parse(startDate,formatter).atStartOfDay();
+        LocalDateTime localEndDate =  LocalDate.parse(endDate,formatter).atStartOfDay();
 
-        logger.info("endDate załadowane {}", endDate);
+        logger.info("startDate załadowane {}", localStartDate);
+        logger.info("enddate załadowane {}", localEndDate);
+
         eventDtoList.addAll(eventService.findByNameRest(param, localStartDate, localEndDate));
-
+        logger.info("Lista DTO wydarzeń  {}", eventDtoList);
         return Response.ok().entity(eventDtoList).build();
     }
 

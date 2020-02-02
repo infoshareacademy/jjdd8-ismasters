@@ -1,5 +1,6 @@
 package com.isa.dao;
 
+import com.isa.domain.entity.Event;
 import com.isa.domain.entity.User;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
