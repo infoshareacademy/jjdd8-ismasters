@@ -28,7 +28,6 @@ public class EventDao {
     }
 
     public long addFromFile(Event event) {
-//        em.merge(event);
         logger.debug("New event has been added to the DB ");
         return em.merge(event).getId();
     }
@@ -80,7 +79,6 @@ public class EventDao {
         query.setParameter("organizerId", id);
         logger.info("DAO event list size {}", query.getResultList().size());
         return query.setMaxResults(MAX_RESULT_ON_PAGE).getResultList();
-//        return query.getResultList();
     }
 
     public List<Event> findByOrganizersIdPaged(int id, int startEvent, int maxPage) {

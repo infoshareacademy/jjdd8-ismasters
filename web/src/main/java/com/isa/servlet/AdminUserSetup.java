@@ -6,7 +6,6 @@ import com.isa.config.TemplateProvider;
 import com.isa.domain.dto.UserDto;
 import com.isa.domain.entity.UserType;
 import com.isa.service.UserService;
-import com.isa.service.domain.EventService;
 import freemarker.template.Template;
 import freemarker.template.TemplateException;
 import org.slf4j.Logger;
@@ -19,20 +18,18 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@WebServlet("/user-list")
+@WebServlet ("/admin/user-list")
 public class AdminUserSetup extends HttpServlet {
     private final Logger logger = LoggerFactory.getLogger(getClass().getName());
 
     @Inject
     private TemplateProvider templateProvider;
-
-    @Inject
-    private EventService eventService;
 
     @Inject
     UserAuthenticationService userAuthenticationService;
@@ -42,13 +39,15 @@ public class AdminUserSetup extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        Template template = templateProvider.getTemplate(getServletContext(), "user-list-admin.ftlh");
+        Template template = templateProvider.getTemplate(getServletContext(), "admin-user-list.ftlh");
+
+        setEncoding(req, resp);
 
         List<UserDto> userDtoList = new ArrayList<>();
         userDtoList.addAll(userService.getUsers());
 
         Map<String, Object> model = new HashMap<>();
-        model.put("userDtoList",userDtoList );
+        model.put("userDtoList", userDtoList);
 
         final String googleId = (String) req.getSession().getAttribute("googleId");
         final String googleEmail = (String) req.getSession().getAttribute("googleEmail");
@@ -70,4 +69,10 @@ public class AdminUserSetup extends HttpServlet {
             logger.error(e.getMessage());
         }
     }
+    private void setEncoding(HttpServletRequest req, HttpServletResponse resp) throws UnsupportedEncodingException {
+        resp.setContentType("text/html; charset=UTF-8");
+        req.setCharacterEncoding("UTF-8");
+        resp.setCharacterEncoding("UTF-8");
+    }
+
 }

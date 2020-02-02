@@ -56,6 +56,7 @@ public class JsonFileUpload extends HttpServlet {
 
         logger.info("Session id: " + req.getSession().getId());
         setEncoding(req, resp);
+
         Template template = templateProvider.getTemplate(getServletContext(), "json_file_uploader.ftlh");
         Map<String, Object> model = new HashMap<>();
 
@@ -82,12 +83,10 @@ public class JsonFileUpload extends HttpServlet {
 
 
     @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException {
-        try {
-            setEncoding(req, resp);
-        } catch (UnsupportedEncodingException e) {
-            logger.error(e.getMessage(), e);
-        }
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, UnsupportedEncodingException {
+
+        setEncoding(req, resp);
+
         logger.info("Session id: " + req.getSession().getId());
         logger.info("doPost invoked");
 
@@ -112,13 +111,10 @@ public class JsonFileUpload extends HttpServlet {
         try {
             assert eventsJson != null;
             eventsFilePath = fileUploadProcessor.uploadFile(eventsJson).getName();
-//            eventsFilePath = fileUploadProcessor.getUploadFilePath() + fileUploadProcessor.uploadFile(eventsJson).getName();
             assert placesJson != null;
             placesFilePath = fileUploadProcessor.uploadFile(placesJson).getName();
-//            placesFilePath = fileUploadProcessor.getUploadFilePath() + fileUploadProcessor.uploadFile(placesJson).getName();
             assert organizersJson != null;
             organizersFilePath = fileUploadProcessor.uploadFile(organizersJson).getName();
-//            organizersFilePath = fileUploadProcessor.getUploadFilePath() + fileUploadProcessor.uploadFile(organizersJson).getName();
 
 
             organizersService.setRelationsFromFile(organizersFilePath);

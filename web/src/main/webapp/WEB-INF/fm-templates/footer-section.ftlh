@@ -5,7 +5,7 @@
             <div class="col-lg-4">
                 <div class="footer-widger">
                     <div class="about-widget">
-                        <div class="aw-text">
+                        <div class="aw-text" align="center"><br>
                             <img src="/img/logo_100.png"
                                  alt="">
                         </div>
@@ -13,13 +13,7 @@
                 </div>
             </div>
             <div class="col-lg-2 col-md-3 col-sm-6">
-                <div class="footer-widger">
-                    <h2>Aplikacja</h2>
-                    <ul>
-                        <li><a href="#">Wydarzenia</a></li>
-                        <li><a href="#">Kontakt</a></li>
-                    </ul>
-                </div>
+
             </div>
         </div>
     </div>

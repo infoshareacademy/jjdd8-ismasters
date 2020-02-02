@@ -5,7 +5,6 @@ import com.isa.auth.UserAuthenticationService;
 import com.isa.config.TemplateProvider;
 import com.isa.domain.dto.EventDto;
 import com.isa.domain.entity.UserType;
-import com.isa.service.domain.EventService;
 import freemarker.template.Template;
 import freemarker.template.TemplateException;
 import org.slf4j.Logger;
@@ -22,19 +21,20 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@WebServlet ("/admin-template")
+@WebServlet ("/admin")
 public class AdminServlet extends HttpServlet {
     private final Logger logger = LoggerFactory.getLogger(getClass().getName());
     @Inject
     UserAuthenticationService userAuthenticationService;
     @Inject
     private TemplateProvider templateProvider;
-    @Inject
-    private EventService eventService;
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws SecurityException, IOException {
 
+//        req.setCharacterEncoding("UTF-8");
+//        resp.setCharacterEncoding("UTF-8");
+//        resp.setContentType("text/html; charset=UTF-8");
 
         Template template = templateProvider.getTemplate(getServletContext(), "admin-view.ftlh");
         Map<String, Object> model = new HashMap<>();
@@ -63,3 +63,4 @@ public class AdminServlet extends HttpServlet {
         }
     }
 }
+

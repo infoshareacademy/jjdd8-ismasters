@@ -24,7 +24,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@WebServlet("/event-list-admin")
+@WebServlet("/admin/event-list")
 public class AdminListOfEvents extends HttpServlet {
 
     private final int MAX_EVENT_NUMBER = 20;
@@ -47,7 +47,7 @@ public class AdminListOfEvents extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws SecurityException, IOException {
 
 
-        Template template = templateProvider.getTemplate(getServletContext(), "event-list-admin.ftlh");
+        Template template = templateProvider.getTemplate(getServletContext(), "admin-event-list.ftlh");
         Map<String, Object> model = new HashMap<>();
 
         String pageNumber = req.getParameter("pageNumber");

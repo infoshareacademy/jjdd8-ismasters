@@ -14,12 +14,11 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.Part;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
-@WebServlet("/add-event")
+@WebServlet("/admin/add-event")
 public class AdminAddEvent extends HttpServlet {
     private final Logger logger = LoggerFactory.getLogger(getClass().getName());
 
@@ -37,7 +36,7 @@ public class AdminAddEvent extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse rep) throws SecurityException, IOException {
 
 
-        Template template = templateProvider.getTemplate(getServletContext(), "add-event-admin.ftlh");
+        Template template = templateProvider.getTemplate(getServletContext(), "admin-add-event.ftlh");
         Map<String, Object> model = new HashMap<>();
         final String googleId = (String) req.getSession().getAttribute("googleId");
 
