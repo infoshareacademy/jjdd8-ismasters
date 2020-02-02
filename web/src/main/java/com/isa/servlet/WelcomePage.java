@@ -62,7 +62,7 @@ public class WelcomePage extends HttpServlet {
         logger.info("Foto1 {}\n", eventDto1.getAttachmentDto().getFileName());
         EventDto eventDto2 = eventDtoList.get(4);
         logger.info("Foto1 {}\n", eventDto2.getAttachmentDto().getFileName());
-        EventDto eventDto3 = eventDtoList.get(5);
+        EventDto eventDto3 = eventDtoList.get(6);
         logger.info("Foto1 {}\n", eventDto3.getAttachmentDto().getFileName());
 
         model.put("eventDto1", eventDto1);
