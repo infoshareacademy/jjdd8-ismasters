@@ -4,12 +4,9 @@ import com.isa.auth.UserAuthenticationService;
 import com.isa.config.TemplateProvider;
 import com.isa.dao.EventDao;
 import com.isa.domain.dto.EventDto;
-import com.isa.domain.dto.OrganizerDto;
 import com.isa.domain.entity.Event;
-import com.isa.domain.entity.Organizer;
 import com.isa.domain.entity.User;
 import com.isa.domain.entity.UserType;
-import com.isa.service.MailService;
 import com.isa.service.PaginationService;
 import com.isa.service.UserService;
 import com.isa.service.domain.EventService;
@@ -53,9 +50,6 @@ public class ListOfEvents extends HttpServlet {
 
     @Inject
     private EventDao eventDao;
-
-    @Inject
-    private MailService mailService;
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {

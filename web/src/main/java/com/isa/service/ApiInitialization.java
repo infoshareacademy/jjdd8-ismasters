@@ -33,9 +33,6 @@ public class ApiInitialization {
     private PlaceService placeService;
 
 
-    @Inject
-    public MailService mailService;
-
     @PostConstruct
     public void apiInitialization() throws IOException {
 
